@@ -4,7 +4,7 @@
       "docset_name": "microsoft-authentication-library-node",
       "build_source_folder": ".",
       "build_output_subfolder": "microsoft-authentication-library-node",
-      "locale": "zh-cn",
+      "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": false,
