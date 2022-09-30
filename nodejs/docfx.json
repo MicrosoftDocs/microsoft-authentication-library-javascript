@@ -14,20 +14,42 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"
-        ]
+          "ThirdPartyNotices",
+          "toc.yml"
+        ],
+        "version": "msal-js-latest",
+        "dest": "api"
       },
       {
         "files": [
           "**/*.yml"
         ],
         "src": "breadcrumb",
-        "dest": "breadcrumb",
+        "dest": "api/microsoft-authentication-library-js/breadcrumb",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
         ]
-      }
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "docs-ref-autogen",
+        "dest": "api/microsoft-authentication-library-js",
+        "exclude": [],
+        "version": "msal-js-latest"
+      },
+	  ,
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "overview",
+        "dest": "api/overview",
+        "exclude": [],
+        "version": "msal-js-latest"
+      },
     ],
     "resource": [
       {
@@ -38,13 +60,24 @@
         "exclude": [
           "**/obj/**",
           "**/includes/**"
-        ]
+        ],
+        "version": "msal-js-latest",
+        "dest": "api",
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/toc.yml"
+      "ms.topic": "reference",
+      "apiPlatform": "javascript",
+      "ms.author": "dmwendia",
+      "manager": "dmwendia",
+      "ms.service": "active-directory",
+      "searchScope": [],
+      "feedback_system": "GitHub",
+      "extendBreadcrumb": "true",
+      "breadcrumb_path": "/javascript/api/microsoft-authentication-library-js/breadcrumb/toc.json",
+      "toc_path": "/javascript/api/microsoft-authentication-library-js/toc.yml"
     },
     "fileMetadata": {},
     "template": [],

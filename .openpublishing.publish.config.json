@@ -6,7 +6,7 @@
       "build_output_subfolder": "microsoft-authentication-library-js",
       "locale": "en-us",
       "monikers": [],
-      "moniker_ranges": [],
+      "moniker_ranges": ["msal-js-latest"],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -28,6 +28,21 @@
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
+  "JoinTOCPlugin": [
+    {
+      "TopLevelTOC": "nodejs/docs-ref-toc/fxtoc.yml",
+      "ReferenceTOC": "nodejs/docs-ref-autogen/toc.yml",
+      "ReferenceTOCUrl": "/javascript/api/microsoft-authentication-library-js/toc.json?view=msal-js-latest",
+      "ConceptualTOCUrl": "/microsoft-authentication-library-js/toc.json",
+      "OutputFolder": "nodejs/overview",
+      "HideEmptyNode": false,
+      "ContainerPageMetadata": {
+        "langs": [
+          "js"
+        ]
+      }
+    }
+  ],
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -37,7 +52,25 @@
     }
   ],
   "branch_target_mapping": {},
-  "docs_build_engine": {},
+  "dependent_packages": [
+    {
+      "id": "opbuild.templates.uref",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "path_to_root": "_dependentPackages/uref.plugins",
+      "target_framework": "net45",
+      "version": "latest"
+    },
+    {
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest",
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    }
+  ],
+  "docs_build_engine": {
+	  "name": "docfx_v3"
+	},
   "contribution_branch_mappings": {},
   "need_generate_pdf_url_template": false
 }
