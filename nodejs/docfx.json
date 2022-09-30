@@ -40,7 +40,6 @@
         "exclude": [],
         "version": "msal-js-latest"
       },
-	  ,
       {
         "files": [
           "**/*.md"
