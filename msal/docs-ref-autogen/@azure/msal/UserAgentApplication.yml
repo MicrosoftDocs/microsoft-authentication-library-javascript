@@ -1,0 +1,318 @@
+### YamlMime:TSType
+name: UserAgentApplication
+uid: '@azure/msal.UserAgentApplication'
+package: '@azure/msal'
+summary: >
+  UserAgentApplication class
+
+  Object Instance that the developer can use to make loginXX OR acquireTokenXX
+  functions
+fullName: UserAgentApplication
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: UserAgentApplication(Configuration)
+    uid: '@azure/msal.UserAgentApplication.constructor'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new UserAgentApplication(configuration: Configuration)'
+      parameters:
+        - id: configuration
+          type: <xref uid="@azure/msal.Configuration" />
+          description: |
+            object for the MSAL UserAgentApplication instance
+properties:
+  - name: authority
+    uid: '@azure/msal.UserAgentApplication.authority'
+    package: '@azure/msal'
+    summary: Method to manage the authority URL.
+    fullName: authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authority: string'
+      return:
+        description: ''
+        type: string
+methods:
+  - name: acquireTokenPopup(AuthenticationParameters)
+    uid: '@azure/msal.UserAgentApplication.acquireTokenPopup'
+    package: '@azure/msal'
+    summary: >-
+      Use when you want to obtain an access_token for your API via opening a
+      popup window in the user's browser
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenPopup(userRequest: AuthenticationParameters):
+        Promise<AuthResponse>
+      parameters:
+        - id: userRequest
+          type: <xref uid="@azure/msal.AuthenticationParameters" />
+          description: ''
+      return:
+        description: >-
+          - a promise that is fulfilled when this function has completed, or
+          rejected if an error was raised. Returns the
+          <xref:@azure/msal.AuthResponse> object
+        type: Promise&lt;<xref uid="@azure/msal.AuthResponse" />&gt;
+  - name: acquireTokenRedirect(AuthenticationParameters)
+    uid: '@azure/msal.UserAgentApplication.acquireTokenRedirect'
+    package: '@azure/msal'
+    summary: >-
+      Use when you want to obtain an access_token for your API by redirecting
+      the user's browser window to the authorization endpoint.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function acquireTokenRedirect(userRequest: AuthenticationParameters)'
+      parameters:
+        - id: userRequest
+          type: <xref uid="@azure/msal.AuthenticationParameters" />
+          description: ''
+  - name: acquireTokenSilent(AuthenticationParameters)
+    uid: '@azure/msal.UserAgentApplication.acquireTokenSilent'
+    package: '@azure/msal'
+    summary: >
+      Use this function to obtain a token before every call to the API /
+      resource provider
+
+      MSAL return's a cached token when available
+
+      Or it send's a request to the STS to obtain a new token using a hidden
+      iframe.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenSilent(userRequest: AuthenticationParameters):
+        Promise<AuthResponse>
+      parameters:
+        - id: userRequest
+          type: <xref uid="@azure/msal.AuthenticationParameters" />
+          description: ''
+      return:
+        description: >-
+          - a promise that is fulfilled when this function has completed, or
+          rejected if an error was raised. Returns the
+          <xref:@azure/msal.AuthResponse> object
+        type: Promise&lt;<xref uid="@azure/msal.AuthResponse" />&gt;
+  - name: getAccount()
+    uid: '@azure/msal.UserAgentApplication.getAccount'
+    package: '@azure/msal'
+    summary: |-
+      Returns the signed in account
+      (the account object is created at the time of successful login)
+      or null when no state is found
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getAccount(): Account'
+      return:
+        description: '- the account object stored in MSAL'
+        type: <xref uid="@azure/msal.Account" />
+  - name: getAllAccounts()
+    uid: '@azure/msal.UserAgentApplication.getAllAccounts'
+    package: '@azure/msal'
+    summary: >-
+      Use to get a list of unique accounts in MSAL cache based on
+      homeAccountIdentifier.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getAllAccounts(): Array<Account>'
+      return:
+        description: ''
+        type: Array&lt;<xref uid="@azure/msal.Account" />&gt;
+  - name: getAuthorityInstance()
+    uid: '@azure/msal.UserAgentApplication.getAuthorityInstance'
+    package: '@azure/msal'
+    summary: Get the current authority instance from the MSAL configuration object
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getAuthorityInstance(): Authority'
+      return:
+        description: authority instance
+        type: Authority
+  - name: getCurrentConfiguration()
+    uid: '@azure/msal.UserAgentApplication.getCurrentConfiguration'
+    package: '@azure/msal'
+    summary: 'Use to get the current <xref:@azure/msal.Configuration> object in MSAL'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getCurrentConfiguration(): Configuration'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.Configuration" />
+  - name: getLoginInProgress()
+    uid: '@azure/msal.UserAgentApplication.getLoginInProgress'
+    package: '@azure/msal'
+    summary: Return boolean flag to developer to help inform if login is in progress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getLoginInProgress(): boolean'
+      return:
+        description: true/false
+        type: boolean
+  - name: getPostLogoutRedirectUri()
+    uid: '@azure/msal.UserAgentApplication.getPostLogoutRedirectUri'
+    package: '@azure/msal'
+    summary: >-
+      Use to get the post logout redirect uri configured in MSAL or null.
+
+      Evaluates postLogoutredirectUri if its a function, otherwise simply
+      returns its value.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getPostLogoutRedirectUri(): string'
+      return:
+        description: post logout redirect URL
+        type: string
+  - name: getRedirectUri(string)
+    uid: '@azure/msal.UserAgentApplication.getRedirectUri'
+    package: '@azure/msal'
+    summary: >-
+      Use to get the redirect uri configured in MSAL or null.
+
+      Evaluates redirectUri if its a function, otherwise simply returns its
+      value.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getRedirectUri(reqRedirectUri?: string): string'
+      parameters:
+        - id: reqRedirectUri
+          type: string
+          description: ''
+      return:
+        description: redirect URL
+        type: string
+  - name: loginPopup(AuthenticationParameters)
+    uid: '@azure/msal.UserAgentApplication.loginPopup'
+    package: '@azure/msal'
+    summary: >-
+      Use when initiating the login process via opening a popup window in the
+      user's browser
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function loginPopup(userRequest?: AuthenticationParameters):
+        Promise<AuthResponse>
+      parameters:
+        - id: userRequest
+          type: <xref uid="@azure/msal.AuthenticationParameters" />
+          description: ''
+      return:
+        description: >-
+          - a promise that is fulfilled when this function has completed, or
+          rejected if an error was raised. Returns the
+          <xref:@azure/msal.AuthResponse> object
+        type: Promise&lt;<xref uid="@azure/msal.AuthResponse" />&gt;
+  - name: loginRedirect(AuthenticationParameters)
+    uid: '@azure/msal.UserAgentApplication.loginRedirect'
+    package: '@azure/msal'
+    summary: >-
+      Use when initiating the login process by redirecting the user's browser to
+      the authorization endpoint.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function loginRedirect(userRequest?: AuthenticationParameters)'
+      parameters:
+        - id: userRequest
+          type: <xref uid="@azure/msal.AuthenticationParameters" />
+          description: ''
+  - name: logout(string)
+    uid: '@azure/msal.UserAgentApplication.logout'
+    package: '@azure/msal'
+    summary: >-
+      Use to log out the current user, and redirect the user to the
+      postLogoutRedirectUri.
+
+      Default behaviour is to redirect the user to `window.location.href`.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function logout(correlationId?: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+  - name: setLogger(Logger)
+    uid: '@azure/msal.UserAgentApplication.setLogger'
+    package: '@azure/msal'
+    summary: Sets the logger callback.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setLogger(logger: Logger)'
+      parameters:
+        - id: logger
+          type: <xref uid="@azure/msal.Logger" />
+          description: |
+            Logger callback
+  - name: ssoSilent(AuthenticationParameters)
+    uid: '@azure/msal.UserAgentApplication.ssoSilent'
+    package: '@azure/msal'
+    summary: >-
+      API interfacing idToken request when applications already have a
+      session/hint acquired by authorization client applications
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function ssoSilent(request: AuthenticationParameters):
+        Promise<AuthResponse>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal.AuthenticationParameters" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal.AuthResponse" />&gt;
+  - name: urlContainsHash(string)
+    uid: '@azure/msal.UserAgentApplication.urlContainsHash'
+    package: '@azure/msal'
+    summary: Public API to verify if the URL contains the hash with known properties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function urlContainsHash(hash: string): boolean'
+      parameters:
+        - id: hash
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: boolean

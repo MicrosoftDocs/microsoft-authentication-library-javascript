@@ -1,0 +1,7 @@
+- name: SDK reference
+  uid: msal.sdk.landingPage.reference
+  landingPageType: Root
+  expanded: true
+  href: ~/overview/overview.md
+  children:
+    - '**'

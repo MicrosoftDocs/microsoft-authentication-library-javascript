@@ -1,0 +1,35 @@
+### YamlMime:TSEnum
+name: AzureCloudInstance
+uid: '@azure/msal-common.AzureCloudInstance'
+package: '@azure/msal-common'
+summary: ''
+fullName: AzureCloudInstance
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: AzureChina
+    uid: '@azure/msal-common.AzureCloudInstance.AzureChina'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: AzureGermany
+    uid: '@azure/msal-common.AzureCloudInstance.AzureGermany'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: AzurePpe
+    uid: '@azure/msal-common.AzureCloudInstance.AzurePpe'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: AzurePublic
+    uid: '@azure/msal-common.AzureCloudInstance.AzurePublic'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: AzureUsGovernment
+    uid: '@azure/msal-common.AzureCloudInstance.AzureUsGovernment'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: None
+    uid: '@azure/msal-common.AzureCloudInstance.None'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 0

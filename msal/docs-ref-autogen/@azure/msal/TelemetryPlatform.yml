@@ -1,0 +1,76 @@
+### YamlMime:TSType
+name: TelemetryPlatform
+uid: '@azure/msal.TelemetryPlatform'
+package: '@azure/msal'
+summary: ''
+fullName: TelemetryPlatform
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: applicationName
+    uid: '@azure/msal.TelemetryPlatform.applicationName'
+    package: '@azure/msal'
+    summary: ''
+    fullName: applicationName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'applicationName: string'
+      return:
+        description: ''
+        type: string
+  - name: applicationVersion
+    uid: '@azure/msal.TelemetryPlatform.applicationVersion'
+    package: '@azure/msal'
+    summary: ''
+    fullName: applicationVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'applicationVersion: string'
+      return:
+        description: ''
+        type: string
+  - name: networkInformation
+    uid: '@azure/msal.TelemetryPlatform.networkInformation'
+    package: '@azure/msal'
+    summary: ''
+    fullName: networkInformation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'networkInformation?: NetworkInformation'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.NetworkInformation" />
+  - name: sdk
+    uid: '@azure/msal.TelemetryPlatform.sdk'
+    package: '@azure/msal'
+    summary: ''
+    fullName: sdk
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sdk?: string'
+      return:
+        description: ''
+        type: string
+  - name: sdkVersion
+    uid: '@azure/msal.TelemetryPlatform.sdkVersion'
+    package: '@azure/msal'
+    summary: ''
+    fullName: sdkVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sdkVersion?: string'
+      return:
+        description: ''
+        type: string

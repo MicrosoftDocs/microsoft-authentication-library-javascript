@@ -1,0 +1,479 @@
+### YamlMime:TSType
+name: ClientAuthError
+uid: '@azure/msal.ClientAuthError'
+package: '@azure/msal'
+summary: Error thrown when there is an error in the client code running on the browser.
+fullName: ClientAuthError
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'ClientAuthError(string, string)'
+    uid: '@azure/msal.ClientAuthError.constructor'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new ClientAuthError(errorCode: string, errorMessage?: string)'
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+        - id: errorMessage
+          type: string
+          description: ''
+inheritedProperties:
+  - name: errorCode
+    uid: '@azure/msal.ClientAuthError.errorCode'
+    package: '@azure/msal'
+    summary: ''
+    fullName: errorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorCode: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorCode](xref:@azure/msal.AuthError.errorCode)
+  - name: errorMessage
+    uid: '@azure/msal.ClientAuthError.errorMessage'
+    package: '@azure/msal'
+    summary: ''
+    fullName: errorMessage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorMessage](xref:@azure/msal.AuthError.errorMessage)
+  - name: message
+    uid: '@azure/msal.ClientAuthError.message'
+    package: '@azure/msal'
+    summary: ''
+    fullName: message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.message
+  - name: name
+    uid: '@azure/msal.ClientAuthError.name'
+    package: '@azure/msal'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.name
+  - name: stack
+    uid: '@azure/msal.ClientAuthError.stack'
+    package: '@azure/msal'
+    summary: ''
+    fullName: stack
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stack?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.stack
+inheritedMethods:
+  - name: createNoWindowObjectError(string)
+    uid: '@azure/msal.ClientAuthError.createNoWindowObjectError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createNoWindowObjectError(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.AuthError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.createNoWindowObjectError](xref:@azure/msal.AuthError.createNoWindowObjectError)
+  - name: createUnexpectedError(string)
+    uid: '@azure/msal.ClientAuthError.createUnexpectedError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUnexpectedError(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.AuthError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.createUnexpectedError](xref:@azure/msal.AuthError.createUnexpectedError)
+methods:
+  - name: createAcquireTokenInProgressError()
+    uid: '@azure/msal.ClientAuthError.createAcquireTokenInProgressError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createAcquireTokenInProgressError(): ClientAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createBlockTokenRequestsInHiddenIframeError()
+    uid: '@azure/msal.ClientAuthError.createBlockTokenRequestsInHiddenIframeError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createBlockTokenRequestsInHiddenIframeError():
+        ClientAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createCacheParseError(string)
+    uid: '@azure/msal.ClientAuthError.createCacheParseError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createCacheParseError(key: string): ClientAuthError'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createClientInfoDecodingError(string)
+    uid: '@azure/msal.ClientAuthError.createClientInfoDecodingError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createClientInfoDecodingError(caughtError: string):
+        ClientAuthError
+      parameters:
+        - id: caughtError
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createClientInfoNotPopulatedError(string)
+    uid: '@azure/msal.ClientAuthError.createClientInfoNotPopulatedError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createClientInfoNotPopulatedError(caughtError: string):
+        ClientAuthError
+      parameters:
+        - id: caughtError
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createEndpointResolutionError(string)
+    uid: '@azure/msal.ClientAuthError.createEndpointResolutionError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createEndpointResolutionError(errDetail?: string):
+        ClientAuthError
+      parameters:
+        - id: errDetail
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createErrorInCallbackFunction(string)
+    uid: '@azure/msal.ClientAuthError.createErrorInCallbackFunction'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createErrorInCallbackFunction(errorDesc: string):
+        ClientAuthError
+      parameters:
+        - id: errorDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createIdTokenNullOrEmptyError(string)
+    uid: '@azure/msal.ClientAuthError.createIdTokenNullOrEmptyError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createIdTokenNullOrEmptyError(invalidRawTokenString:
+        string): ClientAuthError
+      parameters:
+        - id: invalidRawTokenString
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createIdTokenParsingError(string)
+    uid: '@azure/msal.ClientAuthError.createIdTokenParsingError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createIdTokenParsingError(caughtParsingError: string):
+        ClientAuthError
+      parameters:
+        - id: caughtParsingError
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createInvalidIdTokenError(IdToken)
+    uid: '@azure/msal.ClientAuthError.createInvalidIdTokenError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createInvalidIdTokenError(idToken: IdToken):
+        ClientAuthError
+      parameters:
+        - id: idToken
+          type: IdToken
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createInvalidInteractionTypeError()
+    uid: '@azure/msal.ClientAuthError.createInvalidInteractionTypeError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createInvalidInteractionTypeError(): ClientAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: 'createInvalidStateError(string, string)'
+    uid: '@azure/msal.ClientAuthError.createInvalidStateError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createInvalidStateError(invalidState: string,
+        actualState: string): ClientAuthError
+      parameters:
+        - id: invalidState
+          type: string
+          description: ''
+        - id: actualState
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createLoginInProgressError()
+    uid: '@azure/msal.ClientAuthError.createLoginInProgressError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createLoginInProgressError(): ClientAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createMultipleAuthoritiesInCacheError(string)
+    uid: '@azure/msal.ClientAuthError.createMultipleAuthoritiesInCacheError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createMultipleAuthoritiesInCacheError(scope: string):
+        ClientAuthError
+      parameters:
+        - id: scope
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: 'createNonceMismatchError(string, string)'
+    uid: '@azure/msal.ClientAuthError.createNonceMismatchError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createNonceMismatchError(invalidNonce: string,
+        actualNonce: string): ClientAuthError
+      parameters:
+        - id: invalidNonce
+          type: string
+          description: ''
+        - id: actualNonce
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createPopupWindowError(string)
+    uid: '@azure/msal.ClientAuthError.createPopupWindowError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createPopupWindowError(errDetail?: string):
+        ClientAuthError
+      parameters:
+        - id: errDetail
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createTokenEncodingError(string)
+    uid: '@azure/msal.ClientAuthError.createTokenEncodingError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createTokenEncodingError(incorrectlyEncodedToken:
+        string): ClientAuthError
+      parameters:
+        - id: incorrectlyEncodedToken
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createTokenRenewalTimeoutError()
+    uid: '@azure/msal.ClientAuthError.createTokenRenewalTimeoutError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createTokenRenewalTimeoutError(): ClientAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createUserCancelledError()
+    uid: '@azure/msal.ClientAuthError.createUserCancelledError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUserCancelledError(): ClientAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createUserDoesNotExistError()
+    uid: '@azure/msal.ClientAuthError.createUserDoesNotExistError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUserDoesNotExistError(): ClientAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+  - name: createUserLoginRequiredError()
+    uid: '@azure/msal.ClientAuthError.createUserLoginRequiredError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUserLoginRequiredError(): ClientAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ClientAuthError" />
+extends: <xref uid="@azure/msal.AuthError" />

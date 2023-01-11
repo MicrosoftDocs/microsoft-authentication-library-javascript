@@ -1,0 +1,117 @@
+### YamlMime:TSType
+name: PopTokenGenerator
+uid: '@azure/msal-common.PopTokenGenerator'
+package: '@azure/msal-common'
+summary: ''
+fullName: PopTokenGenerator
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: PopTokenGenerator(ICrypto)
+    uid: '@azure/msal-common.PopTokenGenerator.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new PopTokenGenerator(cryptoUtils: ICrypto)'
+      parameters:
+        - id: cryptoUtils
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: ''
+methods:
+  - name: generateCnf(SignedHttpRequestParameters)
+    uid: '@azure/msal-common.PopTokenGenerator.generateCnf'
+    package: '@azure/msal-common'
+    summary: >-
+      Generates the req_cnf validated at the RP in the POP protocol for SHR
+      parameters
+
+      and returns an object containing the keyid, the full req_cnf string and
+      the req_cnf string hash
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateCnf(request: SignedHttpRequestParameters):
+        Promise<ReqCnfData>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.SignedHttpRequestParameters" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-common.ReqCnfData" />&gt;
+  - name: generateKid(SignedHttpRequestParameters)
+    uid: '@azure/msal-common.PopTokenGenerator.generateKid'
+    package: '@azure/msal-common'
+    summary: Generates key_id for a SHR token request
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateKid(request: SignedHttpRequestParameters):
+        Promise<ReqCnf>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.SignedHttpRequestParameters" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-common.ReqCnf" />&gt;
+  - name: 'signPayload(string, string, SignedHttpRequestParameters, object)'
+    uid: '@azure/msal-common.PopTokenGenerator.signPayload'
+    package: '@azure/msal-common'
+    summary: Utility function to generate the signed JWT for an access_token
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function signPayload(payload: string, keyId: string, request:
+        SignedHttpRequestParameters, claims?: object): Promise<string>
+      parameters:
+        - id: payload
+          type: string
+          description: ''
+        - id: keyId
+          type: string
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-common.SignedHttpRequestParameters" />
+          description: ''
+        - id: claims
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: 'signPopToken(string, string, SignedHttpRequestParameters)'
+    uid: '@azure/msal-common.PopTokenGenerator.signPopToken'
+    package: '@azure/msal-common'
+    summary: Signs the POP access_token with the local generated key-pair
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function signPopToken(accessToken: string, keyId: string, request:
+        SignedHttpRequestParameters): Promise<string>
+      parameters:
+        - id: accessToken
+          type: string
+          description: ''
+        - id: keyId
+          type: string
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-common.SignedHttpRequestParameters" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;string&gt;

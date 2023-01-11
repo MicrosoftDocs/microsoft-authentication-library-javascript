@@ -1,0 +1,188 @@
+### YamlMime:TSType
+name: CryptoOps
+uid: '@azure/msal-browser.CryptoOps'
+package: '@azure/msal-browser'
+summary: >-
+  This class implements MSAL's crypto interface, which allows it to perform
+  base64 encoding and decoding, generating cryptographically random GUIDs and
+
+  implementing Proof Key for Code Exchange specs for the OAuth Authorization
+  Code Flow using PKCE (rfc here: https://tools.ietf.org/html/rfc7636).
+fullName: CryptoOps
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'CryptoOps(Logger, IPerformanceClient, CryptoOptions)'
+    uid: '@azure/msal-browser.CryptoOps.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new CryptoOps(logger: Logger, performanceClient?: IPerformanceClient,
+        cryptoConfig?: CryptoOptions)
+      parameters:
+        - id: logger
+          type: Logger
+          description: ''
+        - id: performanceClient
+          type: IPerformanceClient
+          description: ''
+        - id: cryptoConfig
+          type: <xref uid="@azure/msal-browser.CryptoOptions" />
+          description: ''
+methods:
+  - name: base64Decode(string)
+    uid: '@azure/msal-browser.CryptoOps.base64Decode'
+    package: '@azure/msal-browser'
+    summary: Decodes input string from base64.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function base64Decode(input: string): string'
+      parameters:
+        - id: input
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: string
+  - name: base64Encode(string)
+    uid: '@azure/msal-browser.CryptoOps.base64Encode'
+    package: '@azure/msal-browser'
+    summary: Encodes input string to base64.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function base64Encode(input: string): string'
+      parameters:
+        - id: input
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: string
+  - name: clearKeystore()
+    uid: '@azure/msal-browser.CryptoOps.clearKeystore'
+    package: '@azure/msal-browser'
+    summary: Removes all cryptographic keys from IndexedDB storage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function clearKeystore(): Promise<boolean>'
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+  - name: createNewGuid()
+    uid: '@azure/msal-browser.CryptoOps.createNewGuid'
+    package: '@azure/msal-browser'
+    summary: Creates a new random GUID - used to populate state and nonce.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function createNewGuid(): string'
+      return:
+        description: string (GUID)
+        type: string
+  - name: generatePkceCodes()
+    uid: '@azure/msal-browser.CryptoOps.generatePkceCodes'
+    package: '@azure/msal-browser'
+    summary: Generates PKCE codes used in Authorization Code Flow.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generatePkceCodes(): Promise<PkceCodes>'
+      return:
+        description: ''
+        type: Promise&lt;PkceCodes&gt;
+  - name: getPublicKeyThumbprint(SignedHttpRequestParameters)
+    uid: '@azure/msal-browser.CryptoOps.getPublicKeyThumbprint'
+    package: '@azure/msal-browser'
+    summary: 'Generates a keypair, stores it and returns a thumbprint'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getPublicKeyThumbprint(request: SignedHttpRequestParameters):
+        Promise<string>
+      parameters:
+        - id: request
+          type: SignedHttpRequestParameters
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: hashString(string)
+    uid: '@azure/msal-browser.CryptoOps.hashString'
+    package: '@azure/msal-browser'
+    summary: Returns the SHA-256 hash of an input string
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function hashString(plainText: string): Promise<string>'
+      parameters:
+        - id: plainText
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: removeTokenBindingKey(string)
+    uid: '@azure/msal-browser.CryptoOps.removeTokenBindingKey'
+    package: '@azure/msal-browser'
+    summary: Removes cryptographic keypair from key store matching the keyId passed in
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removeTokenBindingKey(kid: string): Promise<boolean>'
+      parameters:
+        - id: kid
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+  - name: 'signJwt(SignedHttpRequest, string, string)'
+    uid: '@azure/msal-browser.CryptoOps.signJwt'
+    package: '@azure/msal-browser'
+    summary: >-
+      Signs the given object as a jwt payload with private key retrieved by
+      given kid.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function signJwt(payload: SignedHttpRequest, kid: string,
+        correlationId?: string): Promise<string>
+      parameters:
+        - id: payload
+          type: <xref uid="@azure/msal-browser.SignedHttpRequest" />
+          description: ''
+        - id: kid
+          type: string
+          description: |+
+
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;string&gt;

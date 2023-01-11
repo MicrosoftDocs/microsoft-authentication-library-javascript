@@ -1,0 +1,96 @@
+### YamlMime:TSType
+name: AuthorityFactory
+uid: '@azure/msal-common.AuthorityFactory'
+package: '@azure/msal-common'
+summary: ''
+fullName: AuthorityFactory
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: >-
+      createDiscoveredInstance(string, INetworkModule, ICacheManager,
+      AuthorityOptions, Logger, string)
+    uid: '@azure/msal-common.AuthorityFactory.createDiscoveredInstance'
+    package: '@azure/msal-common'
+    summary: >
+      Create an authority object of the correct type based on the url
+
+      Performs basic authority validation - checks to see if the authority is of
+      a valid type (i.e. aad, b2c, adfs)
+
+      Also performs endpoint discovery.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createDiscoveredInstance(authorityUri: string,
+        networkClient: INetworkModule, cacheManager: ICacheManager,
+        authorityOptions: AuthorityOptions, logger: Logger, proxyUrl?: string):
+        Promise<Authority>
+      parameters:
+        - id: authorityUri
+          type: string
+          description: ''
+        - id: networkClient
+          type: <xref uid="@azure/msal-common.INetworkModule" />
+          description: ''
+        - id: cacheManager
+          type: <xref uid="@azure/msal-common.ICacheManager" />
+          description: ''
+        - id: authorityOptions
+          type: <xref uid="@azure/msal-common.AuthorityOptions" />
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
+        - id: proxyUrl
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-common.Authority" />&gt;
+  - name: >-
+      createInstance(string, INetworkModule, ICacheManager, AuthorityOptions,
+      Logger, string)
+    uid: '@azure/msal-common.AuthorityFactory.createInstance'
+    package: '@azure/msal-common'
+    summary: >
+      Create an authority object of the correct type based on the url
+
+      Performs basic authority validation - checks to see if the authority is of
+      a valid type (i.e. aad, b2c, adfs)
+
+      Does not perform endpoint discovery.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createInstance(authorityUrl: string, networkInterface:
+        INetworkModule, cacheManager: ICacheManager, authorityOptions:
+        AuthorityOptions, logger: Logger, proxyUrl?: string): Authority
+      parameters:
+        - id: authorityUrl
+          type: string
+          description: ''
+        - id: networkInterface
+          type: <xref uid="@azure/msal-common.INetworkModule" />
+          description: ''
+        - id: cacheManager
+          type: <xref uid="@azure/msal-common.ICacheManager" />
+          description: ''
+        - id: authorityOptions
+          type: <xref uid="@azure/msal-common.AuthorityOptions" />
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
+        - id: proxyUrl
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Authority" />

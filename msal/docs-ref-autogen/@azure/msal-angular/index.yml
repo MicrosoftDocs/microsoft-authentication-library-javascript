@@ -1,0 +1,23 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-angular'
+name: '@azure/msal-angular'
+summary: ''
+type: package
+interfaces:
+  - '@azure/msal-angular.IMsalService'
+typeAliases:
+  - '@azure/msal-angular.MsalBroadcastConfiguration'
+  - '@azure/msal-angular.MsalGuardAuthRequest'
+  - '@azure/msal-angular.MsalGuardConfiguration'
+  - '@azure/msal-angular.MatchingResources'
+  - '@azure/msal-angular.MsalInterceptorAuthRequest'
+  - '@azure/msal-angular.MsalInterceptorConfiguration'
+  - '@azure/msal-angular.ProtectedResourceScopes'
+classes:
+  - '@azure/msal-angular.MsalBroadcastService'
+  - '@azure/msal-angular.MsalGuard'
+  - '@azure/msal-angular.MsalInterceptor'
+  - '@azure/msal-angular.MsalModule'
+  - '@azure/msal-angular.MsalCustomNavigationClient'
+  - '@azure/msal-angular.MsalRedirectComponent'
+  - '@azure/msal-angular.MsalService'

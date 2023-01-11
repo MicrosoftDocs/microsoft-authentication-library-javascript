@@ -1,0 +1,269 @@
+### YamlMime:TSType
+name: PopupClient
+uid: '@azure/msal-browser.PopupClient'
+package: '@azure/msal-browser'
+summary: ''
+fullName: PopupClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      PopupClient(BrowserConfiguration, BrowserCacheManager, ICrypto, Logger,
+      EventHandler, INavigationClient, IPerformanceClient, BrowserCacheManager,
+      NativeMessageHandler, string)
+    uid: '@azure/msal-browser.PopupClient.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new PopupClient(config: BrowserConfiguration, storageImpl:
+        BrowserCacheManager, browserCrypto: ICrypto, logger: Logger,
+        eventHandler: EventHandler, navigationClient: INavigationClient,
+        performanceClient: IPerformanceClient, nativeStorageImpl:
+        BrowserCacheManager, nativeMessageHandler?: NativeMessageHandler,
+        correlationId?: string)
+      parameters:
+        - id: config
+          type: <xref uid="@azure/msal-browser.BrowserConfiguration" />
+          description: ''
+        - id: storageImpl
+          type: <xref uid="@azure/msal-browser.BrowserCacheManager" />
+          description: ''
+        - id: browserCrypto
+          type: ICrypto
+          description: ''
+        - id: logger
+          type: Logger
+          description: ''
+        - id: eventHandler
+          type: <xref uid="@azure/msal-browser.EventHandler" />
+          description: ''
+        - id: navigationClient
+          type: <xref uid="@azure/msal-browser.INavigationClient" />
+          description: ''
+        - id: performanceClient
+          type: IPerformanceClient
+          description: ''
+        - id: nativeStorageImpl
+          type: <xref uid="@azure/msal-browser.BrowserCacheManager" />
+          description: ''
+        - id: nativeMessageHandler
+          type: <xref uid="@azure/msal-browser.NativeMessageHandler" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+inheritedMethods:
+  - name: getRedirectUri(string)
+    uid: '@azure/msal-browser.PopupClient.getRedirectUri'
+    package: '@azure/msal-browser'
+    summary: Use to get the redirect uri configured in MSAL or null.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getRedirectUri(requestRedirectUri?: string): string'
+      parameters:
+        - id: requestRedirectUri
+          type: string
+          description: ''
+      return:
+        description: Redirect URL
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseInteractionClient.getRedirectUri](xref:@azure/msal-browser.BaseInteractionClient.getRedirectUri)
+methods:
+  - name: acquireToken(PopupRequest)
+    uid: '@azure/msal-browser.PopupClient.acquireToken'
+    package: '@azure/msal-browser'
+    summary: >-
+      Acquires tokens by opening a popup window to the /authorize endpoint of
+      the authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireToken(request: PopupRequest):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.PopupRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult&gt;
+  - name: cleanPopup(Window)
+    uid: '@azure/msal-browser.PopupClient.cleanPopup'
+    package: '@azure/msal-browser'
+    summary: 'Closes popup, removes any state vars created during popup calls.'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function cleanPopup(popupWindow?: Window)'
+      parameters:
+        - id: popupWindow
+          type: Window
+          description: |+
+
+  - name: generateLogoutPopupName(CommonEndSessionRequest)
+    uid: '@azure/msal-browser.PopupClient.generateLogoutPopupName'
+    package: '@azure/msal-browser'
+    summary: >-
+      Generates the name for the popup based on the client id and request for
+      logouts
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateLogoutPopupName(request: CommonEndSessionRequest):
+        string
+      parameters:
+        - id: request
+          type: CommonEndSessionRequest
+          description: |+
+
+      return:
+        description: ''
+        type: string
+  - name: 'generatePopupName(Array<string>, string)'
+    uid: '@azure/msal-browser.PopupClient.generatePopupName'
+    package: '@azure/msal-browser'
+    summary: Generates the name for the popup based on the client id and request
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generatePopupName(scopes: Array<string>, authority: string):
+        string
+      parameters:
+        - id: scopes
+          type: Array&lt;string&gt;
+          description: ''
+        - id: authority
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: 'initiateAuthRequest(string, PopupParams)'
+    uid: '@azure/msal-browser.PopupClient.initiateAuthRequest'
+    package: '@azure/msal-browser'
+    summary: Opens a popup window with given request Url.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function initiateAuthRequest(requestUrl: string, params: PopupParams):
+        Window
+      parameters:
+        - id: requestUrl
+          type: string
+          description: |+
+
+        - id: params
+          type: <xref uid="@azure/msal-browser.PopupParams" />
+          description: ''
+      return:
+        description: ''
+        type: Window
+  - name: logout(EndSessionPopupRequest)
+    uid: '@azure/msal-browser.PopupClient.logout'
+    package: '@azure/msal-browser'
+    summary: >-
+      Clears local cache for the current user then opens a popup window
+      prompting the user to sign-out of the server
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function logout(logoutRequest?: EndSessionPopupRequest): Promise<void>'
+      parameters:
+        - id: logoutRequest
+          type: <xref uid="@azure/msal-browser.EndSessionPopupRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: monitorPopupForHash(Window)
+    uid: '@azure/msal-browser.PopupClient.monitorPopupForHash'
+    package: '@azure/msal-browser'
+    summary: Monitors a window until it loads a url with the same origin.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function monitorPopupForHash(popupWindow: Window): Promise<string>'
+      parameters:
+        - id: popupWindow
+          type: Window
+          description: window that is being monitored
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: 'openSizedPopup(string, string, PopupWindowAttributes)'
+    uid: '@azure/msal-browser.PopupClient.openSizedPopup'
+    package: '@azure/msal-browser'
+    summary: Helper function to set popup window dimensions and position
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function openSizedPopup(urlNavigate: string, popupName: string,
+        popupWindowAttributes: PopupWindowAttributes): Window | null
+      parameters:
+        - id: urlNavigate
+          type: string
+          description: ''
+        - id: popupName
+          type: string
+          description: ''
+        - id: popupWindowAttributes
+          type: <xref uid="@azure/msal-browser.PopupWindowAttributes" />
+          description: ''
+      return:
+        description: ''
+        type: Window | null
+  - name: unloadWindow(Event)
+    uid: '@azure/msal-browser.PopupClient.unloadWindow'
+    package: '@azure/msal-browser'
+    summary: Event callback to unload main window.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function unloadWindow(e: Event)'
+      parameters:
+        - id: e
+          type: Event
+          description: ''
+  - name: waitForLogoutPopup(Window)
+    uid: '@azure/msal-browser.PopupClient.waitForLogoutPopup'
+    package: '@azure/msal-browser'
+    summary: Waits for user interaction in logout popup window
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function waitForLogoutPopup(popupWindow: Window): Promise<void>'
+      parameters:
+        - id: popupWindow
+          type: Window
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+extends: <xref uid="@azure/msal-browser.StandardInteractionClient" />

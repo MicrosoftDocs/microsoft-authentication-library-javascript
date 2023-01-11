@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: InteractionType
+uid: '@azure/msal.InteractionType'
+package: '@azure/msal'
+summary: ''
+fullName: InteractionType
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type InteractionType =
+    | "redirectInteraction"
+    | "popupInteraction"
+    | "silentInteraction"

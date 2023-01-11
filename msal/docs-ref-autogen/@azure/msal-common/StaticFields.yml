@@ -1,0 +1,33 @@
+### YamlMime:TSTypeAlias
+name: StaticFields
+uid: '@azure/msal-common.StaticFields'
+package: '@azure/msal-common'
+summary: Fields whose value will not change throughout a request
+fullName: StaticFields
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type StaticFields = {
+    accessTokenSize?: number,
+    appName?: string,
+    appVersion?: string,
+    cacheLookupPolicy?: number | undefined,
+    extensionId?: string,
+    extensionVersion?: string,
+    idTokenSize?: number,
+    matsAccountJoinOnEnd?: string,
+    matsAccountJoinOnStart?: string,
+    matsApiErrorCode?: number,
+    matsBrokerVersion?: string,
+    matsDeviceJoin?: string,
+    matsHttpEventCount?: number,
+    matsHttpStatus?: number,
+    matsPromptBehavior?: string,
+    matsSilentBiSubCode?: number,
+    matsSilentCode?: number,
+    matsSilentMessage?: string,
+    matsSilentStatus?: number,
+    matsUiVisible?: boolean,
+    refreshTokenSize?: number | undefined,
+  }

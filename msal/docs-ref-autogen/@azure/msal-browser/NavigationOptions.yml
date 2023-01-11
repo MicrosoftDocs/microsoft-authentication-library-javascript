@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: NavigationOptions
+uid: '@azure/msal-browser.NavigationOptions'
+package: '@azure/msal-browser'
+summary: >-
+  Additional information passed to the navigateInternal and navigateExternal
+  functions
+fullName: NavigationOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type NavigationOptions = { apiId: ApiId, noHistory: boolean, timeout: number }

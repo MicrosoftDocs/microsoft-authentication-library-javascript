@@ -1,0 +1,422 @@
+### YamlMime:TSType
+name: RefreshTokenEntity
+uid: '@azure/msal-common.RefreshTokenEntity'
+package: '@azure/msal-common'
+summary: |
+  REFRESH_TOKEN Cache
+  Key:Value Schema:
+
+  Key Example: uid.utid-login.microsoftonline.com-refreshtoken-clientId--
+
+  Value:
+  {
+       homeAccountId: home account identifier for the auth scheme,
+       environment: entity that issued the token, represented as a full host
+       credentialType: Type of credential as a string, can be one of the following: RefreshToken, AccessToken, IdToken, Password, Cookie, Certificate, Other
+       clientId: client ID of the application
+       secret: Actual credential as a string
+       familyId: Family ID identifier, '1' represents Microsoft Family
+       realm: Full tenant or organizational identifier that the account belongs to
+       target: Permissions that are included in the token, or for refresh tokens, the resource identifier.
+  }
+fullName: RefreshTokenEntity
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+properties:
+  - name: familyId
+    uid: '@azure/msal-common.RefreshTokenEntity.familyId'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: familyId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'familyId?: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
+  - name: clientId
+    uid: '@azure/msal-common.RefreshTokenEntity.clientId'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: clientId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'clientId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.clientId](xref:@azure/msal-common.CredentialEntity.clientId)
+  - name: credentialType
+    uid: '@azure/msal-common.RefreshTokenEntity.credentialType'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: credentialType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'credentialType: CredentialType'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.CredentialType" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.credentialType](xref:@azure/msal-common.CredentialEntity.credentialType)
+  - name: environment
+    uid: '@azure/msal-common.RefreshTokenEntity.environment'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: environment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'environment: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.environment](xref:@azure/msal-common.CredentialEntity.environment)
+  - name: homeAccountId
+    uid: '@azure/msal-common.RefreshTokenEntity.homeAccountId'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: homeAccountId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'homeAccountId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.homeAccountId](xref:@azure/msal-common.CredentialEntity.homeAccountId)
+  - name: keyId
+    uid: '@azure/msal-common.RefreshTokenEntity.keyId'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: keyId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'keyId?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.keyId](xref:@azure/msal-common.CredentialEntity.keyId)
+  - name: realm
+    uid: '@azure/msal-common.RefreshTokenEntity.realm'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: realm
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'realm?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.realm](xref:@azure/msal-common.CredentialEntity.realm)
+  - name: requestedClaimsHash
+    uid: '@azure/msal-common.RefreshTokenEntity.requestedClaimsHash'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: requestedClaimsHash
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'requestedClaimsHash?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.requestedClaimsHash](xref:@azure/msal-common.CredentialEntity.requestedClaimsHash)
+  - name: secret
+    uid: '@azure/msal-common.RefreshTokenEntity.secret'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: secret
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'secret: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.secret](xref:@azure/msal-common.CredentialEntity.secret)
+  - name: target
+    uid: '@azure/msal-common.RefreshTokenEntity.target'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: target
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'target?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.target](xref:@azure/msal-common.CredentialEntity.target)
+  - name: tokenType
+    uid: '@azure/msal-common.RefreshTokenEntity.tokenType'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: tokenType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tokenType?: AuthenticationScheme'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthenticationScheme" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.tokenType](xref:@azure/msal-common.CredentialEntity.tokenType)
+  - name: userAssertionHash
+    uid: '@azure/msal-common.RefreshTokenEntity.userAssertionHash'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: userAssertionHash
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'userAssertionHash?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.userAssertionHash](xref:@azure/msal-common.CredentialEntity.userAssertionHash)
+inheritedMethods:
+  - name: generateAccountId()
+    uid: '@azure/msal-common.RefreshTokenEntity.generateAccountId'
+    package: '@azure/msal-common'
+    summary: >-
+      Generate Account Id key component as per the schema:
+      <home_account_id>-<environment>
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateAccountId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.generateAccountId](xref:@azure/msal-common.CredentialEntity.generateAccountId)
+  - name: >-
+      generateCredentialCacheKey(string, string, CredentialType, string, string,
+      string, string, AuthenticationScheme, string)
+    uid: '@azure/msal-common.RefreshTokenEntity.generateCredentialCacheKey'
+    package: '@azure/msal-common'
+    summary: >-
+      generates credential key
+
+      <home_account_id*>-\<environment>-<credential_type>-<client_id>-<realm\*>-<target\*>-<scheme\*>
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function generateCredentialCacheKey(homeAccountId: string,
+        environment: string, credentialType: CredentialType, clientId: string,
+        realm?: string, target?: string, familyId?: string, tokenType?:
+        AuthenticationScheme, requestedClaimsHash?: string): string
+      parameters:
+        - id: homeAccountId
+          type: string
+          description: ''
+        - id: environment
+          type: string
+          description: ''
+        - id: credentialType
+          type: <xref uid="@azure/msal-common.CredentialType" />
+          description: ''
+        - id: clientId
+          type: string
+          description: ''
+        - id: realm
+          type: string
+          description: ''
+        - id: target
+          type: string
+          description: ''
+        - id: familyId
+          type: string
+          description: ''
+        - id: tokenType
+          type: <xref uid="@azure/msal-common.AuthenticationScheme" />
+          description: ''
+        - id: requestedClaimsHash
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.generateCredentialCacheKey](xref:@azure/msal-common.CredentialEntity.generateCredentialCacheKey)
+  - name: generateCredentialId()
+    uid: '@azure/msal-common.RefreshTokenEntity.generateCredentialId'
+    package: '@azure/msal-common'
+    summary: >-
+      Generate Credential Id key component as per the schema:
+      <credential_type>-<client_id>-<realm>
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateCredentialId(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.generateCredentialId](xref:@azure/msal-common.CredentialEntity.generateCredentialId)
+  - name: generateCredentialKey()
+    uid: '@azure/msal-common.RefreshTokenEntity.generateCredentialKey'
+    package: '@azure/msal-common'
+    summary: generates credential key
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateCredentialKey(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.generateCredentialKey](xref:@azure/msal-common.CredentialEntity.generateCredentialKey)
+  - name: generateTarget()
+    uid: '@azure/msal-common.RefreshTokenEntity.generateTarget'
+    package: '@azure/msal-common'
+    summary: 'Generate target key component as per schema: <target>'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateTarget(): string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.generateTarget](xref:@azure/msal-common.CredentialEntity.generateTarget)
+  - name: generateType()
+    uid: '@azure/msal-common.RefreshTokenEntity.generateType'
+    package: '@azure/msal-common'
+    summary: returns the type of the cache (in this case credential)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateType(): number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.generateType](xref:@azure/msal-common.CredentialEntity.generateType)
+  - name: getCredentialType(string)
+    uid: '@azure/msal-common.RefreshTokenEntity.getCredentialType'
+    package: '@azure/msal-common'
+    summary: helper function to return `CredentialType`
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function getCredentialType(key: string): string'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CredentialEntity.getCredentialType](xref:@azure/msal-common.CredentialEntity.getCredentialType)
+methods:
+  - name: 'createRefreshTokenEntity(string, string, string, string, string, string)'
+    uid: '@azure/msal-common.RefreshTokenEntity.createRefreshTokenEntity'
+    package: '@azure/msal-common'
+    summary: Create RefreshTokenEntity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createRefreshTokenEntity(homeAccountId: string,
+        environment: string, refreshToken: string, clientId: string, familyId?:
+        string, userAssertionHash?: string): RefreshTokenEntity
+      parameters:
+        - id: homeAccountId
+          type: string
+          description: ''
+        - id: environment
+          type: string
+          description: ''
+        - id: refreshToken
+          type: string
+          description: ''
+        - id: clientId
+          type: string
+          description: ''
+        - id: familyId
+          type: string
+          description: ''
+        - id: userAssertionHash
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.RefreshTokenEntity" />
+  - name: isRefreshTokenEntity(object)
+    uid: '@azure/msal-common.RefreshTokenEntity.isRefreshTokenEntity'
+    package: '@azure/msal-common'
+    summary: 'Validates an entity: checks for all expected params'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function isRefreshTokenEntity(entity: object): boolean'
+      parameters:
+        - id: entity
+          type: object
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+extends: <xref uid="@azure/msal-common.CredentialEntity" />

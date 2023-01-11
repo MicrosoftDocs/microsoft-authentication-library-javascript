@@ -1,0 +1,46 @@
+### YamlMime:TSTypeAlias
+name: ClientConfiguration
+uid: '@azure/msal-common.ClientConfiguration'
+package: '@azure/msal-common'
+summary: >
+  Use the configuration object to configure MSAL Modules and initialize the base
+  interfaces for MSAL.
+
+  This object allows you to configure important elements of MSAL functionality:
+
+  - authOptions                - Authentication for application
+
+  - cryptoInterface            - Implementation of crypto functions
+
+  - libraryInfo                - Library metadata
+
+  - telemetry                  - Telemetry options and data
+
+  - loggerOptions              - Logging for application
+
+  - networkInterface           - Network implementation
+
+  - storageInterface           - Storage implementation
+
+  - systemOptions              - Additional library options
+
+  - clientCredentials          - Credentials options for confidential clients
+fullName: ClientConfiguration
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type ClientConfiguration = {
+    authOptions: AuthOptions,
+    clientCredentials?: ClientCredentials,
+    cryptoInterface?: ICrypto,
+    libraryInfo?: LibraryInfo,
+    loggerOptions?: LoggerOptions,
+    networkInterface?: INetworkModule,
+    persistencePlugin?: ICachePlugin | null,
+    serializableCache?: ISerializableTokenCache | null,
+    serverTelemetryManager?: ServerTelemetryManager | null,
+    storageInterface?: CacheManager,
+    systemOptions?: SystemOptions,
+    telemetry?: TelemetryOptions,
+  }

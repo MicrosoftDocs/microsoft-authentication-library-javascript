@@ -1,0 +1,18 @@
+### YamlMime:TSEnum
+name: InMemoryCacheKeys
+uid: '@azure/msal-browser.InMemoryCacheKeys'
+package: '@azure/msal-browser'
+summary: Cache keys stored in-memory
+fullName: InMemoryCacheKeys
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: WRAPPER_SKU
+    uid: '@azure/msal-browser.InMemoryCacheKeys.WRAPPER_SKU'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: WRAPPER_VER
+    uid: '@azure/msal-browser.InMemoryCacheKeys.WRAPPER_VER'
+    package: '@azure/msal-browser'
+    summary: ''

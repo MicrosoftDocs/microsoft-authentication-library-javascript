@@ -1,0 +1,85 @@
+### YamlMime:TSType
+name: TimeUtils
+uid: '@azure/msal-common.TimeUtils'
+package: '@azure/msal-common'
+summary: Utility class which exposes functions for managing date and time operations.
+fullName: TimeUtils
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'delay<T>(number, T)'
+    uid: '@azure/msal-common.TimeUtils.delay'
+    package: '@azure/msal-common'
+    summary: Waits for t number of milliseconds
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function delay<T>(t: number, value?: T): Promise<T | void>'
+      parameters:
+        - id: t
+          type: number
+          description: number
+        - id: value
+          type: T
+          description: |
+            T
+      return:
+        description: ''
+        type: Promise&lt;T | void&gt;
+  - name: 'isTokenExpired(string, number)'
+    uid: '@azure/msal-common.TimeUtils.isTokenExpired'
+    package: '@azure/msal-common'
+    summary: check if a token is expired based on given UTC time in seconds.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function isTokenExpired(expiresOn: string, offset: number):
+        boolean
+      parameters:
+        - id: expiresOn
+          type: string
+          description: |+
+
+        - id: offset
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: nowSeconds()
+    uid: '@azure/msal-common.TimeUtils.nowSeconds'
+    package: '@azure/msal-common'
+    summary: return the current time in Unix time (seconds).
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function nowSeconds(): number'
+      return:
+        description: ''
+        type: number
+  - name: wasClockTurnedBack(string)
+    uid: '@azure/msal-common.TimeUtils.wasClockTurnedBack'
+    package: '@azure/msal-common'
+    summary: >-
+      If the current time is earlier than the time that a token was cached at,
+      we must discard the token
+
+      i.e. The system clock was turned back after acquiring the cached token
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function wasClockTurnedBack(cachedAt: string): boolean'
+      parameters:
+        - id: cachedAt
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean

@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: PopupEvent
+uid: '@azure/msal-browser.PopupEvent'
+package: '@azure/msal-browser'
+summary: ''
+fullName: PopupEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type PopupEvent = { popupWindow: Window }

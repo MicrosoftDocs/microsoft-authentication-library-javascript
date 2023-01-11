@@ -1,0 +1,37 @@
+### YamlMime:TSType
+name: ISerializableTokenCache
+uid: '@azure/msal-common.ISerializableTokenCache'
+package: '@azure/msal-common'
+summary: ''
+fullName: ISerializableTokenCache
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: deserialize
+    uid: '@azure/msal-common.ISerializableTokenCache.deserialize'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: deserialize
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'deserialize: (cache: string) => void'
+      return:
+        description: ''
+        type: '(cache: string) =&gt; void'
+  - name: serialize
+    uid: '@azure/msal-common.ISerializableTokenCache.serialize'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: serialize
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'serialize: () => string'
+      return:
+        description: ''
+        type: () =&gt; string

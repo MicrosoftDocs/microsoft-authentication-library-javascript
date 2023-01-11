@@ -1,0 +1,180 @@
+### YamlMime:TSType
+name: Account
+uid: '@azure/msal.Account'
+package: '@azure/msal'
+summary: |-
+  accountIdentifier       combination of idToken.uid and idToken.utid
+  homeAccountIdentifier   combination of clientInfo.uid and clientInfo.utid
+  userName                idToken.preferred_username
+  name                    idToken.name
+  idToken                 idToken
+  sid                     idToken.sid - session identifier
+  environment             idtoken.issuer (the authority that issues the token)
+fullName: Account
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'Account(string, string, string, string, StringDict, string, string)'
+    uid: '@azure/msal.Account.constructor'
+    package: '@azure/msal'
+    summary: Creates an Account Object
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new Account(accountIdentifier: string, homeAccountIdentifier: string,
+        userName: string, name: string, idTokenClaims: StringDict, sid: string,
+        environment: string)
+      parameters:
+        - id: accountIdentifier
+          type: string
+          description: ''
+        - id: homeAccountIdentifier
+          type: string
+          description: ''
+        - id: userName
+          type: string
+          description: ''
+        - id: name
+          type: string
+          description: ''
+        - id: idTokenClaims
+          type: <xref uid="@azure/msal.StringDict" />
+          description: ''
+        - id: sid
+          type: string
+          description: ''
+        - id: environment
+          type: string
+          description: |+
+
+properties:
+  - name: accountIdentifier
+    uid: '@azure/msal.Account.accountIdentifier'
+    package: '@azure/msal'
+    summary: ''
+    fullName: accountIdentifier
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'accountIdentifier: string'
+      return:
+        description: ''
+        type: string
+  - name: environment
+    uid: '@azure/msal.Account.environment'
+    package: '@azure/msal'
+    summary: ''
+    fullName: environment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'environment: string'
+      return:
+        description: ''
+        type: string
+  - name: homeAccountIdentifier
+    uid: '@azure/msal.Account.homeAccountIdentifier'
+    package: '@azure/msal'
+    summary: ''
+    fullName: homeAccountIdentifier
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'homeAccountIdentifier: string'
+      return:
+        description: ''
+        type: string
+  - name: idToken
+    uid: '@azure/msal.Account.idToken'
+    package: '@azure/msal'
+    summary: ''
+    fullName: idToken
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'idToken: StringDict'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.StringDict" />
+  - name: idTokenClaims
+    uid: '@azure/msal.Account.idTokenClaims'
+    package: '@azure/msal'
+    summary: ''
+    fullName: idTokenClaims
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'idTokenClaims: StringDict'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.StringDict" />
+  - name: name
+    uid: '@azure/msal.Account.name'
+    package: '@azure/msal'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+  - name: sid
+    uid: '@azure/msal.Account.sid'
+    package: '@azure/msal'
+    summary: ''
+    fullName: sid
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'sid: string'
+      return:
+        description: ''
+        type: string
+  - name: userName
+    uid: '@azure/msal.Account.userName'
+    package: '@azure/msal'
+    summary: ''
+    fullName: userName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'userName: string'
+      return:
+        description: ''
+        type: string
+methods:
+  - name: 'compareAccounts(Account, Account)'
+    uid: '@azure/msal.Account.compareAccounts'
+    package: '@azure/msal'
+    summary: >-
+      Utils function to compare two Account objects - used to check if the same
+      user account is logged in
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function compareAccounts(a1: Account, a2: Account): boolean'
+      parameters:
+        - id: a1
+          type: <xref uid="@azure/msal.Account" />
+          description: ''
+        - id: a2
+          type: <xref uid="@azure/msal.Account" />
+          description: ''
+      return:
+        description: ''
+        type: boolean

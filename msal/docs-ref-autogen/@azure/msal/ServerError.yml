@@ -1,0 +1,173 @@
+### YamlMime:TSType
+name: ServerError
+uid: '@azure/msal.ServerError'
+package: '@azure/msal'
+summary: >-
+  Error thrown when there is an error with the server code, for example,
+  unavailability.
+fullName: ServerError
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'ServerError(string, string)'
+    uid: '@azure/msal.ServerError.constructor'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new ServerError(errorCode: string, errorMessage?: string)'
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+        - id: errorMessage
+          type: string
+          description: ''
+inheritedProperties:
+  - name: errorCode
+    uid: '@azure/msal.ServerError.errorCode'
+    package: '@azure/msal'
+    summary: ''
+    fullName: errorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorCode: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorCode](xref:@azure/msal.AuthError.errorCode)
+  - name: errorMessage
+    uid: '@azure/msal.ServerError.errorMessage'
+    package: '@azure/msal'
+    summary: ''
+    fullName: errorMessage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorMessage](xref:@azure/msal.AuthError.errorMessage)
+  - name: message
+    uid: '@azure/msal.ServerError.message'
+    package: '@azure/msal'
+    summary: ''
+    fullName: message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.message
+  - name: name
+    uid: '@azure/msal.ServerError.name'
+    package: '@azure/msal'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.name
+  - name: stack
+    uid: '@azure/msal.ServerError.stack'
+    package: '@azure/msal'
+    summary: ''
+    fullName: stack
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stack?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.stack
+inheritedMethods:
+  - name: createNoWindowObjectError(string)
+    uid: '@azure/msal.ServerError.createNoWindowObjectError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createNoWindowObjectError(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.AuthError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.createNoWindowObjectError](xref:@azure/msal.AuthError.createNoWindowObjectError)
+  - name: createUnexpectedError(string)
+    uid: '@azure/msal.ServerError.createUnexpectedError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUnexpectedError(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.AuthError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.createUnexpectedError](xref:@azure/msal.AuthError.createUnexpectedError)
+methods:
+  - name: createServerUnavailableError()
+    uid: '@azure/msal.ServerError.createServerUnavailableError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createServerUnavailableError(): ServerError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ServerError" />
+  - name: createUnknownServerError(string)
+    uid: '@azure/msal.ServerError.createUnknownServerError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUnknownServerError(errorDesc: string): ServerError'
+      parameters:
+        - id: errorDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ServerError" />
+extends: <xref uid="@azure/msal.AuthError" />

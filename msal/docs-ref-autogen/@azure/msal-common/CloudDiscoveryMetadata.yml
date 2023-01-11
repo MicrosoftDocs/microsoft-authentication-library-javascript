@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: CloudDiscoveryMetadata
+uid: '@azure/msal-common.CloudDiscoveryMetadata'
+package: '@azure/msal-common'
+summary: ''
+fullName: CloudDiscoveryMetadata
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type CloudDiscoveryMetadata = {
+    aliases: Array<string>,
+    preferred_cache: string,
+    preferred_network: string,
+  }

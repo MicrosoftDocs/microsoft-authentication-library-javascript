@@ -1,0 +1,34 @@
+### YamlMime:TSEnum
+name: API_EVENT_IDENTIFIER
+uid: '@azure/msal.API_EVENT_IDENTIFIER'
+package: '@azure/msal'
+summary: ''
+fullName: API_EVENT_IDENTIFIER
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: AcquireTokenPopup
+    uid: '@azure/msal.API_EVENT_IDENTIFIER.AcquireTokenPopup'
+    package: '@azure/msal'
+    summary: ''
+  - name: AcquireTokenRedirect
+    uid: '@azure/msal.API_EVENT_IDENTIFIER.AcquireTokenRedirect'
+    package: '@azure/msal'
+    summary: ''
+  - name: AcquireTokenSilent
+    uid: '@azure/msal.API_EVENT_IDENTIFIER.AcquireTokenSilent'
+    package: '@azure/msal'
+    summary: ''
+  - name: LoginPopup
+    uid: '@azure/msal.API_EVENT_IDENTIFIER.LoginPopup'
+    package: '@azure/msal'
+    summary: ''
+  - name: LoginRedirect
+    uid: '@azure/msal.API_EVENT_IDENTIFIER.LoginRedirect'
+    package: '@azure/msal'
+    summary: ''
+  - name: Logout
+    uid: '@azure/msal.API_EVENT_IDENTIFIER.Logout'
+    package: '@azure/msal'
+    summary: ''

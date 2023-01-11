@@ -1,0 +1,25 @@
+### YamlMime:TSEnum
+name: AuthorityType
+uid: '@azure/msal-common.AuthorityType'
+package: '@azure/msal-common'
+summary: Authority types supported by MSAL.
+fullName: AuthorityType
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: Default
+    uid: '@azure/msal-common.AuthorityType.Default'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 0
+  - name: Adfs
+    uid: '@azure/msal-common.AuthorityType.Adfs'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 1
+  - name: Dsts
+    uid: '@azure/msal-common.AuthorityType.Dsts'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 2

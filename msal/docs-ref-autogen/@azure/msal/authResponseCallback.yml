@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: authResponseCallback
+uid: '@azure/msal.authResponseCallback'
+package: '@azure/msal'
+summary: |-
+  A type alias for an authResponseCallback function.
+  <xref:(authResponseCallback%3Atype)>
+fullName: authResponseCallback
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type authResponseCallback = (
+    authErr: AuthError,
+    response?: AuthResponse
+  ) => void

@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: LibraryStateObject
+uid: '@azure/msal.LibraryStateObject'
+package: '@azure/msal'
+summary: ''
+fullName: LibraryStateObject
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type LibraryStateObject = { id: string, method: string, ts: number }

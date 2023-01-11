@@ -1,0 +1,108 @@
+### YamlMime:TSType
+name: RequestValidator
+uid: '@azure/msal-common.RequestValidator'
+package: '@azure/msal-common'
+summary: Validates server consumable params from the "request" objects
+fullName: RequestValidator
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'sanitizeEQParams(StringDict, Map<string, string>)'
+    uid: '@azure/msal-common.RequestValidator.sanitizeEQParams'
+    package: '@azure/msal-common'
+    summary: >-
+      Removes unnecessary or duplicate query parameters from
+      extraQueryParameters
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function sanitizeEQParams(eQParams: StringDict, queryParams:
+        Map<string, string>): StringDict
+      parameters:
+        - id: eQParams
+          type: <xref uid="@azure/msal-common.StringDict" />
+          description: ''
+        - id: queryParams
+          type: 'Map&lt;string, string&gt;'
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.StringDict" />
+  - name: validateClaims(string)
+    uid: '@azure/msal-common.RequestValidator.validateClaims'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function validateClaims(claims: string)'
+      parameters:
+        - id: claims
+          type: string
+          description: ''
+  - name: validateCodeChallengeMethod(string)
+    uid: '@azure/msal-common.RequestValidator.validateCodeChallengeMethod'
+    package: '@azure/msal-common'
+    summary: Utility to validate code_challenge_method
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function validateCodeChallengeMethod(codeChallengeMethod: string)'
+      parameters:
+        - id: codeChallengeMethod
+          type: string
+          description: |+
+
+  - name: 'validateCodeChallengeParams(string, string)'
+    uid: '@azure/msal-common.RequestValidator.validateCodeChallengeParams'
+    package: '@azure/msal-common'
+    summary: Utility to validate code_challenge and code_challenge_method
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function validateCodeChallengeParams(codeChallenge: string,
+        codeChallengeMethod: string)
+      parameters:
+        - id: codeChallenge
+          type: string
+          description: ''
+        - id: codeChallengeMethod
+          type: string
+          description: |+
+
+  - name: validatePrompt(string)
+    uid: '@azure/msal-common.RequestValidator.validatePrompt'
+    package: '@azure/msal-common'
+    summary: Utility to validate prompt sent by the user in the request
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function validatePrompt(prompt: string)'
+      parameters:
+        - id: prompt
+          type: string
+          description: |+
+
+  - name: validateRedirectUri(string)
+    uid: '@azure/msal-common.RequestValidator.validateRedirectUri'
+    package: '@azure/msal-common'
+    summary: Utility to check if the `redirectUri` in the request is a non-null value
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function validateRedirectUri(redirectUri: string)'
+      parameters:
+        - id: redirectUri
+          type: string
+          description: |+
+

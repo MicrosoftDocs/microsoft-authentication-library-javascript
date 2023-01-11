@@ -1,0 +1,91 @@
+### YamlMime:TSType
+name: JoseHeader
+uid: '@azure/msal-common.JoseHeader'
+package: '@azure/msal-common'
+summary: ''
+fullName: JoseHeader
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: JoseHeader(JoseHeaderOptions)
+    uid: '@azure/msal-common.JoseHeader.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new JoseHeader(options: JoseHeaderOptions)'
+      parameters:
+        - id: options
+          type: <xref uid="@azure/msal-common.JoseHeaderOptions" />
+          description: ''
+properties:
+  - name: alg
+    uid: '@azure/msal-common.JoseHeader.alg'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: alg
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'alg?: string'
+      return:
+        description: ''
+        type: string
+  - name: kid
+    uid: '@azure/msal-common.JoseHeader.kid'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: kid
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'kid?: string'
+      return:
+        description: ''
+        type: string
+  - name: typ
+    uid: '@azure/msal-common.JoseHeader.typ'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: typ
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'typ?: JsonTypes'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.JsonTypes" />
+methods:
+  - name: getShrHeaderString(JoseHeaderOptions)
+    uid: '@azure/msal-common.JoseHeader.getShrHeaderString'
+    package: '@azure/msal-common'
+    summary: >-
+      Builds SignedHttpRequest formatted JOSE Header from the
+
+      JOSE Header options provided or previously set on the object and returns
+
+      the stringified header object.
+
+      Throws if keyId or algorithm aren't provided since they are required for
+      Access Token Binding.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getShrHeaderString(shrHeaderOptions: JoseHeaderOptions):
+        string
+      parameters:
+        - id: shrHeaderOptions
+          type: <xref uid="@azure/msal-common.JoseHeaderOptions" />
+          description: ''
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,22 @@
+### YamlMime:TSTypeAlias
+name: LibraryStateObject
+uid: '@azure/msal-common.LibraryStateObject'
+package: '@azure/msal-common'
+summary: >-
+  Type which defines the object that is stringified, encoded and sent in the
+  state value.
+
+  Contains the following:
+
+  - id - unique identifier for this request
+
+  - ts - timestamp for the time the request was made. Used to ensure that token
+  expiration is not calculated incorrectly.
+
+  - platformState - string value sent from the platform.
+fullName: LibraryStateObject
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type LibraryStateObject = { id: string, meta?: Record<string, string> }

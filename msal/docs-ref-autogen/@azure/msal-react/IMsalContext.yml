@@ -1,0 +1,63 @@
+### YamlMime:TSType
+name: IMsalContext
+uid: '@azure/msal-react.IMsalContext'
+package: '@azure/msal-react'
+summary: ''
+fullName: IMsalContext
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: accounts
+    uid: '@azure/msal-react.IMsalContext.accounts'
+    package: '@azure/msal-react'
+    summary: ''
+    fullName: accounts
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'accounts: AccountInfo[]'
+      return:
+        description: ''
+        type: 'AccountInfo[]'
+  - name: inProgress
+    uid: '@azure/msal-react.IMsalContext.inProgress'
+    package: '@azure/msal-react'
+    summary: ''
+    fullName: inProgress
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'inProgress: InteractionStatus'
+      return:
+        description: ''
+        type: InteractionStatus
+  - name: instance
+    uid: '@azure/msal-react.IMsalContext.instance'
+    package: '@azure/msal-react'
+    summary: ''
+    fullName: instance
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'instance: IPublicClientApplication'
+      return:
+        description: ''
+        type: IPublicClientApplication
+  - name: logger
+    uid: '@azure/msal-react.IMsalContext.logger'
+    package: '@azure/msal-react'
+    summary: ''
+    fullName: logger
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'logger: Logger'
+      return:
+        description: ''
+        type: Logger

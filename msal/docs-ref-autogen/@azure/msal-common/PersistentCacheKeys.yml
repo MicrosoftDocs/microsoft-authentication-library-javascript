@@ -1,0 +1,38 @@
+### YamlMime:TSEnum
+name: PersistentCacheKeys
+uid: '@azure/msal-common.PersistentCacheKeys'
+package: '@azure/msal-common'
+summary: Persistent cache keys MSAL which stay while user is logged in.
+fullName: PersistentCacheKeys
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ACTIVE_ACCOUNT
+    uid: '@azure/msal-common.PersistentCacheKeys.ACTIVE_ACCOUNT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ACTIVE_ACCOUNT_FILTERS
+    uid: '@azure/msal-common.PersistentCacheKeys.ACTIVE_ACCOUNT_FILTERS'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ADAL_ID_TOKEN
+    uid: '@azure/msal-common.PersistentCacheKeys.ADAL_ID_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CLIENT_INFO
+    uid: '@azure/msal-common.PersistentCacheKeys.CLIENT_INFO'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ERROR
+    uid: '@azure/msal-common.PersistentCacheKeys.ERROR'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ERROR_DESC
+    uid: '@azure/msal-common.PersistentCacheKeys.ERROR_DESC'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ID_TOKEN
+    uid: '@azure/msal-common.PersistentCacheKeys.ID_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''

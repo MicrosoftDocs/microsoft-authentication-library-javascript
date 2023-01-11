@@ -1,0 +1,17 @@
+### YamlMime:TSTypeAlias
+name: OSError
+uid: '@azure/msal-browser.OSError'
+package: '@azure/msal-browser'
+summary: ''
+fullName: OSError
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type OSError = {
+    error: number,
+    properties: object,
+    protocol_error: string,
+    retryable?: boolean,
+    status: string,
+  }

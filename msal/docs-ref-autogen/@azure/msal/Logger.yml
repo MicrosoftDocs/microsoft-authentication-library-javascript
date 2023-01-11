@@ -1,0 +1,46 @@
+### YamlMime:TSType
+name: Logger
+uid: '@azure/msal.Logger'
+package: '@azure/msal'
+summary: ''
+fullName: Logger
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      Logger(ILoggerCallback, { correlationId?: string, level?: LogLevel,
+      piiLoggingEnabled?: boolean })
+    uid: '@azure/msal.Logger.constructor'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new Logger(localCallback: ILoggerCallback, options?: { correlationId?:
+        string, level?: LogLevel, piiLoggingEnabled?: boolean })
+      parameters:
+        - id: localCallback
+          type: <xref uid="@azure/msal.ILoggerCallback" />
+          description: ''
+        - id: options
+          type: >-
+            { correlationId?: string, level?: LogLevel, piiLoggingEnabled?:
+            boolean }
+          description: ''
+methods:
+  - name: isPiiLoggingEnabled()
+    uid: '@azure/msal.Logger.isPiiLoggingEnabled'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function isPiiLoggingEnabled(): boolean'
+      return:
+        description: ''
+        type: boolean

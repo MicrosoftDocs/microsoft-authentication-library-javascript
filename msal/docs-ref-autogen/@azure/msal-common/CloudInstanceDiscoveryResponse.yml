@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: CloudInstanceDiscoveryResponse
+uid: '@azure/msal-common.CloudInstanceDiscoveryResponse'
+package: '@azure/msal-common'
+summary: >-
+  The OpenID Configuration Endpoint Response type. Used by the authority class
+  to get relevant OAuth endpoints.
+fullName: CloudInstanceDiscoveryResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type CloudInstanceDiscoveryResponse = {
+    metadata: Array<CloudDiscoveryMetadata>,
+    tenant_discovery_endpoint: string,
+  }

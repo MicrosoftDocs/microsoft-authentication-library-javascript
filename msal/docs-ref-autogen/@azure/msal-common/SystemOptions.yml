@@ -1,0 +1,19 @@
+### YamlMime:TSTypeAlias
+name: SystemOptions
+uid: '@azure/msal-common.SystemOptions'
+package: '@azure/msal-common'
+summary: >
+  Use this to configure token renewal info in the Configuration object
+
+  - tokenRenewalOffsetSeconds    - Sets the window of offset needed to renew the
+  token before expiry
+fullName: SystemOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type SystemOptions = {
+    preventCorsPreflight?: boolean,
+    proxyUrl?: string,
+    tokenRenewalOffsetSeconds?: number,
+  }

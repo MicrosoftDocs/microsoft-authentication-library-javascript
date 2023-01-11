@@ -1,0 +1,18 @@
+### YamlMime:TSTypeAlias
+name: MsalAuthenticationProps
+uid: '@azure/msal-react.MsalAuthenticationProps'
+package: '@azure/msal-react'
+summary: ''
+fullName: MsalAuthenticationProps
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type MsalAuthenticationProps = PropsWithChildren<
+    AccountIdentifiers & {
+      authenticationRequest?: PopupRequest | RedirectRequest | SsoSilentRequest,
+      errorComponent?: React.ElementType<MsalAuthenticationResult>,
+      interactionType: InteractionType,
+      loadingComponent?: React.ElementType<IMsalContext>,
+    }
+  >

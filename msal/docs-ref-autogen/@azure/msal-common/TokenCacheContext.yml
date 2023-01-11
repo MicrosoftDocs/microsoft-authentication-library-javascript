@@ -1,0 +1,84 @@
+### YamlMime:TSType
+name: TokenCacheContext
+uid: '@azure/msal-common.TokenCacheContext'
+package: '@azure/msal-common'
+summary: |-
+  This class instance helps track the memory changes facilitating
+  decisions to read from and write to the persistent cache
+fullName: TokenCacheContext
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'TokenCacheContext(ISerializableTokenCache, boolean)'
+    uid: '@azure/msal-common.TokenCacheContext.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new TokenCacheContext(tokenCache: ISerializableTokenCache, hasChanged:
+        boolean)
+      parameters:
+        - id: tokenCache
+          type: <xref uid="@azure/msal-common.ISerializableTokenCache" />
+          description: ''
+        - id: hasChanged
+          type: boolean
+          description: ''
+properties:
+  - name: cache
+    uid: '@azure/msal-common.TokenCacheContext.cache'
+    package: '@azure/msal-common'
+    summary: serializable token cache interface
+    fullName: cache
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'cache: ISerializableTokenCache'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ISerializableTokenCache" />
+  - name: cacheHasChanged
+    uid: '@azure/msal-common.TokenCacheContext.cacheHasChanged'
+    package: '@azure/msal-common'
+    summary: boolean which indicates the changes in cache
+    fullName: cacheHasChanged
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: boolean cacheHasChanged
+      return:
+        description: ''
+        type: boolean
+  - name: hasChanged
+    uid: '@azure/msal-common.TokenCacheContext.hasChanged'
+    package: '@azure/msal-common'
+    summary: boolean indicating cache change
+    fullName: hasChanged
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'hasChanged: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: tokenCache
+    uid: '@azure/msal-common.TokenCacheContext.tokenCache'
+    package: '@azure/msal-common'
+    summary: function to retrieve the token cache
+    fullName: tokenCache
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: ISerializableTokenCache tokenCache
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ISerializableTokenCache" />

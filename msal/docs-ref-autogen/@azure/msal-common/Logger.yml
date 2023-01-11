@@ -1,0 +1,250 @@
+### YamlMime:TSType
+name: Logger
+uid: '@azure/msal-common.Logger'
+package: '@azure/msal-common'
+summary: Class which facilitates logging of messages to a specific place.
+fullName: Logger
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'Logger(LoggerOptions, string, string)'
+    uid: '@azure/msal-common.Logger.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new Logger(loggerOptions: LoggerOptions, packageName?: string,
+        packageVersion?: string)
+      parameters:
+        - id: loggerOptions
+          type: <xref uid="@azure/msal-common.LoggerOptions" />
+          description: ''
+        - id: packageName
+          type: string
+          description: ''
+        - id: packageVersion
+          type: string
+          description: ''
+methods:
+  - name: 'clone(string, string, string)'
+    uid: '@azure/msal-common.Logger.clone'
+    package: '@azure/msal-common'
+    summary: Create new Logger with existing configurations.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function clone(packageName: string, packageVersion: string,
+        correlationId?: string): Logger
+      parameters:
+        - id: packageName
+          type: string
+          description: ''
+        - id: packageVersion
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Logger" />
+  - name: 'error(string, string)'
+    uid: '@azure/msal-common.Logger.error'
+    package: '@azure/msal-common'
+    summary: Logs error messages.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function error(message: string, correlationId?: string)'
+      parameters:
+        - id: message
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: 'errorPii(string, string)'
+    uid: '@azure/msal-common.Logger.errorPii'
+    package: '@azure/msal-common'
+    summary: Logs error messages with PII.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function errorPii(message: string, correlationId?: string)'
+      parameters:
+        - id: message
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: 'executeCallback(LogLevel, string, boolean)'
+    uid: '@azure/msal-common.Logger.executeCallback'
+    package: '@azure/msal-common'
+    summary: Execute callback with message.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function executeCallback(level: LogLevel, message: string, containsPii:
+        boolean)
+      parameters:
+        - id: level
+          type: <xref uid="@azure/msal-common.LogLevel" />
+          description: ''
+        - id: message
+          type: string
+          description: ''
+        - id: containsPii
+          type: boolean
+          description: ''
+  - name: 'info(string, string)'
+    uid: '@azure/msal-common.Logger.info'
+    package: '@azure/msal-common'
+    summary: Logs info messages.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function info(message: string, correlationId?: string)'
+      parameters:
+        - id: message
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: 'infoPii(string, string)'
+    uid: '@azure/msal-common.Logger.infoPii'
+    package: '@azure/msal-common'
+    summary: Logs info messages with PII.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function infoPii(message: string, correlationId?: string)'
+      parameters:
+        - id: message
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: isPiiLoggingEnabled()
+    uid: '@azure/msal-common.Logger.isPiiLoggingEnabled'
+    package: '@azure/msal-common'
+    summary: Returns whether PII Logging is enabled or not.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function isPiiLoggingEnabled(): boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: 'trace(string, string)'
+    uid: '@azure/msal-common.Logger.trace'
+    package: '@azure/msal-common'
+    summary: Logs trace messages.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function trace(message: string, correlationId?: string)'
+      parameters:
+        - id: message
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: 'tracePii(string, string)'
+    uid: '@azure/msal-common.Logger.tracePii'
+    package: '@azure/msal-common'
+    summary: Logs trace messages with PII.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function tracePii(message: string, correlationId?: string)'
+      parameters:
+        - id: message
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: 'verbose(string, string)'
+    uid: '@azure/msal-common.Logger.verbose'
+    package: '@azure/msal-common'
+    summary: Logs verbose messages.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function verbose(message: string, correlationId?: string)'
+      parameters:
+        - id: message
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: 'verbosePii(string, string)'
+    uid: '@azure/msal-common.Logger.verbosePii'
+    package: '@azure/msal-common'
+    summary: Logs verbose messages with PII.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function verbosePii(message: string, correlationId?: string)'
+      parameters:
+        - id: message
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: 'warning(string, string)'
+    uid: '@azure/msal-common.Logger.warning'
+    package: '@azure/msal-common'
+    summary: Logs warning messages.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function warning(message: string, correlationId?: string)'
+      parameters:
+        - id: message
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: 'warningPii(string, string)'
+    uid: '@azure/msal-common.Logger.warningPii'
+    package: '@azure/msal-common'
+    summary: Logs warning messages with PII.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function warningPii(message: string, correlationId?: string)'
+      parameters:
+        - id: message
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''

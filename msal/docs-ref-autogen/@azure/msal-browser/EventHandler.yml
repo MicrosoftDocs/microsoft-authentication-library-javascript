@@ -1,0 +1,108 @@
+### YamlMime:TSType
+name: EventHandler
+uid: '@azure/msal-browser.EventHandler'
+package: '@azure/msal-browser'
+summary: ''
+fullName: EventHandler
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'EventHandler(Logger, ICrypto)'
+    uid: '@azure/msal-browser.EventHandler.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new EventHandler(logger: Logger, browserCrypto: ICrypto)'
+      parameters:
+        - id: logger
+          type: Logger
+          description: ''
+        - id: browserCrypto
+          type: ICrypto
+          description: ''
+methods:
+  - name: addEventCallback(EventCallbackFunction)
+    uid: '@azure/msal-browser.EventHandler.addEventCallback'
+    package: '@azure/msal-browser'
+    summary: Adds event callbacks to array
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addEventCallback(callback: EventCallbackFunction): string |
+        null
+      parameters:
+        - id: callback
+          type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
+          description: |+
+
+      return:
+        description: ''
+        type: string | null
+  - name: disableAccountStorageEvents()
+    uid: '@azure/msal-browser.EventHandler.disableAccountStorageEvents'
+    package: '@azure/msal-browser'
+    summary: >-
+      Removes event listener that emits an event when a user account is added or
+      removed from localstorage in a different browser tab or window
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function disableAccountStorageEvents()
+  - name: 'emitEvent(EventType, InteractionType, EventPayload, EventError)'
+    uid: '@azure/msal-browser.EventHandler.emitEvent'
+    package: '@azure/msal-browser'
+    summary: Emits events by calling callback with event message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function emitEvent(eventType: EventType, interactionType?:
+        InteractionType, payload?: EventPayload, error?: EventError)
+      parameters:
+        - id: eventType
+          type: <xref uid="@azure/msal-browser.EventType" />
+          description: ''
+        - id: interactionType
+          type: <xref uid="@azure/msal-browser.InteractionType" />
+          description: ''
+        - id: payload
+          type: <xref uid="@azure/msal-browser.EventPayload" />
+          description: ''
+        - id: error
+          type: <xref uid="@azure/msal-browser.EventError" />
+          description: |+
+
+  - name: enableAccountStorageEvents()
+    uid: '@azure/msal-browser.EventHandler.enableAccountStorageEvents'
+    package: '@azure/msal-browser'
+    summary: >-
+      Adds event listener that emits an event when a user account is added or
+      removed from localstorage in a different browser tab or window
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function enableAccountStorageEvents()
+  - name: removeEventCallback(string)
+    uid: '@azure/msal-browser.EventHandler.removeEventCallback'
+    package: '@azure/msal-browser'
+    summary: Removes callback with provided id from callback array
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removeEventCallback(callbackId: string)'
+      parameters:
+        - id: callbackId
+          type: string
+          description: |+
+

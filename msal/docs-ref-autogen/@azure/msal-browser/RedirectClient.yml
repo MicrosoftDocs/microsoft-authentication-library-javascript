@@ -1,0 +1,142 @@
+### YamlMime:TSType
+name: RedirectClient
+uid: '@azure/msal-browser.RedirectClient'
+package: '@azure/msal-browser'
+summary: ''
+fullName: RedirectClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      RedirectClient(BrowserConfiguration, BrowserCacheManager, ICrypto, Logger,
+      EventHandler, INavigationClient, IPerformanceClient, BrowserCacheManager,
+      NativeMessageHandler, string)
+    uid: '@azure/msal-browser.RedirectClient.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new RedirectClient(config: BrowserConfiguration, storageImpl:
+        BrowserCacheManager, browserCrypto: ICrypto, logger: Logger,
+        eventHandler: EventHandler, navigationClient: INavigationClient,
+        performanceClient: IPerformanceClient, nativeStorageImpl:
+        BrowserCacheManager, nativeMessageHandler?: NativeMessageHandler,
+        correlationId?: string)
+      parameters:
+        - id: config
+          type: <xref uid="@azure/msal-browser.BrowserConfiguration" />
+          description: ''
+        - id: storageImpl
+          type: <xref uid="@azure/msal-browser.BrowserCacheManager" />
+          description: ''
+        - id: browserCrypto
+          type: ICrypto
+          description: ''
+        - id: logger
+          type: Logger
+          description: ''
+        - id: eventHandler
+          type: <xref uid="@azure/msal-browser.EventHandler" />
+          description: ''
+        - id: navigationClient
+          type: <xref uid="@azure/msal-browser.INavigationClient" />
+          description: ''
+        - id: performanceClient
+          type: IPerformanceClient
+          description: ''
+        - id: nativeStorageImpl
+          type: <xref uid="@azure/msal-browser.BrowserCacheManager" />
+          description: ''
+        - id: nativeMessageHandler
+          type: <xref uid="@azure/msal-browser.NativeMessageHandler" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+inheritedMethods:
+  - name: getRedirectUri(string)
+    uid: '@azure/msal-browser.RedirectClient.getRedirectUri'
+    package: '@azure/msal-browser'
+    summary: Use to get the redirect uri configured in MSAL or null.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getRedirectUri(requestRedirectUri?: string): string'
+      parameters:
+        - id: requestRedirectUri
+          type: string
+          description: ''
+      return:
+        description: Redirect URL
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseInteractionClient.getRedirectUri](xref:@azure/msal-browser.BaseInteractionClient.getRedirectUri)
+methods:
+  - name: acquireToken(RedirectRequest)
+    uid: '@azure/msal-browser.RedirectClient.acquireToken'
+    package: '@azure/msal-browser'
+    summary: Redirects the page to the /authorize endpoint of the IDP
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function acquireToken(request: RedirectRequest): Promise<void>'
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.RedirectRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: handleRedirectPromise(string)
+    uid: '@azure/msal-browser.RedirectClient.handleRedirectPromise'
+    package: '@azure/msal-browser'
+    summary: |-
+      Checks if navigateToLoginRequestUrl is set, and:
+      - if true, performs logic to cache and navigate
+      - if false, handles hash string and parses response
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleRedirectPromise(hash?: string):
+        Promise<AuthenticationResult | null>
+      parameters:
+        - id: hash
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult | null&gt;
+  - name: logout(EndSessionRequest)
+    uid: '@azure/msal-browser.RedirectClient.logout'
+    package: '@azure/msal-browser'
+    summary: >-
+      Use to log out the current user, and redirect the user to the
+      postLogoutRedirectUri.
+
+      Default behaviour is to redirect the user to `window.location.href`.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function logout(logoutRequest?: EndSessionRequest): Promise<void>'
+      parameters:
+        - id: logoutRequest
+          type: <xref uid="@azure/msal-browser.EndSessionRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+extends: <xref uid="@azure/msal-browser.StandardInteractionClient" />

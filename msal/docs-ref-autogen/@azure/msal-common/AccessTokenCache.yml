@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: AccessTokenCache
+uid: '@azure/msal-common.AccessTokenCache'
+package: '@azure/msal-common'
+summary: ''
+fullName: AccessTokenCache
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type AccessTokenCache = Record<string, AccessTokenEntity>

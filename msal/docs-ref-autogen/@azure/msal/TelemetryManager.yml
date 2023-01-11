@@ -1,0 +1,165 @@
+### YamlMime:TSType
+name: TelemetryManager
+uid: '@azure/msal.TelemetryManager'
+package: '@azure/msal'
+summary: ''
+fullName: TelemetryManager
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'TelemetryManager(TelemetryConfig, TelemetryEmitter, Logger)'
+    uid: '@azure/msal.TelemetryManager.constructor'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new TelemetryManager(config: TelemetryConfig, telemetryEmitter:
+        TelemetryEmitter, logger: Logger)
+      parameters:
+        - id: config
+          type: <xref uid="@azure/msal.TelemetryConfig" />
+          description: ''
+        - id: telemetryEmitter
+          type: <xref uid="@azure/msal.TelemetryEmitter" />
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal.Logger" />
+          description: ''
+methods:
+  - name: 'createAndStartApiEvent(string, API_EVENT_IDENTIFIER)'
+    uid: '@azure/msal.TelemetryManager.createAndStartApiEvent'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAndStartApiEvent(correlationId: string,
+        apiEventIdentifier: API_EVENT_IDENTIFIER): ApiEvent
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+        - id: apiEventIdentifier
+          type: <xref uid="@azure/msal.API_EVENT_IDENTIFIER" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ApiEvent" />
+  - name: 'createAndStartHttpEvent(string, string, string, string)'
+    uid: '@azure/msal.TelemetryManager.createAndStartHttpEvent'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAndStartHttpEvent(correlation: string, httpMethod:
+        string, url: string, eventLabel: string): HttpEvent
+      parameters:
+        - id: correlation
+          type: string
+          description: ''
+        - id: httpMethod
+          type: string
+          description: ''
+        - id: url
+          type: string
+          description: ''
+        - id: eventLabel
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.HttpEvent" />
+  - name: flush(string)
+    uid: '@azure/msal.TelemetryManager.flush'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flush(correlationId: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+  - name: 'getTelemetrymanagerStub(string, Logger)'
+    uid: '@azure/msal.TelemetryManager.getTelemetrymanagerStub'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getTelemetrymanagerStub(clientId: string, logger:
+        Logger): TelemetryManager
+      parameters:
+        - id: clientId
+          type: string
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal.Logger" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.TelemetryManager" />
+  - name: startEvent(TelemetryEvent)
+    uid: '@azure/msal.TelemetryManager.startEvent'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function startEvent(event: TelemetryEvent)'
+      parameters:
+        - id: event
+          type: <xref uid="@azure/msal.TelemetryEvent" />
+          description: ''
+  - name: 'stopAndFlushApiEvent(string, ApiEvent, boolean, string)'
+    uid: '@azure/msal.TelemetryManager.stopAndFlushApiEvent'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function stopAndFlushApiEvent(correlationId: string, apiEvent: ApiEvent,
+        wasSuccessful: boolean, errorCode?: string)
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+        - id: apiEvent
+          type: <xref uid="@azure/msal.ApiEvent" />
+          description: ''
+        - id: wasSuccessful
+          type: boolean
+          description: ''
+        - id: errorCode
+          type: string
+          description: ''
+  - name: stopEvent(TelemetryEvent)
+    uid: '@azure/msal.TelemetryManager.stopEvent'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function stopEvent(event: TelemetryEvent)'
+      parameters:
+        - id: event
+          type: <xref uid="@azure/msal.TelemetryEvent" />
+          description: ''

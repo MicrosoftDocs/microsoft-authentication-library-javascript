@@ -1,0 +1,34 @@
+### YamlMime:TSEnum
+name: HeaderNames
+uid: '@azure/msal-common.HeaderNames'
+package: '@azure/msal-common'
+summary: Request header names
+fullName: HeaderNames
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: AuthenticationInfo
+    uid: '@azure/msal-common.HeaderNames.AuthenticationInfo'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CCS_HEADER
+    uid: '@azure/msal-common.HeaderNames.CCS_HEADER'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CONTENT_TYPE
+    uid: '@azure/msal-common.HeaderNames.CONTENT_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: RETRY_AFTER
+    uid: '@azure/msal-common.HeaderNames.RETRY_AFTER'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: WWWAuthenticate
+    uid: '@azure/msal-common.HeaderNames.WWWAuthenticate'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_MS_REQUEST_ID
+    uid: '@azure/msal-common.HeaderNames.X_MS_REQUEST_ID'
+    package: '@azure/msal-common'
+    summary: ''

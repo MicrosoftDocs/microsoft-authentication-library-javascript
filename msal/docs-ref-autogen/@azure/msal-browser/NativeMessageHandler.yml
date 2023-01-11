@@ -1,0 +1,137 @@
+### YamlMime:TSType
+name: NativeMessageHandler
+uid: '@azure/msal-browser.NativeMessageHandler'
+package: '@azure/msal-browser'
+summary: ''
+fullName: NativeMessageHandler
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'NativeMessageHandler(Logger, number, string)'
+    uid: '@azure/msal-browser.NativeMessageHandler.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new NativeMessageHandler(logger: Logger, handshakeTimeoutMs: number,
+        extensionId?: string)
+      parameters:
+        - id: logger
+          type: Logger
+          description: ''
+        - id: handshakeTimeoutMs
+          type: number
+          description: ''
+        - id: extensionId
+          type: string
+          description: ''
+methods:
+  - name: 'createProvider(Logger, number)'
+    uid: '@azure/msal-browser.NativeMessageHandler.createProvider'
+    package: '@azure/msal-browser'
+    summary: >-
+      Returns an instance of the MessageHandler that has successfully
+      established a connection with an extension
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createProvider(logger: Logger, handshakeTimeoutMs:
+        number): Promise<NativeMessageHandler>
+      parameters:
+        - id: logger
+          type: Logger
+          description: ''
+        - id: handshakeTimeoutMs
+          type: number
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-browser.NativeMessageHandler" />&gt;
+  - name: getExtensionId()
+    uid: '@azure/msal-browser.NativeMessageHandler.getExtensionId'
+    package: '@azure/msal-browser'
+    summary: >-
+      Returns the Id for the browser extension this handler is communicating
+      with
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getExtensionId(): string | undefined'
+      return:
+        description: ''
+        type: string | undefined
+  - name: getExtensionVersion()
+    uid: '@azure/msal-browser.NativeMessageHandler.getExtensionVersion'
+    package: '@azure/msal-browser'
+    summary: >-
+      Returns the version for the browser extension this handler is
+      communicating with
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getExtensionVersion(): string | undefined'
+      return:
+        description: ''
+        type: string | undefined
+  - name: >-
+      isNativeAvailable(BrowserConfiguration, Logger, NativeMessageHandler,
+      AuthenticationScheme)
+    uid: '@azure/msal-browser.NativeMessageHandler.isNativeAvailable'
+    package: '@azure/msal-browser'
+    summary: >-
+      Returns boolean indicating whether or not the request should attempt to
+      use native broker
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function isNativeAvailable(config: BrowserConfiguration, logger:
+        Logger, nativeExtensionProvider?: NativeMessageHandler,
+        authenticationScheme?: AuthenticationScheme): boolean
+      parameters:
+        - id: config
+          type: <xref uid="@azure/msal-browser.BrowserConfiguration" />
+          description: ''
+        - id: logger
+          type: Logger
+          description: ''
+        - id: nativeExtensionProvider
+          type: <xref uid="@azure/msal-browser.NativeMessageHandler" />
+          description: ''
+        - id: authenticationScheme
+          type: AuthenticationScheme
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: sendMessage(NativeExtensionRequestBody)
+    uid: '@azure/msal-browser.NativeMessageHandler.sendMessage'
+    package: '@azure/msal-browser'
+    summary: >-
+      Sends a given message to the extension and resolves with the extension
+      response
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function sendMessage(body: NativeExtensionRequestBody): Promise<object>'
+      parameters:
+        - id: body
+          type: <xref uid="@azure/msal-browser.NativeExtensionRequestBody" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;object&gt;

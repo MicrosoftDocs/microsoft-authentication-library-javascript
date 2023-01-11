@@ -1,0 +1,230 @@
+### YamlMime:TSType
+name: PerformanceClient
+uid: '@azure/msal-common.PerformanceClient'
+package: '@azure/msal-common'
+summary: ''
+fullName: PerformanceClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      PerformanceClient(string, string, Logger, string, string,
+      ApplicationTelemetry)
+    uid: '@azure/msal-common.PerformanceClient.constructor'
+    package: '@azure/msal-common'
+    summary: |-
+      Creates an instance of PerformanceClient,
+      an abstract class containing core performance telemetry logic.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new PerformanceClient(clientId: string, authority: string, logger:
+        Logger, libraryName: string, libraryVersion: string,
+        applicationTelemetry: ApplicationTelemetry)
+      parameters:
+        - id: clientId
+          type: string
+          description: Client ID of the application
+        - id: authority
+          type: string
+          description: Authority used by the application
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: Logger used by the application
+        - id: libraryName
+          type: string
+          description: Name of the library
+        - id: libraryVersion
+          type: string
+          description: |
+            Version of the library
+        - id: applicationTelemetry
+          type: <xref uid="@azure/msal-common.ApplicationTelemetry" />
+          description: ''
+methods:
+  - name: addPerformanceCallback(PerformanceCallbackFunction)
+    uid: '@azure/msal-common.PerformanceClient.addPerformanceCallback'
+    package: '@azure/msal-common'
+    summary: Registers a callback function to receive performance events.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addPerformanceCallback(callback: PerformanceCallbackFunction):
+        string
+      parameters:
+        - id: callback
+          type: <xref uid="@azure/msal-common.PerformanceCallbackFunction" />
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: 'addStaticFields(StaticFields, string)'
+    uid: '@azure/msal-common.PerformanceClient.addStaticFields'
+    package: '@azure/msal-common'
+    summary: Saves extra information to be emitted when the measurements are flushed
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addStaticFields(fields: StaticFields, correlationId: string)'
+      parameters:
+        - id: fields
+          type: <xref uid="@azure/msal-common.StaticFields" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: |+
+
+  - name: discardMeasurements(string)
+    uid: '@azure/msal-common.PerformanceClient.discardMeasurements'
+    package: '@azure/msal-common'
+    summary: Removes measurements for a given correlation id.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function discardMeasurements(correlationId: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: |+
+
+  - name: 'emitEvents(PerformanceEvent[], string)'
+    uid: '@azure/msal-common.PerformanceClient.emitEvents'
+    package: '@azure/msal-common'
+    summary: Emits events to all registered callbacks.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function emitEvents(events: PerformanceEvent[], correlationId: string)'
+      parameters:
+        - id: events
+          type: '<xref uid="@azure/msal-common.PerformanceEvent" />[]'
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: endMeasurement(PerformanceEvent)
+    uid: '@azure/msal-common.PerformanceClient.endMeasurement'
+    package: '@azure/msal-common'
+    summary: >-
+      Stops measuring the performance for an operation. Should only be called
+      directly by PerformanceClient classes,
+
+      as consumers should instead use the function returned by startMeasurement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function endMeasurement(event: PerformanceEvent): PerformanceEvent |
+        null
+      parameters:
+        - id: event
+          type: <xref uid="@azure/msal-common.PerformanceEvent" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.PerformanceEvent" /> | null
+  - name: 'flushMeasurements(PerformanceEvents, string)'
+    uid: '@azure/msal-common.PerformanceClient.flushMeasurements'
+    package: '@azure/msal-common'
+    summary: >-
+      Gathers and emits performance events for measurements taked for the given
+      top-level API and correlation ID.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function flushMeasurements(measureName: PerformanceEvents,
+        correlationId: string)
+      parameters:
+        - id: measureName
+          type: <xref uid="@azure/msal-common.PerformanceEvents" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: |+
+
+  - name: generateId()
+    uid: '@azure/msal-common.PerformanceClient.generateId'
+    package: '@azure/msal-common'
+    summary: 'Generates and returns a unique id, typically a guid.'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateId(): string'
+      return:
+        description: ''
+        type: string
+  - name: removePerformanceCallback(string)
+    uid: '@azure/msal-common.PerformanceClient.removePerformanceCallback'
+    package: '@azure/msal-common'
+    summary: Removes a callback registered with addPerformanceCallback.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removePerformanceCallback(callbackId: string): boolean'
+      parameters:
+        - id: callbackId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: 'startMeasurement(PerformanceEvents, string)'
+    uid: '@azure/msal-common.PerformanceClient.startMeasurement'
+    package: '@azure/msal-common'
+    summary: >-
+      Starts measuring performance for a given operation. Returns a function
+      that should be used to end the measurement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function startMeasurement(measureName: PerformanceEvents,
+        correlationId?: string): InProgressPerformanceEvent
+      parameters:
+        - id: measureName
+          type: <xref uid="@azure/msal-common.PerformanceEvents" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.InProgressPerformanceEvent" />
+  - name: 'startPerformanceMeasuremeant(string, string)'
+    uid: '@azure/msal-common.PerformanceClient.startPerformanceMeasuremeant'
+    package: '@azure/msal-common'
+    summary: >-
+      Starts and returns an platform-specific implementation of
+      IPerformanceMeasurement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function startPerformanceMeasuremeant(measureName: string,
+        correlationId: string): IPerformanceMeasurement
+      parameters:
+        - id: measureName
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.IPerformanceMeasurement" />

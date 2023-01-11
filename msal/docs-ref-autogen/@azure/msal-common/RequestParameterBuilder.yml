@@ -1,0 +1,618 @@
+### YamlMime:TSType
+name: RequestParameterBuilder
+uid: '@azure/msal-common.RequestParameterBuilder'
+package: '@azure/msal-common'
+summary: ''
+fullName: RequestParameterBuilder
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: RequestParameterBuilder()
+    uid: '@azure/msal-common.RequestParameterBuilder.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: new RequestParameterBuilder()
+methods:
+  - name: addApplicationTelemetry(ApplicationTelemetry)
+    uid: '@azure/msal-common.RequestParameterBuilder.addApplicationTelemetry'
+    package: '@azure/msal-common'
+    summary: Add client telemetry parameters
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addApplicationTelemetry(appTelemetry: ApplicationTelemetry)'
+      parameters:
+        - id: appTelemetry
+          type: <xref uid="@azure/msal-common.ApplicationTelemetry" />
+          description: |+
+
+  - name: addAuthorizationCode(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addAuthorizationCode'
+    package: '@azure/msal-common'
+    summary: add the `authorization_code` passed by the user to exchange for a token
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addAuthorizationCode(code: string)'
+      parameters:
+        - id: code
+          type: string
+          description: |+
+
+  - name: addCcsOid(ClientInfo)
+    uid: '@azure/msal-common.RequestParameterBuilder.addCcsOid'
+    package: '@azure/msal-common'
+    summary: Adds the CCS (Cache Credential Service) query parameter for account object
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addCcsOid(clientInfo: ClientInfo)'
+      parameters:
+        - id: clientInfo
+          type: <xref uid="@azure/msal-common.ClientInfo" />
+          description: ''
+  - name: addCcsUpn(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addCcsUpn'
+    package: '@azure/msal-common'
+    summary: Adds the CCS (Cache Credential Service) query parameter for login_hint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addCcsUpn(loginHint: string)'
+      parameters:
+        - id: loginHint
+          type: string
+          description: |+
+
+  - name: 'addClaims(string, Array<string>)'
+    uid: '@azure/msal-common.RequestParameterBuilder.addClaims'
+    package: '@azure/msal-common'
+    summary: add claims
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addClaims(claims?: string, clientCapabilities?: Array<string>)'
+      parameters:
+        - id: claims
+          type: string
+          description: |+
+
+        - id: clientCapabilities
+          type: Array&lt;string&gt;
+          description: ''
+  - name: addClientAssertion(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientAssertion'
+    package: '@azure/msal-common'
+    summary: add clientAssertion for confidential client flows
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addClientAssertion(clientAssertion: string)'
+      parameters:
+        - id: clientAssertion
+          type: string
+          description: |+
+
+  - name: addClientAssertionType(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientAssertionType'
+    package: '@azure/msal-common'
+    summary: add clientAssertionType for confidential client flows
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addClientAssertionType(clientAssertionType: string)'
+      parameters:
+        - id: clientAssertionType
+          type: string
+          description: |+
+
+  - name: 'addClientCapabilitiesToClaims(string, Array<string>)'
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientCapabilitiesToClaims'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addClientCapabilitiesToClaims(claims?: string,
+        clientCapabilities?: Array<string>): string
+      parameters:
+        - id: claims
+          type: string
+          description: ''
+        - id: clientCapabilities
+          type: Array&lt;string&gt;
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: addClientId(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientId'
+    package: '@azure/msal-common'
+    summary: add clientId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addClientId(clientId: string)'
+      parameters:
+        - id: clientId
+          type: string
+          description: |+
+
+  - name: addClientInfo()
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientInfo'
+    package: '@azure/msal-common'
+    summary: add client info
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function addClientInfo()
+  - name: addClientSecret(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientSecret'
+    package: '@azure/msal-common'
+    summary: add client_secret
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addClientSecret(clientSecret: string)'
+      parameters:
+        - id: clientSecret
+          type: string
+          description: |+
+
+  - name: 'addCodeChallengeParams(string, string)'
+    uid: '@azure/msal-common.RequestParameterBuilder.addCodeChallengeParams'
+    package: '@azure/msal-common'
+    summary: |-
+      add code_challenge and code_challenge_method
+      - throw if either of them are not passed
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addCodeChallengeParams(codeChallenge: string,
+        codeChallengeMethod: string)
+      parameters:
+        - id: codeChallenge
+          type: string
+          description: ''
+        - id: codeChallengeMethod
+          type: string
+          description: |+
+
+  - name: addCodeVerifier(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addCodeVerifier'
+    package: '@azure/msal-common'
+    summary: add the `code_verifier` passed by the user to exchange for a token
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addCodeVerifier(codeVerifier: string)'
+      parameters:
+        - id: codeVerifier
+          type: string
+          description: |+
+
+  - name: addCorrelationId(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addCorrelationId'
+    package: '@azure/msal-common'
+    summary: add correlationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addCorrelationId(correlationId: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: |+
+
+  - name: addDeviceCode(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addDeviceCode'
+    package: '@azure/msal-common'
+    summary: add the `authorization_code` passed by the user to exchange for a token
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addDeviceCode(code: string)'
+      parameters:
+        - id: code
+          type: string
+          description: |+
+
+  - name: addDomainHint(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addDomainHint'
+    package: '@azure/msal-common'
+    summary: add domain_hint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addDomainHint(domainHint: string)'
+      parameters:
+        - id: domainHint
+          type: string
+          description: |+
+
+  - name: addExtraQueryParameters(StringDict)
+    uid: '@azure/msal-common.RequestParameterBuilder.addExtraQueryParameters'
+    package: '@azure/msal-common'
+    summary: add extraQueryParams
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addExtraQueryParameters(eQparams: StringDict)'
+      parameters:
+        - id: eQparams
+          type: <xref uid="@azure/msal-common.StringDict" />
+          description: |+
+
+  - name: addGrantType(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addGrantType'
+    package: '@azure/msal-common'
+    summary: add grant type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addGrantType(grantType: string)'
+      parameters:
+        - id: grantType
+          type: string
+          description: |+
+
+  - name: addIdTokenHint(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addIdTokenHint'
+    package: '@azure/msal-common'
+    summary: add id_token_hint to logout request
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addIdTokenHint(idTokenHint: string)'
+      parameters:
+        - id: idTokenHint
+          type: string
+          description: |+
+
+  - name: addLibraryInfo(LibraryInfo)
+    uid: '@azure/msal-common.RequestParameterBuilder.addLibraryInfo'
+    package: '@azure/msal-common'
+    summary: add library info query params
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addLibraryInfo(libraryInfo: LibraryInfo)'
+      parameters:
+        - id: libraryInfo
+          type: <xref uid="@azure/msal-common.LibraryInfo" />
+          description: |+
+
+  - name: addLoginHint(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addLoginHint'
+    package: '@azure/msal-common'
+    summary: add login_hint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addLoginHint(loginHint: string)'
+      parameters:
+        - id: loginHint
+          type: string
+          description: |+
+
+  - name: addLogoutHint(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addLogoutHint'
+    package: '@azure/msal-common'
+    summary: >-
+      Adds logout_hint parameter for "silent" logout which prevent server
+      account picker
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addLogoutHint(logoutHint: string)'
+      parameters:
+        - id: logoutHint
+          type: string
+          description: ''
+  - name: addNativeBroker()
+    uid: '@azure/msal-common.RequestParameterBuilder.addNativeBroker'
+    package: '@azure/msal-common'
+    summary: Add flag to indicate STS should attempt to use WAM if available
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function addNativeBroker()
+  - name: addNonce(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addNonce'
+    package: '@azure/msal-common'
+    summary: add nonce
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addNonce(nonce: string)'
+      parameters:
+        - id: nonce
+          type: string
+          description: |+
+
+  - name: addOboAssertion(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addOboAssertion'
+    package: '@azure/msal-common'
+    summary: add OBO assertion for confidential client flows
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addOboAssertion(oboAssertion: string)'
+      parameters:
+        - id: oboAssertion
+          type: string
+          description: ''
+  - name: addPassword(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addPassword'
+    package: '@azure/msal-common'
+    summary: adds `password` for Password Grant flow
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addPassword(password: string)'
+      parameters:
+        - id: password
+          type: string
+          description: |+
+
+  - name: addPopToken(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addPopToken'
+    package: '@azure/msal-common'
+    summary: add pop_jwk to query params
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addPopToken(cnfString: string)'
+      parameters:
+        - id: cnfString
+          type: string
+          description: |+
+
+  - name: addPostLogoutRedirectUri(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addPostLogoutRedirectUri'
+    package: '@azure/msal-common'
+    summary: add post logout redirectUri
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addPostLogoutRedirectUri(redirectUri: string)'
+      parameters:
+        - id: redirectUri
+          type: string
+          description: |+
+
+  - name: addPrompt(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addPrompt'
+    package: '@azure/msal-common'
+    summary: add prompt
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addPrompt(prompt: string)'
+      parameters:
+        - id: prompt
+          type: string
+          description: |+
+
+  - name: addRedirectUri(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addRedirectUri'
+    package: '@azure/msal-common'
+    summary: add redirect_uri
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addRedirectUri(redirectUri: string)'
+      parameters:
+        - id: redirectUri
+          type: string
+          description: |+
+
+  - name: addRefreshToken(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addRefreshToken'
+    package: '@azure/msal-common'
+    summary: add the `refreshToken` passed by the user
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addRefreshToken(refreshToken: string)'
+      parameters:
+        - id: refreshToken
+          type: string
+          description: |+
+
+  - name: addRequestTokenUse(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addRequestTokenUse'
+    package: '@azure/msal-common'
+    summary: add grant type
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addRequestTokenUse(tokenUse: string)'
+      parameters:
+        - id: tokenUse
+          type: string
+          description: ''
+  - name: addResponseMode(ResponseMode)
+    uid: '@azure/msal-common.RequestParameterBuilder.addResponseMode'
+    package: '@azure/msal-common'
+    summary: add response_mode. defaults to query.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addResponseMode(responseMode?: ResponseMode)'
+      parameters:
+        - id: responseMode
+          type: <xref uid="@azure/msal-common.ResponseMode" />
+          description: |+
+
+  - name: addResponseTypeCode()
+    uid: '@azure/msal-common.RequestParameterBuilder.addResponseTypeCode'
+    package: '@azure/msal-common'
+    summary: add response_type = code
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function addResponseTypeCode()
+  - name: addResponseTypeForTokenAndIdToken()
+    uid: >-
+      @azure/msal-common.RequestParameterBuilder.addResponseTypeForTokenAndIdToken
+    package: '@azure/msal-common'
+    summary: add response_type = token id_token
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function addResponseTypeForTokenAndIdToken()
+  - name: 'addScopes(string[], boolean)'
+    uid: '@azure/msal-common.RequestParameterBuilder.addScopes'
+    package: '@azure/msal-common'
+    summary: >-
+      add scopes. set addOidcScopes to false to prevent default scopes in
+      non-user scenarios
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addScopes(scopes: string[], addOidcScopes?: boolean)'
+      parameters:
+        - id: scopes
+          type: 'string[]'
+          description: ''
+        - id: addOidcScopes
+          type: boolean
+          description: |+
+
+  - name: addServerTelemetry(ServerTelemetryManager)
+    uid: '@azure/msal-common.RequestParameterBuilder.addServerTelemetry'
+    package: '@azure/msal-common'
+    summary: add server telemetry fields
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addServerTelemetry(serverTelemetryManager:
+        ServerTelemetryManager)
+      parameters:
+        - id: serverTelemetryManager
+          type: <xref uid="@azure/msal-common.ServerTelemetryManager" />
+          description: |+
+
+  - name: addSid(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addSid'
+    package: '@azure/msal-common'
+    summary: add sid
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addSid(sid: string)'
+      parameters:
+        - id: sid
+          type: string
+          description: |+
+
+  - name: addSshJwk(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addSshJwk'
+    package: '@azure/msal-common'
+    summary: add SSH JWK and key ID to query params
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addSshJwk(sshJwkString: string)'
+      parameters:
+        - id: sshJwkString
+          type: string
+          description: ''
+  - name: addState(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addState'
+    package: '@azure/msal-common'
+    summary: add state
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addState(state: string)'
+      parameters:
+        - id: state
+          type: string
+          description: |+
+
+  - name: addThrottling()
+    uid: '@azure/msal-common.RequestParameterBuilder.addThrottling'
+    package: '@azure/msal-common'
+    summary: Adds parameter that indicates to the server that throttling is supported
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function addThrottling()
+  - name: addUsername(string)
+    uid: '@azure/msal-common.RequestParameterBuilder.addUsername'
+    package: '@azure/msal-common'
+    summary: adds `username` for Password Grant flow
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addUsername(username: string)'
+      parameters:
+        - id: username
+          type: string
+          description: |+
+
+  - name: createQueryString()
+    uid: '@azure/msal-common.RequestParameterBuilder.createQueryString'
+    package: '@azure/msal-common'
+    summary: Utility to create a URL from the params map
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function createQueryString(): string'
+      return:
+        description: ''
+        type: string

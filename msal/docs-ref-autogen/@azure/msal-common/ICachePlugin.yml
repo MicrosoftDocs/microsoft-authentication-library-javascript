@@ -1,0 +1,41 @@
+### YamlMime:TSType
+name: ICachePlugin
+uid: '@azure/msal-common.ICachePlugin'
+package: '@azure/msal-common'
+summary: ''
+fullName: ICachePlugin
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: afterCacheAccess
+    uid: '@azure/msal-common.ICachePlugin.afterCacheAccess'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: afterCacheAccess
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        afterCacheAccess: (tokenCacheContext: TokenCacheContext) =>
+        Promise<void>
+      return:
+        description: ''
+        type: '(tokenCacheContext: TokenCacheContext) =&gt; Promise&lt;void&gt;'
+  - name: beforeCacheAccess
+    uid: '@azure/msal-common.ICachePlugin.beforeCacheAccess'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: beforeCacheAccess
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        beforeCacheAccess: (tokenCacheContext: TokenCacheContext) =>
+        Promise<void>
+      return:
+        description: ''
+        type: '(tokenCacheContext: TokenCacheContext) =&gt; Promise&lt;void&gt;'

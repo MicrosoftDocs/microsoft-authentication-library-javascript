@@ -1,0 +1,231 @@
+### YamlMime:TSType
+name: ScopeSet
+uid: '@azure/msal-common.ScopeSet'
+package: '@azure/msal-common'
+summary: >-
+  The ScopeSet class creates a set of scopes. Scopes are case-insensitive,
+  unique values, so the Set object in JS makes
+
+  the most sense to implement for this class. All scopes are trimmed and
+  converted to lower case strings in intersection and union functions
+
+  to ensure uniqueness of strings.
+fullName: ScopeSet
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: ScopeSet(Array<string>)
+    uid: '@azure/msal-common.ScopeSet.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new ScopeSet(inputScopes: Array<string>)'
+      parameters:
+        - id: inputScopes
+          type: Array&lt;string&gt;
+          description: ''
+methods:
+  - name: appendScope(string)
+    uid: '@azure/msal-common.ScopeSet.appendScope'
+    package: '@azure/msal-common'
+    summary: Appends single scope if passed
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function appendScope(newScope: string)'
+      parameters:
+        - id: newScope
+          type: string
+          description: |+
+
+  - name: appendScopes(Array<string>)
+    uid: '@azure/msal-common.ScopeSet.appendScopes'
+    package: '@azure/msal-common'
+    summary: Appends multiple scopes if passed
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function appendScopes(newScopes: Array<string>)'
+      parameters:
+        - id: newScopes
+          type: Array&lt;string&gt;
+          description: |+
+
+  - name: asArray()
+    uid: '@azure/msal-common.ScopeSet.asArray'
+    package: '@azure/msal-common'
+    summary: Returns the scopes as an array of string values
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function asArray(): Array<string>'
+      return:
+        description: ''
+        type: Array&lt;string&gt;
+  - name: containsOnlyOIDCScopes()
+    uid: '@azure/msal-common.ScopeSet.containsOnlyOIDCScopes'
+    package: '@azure/msal-common'
+    summary: Check if set of scopes contains only the defaults
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function containsOnlyOIDCScopes(): boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: containsScope(string)
+    uid: '@azure/msal-common.ScopeSet.containsScope'
+    package: '@azure/msal-common'
+    summary: Check if a given scope is present in this set of scopes.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function containsScope(scope: string): boolean'
+      parameters:
+        - id: scope
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: containsScopeSet(ScopeSet)
+    uid: '@azure/msal-common.ScopeSet.containsScopeSet'
+    package: '@azure/msal-common'
+    summary: Check if a set of scopes is present in this set of scopes.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function containsScopeSet(scopeSet: ScopeSet): boolean'
+      parameters:
+        - id: scopeSet
+          type: <xref uid="@azure/msal-common.ScopeSet" />
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: fromString(string)
+    uid: '@azure/msal-common.ScopeSet.fromString'
+    package: '@azure/msal-common'
+    summary: Factory method to create ScopeSet from space-delimited string
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function fromString(inputScopeString: string): ScopeSet'
+      parameters:
+        - id: inputScopeString
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ScopeSet" />
+  - name: getScopeCount()
+    uid: '@azure/msal-common.ScopeSet.getScopeCount'
+    package: '@azure/msal-common'
+    summary: Returns size of set of scopes.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getScopeCount(): number'
+      return:
+        description: ''
+        type: number
+  - name: intersectingScopeSets(ScopeSet)
+    uid: '@azure/msal-common.ScopeSet.intersectingScopeSets'
+    package: '@azure/msal-common'
+    summary: Check if scopes intersect between this set and another.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function intersectingScopeSets(otherScopes: ScopeSet): boolean'
+      parameters:
+        - id: otherScopes
+          type: <xref uid="@azure/msal-common.ScopeSet" />
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: printScopes()
+    uid: '@azure/msal-common.ScopeSet.printScopes'
+    package: '@azure/msal-common'
+    summary: Prints scopes into a space-delimited string
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function printScopes(): string'
+      return:
+        description: ''
+        type: string
+  - name: printScopesLowerCase()
+    uid: '@azure/msal-common.ScopeSet.printScopesLowerCase'
+    package: '@azure/msal-common'
+    summary: Prints scopes into a space-delimited lower-case string (used for caching)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function printScopesLowerCase(): string'
+      return:
+        description: ''
+        type: string
+  - name: removeOIDCScopes()
+    uid: '@azure/msal-common.ScopeSet.removeOIDCScopes'
+    package: '@azure/msal-common'
+    summary: >-
+      Removes default scopes from set of scopes
+
+      Primarily used to prevent cache misses if the default scopes are not
+      returned from the server
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function removeOIDCScopes()
+  - name: removeScope(string)
+    uid: '@azure/msal-common.ScopeSet.removeScope'
+    package: '@azure/msal-common'
+    summary: Removes element from set of scopes.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removeScope(scope: string)'
+      parameters:
+        - id: scope
+          type: string
+          description: |+
+
+  - name: unionScopeSets(ScopeSet)
+    uid: '@azure/msal-common.ScopeSet.unionScopeSets'
+    package: '@azure/msal-common'
+    summary: Combines an array of scopes with the current set of scopes.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function unionScopeSets(otherScopes: ScopeSet): Set<string>'
+      parameters:
+        - id: otherScopes
+          type: <xref uid="@azure/msal-common.ScopeSet" />
+          description: |+
+
+      return:
+        description: ''
+        type: Set&lt;string&gt;

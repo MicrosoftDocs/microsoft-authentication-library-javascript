@@ -1,0 +1,18 @@
+### YamlMime:TSEnum
+name: ClaimsRequestKeys
+uid: '@azure/msal-common.ClaimsRequestKeys'
+package: '@azure/msal-common'
+summary: Claims request keys
+fullName: ClaimsRequestKeys
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ACCESS_TOKEN
+    uid: '@azure/msal-common.ClaimsRequestKeys.ACCESS_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: XMS_CC
+    uid: '@azure/msal-common.ClaimsRequestKeys.XMS_CC'
+    package: '@azure/msal-common'
+    summary: ''

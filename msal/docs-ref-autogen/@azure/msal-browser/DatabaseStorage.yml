@@ -1,0 +1,147 @@
+### YamlMime:TSType
+name: DatabaseStorage
+uid: '@azure/msal-browser.DatabaseStorage'
+package: '@azure/msal-browser'
+summary: >-
+  Storage wrapper for IndexedDB storage in browsers:
+  https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+fullName: DatabaseStorage<T>
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: DatabaseStorage()
+    uid: '@azure/msal-browser.DatabaseStorage.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: new DatabaseStorage()
+methods:
+  - name: closeConnection()
+    uid: '@azure/msal-browser.DatabaseStorage.closeConnection'
+    package: '@azure/msal-browser'
+    summary: |-
+      Closes the connection to IndexedDB database when all pending transactions
+      complete.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function closeConnection()
+  - name: containsKey(string)
+    uid: '@azure/msal-browser.DatabaseStorage.containsKey'
+    package: '@azure/msal-browser'
+    summary: Checks whether there is an object under the search key in the object store
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function containsKey(key: string): Promise<boolean>'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+  - name: deleteDatabase()
+    uid: '@azure/msal-browser.DatabaseStorage.deleteDatabase'
+    package: '@azure/msal-browser'
+    summary: >-
+      Deletes the MSAL database. The database is deleted rather than cleared to
+      make it possible
+
+      for client applications to downgrade to a previous MSAL version without
+      worrying about forward compatibility issues
+
+      with IndexedDB database versions.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function deleteDatabase(): Promise<boolean>'
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+  - name: getItem(string)
+    uid: '@azure/msal-browser.DatabaseStorage.getItem'
+    package: '@azure/msal-browser'
+    summary: Retrieves item from IndexedDB instance.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getItem(key: string): Promise<T | null>'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;T | null&gt;
+  - name: getKeys()
+    uid: '@azure/msal-browser.DatabaseStorage.getKeys'
+    package: '@azure/msal-browser'
+    summary: Get all the keys from the storage object as an iterable array of strings.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getKeys(): Promise<string[]>'
+      return:
+        description: ''
+        type: 'Promise&lt;string[]&gt;'
+  - name: open()
+    uid: '@azure/msal-browser.DatabaseStorage.open'
+    package: '@azure/msal-browser'
+    summary: Opens IndexedDB instance.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function open(): Promise<void>'
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: removeItem(string)
+    uid: '@azure/msal-browser.DatabaseStorage.removeItem'
+    package: '@azure/msal-browser'
+    summary: Removes item from IndexedDB under given key
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removeItem(key: string): Promise<void>'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: 'setItem(string, T)'
+    uid: '@azure/msal-browser.DatabaseStorage.setItem'
+    package: '@azure/msal-browser'
+    summary: Adds item to IndexedDB under given key
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setItem(key: string, payload: T): Promise<void>'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: payload
+          type: T
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

@@ -1,0 +1,39 @@
+### YamlMime:TSType
+name: PkceGenerator
+uid: '@azure/msal-browser.PkceGenerator'
+package: '@azure/msal-browser'
+summary: Class which exposes APIs to generate PKCE codes and code verifiers.
+fullName: PkceGenerator
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: PkceGenerator(BrowserCrypto)
+    uid: '@azure/msal-browser.PkceGenerator.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new PkceGenerator(cryptoObj: BrowserCrypto)'
+      parameters:
+        - id: cryptoObj
+          type: <xref uid="@azure/msal-browser.BrowserCrypto" />
+          description: ''
+methods:
+  - name: generateCodes()
+    uid: '@azure/msal-browser.PkceGenerator.generateCodes'
+    package: '@azure/msal-browser'
+    summary: >-
+      Generates PKCE Codes. See the RFC for more information:
+      https://tools.ietf.org/html/rfc7636
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateCodes(): Promise<PkceCodes>'
+      return:
+        description: ''
+        type: Promise&lt;PkceCodes&gt;

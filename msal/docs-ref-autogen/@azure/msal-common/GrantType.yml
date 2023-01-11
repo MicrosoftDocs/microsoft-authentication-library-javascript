@@ -1,0 +1,38 @@
+### YamlMime:TSEnum
+name: GrantType
+uid: '@azure/msal-common.GrantType'
+package: '@azure/msal-common'
+summary: allowed grant_type
+fullName: GrantType
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: AUTHORIZATION_CODE_GRANT
+    uid: '@azure/msal-common.GrantType.AUTHORIZATION_CODE_GRANT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CLIENT_CREDENTIALS_GRANT
+    uid: '@azure/msal-common.GrantType.CLIENT_CREDENTIALS_GRANT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: DEVICE_CODE_GRANT
+    uid: '@azure/msal-common.GrantType.DEVICE_CODE_GRANT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: IMPLICIT_GRANT
+    uid: '@azure/msal-common.GrantType.IMPLICIT_GRANT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: JWT_BEARER
+    uid: '@azure/msal-common.GrantType.JWT_BEARER'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: REFRESH_TOKEN_GRANT
+    uid: '@azure/msal-common.GrantType.REFRESH_TOKEN_GRANT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: RESOURCE_OWNER_PASSWORD_GRANT
+    uid: '@azure/msal-common.GrantType.RESOURCE_OWNER_PASSWORD_GRANT'
+    package: '@azure/msal-common'
+    summary: ''

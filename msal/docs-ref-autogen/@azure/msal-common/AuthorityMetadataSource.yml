@@ -1,0 +1,26 @@
+### YamlMime:TSEnum
+name: AuthorityMetadataSource
+uid: '@azure/msal-common.AuthorityMetadataSource'
+package: '@azure/msal-common'
+summary: ''
+fullName: AuthorityMetadataSource
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: CACHE
+    uid: '@azure/msal-common.AuthorityMetadataSource.CACHE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CONFIG
+    uid: '@azure/msal-common.AuthorityMetadataSource.CONFIG'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: HARDCODED_VALUES
+    uid: '@azure/msal-common.AuthorityMetadataSource.HARDCODED_VALUES'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: NETWORK
+    uid: '@azure/msal-common.AuthorityMetadataSource.NETWORK'
+    package: '@azure/msal-common'
+    summary: ''

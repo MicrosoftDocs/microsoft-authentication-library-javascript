@@ -1,0 +1,240 @@
+### YamlMime:TSType
+name: BrowserPerformanceClient
+uid: '@azure/msal-browser.BrowserPerformanceClient'
+package: '@azure/msal-browser'
+summary: ''
+fullName: BrowserPerformanceClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      BrowserPerformanceClient(string, string, Logger, string, string,
+      ApplicationTelemetry, CryptoOptions)
+    uid: '@azure/msal-browser.BrowserPerformanceClient.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new BrowserPerformanceClient(clientId: string, authority: string,
+        logger: Logger, libraryName: string, libraryVersion: string,
+        applicationTelemetry: ApplicationTelemetry, cryptoOptions:
+        CryptoOptions)
+      parameters:
+        - id: clientId
+          type: string
+          description: ''
+        - id: authority
+          type: string
+          description: ''
+        - id: logger
+          type: Logger
+          description: ''
+        - id: libraryName
+          type: string
+          description: ''
+        - id: libraryVersion
+          type: string
+          description: ''
+        - id: applicationTelemetry
+          type: ApplicationTelemetry
+          description: ''
+        - id: cryptoOptions
+          type: <xref uid="@azure/msal-browser.CryptoOptions" />
+          description: ''
+inheritedMethods:
+  - name: addPerformanceCallback(PerformanceCallbackFunction)
+    uid: '@azure/msal-browser.BrowserPerformanceClient.addPerformanceCallback'
+    package: '@azure/msal-browser'
+    summary: Registers a callback function to receive performance events.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addPerformanceCallback(callback: PerformanceCallbackFunction):
+        string
+      parameters:
+        - id: callback
+          type: PerformanceCallbackFunction
+          description: ''
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.addPerformanceCallback
+  - name: 'addStaticFields(StaticFields, string)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.addStaticFields'
+    package: '@azure/msal-browser'
+    summary: Saves extra information to be emitted when the measurements are flushed
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function addStaticFields(fields: StaticFields, correlationId: string)'
+      parameters:
+        - id: fields
+          type: StaticFields
+          description: ''
+        - id: correlationId
+          type: string
+          description: |+
+
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.addStaticFields
+  - name: discardMeasurements(string)
+    uid: '@azure/msal-browser.BrowserPerformanceClient.discardMeasurements'
+    package: '@azure/msal-browser'
+    summary: Removes measurements for a given correlation id.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function discardMeasurements(correlationId: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: |+
+
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.discardMeasurements
+  - name: 'emitEvents(PerformanceEvent[], string)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.emitEvents'
+    package: '@azure/msal-browser'
+    summary: Emits events to all registered callbacks.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function emitEvents(events: PerformanceEvent[], correlationId: string)'
+      parameters:
+        - id: events
+          type: 'PerformanceEvent[]'
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.emitEvents
+  - name: endMeasurement(PerformanceEvent)
+    uid: '@azure/msal-browser.BrowserPerformanceClient.endMeasurement'
+    package: '@azure/msal-browser'
+    summary: >-
+      Stops measuring the performance for an operation. Should only be called
+      directly by PerformanceClient classes,
+
+      as consumers should instead use the function returned by startMeasurement.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function endMeasurement(event: PerformanceEvent): PerformanceEvent |
+        null
+      parameters:
+        - id: event
+          type: PerformanceEvent
+          description: ''
+      return:
+        description: ''
+        type: PerformanceEvent | null
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.endMeasurement
+  - name: 'flushMeasurements(PerformanceEvents, string)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.flushMeasurements'
+    package: '@azure/msal-browser'
+    summary: >-
+      Gathers and emits performance events for measurements taked for the given
+      top-level API and correlation ID.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function flushMeasurements(measureName: PerformanceEvents,
+        correlationId: string)
+      parameters:
+        - id: measureName
+          type: PerformanceEvents
+          description: ''
+        - id: correlationId
+          type: string
+          description: |+
+
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.flushMeasurements
+  - name: removePerformanceCallback(string)
+    uid: '@azure/msal-browser.BrowserPerformanceClient.removePerformanceCallback'
+    package: '@azure/msal-browser'
+    summary: Removes a callback registered with addPerformanceCallback.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removePerformanceCallback(callbackId: string): boolean'
+      parameters:
+        - id: callbackId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> PerformanceClient.removePerformanceCallback
+methods:
+  - name: generateId()
+    uid: '@azure/msal-browser.BrowserPerformanceClient.generateId'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateId(): string'
+      return:
+        description: ''
+        type: string
+  - name: 'startMeasurement(PerformanceEvents, string)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.startMeasurement'
+    package: '@azure/msal-browser'
+    summary: >-
+      Starts measuring performance for a given operation. Returns a function
+      that should be used to end the measurement.
+
+      Also captures browser page visibilityState.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function startMeasurement(measureName: PerformanceEvents,
+        correlationId?: string): InProgressPerformanceEvent
+      parameters:
+        - id: measureName
+          type: PerformanceEvents
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: InProgressPerformanceEvent
+  - name: 'startPerformanceMeasuremeant(string, string)'
+    uid: '@azure/msal-browser.BrowserPerformanceClient.startPerformanceMeasuremeant'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function startPerformanceMeasuremeant(measureName: string,
+        correlationId: string): IPerformanceMeasurement
+      parameters:
+        - id: measureName
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: IPerformanceMeasurement
+extends: PerformanceClient

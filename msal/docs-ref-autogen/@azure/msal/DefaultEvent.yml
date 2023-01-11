@@ -1,0 +1,157 @@
+### YamlMime:TSType
+name: DefaultEvent
+uid: '@azure/msal.DefaultEvent'
+package: '@azure/msal'
+summary: ''
+fullName: DefaultEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'DefaultEvent(TelemetryPlatform, string, string, EventCount)'
+    uid: '@azure/msal.DefaultEvent.constructor'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new DefaultEvent(platform: TelemetryPlatform, correlationId: string,
+        clientId: string, eventCount: EventCount)
+      parameters:
+        - id: platform
+          type: <xref uid="@azure/msal.TelemetryPlatform" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: clientId
+          type: string
+          description: ''
+        - id: eventCount
+          type: <xref uid="@azure/msal.EventCount" />
+          description: ''
+inheritedProperties:
+  - name: displayName
+    uid: '@azure/msal.DefaultEvent.displayName'
+    package: '@azure/msal'
+    summary: ''
+    fullName: displayName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.displayName](xref:@azure/msal.TelemetryEvent.displayName)
+  - name: eventId
+    uid: '@azure/msal.DefaultEvent.eventId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: eventId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.eventId](xref:@azure/msal.TelemetryEvent.eventId)
+  - name: eventName
+    uid: '@azure/msal.DefaultEvent.eventName'
+    package: '@azure/msal'
+    summary: ''
+    fullName: eventName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventName: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.eventName](xref:@azure/msal.TelemetryEvent.eventName)
+  - name: key
+    uid: '@azure/msal.DefaultEvent.key'
+    package: '@azure/msal'
+    summary: ''
+    fullName: key
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'key: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.key](xref:@azure/msal.TelemetryEvent.key)
+  - name: telemetryCorrelationId
+    uid: '@azure/msal.DefaultEvent.telemetryCorrelationId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: telemetryCorrelationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'telemetryCorrelationId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.telemetryCorrelationId](xref:@azure/msal.TelemetryEvent.telemetryCorrelationId)
+inheritedMethods:
+  - name: get()
+    uid: '@azure/msal.DefaultEvent.get'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function get(): object'
+      return:
+        description: ''
+        type: object
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.get](xref:@azure/msal.TelemetryEvent.get)
+  - name: start()
+    uid: '@azure/msal.DefaultEvent.start'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function start()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.start](xref:@azure/msal.TelemetryEvent.start)
+  - name: stop()
+    uid: '@azure/msal.DefaultEvent.stop'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function stop()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.stop](xref:@azure/msal.TelemetryEvent.stop)
+extends: <xref uid="@azure/msal.TelemetryEvent" />

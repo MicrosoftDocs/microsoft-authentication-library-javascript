@@ -1,0 +1,66 @@
+### YamlMime:TSType
+name: Base64Encode
+uid: '@azure/msal-browser.Base64Encode'
+package: '@azure/msal-browser'
+summary: >-
+  Class which exposes APIs to encode plaintext to base64 encoded string. See
+  here for implementation details:
+
+  https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Solution_2_%E2%80%93_JavaScript's_UTF-16_%3E_UTF-8_%3E_base64
+fullName: Base64Encode
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: encode(string)
+    uid: '@azure/msal-browser.Base64Encode.encode'
+    package: '@azure/msal-browser'
+    summary: Returns b64 encoded string from plaintext string.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function encode(input: string): string'
+      parameters:
+        - id: input
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: string
+  - name: urlEncode(string)
+    uid: '@azure/msal-browser.Base64Encode.urlEncode'
+    package: '@azure/msal-browser'
+    summary: Returns URL Safe b64 encoded string from a plaintext string.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function urlEncode(input: string): string'
+      parameters:
+        - id: input
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: string
+  - name: urlEncodeArr(Uint8Array)
+    uid: '@azure/msal-browser.Base64Encode.urlEncodeArr'
+    package: '@azure/msal-browser'
+    summary: Returns URL Safe b64 encoded string from an int8Array.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function urlEncodeArr(inputArr: Uint8Array): string'
+      parameters:
+        - id: inputArr
+          type: Uint8Array
+          description: |+
+
+      return:
+        description: ''
+        type: string

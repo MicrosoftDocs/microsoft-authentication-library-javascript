@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: CachedKeyPair
+uid: '@azure/msal-browser.CachedKeyPair'
+package: '@azure/msal-browser'
+summary: ''
+fullName: CachedKeyPair
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type CachedKeyPair = {
+    privateKey: CryptoKey,
+    publicKey: CryptoKey,
+    requestMethod?: string,
+    requestUri?: string,
+  }

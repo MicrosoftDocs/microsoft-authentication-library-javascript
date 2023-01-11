@@ -1,0 +1,74 @@
+### YamlMime:TSType
+name: TokenCache
+uid: '@azure/msal-browser.TokenCache'
+package: '@azure/msal-browser'
+summary: Token cache manager
+fullName: TokenCache
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'TokenCache(BrowserConfiguration, BrowserCacheManager, Logger, ICrypto)'
+    uid: '@azure/msal-browser.TokenCache.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new TokenCache(configuration: BrowserConfiguration, storage:
+        BrowserCacheManager, logger: Logger, cryptoObj: ICrypto)
+      parameters:
+        - id: configuration
+          type: <xref uid="@azure/msal-browser.BrowserConfiguration" />
+          description: ''
+        - id: storage
+          type: <xref uid="@azure/msal-browser.BrowserCacheManager" />
+          description: ''
+        - id: logger
+          type: Logger
+          description: ''
+        - id: cryptoObj
+          type: ICrypto
+          description: ''
+properties:
+  - name: isBrowserEnvironment
+    uid: '@azure/msal-browser.TokenCache.isBrowserEnvironment'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: isBrowserEnvironment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'isBrowserEnvironment: boolean'
+      return:
+        description: ''
+        type: boolean
+methods:
+  - name: 'loadExternalTokens(SilentRequest, ExternalTokenResponse, LoadTokenOptions)'
+    uid: '@azure/msal-browser.TokenCache.loadExternalTokens'
+    package: '@azure/msal-browser'
+    summary: API to load tokens to msal-browser cache.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function loadExternalTokens(request: SilentRequest, response:
+        ExternalTokenResponse, options: LoadTokenOptions): AuthenticationResult
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.SilentRequest" />
+          description: ''
+        - id: response
+          type: ExternalTokenResponse
+          description: ''
+        - id: options
+          type: <xref uid="@azure/msal-browser.LoadTokenOptions" />
+          description: ''
+      return:
+        description: '`AuthenticationResult` for the response that was loaded.'
+        type: AuthenticationResult

@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: ReqCnf
+uid: '@azure/msal-common.ReqCnf'
+package: '@azure/msal-common'
+summary: >-
+  See eSTS docs for more info.
+
+  - A kid element, with the value containing an RFC 7638-compliant JWK
+  thumbprint that is base64 encoded.
+
+  -  xms_ksl element, representing the storage location of the key's secret
+  component on the client device. One of two values:
+       - sw: software storage
+       - uhw: hardware storage
+fullName: ReqCnf
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type ReqCnf = { kid: string, xms_ksl: KeyLocation }

@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: RegionDiscovery
+uid: '@azure/msal-common.RegionDiscovery'
+package: '@azure/msal-common'
+summary: ''
+fullName: RegionDiscovery
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: RegionDiscovery(INetworkModule)
+    uid: '@azure/msal-common.RegionDiscovery.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new RegionDiscovery(networkInterface: INetworkModule)'
+      parameters:
+        - id: networkInterface
+          type: <xref uid="@azure/msal-common.INetworkModule" />
+          description: ''
+methods:
+  - name: 'detectRegion(string | undefined, RegionDiscoveryMetadata, string)'
+    uid: '@azure/msal-common.RegionDiscovery.detectRegion'
+    package: '@azure/msal-common'
+    summary: Detect the region from the application's environment.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function detectRegion(environmentRegion: string | undefined,
+        regionDiscoveryMetadata: RegionDiscoveryMetadata, proxyUrl: string):
+        Promise<string | null>
+      parameters:
+        - id: environmentRegion
+          type: string | undefined
+          description: ''
+        - id: regionDiscoveryMetadata
+          type: <xref uid="@azure/msal-common.RegionDiscoveryMetadata" />
+          description: ''
+        - id: proxyUrl
+          type: string
+          description: ''
+      return:
+        description: Promise<string | null>
+        type: Promise&lt;string | null&gt;

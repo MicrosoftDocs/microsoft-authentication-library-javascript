@@ -1,0 +1,25 @@
+### YamlMime:TSEnum
+name: PerformanceEventStatus
+uid: '@azure/msal-common.PerformanceEventStatus'
+package: '@azure/msal-common'
+summary: State of the performance event.
+fullName: PerformanceEventStatus
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: NotStarted
+    uid: '@azure/msal-common.PerformanceEventStatus.NotStarted'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 0
+  - name: InProgress
+    uid: '@azure/msal-common.PerformanceEventStatus.InProgress'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 1
+  - name: Completed
+    uid: '@azure/msal-common.PerformanceEventStatus.Completed'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 2

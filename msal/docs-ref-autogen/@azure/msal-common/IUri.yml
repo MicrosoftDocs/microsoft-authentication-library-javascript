@@ -1,0 +1,102 @@
+### YamlMime:TSType
+name: IUri
+uid: '@azure/msal-common.IUri'
+package: '@azure/msal-common'
+summary: Interface which describes URI components.
+fullName: IUri
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: AbsolutePath
+    uid: '@azure/msal-common.IUri.AbsolutePath'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: AbsolutePath
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'AbsolutePath: string'
+      return:
+        description: ''
+        type: string
+  - name: Hash
+    uid: '@azure/msal-common.IUri.Hash'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: Hash
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'Hash: string'
+      return:
+        description: ''
+        type: string
+  - name: HostNameAndPort
+    uid: '@azure/msal-common.IUri.HostNameAndPort'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: HostNameAndPort
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'HostNameAndPort: string'
+      return:
+        description: ''
+        type: string
+  - name: PathSegments
+    uid: '@azure/msal-common.IUri.PathSegments'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: PathSegments
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'PathSegments: string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: Protocol
+    uid: '@azure/msal-common.IUri.Protocol'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: Protocol
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'Protocol: string'
+      return:
+        description: ''
+        type: string
+  - name: QueryString
+    uid: '@azure/msal-common.IUri.QueryString'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: QueryString
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'QueryString: string'
+      return:
+        description: ''
+        type: string
+  - name: Search
+    uid: '@azure/msal-common.IUri.Search'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: Search
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'Search: string'
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: XhrResponse
+uid: '@azure/msal.XhrResponse'
+package: '@azure/msal'
+summary: ''
+fullName: XhrResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type XhrResponse = { body: any, statusCode: number }

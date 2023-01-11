@@ -1,0 +1,22 @@
+### YamlMime:TSEnum
+name: ResponseMode
+uid: '@azure/msal-common.ResponseMode'
+package: '@azure/msal-common'
+summary: allowed values for response_mode
+fullName: ResponseMode
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: FORM_POST
+    uid: '@azure/msal-common.ResponseMode.FORM_POST'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: FRAGMENT
+    uid: '@azure/msal-common.ResponseMode.FRAGMENT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: QUERY
+    uid: '@azure/msal-common.ResponseMode.QUERY'
+    package: '@azure/msal-common'
+    summary: ''

@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: TelemetryOptions
+uid: '@azure/msal-common.TelemetryOptions'
+package: '@azure/msal-common'
+summary: ''
+fullName: TelemetryOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type TelemetryOptions = { application: ApplicationTelemetry }

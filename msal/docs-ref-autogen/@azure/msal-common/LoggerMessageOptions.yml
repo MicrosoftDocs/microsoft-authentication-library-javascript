@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: LoggerMessageOptions
+uid: '@azure/msal-common.LoggerMessageOptions'
+package: '@azure/msal-common'
+summary: Options for logger messages.
+fullName: LoggerMessageOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type LoggerMessageOptions = {
+    containsPii?: boolean,
+    context?: string,
+    correlationId?: string,
+    logLevel: LogLevel,
+  }

@@ -1,0 +1,447 @@
+### YamlMime:TSType
+name: AccountEntity
+uid: '@azure/msal-common.AccountEntity'
+package: '@azure/msal-common'
+summary: >
+  Type that defines required and optional parameters for an Account field (based
+  on universal cache schema implemented by all MSALs).
+
+  Key : Value Schema
+
+
+  Key: <home_account_id>-<environment>-<realm*>
+
+
+  Value Schema:
+
+  {
+       homeAccountId: home account identifier for the auth scheme,
+       environment: entity that issued the token, represented as a full host
+       realm: Full tenant or organizational identifier that the account belongs to
+       localAccountId: Original tenant-specific accountID, usually used for legacy cases
+       username: primary username that represents the user, usually corresponds to preferred_username in the v2 endpt
+       authorityType: Accounts authority type as a string
+       name: Full name for the account, including given name and family name,
+       clientInfo: Full base64 encoded client info received from ESTS
+       lastModificationTime: last time this entity was modified in the cache
+       lastModificationApp:
+       idTokenClaims: Object containing claims parsed from ID token
+       nativeAccountId: Account identifier on the native device
+  }
+fullName: AccountEntity
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+properties:
+  - name: authorityType
+    uid: '@azure/msal-common.AccountEntity.authorityType'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: authorityType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authorityType: string'
+      return:
+        description: ''
+        type: string
+  - name: clientInfo
+    uid: '@azure/msal-common.AccountEntity.clientInfo'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: clientInfo
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'clientInfo?: string'
+      return:
+        description: ''
+        type: string
+  - name: cloudGraphHostName
+    uid: '@azure/msal-common.AccountEntity.cloudGraphHostName'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: cloudGraphHostName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'cloudGraphHostName?: string'
+      return:
+        description: ''
+        type: string
+  - name: environment
+    uid: '@azure/msal-common.AccountEntity.environment'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: environment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'environment: string'
+      return:
+        description: ''
+        type: string
+  - name: homeAccountId
+    uid: '@azure/msal-common.AccountEntity.homeAccountId'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: homeAccountId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'homeAccountId: string'
+      return:
+        description: ''
+        type: string
+  - name: idTokenClaims
+    uid: '@azure/msal-common.AccountEntity.idTokenClaims'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: idTokenClaims
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'idTokenClaims?: TokenClaims'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.TokenClaims" />
+  - name: lastModificationApp
+    uid: '@azure/msal-common.AccountEntity.lastModificationApp'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: lastModificationApp
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lastModificationApp?: string'
+      return:
+        description: ''
+        type: string
+  - name: lastModificationTime
+    uid: '@azure/msal-common.AccountEntity.lastModificationTime'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: lastModificationTime
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'lastModificationTime?: string'
+      return:
+        description: ''
+        type: string
+  - name: localAccountId
+    uid: '@azure/msal-common.AccountEntity.localAccountId'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: localAccountId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'localAccountId: string'
+      return:
+        description: ''
+        type: string
+  - name: msGraphHost
+    uid: '@azure/msal-common.AccountEntity.msGraphHost'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: msGraphHost
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'msGraphHost?: string'
+      return:
+        description: ''
+        type: string
+  - name: name
+    uid: '@azure/msal-common.AccountEntity.name'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name?: string'
+      return:
+        description: ''
+        type: string
+  - name: nativeAccountId
+    uid: '@azure/msal-common.AccountEntity.nativeAccountId'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: nativeAccountId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'nativeAccountId?: string'
+      return:
+        description: ''
+        type: string
+  - name: realm
+    uid: '@azure/msal-common.AccountEntity.realm'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: realm
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'realm: string'
+      return:
+        description: ''
+        type: string
+  - name: username
+    uid: '@azure/msal-common.AccountEntity.username'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: username
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'username: string'
+      return:
+        description: ''
+        type: string
+methods:
+  - name: 'accountInfoIsEqual(AccountInfo | null, AccountInfo | null, boolean)'
+    uid: '@azure/msal-common.AccountEntity.accountInfoIsEqual'
+    package: '@azure/msal-common'
+    summary: >-
+      Helper function to determine whether 2 accountInfo objects represent the
+      same account
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function accountInfoIsEqual(accountA: AccountInfo | null,
+        accountB: AccountInfo | null, compareClaims?: boolean): boolean
+      parameters:
+        - id: accountA
+          type: <xref uid="@azure/msal-common.AccountInfo" /> | null
+          description: ''
+        - id: accountB
+          type: <xref uid="@azure/msal-common.AccountInfo" /> | null
+          description: ''
+        - id: compareClaims
+          type: boolean
+          description: >
+            If set to true idTokenClaims will also be compared to determine
+            account equality
+      return:
+        description: ''
+        type: boolean
+  - name: >-
+      createAccount(string, string, AuthToken, Authority, string, string,
+      string, string)
+    uid: '@azure/msal-common.AccountEntity.createAccount'
+    package: '@azure/msal-common'
+    summary: >-
+      Build Account cache from IdToken, clientInfo and authority/policy.
+      Associated with AAD.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createAccount(clientInfo: string, homeAccountId: string,
+        idToken: AuthToken, authority?: Authority, cloudGraphHostName?: string,
+        msGraphHost?: string, environment?: string, nativeAccountId?: string):
+        AccountEntity
+      parameters:
+        - id: clientInfo
+          type: string
+          description: ''
+        - id: homeAccountId
+          type: string
+          description: ''
+        - id: idToken
+          type: <xref uid="@azure/msal-common.AuthToken" />
+          description: ''
+        - id: authority
+          type: <xref uid="@azure/msal-common.Authority" />
+          description: ''
+        - id: cloudGraphHostName
+          type: string
+          description: ''
+        - id: msGraphHost
+          type: string
+          description: ''
+        - id: environment
+          type: string
+          description: ''
+        - id: nativeAccountId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AccountEntity" />
+  - name: 'createGenericAccount(string, AuthToken, Authority, string, string, string)'
+    uid: '@azure/msal-common.AccountEntity.createGenericAccount'
+    package: '@azure/msal-common'
+    summary: Builds non-AAD/ADFS account.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createGenericAccount(homeAccountId: string, idToken:
+        AuthToken, authority?: Authority, cloudGraphHostName?: string,
+        msGraphHost?: string, environment?: string): AccountEntity
+      parameters:
+        - id: homeAccountId
+          type: string
+          description: ''
+        - id: idToken
+          type: <xref uid="@azure/msal-common.AuthToken" />
+          description: |+
+
+        - id: authority
+          type: <xref uid="@azure/msal-common.Authority" />
+          description: ''
+        - id: cloudGraphHostName
+          type: string
+          description: ''
+        - id: msGraphHost
+          type: string
+          description: ''
+        - id: environment
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AccountEntity" />
+  - name: generateAccountCacheKey(AccountInfo)
+    uid: '@azure/msal-common.AccountEntity.generateAccountCacheKey'
+    package: '@azure/msal-common'
+    summary: Generates account key from interface
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function generateAccountCacheKey(accountInterface: AccountInfo):
+        string
+      parameters:
+        - id: accountInterface
+          type: <xref uid="@azure/msal-common.AccountInfo" />
+          description: |+
+
+      return:
+        description: ''
+        type: string
+  - name: generateAccountId()
+    uid: '@azure/msal-common.AccountEntity.generateAccountId'
+    package: '@azure/msal-common'
+    summary: >-
+      Generate Account Id key component as per the schema:
+      <home_account_id>-<environment>
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateAccountId(): string'
+      return:
+        description: ''
+        type: string
+  - name: generateAccountKey()
+    uid: '@azure/msal-common.AccountEntity.generateAccountKey'
+    package: '@azure/msal-common'
+    summary: >-
+      Generate Account Cache Key as per the schema:
+      <home_account_id>-<environment>-<realm*>
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateAccountKey(): string'
+      return:
+        description: ''
+        type: string
+  - name: 'generateHomeAccountId(string, AuthorityType, Logger, ICrypto, AuthToken)'
+    uid: '@azure/msal-common.AccountEntity.generateHomeAccountId'
+    package: '@azure/msal-common'
+    summary: Generate HomeAccountId from server response
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function generateHomeAccountId(serverClientInfo: string,
+        authType: AuthorityType, logger: Logger, cryptoObj: ICrypto, idToken?:
+        AuthToken): string
+      parameters:
+        - id: serverClientInfo
+          type: string
+          description: ''
+        - id: authType
+          type: <xref uid="@azure/msal-common.AuthorityType" />
+          description: |+
+
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
+        - id: cryptoObj
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: ''
+        - id: idToken
+          type: <xref uid="@azure/msal-common.AuthToken" />
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: generateType()
+    uid: '@azure/msal-common.AccountEntity.generateType'
+    package: '@azure/msal-common'
+    summary: returns the type of the cache (in this case account)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateType(): number'
+      return:
+        description: ''
+        type: number
+  - name: getAccountInfo()
+    uid: '@azure/msal-common.AccountEntity.getAccountInfo'
+    package: '@azure/msal-common'
+    summary: Returns the AccountInfo interface for this account.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getAccountInfo(): AccountInfo'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AccountInfo" />
+  - name: isAccountEntity(object)
+    uid: '@azure/msal-common.AccountEntity.isAccountEntity'
+    package: '@azure/msal-common'
+    summary: 'Validates an entity: checks for all expected params'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function isAccountEntity(entity: object): boolean'
+      parameters:
+        - id: entity
+          type: object
+          description: |+
+
+      return:
+        description: ''
+        type: boolean

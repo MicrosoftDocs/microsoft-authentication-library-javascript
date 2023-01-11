@@ -1,0 +1,23 @@
+### YamlMime:TSTypeAlias
+name: AuthResponse
+uid: '@azure/msal.AuthResponse'
+package: '@azure/msal'
+summary: ''
+fullName: AuthResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type AuthResponse = {
+    accessToken: string,
+    account: Account,
+    accountState: string,
+    expiresOn: Date,
+    fromCache: boolean,
+    idToken: IdToken,
+    idTokenClaims: StringDict,
+    scopes: Array<string>,
+    tenantId: string,
+    tokenType: string,
+    uniqueId: string,
+  }

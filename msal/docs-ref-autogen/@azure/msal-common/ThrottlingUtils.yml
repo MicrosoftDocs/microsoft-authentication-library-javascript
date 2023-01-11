@@ -1,0 +1,166 @@
+### YamlMime:TSType
+name: ThrottlingUtils
+uid: '@azure/msal-common.ThrottlingUtils'
+package: '@azure/msal-common'
+summary: ''
+fullName: ThrottlingUtils
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: calculateThrottleTime(number)
+    uid: '@azure/msal-common.ThrottlingUtils.calculateThrottleTime'
+    package: '@azure/msal-common'
+    summary: >-
+      Calculates the Unix-time value for a throttle to expire given throttleTime
+      in seconds.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function calculateThrottleTime(throttleTime: number): number'
+      parameters:
+        - id: throttleTime
+          type: number
+          description: |+
+
+      return:
+        description: ''
+        type: number
+  - name: >-
+      checkResponseForRetryAfter(NetworkResponse<ServerAuthorizationTokenResponse>)
+    uid: '@azure/msal-common.ThrottlingUtils.checkResponseForRetryAfter'
+    package: '@azure/msal-common'
+    summary: Checks a NetworkResponse object's RetryAfter header
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function checkResponseForRetryAfter(response:
+        NetworkResponse<ServerAuthorizationTokenResponse>): boolean
+      parameters:
+        - id: response
+          type: >-
+            <xref uid="@azure/msal-common.NetworkResponse" />&lt;<xref
+            uid="@azure/msal-common.ServerAuthorizationTokenResponse" />&gt;
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: checkResponseStatus(NetworkResponse<ServerAuthorizationTokenResponse>)
+    uid: '@azure/msal-common.ThrottlingUtils.checkResponseStatus'
+    package: '@azure/msal-common'
+    summary: Checks a NetworkResponse object's status codes against 429 or 5xx
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function checkResponseStatus(response:
+        NetworkResponse<ServerAuthorizationTokenResponse>): boolean
+      parameters:
+        - id: response
+          type: >-
+            <xref uid="@azure/msal-common.NetworkResponse" />&lt;<xref
+            uid="@azure/msal-common.ServerAuthorizationTokenResponse" />&gt;
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: generateThrottlingStorageKey(RequestThumbprint)
+    uid: '@azure/msal-common.ThrottlingUtils.generateThrottlingStorageKey'
+    package: '@azure/msal-common'
+    summary: Prepares a RequestThumbprint to be stored as a key.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function generateThrottlingStorageKey(thumbprint:
+        RequestThumbprint): string
+      parameters:
+        - id: thumbprint
+          type: <xref uid="@azure/msal-common.RequestThumbprint" />
+          description: |+
+
+      return:
+        description: ''
+        type: string
+  - name: >-
+      postProcess(CacheManager, RequestThumbprint,
+      NetworkResponse<ServerAuthorizationTokenResponse>)
+    uid: '@azure/msal-common.ThrottlingUtils.postProcess'
+    package: '@azure/msal-common'
+    summary: Performs necessary throttling checks after a network request.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function postProcess(cacheManager: CacheManager, thumbprint:
+        RequestThumbprint, response:
+        NetworkResponse<ServerAuthorizationTokenResponse>)
+      parameters:
+        - id: cacheManager
+          type: <xref uid="@azure/msal-common.CacheManager" />
+          description: ''
+        - id: thumbprint
+          type: <xref uid="@azure/msal-common.RequestThumbprint" />
+          description: ''
+        - id: response
+          type: >-
+            <xref uid="@azure/msal-common.NetworkResponse" />&lt;<xref
+            uid="@azure/msal-common.ServerAuthorizationTokenResponse" />&gt;
+          description: |+
+
+  - name: 'preProcess(CacheManager, RequestThumbprint)'
+    uid: '@azure/msal-common.ThrottlingUtils.preProcess'
+    package: '@azure/msal-common'
+    summary: Performs necessary throttling checks before a network request.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function preProcess(cacheManager: CacheManager, thumbprint:
+        RequestThumbprint)
+      parameters:
+        - id: cacheManager
+          type: <xref uid="@azure/msal-common.CacheManager" />
+          description: ''
+        - id: thumbprint
+          type: <xref uid="@azure/msal-common.RequestThumbprint" />
+          description: |+
+
+  - name: 'removeThrottle(CacheManager, string, BaseAuthRequest, string)'
+    uid: '@azure/msal-common.ThrottlingUtils.removeThrottle'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function removeThrottle(cacheManager: CacheManager, clientId:
+        string, request: BaseAuthRequest, homeAccountIdentifier?: string):
+        boolean
+      parameters:
+        - id: cacheManager
+          type: <xref uid="@azure/msal-common.CacheManager" />
+          description: ''
+        - id: clientId
+          type: string
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
+          description: ''
+        - id: homeAccountIdentifier
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean

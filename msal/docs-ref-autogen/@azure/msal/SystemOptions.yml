@@ -1,0 +1,30 @@
+### YamlMime:TSTypeAlias
+name: SystemOptions
+uid: '@azure/msal.SystemOptions'
+package: '@azure/msal'
+summary: >
+  Library Specific Options
+
+  - logger                       - Used to initialize the Logger object; TODO:
+  Expand on logger details or link to the documentation on logger
+
+  - loadFrameTimeout             - maximum time the library should wait for a
+  frame to load
+
+  - tokenRenewalOffsetSeconds    - sets the window of offset needed to renew the
+  token before expiry
+
+  - navigateFrameWait            - sets the wait time for hidden iFrame
+  navigation
+fullName: SystemOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type SystemOptions = {
+    loadFrameTimeout?: number,
+    logger?: Logger,
+    navigateFrameWait?: number,
+    telemetry?: TelemetryOptions,
+    tokenRenewalOffsetSeconds?: number,
+  }

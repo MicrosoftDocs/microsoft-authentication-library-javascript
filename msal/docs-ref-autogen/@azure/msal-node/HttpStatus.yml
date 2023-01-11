@@ -1,0 +1,45 @@
+### YamlMime:TSEnum
+name: HttpStatus
+uid: '@azure/msal-node.HttpStatus'
+package: '@azure/msal-node'
+summary: ''
+fullName: HttpStatus
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: SUCCESS_RANGE_START
+    uid: '@azure/msal-node.HttpStatus.SUCCESS_RANGE_START'
+    package: '@azure/msal-node'
+    summary: ''
+    numericValue: 200
+  - name: SUCCESS_RANGE_END
+    uid: '@azure/msal-node.HttpStatus.SUCCESS_RANGE_END'
+    package: '@azure/msal-node'
+    summary: ''
+    numericValue: 299
+  - name: REDIRECT
+    uid: '@azure/msal-node.HttpStatus.REDIRECT'
+    package: '@azure/msal-node'
+    summary: ''
+    numericValue: 302
+  - name: CLIENT_ERROR_RANGE_START
+    uid: '@azure/msal-node.HttpStatus.CLIENT_ERROR_RANGE_START'
+    package: '@azure/msal-node'
+    summary: ''
+    numericValue: 400
+  - name: CLIENT_ERROR_RANGE_END
+    uid: '@azure/msal-node.HttpStatus.CLIENT_ERROR_RANGE_END'
+    package: '@azure/msal-node'
+    summary: ''
+    numericValue: 499
+  - name: SERVER_ERROR_RANGE_START
+    uid: '@azure/msal-node.HttpStatus.SERVER_ERROR_RANGE_START'
+    package: '@azure/msal-node'
+    summary: ''
+    numericValue: 500
+  - name: SERVER_ERROR_RANGE_END
+    uid: '@azure/msal-node.HttpStatus.SERVER_ERROR_RANGE_END'
+    package: '@azure/msal-node'
+    summary: ''
+    numericValue: 599

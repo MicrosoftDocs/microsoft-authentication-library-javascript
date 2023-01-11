@@ -1,0 +1,95 @@
+### YamlMime:TSType
+name: AuthToken
+uid: '@azure/msal-common.AuthToken'
+package: '@azure/msal-common'
+summary: >-
+  JWT Token representation class. Parses token string and generates claims
+  object.
+fullName: AuthToken
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'AuthToken(string, ICrypto)'
+    uid: '@azure/msal-common.AuthToken.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new AuthToken(rawToken: string, crypto: ICrypto)'
+      parameters:
+        - id: rawToken
+          type: string
+          description: ''
+        - id: crypto
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: ''
+properties:
+  - name: claims
+    uid: '@azure/msal-common.AuthToken.claims'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: claims
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'claims: TokenClaims'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.TokenClaims" />
+  - name: rawToken
+    uid: '@azure/msal-common.AuthToken.rawToken'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: rawToken
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'rawToken: string'
+      return:
+        description: ''
+        type: string
+methods:
+  - name: 'checkMaxAge(number, number)'
+    uid: '@azure/msal-common.AuthToken.checkMaxAge'
+    package: '@azure/msal-common'
+    summary: Determine if the token's max_age has transpired
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function checkMaxAge(authTime: number, maxAge: number)'
+      parameters:
+        - id: authTime
+          type: number
+          description: ''
+        - id: maxAge
+          type: number
+          description: ''
+  - name: 'extractTokenClaims(string, ICrypto)'
+    uid: '@azure/msal-common.AuthToken.extractTokenClaims'
+    package: '@azure/msal-common'
+    summary: Extract token by decoding the rawToken
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function extractTokenClaims(encodedToken: string, crypto:
+        ICrypto): TokenClaims
+      parameters:
+        - id: encodedToken
+          type: string
+          description: |+
+
+        - id: crypto
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.TokenClaims" />

@@ -1,0 +1,63 @@
+### YamlMime:TSEnum
+name: ApiId
+uid: '@azure/msal-browser.ApiId'
+package: '@azure/msal-browser'
+summary: >-
+  API Codes for Telemetry purposes.
+
+  Before adding a new code you must claim it in the MSAL Telemetry tracker as
+  these number spaces are shared across all MSALs
+
+  0-99 Silent Flow
+
+  800-899 Auth Code Flow
+fullName: ApiId
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: acquireTokenSilent_silentFlow
+    uid: '@azure/msal-browser.ApiId.acquireTokenSilent_silentFlow'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 61
+  - name: acquireTokenRedirect
+    uid: '@azure/msal-browser.ApiId.acquireTokenRedirect'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 861
+  - name: acquireTokenPopup
+    uid: '@azure/msal-browser.ApiId.acquireTokenPopup'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 862
+  - name: ssoSilent
+    uid: '@azure/msal-browser.ApiId.ssoSilent'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 863
+  - name: acquireTokenSilent_authCode
+    uid: '@azure/msal-browser.ApiId.acquireTokenSilent_authCode'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 864
+  - name: handleRedirectPromise
+    uid: '@azure/msal-browser.ApiId.handleRedirectPromise'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 865
+  - name: acquireTokenByCode
+    uid: '@azure/msal-browser.ApiId.acquireTokenByCode'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 866
+  - name: logout
+    uid: '@azure/msal-browser.ApiId.logout'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 961
+  - name: logoutPopup
+    uid: '@azure/msal-browser.ApiId.logoutPopup'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 962

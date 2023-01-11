@@ -1,0 +1,129 @@
+### YamlMime:TSType
+name: TelemetryEvent
+uid: '@azure/msal.TelemetryEvent'
+package: '@azure/msal'
+summary: ''
+fullName: TelemetryEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'TelemetryEvent(string, string, string)'
+    uid: '@azure/msal.TelemetryEvent.constructor'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new TelemetryEvent(eventName: string, correlationId: string, eventLabel:
+        string)
+      parameters:
+        - id: eventName
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: eventLabel
+          type: string
+          description: ''
+properties:
+  - name: displayName
+    uid: '@azure/msal.TelemetryEvent.displayName'
+    package: '@azure/msal'
+    summary: ''
+    fullName: displayName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        description: ''
+        type: string
+  - name: eventId
+    uid: '@azure/msal.TelemetryEvent.eventId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: eventId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventId: string'
+      return:
+        description: ''
+        type: string
+  - name: eventName
+    uid: '@azure/msal.TelemetryEvent.eventName'
+    package: '@azure/msal'
+    summary: ''
+    fullName: eventName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventName: string'
+      return:
+        description: ''
+        type: string
+  - name: key
+    uid: '@azure/msal.TelemetryEvent.key'
+    package: '@azure/msal'
+    summary: ''
+    fullName: key
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'key: string'
+      return:
+        description: ''
+        type: string
+  - name: telemetryCorrelationId
+    uid: '@azure/msal.TelemetryEvent.telemetryCorrelationId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: telemetryCorrelationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'telemetryCorrelationId: string'
+      return:
+        description: ''
+        type: string
+methods:
+  - name: get()
+    uid: '@azure/msal.TelemetryEvent.get'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function get(): object'
+      return:
+        description: ''
+        type: object
+  - name: start()
+    uid: '@azure/msal.TelemetryEvent.start'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function start()
+  - name: stop()
+    uid: '@azure/msal.TelemetryEvent.stop'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function stop()

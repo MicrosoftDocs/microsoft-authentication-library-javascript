@@ -1,0 +1,10 @@
+### YamlMime:TSType
+name: EventCount
+uid: '@azure/msal.EventCount'
+package: '@azure/msal'
+summary: ''
+fullName: EventCount
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface

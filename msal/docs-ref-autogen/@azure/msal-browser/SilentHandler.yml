@@ -1,0 +1,161 @@
+### YamlMime:TSType
+name: SilentHandler
+uid: '@azure/msal-browser.SilentHandler'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SilentHandler
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      SilentHandler(AuthorizationCodeClient, BrowserCacheManager,
+      CommonAuthorizationCodeRequest, Logger,
+      Required<Pick<BrowserSystemOptions, "navigateFrameWait" |
+      "pollIntervalMilliseconds">>)
+    uid: '@azure/msal-browser.SilentHandler.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SilentHandler(authCodeModule: AuthorizationCodeClient, storageImpl:
+        BrowserCacheManager, authCodeRequest: CommonAuthorizationCodeRequest,
+        logger: Logger, systemOptions: Required<Pick<BrowserSystemOptions,
+        "navigateFrameWait" | "pollIntervalMilliseconds">>)
+      parameters:
+        - id: authCodeModule
+          type: AuthorizationCodeClient
+          description: ''
+        - id: storageImpl
+          type: <xref uid="@azure/msal-browser.BrowserCacheManager" />
+          description: ''
+        - id: authCodeRequest
+          type: CommonAuthorizationCodeRequest
+          description: ''
+        - id: logger
+          type: Logger
+          description: ''
+        - id: systemOptions
+          type: >-
+            Required&lt;Pick&lt;<xref
+            uid="@azure/msal-browser.BrowserSystemOptions" />,
+            "navigateFrameWait" | "pollIntervalMilliseconds"&gt;&gt;
+          description: ''
+inheritedMethods:
+  - name: 'handleCodeResponseFromHash(string, string, Authority, INetworkModule)'
+    uid: '@azure/msal-browser.SilentHandler.handleCodeResponseFromHash'
+    package: '@azure/msal-browser'
+    summary: Function to handle response parameters from hash.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleCodeResponseFromHash(locationHash: string, state: string,
+        authority: Authority, networkModule: INetworkModule):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: locationHash
+          type: string
+          description: |+
+
+        - id: state
+          type: string
+          description: ''
+        - id: authority
+          type: Authority
+          description: ''
+        - id: networkModule
+          type: INetworkModule
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InteractionHandler.handleCodeResponseFromHash](xref:@azure/msal-browser.InteractionHandler.handleCodeResponseFromHash)
+  - name: >-
+      handleCodeResponseFromServer(AuthorizationCodePayload, string, Authority,
+      INetworkModule, boolean)
+    uid: '@azure/msal-browser.SilentHandler.handleCodeResponseFromServer'
+    package: '@azure/msal-browser'
+    summary: Process auth code response from AAD
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleCodeResponseFromServer(authCodeResponse:
+        AuthorizationCodePayload, state: string, authority: Authority,
+        networkModule: INetworkModule, validateNonce?: boolean):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: authCodeResponse
+          type: AuthorizationCodePayload
+          description: ''
+        - id: state
+          type: string
+          description: ''
+        - id: authority
+          type: Authority
+          description: ''
+        - id: networkModule
+          type: INetworkModule
+          description: ''
+        - id: validateNonce
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InteractionHandler.handleCodeResponseFromServer](xref:@azure/msal-browser.InteractionHandler.handleCodeResponseFromServer)
+methods:
+  - name: initiateAuthRequest(string)
+    uid: '@azure/msal-browser.SilentHandler.initiateAuthRequest'
+    package: '@azure/msal-browser'
+    summary: Creates a hidden iframe to given URL using user-requested scopes as an id.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function initiateAuthRequest(requestUrl: string):
+        Promise<HTMLIFrameElement>
+      parameters:
+        - id: requestUrl
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;HTMLIFrameElement&gt;
+  - name: 'monitorIframeForHash(HTMLIFrameElement, number)'
+    uid: '@azure/msal-browser.SilentHandler.monitorIframeForHash'
+    package: '@azure/msal-browser'
+    summary: >-
+      Monitors an iframe content window until it loads a url with a known hash,
+      or hits a specified timeout.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function monitorIframeForHash(iframe: HTMLIFrameElement, timeout:
+        number): Promise<string>
+      parameters:
+        - id: iframe
+          type: HTMLIFrameElement
+          description: ''
+        - id: timeout
+          type: number
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+extends: <xref uid="@azure/msal-browser.InteractionHandler" />

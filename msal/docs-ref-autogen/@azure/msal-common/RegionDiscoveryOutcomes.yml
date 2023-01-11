@@ -1,0 +1,31 @@
+### YamlMime:TSEnum
+name: RegionDiscoveryOutcomes
+uid: '@azure/msal-common.RegionDiscoveryOutcomes'
+package: '@azure/msal-common'
+summary: Region Discovery Outcomes
+fullName: RegionDiscoveryOutcomes
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: AUTO_DETECTION_REQUESTED_FAILED
+    uid: '@azure/msal-common.RegionDiscoveryOutcomes.AUTO_DETECTION_REQUESTED_FAILED'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: AUTO_DETECTION_REQUESTED_SUCCESSFUL
+    uid: >-
+      @azure/msal-common.RegionDiscoveryOutcomes.AUTO_DETECTION_REQUESTED_SUCCESSFUL
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CONFIGURED_MATCHES_DETECTED
+    uid: '@azure/msal-common.RegionDiscoveryOutcomes.CONFIGURED_MATCHES_DETECTED'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CONFIGURED_NOT_DETECTED
+    uid: '@azure/msal-common.RegionDiscoveryOutcomes.CONFIGURED_NOT_DETECTED'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CONFIGURED_NO_AUTO_DETECTION
+    uid: '@azure/msal-common.RegionDiscoveryOutcomes.CONFIGURED_NO_AUTO_DETECTION'
+    package: '@azure/msal-common'
+    summary: ''

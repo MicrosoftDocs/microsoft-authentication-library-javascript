@@ -1,0 +1,10 @@
+### YamlMime:TSType
+name: EventCountByCorrelationId
+uid: '@azure/msal.EventCountByCorrelationId'
+package: '@azure/msal'
+summary: ''
+fullName: EventCountByCorrelationId
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface

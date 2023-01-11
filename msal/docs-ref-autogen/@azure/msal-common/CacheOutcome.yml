@@ -1,0 +1,30 @@
+### YamlMime:TSEnum
+name: CacheOutcome
+uid: '@azure/msal-common.CacheOutcome'
+package: '@azure/msal-common'
+summary: ''
+fullName: CacheOutcome
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: CACHED_ACCESS_TOKEN_EXPIRED
+    uid: '@azure/msal-common.CacheOutcome.CACHED_ACCESS_TOKEN_EXPIRED'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: FORCE_REFRESH
+    uid: '@azure/msal-common.CacheOutcome.FORCE_REFRESH'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: NO_CACHED_ACCESS_TOKEN
+    uid: '@azure/msal-common.CacheOutcome.NO_CACHED_ACCESS_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: NO_CACHE_HIT
+    uid: '@azure/msal-common.CacheOutcome.NO_CACHE_HIT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: REFRESH_CACHED_ACCESS_TOKEN
+    uid: '@azure/msal-common.CacheOutcome.REFRESH_CACHED_ACCESS_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''

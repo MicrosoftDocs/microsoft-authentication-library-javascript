@@ -1,0 +1,40 @@
+### YamlMime:TSType
+name: MsalModule
+uid: '@azure/msal-angular.MsalModule'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MsalModule
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: >-
+      forRoot(IPublicClientApplication, MsalGuardConfiguration,
+      MsalInterceptorConfiguration)
+    uid: '@azure/msal-angular.MsalModule.forRoot'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function forRoot(msalInstance: IPublicClientApplication,
+        guardConfig: MsalGuardConfiguration, interceptorConfig:
+        MsalInterceptorConfiguration): ModuleWithProviders<MsalModule>
+      parameters:
+        - id: msalInstance
+          type: IPublicClientApplication
+          description: ''
+        - id: guardConfig
+          type: <xref uid="@azure/msal-angular.MsalGuardConfiguration" />
+          description: ''
+        - id: interceptorConfig
+          type: <xref uid="@azure/msal-angular.MsalInterceptorConfiguration" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          ModuleWithProviders&lt;<xref uid="@azure/msal-angular.MsalModule"
+          />&gt;

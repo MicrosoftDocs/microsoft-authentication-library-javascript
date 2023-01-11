@@ -1,0 +1,33 @@
+### YamlMime:TSType
+name: EventMessageUtils
+uid: '@azure/msal-browser.EventMessageUtils'
+package: '@azure/msal-browser'
+summary: ''
+fullName: EventMessageUtils
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'getInteractionStatusFromEvent(EventMessage, InteractionStatus)'
+    uid: '@azure/msal-browser.EventMessageUtils.getInteractionStatusFromEvent'
+    package: '@azure/msal-browser'
+    summary: Gets interaction status from event message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getInteractionStatusFromEvent(message: EventMessage,
+        currentStatus?: InteractionStatus): InteractionStatus | null
+      parameters:
+        - id: message
+          type: <xref uid="@azure/msal-browser.EventMessage" />
+          description: ''
+        - id: currentStatus
+          type: <xref uid="@azure/msal-browser.InteractionStatus" />
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.InteractionStatus" /> | null

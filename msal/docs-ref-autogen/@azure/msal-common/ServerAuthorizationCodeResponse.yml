@@ -1,0 +1,29 @@
+### YamlMime:TSTypeAlias
+name: ServerAuthorizationCodeResponse
+uid: '@azure/msal-common.ServerAuthorizationCodeResponse'
+package: '@azure/msal-common'
+summary: |-
+  Deserialized response object from server authorization code request.
+  - code: authorization code from server
+  - client_info: client info object
+  - state: OAuth2 request state
+  - error: error sent back in hash
+  - error: description
+fullName: ServerAuthorizationCodeResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type ServerAuthorizationCodeResponse = {
+    accountId?: string,
+    client_info?: string,
+    cloud_graph_host_name?: string,
+    cloud_instance_host_name?: string,
+    cloud_instance_name?: string,
+    code?: string,
+    error?: string,
+    error_description?: string,
+    msgraph_host?: string,
+    state?: string,
+    suberror?: string,
+  }

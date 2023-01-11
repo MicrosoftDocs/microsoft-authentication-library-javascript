@@ -1,0 +1,61 @@
+### YamlMime:TSType
+name: INavigationClient
+uid: '@azure/msal-browser.INavigationClient'
+package: '@azure/msal-browser'
+summary: ''
+fullName: INavigationClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: 'navigateExternal(string, NavigationOptions)'
+    uid: '@azure/msal-browser.INavigationClient.navigateExternal'
+    package: '@azure/msal-browser'
+    summary: >-
+      Navigates to other pages outside the web application i.e. the Identity
+      Provider
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function navigateExternal(url: string, options: NavigationOptions):
+        Promise<boolean>
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="@azure/msal-browser.NavigationOptions" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+  - name: 'navigateInternal(string, NavigationOptions)'
+    uid: '@azure/msal-browser.INavigationClient.navigateInternal'
+    package: '@azure/msal-browser'
+    summary: >-
+      Navigates to other pages within the same web application
+
+      Return false if this doesn't cause the page to reload i.e. Client-side
+      navigation
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function navigateInternal(url: string, options: NavigationOptions):
+        Promise<boolean>
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="@azure/msal-browser.NavigationOptions" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;

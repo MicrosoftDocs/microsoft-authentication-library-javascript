@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: ValidCacheType
+uid: '@azure/msal-common.ValidCacheType'
+package: '@azure/msal-common'
+summary: Object type of all accepted cache types
+fullName: ValidCacheType
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type ValidCacheType =
+    | AccountEntity
+    | IdTokenEntity
+    | AccessTokenEntity
+    | RefreshTokenEntity
+    | AppMetadataEntity
+    | AuthorityMetadataEntity
+    | ServerTelemetryEntity
+    | ThrottlingEntity
+    | string

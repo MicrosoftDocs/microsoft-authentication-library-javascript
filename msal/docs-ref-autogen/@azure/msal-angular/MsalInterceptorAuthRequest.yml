@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: MsalInterceptorAuthRequest
+uid: '@azure/msal-angular.MsalInterceptorAuthRequest'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MsalInterceptorAuthRequest
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type MsalInterceptorAuthRequest =
+    | Omit<PopupRequest, "scopes">
+    | Omit<RedirectRequest, "scopes">
+    | Omit<SilentRequest, "scopes">

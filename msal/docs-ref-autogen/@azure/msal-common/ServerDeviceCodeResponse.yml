@@ -1,0 +1,18 @@
+### YamlMime:TSTypeAlias
+name: ServerDeviceCodeResponse
+uid: '@azure/msal-common.ServerDeviceCodeResponse'
+package: '@azure/msal-common'
+summary: ''
+fullName: ServerDeviceCodeResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type ServerDeviceCodeResponse = {
+    device_code: string,
+    expires_in: number,
+    interval: number,
+    message: string,
+    user_code: string,
+    verification_uri: string,
+  }

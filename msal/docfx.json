@@ -1,0 +1,85 @@
+{
+  "build": {
+    "markdownEngineName": "markdig",
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "src": "docs-ref-autogen",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices",
+          "toc.yml"
+        ],
+        "version": "msal-js-latest",
+        "dest": "api"
+      },
+      {
+        "files": [
+          "**/*.yml"
+        ],
+        "src": "breadcrumb",
+        "dest": "api/microsoft-authentication-library-js/breadcrumb",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
+        "src": "docs-ref-autogen",
+        "dest": "api/microsoft-authentication-library-js",
+        "exclude": [],
+        "version": "msal-js-latest"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "overview",
+        "dest": "api/overview",
+        "exclude": [],
+        "version": "msal-js-latest"
+      },
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ],
+        "version": "msal-js-latest",
+        "dest": "api",
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "ms.topic": "reference",
+      "apiPlatform": "javascript",
+      "ms.author": "dmwendia",
+      "manager": "dmwendia",
+      "ms.service": "active-directory",
+      "searchScope": [],
+      "feedback_system": "GitHub",
+      "extendBreadcrumb": "true",
+      "breadcrumb_path": "/javascript/api/microsoft-authentication-library-js/breadcrumb/toc.json",
+      "toc_path": "/javascript/api/microsoft-authentication-library-js/toc.yml"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "_site"
+  }
+}

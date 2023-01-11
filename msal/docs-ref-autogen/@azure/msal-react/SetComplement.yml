@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: SetComplement
+uid: '@azure/msal-react.SetComplement'
+package: '@azure/msal-react'
+summary: ''
+fullName: 'SetComplement<A, A1>'
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type SetComplement<A, A1> = SetDifference<A, A1>

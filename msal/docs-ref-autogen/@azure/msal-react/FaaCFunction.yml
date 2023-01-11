@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: FaaCFunction
+uid: '@azure/msal-react.FaaCFunction'
+package: '@azure/msal-react'
+summary: ''
+fullName: FaaCFunction
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type FaaCFunction = (args: T) => React.ReactNode

@@ -1,0 +1,285 @@
+### YamlMime:TSType
+name: ApiEvent
+uid: '@azure/msal.ApiEvent'
+package: '@azure/msal'
+summary: ''
+fullName: ApiEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'ApiEvent(string, boolean, API_EVENT_IDENTIFIER)'
+    uid: '@azure/msal.ApiEvent.constructor'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new ApiEvent(correlationId: string, piiEnabled: boolean,
+        apiEventIdentifier?: API_EVENT_IDENTIFIER)
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+        - id: piiEnabled
+          type: boolean
+          description: ''
+        - id: apiEventIdentifier
+          type: <xref uid="@azure/msal.API_EVENT_IDENTIFIER" />
+          description: ''
+properties:
+  - name: accountId
+    uid: '@azure/msal.ApiEvent.accountId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: accountId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'accountId: string'
+      return:
+        description: ''
+        type: string
+  - name: apiCode
+    uid: '@azure/msal.ApiEvent.apiCode'
+    package: '@azure/msal'
+    summary: ''
+    fullName: apiCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'apiCode: number'
+      return:
+        description: ''
+        type: number
+  - name: apiErrorCode
+    uid: '@azure/msal.ApiEvent.apiErrorCode'
+    package: '@azure/msal'
+    summary: ''
+    fullName: apiErrorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'apiErrorCode: string'
+      return:
+        description: ''
+        type: string
+  - name: apiEventIdentifier
+    uid: '@azure/msal.ApiEvent.apiEventIdentifier'
+    package: '@azure/msal'
+    summary: ''
+    fullName: apiEventIdentifier
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'apiEventIdentifier: string'
+      return:
+        description: ''
+        type: string
+  - name: authority
+    uid: '@azure/msal.ApiEvent.authority'
+    package: '@azure/msal'
+    summary: ''
+    fullName: authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authority: string'
+      return:
+        description: ''
+        type: string
+  - name: authorityType
+    uid: '@azure/msal.ApiEvent.authorityType'
+    package: '@azure/msal'
+    summary: ''
+    fullName: authorityType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authorityType: string'
+      return:
+        description: ''
+        type: string
+  - name: loginHint
+    uid: '@azure/msal.ApiEvent.loginHint'
+    package: '@azure/msal'
+    summary: ''
+    fullName: loginHint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'loginHint: string'
+      return:
+        description: ''
+        type: string
+  - name: promptType
+    uid: '@azure/msal.ApiEvent.promptType'
+    package: '@azure/msal'
+    summary: ''
+    fullName: promptType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'promptType: string'
+      return:
+        description: ''
+        type: string
+  - name: tenantId
+    uid: '@azure/msal.ApiEvent.tenantId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: tenantId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'tenantId: string'
+      return:
+        description: ''
+        type: string
+  - name: wasSuccessful
+    uid: '@azure/msal.ApiEvent.wasSuccessful'
+    package: '@azure/msal'
+    summary: ''
+    fullName: wasSuccessful
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'wasSuccessful: boolean'
+      return:
+        description: ''
+        type: boolean
+inheritedProperties:
+  - name: displayName
+    uid: '@azure/msal.ApiEvent.displayName'
+    package: '@azure/msal'
+    summary: ''
+    fullName: displayName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.displayName](xref:@azure/msal.TelemetryEvent.displayName)
+  - name: eventId
+    uid: '@azure/msal.ApiEvent.eventId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: eventId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.eventId](xref:@azure/msal.TelemetryEvent.eventId)
+  - name: eventName
+    uid: '@azure/msal.ApiEvent.eventName'
+    package: '@azure/msal'
+    summary: ''
+    fullName: eventName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventName: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.eventName](xref:@azure/msal.TelemetryEvent.eventName)
+  - name: key
+    uid: '@azure/msal.ApiEvent.key'
+    package: '@azure/msal'
+    summary: ''
+    fullName: key
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'key: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.key](xref:@azure/msal.TelemetryEvent.key)
+  - name: telemetryCorrelationId
+    uid: '@azure/msal.ApiEvent.telemetryCorrelationId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: telemetryCorrelationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'telemetryCorrelationId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.telemetryCorrelationId](xref:@azure/msal.TelemetryEvent.telemetryCorrelationId)
+inheritedMethods:
+  - name: get()
+    uid: '@azure/msal.ApiEvent.get'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function get(): object'
+      return:
+        description: ''
+        type: object
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.get](xref:@azure/msal.TelemetryEvent.get)
+  - name: start()
+    uid: '@azure/msal.ApiEvent.start'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function start()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.start](xref:@azure/msal.TelemetryEvent.start)
+  - name: stop()
+    uid: '@azure/msal.ApiEvent.stop'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function stop()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.stop](xref:@azure/msal.TelemetryEvent.stop)
+extends: <xref uid="@azure/msal.TelemetryEvent" />

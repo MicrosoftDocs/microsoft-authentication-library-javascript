@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: NativeExtensionRequest
+uid: '@azure/msal-browser.NativeExtensionRequest'
+package: '@azure/msal-browser'
+summary: Browser extension request
+fullName: NativeExtensionRequest
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type NativeExtensionRequest = {
+    body: NativeExtensionRequestBody,
+    channel: string,
+    extensionId?: string,
+    responseId: number,
+  }

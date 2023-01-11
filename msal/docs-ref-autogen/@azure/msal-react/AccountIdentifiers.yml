@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: AccountIdentifiers
+uid: '@azure/msal-react.AccountIdentifiers'
+package: '@azure/msal-react'
+summary: ''
+fullName: AccountIdentifiers
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type AccountIdentifiers = Partial<
+    Pick<AccountInfo, "homeAccountId" | "localAccountId" | "username">
+  >

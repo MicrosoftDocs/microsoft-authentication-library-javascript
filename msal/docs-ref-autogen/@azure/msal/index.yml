@@ -1,0 +1,150 @@
+### YamlMime:TSPackage
+uid: '@azure/msal'
+name: '@azure/msal'
+summary: ''
+type: package
+classes:
+  - '@azure/msal.Account'
+  - '@azure/msal.Logger'
+  - '@azure/msal.ScopeSet'
+  - '@azure/msal.UserAgentApplication'
+  - '@azure/msal.AuthorityFactory'
+  - '@azure/msal.TrustedAuthority'
+  - '@azure/msal.AuthError'
+  - '@azure/msal.ClientAuthError'
+  - '@azure/msal.ClientConfigurationError'
+  - '@azure/msal.InteractionRequiredAuthError'
+  - '@azure/msal.ServerError'
+  - '@azure/msal.ApiEvent'
+  - '@azure/msal.DefaultEvent'
+  - '@azure/msal.HttpEvent'
+  - '@azure/msal.TelemetryEvent'
+  - '@azure/msal.TelemetryManager'
+  - '@azure/msal.WindowUtils'
+typeAliases:
+  - '@azure/msal.AuthResponse'
+  - '@azure/msal.AuthenticationParameters'
+  - '@azure/msal.AuthOptions'
+  - '@azure/msal.CacheLocation'
+  - '@azure/msal.CacheOptions'
+  - '@azure/msal.Configuration'
+  - '@azure/msal.FrameworkOptions'
+  - '@azure/msal.SystemOptions'
+  - '@azure/msal.TelemetryOptions'
+  - '@azure/msal.StringDict'
+  - '@azure/msal.authResponseCallback'
+  - '@azure/msal.errorReceivedCallback'
+  - '@azure/msal.tokenReceivedCallback'
+  - '@azure/msal.XhrResponse'
+  - '@azure/msal.OpenIdConfiguration'
+  - '@azure/msal.TelemetryEmitter'
+  - '@azure/msal.InteractionType'
+  - '@azure/msal.LibraryStateObject'
+functions:
+  - name: buildResponseStateOnly(string)
+    uid: '@azure/msal.buildResponseStateOnly'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function buildResponseStateOnly(state: string): AuthResponse'
+      parameters:
+        - id: state
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.AuthResponse" />
+  - name: validateClaimsRequest(AuthenticationParameters)
+    uid: '@azure/msal.validateClaimsRequest'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function validateClaimsRequest(request: AuthenticationParameters)'
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal.AuthenticationParameters" />
+          description: ''
+  - name: >-
+      buildConfiguration({ auth: { authority?: string, authorityMetadata?:
+      string, clientId: string, knownAuthorities?: Array<string>,
+      navigateToLoginRequestUrl?: boolean, postLogoutRedirectUri?: string | ()
+      => string, redirectUri?: string | () => string, validateAuthority?:
+      boolean }, cache: { cacheLocation?: CacheLocation,
+      storeAuthStateInCookie?: boolean }, framework: { isAngular?: boolean,
+      protectedResourceMap?: Map<string, Array<string>>, unprotectedResources?:
+      Array<string> }, system: { loadFrameTimeout?: number, logger?: Logger,
+      navigateFrameWait?: number, telemetry?: TelemetryOptions,
+      tokenRenewalOffsetSeconds?: number } })
+    uid: '@azure/msal.buildConfiguration'
+    package: '@azure/msal'
+    summary: >-
+      MSAL function that sets the default options when not explicitly configured
+      from app developer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildConfiguration(__namedParameters: { auth: { authority?:
+        string, authorityMetadata?: string, clientId: string, knownAuthorities?:
+        Array<string>, navigateToLoginRequestUrl?: boolean,
+        postLogoutRedirectUri?: string | () => string, redirectUri?: string | ()
+        => string, validateAuthority?: boolean }, cache: { cacheLocation?:
+        CacheLocation, storeAuthStateInCookie?: boolean }, framework: {
+        isAngular?: boolean, protectedResourceMap?: Map<string, Array<string>>,
+        unprotectedResources?: Array<string> }, system: { loadFrameTimeout?:
+        number, logger?: Logger, navigateFrameWait?: number, telemetry?:
+        TelemetryOptions, tokenRenewalOffsetSeconds?: number } }): Configuration
+      parameters:
+        - id: __namedParameters
+          type: >-
+            { auth: { authority?: string, authorityMetadata?: string, clientId:
+            string, knownAuthorities?: Array&lt;string&gt;,
+            navigateToLoginRequestUrl?: boolean, postLogoutRedirectUri?: string
+            | () =&gt; string, redirectUri?: string | () =&gt; string,
+            validateAuthority?: boolean }, cache: { cacheLocation?:
+            CacheLocation, storeAuthStateInCookie?: boolean }, framework: {
+            isAngular?: boolean, protectedResourceMap?: Map&lt;string,
+            Array&lt;string&gt;&gt;, unprotectedResources?: Array&lt;string&gt;
+            }, system: { loadFrameTimeout?: number, logger?: Logger,
+            navigateFrameWait?: number, telemetry?: TelemetryOptions,
+            tokenRenewalOffsetSeconds?: number } }
+          description: ''
+      return:
+        description: TConfiguration object
+        type: <xref uid="@azure/msal.Configuration" />
+  - name: libraryVersion()
+    uid: '@azure/msal.libraryVersion'
+    package: '@azure/msal'
+    summary: MSAL JS Library Version
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function libraryVersion(): string'
+      return:
+        description: ''
+        type: string
+enums:
+  - '@azure/msal.LogLevel'
+  - '@azure/msal.API_CODE'
+  - '@azure/msal.API_EVENT_IDENTIFIER'
+  - '@azure/msal.ErrorCacheKeys'
+  - '@azure/msal.PersistentCacheKeys'
+  - '@azure/msal.ServerHashParamKeys'
+interfaces:
+  - '@azure/msal.ILoggerCallback'
+  - '@azure/msal.IClientConfigurationErrorMessage'
+  - '@azure/msal.CompletedEvents'
+  - '@azure/msal.EventCount'
+  - '@azure/msal.EventCountByCorrelationId'
+  - '@azure/msal.InProgressEvents'
+  - '@azure/msal.NetworkInformation'
+  - '@azure/msal.TelemetryConfig'
+  - '@azure/msal.TelemetryPlatform'

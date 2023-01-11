@@ -1,0 +1,52 @@
+### YamlMime:TSType
+name: BrowserProtocolUtils
+uid: '@azure/msal-browser.BrowserProtocolUtils'
+package: '@azure/msal-browser'
+summary: ''
+fullName: BrowserProtocolUtils
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'extractBrowserRequestState(ICrypto, string)'
+    uid: '@azure/msal-browser.BrowserProtocolUtils.extractBrowserRequestState'
+    package: '@azure/msal-browser'
+    summary: Extracts the BrowserStateObject from the state string.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function extractBrowserRequestState(browserCrypto: ICrypto,
+        state: string): BrowserStateObject | null
+      parameters:
+        - id: browserCrypto
+          type: ICrypto
+          description: ''
+        - id: state
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserStateObject" /> | null
+  - name: parseServerResponseFromHash(string)
+    uid: '@azure/msal-browser.BrowserProtocolUtils.parseServerResponseFromHash'
+    package: '@azure/msal-browser'
+    summary: Parses properties of server response from url hash
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function parseServerResponseFromHash(locationHash: string):
+        ServerAuthorizationCodeResponse
+      parameters:
+        - id: locationHash
+          type: string
+          description: |
+            Hash from url
+      return:
+        description: ''
+        type: ServerAuthorizationCodeResponse

@@ -1,0 +1,81 @@
+### YamlMime:TSType
+name: ProtocolUtils
+uid: '@azure/msal-common.ProtocolUtils'
+package: '@azure/msal-common'
+summary: Class which provides helpers for OAuth 2.0 protocol specific values
+fullName: ProtocolUtils
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'generateLibraryState(ICrypto, Record<string, string>)'
+    uid: '@azure/msal-common.ProtocolUtils.generateLibraryState'
+    package: '@azure/msal-common'
+    summary: Generates the state value used by the common library.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function generateLibraryState(cryptoObj: ICrypto, meta?:
+        Record<string, string>): string
+      parameters:
+        - id: cryptoObj
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: |+
+
+        - id: meta
+          type: 'Record&lt;string, string&gt;'
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: 'parseRequestState(ICrypto, string)'
+    uid: '@azure/msal-common.ProtocolUtils.parseRequestState'
+    package: '@azure/msal-common'
+    summary: >-
+      Parses the state into the RequestStateObject, which contains the
+      LibraryState info and the state passed by the user.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function parseRequestState(cryptoObj: ICrypto, state: string):
+        RequestStateObject
+      parameters:
+        - id: cryptoObj
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: |+
+
+        - id: state
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.RequestStateObject" />
+  - name: 'setRequestState(ICrypto, string, Record<string, string>)'
+    uid: '@azure/msal-common.ProtocolUtils.setRequestState'
+    package: '@azure/msal-common'
+    summary: 'Appends user state with random guid, or returns random guid.'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function setRequestState(cryptoObj: ICrypto, userState?: string,
+        meta?: Record<string, string>): string
+      parameters:
+        - id: cryptoObj
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: ''
+        - id: userState
+          type: string
+          description: ''
+        - id: meta
+          type: 'Record&lt;string, string&gt;'
+          description: ''
+      return:
+        description: ''
+        type: string

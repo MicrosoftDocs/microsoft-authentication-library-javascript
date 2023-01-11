@@ -1,0 +1,66 @@
+### YamlMime:TSEnum
+name: TemporaryCacheKeys
+uid: '@azure/msal-browser.TemporaryCacheKeys'
+package: '@azure/msal-browser'
+summary: 'Temporary cache keys for MSAL, deleted after any request.'
+fullName: TemporaryCacheKeys
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ACQUIRE_TOKEN_ACCOUNT
+    uid: '@azure/msal-browser.TemporaryCacheKeys.ACQUIRE_TOKEN_ACCOUNT'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: AUTHORITY
+    uid: '@azure/msal-browser.TemporaryCacheKeys.AUTHORITY'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: CCS_CREDENTIAL
+    uid: '@azure/msal-browser.TemporaryCacheKeys.CCS_CREDENTIAL'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: CORRELATION_ID
+    uid: '@azure/msal-browser.TemporaryCacheKeys.CORRELATION_ID'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: INTERACTION_STATUS_KEY
+    uid: '@azure/msal-browser.TemporaryCacheKeys.INTERACTION_STATUS_KEY'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: NATIVE_REQUEST
+    uid: '@azure/msal-browser.TemporaryCacheKeys.NATIVE_REQUEST'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: NONCE_IDTOKEN
+    uid: '@azure/msal-browser.TemporaryCacheKeys.NONCE_IDTOKEN'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: ORIGIN_URI
+    uid: '@azure/msal-browser.TemporaryCacheKeys.ORIGIN_URI'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: RENEW_STATUS
+    uid: '@azure/msal-browser.TemporaryCacheKeys.RENEW_STATUS'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: REQUEST_PARAMS
+    uid: '@azure/msal-browser.TemporaryCacheKeys.REQUEST_PARAMS'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: REQUEST_STATE
+    uid: '@azure/msal-browser.TemporaryCacheKeys.REQUEST_STATE'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: SCOPES
+    uid: '@azure/msal-browser.TemporaryCacheKeys.SCOPES'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: SESSION_STATE
+    uid: '@azure/msal-browser.TemporaryCacheKeys.SESSION_STATE'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: URL_HASH
+    uid: '@azure/msal-browser.TemporaryCacheKeys.URL_HASH'
+    package: '@azure/msal-browser'
+    summary: ''

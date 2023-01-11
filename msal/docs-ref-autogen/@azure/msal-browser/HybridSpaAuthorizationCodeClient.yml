@@ -1,0 +1,184 @@
+### YamlMime:TSType
+name: HybridSpaAuthorizationCodeClient
+uid: '@azure/msal-browser.HybridSpaAuthorizationCodeClient'
+package: '@azure/msal-browser'
+summary: ''
+fullName: HybridSpaAuthorizationCodeClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: HybridSpaAuthorizationCodeClient(ClientConfiguration)
+    uid: '@azure/msal-browser.HybridSpaAuthorizationCodeClient.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new HybridSpaAuthorizationCodeClient(config: ClientConfiguration)'
+      parameters:
+        - id: config
+          type: ClientConfiguration
+          description: ''
+inheritedProperties:
+  - name: authority
+    uid: '@azure/msal-browser.HybridSpaAuthorizationCodeClient.authority'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authority: Authority'
+      return:
+        description: ''
+        type: Authority
+    inheritanceDescription: <b>Inherited From</b> BaseClient.authority
+  - name: logger
+    uid: '@azure/msal-browser.HybridSpaAuthorizationCodeClient.logger'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: logger
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'logger: Logger'
+      return:
+        description: ''
+        type: Logger
+    inheritanceDescription: <b>Inherited From</b> BaseClient.logger
+inheritedMethods:
+  - name: 'acquireToken(CommonAuthorizationCodeRequest, AuthorizationCodePayload)'
+    uid: '@azure/msal-browser.HybridSpaAuthorizationCodeClient.acquireToken'
+    package: '@azure/msal-browser'
+    summary: >-
+      API to acquire a token in exchange of 'authorization_code` acquired by the
+      user in the first leg of the
+
+      authorization_code_grant
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireToken(request: CommonAuthorizationCodeRequest,
+        authCodePayload?: AuthorizationCodePayload):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: CommonAuthorizationCodeRequest
+          description: |+
+
+        - id: authCodePayload
+          type: AuthorizationCodePayload
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult&gt;
+    inheritanceDescription: <b>Inherited From</b> AuthorizationCodeClient.acquireToken
+  - name: getAuthCodeUrl(CommonAuthorizationUrlRequest)
+    uid: '@azure/msal-browser.HybridSpaAuthorizationCodeClient.getAuthCodeUrl'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates the URL of the authorization request letting the user input
+      credentials and consent to the
+
+      application. The URL target the /authorize endpoint of the authority
+      configured in the
+
+      application object.
+
+      Once the user inputs their credentials and consents, the authority will
+      send a response to the redirect URI
+
+      sent in the request and should contain an authorization code, which can
+      then be used to acquire tokens via
+
+      acquireToken(AuthorizationCodeRequest)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAuthCodeUrl(request: CommonAuthorizationUrlRequest):
+        Promise<string>
+      parameters:
+        - id: request
+          type: CommonAuthorizationUrlRequest
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+    inheritanceDescription: <b>Inherited From</b> AuthorizationCodeClient.getAuthCodeUrl
+  - name: getLogoutUri(CommonEndSessionRequest)
+    uid: '@azure/msal-browser.HybridSpaAuthorizationCodeClient.getLogoutUri'
+    package: '@azure/msal-browser'
+    summary: >-
+      Used to log out the current user, and redirect the user to the
+      postLogoutRedirectUri.
+
+      Default behaviour is to redirect the user to `window.location.href`.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getLogoutUri(logoutRequest: CommonEndSessionRequest): string'
+      parameters:
+        - id: logoutRequest
+          type: CommonEndSessionRequest
+          description: ''
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> AuthorizationCodeClient.getLogoutUri
+  - name: 'handleFragmentResponse(string, string)'
+    uid: >-
+      @azure/msal-browser.HybridSpaAuthorizationCodeClient.handleFragmentResponse
+    package: '@azure/msal-browser'
+    summary: >-
+      Handles the hash fragment response from public client code request.
+      Returns a code response used by
+
+      the client to exchange for a token in acquireToken.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleFragmentResponse(hashFragment: string, cachedState:
+        string): AuthorizationCodePayload
+      parameters:
+        - id: hashFragment
+          type: string
+          description: |+
+
+        - id: cachedState
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: AuthorizationCodePayload
+    inheritanceDescription: <b>Inherited From</b> AuthorizationCodeClient.handleFragmentResponse
+  - name: updateAuthority(Authority)
+    uid: '@azure/msal-browser.HybridSpaAuthorizationCodeClient.updateAuthority'
+    package: '@azure/msal-browser'
+    summary: >-
+      Updates the authority object of the client. Endpoint discovery must be
+      completed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function updateAuthority(updatedAuthority: Authority)'
+      parameters:
+        - id: updatedAuthority
+          type: Authority
+          description: |+
+
+    inheritanceDescription: <b>Inherited From</b> BaseClient.updateAuthority
+extends: AuthorizationCodeClient

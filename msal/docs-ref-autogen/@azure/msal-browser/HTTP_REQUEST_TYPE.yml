@@ -1,0 +1,18 @@
+### YamlMime:TSEnum
+name: HTTP_REQUEST_TYPE
+uid: '@azure/msal-browser.HTTP_REQUEST_TYPE'
+package: '@azure/msal-browser'
+summary: HTTP Request types supported by MSAL.
+fullName: HTTP_REQUEST_TYPE
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: GET
+    uid: '@azure/msal-browser.HTTP_REQUEST_TYPE.GET'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: POST
+    uid: '@azure/msal-browser.HTTP_REQUEST_TYPE.POST'
+    package: '@azure/msal-browser'
+    summary: ''

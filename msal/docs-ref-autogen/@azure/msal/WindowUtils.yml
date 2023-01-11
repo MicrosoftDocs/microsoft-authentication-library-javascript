@@ -1,0 +1,34 @@
+### YamlMime:TSType
+name: WindowUtils
+uid: '@azure/msal.WindowUtils'
+package: '@azure/msal'
+summary: ''
+fullName: WindowUtils
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: checkIfBackButtonIsPressed(AuthCache)
+    uid: '@azure/msal.WindowUtils.checkIfBackButtonIsPressed'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function checkIfBackButtonIsPressed(cacheStorage: AuthCache)'
+      parameters:
+        - id: cacheStorage
+          type: AuthCache
+          description: |+
+
+  - name: clearUrlFragment()
+    uid: '@azure/msal.WindowUtils.clearUrlFragment'
+    package: '@azure/msal'
+    summary: Removes url fragment from browser url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: static function clearUrlFragment()

@@ -1,0 +1,18 @@
+### YamlMime:TSEnum
+name: WrapperSKU
+uid: '@azure/msal-browser.WrapperSKU'
+package: '@azure/msal-browser'
+summary: ''
+fullName: WrapperSKU
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: Angular
+    uid: '@azure/msal-browser.WrapperSKU.Angular'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: React
+    uid: '@azure/msal-browser.WrapperSKU.React'
+    package: '@azure/msal-browser'
+    summary: ''

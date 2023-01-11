@@ -1,0 +1,32 @@
+### YamlMime:TSTypeAlias
+name: PerformanceEvent
+uid: '@azure/msal-common.PerformanceEvent'
+package: '@azure/msal-common'
+summary: >-
+  Performance measurement taken by the library, including metadata about the
+  request and application.
+fullName: PerformanceEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type PerformanceEvent = StaticFields & {
+    authority: string,
+    clientId: string,
+    correlationId: string,
+    durationMs?: number,
+    endPageVisibility?: string | null,
+    errorCode?: string,
+    eventId: string,
+    fromCache?: boolean | null,
+    isNativeBroker?: boolean,
+    libraryName: string,
+    libraryVersion: string,
+    name: PerformanceEvents,
+    requestId?: string,
+    startPageVisibility?: string | null,
+    startTimeMs: number,
+    status: PerformanceEventStatus,
+    subErrorCode?: string,
+    success?: boolean | null,
+  }

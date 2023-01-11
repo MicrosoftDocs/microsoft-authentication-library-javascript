@@ -1,0 +1,46 @@
+### YamlMime:TSEnum
+name: ServerHashParamKeys
+uid: '@azure/msal.ServerHashParamKeys'
+package: '@azure/msal'
+summary: Keys in the hashParams
+fullName: ServerHashParamKeys
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ACCESS_TOKEN
+    uid: '@azure/msal.ServerHashParamKeys.ACCESS_TOKEN'
+    package: '@azure/msal'
+    summary: ''
+  - name: CLIENT_INFO
+    uid: '@azure/msal.ServerHashParamKeys.CLIENT_INFO'
+    package: '@azure/msal'
+    summary: ''
+  - name: ERROR
+    uid: '@azure/msal.ServerHashParamKeys.ERROR'
+    package: '@azure/msal'
+    summary: ''
+  - name: ERROR_DESCRIPTION
+    uid: '@azure/msal.ServerHashParamKeys.ERROR_DESCRIPTION'
+    package: '@azure/msal'
+    summary: ''
+  - name: EXPIRES_IN
+    uid: '@azure/msal.ServerHashParamKeys.EXPIRES_IN'
+    package: '@azure/msal'
+    summary: ''
+  - name: ID_TOKEN
+    uid: '@azure/msal.ServerHashParamKeys.ID_TOKEN'
+    package: '@azure/msal'
+    summary: ''
+  - name: SCOPE
+    uid: '@azure/msal.ServerHashParamKeys.SCOPE'
+    package: '@azure/msal'
+    summary: ''
+  - name: SESSION_STATE
+    uid: '@azure/msal.ServerHashParamKeys.SESSION_STATE'
+    package: '@azure/msal'
+    summary: ''
+  - name: STATE
+    uid: '@azure/msal.ServerHashParamKeys.STATE'
+    package: '@azure/msal'
+    summary: ''

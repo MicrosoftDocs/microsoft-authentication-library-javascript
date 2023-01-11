@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: Subtract
+uid: '@azure/msal-react.Subtract'
+package: '@azure/msal-react'
+summary: ''
+fullName: 'Subtract<T, T1>'
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type Subtract<T, T1> = Pick<T, SetComplement<Object, Object>>

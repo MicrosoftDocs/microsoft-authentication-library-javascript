@@ -1,0 +1,18 @@
+### YamlMime:TSEnum
+name: ProtocolMode
+uid: '@azure/msal-common.ProtocolMode'
+package: '@azure/msal-common'
+summary: Protocol modes supported by MSAL.
+fullName: ProtocolMode
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: AAD
+    uid: '@azure/msal-common.ProtocolMode.AAD'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: OIDC
+    uid: '@azure/msal-common.ProtocolMode.OIDC'
+    package: '@azure/msal-common'
+    summary: ''

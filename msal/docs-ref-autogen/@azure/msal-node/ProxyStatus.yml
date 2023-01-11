@@ -1,0 +1,25 @@
+### YamlMime:TSEnum
+name: ProxyStatus
+uid: '@azure/msal-node.ProxyStatus'
+package: '@azure/msal-node'
+summary: ''
+fullName: ProxyStatus
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: SUCCESS_RANGE_START
+    uid: '@azure/msal-node.ProxyStatus.SUCCESS_RANGE_START'
+    package: '@azure/msal-node'
+    summary: ''
+    numericValue: 200
+  - name: SUCCESS_RANGE_END
+    uid: '@azure/msal-node.ProxyStatus.SUCCESS_RANGE_END'
+    package: '@azure/msal-node'
+    summary: ''
+    numericValue: 299
+  - name: SERVER_ERROR
+    uid: '@azure/msal-node.ProxyStatus.SERVER_ERROR'
+    package: '@azure/msal-node'
+    summary: ''
+    numericValue: 500

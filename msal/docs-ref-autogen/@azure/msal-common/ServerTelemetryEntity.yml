@@ -1,0 +1,83 @@
+### YamlMime:TSType
+name: ServerTelemetryEntity
+uid: '@azure/msal-common.ServerTelemetryEntity'
+package: '@azure/msal-common'
+summary: ''
+fullName: ServerTelemetryEntity
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: ServerTelemetryEntity()
+    uid: '@azure/msal-common.ServerTelemetryEntity.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: new ServerTelemetryEntity()
+properties:
+  - name: cacheHits
+    uid: '@azure/msal-common.ServerTelemetryEntity.cacheHits'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: cacheHits
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'cacheHits: number'
+      return:
+        description: ''
+        type: number
+  - name: errors
+    uid: '@azure/msal-common.ServerTelemetryEntity.errors'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: errors
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errors: string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: failedRequests
+    uid: '@azure/msal-common.ServerTelemetryEntity.failedRequests'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: failedRequests
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'failedRequests: Array<string | number>'
+      return:
+        description: ''
+        type: Array&lt;string | number&gt;
+methods:
+  - name: 'isServerTelemetryEntity(string, object)'
+    uid: '@azure/msal-common.ServerTelemetryEntity.isServerTelemetryEntity'
+    package: '@azure/msal-common'
+    summary: 'validates if a given cache entry is "Telemetry", parses <key,value>'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function isServerTelemetryEntity(key: string, entity?: object):
+        boolean
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: entity
+          type: object
+          description: |+
+
+      return:
+        description: ''
+        type: boolean

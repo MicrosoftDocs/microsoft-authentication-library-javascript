@@ -1,0 +1,62 @@
+### YamlMime:TSType
+name: MsalBroadcastService
+uid: '@azure/msal-angular.MsalBroadcastService'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MsalBroadcastService
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      MsalBroadcastService(IPublicClientApplication, MsalService,
+      MsalBroadcastConfiguration)
+    uid: '@azure/msal-angular.MsalBroadcastService.constructor'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new MsalBroadcastService(msalInstance: IPublicClientApplication,
+        authService: MsalService, msalBroadcastConfig?:
+        MsalBroadcastConfiguration)
+      parameters:
+        - id: msalInstance
+          type: IPublicClientApplication
+          description: ''
+        - id: authService
+          type: <xref uid="@azure/msal-angular.MsalService" />
+          description: ''
+        - id: msalBroadcastConfig
+          type: <xref uid="@azure/msal-angular.MsalBroadcastConfiguration" />
+          description: ''
+properties:
+  - name: inProgress$
+    uid: '@azure/msal-angular.MsalBroadcastService.inProgress$'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: inProgress$
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'inProgress$: Observable<InteractionStatus>'
+      return:
+        description: ''
+        type: Observable&lt;InteractionStatus&gt;
+  - name: msalSubject$
+    uid: '@azure/msal-angular.MsalBroadcastService.msalSubject$'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: msalSubject$
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'msalSubject$: Observable<EventMessage>'
+      return:
+        description: ''
+        type: Observable&lt;EventMessage&gt;

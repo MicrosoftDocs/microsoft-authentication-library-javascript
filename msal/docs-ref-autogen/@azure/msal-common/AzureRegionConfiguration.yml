@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: AzureRegionConfiguration
+uid: '@azure/msal-common.AzureRegionConfiguration'
+package: '@azure/msal-common'
+summary: ''
+fullName: AzureRegionConfiguration
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type AzureRegionConfiguration = {
+    azureRegion?: AzureRegion,
+    environmentRegion: string | undefined,
+  }

@@ -1,0 +1,41 @@
+### YamlMime:TSType
+name: StubPerformanceMeasurement
+uid: '@azure/msal-common.StubPerformanceMeasurement'
+package: '@azure/msal-common'
+summary: ''
+fullName: StubPerformanceMeasurement
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: endMeasurement()
+    uid: '@azure/msal-common.StubPerformanceMeasurement.endMeasurement'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function endMeasurement()
+  - name: flushMeasurement()
+    uid: '@azure/msal-common.StubPerformanceMeasurement.flushMeasurement'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function flushMeasurement(): number | null'
+      return:
+        description: ''
+        type: number | null
+  - name: startMeasurement()
+    uid: '@azure/msal-common.StubPerformanceMeasurement.startMeasurement'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function startMeasurement()

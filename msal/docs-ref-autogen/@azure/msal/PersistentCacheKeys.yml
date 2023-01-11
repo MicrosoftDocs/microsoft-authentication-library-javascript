@@ -1,0 +1,18 @@
+### YamlMime:TSEnum
+name: PersistentCacheKeys
+uid: '@azure/msal.PersistentCacheKeys'
+package: '@azure/msal'
+summary: ''
+fullName: PersistentCacheKeys
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: CLIENT_INFO
+    uid: '@azure/msal.PersistentCacheKeys.CLIENT_INFO'
+    package: '@azure/msal'
+    summary: ''
+  - name: IDTOKEN
+    uid: '@azure/msal.PersistentCacheKeys.IDTOKEN'
+    package: '@azure/msal'
+    summary: ''

@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: AuthOptions
+uid: '@azure/msal.AuthOptions'
+package: '@azure/msal'
+summary: ''
+fullName: AuthOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type AuthOptions = {
+    authority?: string,
+    authorityMetadata?: string,
+    clientId: string,
+    knownAuthorities?: Array<string>,
+    navigateToLoginRequestUrl?: boolean,
+    postLogoutRedirectUri?: string | (() => string),
+    redirectUri?: string | (() => string),
+    validateAuthority?: boolean,
+  }

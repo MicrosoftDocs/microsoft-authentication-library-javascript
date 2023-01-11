@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: InProgressPerformanceEvent
+uid: '@azure/msal-common.InProgressPerformanceEvent'
+package: '@azure/msal-common'
+summary: ''
+fullName: InProgressPerformanceEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type InProgressPerformanceEvent = {
+    addStaticFields: (staticFields: StaticFields) => void,
+    discardMeasurement: () => void,
+    endMeasurement: (
+      event?: Partial<PerformanceEvent>
+    ) => PerformanceEvent | null,
+    event: PerformanceEvent,
+    flushMeasurement: () => void,
+    measurement: IPerformanceMeasurement,
+  }

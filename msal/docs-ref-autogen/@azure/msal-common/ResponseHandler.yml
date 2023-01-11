@@ -1,0 +1,189 @@
+### YamlMime:TSType
+name: ResponseHandler
+uid: '@azure/msal-common.ResponseHandler'
+package: '@azure/msal-common'
+summary: Class that handles response parsing.
+fullName: ResponseHandler
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      ResponseHandler(string, CacheManager, ICrypto, Logger,
+      ISerializableTokenCache | null, ICachePlugin | null)
+    uid: '@azure/msal-common.ResponseHandler.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new ResponseHandler(clientId: string, cacheStorage: CacheManager,
+        cryptoObj: ICrypto, logger: Logger, serializableCache:
+        ISerializableTokenCache | null, persistencePlugin: ICachePlugin | null)
+      parameters:
+        - id: clientId
+          type: string
+          description: ''
+        - id: cacheStorage
+          type: <xref uid="@azure/msal-common.CacheManager" />
+          description: ''
+        - id: cryptoObj
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
+        - id: serializableCache
+          type: <xref uid="@azure/msal-common.ISerializableTokenCache" /> | null
+          description: ''
+        - id: persistencePlugin
+          type: <xref uid="@azure/msal-common.ICachePlugin" /> | null
+          description: ''
+methods:
+  - name: >-
+      generateAuthenticationResult(ICrypto, Authority, CacheRecord, boolean,
+      BaseAuthRequest, AuthToken, RequestStateObject, string, string)
+    uid: '@azure/msal-common.ResponseHandler.generateAuthenticationResult'
+    package: '@azure/msal-common'
+    summary: >
+      Creates an @AuthenticationResult from @CacheRecord , @IdToken , and a
+      boolean that states whether or not the result is from cache.
+
+      Optionally takes a state string that is set as-is in the response.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function generateAuthenticationResult(cryptoObj: ICrypto,
+        authority: Authority, cacheRecord: CacheRecord, fromTokenCache: boolean,
+        request: BaseAuthRequest, idTokenObj?: AuthToken, requestState?:
+        RequestStateObject, code?: string, requestId?: string):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: cryptoObj
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: ''
+        - id: authority
+          type: <xref uid="@azure/msal-common.Authority" />
+          description: ''
+        - id: cacheRecord
+          type: <xref uid="@azure/msal-common.CacheRecord" />
+          description: ''
+        - id: fromTokenCache
+          type: boolean
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
+          description: ''
+        - id: idTokenObj
+          type: <xref uid="@azure/msal-common.AuthToken" />
+          description: ''
+        - id: requestState
+          type: <xref uid="@azure/msal-common.RequestStateObject" />
+          description: ''
+        - id: code
+          type: string
+          description: ''
+        - id: requestId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-common.AuthenticationResult" />&gt;
+  - name: >-
+      handleServerTokenResponse(ServerAuthorizationTokenResponse, Authority,
+      number, BaseAuthRequest, AuthorizationCodePayload, string, boolean,
+      boolean, string)
+    uid: '@azure/msal-common.ResponseHandler.handleServerTokenResponse'
+    package: '@azure/msal-common'
+    summary: >-
+      Returns a constructed token response based on given string. Also manages
+      the cache updates and cleanups.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleServerTokenResponse(serverTokenResponse:
+        ServerAuthorizationTokenResponse, authority: Authority, reqTimestamp:
+        number, request: BaseAuthRequest, authCodePayload?:
+        AuthorizationCodePayload, userAssertionHash?: string,
+        handlingRefreshTokenResponse?: boolean, forceCacheRefreshTokenResponse?:
+        boolean, serverRequestId?: string): Promise<AuthenticationResult>
+      parameters:
+        - id: serverTokenResponse
+          type: <xref uid="@azure/msal-common.ServerAuthorizationTokenResponse" />
+          description: ''
+        - id: authority
+          type: <xref uid="@azure/msal-common.Authority" />
+          description: |+
+
+        - id: reqTimestamp
+          type: number
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
+          description: ''
+        - id: authCodePayload
+          type: <xref uid="@azure/msal-common.AuthorizationCodePayload" />
+          description: ''
+        - id: userAssertionHash
+          type: string
+          description: ''
+        - id: handlingRefreshTokenResponse
+          type: boolean
+          description: ''
+        - id: forceCacheRefreshTokenResponse
+          type: boolean
+          description: ''
+        - id: serverRequestId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-common.AuthenticationResult" />&gt;
+  - name: >-
+      validateServerAuthorizationCodeResponse(ServerAuthorizationCodeResponse,
+      string, ICrypto)
+    uid: '@azure/msal-common.ResponseHandler.validateServerAuthorizationCodeResponse'
+    package: '@azure/msal-common'
+    summary: Function which validates server authorization code response.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function validateServerAuthorizationCodeResponse(serverResponseHash:
+        ServerAuthorizationCodeResponse, cachedState: string, cryptoObj:
+        ICrypto)
+      parameters:
+        - id: serverResponseHash
+          type: <xref uid="@azure/msal-common.ServerAuthorizationCodeResponse" />
+          description: ''
+        - id: cachedState
+          type: string
+          description: ''
+        - id: cryptoObj
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: |+
+
+  - name: validateTokenResponse(ServerAuthorizationTokenResponse)
+    uid: '@azure/msal-common.ResponseHandler.validateTokenResponse'
+    package: '@azure/msal-common'
+    summary: Function which validates server authorization token response.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function validateTokenResponse(serverResponse:
+        ServerAuthorizationTokenResponse)
+      parameters:
+        - id: serverResponse
+          type: <xref uid="@azure/msal-common.ServerAuthorizationTokenResponse" />
+          description: |+
+

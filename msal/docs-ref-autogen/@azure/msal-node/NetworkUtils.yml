@@ -1,0 +1,35 @@
+### YamlMime:TSType
+name: NetworkUtils
+uid: '@azure/msal-node.NetworkUtils'
+package: '@azure/msal-node'
+summary: ''
+fullName: NetworkUtils
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'getNetworkResponse<T>(Record<string, string>, T, number)'
+    uid: '@azure/msal-node.NetworkUtils.getNetworkResponse'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getNetworkResponse<T>(headers: Record<string, string>,
+        body: T, statusCode: number): NetworkResponse<T>
+      parameters:
+        - id: headers
+          type: 'Record&lt;string, string&gt;'
+          description: ''
+        - id: body
+          type: T
+          description: ''
+        - id: statusCode
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: NetworkResponse&lt;T&gt;

@@ -1,0 +1,55 @@
+### YamlMime:TSEnum
+name: CacheType
+uid: '@azure/msal-common.CacheType'
+package: '@azure/msal-common'
+summary: Combine all cache types
+fullName: CacheType
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ADFS
+    uid: '@azure/msal-common.CacheType.ADFS'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 1001
+  - name: MSA
+    uid: '@azure/msal-common.CacheType.MSA'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 1002
+  - name: MSSTS
+    uid: '@azure/msal-common.CacheType.MSSTS'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 1003
+  - name: GENERIC
+    uid: '@azure/msal-common.CacheType.GENERIC'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 1004
+  - name: ACCESS_TOKEN
+    uid: '@azure/msal-common.CacheType.ACCESS_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 2001
+  - name: REFRESH_TOKEN
+    uid: '@azure/msal-common.CacheType.REFRESH_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 2002
+  - name: ID_TOKEN
+    uid: '@azure/msal-common.CacheType.ID_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 2003
+  - name: APP_METADATA
+    uid: '@azure/msal-common.CacheType.APP_METADATA'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 3001
+  - name: UNDEFINED
+    uid: '@azure/msal-common.CacheType.UNDEFINED'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 9999

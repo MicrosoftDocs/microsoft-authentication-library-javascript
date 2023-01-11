@@ -1,0 +1,104 @@
+### YamlMime:TSType
+name: DeviceCodeClient
+uid: '@azure/msal-common.DeviceCodeClient'
+package: '@azure/msal-common'
+summary: OAuth2.0 Device code client
+fullName: DeviceCodeClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: DeviceCodeClient(ClientConfiguration)
+    uid: '@azure/msal-common.DeviceCodeClient.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new DeviceCodeClient(configuration: ClientConfiguration)'
+      parameters:
+        - id: configuration
+          type: <xref uid="@azure/msal-common.ClientConfiguration" />
+          description: ''
+inheritedProperties:
+  - name: authority
+    uid: '@azure/msal-common.DeviceCodeClient.authority'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authority: Authority'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Authority" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.authority](xref:@azure/msal-common.BaseClient.authority)
+  - name: logger
+    uid: '@azure/msal-common.DeviceCodeClient.logger'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: logger
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'logger: Logger'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Logger" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.logger](xref:@azure/msal-common.BaseClient.logger)
+inheritedMethods:
+  - name: updateAuthority(Authority)
+    uid: '@azure/msal-common.DeviceCodeClient.updateAuthority'
+    package: '@azure/msal-common'
+    summary: >-
+      Updates the authority object of the client. Endpoint discovery must be
+      completed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function updateAuthority(updatedAuthority: Authority)'
+      parameters:
+        - id: updatedAuthority
+          type: <xref uid="@azure/msal-common.Authority" />
+          description: |+
+
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.updateAuthority](xref:@azure/msal-common.BaseClient.updateAuthority)
+methods:
+  - name: acquireToken(CommonDeviceCodeRequest)
+    uid: '@azure/msal-common.DeviceCodeClient.acquireToken'
+    package: '@azure/msal-common'
+    summary: >-
+      Gets device code from device code endpoint, calls back to with device code
+      response, and
+
+      polls token endpoint to exchange device code for tokens
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireToken(request: CommonDeviceCodeRequest):
+        Promise<AuthenticationResult | null>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.CommonDeviceCodeRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-common.AuthenticationResult" /> |
+          null&gt;
+extends: <xref uid="@azure/msal-common.BaseClient" />

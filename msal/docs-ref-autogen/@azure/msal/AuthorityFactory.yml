@@ -1,0 +1,100 @@
+### YamlMime:TSType
+name: AuthorityFactory
+uid: '@azure/msal.AuthorityFactory'
+package: '@azure/msal'
+summary: ''
+fullName: AuthorityFactory
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'CreateInstance(string, boolean, string)'
+    uid: '@azure/msal.AuthorityFactory.CreateInstance'
+    package: '@azure/msal'
+    summary: >-
+      Create an authority object of the correct type based on the url
+
+      Performs basic authority validation - checks to see if the authority is of
+      a valid type (eg aad, b2c)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function CreateInstance(authorityUrl: string, validateAuthority:
+        boolean, authorityMetadata?: string): Authority
+      parameters:
+        - id: authorityUrl
+          type: string
+          description: ''
+        - id: validateAuthority
+          type: boolean
+          description: ''
+        - id: authorityMetadata
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Authority
+  - name: getMetadata(string)
+    uid: '@azure/msal.AuthorityFactory.getMetadata'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getMetadata(authorityUrl: string):
+        ITenantDiscoveryResponse
+      parameters:
+        - id: authorityUrl
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: ITenantDiscoveryResponse
+  - name: 'saveMetadataFromConfig(string, string)'
+    uid: '@azure/msal.AuthorityFactory.saveMetadataFromConfig'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function saveMetadataFromConfig(authorityUrl: string,
+        authorityMetadataJson: string)
+      parameters:
+        - id: authorityUrl
+          type: string
+          description: ''
+        - id: authorityMetadataJson
+          type: string
+          description: ''
+  - name: 'saveMetadataFromNetwork(Authority, TelemetryManager, string)'
+    uid: '@azure/msal.AuthorityFactory.saveMetadataFromNetwork'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function saveMetadataFromNetwork(authorityInstance: Authority,
+        telemetryManager: TelemetryManager, correlationId: string):
+        Promise<ITenantDiscoveryResponse>
+      parameters:
+        - id: authorityInstance
+          type: Authority
+          description: ''
+        - id: telemetryManager
+          type: <xref uid="@azure/msal.TelemetryManager" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;ITenantDiscoveryResponse&gt;

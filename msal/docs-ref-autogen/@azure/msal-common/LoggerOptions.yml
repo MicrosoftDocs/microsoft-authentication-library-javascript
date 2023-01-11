@@ -1,0 +1,21 @@
+### YamlMime:TSTypeAlias
+name: LoggerOptions
+uid: '@azure/msal-common.LoggerOptions'
+package: '@azure/msal-common'
+summary: |2
+   Use this to configure the logging that MSAL does, by configuring logger options in the Configuration object
+  - loggerCallback                - Callback for logger
+  - piiLoggingEnabled             - Sets whether pii logging is enabled
+  - logLevel                      - Sets the level at which logging happens
+  - correlationId                 - Sets the correlationId printed by the logger
+fullName: LoggerOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type LoggerOptions = {
+    correlationId?: string,
+    logLevel?: LogLevel,
+    loggerCallback?: ILoggerCallback,
+    piiLoggingEnabled?: boolean,
+  }

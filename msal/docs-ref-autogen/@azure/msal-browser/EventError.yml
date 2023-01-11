@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: EventError
+uid: '@azure/msal-browser.EventError'
+package: '@azure/msal-browser'
+summary: ''
+fullName: EventError
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type EventError = AuthError | Error | null

@@ -1,0 +1,145 @@
+### YamlMime:TSType
+name: MsalGuard
+uid: '@azure/msal-angular.MsalGuard'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MsalGuard
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      MsalGuard(MsalGuardConfiguration, MsalBroadcastService, MsalService,
+      Location, Router)
+    uid: '@azure/msal-angular.MsalGuard.constructor'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new MsalGuard(msalGuardConfig: MsalGuardConfiguration,
+        msalBroadcastService: MsalBroadcastService, authService: MsalService,
+        location: Location, router: Router)
+      parameters:
+        - id: msalGuardConfig
+          type: <xref uid="@azure/msal-angular.MsalGuardConfiguration" />
+          description: ''
+        - id: msalBroadcastService
+          type: <xref uid="@azure/msal-angular.MsalBroadcastService" />
+          description: ''
+        - id: authService
+          type: <xref uid="@azure/msal-angular.MsalService" />
+          description: ''
+        - id: location
+          type: Location
+          description: ''
+        - id: router
+          type: Router
+          description: ''
+methods:
+  - name: 'canActivate(ActivatedRouteSnapshot, RouterStateSnapshot)'
+    uid: '@azure/msal-angular.MsalGuard.canActivate'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function canActivate(route: ActivatedRouteSnapshot, state:
+        RouterStateSnapshot): Observable<boolean | UrlTree>
+      parameters:
+        - id: route
+          type: ActivatedRouteSnapshot
+          description: ''
+        - id: state
+          type: RouterStateSnapshot
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;boolean | UrlTree&gt;
+  - name: 'canActivateChild(ActivatedRouteSnapshot, RouterStateSnapshot)'
+    uid: '@azure/msal-angular.MsalGuard.canActivateChild'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function canActivateChild(route: ActivatedRouteSnapshot, state:
+        RouterStateSnapshot): Observable<boolean | UrlTree>
+      parameters:
+        - id: route
+          type: ActivatedRouteSnapshot
+          description: ''
+        - id: state
+          type: RouterStateSnapshot
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;boolean | UrlTree&gt;
+  - name: canLoad()
+    uid: '@azure/msal-angular.MsalGuard.canLoad'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function canLoad(): Observable<boolean>'
+      return:
+        description: ''
+        type: Observable&lt;boolean&gt;
+  - name: getDestinationUrl(string)
+    uid: '@azure/msal-angular.MsalGuard.getDestinationUrl'
+    package: '@azure/msal-angular'
+    summary: Builds the absolute url for the destination page
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getDestinationUrl(path: string): string'
+      parameters:
+        - id: path
+          type: string
+          description: Relative path of requested page
+      return:
+        description: Full destination url
+        type: string
+  - name: includesCode(string)
+    uid: '@azure/msal-angular.MsalGuard.includesCode'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function includesCode(path: string): boolean'
+      parameters:
+        - id: path
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: parseUrl(string)
+    uid: '@azure/msal-angular.MsalGuard.parseUrl'
+    package: '@azure/msal-angular'
+    summary: Parses url string to UrlTree
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function parseUrl(url: string): UrlTree'
+      parameters:
+        - id: url
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: UrlTree

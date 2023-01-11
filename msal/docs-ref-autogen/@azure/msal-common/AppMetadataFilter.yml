@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: AppMetadataFilter
+uid: '@azure/msal-common.AppMetadataFilter'
+package: '@azure/msal-common'
+summary: 'AppMetadata: appmetadata-<environment>-<client_id>'
+fullName: AppMetadataFilter
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type AppMetadataFilter = { clientId?: string, environment?: string }

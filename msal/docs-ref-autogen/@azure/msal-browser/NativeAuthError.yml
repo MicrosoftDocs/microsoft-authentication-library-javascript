@@ -1,0 +1,263 @@
+### YamlMime:TSType
+name: NativeAuthError
+uid: '@azure/msal-browser.NativeAuthError'
+package: '@azure/msal-browser'
+summary: ''
+fullName: NativeAuthError
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'NativeAuthError(string, string, OSError)'
+    uid: '@azure/msal-browser.NativeAuthError.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new NativeAuthError(errorCode: string, description: string, ext?:
+        OSError)
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+        - id: description
+          type: string
+          description: ''
+        - id: ext
+          type: <xref uid="@azure/msal-browser.OSError" />
+          description: ''
+properties:
+  - name: ext
+    uid: '@azure/msal-browser.NativeAuthError.ext'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: ext
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'ext: OSError | undefined'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.OSError" /> | undefined
+inheritedProperties:
+  - name: correlationId
+    uid: '@azure/msal-browser.NativeAuthError.correlationId'
+    package: '@azure/msal-browser'
+    summary: CorrelationId associated with the error
+    fullName: correlationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'correlationId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> AuthError.correlationId
+  - name: errorCode
+    uid: '@azure/msal-browser.NativeAuthError.errorCode'
+    package: '@azure/msal-browser'
+    summary: Short string denoting error
+    fullName: errorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorCode: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> AuthError.errorCode
+  - name: errorMessage
+    uid: '@azure/msal-browser.NativeAuthError.errorMessage'
+    package: '@azure/msal-browser'
+    summary: Detailed description of error
+    fullName: errorMessage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> AuthError.errorMessage
+  - name: message
+    uid: '@azure/msal-browser.NativeAuthError.message'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.message
+  - name: name
+    uid: '@azure/msal-browser.NativeAuthError.name'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.name
+  - name: stack
+    uid: '@azure/msal-browser.NativeAuthError.stack'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: stack
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stack?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.stack
+  - name: subError
+    uid: '@azure/msal-browser.NativeAuthError.subError'
+    package: '@azure/msal-browser'
+    summary: Describes the subclass of an error
+    fullName: subError
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subError: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> AuthError.subError
+inheritedMethods:
+  - name: createPostRequestFailed(string)
+    uid: '@azure/msal-browser.NativeAuthError.createPostRequestFailed'
+    package: '@azure/msal-browser'
+    summary: Creates an error for post request failures.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createPostRequestFailed(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: AuthError
+    inheritanceDescription: <b>Inherited From</b> AuthError.createPostRequestFailed
+  - name: createUnexpectedError(string)
+    uid: '@azure/msal-browser.NativeAuthError.createUnexpectedError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error that is thrown when something unexpected happens in the
+      library.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUnexpectedError(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: AuthError
+    inheritanceDescription: <b>Inherited From</b> AuthError.createUnexpectedError
+  - name: setCorrelationId(string)
+    uid: '@azure/msal-browser.NativeAuthError.setCorrelationId'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setCorrelationId(correlationId: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+    inheritanceDescription: <b>Inherited From</b> AuthError.setCorrelationId
+methods:
+  - name: 'createError(string, string, OSError)'
+    uid: '@azure/msal-browser.NativeAuthError.createError'
+    package: '@azure/msal-browser'
+    summary: Create the appropriate error object based on the WAM status code.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createError(code: string, description: string, ext?:
+        OSError): AuthError
+      parameters:
+        - id: code
+          type: string
+          description: ''
+        - id: description
+          type: string
+          description: ''
+        - id: ext
+          type: <xref uid="@azure/msal-browser.OSError" />
+          description: ''
+      return:
+        description: ''
+        type: AuthError
+  - name: createTokensNotFoundInCacheError()
+    uid: '@azure/msal-browser.NativeAuthError.createTokensNotFoundInCacheError'
+    package: '@azure/msal-browser'
+    summary: Creates a tokens not found error when the internal cache look up fails
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createTokensNotFoundInCacheError(): NativeAuthError'
+      return:
+        description: 'NativeAuthError: tokensNotFoundInCache'
+        type: <xref uid="@azure/msal-browser.NativeAuthError" />
+  - name: createUserSwitchError()
+    uid: '@azure/msal-browser.NativeAuthError.createUserSwitchError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates user switch error when the user chooses a different account in the
+      native broker prompt
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUserSwitchError(): NativeAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.NativeAuthError" />
+  - name: isFatal()
+    uid: '@azure/msal-browser.NativeAuthError.isFatal'
+    package: '@azure/msal-browser'
+    summary: >-
+      These errors should result in a fallback to the 'standard' browser based
+      auth flow.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function isFatal(): boolean'
+      return:
+        description: ''
+        type: boolean
+extends: AuthError

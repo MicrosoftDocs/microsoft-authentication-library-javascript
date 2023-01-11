@@ -1,0 +1,35 @@
+### YamlMime:TSEnum
+name: LogLevel
+uid: '@azure/msal-common.LogLevel'
+package: '@azure/msal-common'
+summary: Log message level.
+fullName: LogLevel
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: Error
+    uid: '@azure/msal-common.LogLevel.Error'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 0
+  - name: Warning
+    uid: '@azure/msal-common.LogLevel.Warning'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 1
+  - name: Info
+    uid: '@azure/msal-common.LogLevel.Info'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 2
+  - name: Verbose
+    uid: '@azure/msal-common.LogLevel.Verbose'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 3
+  - name: Trace
+    uid: '@azure/msal-common.LogLevel.Trace'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 4

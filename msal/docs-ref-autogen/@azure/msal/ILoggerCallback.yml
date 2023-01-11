@@ -1,0 +1,10 @@
+### YamlMime:TSType
+name: ILoggerCallback
+uid: '@azure/msal.ILoggerCallback'
+package: '@azure/msal'
+summary: ''
+fullName: ILoggerCallback
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface

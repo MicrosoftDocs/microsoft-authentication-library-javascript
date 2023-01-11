@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: EventCallbackFunction
+uid: '@azure/msal-browser.EventCallbackFunction'
+package: '@azure/msal-browser'
+summary: ''
+fullName: EventCallbackFunction
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type EventCallbackFunction = (message: EventMessage) => void

@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: DecodedAuthToken
+uid: '@azure/msal-common.DecodedAuthToken'
+package: '@azure/msal-common'
+summary: Interface for Decoded JWT tokens.
+fullName: DecodedAuthToken
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: header
+    uid: '@azure/msal-common.DecodedAuthToken.header'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: header
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'header: string'
+      return:
+        description: ''
+        type: string
+  - name: JWSPayload
+    uid: '@azure/msal-common.DecodedAuthToken.JWSPayload'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: JWSPayload
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'JWSPayload: string'
+      return:
+        description: ''
+        type: string
+  - name: JWSSig
+    uid: '@azure/msal-common.DecodedAuthToken.JWSSig'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: JWSSig
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'JWSSig: string'
+      return:
+        description: ''
+        type: string

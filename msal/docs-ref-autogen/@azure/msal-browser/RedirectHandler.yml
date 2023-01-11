@@ -1,0 +1,130 @@
+### YamlMime:TSType
+name: RedirectHandler
+uid: '@azure/msal-browser.RedirectHandler'
+package: '@azure/msal-browser'
+summary: ''
+fullName: RedirectHandler
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      RedirectHandler(AuthorizationCodeClient, BrowserCacheManager,
+      CommonAuthorizationCodeRequest, Logger, ICrypto)
+    uid: '@azure/msal-browser.RedirectHandler.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new RedirectHandler(authCodeModule: AuthorizationCodeClient,
+        storageImpl: BrowserCacheManager, authCodeRequest:
+        CommonAuthorizationCodeRequest, logger: Logger, browserCrypto: ICrypto)
+      parameters:
+        - id: authCodeModule
+          type: AuthorizationCodeClient
+          description: ''
+        - id: storageImpl
+          type: <xref uid="@azure/msal-browser.BrowserCacheManager" />
+          description: ''
+        - id: authCodeRequest
+          type: CommonAuthorizationCodeRequest
+          description: ''
+        - id: logger
+          type: Logger
+          description: ''
+        - id: browserCrypto
+          type: ICrypto
+          description: ''
+inheritedMethods:
+  - name: >-
+      handleCodeResponseFromServer(AuthorizationCodePayload, string, Authority,
+      INetworkModule, boolean)
+    uid: '@azure/msal-browser.RedirectHandler.handleCodeResponseFromServer'
+    package: '@azure/msal-browser'
+    summary: Process auth code response from AAD
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleCodeResponseFromServer(authCodeResponse:
+        AuthorizationCodePayload, state: string, authority: Authority,
+        networkModule: INetworkModule, validateNonce?: boolean):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: authCodeResponse
+          type: AuthorizationCodePayload
+          description: ''
+        - id: state
+          type: string
+          description: ''
+        - id: authority
+          type: Authority
+          description: ''
+        - id: networkModule
+          type: INetworkModule
+          description: ''
+        - id: validateNonce
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [InteractionHandler.handleCodeResponseFromServer](xref:@azure/msal-browser.InteractionHandler.handleCodeResponseFromServer)
+methods:
+  - name: 'handleCodeResponseFromHash(string, string, Authority, INetworkModule)'
+    uid: '@azure/msal-browser.RedirectHandler.handleCodeResponseFromHash'
+    package: '@azure/msal-browser'
+    summary: Handle authorization code response in the window.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleCodeResponseFromHash(locationHash: string, state: string,
+        authority: Authority, networkModule: INetworkModule):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: locationHash
+          type: string
+          description: ''
+        - id: state
+          type: string
+          description: ''
+        - id: authority
+          type: Authority
+          description: ''
+        - id: networkModule
+          type: INetworkModule
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult&gt;
+  - name: 'initiateAuthRequest(string, RedirectParams)'
+    uid: '@azure/msal-browser.RedirectHandler.initiateAuthRequest'
+    package: '@azure/msal-browser'
+    summary: Redirects window to given URL.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function initiateAuthRequest(requestUrl: string, params:
+        RedirectParams): Promise<void>
+      parameters:
+        - id: requestUrl
+          type: string
+          description: ''
+        - id: params
+          type: <xref uid="@azure/msal-browser.RedirectParams" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+extends: <xref uid="@azure/msal-browser.InteractionHandler" />

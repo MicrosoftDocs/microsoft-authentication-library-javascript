@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: NativeAccountInfo
+uid: '@azure/msal-browser.NativeAccountInfo'
+package: '@azure/msal-browser'
+summary: Account properties returned by Native Platform e.g. WAM
+fullName: NativeAccountInfo
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type NativeAccountInfo = { id: string, properties: object, userName: string }

@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: MatchingResources
+uid: '@azure/msal-angular.MatchingResources'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MatchingResources
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type MatchingResources = {
+    absoluteResources: Array<string>,
+    relativeResources: Array<string>,
+  }

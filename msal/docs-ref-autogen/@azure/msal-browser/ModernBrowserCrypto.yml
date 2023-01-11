@@ -1,0 +1,140 @@
+### YamlMime:TSType
+name: ModernBrowserCrypto
+uid: '@azure/msal-browser.ModernBrowserCrypto'
+package: '@azure/msal-browser'
+summary: ''
+fullName: ModernBrowserCrypto
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'digest(AlgorithmIdentifier, Uint8Array)'
+    uid: '@azure/msal-browser.ModernBrowserCrypto.digest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function digest(algorithm: AlgorithmIdentifier, data: Uint8Array):
+        Promise<ArrayBuffer>
+      parameters:
+        - id: algorithm
+          type: AlgorithmIdentifier
+          description: ''
+        - id: data
+          type: Uint8Array
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;ArrayBuffer&gt;
+  - name: exportKey(CryptoKey)
+    uid: '@azure/msal-browser.ModernBrowserCrypto.exportKey'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function exportKey(key: CryptoKey): Promise<JsonWebKey>'
+      parameters:
+        - id: key
+          type: CryptoKey
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;JsonWebKey&gt;
+  - name: 'generateKey(RsaHashedKeyGenParams, boolean, KeyUsage[])'
+    uid: '@azure/msal-browser.ModernBrowserCrypto.generateKey'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateKey(algorithm: RsaHashedKeyGenParams, extractable:
+        boolean, keyUsages: KeyUsage[]): Promise<CryptoKeyPair>
+      parameters:
+        - id: algorithm
+          type: RsaHashedKeyGenParams
+          description: ''
+        - id: extractable
+          type: boolean
+          description: ''
+        - id: keyUsages
+          type: 'KeyUsage[]'
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;CryptoKeyPair&gt;
+  - name: getRandomValues(Uint8Array)
+    uid: '@azure/msal-browser.ModernBrowserCrypto.getRandomValues'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getRandomValues(dataBuffer: Uint8Array): Uint8Array'
+      parameters:
+        - id: dataBuffer
+          type: Uint8Array
+          description: ''
+      return:
+        description: ''
+        type: Uint8Array
+  - name: 'importKey(JsonWebKey, RsaHashedImportParams, boolean, KeyUsage[])'
+    uid: '@azure/msal-browser.ModernBrowserCrypto.importKey'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function importKey(keyData: JsonWebKey, algorithm:
+        RsaHashedImportParams, extractable: boolean, keyUsages: KeyUsage[]):
+        Promise<CryptoKey>
+      parameters:
+        - id: keyData
+          type: JsonWebKey
+          description: ''
+        - id: algorithm
+          type: RsaHashedImportParams
+          description: ''
+        - id: extractable
+          type: boolean
+          description: ''
+        - id: keyUsages
+          type: 'KeyUsage[]'
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;CryptoKey&gt;
+  - name: 'sign(AlgorithmIdentifier, CryptoKey, ArrayBuffer)'
+    uid: '@azure/msal-browser.ModernBrowserCrypto.sign'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function sign(algorithm: AlgorithmIdentifier, key: CryptoKey, data:
+        ArrayBuffer): Promise<ArrayBuffer>
+      parameters:
+        - id: algorithm
+          type: AlgorithmIdentifier
+          description: ''
+        - id: key
+          type: CryptoKey
+          description: ''
+        - id: data
+          type: ArrayBuffer
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;ArrayBuffer&gt;

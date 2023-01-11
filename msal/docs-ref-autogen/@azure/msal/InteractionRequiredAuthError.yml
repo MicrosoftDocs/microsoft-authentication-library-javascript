@@ -1,0 +1,252 @@
+### YamlMime:TSType
+name: InteractionRequiredAuthError
+uid: '@azure/msal.InteractionRequiredAuthError'
+package: '@azure/msal'
+summary: >-
+  Error thrown when the user is required to perform an interactive token
+  request.
+fullName: InteractionRequiredAuthError
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'InteractionRequiredAuthError(string, string)'
+    uid: '@azure/msal.InteractionRequiredAuthError.constructor'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new InteractionRequiredAuthError(errorCode: string, errorMessage?:
+        string)
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+        - id: errorMessage
+          type: string
+          description: ''
+inheritedProperties:
+  - name: errorCode
+    uid: '@azure/msal.InteractionRequiredAuthError.errorCode'
+    package: '@azure/msal'
+    summary: ''
+    fullName: errorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorCode: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorCode](xref:@azure/msal.AuthError.errorCode)
+  - name: errorMessage
+    uid: '@azure/msal.InteractionRequiredAuthError.errorMessage'
+    package: '@azure/msal'
+    summary: ''
+    fullName: errorMessage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorMessage](xref:@azure/msal.AuthError.errorMessage)
+  - name: message
+    uid: '@azure/msal.InteractionRequiredAuthError.message'
+    package: '@azure/msal'
+    summary: ''
+    fullName: message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.message
+  - name: name
+    uid: '@azure/msal.InteractionRequiredAuthError.name'
+    package: '@azure/msal'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.name
+  - name: stack
+    uid: '@azure/msal.InteractionRequiredAuthError.stack'
+    package: '@azure/msal'
+    summary: ''
+    fullName: stack
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stack?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.stack
+inheritedMethods:
+  - name: createNoWindowObjectError(string)
+    uid: '@azure/msal.InteractionRequiredAuthError.createNoWindowObjectError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createNoWindowObjectError(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.AuthError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.createNoWindowObjectError](xref:@azure/msal.AuthError.createNoWindowObjectError)
+  - name: createServerUnavailableError()
+    uid: '@azure/msal.InteractionRequiredAuthError.createServerUnavailableError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createServerUnavailableError(): ServerError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ServerError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ServerError.createServerUnavailableError](xref:@azure/msal.ServerError.createServerUnavailableError)
+  - name: createUnexpectedError(string)
+    uid: '@azure/msal.InteractionRequiredAuthError.createUnexpectedError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUnexpectedError(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.AuthError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.createUnexpectedError](xref:@azure/msal.AuthError.createUnexpectedError)
+  - name: createUnknownServerError(string)
+    uid: '@azure/msal.InteractionRequiredAuthError.createUnknownServerError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUnknownServerError(errorDesc: string): ServerError'
+      parameters:
+        - id: errorDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.ServerError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ServerError.createUnknownServerError](xref:@azure/msal.ServerError.createUnknownServerError)
+methods:
+  - name: createConsentRequiredAuthError(string)
+    uid: '@azure/msal.InteractionRequiredAuthError.createConsentRequiredAuthError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createConsentRequiredAuthError(errorDesc: string):
+        InteractionRequiredAuthError
+      parameters:
+        - id: errorDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.InteractionRequiredAuthError" />
+  - name: createInteractionRequiredAuthError(string)
+    uid: >-
+      @azure/msal.InteractionRequiredAuthError.createInteractionRequiredAuthError
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createInteractionRequiredAuthError(errorDesc: string):
+        InteractionRequiredAuthError
+      parameters:
+        - id: errorDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.InteractionRequiredAuthError" />
+  - name: createLoginRequiredAuthError(string)
+    uid: '@azure/msal.InteractionRequiredAuthError.createLoginRequiredAuthError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createLoginRequiredAuthError(errorDesc: string):
+        InteractionRequiredAuthError
+      parameters:
+        - id: errorDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.InteractionRequiredAuthError" />
+  - name: isInteractionRequiredError(string)
+    uid: '@azure/msal.InteractionRequiredAuthError.isInteractionRequiredError'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function isInteractionRequiredError(errorString: string): boolean'
+      parameters:
+        - id: errorString
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+extends: <xref uid="@azure/msal.ServerError" />

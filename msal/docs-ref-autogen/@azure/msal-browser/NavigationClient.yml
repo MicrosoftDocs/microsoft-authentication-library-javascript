@@ -1,0 +1,57 @@
+### YamlMime:TSType
+name: NavigationClient
+uid: '@azure/msal-browser.NavigationClient'
+package: '@azure/msal-browser'
+summary: ''
+fullName: NavigationClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'navigateExternal(string, NavigationOptions)'
+    uid: '@azure/msal-browser.NavigationClient.navigateExternal'
+    package: '@azure/msal-browser'
+    summary: >-
+      Navigates to other pages outside the web application i.e. the Identity
+      Provider
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function navigateExternal(url: string, options: NavigationOptions):
+        Promise<boolean>
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="@azure/msal-browser.NavigationOptions" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+  - name: 'navigateInternal(string, NavigationOptions)'
+    uid: '@azure/msal-browser.NavigationClient.navigateInternal'
+    package: '@azure/msal-browser'
+    summary: Navigates to other pages within the same web application
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function navigateInternal(url: string, options: NavigationOptions):
+        Promise<boolean>
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="@azure/msal-browser.NavigationOptions" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;

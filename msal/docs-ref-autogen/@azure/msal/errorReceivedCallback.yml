@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: errorReceivedCallback
+uid: '@azure/msal.errorReceivedCallback'
+package: '@azure/msal'
+summary: |-
+  A type alias for a errorReceivedCallback function.
+  <xref:(errorReceivedCallback%3Atype)>
+fullName: errorReceivedCallback
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: >
+  type errorReceivedCallback = (authErr: AuthError, accountState: string) =>
+  void

@@ -1,0 +1,58 @@
+### YamlMime:TSType
+name: NetworkManager
+uid: '@azure/msal-common.NetworkManager'
+package: '@azure/msal-common'
+summary: ''
+fullName: NetworkManager
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'NetworkManager(INetworkModule, CacheManager)'
+    uid: '@azure/msal-common.NetworkManager.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new NetworkManager(networkClient: INetworkModule, cacheManager:
+        CacheManager)
+      parameters:
+        - id: networkClient
+          type: <xref uid="@azure/msal-common.INetworkModule" />
+          description: ''
+        - id: cacheManager
+          type: <xref uid="@azure/msal-common.CacheManager" />
+          description: ''
+methods:
+  - name: 'sendPostRequest<T>(RequestThumbprint, string, NetworkRequestOptions)'
+    uid: '@azure/msal-common.NetworkManager.sendPostRequest'
+    package: '@azure/msal-common'
+    summary: Wraps sendPostRequestAsync with necessary preflight and postflight logic
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function sendPostRequest<T>(thumbprint: RequestThumbprint,
+        tokenEndpoint: string, options: NetworkRequestOptions):
+        Promise<NetworkResponse<T>>
+      parameters:
+        - id: thumbprint
+          type: <xref uid="@azure/msal-common.RequestThumbprint" />
+          description: ''
+        - id: tokenEndpoint
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="@azure/msal-common.NetworkRequestOptions" />
+          description: |+
+
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-common.NetworkResponse"
+          />&lt;T&gt;&gt;

@@ -1,0 +1,20 @@
+### YamlMime:TSEnum
+name: ResponseCodes
+uid: '@azure/msal-common.ResponseCodes'
+package: '@azure/msal-common'
+summary: Response codes
+fullName: ResponseCodes
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: httpSuccess
+    uid: '@azure/msal-common.ResponseCodes.httpSuccess'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 200
+  - name: httpBadRequest
+    uid: '@azure/msal-common.ResponseCodes.httpBadRequest'
+    package: '@azure/msal-common'
+    summary: ''
+    numericValue: 400

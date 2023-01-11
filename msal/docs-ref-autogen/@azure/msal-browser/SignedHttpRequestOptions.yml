@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: SignedHttpRequestOptions
+uid: '@azure/msal-browser.SignedHttpRequestOptions'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignedHttpRequestOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type SignedHttpRequestOptions = { loggerOptions: LoggerOptions }

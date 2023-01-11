@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: MsalGuardAuthRequest
+uid: '@azure/msal-angular.MsalGuardAuthRequest'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MsalGuardAuthRequest
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type MsalGuardAuthRequest =
+    | Partial<PopupRequest>
+    | Partial<Omit<RedirectRequest, "redirectStartPage">>

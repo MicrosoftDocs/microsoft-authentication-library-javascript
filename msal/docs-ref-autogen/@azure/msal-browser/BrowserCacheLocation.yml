@@ -1,0 +1,22 @@
+### YamlMime:TSEnum
+name: BrowserCacheLocation
+uid: '@azure/msal-browser.BrowserCacheLocation'
+package: '@azure/msal-browser'
+summary: ''
+fullName: BrowserCacheLocation
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: LocalStorage
+    uid: '@azure/msal-browser.BrowserCacheLocation.LocalStorage'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: MemoryStorage
+    uid: '@azure/msal-browser.BrowserCacheLocation.MemoryStorage'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: SessionStorage
+    uid: '@azure/msal-browser.BrowserCacheLocation.SessionStorage'
+    package: '@azure/msal-browser'
+    summary: ''

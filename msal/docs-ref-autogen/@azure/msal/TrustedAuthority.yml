@@ -1,0 +1,85 @@
+### YamlMime:TSType
+name: TrustedAuthority
+uid: '@azure/msal.TrustedAuthority'
+package: '@azure/msal'
+summary: ''
+fullName: TrustedAuthority
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: getTrustedHostList()
+    uid: '@azure/msal.TrustedAuthority.getTrustedHostList'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function getTrustedHostList(): Array<string>'
+      return:
+        description: ''
+        type: Array&lt;string&gt;
+  - name: IsInTrustedHostList(string)
+    uid: '@azure/msal.TrustedAuthority.IsInTrustedHostList'
+    package: '@azure/msal'
+    summary: Checks to see if the host is in a list of trusted hosts
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function IsInTrustedHostList(host: string): boolean'
+      parameters:
+        - id: host
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: 'setTrustedAuthoritiesFromConfig(boolean, Array<string>)'
+    uid: '@azure/msal.TrustedAuthority.setTrustedAuthoritiesFromConfig'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function setTrustedAuthoritiesFromConfig(validateAuthority:
+        boolean, knownAuthorities: Array<string>)
+      parameters:
+        - id: validateAuthority
+          type: boolean
+          description: ''
+        - id: knownAuthorities
+          type: Array&lt;string&gt;
+          description: |+
+
+  - name: 'setTrustedAuthoritiesFromNetwork(string, TelemetryManager, string)'
+    uid: '@azure/msal.TrustedAuthority.setTrustedAuthoritiesFromNetwork'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function setTrustedAuthoritiesFromNetwork(authorityToVerify:
+        string, telemetryManager: TelemetryManager, correlationId?: string):
+        Promise<void>
+      parameters:
+        - id: authorityToVerify
+          type: string
+          description: ''
+        - id: telemetryManager
+          type: <xref uid="@azure/msal.TelemetryManager" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

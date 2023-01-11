@@ -1,0 +1,56 @@
+### YamlMime:TSType
+name: BaseClient
+uid: '@azure/msal-common.BaseClient'
+package: '@azure/msal-common'
+summary: >-
+  Base application class which will construct requests to send to and handle
+  responses from the Microsoft STS using the authorization code flow.
+fullName: BaseClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+properties:
+  - name: authority
+    uid: '@azure/msal-common.BaseClient.authority'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authority: Authority'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Authority" />
+  - name: logger
+    uid: '@azure/msal-common.BaseClient.logger'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: logger
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'logger: Logger'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Logger" />
+methods:
+  - name: updateAuthority(Authority)
+    uid: '@azure/msal-common.BaseClient.updateAuthority'
+    package: '@azure/msal-common'
+    summary: >-
+      Updates the authority object of the client. Endpoint discovery must be
+      completed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function updateAuthority(updatedAuthority: Authority)'
+      parameters:
+        - id: updatedAuthority
+          type: <xref uid="@azure/msal-common.Authority" />
+          description: |+
+

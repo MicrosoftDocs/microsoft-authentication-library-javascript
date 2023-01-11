@@ -1,0 +1,46 @@
+### YamlMime:TSEnum
+name: SSOTypes
+uid: '@azure/msal-common.SSOTypes'
+package: '@azure/msal-common'
+summary: SSO Types - generated to populate hints
+fullName: SSOTypes
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ACCOUNT
+    uid: '@azure/msal-common.SSOTypes.ACCOUNT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ACCOUNT_ID
+    uid: '@azure/msal-common.SSOTypes.ACCOUNT_ID'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CONSUMERS
+    uid: '@azure/msal-common.SSOTypes.CONSUMERS'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: DOMAIN_HINT
+    uid: '@azure/msal-common.SSOTypes.DOMAIN_HINT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: HOMEACCOUNT_ID
+    uid: '@azure/msal-common.SSOTypes.HOMEACCOUNT_ID'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ID_TOKEN
+    uid: '@azure/msal-common.SSOTypes.ID_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: LOGIN_HINT
+    uid: '@azure/msal-common.SSOTypes.LOGIN_HINT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ORGANIZATIONS
+    uid: '@azure/msal-common.SSOTypes.ORGANIZATIONS'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: SID
+    uid: '@azure/msal-common.SSOTypes.SID'
+    package: '@azure/msal-common'
+    summary: ''

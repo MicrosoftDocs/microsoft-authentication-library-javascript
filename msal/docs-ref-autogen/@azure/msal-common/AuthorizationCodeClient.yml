@@ -1,0 +1,186 @@
+### YamlMime:TSType
+name: AuthorizationCodeClient
+uid: '@azure/msal-common.AuthorizationCodeClient'
+package: '@azure/msal-common'
+summary: Oauth2.0 Authorization Code client
+fullName: AuthorizationCodeClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: AuthorizationCodeClient(ClientConfiguration)
+    uid: '@azure/msal-common.AuthorizationCodeClient.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new AuthorizationCodeClient(configuration: ClientConfiguration)'
+      parameters:
+        - id: configuration
+          type: <xref uid="@azure/msal-common.ClientConfiguration" />
+          description: ''
+inheritedProperties:
+  - name: authority
+    uid: '@azure/msal-common.AuthorizationCodeClient.authority'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authority: Authority'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Authority" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.authority](xref:@azure/msal-common.BaseClient.authority)
+  - name: logger
+    uid: '@azure/msal-common.AuthorizationCodeClient.logger'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: logger
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'logger: Logger'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Logger" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.logger](xref:@azure/msal-common.BaseClient.logger)
+inheritedMethods:
+  - name: updateAuthority(Authority)
+    uid: '@azure/msal-common.AuthorizationCodeClient.updateAuthority'
+    package: '@azure/msal-common'
+    summary: >-
+      Updates the authority object of the client. Endpoint discovery must be
+      completed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function updateAuthority(updatedAuthority: Authority)'
+      parameters:
+        - id: updatedAuthority
+          type: <xref uid="@azure/msal-common.Authority" />
+          description: |+
+
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.updateAuthority](xref:@azure/msal-common.BaseClient.updateAuthority)
+methods:
+  - name: 'acquireToken(CommonAuthorizationCodeRequest, AuthorizationCodePayload)'
+    uid: '@azure/msal-common.AuthorizationCodeClient.acquireToken'
+    package: '@azure/msal-common'
+    summary: >-
+      API to acquire a token in exchange of 'authorization_code` acquired by the
+      user in the first leg of the
+
+      authorization_code_grant
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireToken(request: CommonAuthorizationCodeRequest,
+        authCodePayload?: AuthorizationCodePayload):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.CommonAuthorizationCodeRequest" />
+          description: |+
+
+        - id: authCodePayload
+          type: <xref uid="@azure/msal-common.AuthorizationCodePayload" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-common.AuthenticationResult" />&gt;
+  - name: getAuthCodeUrl(CommonAuthorizationUrlRequest)
+    uid: '@azure/msal-common.AuthorizationCodeClient.getAuthCodeUrl'
+    package: '@azure/msal-common'
+    summary: >-
+      Creates the URL of the authorization request letting the user input
+      credentials and consent to the
+
+      application. The URL target the /authorize endpoint of the authority
+      configured in the
+
+      application object.
+
+      Once the user inputs their credentials and consents, the authority will
+      send a response to the redirect URI
+
+      sent in the request and should contain an authorization code, which can
+      then be used to acquire tokens via
+
+      acquireToken(AuthorizationCodeRequest)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAuthCodeUrl(request: CommonAuthorizationUrlRequest):
+        Promise<string>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.CommonAuthorizationUrlRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;string&gt;
+  - name: getLogoutUri(CommonEndSessionRequest)
+    uid: '@azure/msal-common.AuthorizationCodeClient.getLogoutUri'
+    package: '@azure/msal-common'
+    summary: >-
+      Used to log out the current user, and redirect the user to the
+      postLogoutRedirectUri.
+
+      Default behaviour is to redirect the user to `window.location.href`.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getLogoutUri(logoutRequest: CommonEndSessionRequest): string'
+      parameters:
+        - id: logoutRequest
+          type: <xref uid="@azure/msal-common.CommonEndSessionRequest" />
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: 'handleFragmentResponse(string, string)'
+    uid: '@azure/msal-common.AuthorizationCodeClient.handleFragmentResponse'
+    package: '@azure/msal-common'
+    summary: >-
+      Handles the hash fragment response from public client code request.
+      Returns a code response used by
+
+      the client to exchange for a token in acquireToken.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleFragmentResponse(hashFragment: string, cachedState:
+        string): AuthorizationCodePayload
+      parameters:
+        - id: hashFragment
+          type: string
+          description: |+
+
+        - id: cachedState
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthorizationCodePayload" />
+extends: <xref uid="@azure/msal-common.BaseClient" />

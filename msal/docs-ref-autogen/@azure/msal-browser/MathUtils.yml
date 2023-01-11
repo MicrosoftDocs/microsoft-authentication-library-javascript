@@ -1,0 +1,28 @@
+### YamlMime:TSType
+name: MathUtils
+uid: '@azure/msal-browser.MathUtils'
+package: '@azure/msal-browser'
+summary: Utility class for math specific functions in browser.
+fullName: MathUtils
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: decimalToHex(number)
+    uid: '@azure/msal-browser.MathUtils.decimalToHex'
+    package: '@azure/msal-browser'
+    summary: Decimal to Hex
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function decimalToHex(num: number): string'
+      parameters:
+        - id: num
+          type: number
+          description: |+
+
+      return:
+        description: ''
+        type: string

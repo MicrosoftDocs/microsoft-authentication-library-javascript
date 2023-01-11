@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: MsalGuardConfiguration
+uid: '@azure/msal-angular.MsalGuardConfiguration'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MsalGuardConfiguration
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type MsalGuardConfiguration = {
+    authRequest?:
+      | MsalGuardAuthRequest
+      | ((
+          authService: MsalService,
+          state: RouterStateSnapshot
+        ) => MsalGuardAuthRequest),
+    interactionType: Popup | Redirect,
+    loginFailedRoute?: string,
+  }

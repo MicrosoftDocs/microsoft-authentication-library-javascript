@@ -1,0 +1,22 @@
+### YamlMime:TSTypeAlias
+name: NativeResponse
+uid: '@azure/msal-browser.NativeResponse'
+package: '@azure/msal-browser'
+summary: Token response returned by Native Platform e.g. WAM
+fullName: NativeResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type NativeResponse = {
+    access_token: string,
+    account: NativeAccountInfo,
+    client_info: string,
+    expires_in: number,
+    extendedLifetimeToken?: boolean,
+    id_token: string,
+    properties: NativeResponseProperties,
+    scope: string,
+    shr?: string,
+    state: string,
+  }

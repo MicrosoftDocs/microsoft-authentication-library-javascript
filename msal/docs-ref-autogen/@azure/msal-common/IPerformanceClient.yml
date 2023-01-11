@@ -1,0 +1,182 @@
+### YamlMime:TSType
+name: IPerformanceClient
+uid: '@azure/msal-common.IPerformanceClient'
+package: '@azure/msal-common'
+summary: ''
+fullName: IPerformanceClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: addPerformanceCallback(PerformanceCallbackFunction)
+    uid: '@azure/msal-common.IPerformanceClient.addPerformanceCallback'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addPerformanceCallback(callback: PerformanceCallbackFunction):
+        string
+      parameters:
+        - id: callback
+          type: <xref uid="@azure/msal-common.PerformanceCallbackFunction" />
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: 'addStaticFields(StaticFields, string)'
+    uid: '@azure/msal-common.IPerformanceClient.addStaticFields'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addStaticFields(staticFields: StaticFields, correlationId:
+        string)
+      parameters:
+        - id: staticFields
+          type: <xref uid="@azure/msal-common.StaticFields" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: discardMeasurements(string)
+    uid: '@azure/msal-common.IPerformanceClient.discardMeasurements'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function discardMeasurements(correlationId: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+  - name: 'emitEvents(PerformanceEvent[], string)'
+    uid: '@azure/msal-common.IPerformanceClient.emitEvents'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function emitEvents(events: PerformanceEvent[], correlationId: string)'
+      parameters:
+        - id: events
+          type: '<xref uid="@azure/msal-common.PerformanceEvent" />[]'
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: endMeasurement(PerformanceEvent)
+    uid: '@azure/msal-common.IPerformanceClient.endMeasurement'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function endMeasurement(event: PerformanceEvent): PerformanceEvent |
+        null
+      parameters:
+        - id: event
+          type: <xref uid="@azure/msal-common.PerformanceEvent" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.PerformanceEvent" /> | null
+  - name: 'flushMeasurements(PerformanceEvents, string)'
+    uid: '@azure/msal-common.IPerformanceClient.flushMeasurements'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function flushMeasurements(measureName: PerformanceEvents,
+        correlationId?: string)
+      parameters:
+        - id: measureName
+          type: <xref uid="@azure/msal-common.PerformanceEvents" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+  - name: generateId()
+    uid: '@azure/msal-common.IPerformanceClient.generateId'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateId(): string'
+      return:
+        description: ''
+        type: string
+  - name: removePerformanceCallback(string)
+    uid: '@azure/msal-common.IPerformanceClient.removePerformanceCallback'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removePerformanceCallback(callbackId: string): boolean'
+      parameters:
+        - id: callbackId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: 'startMeasurement(PerformanceEvents, string)'
+    uid: '@azure/msal-common.IPerformanceClient.startMeasurement'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function startMeasurement(measureName: PerformanceEvents,
+        correlationId?: string): InProgressPerformanceEvent
+      parameters:
+        - id: measureName
+          type: <xref uid="@azure/msal-common.PerformanceEvents" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.InProgressPerformanceEvent" />
+  - name: 'startPerformanceMeasuremeant(string, string)'
+    uid: '@azure/msal-common.IPerformanceClient.startPerformanceMeasuremeant'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function startPerformanceMeasuremeant(measureName: string,
+        correlationId: string): IPerformanceMeasurement
+      parameters:
+        - id: measureName
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.IPerformanceMeasurement" />

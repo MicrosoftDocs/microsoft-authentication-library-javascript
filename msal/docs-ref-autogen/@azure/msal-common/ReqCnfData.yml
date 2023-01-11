@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: ReqCnfData
+uid: '@azure/msal-common.ReqCnfData'
+package: '@azure/msal-common'
+summary: ''
+fullName: ReqCnfData
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type ReqCnfData = { kid: string, reqCnfHash: string, reqCnfString: string }

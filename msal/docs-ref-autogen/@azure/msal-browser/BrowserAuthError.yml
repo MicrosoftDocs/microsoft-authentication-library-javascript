@@ -1,0 +1,869 @@
+### YamlMime:TSType
+name: BrowserAuthError
+uid: '@azure/msal-browser.BrowserAuthError'
+package: '@azure/msal-browser'
+summary: Browser library error class thrown by the MSAL.js library for SPAs
+fullName: BrowserAuthError
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'BrowserAuthError(string, string)'
+    uid: '@azure/msal-browser.BrowserAuthError.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new BrowserAuthError(errorCode: string, errorMessage?: string)'
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+        - id: errorMessage
+          type: string
+          description: ''
+inheritedProperties:
+  - name: correlationId
+    uid: '@azure/msal-browser.BrowserAuthError.correlationId'
+    package: '@azure/msal-browser'
+    summary: CorrelationId associated with the error
+    fullName: correlationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'correlationId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> AuthError.correlationId
+  - name: errorCode
+    uid: '@azure/msal-browser.BrowserAuthError.errorCode'
+    package: '@azure/msal-browser'
+    summary: Short string denoting error
+    fullName: errorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorCode: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> AuthError.errorCode
+  - name: errorMessage
+    uid: '@azure/msal-browser.BrowserAuthError.errorMessage'
+    package: '@azure/msal-browser'
+    summary: Detailed description of error
+    fullName: errorMessage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> AuthError.errorMessage
+  - name: message
+    uid: '@azure/msal-browser.BrowserAuthError.message'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.message
+  - name: name
+    uid: '@azure/msal-browser.BrowserAuthError.name'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.name
+  - name: stack
+    uid: '@azure/msal-browser.BrowserAuthError.stack'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: stack
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stack?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.stack
+  - name: subError
+    uid: '@azure/msal-browser.BrowserAuthError.subError'
+    package: '@azure/msal-browser'
+    summary: Describes the subclass of an error
+    fullName: subError
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subError: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> AuthError.subError
+inheritedMethods:
+  - name: createPostRequestFailed(string)
+    uid: '@azure/msal-browser.BrowserAuthError.createPostRequestFailed'
+    package: '@azure/msal-browser'
+    summary: Creates an error for post request failures.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createPostRequestFailed(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: AuthError
+    inheritanceDescription: <b>Inherited From</b> AuthError.createPostRequestFailed
+  - name: createUnexpectedError(string)
+    uid: '@azure/msal-browser.BrowserAuthError.createUnexpectedError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error that is thrown when something unexpected happens in the
+      library.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUnexpectedError(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: AuthError
+    inheritanceDescription: <b>Inherited From</b> AuthError.createUnexpectedError
+  - name: setCorrelationId(string)
+    uid: '@azure/msal-browser.BrowserAuthError.setCorrelationId'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setCorrelationId(correlationId: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+    inheritanceDescription: <b>Inherited From</b> AuthError.setCorrelationId
+methods:
+  - name: createAuthCodeOrNativeAccountIdRequiredError()
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createAuthCodeOrNativeAccountIdRequiredError
+    package: '@azure/msal-browser'
+    summary: >-
+      Create an error when an authorization code or native account ID is
+      required but not provided
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createAuthCodeOrNativeAccountIdRequiredError():
+        BrowserAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createAuthCodeRequiredError()
+    uid: '@azure/msal-browser.BrowserAuthError.createAuthCodeRequiredError'
+    package: '@azure/msal-browser'
+    summary: Create an error when an authorization code is required but not provided
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createAuthCodeRequiredError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createAuthRequestNotSetError()
+    uid: '@azure/msal-browser.BrowserAuthError.createAuthRequestNotSetError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when handleCodeResponse is called before
+      initiateAuthRequest (InteractionHandler)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createAuthRequestNotSetError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createBlockAcquireTokenInPopupsError()
+    uid: '@azure/msal-browser.BrowserAuthError.createBlockAcquireTokenInPopupsError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when a popup attempts to call an acquireToken API
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createBlockAcquireTokenInPopupsError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createBlockReloadInHiddenIframeError()
+    uid: '@azure/msal-browser.BrowserAuthError.createBlockReloadInHiddenIframeError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when an auth reload is done inside an iframe.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createBlockReloadInHiddenIframeError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createCryptoNotAvailableError(string)
+    uid: '@azure/msal-browser.BrowserAuthError.createCryptoNotAvailableError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when the crypto object is unavailable.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createCryptoNotAvailableError(errDetail: string):
+        BrowserAuthError
+      parameters:
+        - id: errDetail
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createDatabaseNotOpenError()
+    uid: '@azure/msal-browser.BrowserAuthError.createDatabaseNotOpenError'
+    package: '@azure/msal-browser'
+    summary: Create an error thrown when indexDB database is not open
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createDatabaseNotOpenError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createDatabaseUnavailableError()
+    uid: '@azure/msal-browser.BrowserAuthError.createDatabaseUnavailableError'
+    package: '@azure/msal-browser'
+    summary: Create an error when IndexedDB is unavailable
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createDatabaseUnavailableError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createEmptyHashError(string)
+    uid: '@azure/msal-browser.BrowserAuthError.createEmptyHashError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when the hash string value is unexpectedly empty.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createEmptyHashError(hashValue: string):
+        BrowserAuthError
+      parameters:
+        - id: hashValue
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createEmptyNavigationUriError()
+    uid: '@azure/msal-browser.BrowserAuthError.createEmptyNavigationUriError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when the navigation URI is empty.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createEmptyNavigationUriError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createEmptyWindowCreatedError()
+    uid: '@azure/msal-browser.BrowserAuthError.createEmptyWindowCreatedError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when window.open returns an empty window object.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createEmptyWindowCreatedError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createFailedToParseNetworkResponseError(string)
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createFailedToParseNetworkResponseError
+    package: '@azure/msal-browser'
+    summary: Create an error thrown when network client fails to parse network response
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createFailedToParseNetworkResponseError(endpoint:
+        string): BrowserAuthError
+      parameters:
+        - id: endpoint
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: 'createGetRequestFailedError(string, string)'
+    uid: '@azure/msal-browser.BrowserAuthError.createGetRequestFailedError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Create an error thrown when get request fails due to reasons other than
+      internet connectivity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createGetRequestFailedError(errorDesc: string, endpoint:
+        string): BrowserAuthError
+      parameters:
+        - id: errorDesc
+          type: string
+          description: ''
+        - id: endpoint
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createHashDoesNotContainKnownPropertiesError()
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createHashDoesNotContainKnownPropertiesError
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when the hash string value does not contain known
+      properties
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createHashDoesNotContainKnownPropertiesError():
+        BrowserAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createHashDoesNotContainStateError()
+    uid: '@azure/msal-browser.BrowserAuthError.createHashDoesNotContainStateError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when the hash string value is unexpectedly empty.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createHashDoesNotContainStateError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createHttpMethodNotImplementedError(string)
+    uid: '@azure/msal-browser.BrowserAuthError.createHttpMethodNotImplementedError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when an HTTP method hasn't been implemented by the
+      browser class.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createHttpMethodNotImplementedError(method: string):
+        BrowserAuthError
+      parameters:
+        - id: method
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createIframeClosedPrematurelyError()
+    uid: '@azure/msal-browser.BrowserAuthError.createIframeClosedPrematurelyError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when an iframe is found to be closed before the
+      timeout is reached.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createIframeClosedPrematurelyError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createInteractionInProgressError()
+    uid: '@azure/msal-browser.BrowserAuthError.createInteractionInProgressError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when a browser interaction (redirect or popup) is
+      in progress.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createInteractionInProgressError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createInvalidCacheTypeError()
+    uid: '@azure/msal-browser.BrowserAuthError.createInvalidCacheTypeError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown if cache type is invalid.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createInvalidCacheTypeError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createMonitorIframeTimeoutError()
+    uid: '@azure/msal-browser.BrowserAuthError.createMonitorIframeTimeoutError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when monitorIframeFromHash times out for a given
+      iframe.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createMonitorIframeTimeoutError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createMonitorPopupTimeoutError()
+    uid: '@azure/msal-browser.BrowserAuthError.createMonitorPopupTimeoutError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when monitorPopupFromHash times out for a given
+      popup.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createMonitorPopupTimeoutError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createNativeBrokerCalledBeforeInitialize()
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createNativeBrokerCalledBeforeInitialize
+    package: '@azure/msal-browser'
+    summary: Create an error thrown when the initialize function hasn't been called
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createNativeBrokerCalledBeforeInitialize():
+        BrowserAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createNativeConnectionNotEstablishedError()
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createNativeConnectionNotEstablishedError
+    package: '@azure/msal-browser'
+    summary: Create an error when native connection has not been established
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createNativeConnectionNotEstablishedError():
+        BrowserAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createNativeExtensionNotInstalledError()
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createNativeExtensionNotInstalledError
+    package: '@azure/msal-browser'
+    summary: Create an error thrown when browser extension is not installed
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createNativeExtensionNotInstalledError():
+        BrowserAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createNativeHandshakeTimeoutError()
+    uid: '@azure/msal-browser.BrowserAuthError.createNativeHandshakeTimeoutError'
+    package: '@azure/msal-browser'
+    summary: Create an error thrown when Handshake with browser extension times out
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createNativeHandshakeTimeoutError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createNativePromptParameterNotSupportedError()
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createNativePromptParameterNotSupportedError
+    package: '@azure/msal-browser'
+    summary: >-
+      Create an error thrown when requesting a token directly from the native
+      platform with an unsupported prompt parameter e.g. select_account, login
+      or create
+
+      These requests must go through eSTS to ensure eSTS is aware of the new
+      account
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createNativePromptParameterNotSupportedError():
+        BrowserAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createNoAccountError()
+    uid: '@azure/msal-browser.BrowserAuthError.createNoAccountError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when the account object is not provided in the
+      acquireTokenSilent API.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createNoAccountError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createNoCachedAuthorityError()
+    uid: '@azure/msal-browser.BrowserAuthError.createNoCachedAuthorityError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when the authority could not be retrieved from the
+      cache
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createNoCachedAuthorityError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createNonBrowserEnvironmentError()
+    uid: '@azure/msal-browser.BrowserAuthError.createNonBrowserEnvironmentError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Create an error thrown when login and token requests are made from a
+      non-browser environment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createNonBrowserEnvironmentError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createNoNetworkConnectivityError()
+    uid: '@azure/msal-browser.BrowserAuthError.createNoNetworkConnectivityError'
+    package: '@azure/msal-browser'
+    summary: Create an error thrown when token fetch fails due to no internet
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createNoNetworkConnectivityError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createNoTokenRequestCacheError()
+    uid: '@azure/msal-browser.BrowserAuthError.createNoTokenRequestCacheError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when the token request could not be retrieved from
+      the cache
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createNoTokenRequestCacheError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createPkceNotGeneratedError(string)
+    uid: '@azure/msal-browser.BrowserAuthError.createPkceNotGeneratedError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when PKCE is not implemented.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createPkceNotGeneratedError(errDetail: string):
+        BrowserAuthError
+      parameters:
+        - id: errDetail
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createPopupWindowError(string)
+    uid: '@azure/msal-browser.BrowserAuthError.createPopupWindowError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when the popup window could not be opened.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createPopupWindowError(errDetail?: string):
+        BrowserAuthError
+      parameters:
+        - id: errDetail
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: 'createPostRequestFailedError(string, string)'
+    uid: '@azure/msal-browser.BrowserAuthError.createPostRequestFailedError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Create an error thrown when token fetch fails due to reasons other than
+      internet connectivity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createPostRequestFailedError(errorDesc: string,
+        endpoint: string): BrowserAuthError
+      parameters:
+        - id: errorDesc
+          type: string
+          description: ''
+        - id: endpoint
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createRedirectInIframeError(boolean)
+    uid: '@azure/msal-browser.BrowserAuthError.createRedirectInIframeError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when navigateWindow is called inside an iframe or
+      brokered applications.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createRedirectInIframeError(windowParentCheck: boolean):
+        BrowserAuthError
+      parameters:
+        - id: windowParentCheck
+          type: boolean
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createSigningKeyNotFoundInStorageError(string)
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createSigningKeyNotFoundInStorageError
+    package: '@azure/msal-browser'
+    summary: >-
+      Create an error thrown when the queried cryptographic key is not found in
+      IndexedDB
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createSigningKeyNotFoundInStorageError(keyId: string):
+        BrowserAuthError
+      parameters:
+        - id: keyId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createSilentLogoutUnsupportedError()
+    uid: '@azure/msal-browser.BrowserAuthError.createSilentLogoutUnsupportedError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when the logout API is called on any of the silent
+      interaction clients
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createSilentLogoutUnsupportedError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createSilentPromptValueError(string)
+    uid: '@azure/msal-browser.BrowserAuthError.createSilentPromptValueError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when a given prompt value is invalid for silent
+      requests.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createSilentPromptValueError(givenPrompt: string):
+        BrowserAuthError
+      parameters:
+        - id: givenPrompt
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createStateInteractionTypeMismatchError()
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createStateInteractionTypeMismatchError
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when the state value in the hash does not match
+      the interaction type of the API attempting to consume it.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createStateInteractionTypeMismatchError():
+        BrowserAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createUnableToAcquireTokenFromNativePlatformError()
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createUnableToAcquireTokenFromNativePlatformError
+    package: '@azure/msal-browser'
+    summary: Create an error when native token acquisition is not possible
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createUnableToAcquireTokenFromNativePlatformError():
+        BrowserAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createUnableToLoadTokenError(string)
+    uid: '@azure/msal-browser.BrowserAuthError.createUnableToLoadTokenError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Create an error thrown when the necessary information is not available to
+      sideload tokens
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createUnableToLoadTokenError(errorDetail: string):
+        BrowserAuthError
+      parameters:
+        - id: errorDetail
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createUnableToParseStateError()
+    uid: '@azure/msal-browser.BrowserAuthError.createUnableToParseStateError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when the hash string value is unexpectedly empty.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUnableToParseStateError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createUnableToParseTokenRequestCacheError()
+    uid: >-
+      @azure/msal-browser.BrowserAuthError.createUnableToParseTokenRequestCacheError
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates an error thrown when the cached token request could not be
+      retrieved from the cache
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createUnableToParseTokenRequestCacheError():
+        BrowserAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+  - name: createUserCancelledError()
+    uid: '@azure/msal-browser.BrowserAuthError.createUserCancelledError'
+    package: '@azure/msal-browser'
+    summary: Creates an error thrown when the user closes a popup.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUserCancelledError(): BrowserAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.BrowserAuthError" />
+extends: AuthError

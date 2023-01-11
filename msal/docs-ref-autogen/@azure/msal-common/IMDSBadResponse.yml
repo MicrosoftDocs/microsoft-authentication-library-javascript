@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: IMDSBadResponse
+uid: '@azure/msal-common.IMDSBadResponse'
+package: '@azure/msal-common'
+summary: ''
+fullName: IMDSBadResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: 'type IMDSBadResponse = { error: string, newest-versions: Array<string> }'

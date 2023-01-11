@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: InteractionParams
+uid: '@azure/msal-browser.InteractionParams'
+package: '@azure/msal-browser'
+summary: ''
+fullName: InteractionParams
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type InteractionParams = Object

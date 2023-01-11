@@ -1,0 +1,32 @@
+### YamlMime:TSType
+name: Base64Decode
+uid: '@azure/msal-browser.Base64Decode'
+package: '@azure/msal-browser'
+summary: >-
+  Class which exposes APIs to decode base64 strings to plaintext. See here for
+  implementation details:
+
+  https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Solution_2_%E2%80%93_JavaScript's_UTF-16_%3E_UTF-8_%3E_base64
+fullName: Base64Decode
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: decode(string)
+    uid: '@azure/msal-browser.Base64Decode.decode'
+    package: '@azure/msal-browser'
+    summary: Returns a URL-safe plaintext decoded string from b64 encoded input.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function decode(input: string): string'
+      parameters:
+        - id: input
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: string

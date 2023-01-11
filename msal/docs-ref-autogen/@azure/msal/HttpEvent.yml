@@ -1,0 +1,312 @@
+### YamlMime:TSType
+name: HttpEvent
+uid: '@azure/msal.HttpEvent'
+package: '@azure/msal'
+summary: ''
+fullName: HttpEvent
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'HttpEvent(string, string)'
+    uid: '@azure/msal.HttpEvent.constructor'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new HttpEvent(correlationId: string, eventLabel: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+        - id: eventLabel
+          type: string
+          description: ''
+properties:
+  - name: apiVersion
+    uid: '@azure/msal.HttpEvent.apiVersion'
+    package: '@azure/msal'
+    summary: ''
+    fullName: apiVersion
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'apiVersion: string'
+      return:
+        description: ''
+        type: string
+  - name: httpMethod
+    uid: '@azure/msal.HttpEvent.httpMethod'
+    package: '@azure/msal'
+    summary: ''
+    fullName: httpMethod
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'httpMethod: string'
+      return:
+        description: ''
+        type: string
+  - name: httpPath
+    uid: '@azure/msal.HttpEvent.httpPath'
+    package: '@azure/msal'
+    summary: ''
+    fullName: httpPath
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'httpPath: string'
+      return:
+        description: ''
+        type: string
+  - name: httpResponseStatus
+    uid: '@azure/msal.HttpEvent.httpResponseStatus'
+    package: '@azure/msal'
+    summary: ''
+    fullName: httpResponseStatus
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'httpResponseStatus: number'
+      return:
+        description: ''
+        type: number
+  - name: oAuthErrorCode
+    uid: '@azure/msal.HttpEvent.oAuthErrorCode'
+    package: '@azure/msal'
+    summary: ''
+    fullName: oAuthErrorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'oAuthErrorCode: string'
+      return:
+        description: ''
+        type: string
+  - name: queryParams
+    uid: '@azure/msal.HttpEvent.queryParams'
+    package: '@azure/msal'
+    summary: ''
+    fullName: queryParams
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'queryParams: any'
+      return:
+        description: ''
+        type: any
+  - name: requestIdHeader
+    uid: '@azure/msal.HttpEvent.requestIdHeader'
+    package: '@azure/msal'
+    summary: ''
+    fullName: requestIdHeader
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'requestIdHeader: string'
+      return:
+        description: ''
+        type: string
+  - name: serverErrorCode
+    uid: '@azure/msal.HttpEvent.serverErrorCode'
+    package: '@azure/msal'
+    summary: ''
+    fullName: serverErrorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'serverErrorCode: string'
+      return:
+        description: ''
+        type: string
+  - name: serverSubErrorCode
+    uid: '@azure/msal.HttpEvent.serverSubErrorCode'
+    package: '@azure/msal'
+    summary: ''
+    fullName: serverSubErrorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'serverSubErrorCode: string'
+      return:
+        description: ''
+        type: string
+  - name: speInfo
+    uid: '@azure/msal.HttpEvent.speInfo'
+    package: '@azure/msal'
+    summary: >-
+      Indicates whether the request was executed on a ring serving SPE traffic.
+
+      An empty string indicates this occurred on an outer ring, and the string
+      "I"
+
+      indicates the request occurred on the inner ring
+    fullName: speInfo
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'speInfo: string'
+      return:
+        description: ''
+        type: string
+  - name: url
+    uid: '@azure/msal.HttpEvent.url'
+    package: '@azure/msal'
+    summary: ''
+    fullName: url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'url: string'
+      return:
+        description: ''
+        type: string
+  - name: userAgent
+    uid: '@azure/msal.HttpEvent.userAgent'
+    package: '@azure/msal'
+    summary: ''
+    fullName: userAgent
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'userAgent: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
+  - name: displayName
+    uid: '@azure/msal.HttpEvent.displayName'
+    package: '@azure/msal'
+    summary: ''
+    fullName: displayName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'displayName: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.displayName](xref:@azure/msal.TelemetryEvent.displayName)
+  - name: eventId
+    uid: '@azure/msal.HttpEvent.eventId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: eventId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.eventId](xref:@azure/msal.TelemetryEvent.eventId)
+  - name: eventName
+    uid: '@azure/msal.HttpEvent.eventName'
+    package: '@azure/msal'
+    summary: ''
+    fullName: eventName
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'eventName: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.eventName](xref:@azure/msal.TelemetryEvent.eventName)
+  - name: key
+    uid: '@azure/msal.HttpEvent.key'
+    package: '@azure/msal'
+    summary: ''
+    fullName: key
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'key: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.key](xref:@azure/msal.TelemetryEvent.key)
+  - name: telemetryCorrelationId
+    uid: '@azure/msal.HttpEvent.telemetryCorrelationId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: telemetryCorrelationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'telemetryCorrelationId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.telemetryCorrelationId](xref:@azure/msal.TelemetryEvent.telemetryCorrelationId)
+inheritedMethods:
+  - name: get()
+    uid: '@azure/msal.HttpEvent.get'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function get(): object'
+      return:
+        description: ''
+        type: object
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.get](xref:@azure/msal.TelemetryEvent.get)
+  - name: start()
+    uid: '@azure/msal.HttpEvent.start'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function start()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.start](xref:@azure/msal.TelemetryEvent.start)
+  - name: stop()
+    uid: '@azure/msal.HttpEvent.stop'
+    package: '@azure/msal'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function stop()
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [TelemetryEvent.stop](xref:@azure/msal.TelemetryEvent.stop)
+extends: <xref uid="@azure/msal.TelemetryEvent" />

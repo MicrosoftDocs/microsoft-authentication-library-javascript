@@ -1,0 +1,26 @@
+### YamlMime:TSEnum
+name: CacheAccountType
+uid: '@azure/msal-common.CacheAccountType'
+package: '@azure/msal-common'
+summary: Account types in Cache
+fullName: CacheAccountType
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ADFS_ACCOUNT_TYPE
+    uid: '@azure/msal-common.CacheAccountType.ADFS_ACCOUNT_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: GENERIC_ACCOUNT_TYPE
+    uid: '@azure/msal-common.CacheAccountType.GENERIC_ACCOUNT_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: MSAV1_ACCOUNT_TYPE
+    uid: '@azure/msal-common.CacheAccountType.MSAV1_ACCOUNT_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: MSSTS_ACCOUNT_TYPE
+    uid: '@azure/msal-common.CacheAccountType.MSSTS_ACCOUNT_TYPE'
+    package: '@azure/msal-common'
+    summary: ''

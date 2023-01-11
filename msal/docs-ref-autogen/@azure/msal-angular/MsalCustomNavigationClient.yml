@@ -1,0 +1,86 @@
+### YamlMime:TSType
+name: MsalCustomNavigationClient
+uid: '@azure/msal-angular.MsalCustomNavigationClient'
+package: '@azure/msal-angular'
+summary: >-
+  Custom navigation used for Angular client-side navigation.
+
+  See performance doc for details:
+
+  https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-angular/docs/v2-docs/performance.md
+fullName: MsalCustomNavigationClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'MsalCustomNavigationClient(MsalService, Router, Location)'
+    uid: '@azure/msal-angular.MsalCustomNavigationClient.constructor'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new MsalCustomNavigationClient(authService: MsalService, router: Router,
+        location: Location)
+      parameters:
+        - id: authService
+          type: <xref uid="@azure/msal-angular.MsalService" />
+          description: ''
+        - id: router
+          type: Router
+          description: ''
+        - id: location
+          type: Location
+          description: ''
+inheritedMethods:
+  - name: 'navigateExternal(string, NavigationOptions)'
+    uid: '@azure/msal-angular.MsalCustomNavigationClient.navigateExternal'
+    package: '@azure/msal-angular'
+    summary: >-
+      Navigates to other pages outside the web application i.e. the Identity
+      Provider
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function navigateExternal(url: string, options: NavigationOptions):
+        Promise<boolean>
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: options
+          type: NavigationOptions
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+    inheritanceDescription: <b>Inherited From</b> NavigationClient.navigateExternal
+methods:
+  - name: 'navigateInternal(string, NavigationOptions)'
+    uid: '@azure/msal-angular.MsalCustomNavigationClient.navigateInternal'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function navigateInternal(url: string, options: NavigationOptions):
+        Promise<boolean>
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: options
+          type: NavigationOptions
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+extends: NavigationClient

@@ -1,0 +1,26 @@
+### YamlMime:TSEnum
+name: NativeExtensionMethod
+uid: '@azure/msal-browser.NativeExtensionMethod'
+package: '@azure/msal-browser'
+summary: ''
+fullName: NativeExtensionMethod
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: GetToken
+    uid: '@azure/msal-browser.NativeExtensionMethod.GetToken'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: HandshakeRequest
+    uid: '@azure/msal-browser.NativeExtensionMethod.HandshakeRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: HandshakeResponse
+    uid: '@azure/msal-browser.NativeExtensionMethod.HandshakeResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: Response
+    uid: '@azure/msal-browser.NativeExtensionMethod.Response'
+    package: '@azure/msal-browser'
+    summary: ''

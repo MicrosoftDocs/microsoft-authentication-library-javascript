@@ -1,0 +1,18 @@
+### YamlMime:TSTypeAlias
+name: ServerTelemetryRequest
+uid: '@azure/msal-common.ServerTelemetryRequest'
+package: '@azure/msal-common'
+summary: ''
+fullName: ServerTelemetryRequest
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type ServerTelemetryRequest = {
+    apiId: number,
+    clientId: string,
+    correlationId: string,
+    forceRefresh?: boolean,
+    wrapperSKU?: string,
+    wrapperVer?: string,
+  }

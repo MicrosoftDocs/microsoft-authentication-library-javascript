@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: NetworkResponse
+uid: '@azure/msal-common.NetworkResponse'
+package: '@azure/msal-common'
+summary: ''
+fullName: NetworkResponse<T>
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type NetworkResponse<T> = {
+    body: T,
+    headers: Record<string, string>,
+    status: number,
+  }

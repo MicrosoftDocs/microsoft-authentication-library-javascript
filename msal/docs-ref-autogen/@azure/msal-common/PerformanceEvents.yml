@@ -1,0 +1,146 @@
+### YamlMime:TSEnum
+name: PerformanceEvents
+uid: '@azure/msal-common.PerformanceEvents'
+package: '@azure/msal-common'
+summary: >-
+  Enumeration of operations that are instrumented by have their performance
+  measured by the PerformanceClient.
+fullName: PerformanceEvents
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: AcquireTokenByBroker
+    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenByBroker'
+    package: '@azure/msal-common'
+    summary: Time taken for token acquisition by broker
+  - name: AcquireTokenByCode
+    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenByCode'
+    package: '@azure/msal-common'
+    summary: >-
+      acquireTokenByCode API (msal-browser and msal-node).
+
+      Used to acquire tokens by trading an authorization code against the token
+      endpoint.
+  - name: AcquireTokenByRefreshToken
+    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenByRefreshToken'
+    package: '@azure/msal-common'
+    summary: >-
+      acquireTokenByRefreshToken API (msal-browser and msal-node).
+
+      Used to renew an access token using a refresh token against the token
+      endpoint.
+  - name: AcquireTokenByRefreshTokenInBroker
+    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenByRefreshTokenInBroker'
+    package: '@azure/msal-common'
+    summary: acquireTokenByRefreshToken API in BrokerClientApplication (PW-Broker) .
+  - name: AcquireTokenPopup
+    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenPopup'
+    package: '@azure/msal-common'
+    summary: |-
+      acquireTokenPopup (msal-browser).
+      Used to acquire a new access token interactively through pop ups
+  - name: AcquireTokenSilent
+    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenSilent'
+    package: '@azure/msal-common'
+    summary: >-
+      acquireTokenSilent API (msal-browser and msal-node).
+
+      Used to silently acquire a new access token (from the cache or the
+      network).
+  - name: AcquireTokenSilentAsync
+    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenSilentAsync'
+    package: '@azure/msal-common'
+    summary: |-
+      acquireTokenSilentAsync (msal-browser).
+      Internal API for acquireTokenSilent.
+  - name: BaseClientCreateTokenRequestHeaders
+    uid: '@azure/msal-common.PerformanceEvents.BaseClientCreateTokenRequestHeaders'
+    package: '@azure/msal-common'
+    summary: Time spent creating default headers for requests to token endpoint
+  - name: BrokerHandhshake
+    uid: '@azure/msal-common.PerformanceEvents.BrokerHandhshake'
+    package: '@azure/msal-common'
+    summary: >-
+      Used to measure the time taken for completing embedded-broker handshake
+      (PW-Broker).
+  - name: CryptoOptsGetPublicKeyThumbprint
+    uid: '@azure/msal-common.PerformanceEvents.CryptoOptsGetPublicKeyThumbprint'
+    package: '@azure/msal-common'
+    summary: >-
+      getPublicKeyThumbprint API in CryptoOpts class (msal-browser).
+
+      Used to generate a public/private keypair and generate a public key
+      thumbprint for pop requests.
+  - name: CryptoOptsSignJwt
+    uid: '@azure/msal-common.PerformanceEvents.CryptoOptsSignJwt'
+    package: '@azure/msal-common'
+    summary: |-
+      signJwt API in CryptoOpts class (msal-browser).
+      Used to signed a pop token.
+  - name: FetchAccountIdWithNativeBroker
+    uid: '@azure/msal-common.PerformanceEvents.FetchAccountIdWithNativeBroker'
+    package: '@azure/msal-common'
+    summary: |-
+      acquireToken APIs in msal-browser.
+      Used to make an /authorize endpoint call with native brokering enabled.
+  - name: NativeInteractionClientAcquireToken
+    uid: '@azure/msal-common.PerformanceEvents.NativeInteractionClientAcquireToken'
+    package: '@azure/msal-common'
+    summary: >-
+      acquireToken API in NativeInteractionClient class (msal-browser).
+
+      Used to acquire a token from Native component when native brokering is
+      enabled.
+  - name: RefreshTokenClientAcquireToken
+    uid: '@azure/msal-common.PerformanceEvents.RefreshTokenClientAcquireToken'
+    package: '@azure/msal-common'
+    summary: 'Time taken for acquiring refresh token , records RT size'
+  - name: RefreshTokenClientAcquireTokenWithCachedRefreshToken
+    uid: >-
+      @azure/msal-common.PerformanceEvents.RefreshTokenClientAcquireTokenWithCachedRefreshToken
+    package: '@azure/msal-common'
+    summary: Time taken for acquiring cached refresh token
+  - name: RefreshTokenClientExecuteTokenRequest
+    uid: '@azure/msal-common.PerformanceEvents.RefreshTokenClientExecuteTokenRequest'
+    package: '@azure/msal-common'
+    summary: Time spent on the network for refresh token acquisition
+  - name: SilentCacheClientAcquireToken
+    uid: '@azure/msal-common.PerformanceEvents.SilentCacheClientAcquireToken'
+    package: '@azure/msal-common'
+    summary: |-
+      acquireToken API in the SilentCacheClient class (msal-browser).
+      Used to read access tokens from the cache.
+  - name: SilentIframeClientAcquireToken
+    uid: '@azure/msal-common.PerformanceEvents.SilentIframeClientAcquireToken'
+    package: '@azure/msal-common'
+    summary: >-
+      acquireToken API in the SilentIframeClient class (msal-browser).
+
+      Used to acquire a new set of tokens from the authorize endpoint in a
+      hidden iframe.
+  - name: SilentRefreshClientAcquireToken
+    uid: '@azure/msal-common.PerformanceEvents.SilentRefreshClientAcquireToken'
+    package: '@azure/msal-common'
+    summary: >-
+      acquireToken API in SilentRereshClient (msal-browser).
+
+      Used to acquire a new set of tokens from the token endpoint using a
+      refresh token.
+  - name: SsoSilent
+    uid: '@azure/msal-common.PerformanceEvents.SsoSilent'
+    package: '@azure/msal-common'
+    summary: >-
+      ssoSilent API (msal-browser).
+
+      Used to silently acquire an authorization code and set of tokens using a
+      hidden iframe.
+  - name: StandardInteractionClientGetDiscoveredAuthority
+    uid: >-
+      @azure/msal-common.PerformanceEvents.StandardInteractionClientGetDiscoveredAuthority
+    package: '@azure/msal-common'
+    summary: >-
+      getDiscoveredAuthority API in StandardInteractionClient class
+      (msal-browser).
+
+      Used to load authority metadata for a request.

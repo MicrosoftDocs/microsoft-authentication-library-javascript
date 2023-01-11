@@ -1,0 +1,40 @@
+### YamlMime:TSEnum
+name: API_CODE
+uid: '@azure/msal.API_CODE'
+package: '@azure/msal'
+summary: ''
+fullName: API_CODE
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: AcquireTokenRedirect
+    uid: '@azure/msal.API_CODE.AcquireTokenRedirect'
+    package: '@azure/msal'
+    summary: ''
+    numericValue: 2001
+  - name: AcquireTokenSilent
+    uid: '@azure/msal.API_CODE.AcquireTokenSilent'
+    package: '@azure/msal'
+    summary: ''
+    numericValue: 2002
+  - name: AcquireTokenPopup
+    uid: '@azure/msal.API_CODE.AcquireTokenPopup'
+    package: '@azure/msal'
+    summary: ''
+    numericValue: 2003
+  - name: LoginRedirect
+    uid: '@azure/msal.API_CODE.LoginRedirect'
+    package: '@azure/msal'
+    summary: ''
+    numericValue: 2004
+  - name: LoginPopup
+    uid: '@azure/msal.API_CODE.LoginPopup'
+    package: '@azure/msal'
+    summary: ''
+    numericValue: 2005
+  - name: Logout
+    uid: '@azure/msal.API_CODE.Logout'
+    package: '@azure/msal'
+    summary: ''
+    numericValue: 2006

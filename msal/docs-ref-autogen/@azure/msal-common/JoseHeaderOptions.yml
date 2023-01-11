@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: JoseHeaderOptions
+uid: '@azure/msal-common.JoseHeaderOptions'
+package: '@azure/msal-common'
+summary: ''
+fullName: JoseHeaderOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type JoseHeaderOptions = { alg?: string, kid?: string, typ?: JsonTypes }

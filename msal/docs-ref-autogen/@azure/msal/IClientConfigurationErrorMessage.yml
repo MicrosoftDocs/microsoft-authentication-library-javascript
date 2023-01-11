@@ -1,0 +1,37 @@
+### YamlMime:TSType
+name: IClientConfigurationErrorMessage
+uid: '@azure/msal.IClientConfigurationErrorMessage'
+package: '@azure/msal'
+summary: ''
+fullName: IClientConfigurationErrorMessage
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: code
+    uid: '@azure/msal.IClientConfigurationErrorMessage.code'
+    package: '@azure/msal'
+    summary: ''
+    fullName: code
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'code: string'
+      return:
+        description: ''
+        type: string
+  - name: desc
+    uid: '@azure/msal.IClientConfigurationErrorMessage.desc'
+    package: '@azure/msal'
+    summary: ''
+    fullName: desc
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'desc: string'
+      return:
+        description: ''
+        type: string

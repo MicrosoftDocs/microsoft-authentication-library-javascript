@@ -1,0 +1,19 @@
+### YamlMime:TSTypeAlias
+name: OpenIdConfigResponse
+uid: '@azure/msal-common.OpenIdConfigResponse'
+package: '@azure/msal-common'
+summary: >-
+  Tenant Discovery Response which contains the relevant OAuth endpoints and data
+  needed for authentication and authorization.
+fullName: OpenIdConfigResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type OpenIdConfigResponse = {
+    authorization_endpoint: string,
+    end_session_endpoint?: string,
+    issuer: string,
+    jwks_uri: string,
+    token_endpoint: string,
+  }

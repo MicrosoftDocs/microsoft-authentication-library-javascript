@@ -1,0 +1,18 @@
+### YamlMime:TSEnum
+name: KeyLocation
+uid: '@azure/msal-common.KeyLocation'
+package: '@azure/msal-common'
+summary: ''
+fullName: KeyLocation
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: SW
+    uid: '@azure/msal-common.KeyLocation.SW'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: UHW
+    uid: '@azure/msal-common.KeyLocation.UHW'
+    package: '@azure/msal-common'
+    summary: ''

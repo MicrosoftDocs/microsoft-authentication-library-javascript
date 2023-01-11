@@ -1,0 +1,10 @@
+### YamlMime:TSType
+name: InProgressEvents
+uid: '@azure/msal.InProgressEvents'
+package: '@azure/msal'
+summary: ''
+fullName: InProgressEvents
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface

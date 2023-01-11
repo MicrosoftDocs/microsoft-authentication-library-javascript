@@ -1,0 +1,126 @@
+### YamlMime:TSType
+name: SilentFlowClient
+uid: '@azure/msal-common.SilentFlowClient'
+package: '@azure/msal-common'
+summary: ''
+fullName: SilentFlowClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'SilentFlowClient(ClientConfiguration, IPerformanceClient)'
+    uid: '@azure/msal-common.SilentFlowClient.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SilentFlowClient(configuration: ClientConfiguration,
+        performanceClient?: IPerformanceClient)
+      parameters:
+        - id: configuration
+          type: <xref uid="@azure/msal-common.ClientConfiguration" />
+          description: ''
+        - id: performanceClient
+          type: <xref uid="@azure/msal-common.IPerformanceClient" />
+          description: ''
+inheritedProperties:
+  - name: authority
+    uid: '@azure/msal-common.SilentFlowClient.authority'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authority: Authority'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Authority" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.authority](xref:@azure/msal-common.BaseClient.authority)
+  - name: logger
+    uid: '@azure/msal-common.SilentFlowClient.logger'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: logger
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'logger: Logger'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Logger" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.logger](xref:@azure/msal-common.BaseClient.logger)
+inheritedMethods:
+  - name: updateAuthority(Authority)
+    uid: '@azure/msal-common.SilentFlowClient.updateAuthority'
+    package: '@azure/msal-common'
+    summary: >-
+      Updates the authority object of the client. Endpoint discovery must be
+      completed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function updateAuthority(updatedAuthority: Authority)'
+      parameters:
+        - id: updatedAuthority
+          type: <xref uid="@azure/msal-common.Authority" />
+          description: |+
+
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.updateAuthority](xref:@azure/msal-common.BaseClient.updateAuthority)
+methods:
+  - name: acquireCachedToken(CommonSilentFlowRequest)
+    uid: '@azure/msal-common.SilentFlowClient.acquireCachedToken'
+    package: '@azure/msal-common'
+    summary: Retrieves token from cache or throws an error if it must be refreshed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireCachedToken(request: CommonSilentFlowRequest):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.CommonSilentFlowRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-common.AuthenticationResult" />&gt;
+  - name: acquireToken(CommonSilentFlowRequest)
+    uid: '@azure/msal-common.SilentFlowClient.acquireToken'
+    package: '@azure/msal-common'
+    summary: >-
+      Retrieves a token from cache if it is still valid, or uses the cached
+      refresh token to renew
+
+      the given token and returns the renewed token
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireToken(request: CommonSilentFlowRequest):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.CommonSilentFlowRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-common.AuthenticationResult" />&gt;
+extends: <xref uid="@azure/msal-common.BaseClient" />

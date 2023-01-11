@@ -1,0 +1,38 @@
+### YamlMime:TSEnum
+name: NativeStatusCode
+uid: '@azure/msal-browser.NativeStatusCode'
+package: '@azure/msal-browser'
+summary: ''
+fullName: NativeStatusCode
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ACCOUNT_UNAVAILABLE
+    uid: '@azure/msal-browser.NativeStatusCode.ACCOUNT_UNAVAILABLE'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: DISABLED
+    uid: '@azure/msal-browser.NativeStatusCode.DISABLED'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: NO_NETWORK
+    uid: '@azure/msal-browser.NativeStatusCode.NO_NETWORK'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: PERSISTENT_ERROR
+    uid: '@azure/msal-browser.NativeStatusCode.PERSISTENT_ERROR'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: TRANSIENT_ERROR
+    uid: '@azure/msal-browser.NativeStatusCode.TRANSIENT_ERROR'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: USER_CANCEL
+    uid: '@azure/msal-browser.NativeStatusCode.USER_CANCEL'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: USER_INTERACTION_REQUIRED
+    uid: '@azure/msal-browser.NativeStatusCode.USER_INTERACTION_REQUIRED'
+    package: '@azure/msal-browser'
+    summary: ''

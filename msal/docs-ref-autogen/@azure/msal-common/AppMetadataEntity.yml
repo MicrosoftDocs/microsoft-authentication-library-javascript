@@ -1,0 +1,144 @@
+### YamlMime:TSType
+name: AppMetadataEntity
+uid: '@azure/msal-common.AppMetadataEntity'
+package: '@azure/msal-common'
+summary: |
+  APP_METADATA Cache
+  Key:Value Schema:
+
+  Key: appmetadata-<environment>-<client_id>
+
+  Value:
+  {
+       clientId: client ID of the application
+       environment: entity that issued the token, represented as a full host
+       familyId: Family ID identifier, '1' represents Microsoft Family
+  }
+fullName: AppMetadataEntity
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+properties:
+  - name: clientId
+    uid: '@azure/msal-common.AppMetadataEntity.clientId'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: clientId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'clientId: string'
+      return:
+        description: ''
+        type: string
+  - name: environment
+    uid: '@azure/msal-common.AppMetadataEntity.environment'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: environment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'environment: string'
+      return:
+        description: ''
+        type: string
+  - name: familyId
+    uid: '@azure/msal-common.AppMetadataEntity.familyId'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: familyId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'familyId?: string'
+      return:
+        description: ''
+        type: string
+methods:
+  - name: 'createAppMetadataEntity(string, string, string)'
+    uid: '@azure/msal-common.AppMetadataEntity.createAppMetadataEntity'
+    package: '@azure/msal-common'
+    summary: Creates AppMetadataEntity
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createAppMetadataEntity(clientId: string, environment:
+        string, familyId?: string): AppMetadataEntity
+      parameters:
+        - id: clientId
+          type: string
+          description: ''
+        - id: environment
+          type: string
+          description: ''
+        - id: familyId
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AppMetadataEntity" />
+  - name: 'generateAppMetadataCacheKey(string, string)'
+    uid: '@azure/msal-common.AppMetadataEntity.generateAppMetadataCacheKey'
+    package: '@azure/msal-common'
+    summary: Generate AppMetadata Cache Key
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function generateAppMetadataCacheKey(environment: string,
+        clientId: string): string
+      parameters:
+        - id: environment
+          type: string
+          description: ''
+        - id: clientId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: generateAppMetadataKey()
+    uid: '@azure/msal-common.AppMetadataEntity.generateAppMetadataKey'
+    package: '@azure/msal-common'
+    summary: >-
+      Generate AppMetadata Cache Key as per the schema:
+      appmetadata-<environment>-<client_id>
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateAppMetadataKey(): string'
+      return:
+        description: ''
+        type: string
+  - name: 'isAppMetadataEntity(string, object)'
+    uid: '@azure/msal-common.AppMetadataEntity.isAppMetadataEntity'
+    package: '@azure/msal-common'
+    summary: 'Validates an entity: checks for all expected params'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function isAppMetadataEntity(key: string, entity: object):
+        boolean
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: entity
+          type: object
+          description: |+
+
+      return:
+        description: ''
+        type: boolean

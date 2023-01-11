@@ -1,0 +1,22 @@
+### YamlMime:TSEnum
+name: AADAuthorityConstants
+uid: '@azure/msal-common.AADAuthorityConstants'
+package: '@azure/msal-common'
+summary: String constants related to AAD Authority
+fullName: AADAuthorityConstants
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: COMMON
+    uid: '@azure/msal-common.AADAuthorityConstants.COMMON'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CONSUMERS
+    uid: '@azure/msal-common.AADAuthorityConstants.CONSUMERS'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ORGANIZATIONS
+    uid: '@azure/msal-common.AADAuthorityConstants.ORGANIZATIONS'
+    package: '@azure/msal-common'
+    summary: ''

@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: RefreshTokenCache
+uid: '@azure/msal-common.RefreshTokenCache'
+package: '@azure/msal-common'
+summary: ''
+fullName: RefreshTokenCache
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type RefreshTokenCache = Record<string, RefreshTokenEntity>

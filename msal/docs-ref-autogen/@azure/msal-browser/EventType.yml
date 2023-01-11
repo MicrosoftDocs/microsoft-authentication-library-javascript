@@ -1,0 +1,106 @@
+### YamlMime:TSEnum
+name: EventType
+uid: '@azure/msal-browser.EventType'
+package: '@azure/msal-browser'
+summary: ''
+fullName: EventType
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ACCOUNT_ADDED
+    uid: '@azure/msal-browser.EventType.ACCOUNT_ADDED'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: ACCOUNT_REMOVED
+    uid: '@azure/msal-browser.EventType.ACCOUNT_REMOVED'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: ACQUIRE_TOKEN_BY_CODE_FAILURE
+    uid: '@azure/msal-browser.EventType.ACQUIRE_TOKEN_BY_CODE_FAILURE'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: ACQUIRE_TOKEN_BY_CODE_START
+    uid: '@azure/msal-browser.EventType.ACQUIRE_TOKEN_BY_CODE_START'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: ACQUIRE_TOKEN_BY_CODE_SUCCESS
+    uid: '@azure/msal-browser.EventType.ACQUIRE_TOKEN_BY_CODE_SUCCESS'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: ACQUIRE_TOKEN_FAILURE
+    uid: '@azure/msal-browser.EventType.ACQUIRE_TOKEN_FAILURE'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: ACQUIRE_TOKEN_NETWORK_START
+    uid: '@azure/msal-browser.EventType.ACQUIRE_TOKEN_NETWORK_START'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: ACQUIRE_TOKEN_START
+    uid: '@azure/msal-browser.EventType.ACQUIRE_TOKEN_START'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: ACQUIRE_TOKEN_SUCCESS
+    uid: '@azure/msal-browser.EventType.ACQUIRE_TOKEN_SUCCESS'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: HANDLE_REDIRECT_END
+    uid: '@azure/msal-browser.EventType.HANDLE_REDIRECT_END'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: HANDLE_REDIRECT_START
+    uid: '@azure/msal-browser.EventType.HANDLE_REDIRECT_START'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: INITIALIZE_END
+    uid: '@azure/msal-browser.EventType.INITIALIZE_END'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: INITIALIZE_START
+    uid: '@azure/msal-browser.EventType.INITIALIZE_START'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: LOGIN_FAILURE
+    uid: '@azure/msal-browser.EventType.LOGIN_FAILURE'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: LOGIN_START
+    uid: '@azure/msal-browser.EventType.LOGIN_START'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: LOGIN_SUCCESS
+    uid: '@azure/msal-browser.EventType.LOGIN_SUCCESS'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: LOGOUT_END
+    uid: '@azure/msal-browser.EventType.LOGOUT_END'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: LOGOUT_FAILURE
+    uid: '@azure/msal-browser.EventType.LOGOUT_FAILURE'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: LOGOUT_START
+    uid: '@azure/msal-browser.EventType.LOGOUT_START'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: LOGOUT_SUCCESS
+    uid: '@azure/msal-browser.EventType.LOGOUT_SUCCESS'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: POPUP_OPENED
+    uid: '@azure/msal-browser.EventType.POPUP_OPENED'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: SSO_SILENT_FAILURE
+    uid: '@azure/msal-browser.EventType.SSO_SILENT_FAILURE'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: SSO_SILENT_START
+    uid: '@azure/msal-browser.EventType.SSO_SILENT_START'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: SSO_SILENT_SUCCESS
+    uid: '@azure/msal-browser.EventType.SSO_SILENT_SUCCESS'
+    package: '@azure/msal-browser'
+    summary: ''

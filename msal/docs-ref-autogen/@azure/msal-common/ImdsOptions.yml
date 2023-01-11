@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: ImdsOptions
+uid: '@azure/msal-common.ImdsOptions'
+package: '@azure/msal-common'
+summary: ''
+fullName: ImdsOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type ImdsOptions = { headers?: { Metadata: string }, proxyUrl?: string }

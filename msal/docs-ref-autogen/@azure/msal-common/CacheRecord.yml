@@ -1,0 +1,108 @@
+### YamlMime:TSType
+name: CacheRecord
+uid: '@azure/msal-common.CacheRecord'
+package: '@azure/msal-common'
+summary: ''
+fullName: CacheRecord
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      CacheRecord(AccountEntity | null, IdTokenEntity | null, AccessTokenEntity
+      | null, RefreshTokenEntity | null, AppMetadataEntity | null)
+    uid: '@azure/msal-common.CacheRecord.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new CacheRecord(accountEntity?: AccountEntity | null, idTokenEntity?:
+        IdTokenEntity | null, accessTokenEntity?: AccessTokenEntity | null,
+        refreshTokenEntity?: RefreshTokenEntity | null, appMetadataEntity?:
+        AppMetadataEntity | null)
+      parameters:
+        - id: accountEntity
+          type: <xref uid="@azure/msal-common.AccountEntity" /> | null
+          description: ''
+        - id: idTokenEntity
+          type: <xref uid="@azure/msal-common.IdTokenEntity" /> | null
+          description: ''
+        - id: accessTokenEntity
+          type: <xref uid="@azure/msal-common.AccessTokenEntity" /> | null
+          description: ''
+        - id: refreshTokenEntity
+          type: <xref uid="@azure/msal-common.RefreshTokenEntity" /> | null
+          description: ''
+        - id: appMetadataEntity
+          type: <xref uid="@azure/msal-common.AppMetadataEntity" /> | null
+          description: ''
+properties:
+  - name: accessToken
+    uid: '@azure/msal-common.CacheRecord.accessToken'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: accessToken
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'accessToken: AccessTokenEntity | null'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AccessTokenEntity" /> | null
+  - name: account
+    uid: '@azure/msal-common.CacheRecord.account'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: account
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'account: AccountEntity | null'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AccountEntity" /> | null
+  - name: appMetadata
+    uid: '@azure/msal-common.CacheRecord.appMetadata'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: appMetadata
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'appMetadata: AppMetadataEntity | null'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AppMetadataEntity" /> | null
+  - name: idToken
+    uid: '@azure/msal-common.CacheRecord.idToken'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: idToken
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'idToken: IdTokenEntity | null'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.IdTokenEntity" /> | null
+  - name: refreshToken
+    uid: '@azure/msal-common.CacheRecord.refreshToken'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: refreshToken
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'refreshToken: RefreshTokenEntity | null'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.RefreshTokenEntity" /> | null

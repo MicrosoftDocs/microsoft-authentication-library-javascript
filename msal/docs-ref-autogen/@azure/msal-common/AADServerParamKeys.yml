@@ -1,0 +1,202 @@
+### YamlMime:TSEnum
+name: AADServerParamKeys
+uid: '@azure/msal-common.AADServerParamKeys'
+package: '@azure/msal-common'
+summary: Keys in the hashParams sent by AAD Server
+fullName: AADServerParamKeys
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ACCESS_TOKEN
+    uid: '@azure/msal-common.AADServerParamKeys.ACCESS_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CCS_HEADER
+    uid: '@azure/msal-common.AADServerParamKeys.CCS_HEADER'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CLAIMS
+    uid: '@azure/msal-common.AADServerParamKeys.CLAIMS'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CLIENT_ASSERTION
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_ASSERTION'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CLIENT_ASSERTION_TYPE
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_ASSERTION_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CLIENT_ID
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_ID'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CLIENT_INFO
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_INFO'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CLIENT_REQUEST_ID
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_REQUEST_ID'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CLIENT_SECRET
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_SECRET'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CODE
+    uid: '@azure/msal-common.AADServerParamKeys.CODE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CODE_CHALLENGE
+    uid: '@azure/msal-common.AADServerParamKeys.CODE_CHALLENGE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CODE_CHALLENGE_METHOD
+    uid: '@azure/msal-common.AADServerParamKeys.CODE_CHALLENGE_METHOD'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CODE_VERIFIER
+    uid: '@azure/msal-common.AADServerParamKeys.CODE_VERIFIER'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: DEVICE_CODE
+    uid: '@azure/msal-common.AADServerParamKeys.DEVICE_CODE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ERROR
+    uid: '@azure/msal-common.AADServerParamKeys.ERROR'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ERROR_DESCRIPTION
+    uid: '@azure/msal-common.AADServerParamKeys.ERROR_DESCRIPTION'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: EXPIRES_IN
+    uid: '@azure/msal-common.AADServerParamKeys.EXPIRES_IN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: FOCI
+    uid: '@azure/msal-common.AADServerParamKeys.FOCI'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: GRANT_TYPE
+    uid: '@azure/msal-common.AADServerParamKeys.GRANT_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ID_TOKEN
+    uid: '@azure/msal-common.AADServerParamKeys.ID_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ID_TOKEN_HINT
+    uid: '@azure/msal-common.AADServerParamKeys.ID_TOKEN_HINT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: LOGOUT_HINT
+    uid: '@azure/msal-common.AADServerParamKeys.LOGOUT_HINT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: NATIVE_BROKER
+    uid: '@azure/msal-common.AADServerParamKeys.NATIVE_BROKER'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: NONCE
+    uid: '@azure/msal-common.AADServerParamKeys.NONCE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: OBO_ASSERTION
+    uid: '@azure/msal-common.AADServerParamKeys.OBO_ASSERTION'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ON_BEHALF_OF
+    uid: '@azure/msal-common.AADServerParamKeys.ON_BEHALF_OF'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: POST_LOGOUT_URI
+    uid: '@azure/msal-common.AADServerParamKeys.POST_LOGOUT_URI'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: PROMPT
+    uid: '@azure/msal-common.AADServerParamKeys.PROMPT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: REDIRECT_URI
+    uid: '@azure/msal-common.AADServerParamKeys.REDIRECT_URI'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: REFRESH_TOKEN
+    uid: '@azure/msal-common.AADServerParamKeys.REFRESH_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: REQUESTED_TOKEN_USE
+    uid: '@azure/msal-common.AADServerParamKeys.REQUESTED_TOKEN_USE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: REQ_CNF
+    uid: '@azure/msal-common.AADServerParamKeys.REQ_CNF'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: RESPONSE_MODE
+    uid: '@azure/msal-common.AADServerParamKeys.RESPONSE_MODE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: RESPONSE_TYPE
+    uid: '@azure/msal-common.AADServerParamKeys.RESPONSE_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: RETURN_SPA_CODE
+    uid: '@azure/msal-common.AADServerParamKeys.RETURN_SPA_CODE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: SCOPE
+    uid: '@azure/msal-common.AADServerParamKeys.SCOPE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: SESSION_STATE
+    uid: '@azure/msal-common.AADServerParamKeys.SESSION_STATE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: STATE
+    uid: '@azure/msal-common.AADServerParamKeys.STATE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: TOKEN_TYPE
+    uid: '@azure/msal-common.AADServerParamKeys.TOKEN_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_APP_NAME
+    uid: '@azure/msal-common.AADServerParamKeys.X_APP_NAME'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_APP_VER
+    uid: '@azure/msal-common.AADServerParamKeys.X_APP_VER'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_CLIENT_CPU
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_CPU'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_CLIENT_CURR_TELEM
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_CURR_TELEM'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_CLIENT_LAST_TELEM
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_LAST_TELEM'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_CLIENT_OS
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_OS'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_CLIENT_SKU
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_SKU'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_CLIENT_VER
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_VER'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: X_MS_LIB_CAPABILITY
+    uid: '@azure/msal-common.AADServerParamKeys.X_MS_LIB_CAPABILITY'
+    package: '@azure/msal-common'
+    summary: ''

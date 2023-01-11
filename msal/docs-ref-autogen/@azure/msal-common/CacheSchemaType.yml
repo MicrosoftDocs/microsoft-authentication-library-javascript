@@ -1,0 +1,50 @@
+### YamlMime:TSEnum
+name: CacheSchemaType
+uid: '@azure/msal-common.CacheSchemaType'
+package: '@azure/msal-common'
+summary: Credential Type stored in the cache
+fullName: CacheSchemaType
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ACCESS_TOKEN
+    uid: '@azure/msal-common.CacheSchemaType.ACCESS_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ACCOUNT
+    uid: '@azure/msal-common.CacheSchemaType.ACCOUNT'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: APP_METADATA
+    uid: '@azure/msal-common.CacheSchemaType.APP_METADATA'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CREDENTIAL
+    uid: '@azure/msal-common.CacheSchemaType.CREDENTIAL'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: ID_TOKEN
+    uid: '@azure/msal-common.CacheSchemaType.ID_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: REFRESH_TOKEN
+    uid: '@azure/msal-common.CacheSchemaType.REFRESH_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: TELEMETRY
+    uid: '@azure/msal-common.CacheSchemaType.TELEMETRY'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: TEMPORARY
+    uid: '@azure/msal-common.CacheSchemaType.TEMPORARY'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: THROTTLING
+    uid: '@azure/msal-common.CacheSchemaType.THROTTLING'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: UNDEFINED
+    uid: '@azure/msal-common.CacheSchemaType.UNDEFINED'
+    package: '@azure/msal-common'
+    summary: ''

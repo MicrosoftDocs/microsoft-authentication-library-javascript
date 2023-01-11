@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: tokenReceivedCallback
+uid: '@azure/msal.tokenReceivedCallback'
+package: '@azure/msal'
+summary: |-
+  A type alias for a tokenReceivedCallback function.
+  <xref:(tokenReceivedCallback%3Atype)>
+fullName: tokenReceivedCallback
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type tokenReceivedCallback = (response: AuthResponse) => void

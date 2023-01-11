@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: StringDict
+uid: '@azure/msal.StringDict'
+package: '@azure/msal'
+summary: 'Key-Value type to support queryParams, extraQueryParams and claims'
+fullName: StringDict
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: 'type StringDict = [key: string]: string'

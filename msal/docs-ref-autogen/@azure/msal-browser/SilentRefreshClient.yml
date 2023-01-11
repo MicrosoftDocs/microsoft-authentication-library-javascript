@@ -1,0 +1,109 @@
+### YamlMime:TSType
+name: SilentRefreshClient
+uid: '@azure/msal-browser.SilentRefreshClient'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SilentRefreshClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      SilentRefreshClient(BrowserConfiguration, BrowserCacheManager, ICrypto,
+      Logger, EventHandler, INavigationClient, IPerformanceClient,
+      NativeMessageHandler, string)
+    uid: '@azure/msal-browser.SilentRefreshClient.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SilentRefreshClient(config: BrowserConfiguration, storageImpl:
+        BrowserCacheManager, browserCrypto: ICrypto, logger: Logger,
+        eventHandler: EventHandler, navigationClient: INavigationClient,
+        performanceClient: IPerformanceClient, nativeMessageHandler?:
+        NativeMessageHandler, correlationId?: string)
+      parameters:
+        - id: config
+          type: <xref uid="@azure/msal-browser.BrowserConfiguration" />
+          description: ''
+        - id: storageImpl
+          type: <xref uid="@azure/msal-browser.BrowserCacheManager" />
+          description: ''
+        - id: browserCrypto
+          type: ICrypto
+          description: ''
+        - id: logger
+          type: Logger
+          description: ''
+        - id: eventHandler
+          type: <xref uid="@azure/msal-browser.EventHandler" />
+          description: ''
+        - id: navigationClient
+          type: <xref uid="@azure/msal-browser.INavigationClient" />
+          description: ''
+        - id: performanceClient
+          type: IPerformanceClient
+          description: ''
+        - id: nativeMessageHandler
+          type: <xref uid="@azure/msal-browser.NativeMessageHandler" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+inheritedMethods:
+  - name: getRedirectUri(string)
+    uid: '@azure/msal-browser.SilentRefreshClient.getRedirectUri'
+    package: '@azure/msal-browser'
+    summary: Use to get the redirect uri configured in MSAL or null.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getRedirectUri(requestRedirectUri?: string): string'
+      parameters:
+        - id: requestRedirectUri
+          type: string
+          description: ''
+      return:
+        description: Redirect URL
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseInteractionClient.getRedirectUri](xref:@azure/msal-browser.BaseInteractionClient.getRedirectUri)
+methods:
+  - name: acquireToken(CommonSilentFlowRequest)
+    uid: '@azure/msal-browser.SilentRefreshClient.acquireToken'
+    package: '@azure/msal-browser'
+    summary: Exchanges the refresh token for new tokens
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireToken(request: CommonSilentFlowRequest):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: CommonSilentFlowRequest
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult&gt;
+  - name: logout()
+    uid: '@azure/msal-browser.SilentRefreshClient.logout'
+    package: '@azure/msal-browser'
+    summary: Currently Unsupported
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function logout(): Promise<void>'
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+extends: <xref uid="@azure/msal-browser.StandardInteractionClient" />

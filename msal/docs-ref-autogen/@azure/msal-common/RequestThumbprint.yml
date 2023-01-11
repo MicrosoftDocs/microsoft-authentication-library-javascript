@@ -1,0 +1,22 @@
+### YamlMime:TSTypeAlias
+name: RequestThumbprint
+uid: '@azure/msal-common.RequestThumbprint'
+package: '@azure/msal-common'
+summary: Type representing a unique request thumbprint.
+fullName: RequestThumbprint
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type RequestThumbprint = {
+    authenticationScheme?: AuthenticationScheme,
+    authority: string,
+    claims?: string,
+    clientId: string,
+    homeAccountIdentifier?: string,
+    resourceRequestMethod?: string,
+    resourceRequestUri?: string,
+    scopes: Array<string>,
+    shrClaims?: string,
+    sshKid?: string,
+  }

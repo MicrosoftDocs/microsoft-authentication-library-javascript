@@ -1,0 +1,200 @@
+### YamlMime:TSType
+name: ServerError
+uid: '@azure/msal-common.ServerError'
+package: '@azure/msal-common'
+summary: >-
+  Error thrown when there is an error with the server code, for example,
+  unavailability.
+fullName: ServerError
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'ServerError(string, string, string)'
+    uid: '@azure/msal-common.ServerError.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new ServerError(errorCode?: string, errorMessage?: string, subError?:
+        string)
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+        - id: errorMessage
+          type: string
+          description: ''
+        - id: subError
+          type: string
+          description: ''
+inheritedProperties:
+  - name: correlationId
+    uid: '@azure/msal-common.ServerError.correlationId'
+    package: '@azure/msal-common'
+    summary: CorrelationId associated with the error
+    fullName: correlationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'correlationId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.correlationId](xref:@azure/msal-common.AuthError.correlationId)
+  - name: errorCode
+    uid: '@azure/msal-common.ServerError.errorCode'
+    package: '@azure/msal-common'
+    summary: Short string denoting error
+    fullName: errorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorCode: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorCode](xref:@azure/msal-common.AuthError.errorCode)
+  - name: errorMessage
+    uid: '@azure/msal-common.ServerError.errorMessage'
+    package: '@azure/msal-common'
+    summary: Detailed description of error
+    fullName: errorMessage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorMessage](xref:@azure/msal-common.AuthError.errorMessage)
+  - name: message
+    uid: '@azure/msal-common.ServerError.message'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.message
+  - name: name
+    uid: '@azure/msal-common.ServerError.name'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.name
+  - name: stack
+    uid: '@azure/msal-common.ServerError.stack'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: stack
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stack?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.stack
+  - name: subError
+    uid: '@azure/msal-common.ServerError.subError'
+    package: '@azure/msal-common'
+    summary: Describes the subclass of an error
+    fullName: subError
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subError: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.subError](xref:@azure/msal-common.AuthError.subError)
+inheritedMethods:
+  - name: createPostRequestFailed(string)
+    uid: '@azure/msal-common.ServerError.createPostRequestFailed'
+    package: '@azure/msal-common'
+    summary: Creates an error for post request failures.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createPostRequestFailed(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.createPostRequestFailed](xref:@azure/msal-common.AuthError.createPostRequestFailed)
+  - name: createUnexpectedError(string)
+    uid: '@azure/msal-common.ServerError.createUnexpectedError'
+    package: '@azure/msal-common'
+    summary: >-
+      Creates an error that is thrown when something unexpected happens in the
+      library.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUnexpectedError(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.createUnexpectedError](xref:@azure/msal-common.AuthError.createUnexpectedError)
+  - name: setCorrelationId(string)
+    uid: '@azure/msal-common.ServerError.setCorrelationId'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setCorrelationId(correlationId: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.setCorrelationId](xref:@azure/msal-common.AuthError.setCorrelationId)
+extends: <xref uid="@azure/msal-common.AuthError" />

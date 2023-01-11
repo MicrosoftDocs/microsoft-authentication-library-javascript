@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: RegionDiscoveryMetadata
+uid: '@azure/msal-common.RegionDiscoveryMetadata'
+package: '@azure/msal-common'
+summary: ''
+fullName: RegionDiscoveryMetadata
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type RegionDiscoveryMetadata = {
+    region_outcome?: RegionDiscoveryOutcomes,
+    region_source?: RegionDiscoverySources,
+    region_used?: string,
+  }

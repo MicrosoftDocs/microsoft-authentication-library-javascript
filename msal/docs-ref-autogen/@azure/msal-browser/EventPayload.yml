@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: EventPayload
+uid: '@azure/msal-browser.EventPayload'
+package: '@azure/msal-browser'
+summary: ''
+fullName: EventPayload
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type EventPayload =
+    | AccountInfo
+    | PopupRequest
+    | RedirectRequest
+    | SilentRequest
+    | SsoSilentRequest
+    | EndSessionRequest
+    | AuthenticationResult
+    | PopupEvent
+    | null

@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: MsalBroadcastConfiguration
+uid: '@azure/msal-angular.MsalBroadcastConfiguration'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MsalBroadcastConfiguration
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type MsalBroadcastConfiguration = { eventsToReplay: number }

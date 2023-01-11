@@ -1,0 +1,34 @@
+### YamlMime:TSTypeAlias
+name: DeviceCodeResponse
+uid: '@azure/msal-common.DeviceCodeResponse'
+package: '@azure/msal-common'
+summary: >-
+  DeviceCode returned by the security token service device code endpoint
+  containing information necessary for device code flow.
+
+  - userCode: code which user needs to provide when authenticating at the
+  verification URI
+
+  - deviceCode: code which should be included in the request for the access
+  token
+
+  - verificationUri: URI where user can authenticate
+
+  - expiresIn: expiration time of the device code in seconds
+
+  - interval: interval at which the STS should be polled at
+
+  - message: message which should be displayed to the user
+fullName: DeviceCodeResponse
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type DeviceCodeResponse = {
+    deviceCode: string,
+    expiresIn: number,
+    interval: number,
+    message: string,
+    userCode: string,
+    verificationUri: string,
+  }

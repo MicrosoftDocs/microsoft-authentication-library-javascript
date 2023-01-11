@@ -1,0 +1,26 @@
+### YamlMime:TSEnum
+name: InteractionType
+uid: '@azure/msal-browser.InteractionType'
+package: '@azure/msal-browser'
+summary: ''
+fullName: InteractionType
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: None
+    uid: '@azure/msal-browser.InteractionType.None'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: Popup
+    uid: '@azure/msal-browser.InteractionType.Popup'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: Redirect
+    uid: '@azure/msal-browser.InteractionType.Redirect'
+    package: '@azure/msal-browser'
+    summary: ''
+  - name: Silent
+    uid: '@azure/msal-browser.InteractionType.Silent'
+    package: '@azure/msal-browser'
+    summary: ''

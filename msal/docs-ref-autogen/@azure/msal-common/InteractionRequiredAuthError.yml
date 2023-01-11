@@ -1,0 +1,258 @@
+### YamlMime:TSType
+name: InteractionRequiredAuthError
+uid: '@azure/msal-common.InteractionRequiredAuthError'
+package: '@azure/msal-common'
+summary: Error thrown when user interaction is required.
+fullName: InteractionRequiredAuthError
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'InteractionRequiredAuthError(string, string, string)'
+    uid: '@azure/msal-common.InteractionRequiredAuthError.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new InteractionRequiredAuthError(errorCode?: string, errorMessage?:
+        string, subError?: string)
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+        - id: errorMessage
+          type: string
+          description: ''
+        - id: subError
+          type: string
+          description: ''
+inheritedProperties:
+  - name: correlationId
+    uid: '@azure/msal-common.InteractionRequiredAuthError.correlationId'
+    package: '@azure/msal-common'
+    summary: CorrelationId associated with the error
+    fullName: correlationId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'correlationId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.correlationId](xref:@azure/msal-common.AuthError.correlationId)
+  - name: errorCode
+    uid: '@azure/msal-common.InteractionRequiredAuthError.errorCode'
+    package: '@azure/msal-common'
+    summary: Short string denoting error
+    fullName: errorCode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorCode: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorCode](xref:@azure/msal-common.AuthError.errorCode)
+  - name: errorMessage
+    uid: '@azure/msal-common.InteractionRequiredAuthError.errorMessage'
+    package: '@azure/msal-common'
+    summary: Detailed description of error
+    fullName: errorMessage
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorMessage](xref:@azure/msal-common.AuthError.errorMessage)
+  - name: message
+    uid: '@azure/msal-common.InteractionRequiredAuthError.message'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: message
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.message
+  - name: name
+    uid: '@azure/msal-common.InteractionRequiredAuthError.name'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.name
+  - name: stack
+    uid: '@azure/msal-common.InteractionRequiredAuthError.stack'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: stack
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'stack?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> Error.stack
+  - name: subError
+    uid: '@azure/msal-common.InteractionRequiredAuthError.subError'
+    package: '@azure/msal-common'
+    summary: Describes the subclass of an error
+    fullName: subError
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'subError: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.subError](xref:@azure/msal-common.AuthError.subError)
+inheritedMethods:
+  - name: createPostRequestFailed(string)
+    uid: '@azure/msal-common.InteractionRequiredAuthError.createPostRequestFailed'
+    package: '@azure/msal-common'
+    summary: Creates an error for post request failures.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createPostRequestFailed(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.createPostRequestFailed](xref:@azure/msal-common.AuthError.createPostRequestFailed)
+  - name: createUnexpectedError(string)
+    uid: '@azure/msal-common.InteractionRequiredAuthError.createUnexpectedError'
+    package: '@azure/msal-common'
+    summary: >-
+      Creates an error that is thrown when something unexpected happens in the
+      library.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createUnexpectedError(errDesc: string): AuthError'
+      parameters:
+        - id: errDesc
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.createUnexpectedError](xref:@azure/msal-common.AuthError.createUnexpectedError)
+  - name: setCorrelationId(string)
+    uid: '@azure/msal-common.InteractionRequiredAuthError.setCorrelationId'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setCorrelationId(correlationId: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.setCorrelationId](xref:@azure/msal-common.AuthError.setCorrelationId)
+methods:
+  - name: createNativeAccountUnavailableError()
+    uid: >-
+      @azure/msal-common.InteractionRequiredAuthError.createNativeAccountUnavailableError
+    package: '@azure/msal-common'
+    summary: >-
+      Creates an error thrown when the native broker returns ACCOUNT_UNAVAILABLE
+      status, indicating that the account was removed and interactive sign-in is
+      required
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createNativeAccountUnavailableError():
+        InteractionRequiredAuthError
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.InteractionRequiredAuthError" />
+  - name: createNoTokensFoundError()
+    uid: '@azure/msal-common.InteractionRequiredAuthError.createNoTokensFoundError'
+    package: '@azure/msal-common'
+    summary: >-
+      Creates an error thrown when the authorization code required for a token
+      request is null or empty.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function createNoTokensFoundError(): InteractionRequiredAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.InteractionRequiredAuthError" />
+  - name: 'isInteractionRequiredError(string, string, string)'
+    uid: '@azure/msal-common.InteractionRequiredAuthError.isInteractionRequiredError'
+    package: '@azure/msal-common'
+    summary: >-
+      Helper function used to determine if an error thrown by the server
+      requires interaction to resolve
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function isInteractionRequiredError(errorCode?: string,
+        errorString?: string, subError?: string): boolean
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+        - id: errorString
+          type: string
+          description: ''
+        - id: subError
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+extends: <xref uid="@azure/msal-common.AuthError" />

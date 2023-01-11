@@ -1,0 +1,100 @@
+### YamlMime:TSType
+name: OnBehalfOfClient
+uid: '@azure/msal-common.OnBehalfOfClient'
+package: '@azure/msal-common'
+summary: On-Behalf-Of client
+fullName: OnBehalfOfClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: OnBehalfOfClient(ClientConfiguration)
+    uid: '@azure/msal-common.OnBehalfOfClient.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new OnBehalfOfClient(configuration: ClientConfiguration)'
+      parameters:
+        - id: configuration
+          type: <xref uid="@azure/msal-common.ClientConfiguration" />
+          description: ''
+inheritedProperties:
+  - name: authority
+    uid: '@azure/msal-common.OnBehalfOfClient.authority'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authority: Authority'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Authority" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.authority](xref:@azure/msal-common.BaseClient.authority)
+  - name: logger
+    uid: '@azure/msal-common.OnBehalfOfClient.logger'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: logger
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'logger: Logger'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.Logger" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.logger](xref:@azure/msal-common.BaseClient.logger)
+inheritedMethods:
+  - name: updateAuthority(Authority)
+    uid: '@azure/msal-common.OnBehalfOfClient.updateAuthority'
+    package: '@azure/msal-common'
+    summary: >-
+      Updates the authority object of the client. Endpoint discovery must be
+      completed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function updateAuthority(updatedAuthority: Authority)'
+      parameters:
+        - id: updatedAuthority
+          type: <xref uid="@azure/msal-common.Authority" />
+          description: |+
+
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [BaseClient.updateAuthority](xref:@azure/msal-common.BaseClient.updateAuthority)
+methods:
+  - name: acquireToken(CommonOnBehalfOfRequest)
+    uid: '@azure/msal-common.OnBehalfOfClient.acquireToken'
+    package: '@azure/msal-common'
+    summary: Public API to acquire tokens with on behalf of flow
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireToken(request: CommonOnBehalfOfRequest):
+        Promise<AuthenticationResult | null>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.CommonOnBehalfOfRequest" />
+          description: |+
+
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-common.AuthenticationResult" /> |
+          null&gt;
+extends: <xref uid="@azure/msal-common.BaseClient" />

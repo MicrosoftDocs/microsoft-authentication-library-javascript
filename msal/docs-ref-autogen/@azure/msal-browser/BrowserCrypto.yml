@@ -1,0 +1,150 @@
+### YamlMime:TSType
+name: BrowserCrypto
+uid: '@azure/msal-browser.BrowserCrypto'
+package: '@azure/msal-browser'
+summary: >-
+  This class implements functions used by the browser library to perform
+  cryptography operations such as
+
+  hashing and encoding. It also has helper functions to validate the
+  availability of specific APIs.
+fullName: BrowserCrypto
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'BrowserCrypto(Logger, CryptoOptions)'
+    uid: '@azure/msal-browser.BrowserCrypto.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new BrowserCrypto(logger: Logger, cryptoOptions?: CryptoOptions)'
+      parameters:
+        - id: logger
+          type: Logger
+          description: ''
+        - id: cryptoOptions
+          type: <xref uid="@azure/msal-browser.CryptoOptions" />
+          description: ''
+methods:
+  - name: exportJwk(CryptoKey)
+    uid: '@azure/msal-browser.BrowserCrypto.exportJwk'
+    package: '@azure/msal-browser'
+    summary: Export key as Json Web Key (JWK)
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function exportJwk(key: CryptoKey): Promise<JsonWebKey>'
+      parameters:
+        - id: key
+          type: CryptoKey
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;JsonWebKey&gt;
+  - name: 'generateKeyPair(boolean, Array<KeyUsage>)'
+    uid: '@azure/msal-browser.BrowserCrypto.generateKeyPair'
+    package: '@azure/msal-browser'
+    summary: Generates a keypair based on current keygen algorithm config.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateKeyPair(extractable: boolean, usages: Array<KeyUsage>):
+        Promise<CryptoKeyPair>
+      parameters:
+        - id: extractable
+          type: boolean
+          description: ''
+        - id: usages
+          type: Array&lt;KeyUsage&gt;
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;CryptoKeyPair&gt;
+  - name: getRandomValues(Uint8Array)
+    uid: '@azure/msal-browser.BrowserCrypto.getRandomValues'
+    package: '@azure/msal-browser'
+    summary: Populates buffer with cryptographically random values.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getRandomValues(dataBuffer: Uint8Array): Uint8Array'
+      parameters:
+        - id: dataBuffer
+          type: Uint8Array
+          description: |+
+
+      return:
+        description: ''
+        type: Uint8Array
+  - name: 'importJwk(JsonWebKey, boolean, Array<KeyUsage>)'
+    uid: '@azure/msal-browser.BrowserCrypto.importJwk'
+    package: '@azure/msal-browser'
+    summary: 'Imports key as Json Web Key (JWK), can set extractable and usages.'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function importJwk(key: JsonWebKey, extractable: boolean, usages:
+        Array<KeyUsage>): Promise<CryptoKey>
+      parameters:
+        - id: key
+          type: JsonWebKey
+          description: ''
+        - id: extractable
+          type: boolean
+          description: ''
+        - id: usages
+          type: Array&lt;KeyUsage&gt;
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;CryptoKey&gt;
+  - name: sha256Digest(string)
+    uid: '@azure/msal-browser.BrowserCrypto.sha256Digest'
+    package: '@azure/msal-browser'
+    summary: Returns a sha-256 hash of the given dataString as an ArrayBuffer.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function sha256Digest(dataString: string): Promise<ArrayBuffer>'
+      parameters:
+        - id: dataString
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;ArrayBuffer&gt;
+  - name: 'sign(CryptoKey, ArrayBuffer)'
+    uid: '@azure/msal-browser.BrowserCrypto.sign'
+    package: '@azure/msal-browser'
+    summary: Signs given data with given key
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function sign(key: CryptoKey, data: ArrayBuffer): Promise<ArrayBuffer>'
+      parameters:
+        - id: key
+          type: CryptoKey
+          description: ''
+        - id: data
+          type: ArrayBuffer
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;ArrayBuffer&gt;

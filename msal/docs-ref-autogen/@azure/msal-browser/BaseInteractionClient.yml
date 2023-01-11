@@ -1,0 +1,110 @@
+### YamlMime:TSType
+name: BaseInteractionClient
+uid: '@azure/msal-browser.BaseInteractionClient'
+package: '@azure/msal-browser'
+summary: ''
+fullName: BaseInteractionClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      BaseInteractionClient(BrowserConfiguration, BrowserCacheManager, ICrypto,
+      Logger, EventHandler, INavigationClient, IPerformanceClient,
+      NativeMessageHandler, string)
+    uid: '@azure/msal-browser.BaseInteractionClient.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new BaseInteractionClient(config: BrowserConfiguration, storageImpl:
+        BrowserCacheManager, browserCrypto: ICrypto, logger: Logger,
+        eventHandler: EventHandler, navigationClient: INavigationClient,
+        performanceClient: IPerformanceClient, nativeMessageHandler?:
+        NativeMessageHandler, correlationId?: string)
+      parameters:
+        - id: config
+          type: <xref uid="@azure/msal-browser.BrowserConfiguration" />
+          description: ''
+        - id: storageImpl
+          type: <xref uid="@azure/msal-browser.BrowserCacheManager" />
+          description: ''
+        - id: browserCrypto
+          type: ICrypto
+          description: ''
+        - id: logger
+          type: Logger
+          description: ''
+        - id: eventHandler
+          type: <xref uid="@azure/msal-browser.EventHandler" />
+          description: ''
+        - id: navigationClient
+          type: <xref uid="@azure/msal-browser.INavigationClient" />
+          description: ''
+        - id: performanceClient
+          type: IPerformanceClient
+          description: ''
+        - id: nativeMessageHandler
+          type: <xref uid="@azure/msal-browser.NativeMessageHandler" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+methods:
+  - name: acquireToken(RedirectRequest | PopupRequest | SsoSilentRequest)
+    uid: '@azure/msal-browser.BaseInteractionClient.acquireToken'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireToken(request: RedirectRequest | PopupRequest |
+        SsoSilentRequest): Promise<AuthenticationResult | void>
+      parameters:
+        - id: request
+          type: >-
+            <xref uid="@azure/msal-browser.RedirectRequest" /> | <xref
+            uid="@azure/msal-browser.PopupRequest" /> | <xref
+            uid="@azure/msal-browser.SsoSilentRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult | void&gt;
+  - name: getRedirectUri(string)
+    uid: '@azure/msal-browser.BaseInteractionClient.getRedirectUri'
+    package: '@azure/msal-browser'
+    summary: Use to get the redirect uri configured in MSAL or null.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getRedirectUri(requestRedirectUri?: string): string'
+      parameters:
+        - id: requestRedirectUri
+          type: string
+          description: ''
+      return:
+        description: Redirect URL
+        type: string
+  - name: logout(EndSessionRequest)
+    uid: '@azure/msal-browser.BaseInteractionClient.logout'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function logout(request: EndSessionRequest): Promise<void>'
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.EndSessionRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

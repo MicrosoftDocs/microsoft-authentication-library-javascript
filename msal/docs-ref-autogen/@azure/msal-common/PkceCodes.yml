@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: PkceCodes
+uid: '@azure/msal-common.PkceCodes'
+package: '@azure/msal-common'
+summary: |-
+  The PkceCodes type describes the structure
+  of objects that contain PKCE code
+  challenge and verifier pairs
+fullName: PkceCodes
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type PkceCodes = { challenge: string, verifier: string }

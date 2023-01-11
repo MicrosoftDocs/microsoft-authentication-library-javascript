@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: CacheLocation
+uid: '@azure/msal.CacheLocation'
+package: '@azure/msal'
+summary: |-
+  Cache location options supported by MSAL are:
+  - local storage: MSAL uses browsers local storage to store its cache
+  - session storage: MSAL uses the browsers session storage to store its cache
+fullName: CacheLocation
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type CacheLocation = "localStorage" | "sessionStorage"

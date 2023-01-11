@@ -1,0 +1,18 @@
+### YamlMime:TSEnum
+name: Separators
+uid: '@azure/msal-common.Separators'
+package: '@azure/msal-common'
+summary: Separators used in cache
+fullName: Separators
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: CACHE_KEY_SEPARATOR
+    uid: '@azure/msal-common.Separators.CACHE_KEY_SEPARATOR'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: CLIENT_INFO_SEPARATOR
+    uid: '@azure/msal-common.Separators.CLIENT_INFO_SEPARATOR'
+    package: '@azure/msal-common'
+    summary: ''

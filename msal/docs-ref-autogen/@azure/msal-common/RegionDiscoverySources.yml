@@ -1,0 +1,26 @@
+### YamlMime:TSEnum
+name: RegionDiscoverySources
+uid: '@azure/msal-common.RegionDiscoverySources'
+package: '@azure/msal-common'
+summary: Region Discovery Sources
+fullName: RegionDiscoverySources
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ENVIRONMENT_VARIABLE
+    uid: '@azure/msal-common.RegionDiscoverySources.ENVIRONMENT_VARIABLE'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: FAILED_AUTO_DETECTION
+    uid: '@azure/msal-common.RegionDiscoverySources.FAILED_AUTO_DETECTION'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: IMDS
+    uid: '@azure/msal-common.RegionDiscoverySources.IMDS'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: INTERNAL_CACHE
+    uid: '@azure/msal-common.RegionDiscoverySources.INTERNAL_CACHE'
+    package: '@azure/msal-common'
+    summary: ''

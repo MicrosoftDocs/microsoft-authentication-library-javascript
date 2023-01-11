@@ -1,0 +1,53 @@
+### YamlMime:TSType
+name: XhrClient
+uid: '@azure/msal-browser.XhrClient'
+package: '@azure/msal-browser'
+summary: This client implements the XMLHttpRequest class to send GET and POST requests.
+fullName: XhrClient
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'sendGetRequestAsync<T>(string, NetworkRequestOptions)'
+    uid: '@azure/msal-browser.XhrClient.sendGetRequestAsync'
+    package: '@azure/msal-browser'
+    summary: XhrClient for REST endpoints - Get request
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function sendGetRequestAsync<T>(url: string, options?:
+        NetworkRequestOptions): Promise<NetworkResponse<T>>
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: options
+          type: NetworkRequestOptions
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;NetworkResponse&lt;T&gt;&gt;
+  - name: 'sendPostRequestAsync<T>(string, NetworkRequestOptions)'
+    uid: '@azure/msal-browser.XhrClient.sendPostRequestAsync'
+    package: '@azure/msal-browser'
+    summary: XhrClient for REST endpoints - Post request
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function sendPostRequestAsync<T>(url: string, options?:
+        NetworkRequestOptions): Promise<NetworkResponse<T>>
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: options
+          type: NetworkRequestOptions
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;NetworkResponse&lt;T&gt;&gt;

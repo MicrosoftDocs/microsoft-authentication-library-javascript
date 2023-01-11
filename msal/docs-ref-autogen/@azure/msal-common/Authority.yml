@@ -1,0 +1,429 @@
+### YamlMime:TSType
+name: Authority
+uid: '@azure/msal-common.Authority'
+package: '@azure/msal-common'
+summary: >-
+  The authority class validates the authority URIs used by the user, and
+  retrieves the OpenID Configuration Data from the
+
+  endpoint. It will store the pertinent config data in this object for use
+  during token calls.
+fullName: Authority
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      Authority(string, INetworkModule, ICacheManager, AuthorityOptions, Logger,
+      string)
+    uid: '@azure/msal-common.Authority.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new Authority(authority: string, networkInterface: INetworkModule,
+        cacheManager: ICacheManager, authorityOptions: AuthorityOptions, logger:
+        Logger, proxyUrl?: string)
+      parameters:
+        - id: authority
+          type: string
+          description: ''
+        - id: networkInterface
+          type: <xref uid="@azure/msal-common.INetworkModule" />
+          description: ''
+        - id: cacheManager
+          type: <xref uid="@azure/msal-common.ICacheManager" />
+          description: ''
+        - id: authorityOptions
+          type: <xref uid="@azure/msal-common.AuthorityOptions" />
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
+        - id: proxyUrl
+          type: string
+          description: ''
+properties:
+  - name: authorityType
+    uid: '@azure/msal-common.Authority.authorityType'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: authorityType
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: AuthorityType authorityType
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthorityType" />
+  - name: authorizationEndpoint
+    uid: '@azure/msal-common.Authority.authorizationEndpoint'
+    package: '@azure/msal-common'
+    summary: OAuth /authorize endpoint for requests
+    fullName: authorizationEndpoint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: string authorizationEndpoint
+      return:
+        description: ''
+        type: string
+  - name: canonicalAuthority
+    uid: '@azure/msal-common.Authority.canonicalAuthority'
+    package: '@azure/msal-common'
+    summary: |-
+      A URL that is the authority set by the developer
+      Sets canonical authority.
+    fullName: canonicalAuthority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: string canonicalAuthority
+      return:
+        description: ''
+        type: string
+  - name: canonicalAuthorityUrlComponents
+    uid: '@azure/msal-common.Authority.canonicalAuthorityUrlComponents'
+    package: '@azure/msal-common'
+    summary: Get authority components.
+    fullName: canonicalAuthorityUrlComponents
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: IUri canonicalAuthorityUrlComponents
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.IUri" />
+  - name: deviceCodeEndpoint
+    uid: '@azure/msal-common.Authority.deviceCodeEndpoint'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: deviceCodeEndpoint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: string deviceCodeEndpoint
+      return:
+        description: ''
+        type: string
+  - name: endSessionEndpoint
+    uid: '@azure/msal-common.Authority.endSessionEndpoint'
+    package: '@azure/msal-common'
+    summary: OAuth logout endpoint for requests
+    fullName: endSessionEndpoint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: string endSessionEndpoint
+      return:
+        description: ''
+        type: string
+  - name: hostnameAndPort
+    uid: '@azure/msal-common.Authority.hostnameAndPort'
+    package: '@azure/msal-common'
+    summary: Get hostname and port i.e. login.microsoftonline.com
+    fullName: hostnameAndPort
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: string hostnameAndPort
+      return:
+        description: ''
+        type: string
+  - name: jwksUri
+    uid: '@azure/msal-common.Authority.jwksUri'
+    package: '@azure/msal-common'
+    summary: Jwks_uri for token signing keys
+    fullName: jwksUri
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: string jwksUri
+      return:
+        description: ''
+        type: string
+  - name: options
+    uid: '@azure/msal-common.Authority.options'
+    package: '@azure/msal-common'
+    summary: >-
+      Returns authorityOptions which can be used to reinstantiate a new
+      authority instance
+    fullName: options
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: AuthorityOptions options
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthorityOptions" />
+  - name: protocolMode
+    uid: '@azure/msal-common.Authority.protocolMode'
+    package: '@azure/msal-common'
+    summary: ProtocolMode enum representing the way endpoints are constructed.
+    fullName: protocolMode
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: ProtocolMode protocolMode
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ProtocolMode" />
+  - name: regionDiscoveryMetadata
+    uid: '@azure/msal-common.Authority.regionDiscoveryMetadata'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: regionDiscoveryMetadata
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'regionDiscoveryMetadata: RegionDiscoveryMetadata'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.RegionDiscoveryMetadata" />
+  - name: selfSignedJwtAudience
+    uid: '@azure/msal-common.Authority.selfSignedJwtAudience'
+    package: '@azure/msal-common'
+    summary: OAuth issuer for requests
+    fullName: selfSignedJwtAudience
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: string selfSignedJwtAudience
+      return:
+        description: ''
+        type: string
+  - name: tenant
+    uid: '@azure/msal-common.Authority.tenant'
+    package: '@azure/msal-common'
+    summary: Get tenant for authority.
+    fullName: tenant
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: string tenant
+      return:
+        description: ''
+        type: string
+  - name: tokenEndpoint
+    uid: '@azure/msal-common.Authority.tokenEndpoint'
+    package: '@azure/msal-common'
+    summary: OAuth /token endpoint for requests
+    fullName: tokenEndpoint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: string tokenEndpoint
+      return:
+        description: ''
+        type: string
+methods:
+  - name: 'buildRegionalAuthorityString(string, string, string)'
+    uid: '@azure/msal-common.Authority.buildRegionalAuthorityString'
+    package: '@azure/msal-common'
+    summary: Rebuild the authority string with the region
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function buildRegionalAuthorityString(host: string, region:
+        string, queryString?: string): string
+      parameters:
+        - id: host
+          type: string
+          description: string
+        - id: region
+          type: string
+          description: |
+            string
+        - id: queryString
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: createCloudDiscoveryMetadataFromHost(string)
+    uid: '@azure/msal-common.Authority.createCloudDiscoveryMetadataFromHost'
+    package: '@azure/msal-common'
+    summary: Creates cloud discovery metadata object from a given host
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createCloudDiscoveryMetadataFromHost(host: string):
+        CloudDiscoveryMetadata
+      parameters:
+        - id: host
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.CloudDiscoveryMetadata" />
+  - name: discoveryComplete()
+    uid: '@azure/msal-common.Authority.discoveryComplete'
+    package: '@azure/msal-common'
+    summary: Boolean that returns whethr or not tenant discovery has been completed.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function discoveryComplete(): boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: 'generateAuthority(string, AzureCloudOptions)'
+    uid: '@azure/msal-common.Authority.generateAuthority'
+    package: '@azure/msal-common'
+    summary: helper function to populate the authority based on azureCloudOptions
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function generateAuthority(authorityString: string,
+        azureCloudOptions?: AzureCloudOptions): string
+      parameters:
+        - id: authorityString
+          type: string
+          description: ''
+        - id: azureCloudOptions
+          type: <xref uid="@azure/msal-common.AzureCloudOptions" />
+          description: |+
+
+      return:
+        description: ''
+        type: string
+  - name: >-
+      getCloudDiscoveryMetadataFromNetworkResponse(CloudDiscoveryMetadata[],
+      string)
+    uid: '@azure/msal-common.Authority.getCloudDiscoveryMetadataFromNetworkResponse'
+    package: '@azure/msal-common'
+    summary: >-
+      Searches instance discovery network response for the entry that contains
+      the host in the aliases list
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getCloudDiscoveryMetadataFromNetworkResponse(response:
+        CloudDiscoveryMetadata[], authority: string): CloudDiscoveryMetadata |
+        null
+      parameters:
+        - id: response
+          type: '<xref uid="@azure/msal-common.CloudDiscoveryMetadata" />[]'
+          description: ''
+        - id: authority
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.CloudDiscoveryMetadata" /> | null
+  - name: getPreferredCache()
+    uid: '@azure/msal-common.Authority.getPreferredCache'
+    package: '@azure/msal-common'
+    summary: helper function to generate environment from authority object
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getPreferredCache(): string'
+      return:
+        description: ''
+        type: string
+  - name: isAlias(string)
+    uid: '@azure/msal-common.Authority.isAlias'
+    package: '@azure/msal-common'
+    summary: >-
+      Returns whether or not the provided host is an alias of this authority
+      instance
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function isAlias(host: string): boolean'
+      parameters:
+        - id: host
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: isPublicCloudAuthority(string)
+    uid: '@azure/msal-common.Authority.isPublicCloudAuthority'
+    package: '@azure/msal-common'
+    summary: Checks whether the provided host is that of a public cloud authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function isPublicCloudAuthority(host: string): boolean'
+      parameters:
+        - id: host
+          type: string
+          description: ''
+      return:
+        description: bool
+        type: boolean
+  - name: 'replaceWithRegionalInformation(OpenIdConfigResponse, string)'
+    uid: '@azure/msal-common.Authority.replaceWithRegionalInformation'
+    package: '@azure/msal-common'
+    summary: >-
+      Replace the endpoints in the metadata object with their regional
+      equivalents.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function replaceWithRegionalInformation(metadata:
+        OpenIdConfigResponse, azureRegion: string): OpenIdConfigResponse
+      parameters:
+        - id: metadata
+          type: <xref uid="@azure/msal-common.OpenIdConfigResponse" />
+          description: OpenIdConfigResponse
+        - id: azureRegion
+          type: string
+          description: |
+            string
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.OpenIdConfigResponse" />
+  - name: resolveEndpointsAsync()
+    uid: '@azure/msal-common.Authority.resolveEndpointsAsync'
+    package: '@azure/msal-common'
+    summary: >-
+      Perform endpoint discovery to discover aliases, preferred_cache,
+      preferred_network
+
+      and the /authorize, /token and logout endpoints.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function resolveEndpointsAsync(): Promise<void>'
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

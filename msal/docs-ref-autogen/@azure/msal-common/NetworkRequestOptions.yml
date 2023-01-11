@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: NetworkRequestOptions
+uid: '@azure/msal-common.NetworkRequestOptions'
+package: '@azure/msal-common'
+summary: Options allowed by network request APIs.
+fullName: NetworkRequestOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type NetworkRequestOptions = {
+    body?: string,
+    headers?: Record<string, string>,
+    proxyUrl?: string,
+  }

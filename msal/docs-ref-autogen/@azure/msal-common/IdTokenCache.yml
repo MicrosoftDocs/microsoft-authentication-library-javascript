@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: IdTokenCache
+uid: '@azure/msal-common.IdTokenCache'
+package: '@azure/msal-common'
+summary: ''
+fullName: IdTokenCache
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type IdTokenCache = Record<string, IdTokenEntity>

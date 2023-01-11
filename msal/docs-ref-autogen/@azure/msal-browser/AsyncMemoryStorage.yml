@@ -1,0 +1,151 @@
+### YamlMime:TSType
+name: AsyncMemoryStorage
+uid: '@azure/msal-browser.AsyncMemoryStorage'
+package: '@azure/msal-browser'
+summary: >-
+  This class allows MSAL to store artifacts asynchronously using the
+  DatabaseStorage IndexedDB wrapper,
+
+  backed up with the more volatile MemoryStorage object for cases in which
+  IndexedDB may be unavailable.
+fullName: AsyncMemoryStorage<T>
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'AsyncMemoryStorage(Logger, string)'
+    uid: '@azure/msal-browser.AsyncMemoryStorage.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new AsyncMemoryStorage(logger: Logger, storeName: string)'
+      parameters:
+        - id: logger
+          type: Logger
+          description: ''
+        - id: storeName
+          type: string
+          description: ''
+methods:
+  - name: clearInMemory()
+    uid: '@azure/msal-browser.AsyncMemoryStorage.clearInMemory'
+    package: '@azure/msal-browser'
+    summary: Clears in-memory Map
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function clearInMemory()
+  - name: clearPersistent()
+    uid: '@azure/msal-browser.AsyncMemoryStorage.clearPersistent'
+    package: '@azure/msal-browser'
+    summary: Tries to delete the IndexedDB database
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function clearPersistent(): Promise<boolean>'
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+  - name: containsKey(string)
+    uid: '@azure/msal-browser.AsyncMemoryStorage.containsKey'
+    package: '@azure/msal-browser'
+    summary: Returns true or false if the given key is present in the cache.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function containsKey(key: string): Promise<boolean>'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;
+  - name: getItem(string)
+    uid: '@azure/msal-browser.AsyncMemoryStorage.getItem'
+    package: '@azure/msal-browser'
+    summary: >-
+      Get the item matching the given key. Tries in-memory cache first, then in
+      the asynchronous
+
+      storage object if item isn't found in-memory.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getItem(key: string): Promise<T | null>'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;T | null&gt;
+  - name: getKeys()
+    uid: '@azure/msal-browser.AsyncMemoryStorage.getKeys'
+    package: '@azure/msal-browser'
+    summary: >-
+      Get all the keys from the in-memory cache as an iterable array of strings.
+      If no keys are found, query the keys in the
+
+      asynchronous storage object.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getKeys(): Promise<string[]>'
+      return:
+        description: ''
+        type: 'Promise&lt;string[]&gt;'
+  - name: removeItem(string)
+    uid: '@azure/msal-browser.AsyncMemoryStorage.removeItem'
+    package: '@azure/msal-browser'
+    summary: >-
+      Removes the item matching the key from the in-memory cache, then tries to
+      remove it from the asynchronous storage object.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removeItem(key: string): Promise<void>'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: 'setItem(string, T)'
+    uid: '@azure/msal-browser.AsyncMemoryStorage.setItem'
+    package: '@azure/msal-browser'
+    summary: >-
+      Sets the item in the in-memory cache and then tries to set it in the
+      asynchronous
+
+      storage object with the given key.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setItem(key: string, value: T): Promise<void>'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: value
+          type: T
+          description: |+
+
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

@@ -1,0 +1,24 @@
+### YamlMime:TSType
+name: IAppTokenProvider
+uid: '@azure/msal-common.IAppTokenProvider'
+package: '@azure/msal-common'
+summary: >-
+  Extensibility interface, which allows the app developer to return a token,
+  based on the passed-in parameters, instead of fetching tokens from
+
+  the Identity Provider (AAD).
+
+  Developers need to construct and return an AppTokenProviderResult object back
+  to MSAL. MSAL will cache the token response
+
+  in the same way it would do if the result were comming from AAD.
+
+  This extensibility point is only defined for the client_credential flow, i.e.
+  acquireTokenByClientCredential and
+
+  meant for Azure SDK to enhance Managed Identity support.
+fullName: IAppTokenProvider
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface

@@ -1,0 +1,18 @@
+### YamlMime:TSTypeAlias
+name: AuthorityOptions
+uid: '@azure/msal-common.AuthorityOptions'
+package: '@azure/msal-common'
+summary: ''
+fullName: AuthorityOptions
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type AuthorityOptions = {
+    authorityMetadata: string,
+    azureRegionConfiguration?: AzureRegionConfiguration,
+    cloudDiscoveryMetadata: string,
+    knownAuthorities: Array<string>,
+    protocolMode: ProtocolMode,
+    skipAuthorityMetadataCache?: boolean,
+  }

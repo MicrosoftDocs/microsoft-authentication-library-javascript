@@ -1,0 +1,42 @@
+### YamlMime:TSEnum
+name: InteractionStatus
+uid: '@azure/msal-browser.InteractionStatus'
+package: '@azure/msal-browser'
+summary: >-
+  Types of interaction currently in progress.
+
+  Used in events in wrapper libraries to invoke functions when certain
+  interaction is in progress or all interactions are complete.
+fullName: InteractionStatus
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: AcquireToken
+    uid: '@azure/msal-browser.InteractionStatus.AcquireToken'
+    package: '@azure/msal-browser'
+    summary: Status set for acquireToken calls
+  - name: HandleRedirect
+    uid: '@azure/msal-browser.InteractionStatus.HandleRedirect'
+    package: '@azure/msal-browser'
+    summary: Status set when handleRedirect in progress
+  - name: Login
+    uid: '@azure/msal-browser.InteractionStatus.Login'
+    package: '@azure/msal-browser'
+    summary: Status set when all login calls occuring
+  - name: Logout
+    uid: '@azure/msal-browser.InteractionStatus.Logout'
+    package: '@azure/msal-browser'
+    summary: Status set when logout call occuring
+  - name: None
+    uid: '@azure/msal-browser.InteractionStatus.None'
+    package: '@azure/msal-browser'
+    summary: Status set when interaction is complete
+  - name: SsoSilent
+    uid: '@azure/msal-browser.InteractionStatus.SsoSilent'
+    package: '@azure/msal-browser'
+    summary: Status set for ssoSilent calls
+  - name: Startup
+    uid: '@azure/msal-browser.InteractionStatus.Startup'
+    package: '@azure/msal-browser'
+    summary: Initial status before interaction occurs

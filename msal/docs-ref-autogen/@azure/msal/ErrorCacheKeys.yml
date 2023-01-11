@@ -1,0 +1,22 @@
+### YamlMime:TSEnum
+name: ErrorCacheKeys
+uid: '@azure/msal.ErrorCacheKeys'
+package: '@azure/msal'
+summary: ''
+fullName: ErrorCacheKeys
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: ERROR
+    uid: '@azure/msal.ErrorCacheKeys.ERROR'
+    package: '@azure/msal'
+    summary: ''
+  - name: ERROR_DESC
+    uid: '@azure/msal.ErrorCacheKeys.ERROR_DESC'
+    package: '@azure/msal'
+    summary: ''
+  - name: LOGIN_ERROR
+    uid: '@azure/msal.ErrorCacheKeys.LOGIN_ERROR'
+    package: '@azure/msal'
+    summary: ''

@@ -1,0 +1,28 @@
+### YamlMime:TSTypeAlias
+name: AuthenticationParameters
+uid: '@azure/msal.AuthenticationParameters'
+package: '@azure/msal'
+summary: ''
+fullName: AuthenticationParameters
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type AuthenticationParameters = {
+    account?: Account,
+    authority?: string,
+    authorityMetadata?: string,
+    claimsRequest?: string,
+    correlationId?: string,
+    extraQueryParameters?: StringDict,
+    extraScopesToConsent?: Array<string>,
+    forceRefresh?: boolean,
+    loginHint?: string,
+    onRedirectNavigate?: (url: string) => void | boolean,
+    prompt?: string,
+    redirectStartPage?: string,
+    redirectUri?: string,
+    scopes?: Array<string>,
+    sid?: string,
+    state?: string,
+  }

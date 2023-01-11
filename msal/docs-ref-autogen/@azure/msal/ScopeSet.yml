@@ -1,0 +1,146 @@
+### YamlMime:TSType
+name: ScopeSet
+uid: '@azure/msal.ScopeSet'
+package: '@azure/msal'
+summary: ''
+fullName: ScopeSet
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: 'containsScope(Array<string>, Array<string>)'
+    uid: '@azure/msal.ScopeSet.containsScope'
+    package: '@azure/msal'
+    summary: Check if a given scope is present in the request
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function containsScope(cachedScopes: Array<string>, scopes:
+        Array<string>): boolean
+      parameters:
+        - id: cachedScopes
+          type: Array&lt;string&gt;
+          description: ''
+        - id: scopes
+          type: Array&lt;string&gt;
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: 'isIntersectingScopes(Array<string>, Array<string>)'
+    uid: '@azure/msal.ScopeSet.isIntersectingScopes'
+    package: '@azure/msal'
+    summary: Check if there are dup scopes in a given request
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function isIntersectingScopes(cachedScopes: Array<string>,
+        scopes: Array<string>): boolean
+      parameters:
+        - id: cachedScopes
+          type: Array&lt;string&gt;
+          description: ''
+        - id: scopes
+          type: Array&lt;string&gt;
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: parseScope(Array<string>)
+    uid: '@azure/msal.ScopeSet.parseScope'
+    package: '@azure/msal'
+    summary: Parse the scopes into a formatted scopeList
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function parseScope(scopes: Array<string>): string'
+      parameters:
+        - id: scopes
+          type: Array&lt;string&gt;
+          description: |+
+
+      return:
+        description: ''
+        type: string
+  - name: 'removeElement(Array<string>, string)'
+    uid: '@azure/msal.ScopeSet.removeElement'
+    package: '@azure/msal'
+    summary: Remove one element from a scope array
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function removeElement(scopes: Array<string>, scope: string):
+        Array<string>
+      parameters:
+        - id: scopes
+          type: Array&lt;string&gt;
+          description: ''
+        - id: scope
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Array&lt;string&gt;
+  - name: trimAndConvertArrayToLowerCase(Array<string>)
+    uid: '@azure/msal.ScopeSet.trimAndConvertArrayToLowerCase'
+    package: '@azure/msal'
+    summary: Performs trimAndConvertToLowerCase on string array
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function trimAndConvertArrayToLowerCase(scopes: Array<string>):
+        Array<string>
+      parameters:
+        - id: scopes
+          type: Array&lt;string&gt;
+          description: |+
+
+      return:
+        description: ''
+        type: Array&lt;string&gt;
+  - name: trimAndConvertToLowerCase(string)
+    uid: '@azure/msal.ScopeSet.trimAndConvertToLowerCase'
+    package: '@azure/msal'
+    summary: Trims and converts string to lower case
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function trimAndConvertToLowerCase(scope: string): string'
+      parameters:
+        - id: scope
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: trimScopes(Array<string>)
+    uid: '@azure/msal.ScopeSet.trimScopes'
+    package: '@azure/msal'
+    summary: Trims each scope in scopes array
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function trimScopes(scopes: Array<string>): Array<string>'
+      parameters:
+        - id: scopes
+          type: Array&lt;string&gt;
+          description: |+
+
+      return:
+        description: ''
+        type: Array&lt;string&gt;

@@ -1,0 +1,90 @@
+### YamlMime:TSType
+name: IWindowStorage
+uid: '@azure/msal-browser.IWindowStorage'
+package: '@azure/msal-browser'
+summary: ''
+fullName: IWindowStorage<T>
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+methods:
+  - name: containsKey(string)
+    uid: '@azure/msal-browser.IWindowStorage.containsKey'
+    package: '@azure/msal-browser'
+    summary: Returns true or false if the given key is present in the cache.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function containsKey(key: string): boolean'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: getItem(string)
+    uid: '@azure/msal-browser.IWindowStorage.getItem'
+    package: '@azure/msal-browser'
+    summary: Get the item from the window storage object matching the given key.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getItem(key: string): T | null'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: T | null
+  - name: getKeys()
+    uid: '@azure/msal-browser.IWindowStorage.getKeys'
+    package: '@azure/msal-browser'
+    summary: >-
+      Get all the keys from the window storage object as an iterable array of
+      strings.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getKeys(): string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: removeItem(string)
+    uid: '@azure/msal-browser.IWindowStorage.removeItem'
+    package: '@azure/msal-browser'
+    summary: Removes the item in the window storage object matching the given key.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removeItem(key: string)'
+      parameters:
+        - id: key
+          type: string
+          description: |+
+
+  - name: 'setItem(string, T)'
+    uid: '@azure/msal-browser.IWindowStorage.setItem'
+    package: '@azure/msal-browser'
+    summary: Sets the item in the window storage object with the given key.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setItem(key: string, value: T)'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: value
+          type: T
+          description: |+
+

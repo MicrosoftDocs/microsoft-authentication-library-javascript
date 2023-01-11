@@ -1,0 +1,275 @@
+### YamlMime:TSType
+name: AuthorityMetadataEntity
+uid: '@azure/msal-common.AuthorityMetadataEntity'
+package: '@azure/msal-common'
+summary: ''
+fullName: AuthorityMetadataEntity
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: AuthorityMetadataEntity()
+    uid: '@azure/msal-common.AuthorityMetadataEntity.constructor'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: new AuthorityMetadataEntity()
+properties:
+  - name: aliases
+    uid: '@azure/msal-common.AuthorityMetadataEntity.aliases'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: aliases
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'aliases: Array<string>'
+      return:
+        description: ''
+        type: Array&lt;string&gt;
+  - name: aliasesFromNetwork
+    uid: '@azure/msal-common.AuthorityMetadataEntity.aliasesFromNetwork'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: aliasesFromNetwork
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'aliasesFromNetwork: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: authorization_endpoint
+    uid: '@azure/msal-common.AuthorityMetadataEntity.authorization_endpoint'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: authorization_endpoint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'authorization_endpoint: string'
+      return:
+        description: ''
+        type: string
+  - name: canonical_authority
+    uid: '@azure/msal-common.AuthorityMetadataEntity.canonical_authority'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: canonical_authority
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'canonical_authority: string'
+      return:
+        description: ''
+        type: string
+  - name: endpointsFromNetwork
+    uid: '@azure/msal-common.AuthorityMetadataEntity.endpointsFromNetwork'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: endpointsFromNetwork
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'endpointsFromNetwork: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: end_session_endpoint
+    uid: '@azure/msal-common.AuthorityMetadataEntity.end_session_endpoint'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: end_session_endpoint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'end_session_endpoint?: string'
+      return:
+        description: ''
+        type: string
+  - name: expiresAt
+    uid: '@azure/msal-common.AuthorityMetadataEntity.expiresAt'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: expiresAt
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'expiresAt: number'
+      return:
+        description: ''
+        type: number
+  - name: issuer
+    uid: '@azure/msal-common.AuthorityMetadataEntity.issuer'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: issuer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'issuer: string'
+      return:
+        description: ''
+        type: string
+  - name: jwks_uri
+    uid: '@azure/msal-common.AuthorityMetadataEntity.jwks_uri'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: jwks_uri
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'jwks_uri: string'
+      return:
+        description: ''
+        type: string
+  - name: preferred_cache
+    uid: '@azure/msal-common.AuthorityMetadataEntity.preferred_cache'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: preferred_cache
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'preferred_cache: string'
+      return:
+        description: ''
+        type: string
+  - name: preferred_network
+    uid: '@azure/msal-common.AuthorityMetadataEntity.preferred_network'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: preferred_network
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'preferred_network: string'
+      return:
+        description: ''
+        type: string
+  - name: token_endpoint
+    uid: '@azure/msal-common.AuthorityMetadataEntity.token_endpoint'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: token_endpoint
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'token_endpoint: string'
+      return:
+        description: ''
+        type: string
+methods:
+  - name: 'isAuthorityMetadataEntity(string, object)'
+    uid: '@azure/msal-common.AuthorityMetadataEntity.isAuthorityMetadataEntity'
+    package: '@azure/msal-common'
+    summary: 'Validates an entity: checks for all expected params'
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function isAuthorityMetadataEntity(key: string, entity: object):
+        boolean
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: entity
+          type: object
+          description: |+
+
+      return:
+        description: ''
+        type: boolean
+  - name: isExpired()
+    uid: '@azure/msal-common.AuthorityMetadataEntity.isExpired'
+    package: '@azure/msal-common'
+    summary: Returns whether or not the data needs to be refreshed
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function isExpired(): boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: resetExpiresAt()
+    uid: '@azure/msal-common.AuthorityMetadataEntity.resetExpiresAt'
+    package: '@azure/msal-common'
+    summary: Reset the exiresAt value
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: function resetExpiresAt()
+  - name: updateCanonicalAuthority(string)
+    uid: '@azure/msal-common.AuthorityMetadataEntity.updateCanonicalAuthority'
+    package: '@azure/msal-common'
+    summary: Save the authority that was used to create this cache entry
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function updateCanonicalAuthority(authority: string)'
+      parameters:
+        - id: authority
+          type: string
+          description: |+
+
+  - name: 'updateCloudDiscoveryMetadata(CloudDiscoveryMetadata, boolean)'
+    uid: '@azure/msal-common.AuthorityMetadataEntity.updateCloudDiscoveryMetadata'
+    package: '@azure/msal-common'
+    summary: >-
+      Update the entity with new aliases, preferred_cache and preferred_network
+      values
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateCloudDiscoveryMetadata(metadata: CloudDiscoveryMetadata,
+        fromNetwork: boolean)
+      parameters:
+        - id: metadata
+          type: <xref uid="@azure/msal-common.CloudDiscoveryMetadata" />
+          description: ''
+        - id: fromNetwork
+          type: boolean
+          description: |+
+
+  - name: 'updateEndpointMetadata(OpenIdConfigResponse, boolean)'
+    uid: '@azure/msal-common.AuthorityMetadataEntity.updateEndpointMetadata'
+    package: '@azure/msal-common'
+    summary: Update the entity with new endpoints
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateEndpointMetadata(metadata: OpenIdConfigResponse,
+        fromNetwork: boolean)
+      parameters:
+        - id: metadata
+          type: <xref uid="@azure/msal-common.OpenIdConfigResponse" />
+          description: ''
+        - id: fromNetwork
+          type: boolean
+          description: |+
+

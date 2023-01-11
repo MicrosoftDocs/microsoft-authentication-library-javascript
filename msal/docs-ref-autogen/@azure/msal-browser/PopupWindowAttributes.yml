@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: PopupWindowAttributes
+uid: '@azure/msal-browser.PopupWindowAttributes'
+package: '@azure/msal-browser'
+summary: Popup configurations for setting dimensions and position of popup window
+fullName: PopupWindowAttributes
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type PopupWindowAttributes = {
+    popupPosition?: PopupPosition,
+    popupSize?: PopupSize,
+  }

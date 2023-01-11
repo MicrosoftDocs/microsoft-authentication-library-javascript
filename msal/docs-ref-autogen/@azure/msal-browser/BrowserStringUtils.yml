@@ -1,0 +1,82 @@
+### YamlMime:TSType
+name: BrowserStringUtils
+uid: '@azure/msal-browser.BrowserStringUtils'
+package: '@azure/msal-browser'
+summary: >-
+  Utility functions for strings in a browser. See here for implementation
+  details:
+
+  https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Solution_2_%E2%80%93_JavaScript's_UTF-16_%3E_UTF-8_%3E_base64
+fullName: BrowserStringUtils
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: getSortedObjectString(object)
+    uid: '@azure/msal-browser.BrowserStringUtils.getSortedObjectString'
+    package: '@azure/msal-browser'
+    summary: Returns stringified jwk.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function getSortedObjectString(obj: object): string'
+      parameters:
+        - id: obj
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: stringToArrayBuffer(string)
+    uid: '@azure/msal-browser.BrowserStringUtils.stringToArrayBuffer'
+    package: '@azure/msal-browser'
+    summary: Converst string to ArrayBuffer
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function stringToArrayBuffer(dataString: string): ArrayBuffer'
+      parameters:
+        - id: dataString
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: ArrayBuffer
+  - name: stringToUtf8Arr(string)
+    uid: '@azure/msal-browser.BrowserStringUtils.stringToUtf8Arr'
+    package: '@azure/msal-browser'
+    summary: Converts string to Uint8Array
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function stringToUtf8Arr(sDOMStr: string): Uint8Array'
+      parameters:
+        - id: sDOMStr
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: Uint8Array
+  - name: utf8ArrToString(Uint8Array)
+    uid: '@azure/msal-browser.BrowserStringUtils.utf8ArrToString'
+    package: '@azure/msal-browser'
+    summary: Converts Uint8Array to a string
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function utf8ArrToString(aBytes: Uint8Array): string'
+      parameters:
+        - id: aBytes
+          type: Uint8Array
+          description: |+
+
+      return:
+        description: ''
+        type: string

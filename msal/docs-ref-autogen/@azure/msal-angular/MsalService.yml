@@ -1,0 +1,259 @@
+### YamlMime:TSType
+name: MsalService
+uid: '@azure/msal-angular.MsalService'
+package: '@azure/msal-angular'
+summary: ''
+fullName: MsalService
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: 'MsalService(IPublicClientApplication, Location)'
+    uid: '@azure/msal-angular.MsalService.constructor'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new MsalService(instance: IPublicClientApplication, location: Location)'
+      parameters:
+        - id: instance
+          type: IPublicClientApplication
+          description: ''
+        - id: location
+          type: Location
+          description: ''
+properties:
+  - name: instance
+    uid: '@azure/msal-angular.MsalService.instance'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: instance
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'instance: IPublicClientApplication'
+      return:
+        description: ''
+        type: IPublicClientApplication
+methods:
+  - name: acquireTokenPopup(PopupRequest)
+    uid: '@azure/msal-angular.MsalService.acquireTokenPopup'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenPopup(request: PopupRequest):
+        Observable<AuthenticationResult>
+      parameters:
+        - id: request
+          type: PopupRequest
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;AuthenticationResult&gt;
+  - name: acquireTokenRedirect(RedirectRequest)
+    uid: '@azure/msal-angular.MsalService.acquireTokenRedirect'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenRedirect(request: RedirectRequest):
+        Observable<void>
+      parameters:
+        - id: request
+          type: RedirectRequest
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;void&gt;
+  - name: acquireTokenSilent(SilentRequest)
+    uid: '@azure/msal-angular.MsalService.acquireTokenSilent'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenSilent(silentRequest: SilentRequest):
+        Observable<AuthenticationResult>
+      parameters:
+        - id: silentRequest
+          type: SilentRequest
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;AuthenticationResult&gt;
+  - name: getLogger()
+    uid: '@azure/msal-angular.MsalService.getLogger'
+    package: '@azure/msal-angular'
+    summary: >-
+      Gets logger for msal-angular.
+
+      If no logger set, returns logger instance created with same options as
+      msal-browser
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getLogger(): Logger'
+      return:
+        description: ''
+        type: Logger
+  - name: handleRedirectObservable(string)
+    uid: '@azure/msal-angular.MsalService.handleRedirectObservable'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleRedirectObservable(hash?: string):
+        Observable<AuthenticationResult>
+      parameters:
+        - id: hash
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;AuthenticationResult&gt;
+  - name: initialize()
+    uid: '@azure/msal-angular.MsalService.initialize'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function initialize(): Observable<void>'
+      return:
+        description: ''
+        type: Observable&lt;void&gt;
+  - name: loginPopup(PopupRequest)
+    uid: '@azure/msal-angular.MsalService.loginPopup'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function loginPopup(request?: PopupRequest):
+        Observable<AuthenticationResult>
+      parameters:
+        - id: request
+          type: PopupRequest
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;AuthenticationResult&gt;
+  - name: loginRedirect(RedirectRequest)
+    uid: '@azure/msal-angular.MsalService.loginRedirect'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function loginRedirect(request?: RedirectRequest): Observable<void>'
+      parameters:
+        - id: request
+          type: RedirectRequest
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;void&gt;
+  - name: logout(EndSessionRequest)
+    uid: '@azure/msal-angular.MsalService.logout'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function logout(logoutRequest?: EndSessionRequest): Observable<void>'
+      parameters:
+        - id: logoutRequest
+          type: EndSessionRequest
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;void&gt;
+  - name: logoutPopup(EndSessionPopupRequest)
+    uid: '@azure/msal-angular.MsalService.logoutPopup'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function logoutPopup(logoutRequest?: EndSessionPopupRequest):
+        Observable<void>
+      parameters:
+        - id: logoutRequest
+          type: EndSessionPopupRequest
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;void&gt;
+  - name: logoutRedirect(EndSessionRequest)
+    uid: '@azure/msal-angular.MsalService.logoutRedirect'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function logoutRedirect(logoutRequest?: EndSessionRequest):
+        Observable<void>
+      parameters:
+        - id: logoutRequest
+          type: EndSessionRequest
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;void&gt;
+  - name: setLogger(Logger)
+    uid: '@azure/msal-angular.MsalService.setLogger'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setLogger(logger: Logger)'
+      parameters:
+        - id: logger
+          type: Logger
+          description: ''
+  - name: ssoSilent(SsoSilentRequest)
+    uid: '@azure/msal-angular.MsalService.ssoSilent'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function ssoSilent(request: SsoSilentRequest):
+        Observable<AuthenticationResult>
+      parameters:
+        - id: request
+          type: SsoSilentRequest
+          description: ''
+      return:
+        description: ''
+        type: Observable&lt;AuthenticationResult&gt;

@@ -1,0 +1,98 @@
+### YamlMime:TSType
+name: BrowserStorage
+uid: '@azure/msal-browser.BrowserStorage'
+package: '@azure/msal-browser'
+summary: ''
+fullName: BrowserStorage
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: BrowserStorage(string)
+    uid: '@azure/msal-browser.BrowserStorage.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new BrowserStorage(cacheLocation: string)'
+      parameters:
+        - id: cacheLocation
+          type: string
+          description: ''
+methods:
+  - name: containsKey(string)
+    uid: '@azure/msal-browser.BrowserStorage.containsKey'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function containsKey(key: string): boolean'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: getItem(string)
+    uid: '@azure/msal-browser.BrowserStorage.getItem'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getItem(key: string): string | null'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string | null
+  - name: getKeys()
+    uid: '@azure/msal-browser.BrowserStorage.getKeys'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function getKeys(): string[]'
+      return:
+        description: ''
+        type: 'string[]'
+  - name: removeItem(string)
+    uid: '@azure/msal-browser.BrowserStorage.removeItem'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function removeItem(key: string)'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+  - name: 'setItem(string, string)'
+    uid: '@azure/msal-browser.BrowserStorage.setItem'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function setItem(key: string, value: string)'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: value
+          type: string
+          description: ''

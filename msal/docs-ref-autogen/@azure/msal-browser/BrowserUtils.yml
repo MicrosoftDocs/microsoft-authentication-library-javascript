@@ -1,0 +1,190 @@
+### YamlMime:TSType
+name: BrowserUtils
+uid: '@azure/msal-browser.BrowserUtils'
+package: '@azure/msal-browser'
+summary: Utility class for browser specific functions
+fullName: BrowserUtils
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+methods:
+  - name: blockAcquireTokenInPopups()
+    uid: '@azure/msal-browser.BrowserUtils.blockAcquireTokenInPopups'
+    package: '@azure/msal-browser'
+    summary: Block redirectUri loaded in popup from calling AcquireToken APIs
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: static function blockAcquireTokenInPopups()
+  - name: 'blockNativeBrokerCalledBeforeInitialized(boolean, boolean)'
+    uid: '@azure/msal-browser.BrowserUtils.blockNativeBrokerCalledBeforeInitialized'
+    package: '@azure/msal-browser'
+    summary: >-
+      Throws error if native brokering is enabled but initialize hasn't been
+      called
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function
+        blockNativeBrokerCalledBeforeInitialized(allowNativeBroker: boolean,
+        initialized: boolean)
+      parameters:
+        - id: allowNativeBroker
+          type: boolean
+          description: ''
+        - id: initialized
+          type: boolean
+          description: |+
+
+  - name: blockNonBrowserEnvironment(boolean)
+    uid: '@azure/msal-browser.BrowserUtils.blockNonBrowserEnvironment'
+    package: '@azure/msal-browser'
+    summary: Throws error if token requests are made in non-browser environment
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function blockNonBrowserEnvironment(isBrowserEnvironment:
+        boolean)
+      parameters:
+        - id: isBrowserEnvironment
+          type: boolean
+          description: |
+            Flag indicating if environment is a browser.
+  - name: 'blockRedirectInIframe(InteractionType, boolean)'
+    uid: '@azure/msal-browser.BrowserUtils.blockRedirectInIframe'
+    package: '@azure/msal-browser'
+    summary: Block redirect operations in iframes unless explicitly allowed
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function blockRedirectInIframe(interactionType: InteractionType,
+        allowRedirectInIframe: boolean)
+      parameters:
+        - id: interactionType
+          type: <xref uid="@azure/msal-browser.InteractionType" />
+          description: Interaction type for the request
+        - id: allowRedirectInIframe
+          type: boolean
+          description: |
+            Config value to allow redirects when app is inside an iframe
+  - name: blockReloadInHiddenIframes()
+    uid: '@azure/msal-browser.BrowserUtils.blockReloadInHiddenIframes'
+    package: '@azure/msal-browser'
+    summary: |-
+      Throws error if we have completed an auth and are
+      attempting another auth request inside an iframe.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: static function blockReloadInHiddenIframes()
+  - name: clearHash(Window)
+    uid: '@azure/msal-browser.BrowserUtils.clearHash'
+    package: '@azure/msal-browser'
+    summary: Clears hash from window url.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function clearHash(contentWindow: Window)'
+      parameters:
+        - id: contentWindow
+          type: Window
+          description: ''
+  - name: detectIEOrEdge()
+    uid: '@azure/msal-browser.BrowserUtils.detectIEOrEdge'
+    package: '@azure/msal-browser'
+    summary: >-
+      Returns boolean of whether current browser is an Internet Explorer or Edge
+      browser.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function detectIEOrEdge(): boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: getBrowserNetworkClient()
+    uid: '@azure/msal-browser.BrowserUtils.getBrowserNetworkClient'
+    package: '@azure/msal-browser'
+    summary: Returns best compatible network client object.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function getBrowserNetworkClient(): INetworkModule'
+      return:
+        description: ''
+        type: INetworkModule
+  - name: getCurrentUri()
+    uid: '@azure/msal-browser.BrowserUtils.getCurrentUri'
+    package: '@azure/msal-browser'
+    summary: Returns current window URL as redirect uri
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function getCurrentUri(): string'
+      return:
+        description: ''
+        type: string
+  - name: getHomepage()
+    uid: '@azure/msal-browser.BrowserUtils.getHomepage'
+    package: '@azure/msal-browser'
+    summary: Gets the homepage url for the current window location.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function getHomepage(): string'
+      return:
+        description: ''
+        type: string
+  - name: isInIframe()
+    uid: '@azure/msal-browser.BrowserUtils.isInIframe'
+    package: '@azure/msal-browser'
+    summary: Returns boolean of whether the current window is in an iframe or not.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function isInIframe(): boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: isInPopup()
+    uid: '@azure/msal-browser.BrowserUtils.isInPopup'
+    package: '@azure/msal-browser'
+    summary: >-
+      Returns boolean of whether or not the current window is a popup opened by
+      msal
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function isInPopup(): boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: replaceHash(string)
+    uid: '@azure/msal-browser.BrowserUtils.replaceHash'
+    package: '@azure/msal-browser'
+    summary: Replaces current hash with hash from provided url
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'static function replaceHash(url: string)'
+      parameters:
+        - id: url
+          type: string
+          description: ''

@@ -1,0 +1,40 @@
+### YamlMime:TSEnum
+name: CacheLookupPolicy
+uid: '@azure/msal-browser.CacheLookupPolicy'
+package: '@azure/msal-browser'
+summary: ''
+fullName: CacheLookupPolicy
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: Default
+    uid: '@azure/msal-browser.CacheLookupPolicy.Default'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 0
+  - name: AccessToken
+    uid: '@azure/msal-browser.CacheLookupPolicy.AccessToken'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 1
+  - name: AccessTokenAndRefreshToken
+    uid: '@azure/msal-browser.CacheLookupPolicy.AccessTokenAndRefreshToken'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 2
+  - name: RefreshToken
+    uid: '@azure/msal-browser.CacheLookupPolicy.RefreshToken'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 3
+  - name: RefreshTokenAndNetwork
+    uid: '@azure/msal-browser.CacheLookupPolicy.RefreshTokenAndNetwork'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 4
+  - name: Skip
+    uid: '@azure/msal-browser.CacheLookupPolicy.Skip'
+    package: '@azure/msal-browser'
+    summary: ''
+    numericValue: 5

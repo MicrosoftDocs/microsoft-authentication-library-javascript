@@ -1,0 +1,54 @@
+### YamlMime:TSType
+name: GuidGenerator
+uid: '@azure/msal-browser.GuidGenerator'
+package: '@azure/msal-browser'
+summary: ''
+fullName: GuidGenerator
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: GuidGenerator(BrowserCrypto)
+    uid: '@azure/msal-browser.GuidGenerator.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'new GuidGenerator(cryptoObj: BrowserCrypto)'
+      parameters:
+        - id: cryptoObj
+          type: <xref uid="@azure/msal-browser.BrowserCrypto" />
+          description: ''
+methods:
+  - name: generateGuid()
+    uid: '@azure/msal-browser.GuidGenerator.generateGuid'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function generateGuid(): string'
+      return:
+        description: ''
+        type: string
+  - name: isGuid(string)
+    uid: '@azure/msal-browser.GuidGenerator.isGuid'
+    package: '@azure/msal-browser'
+    summary: verifies if a string is  GUID
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'function isGuid(guid: string): boolean'
+      parameters:
+        - id: guid
+          type: string
+          description: |+
+
+      return:
+        description: ''
+        type: boolean

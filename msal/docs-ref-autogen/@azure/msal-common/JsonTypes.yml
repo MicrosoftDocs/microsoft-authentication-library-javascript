@@ -1,0 +1,18 @@
+### YamlMime:TSEnum
+name: JsonTypes
+uid: '@azure/msal-common.JsonTypes'
+package: '@azure/msal-common'
+summary: ''
+fullName: JsonTypes
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: Jwk
+    uid: '@azure/msal-common.JsonTypes.Jwk'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: Jwt
+    uid: '@azure/msal-common.JsonTypes.Jwt'
+    package: '@azure/msal-common'
+    summary: ''

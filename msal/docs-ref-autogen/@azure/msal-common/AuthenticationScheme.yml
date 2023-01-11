@@ -1,0 +1,22 @@
+### YamlMime:TSEnum
+name: AuthenticationScheme
+uid: '@azure/msal-common.AuthenticationScheme'
+package: '@azure/msal-common'
+summary: Type of the authentication request
+fullName: AuthenticationScheme
+remarks: ''
+isPreview: false
+isDeprecated: false
+fields:
+  - name: BEARER
+    uid: '@azure/msal-common.AuthenticationScheme.BEARER'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: POP
+    uid: '@azure/msal-common.AuthenticationScheme.POP'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: SSH
+    uid: '@azure/msal-common.AuthenticationScheme.SSH'
+    package: '@azure/msal-common'
+    summary: ''

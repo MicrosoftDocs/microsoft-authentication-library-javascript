@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: ActiveAccountFilters
+uid: '@azure/msal-common.ActiveAccountFilters'
+package: '@azure/msal-common'
+summary: ''
+fullName: ActiveAccountFilters
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type ActiveAccountFilters = { homeAccountId: string, localAccountId: string }

@@ -1,0 +1,104 @@
+### YamlMime:TSType
+name: InteractionHandler
+uid: '@azure/msal-browser.InteractionHandler'
+package: '@azure/msal-browser'
+summary: >-
+  Abstract class which defines operations for a browser interaction handling
+  class.
+fullName: InteractionHandler
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      InteractionHandler(AuthorizationCodeClient, BrowserCacheManager,
+      CommonAuthorizationCodeRequest, Logger)
+    uid: '@azure/msal-browser.InteractionHandler.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        new InteractionHandler(authCodeModule: AuthorizationCodeClient,
+        storageImpl: BrowserCacheManager, authCodeRequest:
+        CommonAuthorizationCodeRequest, logger: Logger)
+      parameters:
+        - id: authCodeModule
+          type: AuthorizationCodeClient
+          description: ''
+        - id: storageImpl
+          type: <xref uid="@azure/msal-browser.BrowserCacheManager" />
+          description: ''
+        - id: authCodeRequest
+          type: CommonAuthorizationCodeRequest
+          description: ''
+        - id: logger
+          type: Logger
+          description: ''
+methods:
+  - name: 'handleCodeResponseFromHash(string, string, Authority, INetworkModule)'
+    uid: '@azure/msal-browser.InteractionHandler.handleCodeResponseFromHash'
+    package: '@azure/msal-browser'
+    summary: Function to handle response parameters from hash.
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleCodeResponseFromHash(locationHash: string, state: string,
+        authority: Authority, networkModule: INetworkModule):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: locationHash
+          type: string
+          description: |+
+
+        - id: state
+          type: string
+          description: ''
+        - id: authority
+          type: Authority
+          description: ''
+        - id: networkModule
+          type: INetworkModule
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult&gt;
+  - name: >-
+      handleCodeResponseFromServer(AuthorizationCodePayload, string, Authority,
+      INetworkModule, boolean)
+    uid: '@azure/msal-browser.InteractionHandler.handleCodeResponseFromServer'
+    package: '@azure/msal-browser'
+    summary: Process auth code response from AAD
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleCodeResponseFromServer(authCodeResponse:
+        AuthorizationCodePayload, state: string, authority: Authority,
+        networkModule: INetworkModule, validateNonce?: boolean):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: authCodeResponse
+          type: AuthorizationCodePayload
+          description: ''
+        - id: state
+          type: string
+          description: ''
+        - id: authority
+          type: Authority
+          description: ''
+        - id: networkModule
+          type: INetworkModule
+          description: ''
+        - id: validateNonce
+          type: boolean
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;AuthenticationResult&gt;

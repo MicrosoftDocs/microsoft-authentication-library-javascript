@@ -1,0 +1,10 @@
+### YamlMime:TSType
+name: CompletedEvents
+uid: '@azure/msal.CompletedEvents'
+package: '@azure/msal'
+summary: ''
+fullName: CompletedEvents
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface

@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: MsalProviderProps
+uid: '@azure/msal-react.MsalProviderProps'
+package: '@azure/msal-react'
+summary: ''
+fullName: MsalProviderProps
+remarks: ''
+isPreview: false
+isDeprecated: false
+syntax: |
+  type MsalProviderProps = PropsWithChildren<{
+    instance: IPublicClientApplication,
+  }>

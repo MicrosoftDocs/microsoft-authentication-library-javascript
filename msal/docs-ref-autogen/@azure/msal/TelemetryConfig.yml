@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: TelemetryConfig
+uid: '@azure/msal.TelemetryConfig'
+package: '@azure/msal'
+summary: ''
+fullName: TelemetryConfig
+remarks: ''
+isPreview: false
+isDeprecated: false
+type: interface
+properties:
+  - name: clientId
+    uid: '@azure/msal.TelemetryConfig.clientId'
+    package: '@azure/msal'
+    summary: ''
+    fullName: clientId
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'clientId: string'
+      return:
+        description: ''
+        type: string
+  - name: onlySendFailureTelemetry
+    uid: '@azure/msal.TelemetryConfig.onlySendFailureTelemetry'
+    package: '@azure/msal'
+    summary: ''
+    fullName: onlySendFailureTelemetry
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'onlySendFailureTelemetry?: boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: platform
+    uid: '@azure/msal.TelemetryConfig.platform'
+    package: '@azure/msal'
+    summary: ''
+    fullName: platform
+    remarks: ''
+    isPreview: false
+    isDeprecated: false
+    syntax:
+      content: 'platform: TelemetryPlatform'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal.TelemetryPlatform" />
