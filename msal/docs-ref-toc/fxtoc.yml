@@ -2,6 +2,6 @@
   uid: msal.sdk.landingPage.reference
   landingPageType: Root
   expanded: true
-  href: ~/overview/overview.md
+  href: ~/overview/msal-overview.md
   children:
     - '**'
