@@ -1,6 +1,6 @@
 ---
 title: MSAL React
-description:  Overview of the Microsoft Authentication Libraries for JavaScript
+description:  Getting started with MSAL React
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
