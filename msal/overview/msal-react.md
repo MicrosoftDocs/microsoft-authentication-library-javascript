@@ -17,4 +17,4 @@ ms.author: dmwendia
 # Getting started with MSAL React 
 
 
-[!INCLUDE[MSAL React getting started](~/microsoft-authentication-library-javascript/lib/msal-react/docs/getting-started.md)]
+[!INCLUDE[MSAL React getting started](~/msal-react/docs/getting-started.md)]

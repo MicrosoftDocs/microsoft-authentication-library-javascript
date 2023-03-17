@@ -51,7 +51,7 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "microsoft-authentication-library-for-js",
+      "path_to_root": "lib",
       "url": "https://github.com/AzureAD/microsoft-authentication-library-for-js",
       "branch": "dev",
       "branch_mapping": {}
