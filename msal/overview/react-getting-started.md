@@ -23,3 +23,8 @@ ms.author: dmwendia
 
 -->
 
+[Link to docs.md](https://github.com/AzureAD/microsoft-authentication-library-for-js/lib/msal-react/docs/getting-started.md)
+
+
+
+[!INCLUDE[MSAL React](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/getting-started.md)]
