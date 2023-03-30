@@ -6,7 +6,9 @@
       "build_output_subfolder": "microsoft-authentication-library-js",
       "locale": "en-us",
       "monikers": [],
-      "moniker_ranges": ["msal-js-latest"],
+      "moniker_ranges": [
+        "msal-js-latest"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -18,16 +20,38 @@
         "ReferenceContainer": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "base_path": "javascript",
-      "site_name": "Docs"
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "msal-javascript-conceptual",
+      "build_source_folder": "msal-javascript-conceptual",
+      "build_output_subfolder": "msal-javascript-conceptual",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
-  "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "main",
+      "branch_mapping": {}
+    }
+  ],
+  "branch_target_mapping": {},
+  "docs_build_engine": {},
+  "skip_source_output_uploading": false,
   "JoinTOCPlugin": [
     {
       "TopLevelTOC": "msal/docs-ref-toc/fxtoc.yml",
@@ -43,15 +67,6 @@
       }
     }
   ],
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "main",
-      "branch_mapping": {}
-    }
-  ],
-  "branch_target_mapping": {},
   "dependent_packages": [
     {
       "id": "opbuild.templates.uref",
@@ -68,9 +83,6 @@
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
     }
   ],
-  "docs_build_engine": {
-	  "name": "docfx_v3"
-	},
   "contribution_branch_mappings": {},
   "need_generate_pdf_url_template": false
 }
