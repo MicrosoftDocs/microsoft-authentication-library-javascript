@@ -1,6 +1,6 @@
 ---
 title: MSAL Browser
-description:  Getting started with MSAL React
+description:  Getting started with MSAL Browser
 services: active-directory
 author: Dickson-Mwendia
 manager: CelesteDG
