@@ -54,7 +54,7 @@
   "skip_source_output_uploading": false,
   "JoinTOCPlugin": [
     {
-      "TopLevelTOC": "msal/docs-ref-toc/TOC.yml",
+      "TopLevelTOC": "msal/docs-ref-toc/fxtoc.yml",
       "ReferenceTOC": "msal/docs-ref-autogen/toc.yml",
       "ReferenceTOCUrl": "/javascript/api/microsoft-authentication-library-js/toc.json?view=msal-js-latest",
       "ConceptualTOCUrl": "/microsoft-authentication-library-js/toc.json",
