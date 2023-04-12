@@ -24,4 +24,4 @@ ms.author: dmwendia
 -->
 
 
-[!INCLUDE[MSAL Browser](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/getting-started.md)]
+[!INCLUDE[MSAL Browser](~/lib/msal-browser/docs/includes/initialization.md)]
