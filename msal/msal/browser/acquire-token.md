@@ -13,4 +13,4 @@ ms.date: 04/12/2023
 ms.author: dmwendia
 ---
 
-[!INCLUDE[MSAL Browser](~//msal-browser/docs/includes/acquire-token.md)]
+[!INCLUDE[MSAL Browser](~/lib/msal-browser/docs/includes/acquire-token.md)]

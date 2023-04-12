@@ -13,4 +13,4 @@ ms.date: 04/12/2023
 ms.author: dmwendia
 ---
 
-[!INCLUDE[Sign in users](~/msal-browser/docs/includes/login-user.md)]
+[!INCLUDE[Sign in users](~/microsoft-authentication-library-for-js/lib/msal-browser/docs/includes/login-user.md)]
