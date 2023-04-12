@@ -2,6 +2,10 @@
   uid: msal.sdk.landingPage.reference
   landingPageType: Root
   expanded: true
-  href: ~/overview/react-getting-started.md
+  href: ~/overview/msal-overview.md
   children:
     - '**'
+- name: MSAL Browser
+  items:
+    - name: Initialization of MSAL
+      href: ~/msal-browser/initialization.md
