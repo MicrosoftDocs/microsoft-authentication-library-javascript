@@ -44,10 +44,7 @@
         "files": [
           "**/*.md"
         ],
-        "src": [
-          "overview",
-          "msal-browser"
-        ],
+        "src": "msal",
         "dest": "api",
         "exclude": [],
         "version": "msal-js-latest"
