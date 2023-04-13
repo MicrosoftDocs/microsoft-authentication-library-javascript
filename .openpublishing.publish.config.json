@@ -67,7 +67,7 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "microsoft-authentication-library-for-js",
+      "path_to_root": "lib",
       "url": "https://github.com/Dickson-Mwendia/microsoft-authentication-library-for-js",
       "branch": "cross-repo-references-metadata",
       "branch_mapping": {}

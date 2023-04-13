@@ -24,4 +24,4 @@ ms.author: dmwendia
 -->
 
 
-[!INCLUDE[MSAL Browser](~/lib/msal-browser/docs/includes/initialization.md)]
+[!INCLUDE[MSAL Browser initialization](~/lib/msal-browser/docs/includes/initialization.md)]
