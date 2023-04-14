@@ -17,14 +17,4 @@ ms.author: dmwendia
 # Getting started with MSAL Browser
 
 
-<!---
-
-[!INCLUDE[MSAL React getting started](~/msal-react/docs/getting-started.md)]
-
--->
-
-
-[!INCLUDE[MSAL Browser initialization](/lib/msal-browser/docs/includes/initialization.md)]
-
-
 [!INCLUDE[MSAL Browser initialization](/lib/msal-browser/docs/includes/initialization.md)]
