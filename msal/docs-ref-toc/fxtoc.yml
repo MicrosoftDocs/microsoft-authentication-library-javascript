@@ -1,7 +1,11 @@
-- name: SDK reference
-  uid: msal.sdk.landingPage.reference
-  landingPageType: Root
+- name: MSAL.js Overview
   expanded: true
-  href: ~/overview/msal-overview.md
-  children:
-    - '**'
+  href: ~/msal/msal-overview.md
+- name: MSAL Browser
+  items:
+    - name: Initialization of MSAL
+      href: ~/msal/browser/initialization.md
+    - name: Sign in users
+      href: ~/msal/browser/login-user.md
+    - name: Acquire tokens
+      href: ~/msal/browser/acquire-token.md

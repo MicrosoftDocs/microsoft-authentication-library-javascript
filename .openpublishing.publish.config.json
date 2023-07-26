@@ -41,20 +41,12 @@
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
   "need_preview_pull_request": true,
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "main",
-      "branch_mapping": {}
-    }
-  ],
   "branch_target_mapping": {},
   "docs_build_engine": {},
   "skip_source_output_uploading": false,
   "JoinTOCPlugin": [
     {
-      "TopLevelTOC": "msal/docs-ref-toc/fxtoc.yml",
+      "TopLevelTOC": "msal/docs-ref-toc/.yml",
       "ReferenceTOC": "msal/docs-ref-autogen/toc.yml",
       "ReferenceTOCUrl": "/javascript/api/microsoft-authentication-library-js/toc.json?view=msal-js-latest",
       "ConceptualTOCUrl": "/microsoft-authentication-library-js/toc.json",
@@ -67,6 +59,21 @@
       }
     }
   ],
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "main",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "lib",
+      "url": "https://github.com/AzureAD/microsoft-authentication-library-for-js",
+      "branch": "test-cross-repo-reference",
+      "branch_mapping": {}
+    }
+  ],
+  "branch_target_mapping": {},
   "dependent_packages": [
     {
       "id": "opbuild.templates.uref",
