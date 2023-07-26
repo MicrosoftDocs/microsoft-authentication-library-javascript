@@ -29,7 +29,7 @@
       "locale": "en-us",
       "customized_tasks": {
         "docset_postbuild": [
-          "scipts/ContentMove.ps1"
+          "scripts/ContentMove.ps1"
         ]
       },
       "monikers": [],
