@@ -18,7 +18,6 @@
           "LICENSE-CODE",
           "ThirdPartyNotices.md",
           "SECURITY.md"
-          "lib/**"
         ]
       }
     ],
