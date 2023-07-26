@@ -27,6 +27,11 @@
       "build_source_folder": "msal-javascript-conceptual",
       "build_output_subfolder": "msal-javascript-conceptual",
       "locale": "en-us",
+      "customized_tasks": {
+        "docset_postbuild": [
+          "scipts/ContentMove.ps1"
+        ]
+      },
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": true,
