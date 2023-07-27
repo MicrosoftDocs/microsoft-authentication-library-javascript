@@ -1,1 +1,1 @@
-[!INCLUDE[Include a hello token here](_libdr/lib/msal-angular/docs/events.md)]
+[!INCLUDE[Include a hello token here](~/_libdr/lib/msal-angular/docs/events.md)]
