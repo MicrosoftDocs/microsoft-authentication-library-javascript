@@ -28,7 +28,7 @@
       "build_output_subfolder": "msal-javascript-conceptual",
       "locale": "en-us",
       "customized_tasks": {
-        "docset_postbuild": [
+        "docset_prebuild": [
           "scripts/ContentMove.ps1"
         ]
       },
