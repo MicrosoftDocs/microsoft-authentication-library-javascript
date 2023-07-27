@@ -18,8 +18,8 @@
           "LICENSE-CODE",
           "ThirdPartyNotices.md",
           "SECURITY.md",
-          "_libdr/*.yml",
-          "_libdr/build/*.yml"
+          "lcontent/*.yml",
+          "lcontent/build/*.yml"
         ]
       }
     ],

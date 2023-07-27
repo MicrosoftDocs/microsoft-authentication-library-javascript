@@ -72,7 +72,7 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "msal-javascript-conceptual/_libdr",
+      "path_to_root": "msal-javascript-conceptual/lcontent",
       "url": "https://github.com/AzureAD/microsoft-authentication-library-for-js",
       "branch": "dev",
       "include_in_build": true,
