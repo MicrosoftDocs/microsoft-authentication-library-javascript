@@ -67,6 +67,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-Entra",
       "ms.topic": "reference",
       "apiPlatform": "javascript",
       "ms.author": "dmwendia",

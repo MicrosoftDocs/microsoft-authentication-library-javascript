@@ -40,6 +40,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-Entra",
       "breadcrumb_path": "/entra/msal/javascript/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "None"
