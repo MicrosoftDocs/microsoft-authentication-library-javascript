@@ -6,13 +6,6 @@
         "dest": "msal-angular",
         "files": [
           "**/*.md"
-        ],
-        "exclude": [
-          "**/README.md",
-          "**/CHANGELOG.md",
-          "**/LICENSE.md",
-          "**/SECURITY.md",
-          "**/CONTRIBUTING.md"
         ]
       },
       {
@@ -20,13 +13,6 @@
         "dest": "msal-browser",
         "files": [
           "**/*.md"
-        ],
-        "exclude": [
-          "**/README.md",
-          "**/CHANGELOG.md",
-          "**/LICENSE.md",
-          "**/SECURITY.md",
-          "**/CONTRIBUTING.md"
         ]
       },
       {
@@ -34,9 +20,6 @@
         "dest": "msal-common",
         "files": [
           "**/*.md"
-        ],
-        "exclude": [
-
         ]
       },
       {
@@ -44,13 +27,6 @@
         "dest": "msal-node",
         "files": [
           "**/*.md"
-        ],
-        "exclude": [
-          "**/README.md",
-          "**/CHANGELOG.md",
-          "**/LICENSE.md",
-          "**/SECURITY.md",
-          "**/CONTRIBUTING.md"
         ]
       },
       {
@@ -58,13 +34,6 @@
         "dest": "msal-react",
         "files": [
           "**/*.md"
-        ],
-        "exclude": [
-          "**/README.md",
-          "**/CHANGELOG.md",
-          "**/LICENSE.md",
-          "**/SECURITY.md",
-          "**/CONTRIBUTING.md"
         ]
       },
       {
@@ -72,13 +41,6 @@
         "dest": "extensions",
         "files": [
           "**/*.md"
-        ],
-        "exclude": [
-          "**/README.md",
-          "**/CHANGELOG.md",
-          "**/LICENSE.md",
-          "**/SECURITY.md",
-          "**/CONTRIBUTING.md"
         ]
       },
       {
@@ -87,20 +49,24 @@
           "**/*.yml"
         ],
         "exclude": [
+          "**/README.md",
+          "**/CHANGELOG.md",
+          "**/LICENSE.md",
+          "**/SECURITY.md",
+          "**/CONTRIBUTING.md",
           "**/obj/**",
           "**/includes/**",
           "_themes/**",
           "_themes.pdf/**",
           "**/docfx.json",
           "_repo.en-us/**",
-          "README.md",
           "LICENSE",
           "LICENSE-CODE",
           "ThirdPartyNotices.md",
-          "SECURITY.md",
-          "CONTRIBUTING.md",
           "lcontent/*.yml",
-          "lcontent/build/*.yml"
+          "lcontent/build/*.yml",
+          "lcontent/extensions/msal-node-extensions/**",
+          "lcontent/extensions/samples/**"
         ]
       }
     ],
