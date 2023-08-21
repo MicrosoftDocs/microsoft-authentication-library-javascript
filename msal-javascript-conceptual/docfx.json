@@ -2,8 +2,8 @@
   "build": {
     "content": [
       {
-        "src": "lcontent",
-        "dest": "guides",
+        "src": "lcontent/lib/msal-angular/docs",
+        "dest": "msal-angular",
         "files": [
           "**/*.md"
         ],
@@ -11,7 +11,59 @@
           "README.md",
           "CHANGELOG.md",
           "LICENSE.md",
-          "SECURITY.md",
+          "SECURITY.md"
+        ]
+      },
+      {
+        "src": "lcontent/lib/msal-browser/docs",
+        "dest": "msal-browser",
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
+          "README.md",
+          "CHANGELOG.md",
+          "LICENSE.md",
+          "SECURITY.md"
+        ]
+      },
+      {
+        "src": "lcontent/lib/msal-common/docs",
+        "dest": "msal-common",
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
+          "README.md",
+          "CHANGELOG.md",
+          "LICENSE.md",
+          "SECURITY.md"
+        ]
+      },
+      {
+        "src": "lcontent/lib/msal-node/docs",
+        "dest": "msal-node",
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
+          "README.md",
+          "CHANGELOG.md",
+          "LICENSE.md",
+          "SECURITY.md"
+        ]
+      },
+      {
+        "src": "lcontent/lib/msal-react/docs",
+        "dest": "msal-react",
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
+          "README.md",
+          "CHANGELOG.md",
+          "LICENSE.md",
+          "SECURITY.md"
         ]
       },
       {
