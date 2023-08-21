@@ -3,11 +3,16 @@
     "content": [
       {
         "src": "lcontent",
-        "dest": "test_js",
+        "dest": "guides",
         "files": [
           "**/*.md"
         ],
-        "exclude": []
+        "exclude": [
+          "README.md",
+          "CHANGELOG.md",
+          "LICENSE.md",
+          "SECURITY.md",
+        ]
       },
       {
         "files": [
