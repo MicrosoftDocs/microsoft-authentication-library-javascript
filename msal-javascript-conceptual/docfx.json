@@ -11,7 +11,8 @@
           "README.md",
           "CHANGELOG.md",
           "LICENSE.md",
-          "SECURITY.md"
+          "SECURITY.md",
+          "CONTRIBUTING.md"
         ]
       },
       {
@@ -24,7 +25,8 @@
           "README.md",
           "CHANGELOG.md",
           "LICENSE.md",
-          "SECURITY.md"
+          "SECURITY.md",
+          "CONTRIBUTING.md"
         ]
       },
       {
@@ -37,7 +39,8 @@
           "README.md",
           "CHANGELOG.md",
           "LICENSE.md",
-          "SECURITY.md"
+          "SECURITY.md",
+          "CONTRIBUTING.md"
         ]
       },
       {
@@ -50,7 +53,8 @@
           "README.md",
           "CHANGELOG.md",
           "LICENSE.md",
-          "SECURITY.md"
+          "SECURITY.md",
+          "CONTRIBUTING.md"
         ]
       },
       {
@@ -63,7 +67,22 @@
           "README.md",
           "CHANGELOG.md",
           "LICENSE.md",
-          "SECURITY.md"
+          "SECURITY.md",
+          "CONTRIBUTING.md"
+        ]
+      },
+      {
+        "src": "lcontent/extensions/docs",
+        "dest": "extensions",
+        "files": [
+          "**/*.md"
+        ],
+        "exclude": [
+          "README.md",
+          "CHANGELOG.md",
+          "LICENSE.md",
+          "SECURITY.md",
+          "CONTRIBUTING.md"
         ]
       },
       {
