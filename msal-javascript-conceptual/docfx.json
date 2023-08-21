@@ -2,6 +2,15 @@
   "build": {
     "content": [
       {
+        "src": "lcontent",
+        "dest": "test_js",
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": []
+      },
+      {
         "files": [
           "**/*.md",
           "**/*.yml"
