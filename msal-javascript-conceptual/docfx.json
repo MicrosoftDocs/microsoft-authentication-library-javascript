@@ -5,8 +5,7 @@
         "src": "lcontent",
         "dest": "test_js",
         "files": [
-          "**/*.md",
-          "**/*.yml"
+          "**/*.md"
         ],
         "exclude": []
       },
