@@ -1,5 +1,5 @@
 ---
-title: Migrate JavaScript single-page app from implicit grant to authorization code flow
+title: Migrate a JavaScript single-page app from implicit grant to auth code flow
 description: How to update a JavaScript SPA using MSAL.js 1.x and the implicit grant flow to MSAL.js 2.x and the authorization code flow with PKCE and CORS support.
 services: active-directory
 author: OwenRichards1
@@ -48,7 +48,7 @@ These redirect URIs should now appear in the **Single-page application** platfor
 
 :::image type="content" source="media/migrate-spa-implicit-to-auth-code/portal-03-spa-redirect-uri-tile.png" alt-text="Single-page application tile in app registration in Azure portal":::
 
-You can also [create a new app registration](scenario-spa-app-registration.md) instead of updating the redirect URIs in your existing registration.
+You can also [create a new app registration](/azure/active-directory/develop/scenario-spa-app-registration.md) instead of updating the redirect URIs in your existing registration.
 
 ## Update your code to MSAL.js 2.x
 
@@ -70,7 +70,7 @@ import * as msal from "@azure/msal-browser";
 const msalInstance = new msal.PublicClientApplication(config);
 ```
 
-For a full walk-through of adding MSAL 2.x to your application, see [Tutorial: Sign in users and call the Microsoft Graph API from a JavaScript single-page app (SPA) using auth code flow](tutorial-v2-javascript-auth-code.md).
+For a full walk-through of adding MSAL 2.x to your application, see [Tutorial: Sign in users and call the Microsoft Graph API from a JavaScript single-page app (SPA) using auth code flow](/azure/active-directory/develop/tutorial-v2-javascript-auth-code.md).
 
 For additional changes you might need to make to your code, see the [migration guide](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/v1-migration.md) on GitHub.
 
@@ -84,9 +84,9 @@ When you uncheck the implicit grant settings in the app registration, the implic
 
 ## Next steps
 
-To learn more about the authorization code flow, including the differences between the implicit and auth code flows, see the [Microsoft identity platform and OAuth 2.0 authorization code flow](v2-oauth2-auth-code-flow.md).
+To learn more about the authorization code flow, including the differences between the implicit and auth code flows, see the [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow.md).
 
-If you'd like to dive deeper into JavaScript single-page application development on the Microsoft identity platform, the multi-part [Scenario: Single-page application](scenario-spa-overview.md) series of articles can help you get started.
+If you'd like to dive deeper into JavaScript single-page application development on the Microsoft identity platform, the multi-part [Scenario: Single-page application](/azure/active-directory/develop/scenario-spa-overview.md) series of articles can help you get started.
 
 <!-- LINKS - external -->
 [msal-js-publicclientapplication]: https://azuread.github.io/microsoft-authentication-library-for-js/ref/classes/_azure_msal_node.PublicClientApplication.html

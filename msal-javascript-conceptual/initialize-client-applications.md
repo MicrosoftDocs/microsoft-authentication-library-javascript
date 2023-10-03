@@ -1,5 +1,5 @@
 ---
-title: Initialize MSAL.js client apps
+title: Initialize client applications
 description: Learn about initializing client applications using the Microsoft Authentication Library for JavaScript (MSAL.js).
 services: active-directory
 author: OwenRichards1
@@ -16,17 +16,17 @@ ms.custom: aaddev, devx-track-js, engagement-fy23
 # Customer intent: As an application developer, I want to learn about initializing a client application in MSAL.js to enable support for authentication and authorization in a JavaScript single-page application (SPA).
 ---
 
-# Initialize client applications using MSAL.js
+# Initialize client applications
 
 This article describes initializing the Microsoft Authentication Library for JavaScript (MSAL.js) with an instance of a user-agent application.
 
 The user-agent application is a form of public client application in which the client code is executed in a user-agent such as a web browser. Clients such as these don't store secrets because the browser context is openly accessible.
 
-To learn more about the client application types and application configuration options, see [Public and confidential client apps in MSAL](msal-client-applications.md).
+To learn more about the client application types and application configuration options, see [Public and confidential client apps in MSAL](/azure/active-directory/develop/msal-client-applications.md).
 
 ## Prerequisites
 
-Before initializing an application, you first need to [register it in the Microsoft Entra admin center](scenario-spa-app-registration.md), establishing a trust relationship between your application and the Microsoft identity platform.
+Before initializing an application, you first need to [register it in the Microsoft Entra admin center](/azure/active-directory/develop/scenario-spa-app-registration.md), establishing a trust relationship between your application and the Microsoft identity platform.
 
 After registering your app, you'll need some or all of the following values that can be found in the Microsoft Entra admin center.
 

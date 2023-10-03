@@ -1,5 +1,5 @@
 ---
-title: Issues on Internet Explorer & Microsoft Edge (MSAL.js)
+title: Known MSAL.js issues on Internet Explorer and Microsoft Edge browsers
 description: Learn about know issues when using the Microsoft Authentication Library for JavaScript (MSAL.js) with Internet Explorer and Microsoft Edge browsers.
 services: active-directory
 author: OwenRichards1
@@ -16,12 +16,14 @@ ms.custom: aaddev, devx-track-js
 #Customer intent: As an application developer, I want to learn about issues with MSAL.js library so I can decide if this platform meets my application development needs and requirements.
 ---
 
-# Known issues on Internet Explorer and Microsoft Edge browsers (MSAL.js)
+# Known MSAL.js issues on Internet Explorer and Microsoft Edge browsers
 
 ## Issues due to security zones
+
 We had multiple reports of issues with authentication in IE and Microsoft Edge (since the update of the *Microsoft Edge browser version to 40.15063.0.0*). We're tracking these and have informed the Microsoft Edge team. While Microsoft Edge works on a resolution, here's a description of the frequently occurring issues and the possible workarounds that can be implemented.
 
 ### Cause
+
 The cause for most of these issues is as follows. The session storage and local storage are partitioned by security zones in the Microsoft Edge browser. In this particular version of Microsoft Edge, when the application is redirected across zones, the session storage and local storage are cleared. Specifically, the session storage is cleared in the regular browser navigation, and both the session and local storage are cleared in the InPrivate mode of the browser. MSAL.js saves certain state in the session storage and relies on checking this state during the authentication flows. When the session storage is cleared, this state is lost and hence results in broken experiences.
 
 ### Issues
@@ -61,9 +63,9 @@ Note, these workarounds won't solve the issue for InPrivate browsing since both 
 
 ## Issues due to popup blockers
 
-There are cases when popups are blocked in IE or Microsoft Edge, for example when a second popup occurs during [multi-factor authentication](../authentication/concept-mfa-howitworks.md). You'll get an alert in the browser to allow for the pop-up window once or always. If you choose to allow, the browser opens the pop-up window automatically and returns a `null` handle for it. As a result, the library doesn't have a handle for the window and there's no way to close the pop-up window. The same issue doesn't happen in Chrome when it prompts you to allow pop-up windows because it doesn't automatically open a pop-up window.
+There are cases when popups are blocked in IE or Microsoft Edge, for example when a second popup occurs during [multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks.md). You'll get an alert in the browser to allow for the pop-up window once or always. If you choose to allow, the browser opens the pop-up window automatically and returns a `null` handle for it. As a result, the library doesn't have a handle for the window and there's no way to close the pop-up window. The same issue doesn't happen in Chrome when it prompts you to allow pop-up windows because it doesn't automatically open a pop-up window.
 
 As a **workaround**, developers need to allow popups in IE and Microsoft Edge before they start using their app to avoid this issue.
 
 ## Next steps
-Learn more about [Using MSAL.js in Internet Explorer](msal-js-use-ie-browser.md).
+Learn more about [Using MSAL.js in Internet Explorer](./use-ie-browser.md).

@@ -51,4 +51,4 @@ When you're done debugging, follow the previous steps and select (instead of cle
 
 ## Next steps
 
-Learn more about [Known issues when using MSAL.js in Internet Explorer](msal-js-known-issues-ie-edge-browsers.md).
+Learn more about [Known issues when using MSAL.js in Internet Explorer](./known-issues-ie-edge-browsers.md).

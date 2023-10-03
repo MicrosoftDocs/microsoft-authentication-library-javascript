@@ -8,7 +8,6 @@ manager: CelesteDG
 ms.service: active-directory
 ms.subservice: develop
 ms.topic: how-to
-ms.workload: identity
 ms.date: 07/06/2021
 ms.author: owenrichards
 ms.custom: has-adal-ref, devx-track-js
@@ -25,7 +24,7 @@ ms.custom: has-adal-ref, devx-track-js
 ## Prerequisites
 
 - You must set the **Platform** / **Reply URL Type** to **Single-page application** on App Registration portal (if you have other platforms added in your app registration, such as **Web**, you need to make sure the redirect URIs don't overlap. See: [Redirect URI restrictions](/azure/active-directory/develop/reply-url.md))
-- You must provide [polyfills](./msal-js-use-ie-browser.md) for ES6 features that MSAL.js relies on (for example, promises) in order to run your apps on **Internet Explorer**
+- You must provide [polyfills](/azure/active-directory/develop/msal-js-use-ie-browser.md) for ES6 features that MSAL.js relies on (for example, promises) in order to run your apps on **Internet Explorer**
 - Migrate your Microsoft Entra apps to [v2 endpoint](/azure/active-directory/develop/v2-overview.md) if you haven't already
 
 ## Install and import MSAL
@@ -235,7 +234,7 @@ Importantly, you aren't supposed to access the cache directly. Instead, you shou
 
 ## Renew tokens with refresh tokens
 
-ADAL.js uses the [OAuth 2.0 implicit flow](azure/active-directory/develop/v2-oauth2-implicit-grant-flow.md), which doesn't return refresh tokens for security reasons (refresh tokens have longer lifetime than access tokens and are therefore more dangerous in the hands of malicious actors). Hence, ADAL.js performs token renewal using a hidden IFrame so that the user isn't repeatedly prompted to authenticate.
+ADAL.js uses the [OAuth 2.0 implicit flow](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow.md), which doesn't return refresh tokens for security reasons (refresh tokens have longer lifetime than access tokens and are therefore more dangerous in the hands of malicious actors). Hence, ADAL.js performs token renewal using a hidden IFrame so that the user isn't repeatedly prompted to authenticate.
 
 With the auth code flow with PKCE support, apps using MSAL.js 2.x obtain refresh tokens along with ID and access tokens, which can be used to renew them. The usage of refresh tokens is abstracted away, and the developers aren't supposed to build logic around them. Instead, MSAL manages token renewal using refresh tokens by itself. Your previous token cache with ADAL.js won't be transferable to MSAL.js, as the token cache schema has changed and incompatible with the schema used in ADAL.js.
 

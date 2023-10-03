@@ -1,5 +1,5 @@
 ---
-title: Pass custom state in authentication requests (MSAL.js)
+title: Pass custom state in authentication requests
 description: Learn how to pass a custom state parameter value in authentication request using the Microsoft Authentication Library for JavaScript (MSAL.js).
 services: active-directory
 author: OwenRichards1
@@ -16,7 +16,7 @@ ms.custom: aaddev, devx-track-js
 #Customer intent: As an application developer, I want to learn about passing custom state in authentication requests so I can create more robust applications.
 ---
 
-# Pass custom state in authentication requests using MSAL.js
+# Pass custom state in authentication requests
 
 The *state* parameter, as defined by OAuth 2.0, is included in an authentication request and is also returned in the token response to prevent cross-site request forgery attacks. By default, the Microsoft Authentication Library for JavaScript (MSAL.js) passes a randomly generated unique *state* parameter value in the authentication requests.
 
@@ -39,4 +39,4 @@ myMSALObj.loginRedirect(loginRequest);
 
 The passed in state is appended to the unique GUID set by MSAL.js when sending the request. When the response is returned, MSAL.js checks for a state match and then returns the custom passed in state in the [Response](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_common.html#authenticationresult) object as `state`.
 
-To learn more, read about [building a single-page application (SPA)](scenario-spa-overview.md) using MSAL.js.
+To learn more, read about [building a single-page application (SPA)](/azure/active-directory/develop/scenario-spa-overview.md) using MSAL.js.

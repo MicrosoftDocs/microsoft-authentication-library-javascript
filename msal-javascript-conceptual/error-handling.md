@@ -14,6 +14,7 @@ ms.author: dmwendia
 ms.reviewer: saeeda, hahamil
 ms.custom: aaddev, devx-track-js
 ---
+
 # Handle errors and exceptions in MSAL.js
 
 This article gives an overview of the different types of errors and recommendations for handling common sign-in errors.
@@ -22,7 +23,7 @@ This article gives an overview of the different types of errors and recommendati
 
 Exceptions in Microsoft Authentication Library (MSAL) are intended for app developers to troubleshoot, not for displaying to end users. Exception messages are not localized.
 
-When processing exceptions and errors, you can use the exception type itself and the error code to distinguish between exceptions. For a list of error codes, see [Microsoft Entra authentication and authorization error codes](../../reference-error-codes.md).
+When processing exceptions and errors, you can use the exception type itself and the error code to distinguish between exceptions. For a list of error codes, see [Microsoft Entra authentication and authorization error codes](/azure/articles/reference-error-codes.md).
 
 During the sign-in experience, you may encounter errors about consents, Conditional Access (MFA, Device Management, Location-based restrictions), token issuance and redemption, and user properties.
 
@@ -124,7 +125,7 @@ myMSALObj.acquireTokenSilent(request).then(function (response) {
 
 ## Conditional Access and claims challenges
 
-When getting tokens silently (using `acquireTokenSilent`) using MSAL.js, your application may receive errors when a [Conditional Access claims challenge](v2-conditional-access-dev-guide.md) such as MFA policy is required by an API you're trying to access.
+When getting tokens silently (using `acquireTokenSilent`) using MSAL.js, your application may receive errors when a [Conditional Access claims challenge](/azure/active-directory/develop/v2-conditional-access-dev-guide.md) such as MFA policy is required by an API you're trying to access.
 
 The pattern to handle this error is to make an interactive call to acquire token in MSAL.js such as `acquireTokenPopup` or `acquireTokenRedirect` as in the following example:
 
@@ -150,9 +151,9 @@ myMSALObj.acquireTokenSilent(accessTokenRequest).then(function(accessTokenRespon
 
 Interactively acquiring the token prompts the user and gives them the opportunity to satisfy the required Conditional Access policy.
 
-When calling an API requiring Conditional Access, you can receive a claims challenge in the error from the API. In this case, you can pass the claims returned in the error to the `claims` parameter in the [access token request object](msal-js-pass-custom-state-authentication-request.md) to satisfy the appropriate policy. 
+When calling an API requiring Conditional Access, you can receive a claims challenge in the error from the API. In this case, you can pass the claims returned in the error to the `claims` parameter in the [access token request object](./pass-custom-state-authentication-request.md) to satisfy the appropriate policy. 
 
-See [How to use Continuous Access Evaluation enabled APIs in your applications](./app-resilience-continuous-access-evaluation.md) for more detail.
+See [How to use Continuous Access Evaluation enabled APIs in your applications](./azure/active-directory/develop/app-resilience-continuous-access-evaluation.md) for more detail.
 
 ### Using other frameworks
 
@@ -168,4 +169,4 @@ When the Service Token Server (STS) is overloaded with too many requests, it ret
 
 ## See also
 
-Consider enabling [Logging in MSAL.js](msal-logging-js.md) to help you diagnose and debug issues
+Consider enabling [Logging in MSAL.js](logging.md) to help you diagnose and debug issues

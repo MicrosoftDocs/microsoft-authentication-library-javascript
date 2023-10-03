@@ -1,5 +1,5 @@
 ---
-title: Avoid page reloads (MSAL.js)
+title: Avoid page reloads when acquiring and renewing tokens silently
 description: Learn how to avoid page reloads when acquiring and renewing tokens silently using the Microsoft Authentication Library for JavaScript (MSAL.js).
 services: active-directory
 author: OwenRichards1
@@ -8,7 +8,6 @@ manager: CelesteDG
 ms.service: active-directory
 ms.subservice: develop
 ms.topic: how-to
-ms.workload: identity
 ms.date: 05/29/2019
 ms.author: owenrichards
 ms.reviewer: saeeda
@@ -16,7 +15,7 @@ ms.custom: aaddev, devx-track-js
 #Customer intent: As an application developer, I want to learn about avoiding page reloads so I can create more robust applications.
 ---
 
-# Avoid page reloads when acquiring and renewing tokens silently using MSAL.js
+# Avoid page reloads when acquiring and renewing tokens silently
 
 The Microsoft Authentication Library for JavaScript (MSAL.js) uses hidden `iframe` elements to acquire and renew tokens silently in the background. Microsoft Entra ID returns the token back to the registered `redirect_uri` specified in the token request(by default this is the app's root page). Since the response is a 302, it results in the HTML corresponding to the `redirect_uri` getting loaded in the `iframe`. Usually the app's `redirect_uri` is the root page and this causes it to reload.
 

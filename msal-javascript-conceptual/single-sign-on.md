@@ -54,7 +54,7 @@ To improve performance and ensure that the authorization server will look for th
 - `account`, which can be retrieved from using one the [account methods](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/login-user.md#account-apis)
 
 
- We recommended to using the `login_hint` [optional ID token claim](optional-claims-reference.md#v10-and-v20-optional-claims-set) provided to `ssoSilent` as `loginHint` as it is the most reliable account hint of silent and interactive requests.
+ We recommended to using the `login_hint` [optional ID token claim](/azure/active-directory/develop/optional-claims-reference.md#v10-and-v20-optional-claims-set) provided to `ssoSilent` as `loginHint` as it is the most reliable account hint of silent and interactive requests.
 
 
 #### Using a login hint
@@ -86,7 +86,7 @@ If the information in the `login_hint` claim doesn't match any existing user, th
 
 #### Using a session ID
 
-To use a session ID, add `sid` as an [optional claim](./optional-claims.md) to your app's ID tokens. The `sid` claim allows an application to identify a user's Microsoft Entra session independent of their account name or username. To learn how to add optional claims like `sid`, see [Provide optional claims to your app](./optional-claims.md). Use the session ID (SID) in silent authentication requests you make with `ssoSilent` in MSAL.js.
+To use a session ID, add `sid` as an [optional claim](/azure/active-directory/develop/optional-claims.md) to your app's ID tokens. The `sid` claim allows an application to identify a user's Microsoft Entra session independent of their account name or username. To learn how to add optional claims like `sid`, see [Provide optional claims to your app](/azure/active-directory/develop/optional-claims.md). Use the session ID (SID) in silent authentication requests you make with `ssoSilent` in MSAL.js.
 
 ```javascript
 const request = {
@@ -180,11 +180,11 @@ For better performance and to help avoid issues, set the `redirectUri` to a blan
 InteractionRequiredAuthError: login_required: AADSTS50058: A silent sign-in request was sent but no user is signed in. The cookies used to represent the user's session were not sent in the request to Azure AD
 ```
 
-To resolve the error, the user must create an interactive authentication request using the `loginPopup()` or `loginRedirect()`. In some cases, the prompt value **none** can be used together with an interactive MSAL.js method to achieve SSO. See [Interactive requests with prompt=none](msal-js-prompt-behavior.md#interactive-requests-with-promptnone) for more. If you already have the user's sign-in information, you can pass either the `loginHint` or `sid` optional parameters to sign-in a specific account.
+To resolve the error, the user must create an interactive authentication request using the `loginPopup()` or `loginRedirect()`. In some cases, the prompt value **none** can be used together with an interactive MSAL.js method to achieve SSO. See [Interactive requests with prompt=none](./prompt-behavior.md#interactive-requests-with-promptnone) for more. If you already have the user's sign-in information, you can pass either the `loginHint` or `sid` optional parameters to sign-in a specific account.
 
 ## Negating SSO with prompt=login
 
-If you prefer Microsoft Entra ID to prompt the user for entering their credentials despite an active session with the authorization server, you can use the **login** prompt parameter in requests with MSAL.js. See [MSAL.js prompt behavior](msal-js-prompt-behavior.md) for more.
+If you prefer Microsoft Entra ID to prompt the user for entering their credentials despite an active session with the authorization server, you can use the **login** prompt parameter in requests with MSAL.js. See [MSAL.js prompt behavior](./prompt-behavior.md) for more.
 
 ## Sharing authentication state between ADAL.js and MSAL.js
 
@@ -217,6 +217,6 @@ const msalInstance = new msal.PublicClientApplication(config);
 
 For more information about SSO, see:
 
-- [MSAL.js prompt behavior](msal-js-prompt-behavior.md)
-- [Optional token claims](./optional-claims.md)
-- [Configurable token lifetimes](configurable-token-lifetimes.md)
+- [MSAL.js prompt behavior](./prompt-behavior.md)
+- [Optional token claims](/azure/active-directory/develop/optional-claims.md)
+- [Configurable token lifetimes](/azure/active-directory/develop/configurable-token-lifetimes.md)
