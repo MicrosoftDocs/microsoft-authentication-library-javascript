@@ -16,7 +16,17 @@ ms.custom: aaddev, devx-track-js
 ---
 # Handle errors and exceptions in MSAL.js
 
-[!INCLUDE [Active directory error handling introduction](./includes/error-handling-and-tips/error-handling-introduction.md)]
+This article gives an overview of the different types of errors and recommendations for handling common sign-in errors.
+
+## MSAL error handling basics
+
+Exceptions in Microsoft Authentication Library (MSAL) are intended for app developers to troubleshoot, not for displaying to end users. Exception messages are not localized.
+
+When processing exceptions and errors, you can use the exception type itself and the error code to distinguish between exceptions. For a list of error codes, see [Microsoft Entra authentication and authorization error codes](../../reference-error-codes.md).
+
+During the sign-in experience, you may encounter errors about consents, Conditional Access (MFA, Device Management, Location-based restrictions), token issuance and redemption, and user properties.
+
+The following section provides more details about error handling for your app.
 
 ## Error handling in MSAL.js
 
@@ -112,7 +122,7 @@ myMSALObj.acquireTokenSilent(request).then(function (response) {
 });
 ```
 
-[!INCLUDE [Active directory error handling claims challenges](./includes/error-handling-and-tips/error-handling-claims-challenges.md)]
+## Conditional Access and claims challenges
 
 When getting tokens silently (using `acquireTokenSilent`) using MSAL.js, your application may receive errors when a [Conditional Access claims challenge](v2-conditional-access-dev-guide.md) such as MFA policy is required by an API you're trying to access.
 
@@ -148,8 +158,14 @@ See [How to use Continuous Access Evaluation enabled APIs in your applications](
 
 Using toolkits like Tauri for registered single page applications (SPAs) with the identity platform are not recognized for production apps. SPAs only support URLs that start with `https` for production apps and `http://localhost` for local development. Prefixes like `tauri://localhost` cannot be used for browser apps. This format can only be supported for mobile or web apps as they have a confidential component unlike browser apps.
 
-[!INCLUDE [Active directory error handling retries](./includes/error-handling-and-tips/error-handling-retries.md)]
+## Retrying after errors and exceptions
 
-## Next steps
+You're expected to implement your own retry policies when calling MSAL. MSAL makes HTTP calls to the Microsoft Entra service, and occasionally failures can occur. For example the network can go down or the server is overloaded.  
+
+### HTTP 429
+
+When the Service Token Server (STS) is overloaded with too many requests, it returns HTTP error 429 with a hint about how long until you can try again in the `Retry-After` response field.
+
+## See also
 
 Consider enabling [Logging in MSAL.js](msal-logging-js.md) to help you diagnose and debug issues
