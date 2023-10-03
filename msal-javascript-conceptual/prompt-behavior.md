@@ -85,8 +85,8 @@ In some cases however, the prompt value `none` can be used together with an inte
 
 ## Next steps
 
-- [Single sign-on with MSAL.js](./single-sign-on.md.md)
-- [Handle errors and exceptions in MSAL.js](./error-handling.md.md)
+- [Single sign-on with MSAL.js](./single-sign-on.md)
+- [Handle errors and exceptions in MSAL.js](./error-handling.md)
 - [Handle ITP in Safari and other browsers where third-party cookies are blocked](/azure/active-directory/develop/reference-third-party-cookies-spas.md)
 - [OAuth 2.0 authorization code flow on the Microsoft identity platform](/azure/active-directory/develop/v2-oauth2-auth-code-flow.md)
 - [OpenID Connect on the Microsoft identity platform](/azure/active-directory/develop/v2-protocols-oidc.md)
