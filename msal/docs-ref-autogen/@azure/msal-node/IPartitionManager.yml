@@ -24,11 +24,6 @@ methods:
       this function would return the homeAccountId from
 
       the provided AccountEntity
-
-
-      Visit the
-      [RedisTestApp](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/RedisTestApp)
-      to see it in action.
     remarks: ''
     isPreview: false
     isDeprecated: false
@@ -56,11 +51,6 @@ methods:
       this function would return the homeAccountId for
 
       the user in question
-
-
-      Visit the
-      [RedisTestApp](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/RedisTestApp)
-      to see it in action.
     remarks: ''
     isPreview: false
     isDeprecated: false

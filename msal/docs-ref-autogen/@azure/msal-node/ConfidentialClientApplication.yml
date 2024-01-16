@@ -31,7 +31,7 @@ constructors:
 
 
       In Azure AD, authority is a URL indicating of the form
-      https://login.microsoftonline.com/\{Enter_the_Tenant_Info_Here\}.
+      `https://login.microsoftonline.com/\{Enter_the_Tenant_Info_Here\}`
 
       If your application supports Accounts in one organizational directory,
       replace "Enter_the_Tenant_Info_Here" value with the Tenant Id or Tenant

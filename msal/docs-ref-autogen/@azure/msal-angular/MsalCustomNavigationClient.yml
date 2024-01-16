@@ -4,10 +4,6 @@ uid: '@azure/msal-angular.MsalCustomNavigationClient'
 package: '@azure/msal-angular'
 summary: >-
   Custom navigation used for Angular client-side navigation.
-
-  See performance doc for details:
-
-  https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-angular/docs/v2-docs/performance.md
 fullName: MsalCustomNavigationClient
 remarks: ''
 isPreview: false
