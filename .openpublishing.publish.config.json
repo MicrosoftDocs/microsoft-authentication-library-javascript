@@ -20,7 +20,7 @@
         "ReferenceContainer": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes"   
     },
     {
       "docset_name": "msal-javascript-conceptual",
@@ -57,8 +57,8 @@
       "TopLevelTOC": "msal/docs-ref-toc/fxtoc.yml",
       "ReferenceTOC": "msal/docs-ref-autogen/toc.yml",
       "ReferenceTOCUrl": "/javascript/api/microsoft-authentication-library-js/toc.json?view=msal-js-latest",
-      "ConceptualTOCUrl": "/microsoft-authentication-library-js/toc.json",
-      "OutputFolder": "msal/overview",
+      "ConceptualTOC": "msal-javascript-conceptual/TOC.yml",
+      "ConceptualTOCUrl": "/entra/msal/javascript/toc.json",
       "HideEmptyNode": false,
       "ContainerPageMetadata": {
         "langs": [

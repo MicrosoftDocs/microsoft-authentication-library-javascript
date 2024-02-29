@@ -40,12 +40,41 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "brand": "entra",
       "uhfHeaderId": "MSDocsHeader-Entra",
       "breadcrumb_path": "/entra/msal/javascript/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/microsoft-authentication-library-javascript",
+      "feedback_product_url": "https://github.com/AzureAD/microsoft-authentication-library-for-js/issues",
+      "recommendations": true,
+      "recommendation_types": [
+        "Training",
+        "Certification"
+      ]
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "author": {
+        "*.md": "Dickson-Mwendia",
+        "*/**.md": "Dickson-Mwendia"
+      },
+      "ms.author": {
+        "*.md": "dmwendia",
+        "*/**.md": "dmwendia"
+      },
+      "ms.service": {
+        "*.md": "msal",
+        "*/**.md": "msal"
+      },
+      "titleSuffix": {
+        "*.md": "Microsoft Authentication Library for JavaScript",
+        "*/**.md": "Microsoft Authentication Library for JavaScript"
+      },
+      "ms.topic": {
+        "*.md": "conceptual",
+        "*/**.md": "conceptual"
+      }
+    },
     "template": [],
     "dest": "msal-javascript-conceptual"
   }

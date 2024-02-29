@@ -1,2 +1,116 @@
-- name: Index
+- name: Microsoft Authentication Library for JavaScript Overview
   href: index.md
+- name: MSAL Browser
+  items:
+    - name: Getting started
+      items: 
+        - name: Install MSAL for browser-based apps
+          href: browser/about-msal-browser.md
+        - name: Initialize applications
+          href: browser/initialization.md
+        - name: Configure your application
+          href: browser/configuration.md
+    - name: Acquire tokens
+      items: 
+        - name: Sign in users
+          href: browser/login-user.md
+        - name: Acquire tokens
+          href: browser/acquire-token.md
+        - name: Manage token lifetimes
+          href: browser/token-lifetimes.md
+        - name: Understanding resources and scopes
+          href: browser/resources-and-scopes.md 
+        - name: Sign out users
+          href: browser/logout.md
+        - name: Acquire tokens using WAM
+          href: browser/device-bound-tokens.md
+    - name: Advanced topics
+      items: 
+        - name: Single sign-on in MSAL.js
+          href: browser/single-sign-on.md
+        - name: Prompt behavior with MSAL.js
+          href: browser/prompt-behavior.md
+        - name: Logging in MSAL.js
+          href: browser/logging.md
+        - name: Handle errors and exceptions
+          href: browser/handle-errors-and-exceptions.md
+        - name: Common errors
+          href: browser/errors.md
+        - name: Acquiring SSH certificates
+          href: browser/ssh-certificates.md
+        - name: Use MSAL from Microsoft-hosted CDN
+          href: browser/cdn-usage.md
+        - name: Overriding window navigation
+          href: browser/navigation.md
+    - name: Migration guides
+      items: 
+        - name: Migrate apps from ADAL.js to MSAL.js
+          href: browser/migrate-adal-js-to-msal-js.md
+        - name: Migrate SPA from implicit to auth code flow
+          href: browser/migrate-spa-implicit-to-auth-code.md
+        - name: Migrate from MSAL v1.x to MSAL v2.x
+          href: browser/v1-migration.md
+        - name: Migrate from MSAL v2.x to MSAL v3.x
+          href: browser/v2-migration.md           
+- name: MSAL Angular
+  items:
+    - name: Initialize MSAL
+      href: angular/initialization.md
+    - name: Common public APIs in MSAL Angular
+      href: angular/public-apis.md
+    - name: Configure your application
+      href: angular/configuration.md
+    - name: Using MSAL Guard
+      href: angular/msal-guard.md
+    - name: Acquire tokens silently
+      href: angular/ssosilent.md
+    - name: Using your router for client-side navigation
+      href: angular/performance.md
+    - name: Using events in your application
+      href: angular/events.md
+    - name: Handling redirects
+      href: angular/redirects.md
+    - name: Using the MSAL Interceptor
+      href: angular/msal-interceptor.md
+    - name: Support for multi-tenant applications
+      href: angular/multi-tenant.md
+    - name: Logging
+      href: angular/logging.md
+    - name: Errors
+      href: angular/errors.md
+    - name: Angular Universal SSR with MSAL Angular
+      href: angular/universal-ssr.md
+    - name: Upgrading your MSAL Angular version
+      items:
+      - name: Upgrade from MSAL Angular 0.x to MSAL Angular 1.x
+        href: angular/v0-v1-upgrade-guide.md
+      - name: Upgrade from MSAL Angular 1.x to MSAL Angular 2.x
+        href: angular/v1-V2-upgrade-guide.md
+      - name: Upgrade from MSAL Angular 2.x to MSAL Angular 3.x
+        href: angular/v2-v3-upgrade-guide.md
+- name: MSAL Node
+  items:
+    - name: Initialize public client applications
+      href: node/initialize-public-client-application.md
+    - name: Initialize confidential client applications
+      href: node/initialize-confidential-client-application.md
+    - name: Configure your application
+      href: node/configuration.md     
+    - name: Supported authorization code grants
+      href: node/request.md  
+- name: MSAL React
+  items:
+    - name: Getting started with MSAL React
+      href: react/getting-started.md
+    - name: Class components
+      href: react/class-components.md
+    - name: Events
+      href: react/events.md
+    - name: Hooks
+      href: react/hooks.md
+    - name: Performance
+      href: react/performance.md
+    - name: Errors
+      href: react/errors.md
+    - name: Migrate from MSAL v1 to MSAL React and MSAL Browser
+      href: react/migration-guide.md

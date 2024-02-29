@@ -1,3 +1,7 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Microsoft Entra
+  tocHref: /entra/
+  topicHref: /entra/index
+  items:
+  - name: MSAL
+    tocHref: /entra/msal/
+    topicHref: /entra/msal/index
