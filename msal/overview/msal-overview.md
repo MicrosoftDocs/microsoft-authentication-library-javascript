@@ -58,7 +58,7 @@ All of our libraries follow [semantic versioning](https://semver.org). We recomm
 
 - [FAQs](https://github.com/AzureAD/microsoft-authentication-library-for-js/wiki/FAQs) for access to our frequently asked questions.
 
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/msal) using "MSAL" and "msal.js" tag.
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/msal) using "MSAL" and "msal.js" tag.
 
 
 ## Security reporting
