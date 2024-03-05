@@ -43,7 +43,6 @@
       "brand": "entra",
       "uhfHeaderId": "MSDocsHeader-Entra",
       "breadcrumb_path": "/entra/msal/javascript/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/microsoft-authentication-library-javascript",
       "feedback_product_url": "https://github.com/AzureAD/microsoft-authentication-library-for-js/issues",
