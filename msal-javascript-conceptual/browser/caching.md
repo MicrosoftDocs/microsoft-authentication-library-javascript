@@ -25,7 +25,7 @@ import { PublicClientApplication, BrowserCacheLocation } from "@azure/msal-brows
 
 const pca = new PublicClientApplication({
     auth: {
-        clientId: "Enter_the_Application_Id_Here", // e.g. "b1b60dca-c49d-496e-9851-xxxxxxxxxxxx" (guid)
+        clientId: "Enter_the_Application_Id_Here", // e.g. "00001111-aaaa-2222-bbbb-3333cccc4444" (guid)
         authority: "https://login.microsoftonline.com/Enter_the_Tenant_Info_Here", // e.g. "common" or your tenantId (guid),
         redirectUri: "/"
     },
