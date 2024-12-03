@@ -65,7 +65,7 @@ Example event:
 
 ```typescript
 const event: PerformanceEvent = {
-    correlationId: "03cad3ff-6682-4e3d-a0b4-d517b531c718",
+    correlationId: "aaaa0000-bb11-2222-33cc-444444dddddd",
 	durationMs: 1873,
 	endPageVisibility: "hidden",
 	fromCache: false,
@@ -78,7 +78,7 @@ const event: PerformanceEvent = {
     silentIframeClientAcquireTokenDurationMs: 0
     cryptoOptsGetPublicKeyThumbprintDurationMs: 200,
     cryptoOptsSignJwtDurationMs: 8,
-    clientId: "b50703d7-d12b-4ddc-8758-91053fe0aba4",
+    clientId: "00001111-aaaa-2222-bbbb-3333cccc4444",
     authority: "https://login.microsoftonline.com/common",
     libraryName: "@azure/msal-browser-1p",
     libraryVersion: "2.22.2-beta.2",
