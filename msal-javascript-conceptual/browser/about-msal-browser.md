@@ -17,7 +17,7 @@ ms.reviewer: dmwendia, cwerner, owenrichards, kengaderdus
 
 The MSAL library for JavaScript enables client-side JavaScript applications to authenticate users using [Microsoft Entra ID](/entra/identity-platform/vv2-overview.md) work and school accounts, Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through [Azure AD B2C](/azure/active-directory-b2c/active-directory-b2c-overview.md#identity-providers) service. It also enables your app to get tokens to access [Microsoft Cloud](https://www.microsoft.com/enterprise) services such as [Microsoft Graph](https://graph.microsoft.io).
 
-The `@azure/msal-browser` package uses the [`@azure/msal-common` package](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-common) as a dependency to enable authentication in JavaScript Single-Page Applications without backend servers. This version of the library uses the OAuth 2.0 Authorization Code Flow with PKCE and does NOT support the implicit flow.
+The `@azure/msal-browser` package uses the [`@azure/msal-common` package](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-common) as a dependency to enable authentication in JavaScript single-page applications without backend servers. This version of the library uses the OAuth 2.0 Authorization Code Flow with PKCE and does NOT support the implicit flow. If you're using MSAL.js v1.0, consider migrating to MSAL.js v2.0+ to take advantage of the authorization code flow with PKCE which is more secure. 
 
 ## Prerequisites
 

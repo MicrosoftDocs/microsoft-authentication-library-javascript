@@ -27,7 +27,7 @@ For general remarks on differences between ADAL vs MSAL, as well as important da
 
 ## Update app registration settings
 
-When working with ADAL Node, you were likely using the **Azure AD v1.0 endpoint**. Apps migrating from ADAL to MSAL should switch to **Azure AD v2.0 endpoint**.
+When working with ADAL Node, you were likely using the **Azure AD v1.0 endpoint**. Migrate your app from ADAL to MSAL to use the **Microsoft identity platform endpoint**.
 
 ## Install and import MSAL
 

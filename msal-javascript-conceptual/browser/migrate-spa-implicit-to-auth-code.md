@@ -5,7 +5,7 @@ author: OwenRichards1
 manager: CelesteDG
 ms.author: owenrichards
 ms.custom: devx-track-js
-ms.date: 07/17/2020
+ms.date: 05/22/2024
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: how-to
@@ -14,7 +14,7 @@ ms.topic: how-to
 
 # Migrate a JavaScript single-page app from implicit grant to auth code flow
 
-The Microsoft Authentication Library for JavaScript (MSAL.js) v2.0 brings support for the authorization code flow with PKCE and CORS to single-page applications on the Microsoft identity platform. Follow the steps in the sections below to migrate your MSAL.js 1.x application using the implicit grant to MSAL.js 2.0+ (hereafter *2.x*) and the auth code flow.
+The Microsoft Authentication Library for JavaScript (MSAL.js) v2.0 brings support for the authorization code flow with PKCE and CORS to single-page applications on the Microsoft identity platform. Follow the steps in the sections below to migrate your MSAL.js 1.x application using the implicit grant to MSAL.js 2.0+ (hereafter *2.x*) and the authorization code flow with PKCE.
 
 MSAL.js 2.x improves on MSAL.js 1.x by supporting the authorization code flow in the browser instead of the implicit grant flow. MSAL.js 2.x does **NOT** support the implicit flow.
 
@@ -24,7 +24,7 @@ To update your application to MSAL.js 2.x and the auth code flow, there are thre
 
 1. Switch your [app registration](#switch-redirect-uris-to-spa-platform) redirect URI(s) from **Web** platform to **Single-page application** platform.
 1. Update your [code](#switch-redirect-uris-to-spa-platform) from MSAL.js 1.x to **2.x**.
-1. Disable the [implicit grant](#disable-implicit-grant-settings) in your app registration when all applications sharing the registration have been updated to MSAL.js 2.x and the auth code flow.
+1. Disable the [implicit grant](#disable-implicit-grant-settings) in your app registration when all applications sharing the registration have been updated to MSAL.js 2.x and the auth code flow with PKCE.
 
 The following sections describe each step in additional detail.
 
@@ -75,7 +75,7 @@ const msalInstance = new msal.PublicClientApplication(config);
 
 For a full walk-through of adding MSAL 2.x to your application, see [Tutorial: Sign in users and call the Microsoft Graph API from a JavaScript single-page app (SPA) using auth code flow](/entra/identity-platform/tutorial-v2-javascript-auth-code).
 
-For additional changes you might need to make to your code, see the [migration guide](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/v1-migration.md) on GitHub.
+For additional changes you might need to make to your code, see the [migration guide](v1-migration.md) on GitHub.
 
 ## Disable implicit grant settings
 
@@ -90,6 +90,3 @@ When you uncheck the implicit grant settings in the app registration, the implic
 To learn more about the authorization code flow, including the differences between the implicit and auth code flows, see the [Microsoft identity platform and OAuth 2.0 authorization code flow](/entra/identity-pltform/v2-oauth2-auth-code-flow).
 
 If you'd like to dive deeper into JavaScript single-page application development on the Microsoft identity platform, the multi-part [Scenario: Single-page application](/entra/identity-platform/scenario-spa-overview) series of articles can help you get started.
-
-<!-- LINKS - external -->
-[msal-js-publicclientapplication]: https://azuread.github.io/microsoft-authentication-library-for-js/ref/classes/_azure_msal_node.PublicClientApplication.html
