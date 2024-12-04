@@ -31,7 +31,7 @@ The [`lib`](https://github.com/AzureAD/microsoft-authentication-library-for-js/t
 
 - **Microsoft Authentication Library for Angular v2.x**: A wrapper of the `msal-browser` 2.x library for apps using Angular framework.
 
-- **Microsoft Authentication Library for JavaScript v1.x**: A browser-based, framework-agnostic core library that enables authentication and token acquisition with the Microsoft identity platform in JavaScript applications. Implements the OAuth 2.0 [Implicit Grant Flow](/../../azure/active-directory/develop/v2-oauth2-implicit-grant-flow), and is [OpenID-compliant](/../../azure/active-directory/develop/v2-protocols-oidc).
+- **Microsoft Authentication Library for JavaScript v1.x**: A browser-based, framework-agnostic core library that enables authentication and token acquisition with the Microsoft identity platform in JavaScript applications. It implements the OAuth 2.0 [Implicit Grant Flow](/../../azure/active-directory/develop/v2-oauth2-implicit-grant-flow), and is [OpenID-compliant](/../../azure/active-directory/develop/v2-protocols-oidc). Microsoft recommends using MSAL.js v2.0+ to take advantage of the authorization code flow with PKCE which is more secure.
 
 - [Microsoft Authentication Library for Angular](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/msal-angular-v1/lib/msal-angular): A wrapper of the core 1.x library for apps using Angular framework.
 
@@ -61,4 +61,4 @@ All of our libraries follow [semantic versioning](https://semver.org). We recomm
 
 ## Security reporting
 
-If you find a security issue with our libraries or services [please report it to the Microsoft Security Response Center (MSRC)](https://aka.ms/report-security-issue) with as much detail as possible. Your submission may be eligible for a bounty through the [Microsoft Bounty](https://aka.ms/bugbounty) program. Please do not post security issues to GitHub Issues or any other public site. We will contact you shortly upon receiving the information. If you'd like to get notifications of when security incidents occur, [subscribe to security advisory alerts](https://msrc-blog.microsoft.com/2022/08/09/security-update-guide-notification-system-news-create-your-profile-now/).
+If you find a security issue with our libraries or services [please report it to the Microsoft Security Response Center (MSRC)](https://aka.ms/report-security-issue) with as much detail as possible. 
