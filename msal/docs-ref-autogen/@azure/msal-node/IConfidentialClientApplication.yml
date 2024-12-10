@@ -7,7 +7,6 @@ summary: >-
   signatures
 fullName: IConfidentialClientApplication
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
@@ -19,19 +18,20 @@ methods:
       Acquires tokens from the authority for the application (not for an end
       user)
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function acquireTokenByClientCredential(request:
-        ClientCredentialRequest): Promise<AuthenticationResult | null>
+        ClientCredentialRequest): Promise<null | AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.ClientCredentialRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
   - name: acquireTokenByCode(AuthorizationCodeRequest)
     uid: '@azure/msal-node.IConfidentialClientApplication.acquireTokenByCode'
     package: '@azure/msal-node'
@@ -39,7 +39,6 @@ methods:
       Acquires a token by exchanging the authorization code received from the
       first step of OAuth 2.0 Authorization Code Flow
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -51,7 +50,7 @@ methods:
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
+        type: Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" />&gt;
   - name: acquireTokenByRefreshToken(RefreshTokenRequest)
     uid: '@azure/msal-node.IConfidentialClientApplication.acquireTokenByRefreshToken'
     package: '@azure/msal-node'
@@ -59,19 +58,20 @@ methods:
       Acquires a token by exchanging the refresh token provided for a new set of
       tokens
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function acquireTokenByRefreshToken(request: RefreshTokenRequest):
-        Promise<AuthenticationResult | null>
+        Promise<null | AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.RefreshTokenRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
   - name: acquireTokenByUsernamePassword(UsernamePasswordRequest)
     uid: >-
       @azure/msal-node.IConfidentialClientApplication.acquireTokenByUsernamePassword
@@ -80,37 +80,39 @@ methods:
       Acquires tokens with password grant by exchanging client applications
       username and password for credentials
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function acquireTokenByUsernamePassword(request:
-        UsernamePasswordRequest): Promise<AuthenticationResult | null>
+        UsernamePasswordRequest): Promise<null | AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.UsernamePasswordRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
   - name: acquireTokenOnBehalfOf(OnBehalfOfRequest)
     uid: '@azure/msal-node.IConfidentialClientApplication.acquireTokenOnBehalfOf'
     package: '@azure/msal-node'
     summary: Acquires tokens from the authority for the application
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function acquireTokenOnBehalfOf(request: OnBehalfOfRequest):
-        Promise<AuthenticationResult | null>
+        Promise<null | AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.OnBehalfOfRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
   - name: acquireTokenSilent(SilentFlowRequest)
     uid: '@azure/msal-node.IConfidentialClientApplication.acquireTokenSilent'
     package: '@azure/msal-node'
@@ -118,25 +120,25 @@ methods:
       Acquires a token silently when a user specifies the account the token is
       requested for
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function acquireTokenSilent(request: SilentFlowRequest):
-        Promise<AuthenticationResult | null>
+        function acquireTokenSilent(request: SilentFlowRequest): Promise<null |
+        AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.SilentFlowRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
   - name: clearCache()
     uid: '@azure/msal-node.IConfidentialClientApplication.clearCache'
     package: '@azure/msal-node'
     summary: Clear the cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function clearCache()
@@ -145,7 +147,6 @@ methods:
     package: '@azure/msal-node'
     summary: Creates the URL of the authorization request
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -163,19 +164,17 @@ methods:
     package: '@azure/msal-node'
     summary: Returns the logger instance
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLogger(): Logger'
       return:
         description: ''
-        type: Logger
+        type: <xref uid="@azure/msal-node.Logger" />
   - name: getTokenCache()
     uid: '@azure/msal-node.IConfidentialClientApplication.getTokenCache'
     package: '@azure/msal-node'
     summary: Gets the token cache for the application
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getTokenCache(): TokenCache'
@@ -189,13 +188,12 @@ methods:
       This extensibility point is meant for Azure SDK to enhance Managed
       Identity support
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function SetAppTokenProvider(provider: IAppTokenProvider)'
       parameters:
         - id: provider
-          type: IAppTokenProvider
+          type: <xref uid="@azure/msal-node.IAppTokenProvider" />
           description: ''
   - name: setLogger(Logger)
     uid: '@azure/msal-node.IConfidentialClientApplication.setLogger'
@@ -204,11 +202,10 @@ methods:
       Replaces the default logger set in configurations with new Logger with new
       configurations
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setLogger(logger: Logger)'
       parameters:
         - id: logger
-          type: Logger
+          type: <xref uid="@azure/msal-node.Logger" />
           description: ''

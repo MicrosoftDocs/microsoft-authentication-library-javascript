@@ -1,0 +1,84 @@
+### YamlMime:TSTypeAlias
+name: PerformanceEvent
+uid: '@azure/msal-browser.PerformanceEvent'
+package: '@azure/msal-browser'
+summary: >-
+  Performance measurement taken by the library, including metadata about the
+  request and application.
+fullName: PerformanceEvent
+remarks: ''
+isDeprecated: false
+syntax: |
+  type PerformanceEvent = {
+    accessTokenSize?: number
+    accountType?: "AAD" | "MSA" | "B2C"
+    allowNativeBroker?: boolean
+    appName?: string
+    appVersion?: string
+    authority: string
+    awaitIframeCorrelationId?: string
+    cacheAtCount?: number
+    cacheIdCount?: number
+    cacheLookupPolicy?: number
+    cacheOutcome?: number
+    cacheRtCount?: number
+    clientId: string
+    contentLengthHeader?: string
+    contentTypeHeader?: string
+    context?: string
+    correlationId: string
+    durationMs?: number
+    embeddedClientId?: string
+    embeddedRedirectUri?: string
+    endPageVisibility?: string | null
+    errorCode?: string
+    errorName?: string
+    errorStack?: string[]
+    eventId: string
+    extensionHandshakeTimedOut?: boolean
+    extensionHandshakeTimeoutMs?: number
+    extensionId?: string
+    extensionInstalled?: boolean
+    extensionVersion?: string
+    fromCache?: boolean | null
+    httpStatus?: number
+    httpVerToken?: string
+    idTokenSize?: number
+    incompleteSubMeasurements?: Map<string, SubMeasurement>
+    incompleteSubsCount?: number
+    isNativeBroker?: boolean
+    libraryName: string
+    libraryVersion: string
+    matsAccountJoinOnEnd?: string
+    matsAccountJoinOnStart?: string
+    matsApiErrorCode?: number
+    matsBrokerVersion?: string
+    matsDeviceJoin?: string
+    matsHttpEventCount?: number
+    matsHttpStatus?: number
+    matsPromptBehavior?: string
+    matsSilentBiSubCode?: number
+    matsSilentCode?: number
+    matsSilentMessage?: string
+    matsSilentStatus?: number
+    matsUiVisible?: boolean
+    multiMatchedAT?: number
+    multiMatchedID?: number
+    multiMatchedRT?: number
+    name: string
+    nestedAppAuthRequest?: boolean
+    queuedCount?: number
+    queuedManuallyCompletedCount?: number
+    queuedTimeMs?: number
+    refreshTokenSize?: number
+    requestId?: string
+    retryError?: string
+    scenarioId?: string
+    serverErrorNo?: string
+    startPageVisibility?: string | null
+    startTimeMs: number
+    status: PerformanceEventStatus
+    subErrorCode?: string
+    success?: boolean | null
+    visibilityChangeCount?: number
+  }

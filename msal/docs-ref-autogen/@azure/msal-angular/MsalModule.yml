@@ -5,9 +5,53 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: MsalModule
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
+properties:
+  - name: ɵfac
+    uid: '@azure/msal-angular.MsalModule.ɵfac'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵfac
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵfac: ɵɵFactoryDeclaration<MsalModule, never>'
+      return:
+        description: ''
+        type: >-
+          ɵɵFactoryDeclaration&lt;<xref uid="@azure/msal-angular.MsalModule" />,
+          never&gt;
+  - name: ɵinj
+    uid: '@azure/msal-angular.MsalModule.ɵinj'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵinj
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵinj: ɵɵInjectorDeclaration<MsalModule>'
+      return:
+        description: ''
+        type: >-
+          ɵɵInjectorDeclaration&lt;<xref uid="@azure/msal-angular.MsalModule"
+          />&gt;
+  - name: ɵmod
+    uid: '@azure/msal-angular.MsalModule.ɵmod'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵmod
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static ɵmod: ɵɵNgModuleDeclaration<MsalModule, [typeof
+        MsalRedirectComponent], [any], never>
+      return:
+        description: ''
+        type: >-
+          ɵɵNgModuleDeclaration&lt;<xref uid="@azure/msal-angular.MsalModule"
+          />, [typeof MsalRedirectComponent], [any], never&gt;
 methods:
   - name: >-
       forRoot(IPublicClientApplication, MsalGuardConfiguration,
@@ -16,7 +60,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -25,7 +68,7 @@ methods:
         MsalInterceptorConfiguration): ModuleWithProviders<MsalModule>
       parameters:
         - id: msalInstance
-          type: IPublicClientApplication
+          type: <xref uid="@azure/msal-browser.IPublicClientApplication" />
           description: ''
         - id: guardConfig
           type: <xref uid="@azure/msal-angular.MsalGuardConfiguration" />

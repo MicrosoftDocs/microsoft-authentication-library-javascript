@@ -28,14 +28,17 @@ summary: >-
 
   - forceCache              - Force MSAL to cache a refresh token flow response
   when there is no account in the cache. Used for migration scenarios.
+
+  - tokenQueryParameters    - String to string map of custom query parameters
+  added to the /token call
 fullName: CommonRefreshTokenRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type CommonRefreshTokenRequest = BaseAuthRequest & {
-    ccsCredential?: CcsCredential,
-    forceCache?: boolean,
-    refreshToken: string,
-    tokenQueryParameters?: StringDict,
+    ccsCredential?: CcsCredential
+    forceCache?: boolean
+    redirectUri?: string
+    refreshToken: string
+    tokenBodyParameters?: StringDict
   }

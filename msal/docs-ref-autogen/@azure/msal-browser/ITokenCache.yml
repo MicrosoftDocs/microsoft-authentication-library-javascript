@@ -5,16 +5,14 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: ITokenCache
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
-  - name: 'loadExternalTokens(SilentRequest, ExternalTokenResponse, LoadTokenOptions)'
+  - name: loadExternalTokens(SilentRequest, ExternalTokenResponse, LoadTokenOptions)
     uid: '@azure/msal-browser.ITokenCache.loadExternalTokens'
     package: '@azure/msal-browser'
     summary: API to side-load tokens to MSAL cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -25,11 +23,11 @@ methods:
           type: <xref uid="@azure/msal-browser.SilentRequest" />
           description: ''
         - id: response
-          type: ExternalTokenResponse
+          type: <xref uid="@azure/msal-browser.ExternalTokenResponse" />
           description: ''
         - id: options
           type: <xref uid="@azure/msal-browser.LoadTokenOptions" />
           description: ''
       return:
         description: '`AuthenticationResult` for the response that was loaded.'
-        type: AuthenticationResult
+        type: <xref uid="@azure/msal-browser.AuthenticationResult" />

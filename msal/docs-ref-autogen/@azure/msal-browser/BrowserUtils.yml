@@ -1,80 +1,50 @@
-### YamlMime:TSType
-name: BrowserUtils
+### YamlMime:TSPackage
 uid: '@azure/msal-browser.BrowserUtils'
+name: BrowserUtils
+type: module
 package: '@azure/msal-browser'
-summary: Utility class for browser specific functions
-fullName: BrowserUtils
-remarks: ''
-isPreview: false
-isDeprecated: false
-type: class
-methods:
+summary: ''
+functions:
   - name: blockAcquireTokenInPopups()
     uid: '@azure/msal-browser.BrowserUtils.blockAcquireTokenInPopups'
     package: '@azure/msal-browser'
     summary: Block redirectUri loaded in popup from calling AcquireToken APIs
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: static function blockAcquireTokenInPopups()
-  - name: 'blockNativeBrokerCalledBeforeInitialized(boolean, boolean)'
-    uid: '@azure/msal-browser.BrowserUtils.blockNativeBrokerCalledBeforeInitialized'
+      content: function blockAcquireTokenInPopups()
+  - name: blockAPICallsBeforeInitialize(boolean)
+    uid: '@azure/msal-browser.BrowserUtils.blockAPICallsBeforeInitialize'
     package: '@azure/msal-browser'
-    summary: >-
-      Throws error if native brokering is enabled but initialize hasn't been
-      called
+    summary: Throws error if initialize hasn't been called
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        static function
-        blockNativeBrokerCalledBeforeInitialized(allowNativeBroker: boolean,
-        initialized: boolean)
+      content: 'function blockAPICallsBeforeInitialize(initialized: boolean)'
       parameters:
-        - id: allowNativeBroker
-          type: boolean
-          description: ''
         - id: initialized
           type: boolean
-          description: |+
-
-  - name: blockNonBrowserEnvironment(boolean)
+          description: ''
+  - name: blockNonBrowserEnvironment()
     uid: '@azure/msal-browser.BrowserUtils.blockNonBrowserEnvironment'
     package: '@azure/msal-browser'
     summary: Throws error if token requests are made in non-browser environment
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        static function blockNonBrowserEnvironment(isBrowserEnvironment:
-        boolean)
-      parameters:
-        - id: isBrowserEnvironment
-          type: boolean
-          description: |
-            Flag indicating if environment is a browser.
-  - name: 'blockRedirectInIframe(InteractionType, boolean)'
+      content: function blockNonBrowserEnvironment()
+  - name: blockRedirectInIframe(boolean)
     uid: '@azure/msal-browser.BrowserUtils.blockRedirectInIframe'
     package: '@azure/msal-browser'
     summary: Block redirect operations in iframes unless explicitly allowed
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        static function blockRedirectInIframe(interactionType: InteractionType,
-        allowRedirectInIframe: boolean)
+      content: 'function blockRedirectInIframe(allowRedirectInIframe: boolean)'
       parameters:
-        - id: interactionType
-          type: <xref uid="@azure/msal-browser.InteractionType" />
-          description: Interaction type for the request
         - id: allowRedirectInIframe
           type: boolean
-          description: |
-            Config value to allow redirects when app is inside an iframe
+          description: Config value to allow redirects when app is inside an iframe
   - name: blockReloadInHiddenIframes()
     uid: '@azure/msal-browser.BrowserUtils.blockReloadInHiddenIframes'
     package: '@azure/msal-browser'
@@ -82,58 +52,40 @@ methods:
       Throws error if we have completed an auth and are
       attempting another auth request inside an iframe.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: static function blockReloadInHiddenIframes()
+      content: function blockReloadInHiddenIframes()
   - name: clearHash(Window)
     uid: '@azure/msal-browser.BrowserUtils.clearHash'
     package: '@azure/msal-browser'
     summary: Clears hash from window url.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function clearHash(contentWindow: Window)'
+      content: 'function clearHash(contentWindow: Window)'
       parameters:
         - id: contentWindow
           type: Window
           description: ''
-  - name: detectIEOrEdge()
-    uid: '@azure/msal-browser.BrowserUtils.detectIEOrEdge'
+  - name: createGuid()
+    uid: '@azure/msal-browser.BrowserUtils.createGuid'
     package: '@azure/msal-browser'
-    summary: >-
-      Returns boolean of whether current browser is an Internet Explorer or Edge
-      browser.
+    summary: Wrapper function that creates a UUID v7 from the current timestamp.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function detectIEOrEdge(): boolean'
+      content: 'function createGuid(): string'
       return:
         description: ''
-        type: boolean
-  - name: getBrowserNetworkClient()
-    uid: '@azure/msal-browser.BrowserUtils.getBrowserNetworkClient'
-    package: '@azure/msal-browser'
-    summary: Returns best compatible network client object.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static function getBrowserNetworkClient(): INetworkModule'
-      return:
-        description: ''
-        type: INetworkModule
+        type: string
   - name: getCurrentUri()
     uid: '@azure/msal-browser.BrowserUtils.getCurrentUri'
     package: '@azure/msal-browser'
     summary: Returns current window URL as redirect uri
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function getCurrentUri(): string'
+      content: 'function getCurrentUri(): string'
       return:
         description: ''
         type: string
@@ -142,10 +94,9 @@ methods:
     package: '@azure/msal-browser'
     summary: Gets the homepage url for the current window location.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function getHomepage(): string'
+      content: 'function getHomepage(): string'
       return:
         description: ''
         type: string
@@ -154,10 +105,9 @@ methods:
     package: '@azure/msal-browser'
     summary: Returns boolean of whether the current window is in an iframe or not.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function isInIframe(): boolean'
+      content: 'function isInIframe(): boolean'
       return:
         description: ''
         type: boolean
@@ -168,22 +118,63 @@ methods:
       Returns boolean of whether or not the current window is a popup opened by
       msal
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function isInPopup(): boolean'
+      content: 'function isInPopup(): boolean'
       return:
         description: ''
         type: boolean
+  - name: preconnect(string)
+    uid: '@azure/msal-browser.BrowserUtils.preconnect'
+    package: '@azure/msal-browser'
+    summary: >-
+      Adds a preconnect link element to the header which begins DNS resolution
+      and SSL connection in anticipation of the /token request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function preconnect(authority: string)'
+      parameters:
+        - id: authority
+          type: string
+          description: ''
+  - name: preflightCheck(boolean)
+    uid: '@azure/msal-browser.BrowserUtils.preflightCheck'
+    package: '@azure/msal-browser'
+    summary: Helper to validate app environment before making an auth request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function preflightCheck(initialized: boolean)'
+      parameters:
+        - id: initialized
+          type: boolean
+          description: ''
+  - name: redirectPreflightCheck(boolean, BrowserConfiguration)
+    uid: '@azure/msal-browser.BrowserUtils.redirectPreflightCheck'
+    package: '@azure/msal-browser'
+    summary: Helper to validate app enviornment before making redirect request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function redirectPreflightCheck(initialized: boolean, config:
+        BrowserConfiguration)
+      parameters:
+        - id: initialized
+          type: boolean
+          description: ''
+        - id: config
+          type: BrowserConfiguration
+          description: ''
   - name: replaceHash(string)
     uid: '@azure/msal-browser.BrowserUtils.replaceHash'
     package: '@azure/msal-browser'
     summary: Replaces current hash with hash from provided url
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function replaceHash(url: string)'
+      content: 'function replaceHash(url: string)'
       parameters:
         - id: url
           type: string

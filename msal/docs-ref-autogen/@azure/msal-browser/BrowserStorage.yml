@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: BrowserStorage
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new BrowserStorage(cacheLocation: string)'
@@ -28,7 +26,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function containsKey(key: string): boolean'
@@ -44,35 +41,32 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getItem(key: string): string | null'
+      content: 'function getItem(key: string): null | string'
       parameters:
         - id: key
           type: string
           description: ''
       return:
         description: ''
-        type: string | null
+        type: null | string
   - name: getKeys()
     uid: '@azure/msal-browser.BrowserStorage.getKeys'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getKeys(): string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: removeItem(string)
     uid: '@azure/msal-browser.BrowserStorage.removeItem'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeItem(key: string)'
@@ -80,12 +74,11 @@ methods:
         - id: key
           type: string
           description: ''
-  - name: 'setItem(string, string)'
+  - name: setItem(string, string)
     uid: '@azure/msal-browser.BrowserStorage.setItem'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setItem(key: string, value: string)'

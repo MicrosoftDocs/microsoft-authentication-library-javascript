@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: PerformanceCallbackFunction
+uid: '@azure/msal-browser.PerformanceCallbackFunction'
+package: '@azure/msal-browser'
+summary: ''
+fullName: PerformanceCallbackFunction
+remarks: ''
+isDeprecated: false
+syntax: |
+  type PerformanceCallbackFunction = (events: PerformanceEvent[]) => void

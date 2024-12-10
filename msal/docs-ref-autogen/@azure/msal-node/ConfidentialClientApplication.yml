@@ -8,15 +8,15 @@ summary: >-
    will configure application secrets, client certificates/assertions as applicable
 fullName: ConfidentialClientApplication
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
   - name: ConfidentialClientApplication(Configuration)
     uid: '@azure/msal-node.ConfidentialClientApplication.constructor'
     package: '@azure/msal-node'
-    summary: >
+    summary: >-
       Constructor for the ConfidentialClientApplication
+
 
       Required attributes in the Configuration object are:
 
@@ -31,7 +31,7 @@ constructors:
 
 
       In Azure AD, authority is a URL indicating of the form
-      `https://login.microsoftonline.com/\{Enter_the_Tenant_Info_Here\}`
+      https://login.microsoftonline.com/{Enter_the_Tenant_Info_Here}.
 
       If your application supports Accounts in one organizational directory,
       replace "Enter_the_Tenant_Info_Here" value with the Tenant Id or Tenant
@@ -49,12 +49,11 @@ constructors:
 
 
       In Azure B2C, authority is of the form
-      https://\{instance\}/tfp/\{tenant\}/\{policyName\}/
+      https://{instance}/tfp/{tenant}/{policyName}/
 
       Full B2C functionality will be available in this library in future
       versions.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new ConfidentialClientApplication(configuration: Configuration)'
@@ -63,14 +62,15 @@ constructors:
           type: <xref uid="@azure/msal-node.Configuration" />
           description: ''
 inheritedMethods:
-  - name: 'acquireTokenByCode(AuthorizationCodeRequest, AuthorizationCodePayload)'
+  - name: acquireTokenByCode(AuthorizationCodeRequest, AuthorizationCodePayload)
     uid: '@azure/msal-node.ConfidentialClientApplication.acquireTokenByCode'
     package: '@azure/msal-node'
-    summary: >
+    summary: >-
       Acquires a token by exchanging the Authorization Code received from the
       first step of OAuth2.0
 
       Authorization Code flow.
+
 
       `getAuthCodeUrl(AuthorizationCodeUrlRequest)` can be used to create the
       URL for the first step of OAuth2.0
@@ -80,7 +80,6 @@ inheritedMethods:
 
       AuthorizationCodeRequest are the same.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -92,20 +91,21 @@ inheritedMethods:
           type: <xref uid="@azure/msal-node.AuthorizationCodeRequest" />
           description: ''
         - id: authCodePayLoad
-          type: AuthorizationCodePayload
+          type: <xref uid="@azure/msal-node.AuthorizationCodePayload" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
+        type: Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" />&gt;
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ClientApplication.acquireTokenByCode](xref:@azure/msal-node.ClientApplication.acquireTokenByCode)
   - name: acquireTokenByRefreshToken(RefreshTokenRequest)
     uid: '@azure/msal-node.ConfidentialClientApplication.acquireTokenByRefreshToken'
     package: '@azure/msal-node'
-    summary: >
+    summary: >-
       Acquires a token by exchanging the refresh token provided for a new set of
       tokens.
+
 
       This API is provided only for scenarios where you would like to migrate
       from ADAL to MSAL. Otherwise, it is
@@ -115,19 +115,20 @@ inheritedMethods:
 
       handle the caching and refreshing of tokens automatically.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function acquireTokenByRefreshToken(request: RefreshTokenRequest):
-        Promise<AuthenticationResult | null>
+        Promise<null | AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.RefreshTokenRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ClientApplication.acquireTokenByRefreshToken](xref:@azure/msal-node.ClientApplication.acquireTokenByRefreshToken)
@@ -135,9 +136,10 @@ inheritedMethods:
     uid: >-
       @azure/msal-node.ConfidentialClientApplication.acquireTokenByUsernamePassword
     package: '@azure/msal-node'
-    summary: >
+    summary: >-
       Acquires tokens with password grant by exchanging client applications
       username and password for credentials
+
 
       The latest OAuth 2.0 Security Best Current Practice disallows the password
       grant entirely.
@@ -149,29 +151,30 @@ inheritedMethods:
 
       https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows#usernamepassword
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function acquireTokenByUsernamePassword(request:
-        UsernamePasswordRequest): Promise<AuthenticationResult | null>
+        UsernamePasswordRequest): Promise<null | AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.UsernamePasswordRequest" />
-          description: |
-            UsenamePasswordRequest
+          description: UsenamePasswordRequest
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ClientApplication.acquireTokenByUsernamePassword](xref:@azure/msal-node.ClientApplication.acquireTokenByUsernamePassword)
   - name: acquireTokenSilent(SilentFlowRequest)
     uid: '@azure/msal-node.ConfidentialClientApplication.acquireTokenSilent'
     package: '@azure/msal-node'
-    summary: >
+    summary: >-
       Acquires a token silently when a user specifies the account the token is
       requested for.
+
 
       This API expects the user to provide an account object and looks into the
       cache to retrieve the token if present.
@@ -184,19 +187,18 @@ inheritedMethods:
       and the guidance is for the user to call any interactive token acquisition
       API (eg: `acquireTokenByCode()`).
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function acquireTokenSilent(request: SilentFlowRequest):
-        Promise<AuthenticationResult | null>
+        Promise<AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.SilentFlowRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
+        type: Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" />&gt;
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ClientApplication.acquireTokenSilent](xref:@azure/msal-node.ClientApplication.acquireTokenSilent)
@@ -205,7 +207,6 @@ inheritedMethods:
     package: '@azure/msal-node'
     summary: Clear the cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function clearCache()
@@ -215,7 +216,7 @@ inheritedMethods:
   - name: getAuthCodeUrl(AuthorizationUrlRequest)
     uid: '@azure/msal-node.ConfidentialClientApplication.getAuthCodeUrl'
     package: '@azure/msal-node'
-    summary: >
+    summary: >-
       Creates the URL of the authorization request, letting the user input
       credentials and consent to the
 
@@ -223,6 +224,7 @@ inheritedMethods:
       configured in the
 
       application object.
+
 
       Once the user inputs their credentials and consents, the authority will
       send a response to the redirect URI
@@ -232,7 +234,6 @@ inheritedMethods:
 
       `acquireTokenByCode(AuthorizationCodeRequest)`.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -253,13 +254,12 @@ inheritedMethods:
     package: '@azure/msal-node'
     summary: Returns the logger instance
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLogger(): Logger'
       return:
         description: ''
-        type: Logger
+        type: <xref uid="@azure/msal-node.Logger" />
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ClientApplication.getLogger](xref:@azure/msal-node.ClientApplication.getLogger)
@@ -268,7 +268,6 @@ inheritedMethods:
     package: '@azure/msal-node'
     summary: Gets the token cache for the application.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getTokenCache(): TokenCache'
@@ -285,15 +284,13 @@ inheritedMethods:
       Replaces the default logger set in configurations with new Logger with new
       configurations
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setLogger(logger: Logger)'
       parameters:
         - id: logger
-          type: Logger
-          description: |
-            Logger instance
+          type: <xref uid="@azure/msal-node.Logger" />
+          description: Logger instance
     inheritanceDescription: >-
       <b>Inherited From</b>
       [ClientApplication.setLogger](xref:@azure/msal-node.ClientApplication.setLogger)
@@ -306,24 +303,26 @@ methods:
       Acquires tokens from the authority for the application (not for an end
       user).
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function acquireTokenByClientCredential(request:
-        ClientCredentialRequest): Promise<AuthenticationResult | null>
+        ClientCredentialRequest): Promise<null | AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.ClientCredentialRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
   - name: acquireTokenOnBehalfOf(OnBehalfOfRequest)
     uid: '@azure/msal-node.ConfidentialClientApplication.acquireTokenOnBehalfOf'
     package: '@azure/msal-node'
-    summary: >
+    summary: >-
       Acquires tokens from the authority for the application.
+
 
       Used in scenarios where the current app is a middle-tier service which was
       called with a token
@@ -341,19 +340,20 @@ methods:
 
       https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#gaining-consent-for-the-middle-tier-application
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function acquireTokenOnBehalfOf(request: OnBehalfOfRequest):
-        Promise<AuthenticationResult | null>
+        Promise<null | AuthenticationResult>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.OnBehalfOfRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
   - name: SetAppTokenProvider(IAppTokenProvider)
     uid: '@azure/msal-node.ConfidentialClientApplication.SetAppTokenProvider'
     package: '@azure/msal-node'
@@ -363,12 +363,11 @@ methods:
 
       is meant for Azure SDK to enhance Managed Identity support.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function SetAppTokenProvider(provider: IAppTokenProvider)'
       parameters:
         - id: provider
-          type: IAppTokenProvider
+          type: <xref uid="@azure/msal-node.IAppTokenProvider" />
           description: ''
 extends: <xref uid="@azure/msal-node.ClientApplication" />

@@ -18,7 +18,7 @@ summary: >-
   - correlationId          - Unique GUID set per request to trace a request
   end-to-end for telemetry purposes.
 
-  - tokenQueryParameters       - String to string map of custom query parameters
+  - tokenQueryParameters   - String to string map of custom query parameters
   added to the /token call
 
   - account                - Account entity to lookup the credentials.
@@ -27,16 +27,11 @@ summary: >-
   true.
 fullName: SilentFlowRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type SilentFlowRequest = Partial<
     Omit<
       CommonSilentFlowRequest,
-      | "account"
-      | "scopes"
-      | "resourceRequestMethod"
-      | "resourceRequestUri"
-      | "requestedClaimsHash"
+      "account" | "scopes" | "requestedClaimsHash" | "storeInCache"
     >
-  > & { account: AccountInfo, scopes: Array<string> }
+  > & { account: AccountInfo; scopes: string[] }

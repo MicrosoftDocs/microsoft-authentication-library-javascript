@@ -5,10 +5,9 @@ package: '@azure/msal-browser'
 summary: This type is deprecated and will be removed on the next major version update
 fullName: AuthorizationUrlRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AuthorizationUrlRequest = Omit<
     CommonAuthorizationUrlRequest,
     "state" | "nonce" | "requestedClaimsHash" | "nativeBroker"
-  > & { nonce: string, state: string }
+  > & { nonce: string; state: string }

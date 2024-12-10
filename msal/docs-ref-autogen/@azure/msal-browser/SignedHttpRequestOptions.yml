@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: SignedHttpRequestOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type SignedHttpRequestOptions = { loggerOptions: LoggerOptions }

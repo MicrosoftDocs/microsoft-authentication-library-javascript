@@ -5,22 +5,20 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: MsalService
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'MsalService(IPublicClientApplication, Location)'
+  - name: MsalService(IPublicClientApplication, Location)
     uid: '@azure/msal-angular.MsalService.constructor'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new MsalService(instance: IPublicClientApplication, location: Location)'
       parameters:
         - id: instance
-          type: IPublicClientApplication
+          type: <xref uid="@azure/msal-browser.IPublicClientApplication" />
           description: ''
         - id: location
           type: Location
@@ -32,20 +30,46 @@ properties:
     summary: ''
     fullName: instance
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'instance: IPublicClientApplication'
       return:
         description: ''
-        type: IPublicClientApplication
+        type: <xref uid="@azure/msal-browser.IPublicClientApplication" />
+  - name: ɵfac
+    uid: '@azure/msal-angular.MsalService.ɵfac'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵfac
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵfac: ɵɵFactoryDeclaration<MsalService, never>'
+      return:
+        description: ''
+        type: >-
+          ɵɵFactoryDeclaration&lt;<xref uid="@azure/msal-angular.MsalService"
+          />, never&gt;
+  - name: ɵprov
+    uid: '@azure/msal-angular.MsalService.ɵprov'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵprov
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵprov: ɵɵInjectableDeclaration<MsalService>'
+      return:
+        description: ''
+        type: >-
+          ɵɵInjectableDeclaration&lt;<xref uid="@azure/msal-angular.MsalService"
+          />&gt;
 methods:
   - name: acquireTokenPopup(PopupRequest)
     uid: '@azure/msal-angular.MsalService.acquireTokenPopup'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -53,17 +77,18 @@ methods:
         Observable<AuthenticationResult>
       parameters:
         - id: request
-          type: PopupRequest
+          type: <xref uid="@azure/msal-browser.PopupRequest" />
           description: ''
       return:
         description: ''
-        type: Observable&lt;AuthenticationResult&gt;
+        type: >-
+          Observable&lt;<xref uid="@azure/msal-browser.AuthenticationResult"
+          />&gt;
   - name: acquireTokenRedirect(RedirectRequest)
     uid: '@azure/msal-angular.MsalService.acquireTokenRedirect'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -71,7 +96,7 @@ methods:
         Observable<void>
       parameters:
         - id: request
-          type: RedirectRequest
+          type: <xref uid="@azure/msal-browser.RedirectRequest" />
           description: ''
       return:
         description: ''
@@ -81,7 +106,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -89,11 +113,13 @@ methods:
         Observable<AuthenticationResult>
       parameters:
         - id: silentRequest
-          type: SilentRequest
+          type: <xref uid="@azure/msal-browser.SilentRequest" />
           description: ''
       return:
         description: ''
-        type: Observable&lt;AuthenticationResult&gt;
+        type: >-
+          Observable&lt;<xref uid="@azure/msal-browser.AuthenticationResult"
+          />&gt;
   - name: getLogger()
     uid: '@azure/msal-angular.MsalService.getLogger'
     package: '@azure/msal-angular'
@@ -103,19 +129,17 @@ methods:
       If no logger set, returns logger instance created with same options as
       msal-browser
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLogger(): Logger'
       return:
         description: ''
-        type: Logger
+        type: <xref uid="@azure/msal-common.Logger" />
   - name: handleRedirectObservable(string)
     uid: '@azure/msal-angular.MsalService.handleRedirectObservable'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -127,13 +151,14 @@ methods:
           description: ''
       return:
         description: ''
-        type: Observable&lt;AuthenticationResult&gt;
+        type: >-
+          Observable&lt;<xref uid="@azure/msal-browser.AuthenticationResult"
+          />&gt;
   - name: initialize()
     uid: '@azure/msal-angular.MsalService.initialize'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function initialize(): Observable<void>'
@@ -145,7 +170,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -153,23 +177,24 @@ methods:
         Observable<AuthenticationResult>
       parameters:
         - id: request
-          type: PopupRequest
+          type: <xref uid="@azure/msal-browser.PopupRequest" />
           description: ''
       return:
         description: ''
-        type: Observable&lt;AuthenticationResult&gt;
+        type: >-
+          Observable&lt;<xref uid="@azure/msal-browser.AuthenticationResult"
+          />&gt;
   - name: loginRedirect(RedirectRequest)
     uid: '@azure/msal-angular.MsalService.loginRedirect'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function loginRedirect(request?: RedirectRequest): Observable<void>'
       parameters:
         - id: request
-          type: RedirectRequest
+          type: <xref uid="@azure/msal-browser.RedirectRequest" />
           description: ''
       return:
         description: ''
@@ -179,13 +204,12 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function logout(logoutRequest?: EndSessionRequest): Observable<void>'
       parameters:
         - id: logoutRequest
-          type: EndSessionRequest
+          type: <xref uid="@azure/msal-browser.EndSessionRequest" />
           description: ''
       return:
         description: ''
@@ -195,7 +219,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -203,7 +226,7 @@ methods:
         Observable<void>
       parameters:
         - id: logoutRequest
-          type: EndSessionPopupRequest
+          type: <xref uid="@azure/msal-browser.EndSessionPopupRequest" />
           description: ''
       return:
         description: ''
@@ -213,7 +236,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -221,7 +243,7 @@ methods:
         Observable<void>
       parameters:
         - id: logoutRequest
-          type: EndSessionRequest
+          type: <xref uid="@azure/msal-browser.EndSessionRequest" />
           description: ''
       return:
         description: ''
@@ -231,20 +253,18 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setLogger(logger: Logger)'
       parameters:
         - id: logger
-          type: Logger
+          type: <xref uid="@azure/msal-common.Logger" />
           description: ''
   - name: ssoSilent(SsoSilentRequest)
     uid: '@azure/msal-angular.MsalService.ssoSilent'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -252,8 +272,10 @@ methods:
         Observable<AuthenticationResult>
       parameters:
         - id: request
-          type: SsoSilentRequest
+          type: <xref uid="@azure/msal-browser.SsoSilentRequest" />
           description: ''
       return:
         description: ''
-        type: Observable&lt;AuthenticationResult&gt;
+        type: >-
+          Observable&lt;<xref uid="@azure/msal-browser.AuthenticationResult"
+          />&gt;

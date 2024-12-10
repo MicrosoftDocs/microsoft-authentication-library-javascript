@@ -5,24 +5,21 @@ package: '@azure/msal-common'
 summary: Client network interface to send backend requests.
 fullName: INetworkModule
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
-  - name: 'sendGetRequestAsync<T>(string, NetworkRequestOptions, number)'
+  - name: sendGetRequestAsync<T>(string, NetworkRequestOptions, number)
     uid: '@azure/msal-common.INetworkModule.sendGetRequestAsync'
     package: '@azure/msal-common'
     summary: >-
       Interface function for async network "GET" requests. Based on the Fetch
       standard: https://fetch.spec.whatwg.org/
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function sendGetRequestAsync<T>(url: string, options?:
-        NetworkRequestOptions, cancellationToken?: number):
-        Promise<NetworkResponse<T>>
+        NetworkRequestOptions, timeout?: number): Promise<NetworkResponse<T>>
       parameters:
         - id: url
           type: string
@@ -30,7 +27,7 @@ methods:
         - id: options
           type: <xref uid="@azure/msal-common.NetworkRequestOptions" />
           description: ''
-        - id: cancellationToken
+        - id: timeout
           type: number
           description: ''
       return:
@@ -38,14 +35,13 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/msal-common.NetworkResponse"
           />&lt;T&gt;&gt;
-  - name: 'sendPostRequestAsync<T>(string, NetworkRequestOptions)'
+  - name: sendPostRequestAsync<T>(string, NetworkRequestOptions)
     uid: '@azure/msal-common.INetworkModule.sendPostRequestAsync'
     package: '@azure/msal-common'
     summary: >-
       Interface function for async network "POST" requests. Based on the Fetch
       standard: https://fetch.spec.whatwg.org/
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

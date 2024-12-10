@@ -26,15 +26,26 @@ summary: >-
 
   - idTokenClaims          - Object contains claims from ID token
 
-  - localAccountId         - The user's account ID
-
   - nativeAccountId        - The user's native account ID
+
+  - tenantProfiles         - Map of tenant profile objects for each tenant that
+  the account has authenticated with in the browser
 fullName: AccountInfo
 remarks: ''
-isPreview: false
 isDeprecated: false
-syntax: >-
-  type AccountInfo = { environment: string, homeAccountId: string, idToken?:
-  string, idTokenClaims?: TokenClaims & [key: string]: function, localAccountId:
-  string, name?: string, nativeAccountId?: string, tenantId: string, username:
-  string }
+syntax: |
+  type AccountInfo = {
+    authorityType?: string
+    environment: string
+    homeAccountId: string
+    idToken?: string
+    idTokenClaims?: TokenClaims & {
+      [key: string]: string | number | string[] | object | undefined | unknown
+    }
+    localAccountId: string
+    name?: string
+    nativeAccountId?: string
+    tenantId: string
+    tenantProfiles?: Map<string, TenantProfile>
+    username: string
+  }

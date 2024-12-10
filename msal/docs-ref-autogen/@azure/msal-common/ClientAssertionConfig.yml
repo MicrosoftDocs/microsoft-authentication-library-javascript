@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: ClientAssertionConfig
+uid: '@azure/msal-common.ClientAssertionConfig'
+package: '@azure/msal-common'
+summary: ''
+fullName: ClientAssertionConfig
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ClientAssertionConfig = { clientId: string; tokenEndpoint?: string }
