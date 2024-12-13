@@ -1,23 +1,15 @@
 ### YamlMime:TSType
-name: MemoryStorage
-uid: '@azure/msal-browser.MemoryStorage'
+name: IWindowStorage
+uid: '@azure/msal-browser.IWindowStorage'
 package: '@azure/msal-browser'
 summary: ''
-fullName: MemoryStorage<T>
+fullName: IWindowStorage<T>
 remarks: ''
 isDeprecated: false
-type: class
+type: interface
 methods:
-  - name: clear()
-    uid: '@azure/msal-browser.MemoryStorage.clear'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: function clear()
   - name: containsKey(string)
-    uid: '@azure/msal-browser.MemoryStorage.containsKey'
+    uid: '@azure/msal-browser.IWindowStorage.containsKey'
     package: '@azure/msal-browser'
     summary: Returns true or false if the given key is present in the cache.
     remarks: ''
@@ -32,7 +24,7 @@ methods:
         description: ''
         type: boolean
   - name: getItem(string)
-    uid: '@azure/msal-browser.MemoryStorage.getItem'
+    uid: '@azure/msal-browser.IWindowStorage.getItem'
     package: '@azure/msal-browser'
     summary: Get the item from the window storage object matching the given key.
     remarks: ''
@@ -47,7 +39,7 @@ methods:
         description: ''
         type: null | T
   - name: getKeys()
-    uid: '@azure/msal-browser.MemoryStorage.getKeys'
+    uid: '@azure/msal-browser.IWindowStorage.getKeys'
     package: '@azure/msal-browser'
     summary: >-
       Get all the keys from the window storage object as an iterable array of
@@ -60,7 +52,7 @@ methods:
         description: ''
         type: string[]
   - name: removeItem(string)
-    uid: '@azure/msal-browser.MemoryStorage.removeItem'
+    uid: '@azure/msal-browser.IWindowStorage.removeItem'
     package: '@azure/msal-browser'
     summary: Removes the item in the window storage object matching the given key.
     remarks: ''
@@ -72,7 +64,7 @@ methods:
           type: string
           description: ''
   - name: setItem(string, T)
-    uid: '@azure/msal-browser.MemoryStorage.setItem'
+    uid: '@azure/msal-browser.IWindowStorage.setItem'
     package: '@azure/msal-browser'
     summary: Sets the item in the window storage object with the given key.
     remarks: ''

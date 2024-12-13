@@ -213,11 +213,17 @@
     - uid: '@azure/msal-browser.ITokenCache'
       name: ITokenCache
       items: []
+    - uid: '@azure/msal-browser.IWindowStorage'
+      name: IWindowStorage
+      items: []
     - uid: '@azure/msal-browser.JsonWebTokenTypes'
       name: JsonWebTokenTypes
       items: []
     - uid: '@azure/msal-browser.LoadTokenOptions'
       name: LoadTokenOptions
+      items: []
+    - uid: '@azure/msal-browser.LocalStorage'
+      name: LocalStorage
       items: []
     - uid: '@azure/msal-browser.Logger'
       name: Logger
@@ -281,6 +287,9 @@
       items: []
     - uid: '@azure/msal-browser.ServerResponseType'
       name: ServerResponseType
+      items: []
+    - uid: '@azure/msal-browser.SessionStorage'
+      name: SessionStorage
       items: []
     - uid: '@azure/msal-browser.SignedHttpRequest'
       name: SignedHttpRequest
