@@ -27,9 +27,11 @@ summary: >-
   the token endpoint of security token service for the interval specified in the
   device code response (usually 15 minutes). To stop polling and cancel the
   request, set cancel=true.
+
+  - extraQueryParameters       - String to string map of custom query parameters
+  added to the query string
 fullName: DeviceCodeRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type DeviceCodeRequest = Partial<
@@ -40,8 +42,9 @@ syntax: |
       | "resourceRequestMethod"
       | "resourceRequestUri"
       | "requestedClaimsHash"
+      | "storeInCache"
     >
   > & {
-    deviceCodeCallback: (response: DeviceCodeResponse) => void,
-    scopes: Array<string>,
+    deviceCodeCallback: (response: DeviceCodeResponse) => void
+    scopes: string[]
   }

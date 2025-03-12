@@ -1,0 +1,6 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.ClientAuthErrorCodes'
+name: ClientAuthErrorCodes
+type: module
+package: '@azure/msal-common'
+summary: ''

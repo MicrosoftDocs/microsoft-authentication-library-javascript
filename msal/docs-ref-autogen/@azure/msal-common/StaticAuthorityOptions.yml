@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: StaticAuthorityOptions
+uid: '@azure/msal-common.StaticAuthorityOptions'
+package: '@azure/msal-common'
+summary: ''
+fullName: StaticAuthorityOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type StaticAuthorityOptions = Partial<
+    Pick<AuthorityOptions, "knownAuthorities">
+  > & {
+    canonicalAuthority?: string
+    cloudDiscoveryMetadata?: CloudInstanceDiscoveryResponse
+  }

@@ -5,7 +5,6 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: MsalGuard
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -39,18 +37,46 @@ constructors:
         - id: router
           type: Router
           description: ''
+properties:
+  - name: ɵfac
+    uid: '@azure/msal-angular.MsalGuard.ɵfac'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵfac
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵfac: ɵɵFactoryDeclaration<MsalGuard, never>'
+      return:
+        description: ''
+        type: >-
+          ɵɵFactoryDeclaration&lt;<xref uid="@azure/msal-angular.MsalGuard" />,
+          never&gt;
+  - name: ɵprov
+    uid: '@azure/msal-angular.MsalGuard.ɵprov'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵprov
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵprov: ɵɵInjectableDeclaration<MsalGuard>'
+      return:
+        description: ''
+        type: >-
+          ɵɵInjectableDeclaration&lt;<xref uid="@azure/msal-angular.MsalGuard"
+          />&gt;
 methods:
-  - name: 'canActivate(ActivatedRouteSnapshot, RouterStateSnapshot)'
+  - name: canActivate(ActivatedRouteSnapshot, RouterStateSnapshot)
     uid: '@azure/msal-angular.MsalGuard.canActivate'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function canActivate(route: ActivatedRouteSnapshot, state:
-        RouterStateSnapshot): Observable<boolean | UrlTree>
+        RouterStateSnapshot): Observable<any>
       parameters:
         - id: route
           type: ActivatedRouteSnapshot
@@ -60,18 +86,17 @@ methods:
           description: ''
       return:
         description: ''
-        type: Observable&lt;boolean | UrlTree&gt;
-  - name: 'canActivateChild(ActivatedRouteSnapshot, RouterStateSnapshot)'
+        type: Observable&lt;any&gt;
+  - name: canActivateChild(ActivatedRouteSnapshot, RouterStateSnapshot)
     uid: '@azure/msal-angular.MsalGuard.canActivateChild'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function canActivateChild(route: ActivatedRouteSnapshot, state:
-        RouterStateSnapshot): Observable<boolean | UrlTree>
+        RouterStateSnapshot): Observable<any>
       parameters:
         - id: route
           type: ActivatedRouteSnapshot
@@ -81,25 +106,23 @@ methods:
           description: ''
       return:
         description: ''
-        type: Observable&lt;boolean | UrlTree&gt;
-  - name: canLoad()
-    uid: '@azure/msal-angular.MsalGuard.canLoad'
+        type: Observable&lt;any&gt;
+  - name: canMatch()
+    uid: '@azure/msal-angular.MsalGuard.canMatch'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function canLoad(): Observable<boolean>'
+      content: 'function canMatch(): Observable<any>'
       return:
         description: ''
-        type: Observable&lt;boolean&gt;
+        type: Observable&lt;any&gt;
   - name: getDestinationUrl(string)
     uid: '@azure/msal-angular.MsalGuard.getDestinationUrl'
     package: '@azure/msal-angular'
     summary: Builds the absolute url for the destination page
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getDestinationUrl(path: string): string'
@@ -115,7 +138,6 @@ methods:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function includesCode(path: string): boolean'
@@ -131,15 +153,13 @@ methods:
     package: '@azure/msal-angular'
     summary: Parses url string to UrlTree
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function parseUrl(url: string): UrlTree'
       parameters:
         - id: url
           type: string
-          description: |+
-
+          description: ''
       return:
         description: ''
         type: UrlTree

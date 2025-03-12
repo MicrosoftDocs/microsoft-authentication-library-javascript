@@ -16,7 +16,6 @@ summary: >-
   - platformState - string value sent from the platform.
 fullName: LibraryStateObject
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
-  type LibraryStateObject = { id: string, meta?: Record<string, string> }
+  type LibraryStateObject = { id: string; meta?: Record<string, string> }

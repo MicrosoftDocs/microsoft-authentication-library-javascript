@@ -1,0 +1,12 @@
+### YamlMime:TSTypeAlias
+name: ClientAssertionCallback
+uid: '@azure/msal-common.ClientAssertionCallback'
+package: '@azure/msal-common'
+summary: ''
+fullName: ClientAssertionCallback
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ClientAssertionCallback = (
+    config: ClientAssertionConfig
+  ) => Promise<string>

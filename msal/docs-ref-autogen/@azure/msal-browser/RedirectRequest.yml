@@ -2,10 +2,11 @@
 name: RedirectRequest
 uid: '@azure/msal-browser.RedirectRequest'
 package: '@azure/msal-browser'
-summary: >
+summary: >-
   RedirectRequest: Request object passed by user to retrieve a Code from the
 
   server (first leg of authorization code grant flow) with a full page redirect.
+
 
   - scopes                     - Array of scopes the application is requesting
   access to.
@@ -53,6 +54,10 @@ summary: >
   - extraQueryParameters       - String to string map of custom query parameters
   added to the /authorize call
 
+  - tokenBodyParameters        - String to string map of custom token request
+  body parameters added to the /token call. Only used when renewing access
+  tokens.
+
   - tokenQueryParameters       - String to string map of custom query parameters
   added to the /token call
 
@@ -74,7 +79,6 @@ summary: >
   will navigate to. Returning false in the callback will stop navigation.
 fullName: RedirectRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type RedirectRequest = Partial<
@@ -85,10 +89,10 @@ syntax: |
       | "codeChallenge"
       | "codeChallengeMethod"
       | "requestedClaimsHash"
-      | "nativeBroker"
+      | "platformBroker"
     >
   > & {
-    onRedirectNavigate?: (url: string) => boolean | void,
-    redirectStartPage?: string,
-    scopes: Array<string>,
+    onRedirectNavigate?: (url: string) => boolean | void
+    redirectStartPage?: string
+    scopes: string[]
   }

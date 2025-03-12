@@ -5,7 +5,6 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: MsalBroadcastService
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -16,7 +15,6 @@ constructors:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -25,7 +23,7 @@ constructors:
         MsalBroadcastConfiguration)
       parameters:
         - id: msalInstance
-          type: IPublicClientApplication
+          type: <xref uid="@azure/msal-browser.IPublicClientApplication" />
           description: ''
         - id: authService
           type: <xref uid="@azure/msal-angular.MsalService" />
@@ -40,23 +38,52 @@ properties:
     summary: ''
     fullName: inProgress$
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'inProgress$: Observable<InteractionStatus>'
       return:
         description: ''
-        type: Observable&lt;InteractionStatus&gt;
+        type: Observable&lt;<xref uid="@azure/msal-browser.InteractionStatus" />&gt;
   - name: msalSubject$
     uid: '@azure/msal-angular.MsalBroadcastService.msalSubject$'
     package: '@azure/msal-angular'
     summary: ''
     fullName: msalSubject$
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'msalSubject$: Observable<EventMessage>'
       return:
         description: ''
-        type: Observable&lt;EventMessage&gt;
+        type: Observable&lt;<xref uid="@azure/msal-browser.EventMessage" />&gt;
+  - name: ɵfac
+    uid: '@azure/msal-angular.MsalBroadcastService.ɵfac'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵfac
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static ɵfac: ɵɵFactoryDeclaration<MsalBroadcastService, [null, null, {
+        optional: true }]>
+      return:
+        description: ''
+        type: >-
+          ɵɵFactoryDeclaration&lt;<xref
+          uid="@azure/msal-angular.MsalBroadcastService" />, [null, null, {
+          optional: true }]&gt;
+  - name: ɵprov
+    uid: '@azure/msal-angular.MsalBroadcastService.ɵprov'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵprov
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵprov: ɵɵInjectableDeclaration<MsalBroadcastService>'
+      return:
+        description: ''
+        type: >-
+          ɵɵInjectableDeclaration&lt;<xref
+          uid="@azure/msal-angular.MsalBroadcastService" />&gt;

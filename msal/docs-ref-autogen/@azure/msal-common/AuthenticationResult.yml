@@ -29,6 +29,9 @@ summary: >-
   - extExpiresOn           - Javascript Date object representing extended
   relative expiration of access token in case of server outage
 
+  - refreshOn              - Javascript Date object representing relative time
+  until an access token must be refreshed
+
   - state                  - Value passed in by user in request
 
   - familyId               - Family ID identifier, usually only used for refresh
@@ -37,28 +40,28 @@ summary: >-
   - requestId              - Request ID returned as part of the response
 fullName: AuthenticationResult
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AuthenticationResult = {
-    accessToken: string,
-    account: AccountInfo | null,
-    authority: string,
-    cloudGraphHostName?: string,
-    code?: string,
-    correlationId: string,
-    expiresOn: Date | null,
-    extExpiresOn?: Date,
-    familyId?: string,
-    fromCache: boolean,
-    fromNativeBroker?: boolean,
-    idToken: string,
-    idTokenClaims: object,
-    msGraphHost?: string,
-    requestId?: string,
-    scopes: Array<string>,
-    state?: string,
-    tenantId: string,
-    tokenType: string,
-    uniqueId: string,
+    accessToken: string
+    account: AccountInfo | null
+    authority: string
+    cloudGraphHostName?: string
+    code?: string
+    correlationId: string
+    expiresOn: Date | null
+    extExpiresOn?: Date
+    familyId?: string
+    fromCache: boolean
+    fromNativeBroker?: boolean
+    idToken: string
+    idTokenClaims: object
+    msGraphHost?: string
+    refreshOn?: Date
+    requestId?: string
+    scopes: string[]
+    state?: string
+    tenantId: string
+    tokenType: string
+    uniqueId: string
   }

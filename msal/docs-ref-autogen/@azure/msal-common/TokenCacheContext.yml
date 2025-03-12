@@ -7,16 +7,14 @@ summary: |-
   decisions to read from and write to the persistent cache
 fullName: TokenCacheContext
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'TokenCacheContext(ISerializableTokenCache, boolean)'
+  - name: TokenCacheContext(ISerializableTokenCache, boolean)
     uid: '@azure/msal-common.TokenCacheContext.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -36,7 +34,6 @@ properties:
     summary: serializable token cache interface
     fullName: cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'cache: ISerializableTokenCache'
@@ -49,7 +46,6 @@ properties:
     summary: boolean which indicates the changes in cache
     fullName: cacheHasChanged
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: boolean cacheHasChanged
@@ -62,7 +58,6 @@ properties:
     summary: boolean indicating cache change
     fullName: hasChanged
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'hasChanged: boolean'
@@ -75,7 +70,6 @@ properties:
     summary: function to retrieve the token cache
     fullName: tokenCache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: ISerializableTokenCache tokenCache

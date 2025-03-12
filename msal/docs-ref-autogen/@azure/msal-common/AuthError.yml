@@ -5,16 +5,14 @@ package: '@azure/msal-common'
 summary: General error class thrown by the MSAL.js library.
 fullName: AuthError
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'AuthError(string, string, string)'
+  - name: AuthError(string, string, string)
     uid: '@azure/msal-common.AuthError.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -37,33 +35,18 @@ properties:
     summary: CorrelationId associated with the error
     fullName: correlationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'correlationId: string'
       return:
         description: ''
         type: string
-  - name: Error
-    uid: '@azure/msal-common.AuthError.Error'
-    package: '@azure/msal-common'
-    summary: ''
-    fullName: Error
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static Error: ErrorConstructor'
-      return:
-        description: ''
-        type: ErrorConstructor
   - name: errorCode
     uid: '@azure/msal-common.AuthError.errorCode'
     package: '@azure/msal-common'
     summary: Short string denoting error
     fullName: errorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorCode: string'
@@ -76,7 +59,6 @@ properties:
     summary: Detailed description of error
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -89,7 +71,6 @@ properties:
     summary: Describes the subclass of an error
     fullName: subError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subError: string'
@@ -103,7 +84,6 @@ inheritedProperties:
     summary: ''
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message: string'
@@ -117,7 +97,6 @@ inheritedProperties:
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
@@ -125,13 +104,28 @@ inheritedProperties:
         description: ''
         type: string
     inheritanceDescription: <b>Inherited From</b> Error.name
+  - name: prepareStackTrace
+    uid: '@azure/msal-common.AuthError.prepareStackTrace'
+    package: '@azure/msal-common'
+    summary: |-
+      Optional override for formatting stack traces
+
+      See https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+    fullName: prepareStackTrace
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static prepareStackTrace?: (err: Error, stackTraces: CallSite[]) => any'
+      return:
+        description: ''
+        type: '(err: Error, stackTraces: CallSite[]) =&gt; any'
+    inheritanceDescription: <b>Inherited From</b> Error.prepareStackTrace
   - name: stack
     uid: '@azure/msal-common.AuthError.stack'
     package: '@azure/msal-common'
     summary: ''
     fullName: stack
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stack?: string'
@@ -139,48 +133,44 @@ inheritedProperties:
         description: ''
         type: string
     inheritanceDescription: <b>Inherited From</b> Error.stack
-methods:
-  - name: createPostRequestFailed(string)
-    uid: '@azure/msal-common.AuthError.createPostRequestFailed'
+  - name: stackTraceLimit
+    uid: '@azure/msal-common.AuthError.stackTraceLimit'
     package: '@azure/msal-common'
-    summary: Creates an error for post request failures.
+    summary: ''
+    fullName: stackTraceLimit
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function createPostRequestFailed(errDesc: string): AuthError'
+      content: 'static stackTraceLimit: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> Error.stackTraceLimit
+inheritedMethods:
+  - name: captureStackTrace(object, Function)
+    uid: '@azure/msal-common.AuthError.captureStackTrace'
+    package: '@azure/msal-common'
+    summary: Create .stack property on a target object
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function captureStackTrace(targetObject: object, constructorOpt?:
+        Function)
       parameters:
-        - id: errDesc
-          type: string
+        - id: targetObject
+          type: object
           description: ''
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.AuthError" />
-  - name: createUnexpectedError(string)
-    uid: '@azure/msal-common.AuthError.createUnexpectedError'
-    package: '@azure/msal-common'
-    summary: >-
-      Creates an error that is thrown when something unexpected happens in the
-      library.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static function createUnexpectedError(errDesc: string): AuthError'
-      parameters:
-        - id: errDesc
-          type: string
-          description: |+
-
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.AuthError" />
+        - id: constructorOpt
+          type: Function
+          description: ''
+    inheritanceDescription: <b>Inherited From</b> Error.captureStackTrace
+methods:
   - name: setCorrelationId(string)
     uid: '@azure/msal-common.AuthError.setCorrelationId'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setCorrelationId(correlationId: string)'

@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: EventError
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type EventError = AuthError | Error | null

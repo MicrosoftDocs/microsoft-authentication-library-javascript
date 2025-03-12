@@ -5,16 +5,14 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: SignedHttpRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'SignedHttpRequest(SignedHttpRequestParameters, SignedHttpRequestOptions)'
+  - name: SignedHttpRequest(SignedHttpRequestParameters, SignedHttpRequestOptions)
     uid: '@azure/msal-browser.SignedHttpRequest.constructor'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -22,7 +20,7 @@ constructors:
         shrOptions?: SignedHttpRequestOptions)
       parameters:
         - id: shrParameters
-          type: SignedHttpRequestParameters
+          type: <xref uid="@azure/msal-common.SignedHttpRequestParameters" />
           description: ''
         - id: shrOptions
           type: <xref uid="@azure/msal-browser.SignedHttpRequestOptions" />
@@ -33,19 +31,17 @@ methods:
     package: '@azure/msal-browser'
     summary: Generates and caches a keypair for the given request options.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function generatePublicKeyThumbprint(): Promise<string>'
       return:
-        description: 'Public key digest, which should be sent to the token issuer.'
+        description: Public key digest, which should be sent to the token issuer.
         type: Promise&lt;string&gt;
   - name: removeKeys(string)
     uid: '@azure/msal-browser.SignedHttpRequest.removeKeys'
     package: '@azure/msal-browser'
     summary: Removes cached keys from browser for given public key thumbprint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeKeys(publicKeyThumbprint: string): Promise<boolean>'
@@ -56,12 +52,11 @@ methods:
       return:
         description: If keys are properly deleted
         type: Promise&lt;boolean&gt;
-  - name: 'signRequest(string, string, object)'
+  - name: signRequest(string, string, object)
     uid: '@azure/msal-browser.SignedHttpRequest.signRequest'
     package: '@azure/msal-browser'
     summary: Generates a signed http request for the given payload with the given key.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-

@@ -5,7 +5,6 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: MsalGuardAuthRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type MsalGuardAuthRequest =
