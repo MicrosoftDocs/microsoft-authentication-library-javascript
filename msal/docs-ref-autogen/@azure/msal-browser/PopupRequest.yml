@@ -92,5 +92,4 @@ syntax: |
     popupWindowAttributes?: PopupWindowAttributes
     popupWindowParent?: Window
     scopes: string[]
-    tokenBodyParameters?: StringDict
   }

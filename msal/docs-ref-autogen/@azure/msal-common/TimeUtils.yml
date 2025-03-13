@@ -52,6 +52,38 @@ functions:
       return:
         description: ''
         type: number
+  - name: toDateFromSeconds(undefined | string | number)
+    uid: '@azure/msal-common.TimeUtils.toDateFromSeconds'
+    package: '@azure/msal-common'
+    summary: >-
+      Convert seconds to JS Date object. Seconds can be in a number or string
+      format or undefined (will still return a date).
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toDateFromSeconds(seconds: undefined | string | number): Date'
+      parameters:
+        - id: seconds
+          type: undefined | string | number
+          description: ''
+      return:
+        description: ''
+        type: Date
+  - name: toSecondsFromDate(Date)
+    uid: '@azure/msal-common.TimeUtils.toSecondsFromDate'
+    package: '@azure/msal-common'
+    summary: Converts JS Date object to seconds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toSecondsFromDate(date: Date): number'
+      parameters:
+        - id: date
+          type: Date
+          description: Date
+      return:
+        description: ''
+        type: number
   - name: wasClockTurnedBack(string)
     uid: '@azure/msal-common.TimeUtils.wasClockTurnedBack'
     package: '@azure/msal-common'

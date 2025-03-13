@@ -40,5 +40,4 @@ syntax: |
     forceCache?: boolean
     redirectUri?: string
     refreshToken: string
-    tokenBodyParameters?: StringDict
   }

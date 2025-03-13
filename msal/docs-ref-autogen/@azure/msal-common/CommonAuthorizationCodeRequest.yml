@@ -57,5 +57,4 @@ syntax: |
     codeVerifier?: string
     enableSpaAuthorizationCode?: boolean
     redirectUri: string
-    tokenBodyParameters?: StringDict
   }

@@ -79,4 +79,4 @@ syntax: |
       | "requestedClaimsHash"
       | "platformBroker"
     >
-  > & { tokenBodyParameters?: StringDict }
+  >

@@ -267,7 +267,9 @@ methods:
           />&gt;
   - name: >-
       hydrateCache(AuthenticationResult, PopupRequest | RedirectRequest |
-      SilentRequest | SsoSilentRequest)
+      SilentRequest | Partial<Omit<CommonAuthorizationUrlRequest, "responseMode"
+      | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+      "platformBroker">>)
     uid: '@azure/msal-browser.IPublicClientApplication.hydrateCache'
     package: '@azure/msal-browser'
     summary: ''
@@ -276,8 +278,10 @@ methods:
     syntax:
       content: >-
         function hydrateCache(result: AuthenticationResult, request:
-        PopupRequest | RedirectRequest | SilentRequest | SsoSilentRequest):
-        Promise<void>
+        PopupRequest | RedirectRequest | SilentRequest |
+        Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+        "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+        "platformBroker">>): Promise<void>
       parameters:
         - id: result
           type: <xref uid="@azure/msal-browser.AuthenticationResult" />
@@ -286,8 +290,11 @@ methods:
           type: >-
             <xref uid="@azure/msal-browser.PopupRequest" /> | <xref
             uid="@azure/msal-browser.RedirectRequest" /> | <xref
-            uid="@azure/msal-browser.SilentRequest" /> | <xref
-            uid="@azure/msal-browser.SsoSilentRequest" />
+            uid="@azure/msal-browser.SilentRequest" /> |
+            Partial&lt;Omit&lt;<xref
+            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
+            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+            "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''
@@ -468,7 +475,10 @@ methods:
         - id: navigationClient
           type: <xref uid="@azure/msal-browser.INavigationClient" />
           description: ''
-  - name: ssoSilent(SsoSilentRequest)
+  - name: >-
+      ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+      "platformBroker">>)
     uid: '@azure/msal-browser.IPublicClientApplication.ssoSilent'
     package: '@azure/msal-browser'
     summary: ''
@@ -476,11 +486,17 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function ssoSilent(request: SsoSilentRequest):
+        function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
+        "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+        "requestedClaimsHash" | "platformBroker">>):
         Promise<AuthenticationResult>
       parameters:
         - id: request
-          type: <xref uid="@azure/msal-browser.SsoSilentRequest" />
+          type: >-
+            Partial&lt;Omit&lt;<xref
+            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
+            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+            "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''

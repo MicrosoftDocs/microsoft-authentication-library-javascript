@@ -43,9 +43,11 @@ functions:
   - name: >-
       MsalAuthenticationTemplate(PropsWithChildren<Partial<Pick<AccountInfo,
       "homeAccountId" | "localAccountId" | "username">> & {
-      authenticationRequest?: PopupRequest | RedirectRequest | SsoSilentRequest,
-      errorComponent?: any, interactionType: InteractionType, loadingComponent?:
-      any }>)
+      authenticationRequest?: PopupRequest | RedirectRequest |
+      Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+      "platformBroker">>, errorComponent?: any, interactionType:
+      InteractionType, loadingComponent?: any }>)
     uid: '@azure/msal-react.MsalAuthenticationTemplate'
     package: '@azure/msal-react'
     summary: >-
@@ -58,7 +60,9 @@ functions:
         function MsalAuthenticationTemplate(props:
         PropsWithChildren<Partial<Pick<AccountInfo, "homeAccountId" |
         "localAccountId" | "username">> & { authenticationRequest?: PopupRequest
-        | RedirectRequest | SsoSilentRequest, errorComponent?: any,
+        | RedirectRequest | Partial<Omit<CommonAuthorizationUrlRequest,
+        "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+        "requestedClaimsHash" | "platformBroker">>, errorComponent?: any,
         interactionType: InteractionType, loadingComponent?: any }>):
         React.ReactElement | null
       parameters:
@@ -67,8 +71,11 @@ functions:
             PropsWithChildren&lt;Partial&lt;Pick&lt;<xref
             uid="@azure/msal-common.AccountInfo" />, "homeAccountId" |
             "localAccountId" | "username"&gt;&gt; & { authenticationRequest?:
-            PopupRequest | RedirectRequest | SsoSilentRequest, errorComponent?:
-            any, interactionType: InteractionType, loadingComponent?: any }&gt;
+            PopupRequest | RedirectRequest |
+            Partial&lt;Omit&lt;CommonAuthorizationUrlRequest, "responseMode" |
+            "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+            "platformBroker"&gt;&gt;, errorComponent?: any, interactionType:
+            InteractionType, loadingComponent?: any }&gt;
           description: ''
       return:
         description: ''
@@ -174,7 +181,9 @@ functions:
         type: <xref uid="@azure/msal-react.IMsalContext" />
   - name: >-
       useMsalAuthentication(InteractionType, PopupRequest | RedirectRequest |
-      SsoSilentRequest, Partial<Pick<AccountInfo, "homeAccountId" |
+      Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+      "platformBroker">>, Partial<Pick<AccountInfo, "homeAccountId" |
       "localAccountId" | "username">>)
     uid: '@azure/msal-react.useMsalAuthentication'
     package: '@azure/msal-react'
@@ -195,7 +204,9 @@ functions:
       content: >-
         function useMsalAuthentication(interactionType: InteractionType,
         authenticationRequest?: PopupRequest | RedirectRequest |
-        SsoSilentRequest, accountIdentifiers?: Partial<Pick<AccountInfo,
+        Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+        "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+        "platformBroker">>, accountIdentifiers?: Partial<Pick<AccountInfo,
         "homeAccountId" | "localAccountId" | "username">>):
         MsalAuthenticationResult
       parameters:
@@ -205,8 +216,11 @@ functions:
         - id: authenticationRequest
           type: >-
             <xref uid="@azure/msal-browser.PopupRequest" /> | <xref
-            uid="@azure/msal-browser.RedirectRequest" /> | <xref
-            uid="@azure/msal-browser.SsoSilentRequest" />
+            uid="@azure/msal-browser.RedirectRequest" /> |
+            Partial&lt;Omit&lt;<xref
+            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
+            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+            "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
         - id: accountIdentifiers
           type: >-

@@ -45,9 +45,11 @@ summary: >-
 fullName: CommonDeviceCodeRequest
 remarks: ''
 isDeprecated: false
-syntax: >
-  type CommonDeviceCodeRequest = Omit<BaseAuthRequest, "tokenQueryParameters"> &
-  {
+syntax: |
+  type CommonDeviceCodeRequest = Omit<
+    BaseAuthRequest,
+    "tokenQueryParameters" | "tokenBodyParameters"
+  > & {
     cancel?: boolean
     deviceCodeCallback: (response: DeviceCodeResponse) => void
     extraQueryParameters?: StringDict

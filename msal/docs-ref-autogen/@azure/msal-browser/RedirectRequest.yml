@@ -95,5 +95,4 @@ syntax: |
     onRedirectNavigate?: (url: string) => boolean | void
     redirectStartPage?: string
     scopes: string[]
-    tokenBodyParameters?: StringDict
   }

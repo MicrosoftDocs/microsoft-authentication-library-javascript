@@ -40,5 +40,4 @@ syntax: |
     forceRefresh: boolean
     redirectUri?: string
     refreshTokenExpirationOffsetSeconds?: number
-    tokenBodyParameters?: StringDict
   }

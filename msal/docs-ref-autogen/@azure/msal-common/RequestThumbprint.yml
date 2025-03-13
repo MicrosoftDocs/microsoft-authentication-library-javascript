@@ -12,6 +12,7 @@ syntax: |
     authority: string
     claims?: string
     clientId: string
+    embeddedClientId?: string
     homeAccountIdentifier?: string
     resourceRequestMethod?: string
     resourceRequestUri?: string

@@ -67,5 +67,4 @@ syntax: |
     prompt?: string
     redirectUri?: string
     state?: string
-    tokenBodyParameters?: StringDict
   }

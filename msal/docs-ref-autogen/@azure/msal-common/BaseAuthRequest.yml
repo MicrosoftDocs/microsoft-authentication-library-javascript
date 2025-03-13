@@ -54,6 +54,9 @@ summary: >-
   - tokenQueryParameters    - String to string map of custom query parameters
   added to the /token call
 
+  - tokenBodyParameters     - String to string map of custom parameters added to
+  the body of the /token call
+
   - storeInCache            - Object containing boolean values indicating
   whether to store tokens in the cache or not (default is true)
 
@@ -90,5 +93,6 @@ syntax: |
     sshJwk?: string
     sshKid?: string
     storeInCache?: StoreInCache
+    tokenBodyParameters?: StringDict
     tokenQueryParameters?: StringDict
   }

@@ -370,6 +370,29 @@ functions:
       return:
         description: ''
         type: string
+  - name: getRequestThumbprint(string, BaseAuthRequest, string)
+    uid: '@azure/msal-common.getRequestThumbprint'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRequestThumbprint(clientId: string, request:
+        BaseAuthRequest, homeAccountId?: string): RequestThumbprint
+      parameters:
+        - id: clientId
+          type: string
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
+          description: ''
+        - id: homeAccountId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.RequestThumbprint" />
   - name: getTenantIdFromIdTokenClaims(TokenClaims)
     uid: '@azure/msal-common.getTenantIdFromIdTokenClaims'
     package: '@azure/msal-common'
