@@ -6,155 +6,185 @@ type: package
 interfaces:
   - '@azure/msal-react.IMsalContext'
 typeAliases:
-  - '@azure/msal-react.MsalProviderProps'
+  - '@azure/msal-react.AccountIdentifiers'
   - '@azure/msal-react.AuthenticatedTemplateProps'
   - '@azure/msal-react.MsalAuthenticationProps'
-  - '@azure/msal-react.UnauthenticatedTemplateProps'
-  - '@azure/msal-react.WithMsalProps'
   - '@azure/msal-react.MsalAuthenticationResult'
-  - '@azure/msal-react.AccountIdentifiers'
-  - '@azure/msal-react.FaaCFunction'
+  - '@azure/msal-react.MsalProviderProps'
   - '@azure/msal-react.SetComplement'
   - '@azure/msal-react.SetDifference'
   - '@azure/msal-react.Subtract'
+  - '@azure/msal-react.UnauthenticatedTemplateProps'
+  - '@azure/msal-react.WithMsalProps'
 functions:
-  - name: 'MsalProvider({ children: any, instance: any })'
-    uid: '@azure/msal-react.MsalProvider'
-    package: '@azure/msal-react'
-    summary: >-
-      MSAL context provider component. This must be rendered above any other
-      components that use MSAL.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function MsalProvider(__namedParameters: { children: any, instance: any
-        }): React.ReactElement
-      parameters:
-        - id: __namedParameters
-          type: '{ children: any, instance: any }'
-          description: ''
-      return:
-        description: ''
-        type: <xref uid="React.ReactElement" />
   - name: >-
-      AuthenticatedTemplate({ children: any, homeAccountId: any, localAccountId:
-      any, username: any })
+      AuthenticatedTemplate(PropsWithChildren<Partial<Pick<AccountInfo,
+      "homeAccountId" | "localAccountId" | "username">>>)
     uid: '@azure/msal-react.AuthenticatedTemplate'
     package: '@azure/msal-react'
     summary: Renders child components if user is authenticated
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function AuthenticatedTemplate(__namedParameters: { children: any,
-        homeAccountId: any, localAccountId: any, username: any }):
-        React.ReactElement | null
+        function AuthenticatedTemplate(props:
+        PropsWithChildren<Partial<Pick<AccountInfo, "homeAccountId" |
+        "localAccountId" | "username">>>): React.ReactElement | null
       parameters:
-        - id: __namedParameters
+        - id: props
           type: >-
-            { children: any, homeAccountId: any, localAccountId: any, username:
-            any }
+            PropsWithChildren&lt;Partial&lt;Pick&lt;<xref
+            uid="@azure/msal-common.AccountInfo" />, "homeAccountId" |
+            "localAccountId" | "username"&gt;&gt;&gt;
           description: ''
       return:
         description: ''
         type: <xref uid="React.ReactElement" /> | null
   - name: >-
-      MsalAuthenticationTemplate({ ErrorComponent: any, LoadingComponent: any,
-      authenticationRequest: any, children: any, homeAccountId: any,
-      interactionType: any, localAccountId: any, username: any })
+      MsalAuthenticationTemplate(PropsWithChildren<Partial<Pick<AccountInfo,
+      "homeAccountId" | "localAccountId" | "username">> & {
+      authenticationRequest?: PopupRequest | RedirectRequest |
+      Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+      "platformBroker">>, errorComponent?: any, interactionType:
+      InteractionType, loadingComponent?: any }>)
     uid: '@azure/msal-react.MsalAuthenticationTemplate'
     package: '@azure/msal-react'
     summary: >-
       Attempts to authenticate user if not already authenticated, then renders
       child components
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function MsalAuthenticationTemplate(__namedParameters: { ErrorComponent:
-        any, LoadingComponent: any, authenticationRequest: any, children: any,
-        homeAccountId: any, interactionType: any, localAccountId: any, username:
-        any }): React.ReactElement | null
+        function MsalAuthenticationTemplate(props:
+        PropsWithChildren<Partial<Pick<AccountInfo, "homeAccountId" |
+        "localAccountId" | "username">> & { authenticationRequest?: PopupRequest
+        | RedirectRequest | Partial<Omit<CommonAuthorizationUrlRequest,
+        "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+        "requestedClaimsHash" | "platformBroker">>, errorComponent?: any,
+        interactionType: InteractionType, loadingComponent?: any }>):
+        React.ReactElement | null
+      parameters:
+        - id: props
+          type: >-
+            PropsWithChildren&lt;Partial&lt;Pick&lt;<xref
+            uid="@azure/msal-common.AccountInfo" />, "homeAccountId" |
+            "localAccountId" | "username"&gt;&gt; & { authenticationRequest?:
+            PopupRequest | RedirectRequest |
+            Partial&lt;Omit&lt;CommonAuthorizationUrlRequest, "responseMode" |
+            "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+            "platformBroker"&gt;&gt;, errorComponent?: any, interactionType:
+            InteractionType, loadingComponent?: any }&gt;
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="React.ReactElement" /> | null
+  - name: 'MsalProvider(PropsWithChildren<{ instance: IPublicClientApplication }>)'
+    uid: '@azure/msal-react.MsalProvider'
+    package: '@azure/msal-react'
+    summary: >-
+      MSAL context provider component. This must be rendered above any other
+      components that use MSAL.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function MsalProvider(__namedParameters: PropsWithChildren<{ instance:
+        IPublicClientApplication }>): React.ReactElement
       parameters:
         - id: __namedParameters
+          type: 'PropsWithChildren&lt;{ instance: IPublicClientApplication }&gt;'
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="React.ReactElement" />
+  - name: >-
+      UnauthenticatedTemplate(PropsWithChildren<Partial<Pick<AccountInfo,
+      "homeAccountId" | "localAccountId" | "username">>>)
+    uid: '@azure/msal-react.UnauthenticatedTemplate'
+    package: '@azure/msal-react'
+    summary: Renders child components if user is unauthenticated
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function UnauthenticatedTemplate(props:
+        PropsWithChildren<Partial<Pick<AccountInfo, "homeAccountId" |
+        "localAccountId" | "username">>>): React.ReactElement | null
+      parameters:
+        - id: props
           type: >-
-            { ErrorComponent: any, LoadingComponent: any, authenticationRequest:
-            any, children: any, homeAccountId: any, interactionType: any,
-            localAccountId: any, username: any }
+            PropsWithChildren&lt;Partial&lt;Pick&lt;<xref
+            uid="@azure/msal-common.AccountInfo" />, "homeAccountId" |
+            "localAccountId" | "username"&gt;&gt;&gt;
           description: ''
       return:
         description: ''
         type: <xref uid="React.ReactElement" /> | null
   - name: >-
-      UnauthenticatedTemplate({ children: any, homeAccountId: any,
-      localAccountId: any, username: any })
-    uid: '@azure/msal-react.UnauthenticatedTemplate'
-    package: '@azure/msal-react'
-    summary: Renders child components if user is unauthenticated
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function UnauthenticatedTemplate(__namedParameters: { children: any,
-        homeAccountId: any, localAccountId: any, username: any }):
-        React.ReactElement | null
-      parameters:
-        - id: __namedParameters
-          type: >-
-            { children: any, homeAccountId: any, localAccountId: any, username:
-            any }
-          description: ''
-      return:
-        description: ''
-        type: <xref uid="React.ReactElement" /> | null
-  - name: useAccount(AccountIdentifiers)
+      useAccount(Partial<Pick<AccountInfo, "homeAccountId" | "localAccountId" |
+      "username">>)
     uid: '@azure/msal-react.useAccount'
     package: '@azure/msal-react'
     summary: >-
       Given 1 or more accountIdentifiers, returns the Account object if the user
       is signed-in
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function useAccount(accountIdentifiers?: AccountIdentifiers):
-        AccountInfo | null
+        function useAccount(accountIdentifiers?: Partial<Pick<AccountInfo,
+        "homeAccountId" | "localAccountId" | "username">>): AccountInfo | null
       parameters:
         - id: accountIdentifiers
-          type: <xref uid="@azure/msal-react.AccountIdentifiers" />
-          description: |+
-
+          type: >-
+            Partial&lt;Pick&lt;<xref uid="@azure/msal-common.AccountInfo" />,
+            "homeAccountId" | "localAccountId" | "username"&gt;&gt;
+          description: ''
       return:
         description: ''
-        type: AccountInfo | null
-  - name: useIsAuthenticated(AccountIdentifiers)
+        type: <xref uid="@azure/msal-common.AccountInfo" /> | null
+  - name: >-
+      useIsAuthenticated(Partial<Pick<AccountInfo, "homeAccountId" |
+      "localAccountId" | "username">>)
     uid: '@azure/msal-react.useIsAuthenticated'
     package: '@azure/msal-react'
     summary: >-
       Returns whether or not a user is currently signed-in. Optionally provide 1
       or more accountIdentifiers to determine if a specific user is signed-in
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function useIsAuthenticated(matchAccount?: AccountIdentifiers): boolean'
+      content: >-
+        function useIsAuthenticated(matchAccount?: Partial<Pick<AccountInfo,
+        "homeAccountId" | "localAccountId" | "username">>): boolean
       parameters:
         - id: matchAccount
-          type: <xref uid="@azure/msal-react.AccountIdentifiers" />
-          description: |+
-
+          type: >-
+            Partial&lt;Pick&lt;<xref uid="@azure/msal-common.AccountInfo" />,
+            "homeAccountId" | "localAccountId" | "username"&gt;&gt;
+          description: ''
       return:
         description: ''
         type: boolean
+  - name: useMsal()
+    uid: '@azure/msal-react.useMsal'
+    package: '@azure/msal-react'
+    summary: Returns Msal Context values
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function useMsal(): IMsalContext'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-react.IMsalContext" />
   - name: >-
       useMsalAuthentication(InteractionType, PopupRequest | RedirectRequest |
-      SsoSilentRequest, AccountIdentifiers)
+      Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+      "platformBroker">>, Partial<Pick<AccountInfo, "homeAccountId" |
+      "localAccountId" | "username">>)
     uid: '@azure/msal-react.useMsalAuthentication'
     package: '@azure/msal-react'
     summary: >-
@@ -169,97 +199,55 @@ functions:
 
       Optionally provide a specific user that should be logged in.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         function useMsalAuthentication(interactionType: InteractionType,
         authenticationRequest?: PopupRequest | RedirectRequest |
-        SsoSilentRequest, accountIdentifiers?: AccountIdentifiers):
+        Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+        "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+        "platformBroker">>, accountIdentifiers?: Partial<Pick<AccountInfo,
+        "homeAccountId" | "localAccountId" | "username">>):
         MsalAuthenticationResult
       parameters:
         - id: interactionType
-          type: InteractionType
+          type: <xref uid="@azure/msal-browser.InteractionType" />
           description: ''
         - id: authenticationRequest
-          type: PopupRequest | RedirectRequest | SsoSilentRequest
+          type: >-
+            <xref uid="@azure/msal-browser.PopupRequest" /> | <xref
+            uid="@azure/msal-browser.RedirectRequest" /> |
+            Partial&lt;Omit&lt;<xref
+            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
+            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+            "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
         - id: accountIdentifiers
-          type: <xref uid="@azure/msal-react.AccountIdentifiers" />
-          description: |+
-
+          type: >-
+            Partial&lt;Pick&lt;<xref uid="@azure/msal-common.AccountInfo" />,
+            "homeAccountId" | "localAccountId" | "username"&gt;&gt;
+          description: ''
       return:
         description: ''
         type: <xref uid="@azure/msal-react.MsalAuthenticationResult" />
-  - name: >-
-      accountArraysAreEqual(Array<AccountIdentifiers>,
-      Array<AccountIdentifiers>)
-    uid: '@azure/msal-react.accountArraysAreEqual'
+  - name: withMsal<P>(ComponentType<P>)
+    uid: '@azure/msal-react.withMsal'
     package: '@azure/msal-react'
-    summary: |-
-      Helper function to determine whether 2 arrays are equal
-      Used to avoid unnecessary state updates
+    summary: >-
+      Higher order component wraps provided component with msal by injecting
+      msal context values into the component's props
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function accountArraysAreEqual(arrayA: Array<AccountIdentifiers>,
-        arrayB: Array<AccountIdentifiers>): boolean
+        function withMsal<P>(Component: ComponentType<P>):
+        FunctionComponent<Subtract<P, WithMsalProps>>
       parameters:
-        - id: arrayA
-          type: Array&lt;<xref uid="@azure/msal-react.AccountIdentifiers" />&gt;
-          description: ''
-        - id: arrayB
-          type: Array&lt;<xref uid="@azure/msal-react.AccountIdentifiers" />&gt;
-          description: |+
-
-      return:
-        description: ''
-        type: boolean
-  - name: 'getAccountByIdentifiers(AccountInfo[], AccountIdentifiers)'
-    uid: '@azure/msal-react.getAccountByIdentifiers'
-    package: '@azure/msal-react'
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function getAccountByIdentifiers(allAccounts: AccountInfo[],
-        accountIdentifiers: AccountIdentifiers): AccountInfo | null
-      parameters:
-        - id: allAccounts
-          type: 'AccountInfo[]'
-          description: ''
-        - id: accountIdentifiers
-          type: <xref uid="@azure/msal-react.AccountIdentifiers" />
+        - id: Component
+          type: ComponentType&lt;P&gt;
           description: ''
       return:
         description: ''
-        type: AccountInfo | null
-  - name: 'getChildrenOrFunction<T>(React.ReactNode | FaaCFunction, T)'
-    uid: '@azure/msal-react.getChildrenOrFunction'
-    package: '@azure/msal-react'
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        function getChildrenOrFunction<T>(children: React.ReactNode |
-        FaaCFunction, args: T): React.ReactNode
-      parameters:
-        - id: children
-          type: >-
-            <xref uid="React.ReactNode" /> | <xref
-            uid="@azure/msal-react.FaaCFunction" />
-          description: ''
-        - id: args
-          type: T
-          description: ''
-      return:
-        description: ''
-        type: <xref uid="React.ReactNode" />
-classes:
-  - '@azure/msal-react.ReactAuthError'
+        type: >-
+          FunctionComponent&lt;<xref uid="@azure/msal-react.Subtract" />&lt;P,
+          <xref uid="@azure/msal-react.WithMsalProps" />&gt;&gt;

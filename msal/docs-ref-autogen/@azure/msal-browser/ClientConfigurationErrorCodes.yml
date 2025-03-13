@@ -1,0 +1,6 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-browser.ClientConfigurationErrorCodes'
+name: ClientConfigurationErrorCodes
+type: module
+package: '@azure/msal-browser'
+summary: ''

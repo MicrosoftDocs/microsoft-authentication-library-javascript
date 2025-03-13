@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: AuthorizationCodeRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AuthorizationCodeRequest = Partial<
@@ -14,9 +13,9 @@ syntax: |
       "code" | "enableSpaAuthorizationCode" | "requestedClaimsHash"
     >
   > & {
-    cloudGraphHostName?: string,
-    cloudInstanceHostName?: string,
-    code?: string,
-    msGraphHost?: string,
-    nativeAccountId?: string,
+    cloudGraphHostName?: string
+    cloudInstanceHostName?: string
+    code?: string
+    msGraphHost?: string
+    nativeAccountId?: string
   }

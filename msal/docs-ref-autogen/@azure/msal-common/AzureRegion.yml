@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: AzureRegion
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AzureRegion = string

@@ -7,26 +7,88 @@ summary: >-
   request and application.
 fullName: PerformanceEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
-  type PerformanceEvent = StaticFields & {
-    authority: string,
-    clientId: string,
-    correlationId: string,
-    durationMs?: number,
-    endPageVisibility?: string | null,
-    errorCode?: string,
-    eventId: string,
-    fromCache?: boolean | null,
-    isNativeBroker?: boolean,
-    libraryName: string,
-    libraryVersion: string,
-    name: PerformanceEvents,
-    requestId?: string,
-    startPageVisibility?: string | null,
-    startTimeMs: number,
-    status: PerformanceEventStatus,
-    subErrorCode?: string,
-    success?: boolean | null,
+  type PerformanceEvent = {
+    accessTokenSize?: number
+    accountType?: "AAD" | "MSA" | "B2C"
+    allowPlatformBroker?: boolean
+    appName?: string
+    appVersion?: string
+    authority: string
+    awaitIframeCorrelationId?: string
+    cacheAtCount?: number
+    cacheIdCount?: number
+    cacheLookupPolicy?: number
+    cacheOutcome?: number
+    cacheRtCount?: number
+    clientId: string
+    contentLengthHeader?: string
+    contentTypeHeader?: string
+    context?: string
+    correlationId: string
+    domainHintFromRequest?: boolean
+    durationMs?: number
+    embeddedClientId?: string
+    embeddedRedirectUri?: string
+    endPageVisibility?: string | null
+    errorCode?: string
+    errorName?: string
+    errorStack?: string[]
+    eventId: string
+    extensionHandshakeTimedOut?: boolean
+    extensionHandshakeTimeoutMs?: number
+    extensionId?: string
+    extensionInstalled?: boolean
+    extensionVersion?: string
+    fromCache?: boolean | null
+    httpStatus?: number
+    httpVerToken?: string
+    idTokenSize?: number
+    incompleteSubMeasurements?: Map<string, SubMeasurement>
+    incompleteSubsCount?: number
+    isAsyncPopup?: boolean
+    isNativeBroker?: boolean
+    libraryName: string
+    libraryVersion: string
+    loginHintFromClaim?: boolean
+    loginHintFromRequest?: boolean
+    loginHintFromUpn?: boolean
+    matsAccountJoinOnEnd?: string
+    matsAccountJoinOnStart?: string
+    matsApiErrorCode?: number
+    matsBrokerVersion?: string
+    matsDeviceJoin?: string
+    matsHttpEventCount?: number
+    matsHttpStatus?: number
+    matsPromptBehavior?: string
+    matsSilentBiSubCode?: number
+    matsSilentCode?: number
+    matsSilentMessage?: string
+    matsSilentStatus?: number
+    matsUiVisible?: boolean
+    multiMatchedAT?: number
+    multiMatchedID?: number
+    multiMatchedRT?: number
+    name: string
+    nestedAppAuthRequest?: boolean
+    prompt?: string
+    queuedCount?: number
+    queuedManuallyCompletedCount?: number
+    queuedTimeMs?: number
+    refreshTokenSize?: number
+    requestId?: string
+    retryError?: string
+    rtExpiresOnMs?: number
+    scenarioId?: string
+    serverErrorNo?: string
+    sidFromClaims?: boolean
+    sidFromRequest?: boolean
+    startPageVisibility?: string | null
+    startTimeMs: number
+    status: PerformanceEventStatus
+    subErrorCode?: string
+    success?: boolean | null
+    usePreGeneratedPkce?: boolean
+    visibilityChangeCount?: number
   }

@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Interface which describes URI components.
 fullName: IUri
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: AbsolutePath
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'AbsolutePath: string'
@@ -28,7 +26,6 @@ properties:
     summary: ''
     fullName: Hash
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'Hash: string'
@@ -41,7 +38,6 @@ properties:
     summary: ''
     fullName: HostNameAndPort
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'HostNameAndPort: string'
@@ -54,20 +50,18 @@ properties:
     summary: ''
     fullName: PathSegments
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'PathSegments: string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
   - name: Protocol
     uid: '@azure/msal-common.IUri.Protocol'
     package: '@azure/msal-common'
     summary: ''
     fullName: Protocol
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'Protocol: string'
@@ -80,7 +74,6 @@ properties:
     summary: ''
     fullName: QueryString
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'QueryString: string'
@@ -93,7 +86,6 @@ properties:
     summary: ''
     fullName: Search
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'Search: string'

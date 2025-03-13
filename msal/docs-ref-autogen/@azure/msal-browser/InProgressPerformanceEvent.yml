@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: InProgressPerformanceEvent
+uid: '@azure/msal-browser.InProgressPerformanceEvent'
+package: '@azure/msal-browser'
+summary: ''
+fullName: InProgressPerformanceEvent
+remarks: ''
+isDeprecated: false
+syntax: |
+  type InProgressPerformanceEvent = {
+    add: (fields: { [key: string]: {} | undefined }) => void
+    discard: () => void
+    end: (
+      event?: Partial<PerformanceEvent>,
+      error?: unknown
+    ) => PerformanceEvent | null
+    event: PerformanceEvent
+    increment: (fields: { [key: string]: number | undefined }) => void
+    measurement: IPerformanceMeasurement
+  }

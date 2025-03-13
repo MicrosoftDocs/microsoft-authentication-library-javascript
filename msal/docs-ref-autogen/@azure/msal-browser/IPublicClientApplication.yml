@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: IPublicClientApplication
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
@@ -14,7 +13,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -26,13 +24,12 @@ methods:
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
   - name: acquireTokenPopup(PopupRequest)
     uid: '@azure/msal-browser.IPublicClientApplication.acquireTokenPopup'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -44,13 +41,12 @@ methods:
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
   - name: acquireTokenRedirect(RedirectRequest)
     uid: '@azure/msal-browser.IPublicClientApplication.acquireTokenRedirect'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function acquireTokenRedirect(request: RedirectRequest): Promise<void>'
@@ -66,7 +62,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -78,29 +73,32 @@ methods:
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
-  - name: addEventCallback(Function)
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+  - name: addEventCallback(EventCallbackFunction, EventType[])
     uid: '@azure/msal-browser.IPublicClientApplication.addEventCallback'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function addEventCallback(callback: Function): string | null'
+      content: >-
+        function addEventCallback(callback: EventCallbackFunction, eventTypes?:
+        EventType[]): null | string
       parameters:
         - id: callback
-          type: Function
+          type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
+          description: ''
+        - id: eventTypes
+          type: EventType[]
           description: ''
       return:
         description: ''
-        type: string | null
+        type: null | string
   - name: addPerformanceCallback(PerformanceCallbackFunction)
     uid: '@azure/msal-browser.IPublicClientApplication.addPerformanceCallback'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -108,17 +106,31 @@ methods:
         string
       parameters:
         - id: callback
-          type: PerformanceCallbackFunction
+          type: <xref uid="@azure/msal-browser.PerformanceCallbackFunction" />
           description: ''
       return:
         description: ''
         type: string
+  - name: clearCache(ClearCacheRequest)
+    uid: '@azure/msal-browser.IPublicClientApplication.clearCache'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function clearCache(logoutRequest?: ClearCacheRequest): Promise<void>'
+      parameters:
+        - id: logoutRequest
+          type: <xref uid="@azure/msal-browser.ClearCacheRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: disableAccountStorageEvents()
     uid: '@azure/msal-browser.IPublicClientApplication.disableAccountStorageEvents'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function disableAccountStorageEvents()
@@ -127,112 +139,107 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function enableAccountStorageEvents()
+  - name: getAccount(AccountFilter)
+    uid: '@azure/msal-browser.IPublicClientApplication.getAccount'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAccount(accountFilter: AccountFilter): null | AccountInfo'
+      parameters:
+        - id: accountFilter
+          type: <xref uid="@azure/msal-common.AccountFilter" />
+          description: ''
+      return:
+        description: ''
+        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
   - name: getAccountByHomeId(string)
     uid: '@azure/msal-browser.IPublicClientApplication.getAccountByHomeId'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAccountByHomeId(homeAccountId: string): AccountInfo | null'
+      content: 'function getAccountByHomeId(homeAccountId: string): null | AccountInfo'
       parameters:
         - id: homeAccountId
           type: string
           description: ''
       return:
         description: ''
-        type: AccountInfo | null
+        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
   - name: getAccountByLocalId(string)
     uid: '@azure/msal-browser.IPublicClientApplication.getAccountByLocalId'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAccountByLocalId(localId: string): AccountInfo | null'
+      content: 'function getAccountByLocalId(localId: string): null | AccountInfo'
       parameters:
         - id: localId
           type: string
           description: ''
       return:
         description: ''
-        type: AccountInfo | null
+        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
   - name: getAccountByUsername(string)
     uid: '@azure/msal-browser.IPublicClientApplication.getAccountByUsername'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getAccountByUsername(userName: string): AccountInfo | null'
+      content: 'function getAccountByUsername(userName: string): null | AccountInfo'
       parameters:
         - id: userName
           type: string
           description: ''
       return:
         description: ''
-        type: AccountInfo | null
+        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
   - name: getActiveAccount()
     uid: '@azure/msal-browser.IPublicClientApplication.getActiveAccount'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getActiveAccount(): AccountInfo | null'
+      content: 'function getActiveAccount(): null | AccountInfo'
       return:
         description: ''
-        type: AccountInfo | null
+        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
   - name: getAllAccounts()
     uid: '@azure/msal-browser.IPublicClientApplication.getAllAccounts'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getAllAccounts(): AccountInfo[]'
       return:
         description: ''
-        type: 'AccountInfo[]'
-  - name: getConfiguration()
-    uid: '@azure/msal-browser.IPublicClientApplication.getConfiguration'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'function getConfiguration(): BrowserConfiguration'
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-browser.BrowserConfiguration" />
+        type: <xref uid="@azure/msal-browser.AccountInfo" />[]
   - name: getLogger()
     uid: '@azure/msal-browser.IPublicClientApplication.getLogger'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getLogger(): Logger'
       return:
         description: ''
-        type: Logger
+        type: <xref uid="@azure/msal-browser.Logger" />
   - name: getTokenCache()
     uid: '@azure/msal-browser.IPublicClientApplication.getTokenCache'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getTokenCache(): ITokenCache'
@@ -244,43 +251,82 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function handleRedirectPromise(hash?: string):
-        Promise<AuthenticationResult | null>
+        function handleRedirectPromise(hash?: string): Promise<null |
+        AuthenticationResult>
       parameters:
         - id: hash
           type: string
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult | null&gt;
-  - name: initialize()
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-browser.AuthenticationResult"
+          />&gt;
+  - name: >-
+      hydrateCache(AuthenticationResult, PopupRequest | RedirectRequest |
+      SilentRequest | Partial<Omit<CommonAuthorizationUrlRequest, "responseMode"
+      | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+      "platformBroker">>)
+    uid: '@azure/msal-browser.IPublicClientApplication.hydrateCache'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function hydrateCache(result: AuthenticationResult, request:
+        PopupRequest | RedirectRequest | SilentRequest |
+        Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+        "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+        "platformBroker">>): Promise<void>
+      parameters:
+        - id: result
+          type: <xref uid="@azure/msal-browser.AuthenticationResult" />
+          description: ''
+        - id: request
+          type: >-
+            <xref uid="@azure/msal-browser.PopupRequest" /> | <xref
+            uid="@azure/msal-browser.RedirectRequest" /> | <xref
+            uid="@azure/msal-browser.SilentRequest" /> |
+            Partial&lt;Omit&lt;<xref
+            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
+            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+            "requestedClaimsHash" | "platformBroker"&gt;&gt;
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: initialize(InitializeApplicationRequest)
     uid: '@azure/msal-browser.IPublicClientApplication.initialize'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function initialize(): Promise<void>'
+      content: >-
+        function initialize(request?: InitializeApplicationRequest):
+        Promise<void>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.InitializeApplicationRequest" />
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: 'initializeWrapperLibrary(WrapperSKU, string)'
+  - name: initializeWrapperLibrary(WrapperSKU, string)
     uid: '@azure/msal-browser.IPublicClientApplication.initializeWrapperLibrary'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function initializeWrapperLibrary(sku: WrapperSKU, version: string)'
       parameters:
         - id: sku
-          type: <xref uid="@azure/msal-browser.WrapperSKU" />
+          type: WrapperSKU
           description: ''
         - id: version
           type: string
@@ -290,7 +336,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -302,13 +347,12 @@ methods:
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
   - name: loginRedirect(RedirectRequest)
     uid: '@azure/msal-browser.IPublicClientApplication.loginRedirect'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function loginRedirect(request?: RedirectRequest): Promise<void>'
@@ -324,7 +368,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function logout(logoutRequest?: EndSessionRequest): Promise<void>'
@@ -340,7 +383,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -358,7 +400,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -376,7 +417,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeEventCallback(callbackId: string)'
@@ -389,7 +429,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removePerformanceCallback(callbackId: string): boolean'
@@ -400,38 +439,35 @@ methods:
       return:
         description: ''
         type: boolean
-  - name: setActiveAccount(AccountInfo | null)
+  - name: setActiveAccount(null | AccountInfo)
     uid: '@azure/msal-browser.IPublicClientApplication.setActiveAccount'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function setActiveAccount(account: AccountInfo | null)'
+      content: 'function setActiveAccount(account: null | AccountInfo)'
       parameters:
         - id: account
-          type: AccountInfo | null
+          type: null | <xref uid="@azure/msal-browser.AccountInfo" />
           description: ''
   - name: setLogger(Logger)
     uid: '@azure/msal-browser.IPublicClientApplication.setLogger'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setLogger(logger: Logger)'
       parameters:
         - id: logger
-          type: Logger
+          type: <xref uid="@azure/msal-browser.Logger" />
           description: ''
   - name: setNavigationClient(INavigationClient)
     uid: '@azure/msal-browser.IPublicClientApplication.setNavigationClient'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setNavigationClient(navigationClient: INavigationClient)'
@@ -439,21 +475,29 @@ methods:
         - id: navigationClient
           type: <xref uid="@azure/msal-browser.INavigationClient" />
           description: ''
-  - name: ssoSilent(SsoSilentRequest)
+  - name: >-
+      ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+      "platformBroker">>)
     uid: '@azure/msal-browser.IPublicClientApplication.ssoSilent'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function ssoSilent(request: SsoSilentRequest):
+        function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
+        "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+        "requestedClaimsHash" | "platformBroker">>):
         Promise<AuthenticationResult>
       parameters:
         - id: request
-          type: <xref uid="@azure/msal-browser.SsoSilentRequest" />
+          type: >-
+            Partial&lt;Omit&lt;<xref
+            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
+            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+            "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;

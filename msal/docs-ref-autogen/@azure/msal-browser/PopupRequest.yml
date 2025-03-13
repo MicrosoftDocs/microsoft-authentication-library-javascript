@@ -2,10 +2,11 @@
 name: PopupRequest
 uid: '@azure/msal-browser.PopupRequest'
 package: '@azure/msal-browser'
-summary: >
+summary: >-
   PopupRequest: Request object passed by user to retrieve a Code from the
 
   server (first leg of authorization code grant flow) with a popup window.
+
 
   - scopes                     - Array of scopes the application is requesting
   access to.
@@ -53,6 +54,10 @@ summary: >
   - extraQueryParameters       - String to string map of custom query parameters
   added to the /authorize call
 
+  - tokenBodyParameters        - String to string map of custom token request
+  body parameters added to the /token call. Only used when renewing access
+  tokens.
+
   - tokenQueryParameters       - String to string map of custom query parameters
   added to the /token call
 
@@ -66,9 +71,11 @@ summary: >
 
   - popupWindowAttributes      - Optional popup window attributes. popupSize
   with height and width, and popupPosition with top and left can be set.
+
+  - popupWindowParent          - Optional window object to use as the parent
+  when opening popup windows. Uses global `window` if not given.
 fullName: PopupRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type PopupRequest = Partial<
@@ -79,6 +86,10 @@ syntax: |
       | "codeChallenge"
       | "codeChallengeMethod"
       | "requestedClaimsHash"
-      | "nativeBroker"
+      | "platformBroker"
     >
-  > & { popupWindowAttributes?: PopupWindowAttributes, scopes: Array<string> }
+  > & {
+    popupWindowAttributes?: PopupWindowAttributes
+    popupWindowParent?: Window
+    scopes: string[]
+  }

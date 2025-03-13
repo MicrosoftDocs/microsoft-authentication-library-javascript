@@ -2,9 +2,10 @@
 name: CommonAuthorizationUrlRequest
 uid: '@azure/msal-common.CommonAuthorizationUrlRequest'
 package: '@azure/msal-common'
-summary: >
+summary: >-
   Request object passed by user to retrieve a Code from the server (first leg of
   authorization code grant flow)
+
 
   - scopes                     - Array of scopes the application is requesting
   access to.
@@ -86,23 +87,21 @@ summary: >
   proof-of-possession flows.
 fullName: CommonAuthorizationUrlRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type CommonAuthorizationUrlRequest = BaseAuthRequest & {
-    account?: AccountInfo,
-    codeChallenge?: string,
-    codeChallengeMethod?: string,
-    domainHint?: string,
-    extraQueryParameters?: StringDict,
-    extraScopesToConsent?: Array<string>,
-    loginHint?: string,
-    nativeBroker?: boolean,
-    nonce?: string,
-    prompt?: string,
-    redirectUri: string,
-    responseMode: ResponseMode,
-    sid?: string,
-    state?: string,
-    tokenQueryParameters?: StringDict,
+    account?: AccountInfo
+    codeChallenge?: string
+    codeChallengeMethod?: string
+    domainHint?: string
+    extraQueryParameters?: StringDict
+    extraScopesToConsent?: string[]
+    loginHint?: string
+    nonce?: string
+    platformBroker?: boolean
+    prompt?: string
+    redirectUri: string
+    responseMode: ResponseMode
+    sid?: string
+    state?: string
   }

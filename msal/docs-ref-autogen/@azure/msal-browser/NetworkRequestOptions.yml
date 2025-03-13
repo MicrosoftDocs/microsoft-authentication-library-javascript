@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: NetworkRequestOptions
+uid: '@azure/msal-browser.NetworkRequestOptions'
+package: '@azure/msal-browser'
+summary: Options allowed by network request APIs.
+fullName: NetworkRequestOptions
+remarks: ''
+isDeprecated: false
+syntax: >
+  type NetworkRequestOptions = { body?: string; headers?: Record<string, string>
+  }

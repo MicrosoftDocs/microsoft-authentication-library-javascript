@@ -11,19 +11,23 @@ summary: |-
   - error: description
 fullName: ServerAuthorizationCodeResponse
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type ServerAuthorizationCodeResponse = {
-    accountId?: string,
-    client_info?: string,
-    cloud_graph_host_name?: string,
-    cloud_instance_host_name?: string,
-    cloud_instance_name?: string,
-    code?: string,
-    error?: string,
-    error_description?: string,
-    msgraph_host?: string,
-    state?: string,
-    suberror?: string,
+    accountId?: string
+    claims?: string
+    client_info?: string
+    cloud_graph_host_name?: string
+    cloud_instance_host_name?: string
+    cloud_instance_name?: string
+    code?: string
+    correlation_id?: string
+    error?: string
+    error_description?: string
+    error_uri?: string
+    msgraph_host?: string
+    state?: string
+    suberror?: string
+    timestamp?: string
+    trace_id?: string
   }

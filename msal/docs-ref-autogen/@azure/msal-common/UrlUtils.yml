@@ -1,0 +1,43 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.UrlUtils'
+name: UrlUtils
+type: module
+package: '@azure/msal-common'
+summary: ''
+functions:
+  - name: getDeserializedResponse(string)
+    uid: '@azure/msal-common.UrlUtils.getDeserializedResponse'
+    package: '@azure/msal-common'
+    summary: Returns URL hash as server auth code response object.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getDeserializedResponse(responseString: string):
+        ServerAuthorizationCodeResponse | null
+      parameters:
+        - id: responseString
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: >-
+          <xref uid="@azure/msal-common.ServerAuthorizationCodeResponse" /> |
+          null
+  - name: stripLeadingHashOrQuery(string)
+    uid: '@azure/msal-common.UrlUtils.stripLeadingHashOrQuery'
+    package: '@azure/msal-common'
+    summary: >-
+      Parses hash string from given string. Returns empty string if no hash
+      symbol is found.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function stripLeadingHashOrQuery(responseString: string): string'
+      parameters:
+        - id: responseString
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string

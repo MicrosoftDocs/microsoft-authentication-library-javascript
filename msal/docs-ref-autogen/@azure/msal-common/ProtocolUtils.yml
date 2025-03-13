@@ -5,16 +5,14 @@ package: '@azure/msal-common'
 summary: Class which provides helpers for OAuth 2.0 protocol specific values
 fullName: ProtocolUtils
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 methods:
-  - name: 'generateLibraryState(ICrypto, Record<string, string>)'
+  - name: generateLibraryState(ICrypto, Record<string, string>)
     uid: '@azure/msal-common.ProtocolUtils.generateLibraryState'
     package: '@azure/msal-common'
     summary: Generates the state value used by the common library.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -23,22 +21,20 @@ methods:
       parameters:
         - id: cryptoObj
           type: <xref uid="@azure/msal-common.ICrypto" />
-          description: |+
-
+          description: ''
         - id: meta
-          type: 'Record&lt;string, string&gt;'
+          type: Record&lt;string, string&gt;
           description: ''
       return:
         description: ''
         type: string
-  - name: 'parseRequestState(ICrypto, string)'
+  - name: parseRequestState(ICrypto, string)
     uid: '@azure/msal-common.ProtocolUtils.parseRequestState'
     package: '@azure/msal-common'
     summary: >-
       Parses the state into the RequestStateObject, which contains the
       LibraryState info and the state passed by the user.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -47,20 +43,18 @@ methods:
       parameters:
         - id: cryptoObj
           type: <xref uid="@azure/msal-common.ICrypto" />
-          description: |+
-
+          description: ''
         - id: state
           type: string
           description: ''
       return:
         description: ''
         type: <xref uid="@azure/msal-common.RequestStateObject" />
-  - name: 'setRequestState(ICrypto, string, Record<string, string>)'
+  - name: setRequestState(ICrypto, string, Record<string, string>)
     uid: '@azure/msal-common.ProtocolUtils.setRequestState'
     package: '@azure/msal-common'
-    summary: 'Appends user state with random guid, or returns random guid.'
+    summary: Appends user state with random guid, or returns random guid.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -74,7 +68,7 @@ methods:
           type: string
           description: ''
         - id: meta
-          type: 'Record&lt;string, string&gt;'
+          type: Record&lt;string, string&gt;
           description: ''
       return:
         description: ''

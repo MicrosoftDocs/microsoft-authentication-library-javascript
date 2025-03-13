@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: AzureCloudInstance
+uid: '@azure/msal-node.AzureCloudInstance'
+package: '@azure/msal-node'
+summary: ''
+fullName: AzureCloudInstance
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AzureCloudInstance =
+    (typeof AzureCloudInstance)[keyof typeof AzureCloudInstance]

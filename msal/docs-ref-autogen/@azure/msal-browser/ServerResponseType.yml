@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: ServerResponseType
+uid: '@azure/msal-browser.ServerResponseType'
+package: '@azure/msal-browser'
+summary: ''
+fullName: ServerResponseType
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ServerResponseType =
+    (typeof ServerResponseType)[keyof typeof ServerResponseType]

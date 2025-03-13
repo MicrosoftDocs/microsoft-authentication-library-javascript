@@ -1,0 +1,124 @@
+### YamlMime:TSType
+name: SessionStorage
+uid: '@azure/msal-browser.SessionStorage'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SessionStorage
+remarks: ''
+isDeprecated: false
+type: class
+methods:
+  - name: containsKey(string)
+    uid: '@azure/msal-browser.SessionStorage.containsKey'
+    package: '@azure/msal-browser'
+    summary: Returns true or false if the given key is present in the cache.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function containsKey(key: string): boolean'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: getItem(string)
+    uid: '@azure/msal-browser.SessionStorage.getItem'
+    package: '@azure/msal-browser'
+    summary: Get the item from the window storage object matching the given key.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getItem(key: string): null | string'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: null | string
+  - name: getKeys()
+    uid: '@azure/msal-browser.SessionStorage.getKeys'
+    package: '@azure/msal-browser'
+    summary: >-
+      Get all the keys from the window storage object as an iterable array of
+      strings.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getKeys(): string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: getUserData(string)
+    uid: '@azure/msal-browser.SessionStorage.getUserData'
+    package: '@azure/msal-browser'
+    summary: Getter for sensitive data that may contain PII.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getUserData(key: string): null | string'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: null | string
+  - name: initialize()
+    uid: '@azure/msal-browser.SessionStorage.initialize'
+    package: '@azure/msal-browser'
+    summary: Async initializer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function initialize(): Promise<void>'
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: removeItem(string)
+    uid: '@azure/msal-browser.SessionStorage.removeItem'
+    package: '@azure/msal-browser'
+    summary: Removes the item in the window storage object matching the given key.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeItem(key: string)'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+  - name: setItem(string, string)
+    uid: '@azure/msal-browser.SessionStorage.setItem'
+    package: '@azure/msal-browser'
+    summary: Sets the item in the window storage object with the given key.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setItem(key: string, value: string)'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: value
+          type: string
+          description: ''
+  - name: setUserData(string, string)
+    uid: '@azure/msal-browser.SessionStorage.setUserData'
+    package: '@azure/msal-browser'
+    summary: Setter for sensitive data that may contain PII.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setUserData(key: string, value: string): Promise<void>'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: value
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

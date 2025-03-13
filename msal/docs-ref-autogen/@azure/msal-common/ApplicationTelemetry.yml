@@ -8,7 +8,6 @@ summary: |-
   - appVersion: Version of the application using MSAL
 fullName: ApplicationTelemetry
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
-  type ApplicationTelemetry = { appName: string, appVersion: string }
+  type ApplicationTelemetry = { appName: string; appVersion: string }
