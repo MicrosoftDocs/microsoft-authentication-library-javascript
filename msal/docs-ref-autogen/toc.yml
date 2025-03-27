@@ -373,6 +373,12 @@
     - uid: '@azure/msal-common.AuthorizationCodePayload'
       name: AuthorizationCodePayload
       items: []
+    - uid: '@azure/msal-common.AuthorizeProtocol'
+      name: AuthorizeProtocol
+      items: []
+    - uid: '@azure/msal-common.AuthorizeResponse'
+      name: AuthorizeResponse
+      items: []
     - uid: '@azure/msal-common.AuthToken'
       name: AuthToken
       items: []
@@ -574,6 +580,9 @@
     - uid: '@azure/msal-common.NetworkResponse'
       name: NetworkResponse
       items: []
+    - uid: '@azure/msal-common.OAuthResponseType'
+      name: OAuthResponseType
+      items: []
     - uid: '@azure/msal-common.OIDCOptions'
       name: OIDCOptions
       items: []
@@ -616,6 +625,9 @@
     - uid: '@azure/msal-common.RefreshTokenEntity'
       name: RefreshTokenEntity
       items: []
+    - uid: '@azure/msal-common.RequestParameterBuilder'
+      name: RequestParameterBuilder
+      items: []
     - uid: '@azure/msal-common.RequestStateObject'
       name: RequestStateObject
       items: []
@@ -627,9 +639,6 @@
       items: []
     - uid: '@azure/msal-common.ScopeSet'
       name: ScopeSet
-      items: []
-    - uid: '@azure/msal-common.ServerAuthorizationCodeResponse'
-      name: ServerAuthorizationCodeResponse
       items: []
     - uid: '@azure/msal-common.ServerAuthorizationTokenResponse'
       name: ServerAuthorizationTokenResponse
@@ -730,6 +739,9 @@
       items: []
     - uid: '@azure/msal-node.AuthorizationUrlRequest'
       name: AuthorizationUrlRequest
+      items: []
+    - uid: '@azure/msal-node.AuthorizeResponse'
+      name: AuthorizeResponse
       items: []
     - uid: '@azure/msal-node.AzureCloudInstance'
       name: AzureCloudInstance
@@ -913,9 +925,6 @@
       items: []
     - uid: '@azure/msal-node.SerializedRefreshTokenEntity'
       name: SerializedRefreshTokenEntity
-      items: []
-    - uid: '@azure/msal-node.ServerAuthorizationCodeResponse'
-      name: ServerAuthorizationCodeResponse
       items: []
     - uid: '@azure/msal-node.ServerError'
       name: ServerError

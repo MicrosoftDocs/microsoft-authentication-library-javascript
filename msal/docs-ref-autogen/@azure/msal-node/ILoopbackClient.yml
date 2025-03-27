@@ -38,7 +38,7 @@ methods:
     syntax:
       content: >-
         function listenForAuthCode(successTemplate?: string, errorTemplate?:
-        string): Promise<ServerAuthorizationCodeResponse>
+        string): Promise<AuthorizeResponse>
       parameters:
         - id: successTemplate
           type: string
@@ -48,6 +48,4 @@ methods:
           description: ''
       return:
         description: ''
-        type: >-
-          Promise&lt;<xref
-          uid="@azure/msal-node.ServerAuthorizationCodeResponse" />&gt;
+        type: Promise&lt;<xref uid="@azure/msal-node.AuthorizeResponse" />&gt;

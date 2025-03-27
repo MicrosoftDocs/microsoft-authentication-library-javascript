@@ -262,8 +262,8 @@ methods:
           description: ''
   - name: >-
       ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
-      "platformBroker">>)
+      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash"
+      | "platformBroker">>)
     uid: '@azure/msal-angular.MsalService.ssoSilent'
     package: '@azure/msal-angular'
     summary: ''
@@ -272,7 +272,7 @@ methods:
     syntax:
       content: >-
         function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
-        "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+        "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
         "requestedClaimsHash" | "platformBroker">>):
         Observable<AuthenticationResult>
       parameters:
@@ -280,8 +280,8 @@ methods:
           type: >-
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
-            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
-            "requestedClaimsHash" | "platformBroker"&gt;&gt;
+            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
+            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''

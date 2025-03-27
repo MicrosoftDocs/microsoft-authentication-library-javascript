@@ -14,16 +14,29 @@ functions:
     syntax:
       content: >-
         function getDeserializedResponse(responseString: string):
-        ServerAuthorizationCodeResponse | null
+        AuthorizeResponse | null
       parameters:
         - id: responseString
           type: string
           description: ''
       return:
         description: ''
-        type: >-
-          <xref uid="@azure/msal-common.ServerAuthorizationCodeResponse" /> |
-          null
+        type: <xref uid="@azure/msal-common.AuthorizeResponse" /> | null
+  - name: mapToQueryString(Map<string, string>)
+    uid: '@azure/msal-common.UrlUtils.mapToQueryString'
+    package: '@azure/msal-common'
+    summary: Utility to create a URL from the params map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function mapToQueryString(parameters: Map<string, string>): string'
+      parameters:
+        - id: parameters
+          type: Map&lt;string, string&gt;
+          description: ''
+      return:
+        description: ''
+        type: string
   - name: stripLeadingHashOrQuery(string)
     uid: '@azure/msal-common.UrlUtils.stripLeadingHashOrQuery'
     package: '@azure/msal-common'

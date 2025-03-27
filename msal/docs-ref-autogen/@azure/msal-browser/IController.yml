@@ -27,7 +27,7 @@ methods:
         type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
   - name: >-
       acquireTokenNative(PopupRequest | SilentRequest |
-      Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+      Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
       "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
       "platformBroker">>, ApiId, string)
     uid: '@azure/msal-browser.IController.acquireTokenNative'
@@ -38,7 +38,7 @@ methods:
     syntax:
       content: >-
         function acquireTokenNative(request: PopupRequest | SilentRequest |
-        Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+        Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
         "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
         "platformBroker">>, apiId: ApiId, accountId?: string):
         Promise<AuthenticationResult>
@@ -49,8 +49,8 @@ methods:
             uid="@azure/msal-browser.SilentRequest" /> |
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
-            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
-            "requestedClaimsHash" | "platformBroker"&gt;&gt;
+            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
+            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
         - id: apiId
           type: ApiId
@@ -308,8 +308,8 @@ methods:
   - name: >-
       hydrateCache(AuthenticationResult, PopupRequest | RedirectRequest |
       SilentRequest | Partial<Omit<CommonAuthorizationUrlRequest, "responseMode"
-      | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
-      "platformBroker">>)
+      | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
+      "requestedClaimsHash" | "platformBroker">>)
     uid: '@azure/msal-browser.IController.hydrateCache'
     package: '@azure/msal-browser'
     summary: ''
@@ -319,7 +319,7 @@ methods:
       content: >-
         function hydrateCache(result: AuthenticationResult, request:
         PopupRequest | RedirectRequest | SilentRequest |
-        Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
+        Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
         "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
         "platformBroker">>): Promise<void>
       parameters:
@@ -333,8 +333,8 @@ methods:
             uid="@azure/msal-browser.SilentRequest" /> |
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
-            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
-            "requestedClaimsHash" | "platformBroker"&gt;&gt;
+            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
+            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''
@@ -517,8 +517,8 @@ methods:
           description: ''
   - name: >-
       ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
-      "platformBroker">>)
+      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash"
+      | "platformBroker">>)
     uid: '@azure/msal-browser.IController.ssoSilent'
     package: '@azure/msal-browser'
     summary: ''
@@ -527,7 +527,7 @@ methods:
     syntax:
       content: >-
         function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
-        "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+        "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
         "requestedClaimsHash" | "platformBroker">>):
         Promise<AuthenticationResult>
       parameters:
@@ -535,8 +535,8 @@ methods:
           type: >-
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
-            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
-            "requestedClaimsHash" | "platformBroker"&gt;&gt;
+            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
+            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''

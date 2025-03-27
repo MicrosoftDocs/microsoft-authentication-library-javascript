@@ -1,19 +1,13 @@
 ### YamlMime:TSTypeAlias
-name: ServerAuthorizationCodeResponse
-uid: '@azure/msal-node.ServerAuthorizationCodeResponse'
-package: '@azure/msal-node'
-summary: |-
-  Deserialized response object from server authorization code request.
-  - code: authorization code from server
-  - client_info: client info object
-  - state: OAuth2 request state
-  - error: error sent back in hash
-  - error: description
-fullName: ServerAuthorizationCodeResponse
+name: AuthorizeResponse
+uid: '@azure/msal-common.AuthorizeResponse'
+package: '@azure/msal-common'
+summary: Response properties that may be returned by the /authorize endpoint
+fullName: AuthorizeResponse
 remarks: ''
 isDeprecated: false
 syntax: |
-  type ServerAuthorizationCodeResponse = {
+  type AuthorizeResponse = {
     accountId?: string
     claims?: string
     client_info?: string
@@ -22,6 +16,7 @@ syntax: |
     cloud_instance_name?: string
     code?: string
     correlation_id?: string
+    ear_jwe?: string
     error?: string
     error_description?: string
     error_uri?: string

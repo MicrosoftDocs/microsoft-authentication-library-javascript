@@ -94,14 +94,15 @@ syntax: |
     codeChallenge?: string
     codeChallengeMethod?: string
     domainHint?: string
+    earJwk?: string
     extraQueryParameters?: StringDict
     extraScopesToConsent?: string[]
     loginHint?: string
-    nonce?: string
+    nonce: string
     platformBroker?: boolean
     prompt?: string
     redirectUri: string
     responseMode: ResponseMode
     sid?: string
-    state?: string
+    state: string
   }
