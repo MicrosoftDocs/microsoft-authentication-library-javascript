@@ -83,7 +83,6 @@ syntax: |
       CommonAuthorizationUrlRequest,
       | "responseMode"
       | "scopes"
-      | "earJwk"
       | "codeChallenge"
       | "codeChallengeMethod"
       | "requestedClaimsHash"

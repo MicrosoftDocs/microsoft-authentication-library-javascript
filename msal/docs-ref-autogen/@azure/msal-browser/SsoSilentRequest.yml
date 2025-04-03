@@ -74,7 +74,6 @@ syntax: |
     Omit<
       CommonAuthorizationUrlRequest,
       | "responseMode"
-      | "earJwk"
       | "codeChallenge"
       | "codeChallengeMethod"
       | "requestedClaimsHash"

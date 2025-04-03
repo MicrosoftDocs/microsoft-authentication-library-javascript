@@ -182,10 +182,6 @@ fields:
     uid: '@azure/msal-browser.PerformanceEvents.Decrypt'
     package: '@azure/msal-browser'
     summary: ''
-  - name: DecryptEarResponse
-    uid: '@azure/msal-browser.PerformanceEvents.DecryptEarResponse'
-    package: '@azure/msal-browser'
-    summary: ''
   - name: DeserializeResponse
     uid: '@azure/msal-browser.PerformanceEvents.DeserializeResponse'
     package: '@azure/msal-browser'
@@ -210,10 +206,6 @@ fields:
     summary: ''
   - name: GenerateCodeVerifier
     uid: '@azure/msal-browser.PerformanceEvents.GenerateCodeVerifier'
-    package: '@azure/msal-browser'
-    summary: ''
-  - name: GenerateEarKey
-    uid: '@azure/msal-browser.PerformanceEvents.GenerateEarKey'
     package: '@azure/msal-browser'
     summary: ''
   - name: GenerateHKDF
@@ -260,18 +252,6 @@ fields:
     summary: ''
   - name: HandleRedirectPromiseMeasurement
     uid: '@azure/msal-browser.PerformanceEvents.HandleRedirectPromiseMeasurement'
-    package: '@azure/msal-browser'
-    summary: ''
-  - name: HandleResponseCode
-    uid: '@azure/msal-browser.PerformanceEvents.HandleResponseCode'
-    package: '@azure/msal-browser'
-    summary: ''
-  - name: HandleResponseEar
-    uid: '@azure/msal-browser.PerformanceEvents.HandleResponseEar'
-    package: '@azure/msal-browser'
-    summary: ''
-  - name: HandleResponsePlatformBroker
-    uid: '@azure/msal-browser.PerformanceEvents.HandleResponsePlatformBroker'
     package: '@azure/msal-browser'
     summary: ''
   - name: HandleServerTokenResponse

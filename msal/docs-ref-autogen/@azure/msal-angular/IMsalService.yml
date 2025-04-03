@@ -161,10 +161,7 @@ methods:
         - id: logger
           type: <xref uid="@azure/msal-common.Logger" />
           description: ''
-  - name: >-
-      ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash"
-      | "platformBroker">>)
+  - name: ssoSilent(AuthorizationUrlRequest)
     uid: '@azure/msal-angular.IMsalService.ssoSilent'
     package: '@azure/msal-angular'
     summary: ''
@@ -172,17 +169,11 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
-        "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "requestedClaimsHash" | "platformBroker">>):
+        function ssoSilent(request: AuthorizationUrlRequest):
         Observable<AuthenticationResult>
       parameters:
         - id: request
-          type: >-
-            Partial&lt;Omit&lt;<xref
-            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
-            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
+          type: <xref uid="@azure/msal-browser.AuthorizationUrlRequest" />
           description: ''
       return:
         description: ''
