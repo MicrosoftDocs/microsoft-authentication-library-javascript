@@ -87,3 +87,12 @@ properties:
         type: >-
           ɵɵInjectableDeclaration&lt;<xref
           uid="@azure/msal-angular.MsalBroadcastService" />&gt;
+methods:
+  - name: resetInProgressEvent()
+    uid: '@azure/msal-angular.MsalBroadcastService.resetInProgressEvent'
+    package: '@azure/msal-angular'
+    summary: Resets inProgress state to None
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function resetInProgressEvent()

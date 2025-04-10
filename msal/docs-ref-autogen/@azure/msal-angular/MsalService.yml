@@ -8,20 +8,25 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: MsalService(IPublicClientApplication, Location)
+  - name: MsalService(IPublicClientApplication, Location, Injector)
     uid: '@azure/msal-angular.MsalService.constructor'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'new MsalService(instance: IPublicClientApplication, location: Location)'
+      content: >-
+        new MsalService(instance: IPublicClientApplication, location: Location,
+        injector: Injector)
       parameters:
         - id: instance
           type: <xref uid="@azure/msal-browser.IPublicClientApplication" />
           description: ''
         - id: location
           type: Location
+          description: ''
+        - id: injector
+          type: Injector
           description: ''
 properties:
   - name: instance
@@ -262,8 +267,8 @@ methods:
           description: ''
   - name: >-
       ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
-      "platformBroker">>)
+      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash"
+      | "platformBroker">>)
     uid: '@azure/msal-angular.MsalService.ssoSilent'
     package: '@azure/msal-angular'
     summary: ''
@@ -272,7 +277,7 @@ methods:
     syntax:
       content: >-
         function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
-        "responseMode" | "codeChallenge" | "codeChallengeMethod" |
+        "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
         "requestedClaimsHash" | "platformBroker">>):
         Observable<AuthenticationResult>
       parameters:
@@ -280,8 +285,8 @@ methods:
           type: >-
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
-            "responseMode" | "codeChallenge" | "codeChallengeMethod" |
-            "requestedClaimsHash" | "platformBroker"&gt;&gt;
+            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
+            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''
