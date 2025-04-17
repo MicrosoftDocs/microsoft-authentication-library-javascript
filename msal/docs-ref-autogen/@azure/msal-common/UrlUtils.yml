@@ -22,17 +22,25 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AuthorizeResponse" /> | null
-  - name: mapToQueryString(Map<string, string>)
+  - name: mapToQueryString(Map<string, string>, boolean, StringDict)
     uid: '@azure/msal-common.UrlUtils.mapToQueryString'
     package: '@azure/msal-common'
     summary: Utility to create a URL from the params map
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function mapToQueryString(parameters: Map<string, string>): string'
+      content: >-
+        function mapToQueryString(parameters: Map<string, string>,
+        encodeExtraParams?: boolean, extraQueryParameters?: StringDict): string
       parameters:
         - id: parameters
           type: Map&lt;string, string&gt;
+          description: ''
+        - id: encodeExtraParams
+          type: boolean
+          description: ''
+        - id: extraQueryParameters
+          type: <xref uid="@azure/msal-common.StringDict" />
           description: ''
       return:
         description: ''

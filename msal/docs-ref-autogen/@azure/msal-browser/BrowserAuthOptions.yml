@@ -15,6 +15,7 @@ syntax: |
     clientCapabilities?: string[]
     clientId: string
     cloudDiscoveryMetadata?: string
+    encodeExtraQueryParams?: boolean
     instanceAware?: boolean
     knownAuthorities?: string[]
     navigateToLoginRequestUrl?: boolean

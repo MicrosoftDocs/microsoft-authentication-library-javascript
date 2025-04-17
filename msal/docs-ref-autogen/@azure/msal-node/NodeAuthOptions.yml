@@ -33,6 +33,9 @@ summary: >-
 
   - skipAuthorityMetadataCache - A flag to choose whether to use or not use the
   local metadata cache during authority initialization. Defaults to false.
+
+  - encodeExtraQueryParams - A flag to choose whether to encode extra query
+  parameters in the request URL. Defaults to false.
 fullName: NodeAuthOptions
 remarks: ''
 isDeprecated: false
@@ -52,6 +55,7 @@ syntax: |
     clientId: string
     clientSecret?: string
     cloudDiscoveryMetadata?: string
+    encodeExtraQueryParams?: boolean
     knownAuthorities?: string[]
     protocolMode?: ProtocolMode
     skipAuthorityMetadataCache?: boolean

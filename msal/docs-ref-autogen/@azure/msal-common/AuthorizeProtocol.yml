@@ -29,7 +29,7 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AuthorizationCodePayload" />
-  - name: getAuthorizeUrl(Authority, Map<string, string>)
+  - name: getAuthorizeUrl(Authority, Map<string, string>, boolean, StringDict)
     uid: '@azure/msal-common.AuthorizeProtocol.getAuthorizeUrl'
     package: '@azure/msal-common'
     summary: >-
@@ -40,13 +40,20 @@ functions:
     syntax:
       content: >-
         function getAuthorizeUrl(authority: Authority, requestParameters:
-        Map<string, string>): string
+        Map<string, string>, encodeParams?: boolean, extraQueryParameters?:
+        StringDict): string
       parameters:
         - id: authority
           type: Authority
           description: ''
         - id: requestParameters
           type: Map&lt;string, string&gt;
+          description: ''
+        - id: encodeParams
+          type: boolean
+          description: ''
+        - id: extraQueryParameters
+          type: <xref uid="@azure/msal-common.StringDict" />
           description: ''
       return:
         description: ''
