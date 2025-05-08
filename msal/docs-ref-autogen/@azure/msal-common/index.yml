@@ -333,7 +333,7 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.InteractionRequiredAuthError" />
-  - name: createNetworkError(AuthError, number, Record<string, string>)
+  - name: createNetworkError(AuthError, number, Record<string, string>, Error)
     uid: '@azure/msal-common.createNetworkError'
     package: '@azure/msal-common'
     summary: Creates NetworkError object for a failed network request
@@ -342,7 +342,8 @@ functions:
     syntax:
       content: >-
         function createNetworkError(error: AuthError, httpStatus?: number,
-        responseHeaders?: Record<string, string>): NetworkError
+        responseHeaders?: Record<string, string>, additionalError?: Error):
+        NetworkError
       parameters:
         - id: error
           type: <xref uid="@azure/msal-common.AuthError" />
@@ -353,6 +354,9 @@ functions:
         - id: responseHeaders
           type: Record&lt;string, string&gt;
           description: Response headers of the network request, when available
+        - id: additionalError
+          type: Error
+          description: ''
       return:
         description: NetworkError object
         type: <xref uid="@azure/msal-common.NetworkError" />

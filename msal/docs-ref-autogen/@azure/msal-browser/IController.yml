@@ -339,7 +339,7 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: initialize(InitializeApplicationRequest)
+  - name: initialize(InitializeApplicationRequest, boolean)
     uid: '@azure/msal-browser.IController.initialize'
     package: '@azure/msal-browser'
     summary: ''
@@ -347,11 +347,14 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function initialize(request?: InitializeApplicationRequest):
-        Promise<void>
+        function initialize(request?: InitializeApplicationRequest, isBroker?:
+        boolean): Promise<void>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-browser.InitializeApplicationRequest" />
+          description: ''
+        - id: isBroker
+          type: boolean
           description: ''
       return:
         description: ''

@@ -67,6 +67,7 @@ syntax: |
     matsSilentMessage?: string
     matsSilentStatus?: number
     matsUiVisible?: boolean
+    msalInstanceCount?: number
     multiMatchedAT?: number
     multiMatchedID?: number
     multiMatchedRT?: number
@@ -80,6 +81,7 @@ syntax: |
     requestId?: string
     retryError?: string
     rtExpiresOnMs?: number
+    sameClientIdInstanceCount?: number
     scenarioId?: string
     serverErrorNo?: string
     sidFromClaims?: boolean
