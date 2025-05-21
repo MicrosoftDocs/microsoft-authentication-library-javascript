@@ -1,11 +1,11 @@
 ---
 title: Token caching in MSAL Node
 description: Learn how to effectively cache tokens in MSAL Node, and use client secrets securely,
-author: EmLauber
+author: Dickson-Mwendia
 manager: CelesteDG
-ms.author: emilylauber
+ms.author: dmwendia
 
-ms.date: 11/28/2023
+ms.date: 05/21/2025
 ms.service: msal
 ms.subservice: msal-node
 ms.topic: conceptual

@@ -1,15 +1,15 @@
 ---
 title: Custom Signed HTTP Request Claims
 description: Learn how to use Signed HTTP Request claims
-author: EmLauber
+author: Dickson-Mwendia
 manager: CelesteDG
 
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: conceptual
-ms.date: 01/10/2024
-ms.author: emilylauber
-ms.reviewer: dmwendia, cwerner, owenrichards, kengaderdus
+ms.date: 05/21/2025
+ms.author: dmwendia
+ms.reviewer: cwerner, owenrichards, kengaderdus
 ---
 
 # Custom SHR Claims

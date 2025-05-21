@@ -1,15 +1,15 @@
 ---
 title: Authentication configuration options
 description: Learn about configuration options that can be used to customize the behavior of your authentication flows
-author: EmLauber
+author: Dickson-Mwendia
 manager: CelesteDG
 
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: conceptual
-ms.date: 01/10/2024
-ms.author: emilylauber
-ms.reviewer: dmwendia, cwerner, owenrichards, kengaderdus
+ms.date: 05/21/2025
+ms.author: dmwendia
+ms.reviewer: cwerner, owenrichards, kengaderdus
 ---
 
 # Authentication configuration options
