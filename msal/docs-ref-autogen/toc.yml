@@ -81,6 +81,9 @@
     - uid: '@azure/msal-browser.AzureCloudOptions'
       name: AzureCloudOptions
       items: []
+    - uid: '@azure/msal-browser.BrokerConnectionEvent'
+      name: BrokerConnectionEvent
+      items: []
     - uid: '@azure/msal-browser.BrowserAuthError'
       name: BrowserAuthError
       items: []
@@ -492,6 +495,9 @@
       items: []
     - uid: '@azure/msal-common.DeviceCodeResponse'
       name: DeviceCodeResponse
+      items: []
+    - uid: '@azure/msal-common.EncodingTypes'
+      name: EncodingTypes
       items: []
     - uid: '@azure/msal-common.ExternalTokenResponse'
       name: ExternalTokenResponse

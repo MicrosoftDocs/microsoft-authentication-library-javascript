@@ -81,6 +81,7 @@ typeAliases:
   - '@azure/msal-common.CredentialFilter'
   - '@azure/msal-common.CredentialType'
   - '@azure/msal-common.DeviceCodeResponse'
+  - '@azure/msal-common.EncodingTypes'
   - '@azure/msal-common.ExternalTokenResponse'
   - '@azure/msal-common.GrantType'
   - '@azure/msal-common.HeaderNames'

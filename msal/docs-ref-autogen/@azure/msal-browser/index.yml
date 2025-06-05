@@ -48,6 +48,7 @@ typeAliases:
   - '@azure/msal-browser.AuthorizationUrlRequest'
   - '@azure/msal-browser.AzureCloudInstance'
   - '@azure/msal-browser.AzureCloudOptions'
+  - '@azure/msal-browser.BrokerConnectionEvent'
   - '@azure/msal-browser.BrowserAuthOptions'
   - '@azure/msal-browser.BrowserCacheLocation'
   - '@azure/msal-browser.BrowserSystemOptions'
@@ -132,3 +133,27 @@ functions:
         type: >-
           Promise&lt;<xref uid="@azure/msal-browser.IPublicClientApplication"
           />&gt;
+  - name: isPlatformBrokerAvailable(LoggerOptions, IPerformanceClient, string)
+    uid: '@azure/msal-browser.isPlatformBrokerAvailable'
+    package: '@azure/msal-browser'
+    summary: Checks if the platform broker is available in the current environment.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function isPlatformBrokerAvailable(loggerOptions?: LoggerOptions,
+        perfClient?: IPerformanceClient, correlationId?: string):
+        Promise<boolean>
+      parameters:
+        - id: loggerOptions
+          type: <xref uid="@azure/msal-common.LoggerOptions" />
+          description: ''
+        - id: perfClient
+          type: <xref uid="@azure/msal-browser.IPerformanceClient" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;boolean&gt;

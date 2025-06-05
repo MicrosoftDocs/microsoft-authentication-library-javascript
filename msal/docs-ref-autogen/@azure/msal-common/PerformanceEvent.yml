@@ -73,6 +73,7 @@ syntax: |
     multiMatchedRT?: number
     name: string
     nestedAppAuthRequest?: boolean
+    previousLibraryVersion?: string
     prompt?: string
     queuedCount?: number
     queuedManuallyCompletedCount?: number

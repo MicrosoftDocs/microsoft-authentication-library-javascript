@@ -16,4 +16,5 @@ syntax: |
     | EndSessionRequest
     | AuthenticationResult
     | PopupEvent
+    | BrokerConnectionEvent
     | null
