@@ -4,7 +4,7 @@ description: Learn how to handle errors and exceptions, Conditional Access claim
 author: Dickson-Mwendia
 manager: CelesteDG
 ms.author: dmwendia
-ms.date: 11/26/2023
+ms.date: 05/21/2025
 ms.reviewer: saeeda, hahamil
 ms.service: msal
 ms.subservice: msal-js
