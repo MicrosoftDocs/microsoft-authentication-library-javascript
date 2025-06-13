@@ -14,7 +14,6 @@ ms.custom: sfi-image-nochange
 
 The Microsoft Authentication Library for JavaScript enables both client-side and server-side JavaScript applications to authenticate users using [Microsoft Entra ID](/../../azure/active-directory/develop/v2-overview) for work and school accounts, Microsoft personal accounts (MSA), and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through [Azure AD B2C](/../../azure/active-directory-b2c/active-directory-b2c-overview#identity-providers) service. It also enables your app to get tokens to access [Microsoft Cloud](https://www.microsoft.com/enterprise) services such as [Microsoft Graph](https://graph.microsoft.io).
 
-
 ## Core and wrapper libraries
 
 The [`lib`](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib) folder contains the source code for our libraries in active development. You will also find all the details about **installing the libraries** in their respective README.md files.
@@ -35,7 +34,7 @@ The [`lib`](https://github.com/AzureAD/microsoft-authentication-library-for-js/t
 
 - [Microsoft Authentication Library for Angular](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/msal-angular-v1/lib/msal-angular): A wrapper of the core 1.x library for apps using Angular framework.
 
-- **[Native authentication](https://learn.microsoft.com/en-us/entra/identity-platform/concept-native-authentication) support in MSAL**: MSAL JS provides native authentication APIs that allow applications to implement a native experience with end-to-end customizable flows in their web applications. With native authentication, user can fully customize the user interface, including design elements, logo placement, and layout, ensuring a consistent and branded look.
+- **[Native authentication](/entra/identity-platform/concept-native-authentication) support in MSAL**: MSAL JS provides native authentication APIs that allow applications to implement a native experience with end-to-end customizable flows in their web applications. With native authentication, user can fully customize the user interface, including design elements, logo placement, and layout, ensuring a consistent and branded look.
 
 ## Package structure
 
