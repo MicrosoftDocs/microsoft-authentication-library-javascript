@@ -133,10 +133,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeTokenBindingKey(): Promise<boolean>'
+      content: 'function removeTokenBindingKey(): Promise<void>'
       return:
         description: ''
-        type: Promise&lt;boolean&gt;
+        type: Promise&lt;void&gt;
   - name: signJwt()
     uid: '@azure/msal-node.CryptoProvider.signJwt'
     package: '@azure/msal-node'

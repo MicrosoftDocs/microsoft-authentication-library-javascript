@@ -129,14 +129,14 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeTokenBindingKey(kid: string): Promise<boolean>'
+      content: 'function removeTokenBindingKey(kid: string): Promise<void>'
       parameters:
         - id: kid
           type: string
           description: ''
       return:
         description: ''
-        type: Promise&lt;boolean&gt;
+        type: Promise&lt;void&gt;
   - name: signJwt(SignedHttpRequest, string, ShrOptions, string)
     uid: '@azure/msal-common.ICrypto.signJwt'
     package: '@azure/msal-common'

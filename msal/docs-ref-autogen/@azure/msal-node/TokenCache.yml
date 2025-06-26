@@ -155,18 +155,23 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: removeAccount(AccountInfo)
+  - name: removeAccount(AccountInfo, string)
     uid: '@azure/msal-node.TokenCache.removeAccount'
     package: '@azure/msal-node'
     summary: API to remove a specific account and the relevant data from cache
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeAccount(account: AccountInfo): Promise<void>'
+      content: >-
+        function removeAccount(account: AccountInfo, correlationId?: string):
+        Promise<void>
       parameters:
         - id: account
           type: <xref uid="@azure/msal-node.AccountInfo" />
           description: AccountInfo passed by the user
+        - id: correlationId
+          type: string
+          description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
