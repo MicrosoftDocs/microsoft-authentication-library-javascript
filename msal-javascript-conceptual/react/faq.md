@@ -1,15 +1,15 @@
 ---
 title: MSAL React frequently asked questions
 description: Frequently asked questions on MSAL React
-author: EmLauber
+author: Dickson-Mwendia
 manager: CelesteDG
 
 ms.service: msal
 ms.subservice: msal-react
 ms.topic: faq
-ms.date: 11/29/2023
-ms.author: emilylauber
-ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
+ms.date: 05/21/2025
+ms.author: dmwendia
+ms.reviewer: cwerner, owenrichards, kengaderdus
 ---
 
 # MSAL React FAQ

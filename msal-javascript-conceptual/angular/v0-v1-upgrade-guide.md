@@ -7,9 +7,9 @@ manager: CelesteDG
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: conceptual
-ms.date: 11/29/2023
-ms.author: emilylauber
-ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
+ms.date: 05/21/2025
+ms.author: dmwendia
+ms.reviewer: cwerner, owenrichards, kengaderdus
 ---
 
 # Migrating from MSAL Angular v0 to v1
