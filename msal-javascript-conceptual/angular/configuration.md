@@ -6,7 +6,7 @@ manager: CelesteDG
 
 ms.service: msal
 ms.subservice: msal-angular
-ms.topic: conceptual
+ms.topic: article
 ms.date: 01/10/2024
 ms.author: emilylauber
 ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus

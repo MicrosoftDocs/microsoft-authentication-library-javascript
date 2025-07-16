@@ -9,7 +9,7 @@ ms.date: 12/01/2021
 ms.reviewer: saeeda
 ms.service: msal
 ms.subservice: msal-js
-ms.topic: conceptual
+ms.topic: troubleshooting-known-issue
 #Customer intent: As an application developer, I want to learn about issues with MSAL.js library so I can decide if this platform meets my application development needs and requirements.
 ---
 
