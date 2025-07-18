@@ -7,7 +7,7 @@ manager: CelesteDG
 ms.author: emilylauber
 ms.service: msal
 ms.subservice: msal-js
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 11/30/2023
 ms.reviewer: dmwendia, cwerner, owenrichards, kengaderdus
 #Customer intent: As an application developer, I want to learn how MSAL.js can be used with Azure AD B2C for authentication and authorization in my organization's web apps and web APIs that my customers log in to and use.

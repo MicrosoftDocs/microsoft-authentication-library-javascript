@@ -8,7 +8,7 @@ ms.author: emilylauber
 ms.date: 11/28/2023
 ms.service: msal
 ms.subservice: msal-node
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
 #Customer intent: 
 ---
