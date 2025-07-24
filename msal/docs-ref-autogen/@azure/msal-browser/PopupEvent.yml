@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: PopupEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type PopupEvent = { popupWindow: Window }

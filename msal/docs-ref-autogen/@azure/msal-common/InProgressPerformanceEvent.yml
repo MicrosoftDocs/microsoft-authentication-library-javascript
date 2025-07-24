@@ -5,16 +5,16 @@ package: '@azure/msal-common'
 summary: ''
 fullName: InProgressPerformanceEvent
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type InProgressPerformanceEvent = {
-    addStaticFields: (staticFields: StaticFields) => void,
-    discardMeasurement: () => void,
-    endMeasurement: (
-      event?: Partial<PerformanceEvent>
-    ) => PerformanceEvent | null,
-    event: PerformanceEvent,
-    flushMeasurement: () => void,
-    measurement: IPerformanceMeasurement,
+    add: (fields: { [key: string]: {} | undefined }) => void
+    discard: () => void
+    end: (
+      event?: Partial<PerformanceEvent>,
+      error?: unknown
+    ) => PerformanceEvent | null
+    event: PerformanceEvent
+    increment: (fields: { [key: string]: number | undefined }) => void
+    measurement: IPerformanceMeasurement
   }

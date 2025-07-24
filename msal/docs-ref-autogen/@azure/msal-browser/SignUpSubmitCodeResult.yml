@@ -1,0 +1,126 @@
+### YamlMime:TSType
+name: SignUpSubmitCodeResult
+uid: '@azure/msal-browser.SignUpSubmitCodeResult'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignUpSubmitCodeResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignUpSubmitCodeResult(SignUpSubmitCodeResultState)
+    uid: '@azure/msal-browser.SignUpSubmitCodeResult.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignUpSubmitCodeResult.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SignUpSubmitCodeResult(state: SignUpSubmitCodeResultState)'
+      parameters:
+        - id: state
+          type: <xref uid="@azure/msal-browser.SignUpSubmitCodeResultState" />
+          description: The state of the result.
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.SignUpSubmitCodeResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: void'
+      return:
+        description: ''
+        type: void
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.SignUpSubmitCodeResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: SignUpSubmitCodeError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignUpSubmitCodeError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.SignUpSubmitCodeResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: SignUpSubmitCodeResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignUpSubmitCodeResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.SignUpSubmitCodeResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignUpSubmitCodeResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createWithError(error: unknown): SignUpSubmitCodeResult'
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+      return:
+        description: A new instance of SignUpSubmitCodeResult with the error set.
+        type: <xref uid="@azure/msal-browser.SignUpSubmitCodeResult" />
+  - name: isAttributesRequired()
+    uid: '@azure/msal-browser.SignUpSubmitCodeResult.isAttributesRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in an attributes required state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isAttributesRequired(): this'
+      return:
+        description: ''
+        type: this
+  - name: isCompleted()
+    uid: '@azure/msal-browser.SignUpSubmitCodeResult.isCompleted'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a completed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCompleted(): this'
+      return:
+        description: ''
+        type: this
+  - name: isFailed()
+    uid: '@azure/msal-browser.SignUpSubmitCodeResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a failed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): this'
+      return:
+        description: ''
+        type: this
+  - name: isPasswordRequired()
+    uid: '@azure/msal-browser.SignUpSubmitCodeResult.isPasswordRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a password required state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isPasswordRequired(): this'
+      return:
+        description: ''
+        type: this
+extends: >-
+  AuthFlowResultBase&lt;<xref
+  uid="@azure/msal-browser.SignUpSubmitCodeResultState" />, <xref
+  uid="@azure/msal-browser.SignUpSubmitCodeError" />, void&gt;

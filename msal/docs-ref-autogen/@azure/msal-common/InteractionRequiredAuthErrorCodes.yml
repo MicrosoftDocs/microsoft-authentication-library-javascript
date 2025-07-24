@@ -1,0 +1,6 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.InteractionRequiredAuthErrorCodes'
+name: InteractionRequiredAuthErrorCodes
+type: module
+package: '@azure/msal-common'
+summary: ''

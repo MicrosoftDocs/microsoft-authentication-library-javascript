@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: AccountRetrievalInputs
+uid: '@azure/msal-browser.AccountRetrievalInputs'
+package: '@azure/msal-browser'
+summary: ''
+fullName: AccountRetrievalInputs
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AccountRetrievalInputs = CustomAuthActionInputs

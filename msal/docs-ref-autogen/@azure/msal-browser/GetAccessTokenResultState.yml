@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: GetAccessTokenResultState
+uid: '@azure/msal-browser.GetAccessTokenResultState'
+package: '@azure/msal-browser'
+summary: |-
+  The possible states for the GetAccessTokenResult.
+  This includes:
+  - GetAccessTokenCompletedState: The access token was successfully retrieved.
+  - GetAccessTokenFailedState: The access token retrieval failed.
+fullName: GetAccessTokenResultState
+remarks: ''
+isDeprecated: false
+syntax: |
+  type GetAccessTokenResultState =
+    | GetAccessTokenCompletedState
+    | GetAccessTokenFailedState

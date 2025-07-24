@@ -2,9 +2,8 @@
 name: ILoggerCallback
 uid: '@azure/msal-common.ILoggerCallback'
 package: '@azure/msal-common'
-summary: Callback to send the messages to.
+summary: ''
 fullName: ILoggerCallback
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface

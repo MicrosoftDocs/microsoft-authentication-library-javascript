@@ -2,7 +2,7 @@
 name: ServerAuthorizationTokenResponse
 uid: '@azure/msal-common.ServerAuthorizationTokenResponse'
 package: '@azure/msal-common'
-summary: >
+summary: >-
   Deserialized response object from server authorization code request.
 
   - token_type: Indicates the token type value. Can be either Bearer or pop.
@@ -29,6 +29,7 @@ summary: >
   - key_id: A string that uniquely identifies a public key that the request is
   bound to.
 
+
   In case of error:
 
   - error: An error code string that can be used to classify types of errors
@@ -46,29 +47,34 @@ summary: >
 
   - correlation_id: A unique identifier for the request that can help in
   diagnostics across components.
+
+  - status: the network request's response status
 fullName: ServerAuthorizationTokenResponse
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type ServerAuthorizationTokenResponse = {
-    access_token?: string,
-    client_info?: string,
-    correlation_id?: string,
-    error?: string,
-    error_codes?: Array<string>,
-    error_description?: string,
-    expires_in?: number,
-    ext_expires_in?: number,
-    foci?: string,
-    id_token?: string,
-    key_id?: string,
-    refresh_in?: number,
-    refresh_token?: string,
-    scope?: string,
-    spa_code?: string,
-    suberror?: string,
-    timestamp?: string,
-    token_type?: AuthenticationScheme,
-    trace_id?: string,
+    access_token?: string
+    claims?: string
+    client_info?: string
+    correlation_id?: string
+    error?: string
+    error_codes?: string[]
+    error_description?: string
+    expires_in?: number
+    ext_expires_in?: number
+    foci?: string
+    id_token?: string
+    key_id?: string
+    refresh_in?: number
+    refresh_token?: string
+    refresh_token_expires_in?: number
+    scope?: string
+    spa_accountid?: string
+    spa_code?: string
+    status?: number
+    suberror?: string
+    timestamp?: string
+    token_type?: AuthenticationScheme
+    trace_id?: string
   }

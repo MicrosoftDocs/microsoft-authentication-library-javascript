@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: NativeSignOutRequest
+uid: '@azure/msal-common.NativeSignOutRequest'
+package: '@azure/msal-common'
+summary: ''
+fullName: NativeSignOutRequest
+remarks: ''
+isDeprecated: false
+syntax: |
+  type NativeSignOutRequest = {
+    accountId: string
+    clientId: string
+    correlationId: string
+  }

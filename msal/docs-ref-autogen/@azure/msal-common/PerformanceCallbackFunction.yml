@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: PerformanceCallbackFunction
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type PerformanceCallbackFunction = (events: PerformanceEvent[]) => void

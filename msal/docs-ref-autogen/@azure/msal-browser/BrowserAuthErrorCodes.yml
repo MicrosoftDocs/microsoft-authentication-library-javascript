@@ -1,0 +1,6 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-browser.BrowserAuthErrorCodes'
+name: BrowserAuthErrorCodes
+type: module
+package: '@azure/msal-browser'
+summary: ''

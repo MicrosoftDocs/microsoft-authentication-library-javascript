@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Client info object which consists of two IDs. Need to add more info here.
 fullName: ClientInfo
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
-  type ClientInfo = { uid: string, utid: string }
+  type ClientInfo = { uid: string; utid: string }

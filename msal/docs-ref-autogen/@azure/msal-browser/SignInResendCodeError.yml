@@ -1,0 +1,64 @@
+### YamlMime:TSType
+name: SignInResendCodeError
+uid: '@azure/msal-browser.SignInResendCodeError'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignInResendCodeError
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignInResendCodeError(CustomAuthError)
+    uid: '@azure/msal-browser.SignInResendCodeError.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SignInResendCodeError(errorData: CustomAuthError)'
+      parameters:
+        - id: errorData
+          type: <xref uid="@azure/msal-browser.CustomAuthError" />
+          description: ''
+inheritedProperties:
+  - name: errorData
+    uid: '@azure/msal-browser.SignInResendCodeError.errorData'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: errorData
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorData: CustomAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthError" />
+    inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.errorData
+inheritedMethods:
+  - name: isTokenExpired()
+    uid: '@azure/msal-browser.SignInResendCodeError.isTokenExpired'
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to the expired continuation token.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isTokenExpired(): boolean'
+      return:
+        description: >-
+          True if the error is due to the expired continuation token, false
+          otherwise.
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.isTokenExpired
+methods:
+  - name: isRedirectRequired()
+    uid: '@azure/msal-browser.SignInResendCodeError.isRedirectRequired'
+    package: '@azure/msal-browser'
+    summary: Check if client app supports the challenge type configured in Entra.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isRedirectRequired(): boolean'
+      return:
+        description: True if "loginPopup" function is required to continue sthe operation.
+        type: boolean
+extends: AuthActionErrorBase

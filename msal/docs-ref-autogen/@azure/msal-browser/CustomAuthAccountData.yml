@@ -1,0 +1,119 @@
+### YamlMime:TSType
+name: CustomAuthAccountData
+uid: '@azure/msal-browser.CustomAuthAccountData'
+package: '@azure/msal-browser'
+summary: ''
+fullName: CustomAuthAccountData
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      CustomAuthAccountData(AccountInfo, CustomAuthBrowserConfiguration,
+      CustomAuthSilentCacheClient, Logger, string)
+    uid: '@azure/msal-browser.CustomAuthAccountData.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new CustomAuthAccountData(account: AccountInfo, config:
+        CustomAuthBrowserConfiguration, cacheClient:
+        CustomAuthSilentCacheClient, logger: Logger, correlationId: string)
+      parameters:
+        - id: account
+          type: <xref uid="@azure/msal-browser.AccountInfo" />
+          description: ''
+        - id: config
+          type: CustomAuthBrowserConfiguration
+          description: ''
+        - id: cacheClient
+          type: CustomAuthSilentCacheClient
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-browser.Logger" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+methods:
+  - name: getAccessToken(AccessTokenRetrievalInputs)
+    uid: '@azure/msal-browser.CustomAuthAccountData.getAccessToken'
+    package: '@azure/msal-browser'
+    summary: >-
+      Gets the access token of current account from browser cache if it is not
+      expired,
+
+      otherwise renew the token using cached refresh token if valid.
+
+      If no refresh token is found or it is expired, then throws error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccessToken(accessTokenRetrievalInputs:
+        AccessTokenRetrievalInputs): Promise<GetAccessTokenResult>
+      parameters:
+        - id: accessTokenRetrievalInputs
+          type: <xref uid="@azure/msal-browser.AccessTokenRetrievalInputs" />
+          description: The inputs for retrieving the access token.
+      return:
+        description: The result of the operation.
+        type: Promise&lt;<xref uid="@azure/msal-browser.GetAccessTokenResult" />&gt;
+  - name: getAccount()
+    uid: '@azure/msal-browser.CustomAuthAccountData.getAccount'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAccount(): AccountInfo'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.AccountInfo" />
+  - name: getClaims()
+    uid: '@azure/msal-browser.CustomAuthAccountData.getClaims'
+    package: '@azure/msal-browser'
+    summary: Gets the id token claims extracted from raw IdToken of current account.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getClaims(): undefined | AuthTokenClaims'
+      return:
+        description: The token claims.
+        type: undefined | AuthTokenClaims
+  - name: getIdToken()
+    uid: '@azure/msal-browser.CustomAuthAccountData.getIdToken'
+    package: '@azure/msal-browser'
+    summary: >-
+      Gets the raw id-token of current account.
+
+      Idtoken is only issued if openid scope is present in the scopes parameter
+      when requesting for tokens,
+
+      otherwise will return undefined from the response.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getIdToken(): undefined | string'
+      return:
+        description: The account id-token.
+        type: undefined | string
+  - name: signOut()
+    uid: '@azure/msal-browser.CustomAuthAccountData.signOut'
+    package: '@azure/msal-browser'
+    summary: >-
+      This method triggers a sign-out operation,
+
+      which removes the current account info and its tokens from browser cache.
+
+      If sign-out successfully, redirect the page to postLogoutRedirectUri if
+      provided in the configuration.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function signOut(): Promise<SignOutResult>'
+      return:
+        description: The result of the SignOut operation.
+        type: Promise&lt;<xref uid="@azure/msal-browser.SignOutResult" />&gt;

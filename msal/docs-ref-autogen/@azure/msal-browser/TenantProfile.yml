@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: TenantProfile
+uid: '@azure/msal-browser.TenantProfile'
+package: '@azure/msal-browser'
+summary: Account details that vary across tenants for the same user
+fullName: TenantProfile
+remarks: ''
+isDeprecated: false
+syntax: |
+  type TenantProfile = Pick<
+    AccountInfo,
+    "tenantId" | "localAccountId" | "name"
+  > & { isHomeTenant?: boolean }

@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: SignInInputs
+uid: '@azure/msal-browser.SignInInputs'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignInInputs
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignInInputs = CustomAuthActionInputs & {
+    password?: string
+    scopes?: string[]
+    username: string
+  }

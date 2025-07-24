@@ -1,0 +1,48 @@
+### YamlMime:TSType
+name: SignUpCompletedState
+uid: '@azure/msal-browser.SignUpCompletedState'
+package: '@azure/msal-browser'
+summary: >-
+  Represents the state of a sign-up operation that has been completed
+  scuccessfully.
+fullName: SignUpCompletedState
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignUpCompletedState(SignInContinuationStateParameters)
+    uid: '@azure/msal-browser.SignUpCompletedState.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SignUpCompletedState(stateParameters:
+        SignInContinuationStateParameters)
+      parameters:
+        - id: stateParameters
+          type: SignInContinuationStateParameters
+          description: ''
+inheritedMethods:
+  - name: signIn(SignInWithContinuationTokenInputs)
+    uid: '@azure/msal-browser.SignUpCompletedState.signIn'
+    package: '@azure/msal-browser'
+    summary: Initiates the sign-in flow with continuation token.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function signIn(signInWithContinuationTokenInputs?:
+        SignInWithContinuationTokenInputs): Promise<SignInResult>
+      parameters:
+        - id: signInWithContinuationTokenInputs
+          type: <xref uid="@azure/msal-browser.SignInWithContinuationTokenInputs" />
+          description: The result of the operation.
+      return:
+        description: The result of the operation.
+        type: Promise&lt;<xref uid="@azure/msal-browser.SignInResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [SignInContinuationState.signIn](xref:@azure/msal-browser.SignInContinuationState.signIn)
+extends: <xref uid="@azure/msal-browser.SignInContinuationState" />

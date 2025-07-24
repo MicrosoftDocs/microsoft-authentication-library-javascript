@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: CustomAuthConfiguration
+uid: '@azure/msal-browser.CustomAuthConfiguration'
+package: '@azure/msal-browser'
+summary: ''
+fullName: CustomAuthConfiguration
+remarks: ''
+isDeprecated: false
+syntax: >
+  type CustomAuthConfiguration = Configuration & { customAuth: CustomAuthOptions
+  }

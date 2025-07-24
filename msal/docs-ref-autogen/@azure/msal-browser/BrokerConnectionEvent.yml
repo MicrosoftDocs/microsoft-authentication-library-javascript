@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: BrokerConnectionEvent
+uid: '@azure/msal-browser.BrokerConnectionEvent'
+package: '@azure/msal-browser'
+summary: Payload for the BrokerConnectionEstablished event
+fullName: BrokerConnectionEvent
+remarks: ''
+isDeprecated: false
+syntax: |
+  type BrokerConnectionEvent = { pairwiseBrokerOrigin: string }

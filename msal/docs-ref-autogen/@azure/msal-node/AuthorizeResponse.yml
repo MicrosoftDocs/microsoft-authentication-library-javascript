@@ -1,0 +1,28 @@
+### YamlMime:TSTypeAlias
+name: AuthorizeResponse
+uid: '@azure/msal-node.AuthorizeResponse'
+package: '@azure/msal-node'
+summary: Response properties that may be returned by the /authorize endpoint
+fullName: AuthorizeResponse
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AuthorizeResponse = {
+    accountId?: string
+    claims?: string
+    client_info?: string
+    cloud_graph_host_name?: string
+    cloud_instance_host_name?: string
+    cloud_instance_name?: string
+    code?: string
+    correlation_id?: string
+    ear_jwe?: string
+    error?: string
+    error_description?: string
+    error_uri?: string
+    msgraph_host?: string
+    state?: string
+    suberror?: string
+    timestamp?: string
+    trace_id?: string
+  }

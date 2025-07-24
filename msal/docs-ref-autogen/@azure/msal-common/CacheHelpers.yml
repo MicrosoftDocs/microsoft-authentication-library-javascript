@@ -1,0 +1,394 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.CacheHelpers'
+name: CacheHelpers
+type: module
+package: '@azure/msal-common'
+summary: ''
+functions:
+  - name: >-
+      createAccessTokenEntity(string, string, string, string, string, string,
+      number, number, (input: string) => string, number, AuthenticationScheme,
+      string, string, string, string)
+    uid: '@azure/msal-common.CacheHelpers.createAccessTokenEntity'
+    package: '@azure/msal-common'
+    summary: Create AccessTokenEntity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAccessTokenEntity(homeAccountId: string, environment:
+        string, accessToken: string, clientId: string, tenantId: string, scopes:
+        string, expiresOn: number, extExpiresOn: number, base64Decode: (input:
+        string) => string, refreshOn?: number, tokenType?: AuthenticationScheme,
+        userAssertionHash?: string, keyId?: string, requestedClaims?: string,
+        requestedClaimsHash?: string): AccessTokenEntity
+      parameters:
+        - id: homeAccountId
+          type: string
+          description: ''
+        - id: environment
+          type: string
+          description: ''
+        - id: accessToken
+          type: string
+          description: ''
+        - id: clientId
+          type: string
+          description: ''
+        - id: tenantId
+          type: string
+          description: ''
+        - id: scopes
+          type: string
+          description: ''
+        - id: expiresOn
+          type: number
+          description: ''
+        - id: extExpiresOn
+          type: number
+          description: ''
+        - id: base64Decode
+          type: '(input: string) =&gt; string'
+          description: ''
+        - id: refreshOn
+          type: number
+          description: ''
+        - id: tokenType
+          type: AuthenticationScheme
+          description: ''
+        - id: userAssertionHash
+          type: string
+          description: ''
+        - id: keyId
+          type: string
+          description: ''
+        - id: requestedClaims
+          type: string
+          description: ''
+        - id: requestedClaimsHash
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AccessTokenEntity" />
+  - name: createIdTokenEntity(string, string, string, string, string)
+    uid: '@azure/msal-common.CacheHelpers.createIdTokenEntity'
+    package: '@azure/msal-common'
+    summary: Create IdTokenEntity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createIdTokenEntity(homeAccountId: string, environment: string,
+        idToken: string, clientId: string, tenantId: string): IdTokenEntity
+      parameters:
+        - id: homeAccountId
+          type: string
+          description: ''
+        - id: environment
+          type: string
+          description: ''
+        - id: idToken
+          type: string
+          description: ''
+        - id: clientId
+          type: string
+          description: ''
+        - id: tenantId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.IdTokenEntity" />
+  - name: >-
+      createRefreshTokenEntity(string, string, string, string, string, string,
+      number)
+    uid: '@azure/msal-common.CacheHelpers.createRefreshTokenEntity'
+    package: '@azure/msal-common'
+    summary: Create RefreshTokenEntity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createRefreshTokenEntity(homeAccountId: string, environment:
+        string, refreshToken: string, clientId: string, familyId?: string,
+        userAssertionHash?: string, expiresOn?: number): RefreshTokenEntity
+      parameters:
+        - id: homeAccountId
+          type: string
+          description: ''
+        - id: environment
+          type: string
+          description: ''
+        - id: refreshToken
+          type: string
+          description: ''
+        - id: clientId
+          type: string
+          description: ''
+        - id: familyId
+          type: string
+          description: ''
+        - id: userAssertionHash
+          type: string
+          description: ''
+        - id: expiresOn
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.RefreshTokenEntity" />
+  - name: generateAppMetadataKey(AppMetadataEntity)
+    uid: '@azure/msal-common.CacheHelpers.generateAppMetadataKey'
+    package: '@azure/msal-common'
+    summary: >-
+      Generate AppMetadata Cache Key as per the schema:
+      appmetadata-<environment>-<client_id>
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateAppMetadataKey(__namedParameters: AppMetadataEntity):
+        string
+      parameters:
+        - id: __namedParameters
+          type: <xref uid="@azure/msal-common.AppMetadataEntity" />
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: generateAuthorityMetadataExpiresAt()
+    uid: '@azure/msal-common.CacheHelpers.generateAuthorityMetadataExpiresAt'
+    package: '@azure/msal-common'
+    summary: Reset the exiresAt value
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function generateAuthorityMetadataExpiresAt(): number'
+      return:
+        description: ''
+        type: number
+  - name: generateCredentialKey(CredentialEntity)
+    uid: '@azure/msal-common.CacheHelpers.generateCredentialKey'
+    package: '@azure/msal-common'
+    summary: >-
+      Cache Key: <home_account_id>-<environment>-<credential_type>-<client_id or
+      familyId>-<realm>-<scopes>-<claims hash>-<scheme>
+
+      IdToken Example:
+      uid.utid-login.microsoftonline.com-idtoken-app_client_id-contoso.com
+
+      AccessToken Example:
+      uid.utid-login.microsoftonline.com-accesstoken-app_client_id-contoso.com-scope1
+      scope2--pop
+
+      RefreshToken Example:
+      uid.utid-login.microsoftonline.com-refreshtoken-1-contoso.com
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateCredentialKey(credentialEntity: CredentialEntity):
+        string
+      parameters:
+        - id: credentialEntity
+          type: <xref uid="@azure/msal-common.CredentialEntity" />
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: isAccessTokenEntity(object)
+    uid: '@azure/msal-common.CacheHelpers.isAccessTokenEntity'
+    package: '@azure/msal-common'
+    summary: 'Validates an entity: checks for all expected params'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isAccessTokenEntity(entity: object): boolean'
+      parameters:
+        - id: entity
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: isAppMetadataEntity(string, object)
+    uid: '@azure/msal-common.CacheHelpers.isAppMetadataEntity'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isAppMetadataEntity(key: string, entity: object): boolean'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: entity
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: isAuthorityMetadataEntity(string, object)
+    uid: '@azure/msal-common.CacheHelpers.isAuthorityMetadataEntity'
+    package: '@azure/msal-common'
+    summary: 'Validates an entity: checks for all expected params'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isAuthorityMetadataEntity(key: string, entity: object): boolean'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: entity
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: isAuthorityMetadataExpired(AuthorityMetadataEntity)
+    uid: '@azure/msal-common.CacheHelpers.isAuthorityMetadataExpired'
+    package: '@azure/msal-common'
+    summary: Returns whether or not the data needs to be refreshed
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function isAuthorityMetadataExpired(metadata: AuthorityMetadataEntity):
+        boolean
+      parameters:
+        - id: metadata
+          type: AuthorityMetadataEntity
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: isCredentialEntity(object)
+    uid: '@azure/msal-common.CacheHelpers.isCredentialEntity'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCredentialEntity(entity: object): boolean'
+      parameters:
+        - id: entity
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: isIdTokenEntity(object)
+    uid: '@azure/msal-common.CacheHelpers.isIdTokenEntity'
+    package: '@azure/msal-common'
+    summary: 'Validates an entity: checks for all expected params'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isIdTokenEntity(entity: object): boolean'
+      parameters:
+        - id: entity
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: isRefreshTokenEntity(object)
+    uid: '@azure/msal-common.CacheHelpers.isRefreshTokenEntity'
+    package: '@azure/msal-common'
+    summary: 'Validates an entity: checks for all expected params'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isRefreshTokenEntity(entity: object): boolean'
+      parameters:
+        - id: entity
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: isServerTelemetryEntity(string, object)
+    uid: '@azure/msal-common.CacheHelpers.isServerTelemetryEntity'
+    package: '@azure/msal-common'
+    summary: validates if a given cache entry is "Telemetry", parses <key,value>
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isServerTelemetryEntity(key: string, entity?: object): boolean'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: entity
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: isThrottlingEntity(string, object)
+    uid: '@azure/msal-common.CacheHelpers.isThrottlingEntity'
+    package: '@azure/msal-common'
+    summary: validates if a given cache entry is "Throttling", parses <key,value>
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isThrottlingEntity(key: string, entity?: object): boolean'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: entity
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: >-
+      updateAuthorityEndpointMetadata(AuthorityMetadataEntity,
+      OpenIdConfigResponse, boolean)
+    uid: '@azure/msal-common.CacheHelpers.updateAuthorityEndpointMetadata'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateAuthorityEndpointMetadata(authorityMetadata:
+        AuthorityMetadataEntity, updatedValues: OpenIdConfigResponse,
+        fromNetwork: boolean)
+      parameters:
+        - id: authorityMetadata
+          type: AuthorityMetadataEntity
+          description: ''
+        - id: updatedValues
+          type: OpenIdConfigResponse
+          description: ''
+        - id: fromNetwork
+          type: boolean
+          description: ''
+  - name: >-
+      updateCloudDiscoveryMetadata(AuthorityMetadataEntity,
+      CloudDiscoveryMetadata, boolean)
+    uid: '@azure/msal-common.CacheHelpers.updateCloudDiscoveryMetadata'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateCloudDiscoveryMetadata(authorityMetadata:
+        AuthorityMetadataEntity, updatedValues: CloudDiscoveryMetadata,
+        fromNetwork: boolean)
+      parameters:
+        - id: authorityMetadata
+          type: AuthorityMetadataEntity
+          description: ''
+        - id: updatedValues
+          type: CloudDiscoveryMetadata
+          description: ''
+        - id: fromNetwork
+          type: boolean
+          description: ''

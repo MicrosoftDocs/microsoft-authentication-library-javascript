@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: SignInWithContinuationTokenInputs
+uid: '@azure/msal-browser.SignInWithContinuationTokenInputs'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignInWithContinuationTokenInputs
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignInWithContinuationTokenInputs = { scopes?: string[] }

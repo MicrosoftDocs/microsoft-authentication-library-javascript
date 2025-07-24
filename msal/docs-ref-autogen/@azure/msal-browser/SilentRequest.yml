@@ -2,13 +2,14 @@
 name: SilentRequest
 uid: '@azure/msal-browser.SilentRequest'
 package: '@azure/msal-browser'
-summary: >
+summary: >-
   SilentRequest: Request object passed by user to retrieve tokens from the
 
   cache, renew an expired token with a refresh token, or retrieve a code (first
   leg of authorization code grant flow)
 
   in a hidden iframe.
+
 
   - scopes                 - Array of scopes the application is requesting
   access to.
@@ -27,6 +28,9 @@ summary: >
   - extraQueryParameters   - String to string map of custom query parameters
   added to the /authorize call. Only used when renewing the refresh token.
 
+  - tokenBodyParameters    - String to string map of custom token request body
+  parameters added to the /token call. Only used when renewing access tokens.
+
   - tokenQueryParameters   - String to string map of custom query parameters
   added to the /token call. Only used when renewing access tokens.
 
@@ -44,7 +48,6 @@ summary: >
            no_session: will not read existing session token when authenticating the user. Upon user being successfully authenticated, EVO won’t create a new session for the user. FOR INTERNAL USE ONLY.
 fullName: SilentRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type SilentRequest = Omit<
@@ -55,12 +58,13 @@ syntax: |
     | "account"
     | "requestedClaimsHash"
   > & {
-    account?: AccountInfo,
-    authority?: string,
-    cacheLookupPolicy?: CacheLookupPolicy,
-    correlationId?: string,
-    extraQueryParameters?: StringDict,
-    forceRefresh?: boolean,
-    prompt?: string,
-    redirectUri?: string,
+    account?: AccountInfo
+    authority?: string
+    cacheLookupPolicy?: CacheLookupPolicy
+    correlationId?: string
+    extraQueryParameters?: StringDict
+    forceRefresh?: boolean
+    prompt?: string
+    redirectUri?: string
+    state?: string
   }

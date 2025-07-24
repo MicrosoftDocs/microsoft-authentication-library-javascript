@@ -5,18 +5,19 @@ package: '@azure/msal-common'
 summary: Type representing a unique request thumbprint.
 fullName: RequestThumbprint
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type RequestThumbprint = {
-    authenticationScheme?: AuthenticationScheme,
-    authority: string,
-    claims?: string,
-    clientId: string,
-    homeAccountIdentifier?: string,
-    resourceRequestMethod?: string,
-    resourceRequestUri?: string,
-    scopes: Array<string>,
-    shrClaims?: string,
-    sshKid?: string,
+    authenticationScheme?: AuthenticationScheme
+    authority: string
+    claims?: string
+    clientId: string
+    embeddedClientId?: string
+    homeAccountIdentifier?: string
+    resourceRequestMethod?: string
+    resourceRequestUri?: string
+    scopes: string[]
+    shrClaims?: string
+    shrOptions?: ShrOptions
+    sshKid?: string
   }

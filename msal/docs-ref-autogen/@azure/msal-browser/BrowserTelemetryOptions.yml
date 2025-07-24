@@ -5,7 +5,9 @@ package: '@azure/msal-browser'
 summary: Telemetry Options
 fullName: BrowserTelemetryOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
-  type BrowserTelemetryOptions = { application?: ApplicationTelemetry }
+  type BrowserTelemetryOptions = {
+    application?: ApplicationTelemetry
+    client?: IPerformanceClient
+  }

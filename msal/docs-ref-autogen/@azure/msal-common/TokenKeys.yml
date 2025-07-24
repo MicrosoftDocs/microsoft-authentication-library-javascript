@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: TokenKeys
+uid: '@azure/msal-common.TokenKeys'
+package: '@azure/msal-common'
+summary: ''
+fullName: TokenKeys
+remarks: ''
+isDeprecated: false
+syntax: |
+  type TokenKeys = {
+    accessToken: string[]
+    idToken: string[]
+    refreshToken: string[]
+  }
