@@ -7,4 +7,8 @@ fullName: AccessTokenRetrievalInputs
 remarks: ''
 isDeprecated: false
 syntax: |
-  type AccessTokenRetrievalInputs = { forceRefresh: boolean; scopes?: string[] }
+  type AccessTokenRetrievalInputs = {
+    claims?: string
+    forceRefresh: boolean
+    scopes?: string[]
+  }

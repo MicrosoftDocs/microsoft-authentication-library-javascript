@@ -6,5 +6,6 @@ summary: ''
 fullName: SignInWithContinuationTokenInputs
 remarks: ''
 isDeprecated: false
-syntax: |
-  type SignInWithContinuationTokenInputs = { scopes?: string[] }
+syntax: >
+  type SignInWithContinuationTokenInputs = { claims?: string; scopes?: string[]
+  }

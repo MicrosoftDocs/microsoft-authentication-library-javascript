@@ -76,6 +76,19 @@ methods:
           true if the error is due to the provided password being incorrect,
           false otherwise.
         type: boolean
+  - name: isPasswordResetRequired()
+    uid: '@azure/msal-browser.SignInError.isPasswordResetRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to password reset being required.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isPasswordResetRequired(): boolean'
+      return:
+        description: >-
+          true if the error is due to password reset being required, false
+          otherwise.
+        type: boolean
   - name: isRedirectRequired()
     uid: '@azure/msal-browser.SignInError.isRedirectRequired'
     package: '@azure/msal-browser'
