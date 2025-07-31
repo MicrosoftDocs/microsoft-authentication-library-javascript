@@ -5,7 +5,7 @@ author: OwenRichards1
 manager: CelesteDG
 ms.author: owenrichards
 ms.custom: has-adal-ref, devx-track-js
-ms.date: 10/16/2023
+ms.date: 05/21/2025
 ms.reviewer: saeeda
 ms.service: msal
 ms.subservice: msal-js
