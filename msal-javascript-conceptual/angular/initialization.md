@@ -7,17 +7,25 @@ manager: CelesteDG
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: concept-article
-ms.date: 11/29/2023
-ms.author: emilylauber
-ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
+ms.date: 05/21/2025
+ms.author: dmwendia
+ms.reviewer: cwerner, owenrichards, kengaderdus
 ---
-# Initializing MSAL Angular
+# Initializing MSAL angular
 
-Before using `@azure/msal-angular`, you must first [register your application in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) to get your client ID, a unique identifier for your application, also known as application ID. 
+Before using `@azure/msal-angular`, [register an application in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) to get the `clientId`.
+
+In this document:
+- [Initialization of MSAL angular](#initialization-of-msal-angular)
+    - [Include and initialize the MSAL module in your app module](#include-and-initialize-the-msal-module-in-your-app-module)
+    - [Secure the routes in your application](#secure-the-routes-in-your-application)
+    - [Get tokens for Web API calls](#get-tokens-for-web-api-calls)
+    - [Subscribe to events](#subscribe-to-events)
+- [Next steps](#next-steps)
 
 ## Include and initialize the MSAL module in your app module
 
-Import `MsalModule` into app.module.ts. To initialize MSAL module you are required to pass the clientId of your application which you can get from the application registration.
+Import `MsalModule` into app.module.ts. To initialize the MSAL module, pass the clientId of your application, which you get from the application registration.
 
 ```js
 import { NgModule } from '@angular/core';
@@ -36,7 +44,7 @@ import { PublicClientApplication, InteractionType, BrowserCacheLocation } from "
             },
             cache: {
                 cacheLocation : BrowserCacheLocation.LocalStorage,
-                storeAuthStateInCookie: true, // set to true for IE 11
+                storeAuthStateInCookie: true, // Deprecated, removed in a future version
             },
             system: {
                 loggerOptions: {
@@ -67,11 +75,11 @@ export class AppModule {}
 
 ## Secure the routes in your application
 
-You can add authentication to secure specific routes in your application by just adding `canActivate: [MsalGuard]` to your route definition. It can be added at the parent or child routes. When a user visits these routes, the library will prompt the user to authenticate.
+Add authentication to secure specific routes in your application by adding `canActivate: [MsalGuard]` to your route definition. Add it to parent or child routes. When a user visits these routes, the library prompts the user to authenticate.
 
-See our [`MsalGuard` doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/msal-guard.md) for more details on configuration and considerations, including using additional interfaces.
+Learn more in our [`MsalGuard` doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/msal-guard.md) about configuration and considerations, including using additional interfaces.
 
-See this example of a route defined with the `MsalGuard`:
+Here is an example of a route defined with the `MsalGuard`:
 
 ```js
 import { NgModule } from '@angular/core';
@@ -99,7 +107,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 ```
 
-## Get tokens for Web API calls
+## Get tokens for web API calls
 
 `@azure/msal-angular` allows you to add an Http interceptor (`MsalInterceptor`) in your `app.module.ts` as follows. The `MsalInterceptor` will obtain tokens and add them to all your Http requests in API calls based on the `protectedResourceMap`. See our [MsalInterceptor doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/msal-interceptor.md) for more details on configuration and use.
 
@@ -120,7 +128,7 @@ import { PublicClientApplication, InteractionType, BrowserCacheLocation } from "
             },
             cache: {
                 cacheLocation : BrowserCacheLocation.LocalStorage,
-                storeAuthStateInCookie: true, // set to true for IE 11
+                storeAuthStateInCookie: true, // Deprecated, will be removed in future version
             },
             system: {
                 loggerOptions: {
@@ -154,13 +162,13 @@ import { PublicClientApplication, InteractionType, BrowserCacheLocation } from "
 export class AppModule {}
 ```
 
-Using the `MsalInterceptor` is optional. You may wish to explicitly acquire tokens using the acquireToken APIs instead.
+Using the `MsalInterceptor` is optional. You might want to explicitly get tokens using the acquireToken APIs instead.
 
-Please note that the `MsalInterceptor` is provided for your convenience and may not fit all use cases. We encourage you to write your own interceptor if you have specific needs that are not addressed by the `MsalInterceptor`. 
+Note that the `MsalInterceptor` is provided for your convenience and might not fit all use cases. Write your own interceptor if you have specific needs that aren't addressed by the `MsalInterceptor`. 
 
 ## Subscribe to events
 
-MSAL provides an event system, which emits events related to auth and MSAL, and can be subscribed to as below. To use events, the `MsalBroadcastService` should be added to your constructor in your component/service. 
+MSAL provides an event system that emits events related to authentication and MSAL. To use events, add the `MsalBroadcastService` to the constructor in your component or service. 
 
 ### 1. How to subscribe to events
 
@@ -179,11 +187,11 @@ this.msalBroadcastService.msalSubject$
 
 ### 2. Available events
 
-The list of events available to MSAL can be found in the [`@azure/msal-browser` event documentation.](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/events.md)
+Find the list of events available to MSAL in the [`@azure/msal-browser` event documentation.](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/events.md)
 
 ### 3. Unsubscribing
 
-It is extremely important to unsubscribe. Implement `ngOnDestroy()` in your component and unsubscribe.
+Unsubscribing is important. Implement `ngOnDestroy()` in your component to unsubscribe.
 
 ```js
 import { EventMessage, EventType } from '@azure/msal-browser';
@@ -206,6 +214,6 @@ ngOnDestroy(): void {
 }
 ```
 
-## Next Steps
+# Next steps
 
-- Learn how to to use [public APIs](public-apis.md) in MSAL Angular.
+You're ready to use `@azure/msal-angular` [public APIs](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/public-apis.md).
