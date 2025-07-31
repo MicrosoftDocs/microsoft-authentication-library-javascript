@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: ''
 fullName: ISerializableTokenCache
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 properties:
@@ -15,7 +14,6 @@ properties:
     summary: ''
     fullName: deserialize
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'deserialize: (cache: string) => void'
@@ -28,7 +26,6 @@ properties:
     summary: ''
     fullName: serialize
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'serialize: () => string'

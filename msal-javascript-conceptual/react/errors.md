@@ -6,7 +6,7 @@ manager: CelesteDG
 
 ms.service: msal
 ms.subservice: msal-react
-ms.topic: conceptual
+ms.topic: how-to
 ms.date: 05/21/2025
 ms.author: dmwendia
 ms.reviewer: cwerner, owenrichards, kengaderdus

@@ -5,10 +5,13 @@ package: '@azure/msal-common'
 summary: ''
 fullName: SignedHttpRequestParameters
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type SignedHttpRequestParameters = Pick<
     BaseAuthRequest,
-    "resourceRequestMethod" | "resourceRequestUri" | "shrClaims" | "shrNonce"
+    | "resourceRequestMethod"
+    | "resourceRequestUri"
+    | "shrClaims"
+    | "shrNonce"
+    | "shrOptions"
   > & { correlationId?: string }

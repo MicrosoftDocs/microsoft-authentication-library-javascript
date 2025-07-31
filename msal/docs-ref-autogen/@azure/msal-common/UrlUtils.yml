@@ -1,0 +1,64 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.UrlUtils'
+name: UrlUtils
+type: module
+package: '@azure/msal-common'
+summary: ''
+functions:
+  - name: getDeserializedResponse(string)
+    uid: '@azure/msal-common.UrlUtils.getDeserializedResponse'
+    package: '@azure/msal-common'
+    summary: Returns URL hash as server auth code response object.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getDeserializedResponse(responseString: string):
+        AuthorizeResponse | null
+      parameters:
+        - id: responseString
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthorizeResponse" /> | null
+  - name: mapToQueryString(Map<string, string>, boolean, StringDict)
+    uid: '@azure/msal-common.UrlUtils.mapToQueryString'
+    package: '@azure/msal-common'
+    summary: Utility to create a URL from the params map
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function mapToQueryString(parameters: Map<string, string>,
+        encodeExtraParams?: boolean, extraQueryParameters?: StringDict): string
+      parameters:
+        - id: parameters
+          type: Map&lt;string, string&gt;
+          description: ''
+        - id: encodeExtraParams
+          type: boolean
+          description: ''
+        - id: extraQueryParameters
+          type: <xref uid="@azure/msal-common.StringDict" />
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: stripLeadingHashOrQuery(string)
+    uid: '@azure/msal-common.UrlUtils.stripLeadingHashOrQuery'
+    package: '@azure/msal-common'
+    summary: >-
+      Parses hash string from given string. Returns empty string if no hash
+      symbol is found.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function stripLeadingHashOrQuery(responseString: string): string'
+      parameters:
+        - id: responseString
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string

@@ -2,10 +2,9 @@
 name: ICacheClient
 uid: '@azure/msal-node.ICacheClient'
 package: '@azure/msal-node'
-summary: ''
+summary: Interface for the cache that defines a getter and setter
 fullName: ICacheClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
@@ -14,33 +13,31 @@ methods:
     package: '@azure/msal-node'
     summary: Retrieve the value from the cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function get(key: string): Promise<string>'
       parameters:
         - id: key
           type: string
-          description: string
+          description: key of item in the cache
       return:
         description: Promise<string>
         type: Promise&lt;string&gt;
-  - name: 'set(string, string)'
+  - name: set(string, string)
     uid: '@azure/msal-node.ICacheClient.set'
     package: '@azure/msal-node'
     summary: Save the required value using the provided key to cache
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function set(key: string, value: string): Promise<string>'
       parameters:
         - id: key
           type: string
-          description: string
+          description: key of item in the cache
         - id: value
           type: string
-          description: string
+          description: value of item to be saved in the cache
       return:
         description: Promise<string>
         type: Promise&lt;string&gt;

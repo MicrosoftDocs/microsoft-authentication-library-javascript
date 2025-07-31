@@ -1,0 +1,64 @@
+### YamlMime:TSType
+name: SignUpAttributesRequiredState
+uid: '@azure/msal-browser.SignUpAttributesRequiredState'
+package: '@azure/msal-browser'
+summary: Base class for the action requried state in an authentication flow.
+fullName: SignUpAttributesRequiredState
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignUpAttributesRequiredState(SignUpAttributesRequiredStateParameters)
+    uid: '@azure/msal-browser.SignUpAttributesRequiredState.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SignUpAttributesRequiredState(stateParameters:
+        SignUpAttributesRequiredStateParameters)
+      parameters:
+        - id: stateParameters
+          type: SignUpAttributesRequiredStateParameters
+          description: ''
+methods:
+  - name: getRequiredAttributes()
+    uid: '@azure/msal-browser.SignUpAttributesRequiredState.getRequiredAttributes'
+    package: '@azure/msal-browser'
+    summary: Gets the required attributes for sign-up.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getRequiredAttributes(): UserAttribute[]'
+      return:
+        description: The required attributes for sign-up.
+        type: UserAttribute[]
+  - name: submitAttributes(UserAccountAttributes)
+    uid: '@azure/msal-browser.SignUpAttributesRequiredState.submitAttributes'
+    package: '@azure/msal-browser'
+    summary: >-
+      Submits attributes to continue sign-up flow.
+
+      This methods is used to submit required attributes.
+
+      These attributes, built in or custom, were configured in the Microsoft
+      Entra admin center by the tenant administrator.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function submitAttributes(attributes: UserAccountAttributes):
+        Promise<SignUpSubmitAttributesResult>
+      parameters:
+        - id: attributes
+          type: <xref uid="@azure/msal-browser.UserAccountAttributes" />
+          description: The attributes to submit.
+      return:
+        description: The result of the operation.
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/msal-browser.SignUpSubmitAttributesResult" />&gt;
+extends: >-
+  <xref uid="@azure/msal-browser.SignUpState"
+  />&lt;SignUpAttributesRequiredStateParameters&gt;

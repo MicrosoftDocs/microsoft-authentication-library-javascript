@@ -1,0 +1,27 @@
+### YamlMime:TSTypeAlias
+name: NativeRequest
+uid: '@azure/msal-common.NativeRequest'
+package: '@azure/msal-common'
+summary: ''
+fullName: NativeRequest
+remarks: ''
+isDeprecated: false
+syntax: |
+  type NativeRequest = {
+    accountId?: string
+    authenticationScheme?: string
+    authority: string
+    claims?: string
+    clientId: string
+    correlationId: string
+    extraParameters?: StringDict
+    extraScopesToConsent?: string[]
+    forceRefresh?: boolean
+    loginHint?: string
+    prompt?: string
+    redirectUri: string
+    resourceRequestMethod?: string
+    resourceRequestUri?: string
+    scopes: string[]
+    shrNonce?: string
+  }

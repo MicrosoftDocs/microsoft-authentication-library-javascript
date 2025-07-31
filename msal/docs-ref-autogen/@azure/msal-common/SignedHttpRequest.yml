@@ -5,17 +5,16 @@ package: '@azure/msal-common'
 summary: ''
 fullName: SignedHttpRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type SignedHttpRequest = {
-    at?: string,
-    client_claims?: string,
-    cnf?: object,
-    m?: string,
-    nonce?: string,
-    p?: string,
-    q?: [Array<string>, string],
-    ts?: number,
-    u?: string,
+    at?: string
+    client_claims?: string
+    cnf?: object
+    m?: string
+    nonce?: string
+    p?: string
+    q?: [string[], string]
+    ts?: number
+    u?: string
   }

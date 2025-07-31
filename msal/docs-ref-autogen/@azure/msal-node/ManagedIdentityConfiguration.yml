@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: ManagedIdentityConfiguration
+uid: '@azure/msal-node.ManagedIdentityConfiguration'
+package: '@azure/msal-node'
+summary: ''
+fullName: ManagedIdentityConfiguration
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ManagedIdentityConfiguration = {
+    clientCapabilities?: string[]
+    managedIdentityIdParams?: ManagedIdentityIdParams
+    system?: NodeSystemOptions
+  }

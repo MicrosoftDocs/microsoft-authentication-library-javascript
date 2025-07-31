@@ -5,21 +5,22 @@ package: '@azure/msal-common'
 summary: Error thrown when user interaction is required.
 fullName: InteractionRequiredAuthError
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'InteractionRequiredAuthError(string, string, string)'
+  - name: >-
+      InteractionRequiredAuthError(string, string, string, string, string,
+      string, string, string)
     uid: '@azure/msal-common.InteractionRequiredAuthError.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         new InteractionRequiredAuthError(errorCode?: string, errorMessage?:
-        string, subError?: string)
+        string, subError?: string, timestamp?: string, traceId?: string,
+        correlationId?: string, claims?: string, errorNo?: string)
       parameters:
         - id: errorCode
           type: string
@@ -30,6 +31,87 @@ constructors:
         - id: subError
           type: string
           description: ''
+        - id: timestamp
+          type: string
+          description: ''
+        - id: traceId
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: claims
+          type: string
+          description: ''
+        - id: errorNo
+          type: string
+          description: ''
+properties:
+  - name: claims
+    uid: '@azure/msal-common.InteractionRequiredAuthError.claims'
+    package: '@azure/msal-common'
+    summary: >-
+      https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/claims-challenge.md
+
+
+      A string with extra claims needed for the token request to succeed
+
+      web site: redirect the user to the authorization page and set the extra
+      claims
+
+      web api: include the claims in the WWW-Authenticate header that are sent
+      back to the client so that it knows to request a token with the extra
+      claims
+
+      desktop application or browser context: include the claims when acquiring
+      the token interactively
+
+      app to app context (client_credentials): include the claims in the
+      AcquireTokenByClientCredential request
+    fullName: claims
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'claims: string'
+      return:
+        description: ''
+        type: string
+  - name: errorNo
+    uid: '@azure/msal-common.InteractionRequiredAuthError.errorNo'
+    package: '@azure/msal-common'
+    summary: Server error number;
+    fullName: errorNo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorNo?: string'
+      return:
+        description: ''
+        type: string
+  - name: timestamp
+    uid: '@azure/msal-common.InteractionRequiredAuthError.timestamp'
+    package: '@azure/msal-common'
+    summary: The time the error occured at
+    fullName: timestamp
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timestamp: string'
+      return:
+        description: ''
+        type: string
+  - name: traceId
+    uid: '@azure/msal-common.InteractionRequiredAuthError.traceId'
+    package: '@azure/msal-common'
+    summary: TraceId associated with the error
+    fullName: traceId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'traceId: string'
+      return:
+        description: ''
+        type: string
 inheritedProperties:
   - name: correlationId
     uid: '@azure/msal-common.InteractionRequiredAuthError.correlationId'
@@ -37,7 +119,6 @@ inheritedProperties:
     summary: CorrelationId associated with the error
     fullName: correlationId
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'correlationId: string'
@@ -53,7 +134,6 @@ inheritedProperties:
     summary: Short string denoting error
     fullName: errorCode
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorCode: string'
@@ -69,7 +149,6 @@ inheritedProperties:
     summary: Detailed description of error
     fullName: errorMessage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'errorMessage: string'
@@ -85,49 +164,83 @@ inheritedProperties:
     summary: ''
     fullName: message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'message: string'
       return:
         description: ''
         type: string
-    inheritanceDescription: <b>Inherited From</b> Error.message
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.message](xref:@azure/msal-common.AuthError.message)
   - name: name
     uid: '@azure/msal-common.InteractionRequiredAuthError.name'
     package: '@azure/msal-common'
     summary: ''
     fullName: name
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'name: string'
       return:
         description: ''
         type: string
-    inheritanceDescription: <b>Inherited From</b> Error.name
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.name](xref:@azure/msal-common.AuthError.name)
   - name: stack
     uid: '@azure/msal-common.InteractionRequiredAuthError.stack'
     package: '@azure/msal-common'
     summary: ''
     fullName: stack
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'stack?: string'
       return:
         description: ''
         type: string
-    inheritanceDescription: <b>Inherited From</b> Error.stack
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.stack](xref:@azure/msal-common.AuthError.stack)
+  - name: stackTraceLimit
+    uid: '@azure/msal-common.InteractionRequiredAuthError.stackTraceLimit'
+    package: '@azure/msal-common'
+    summary: >-
+      The `Error.stackTraceLimit` property specifies the number of stack frames
+
+      collected by a stack trace (whether generated by `new Error().stack` or
+
+      `Error.captureStackTrace(obj)`).
+
+
+      The default value is `10` but may be set to any valid JavaScript number.
+      Changes
+
+      will affect any stack trace captured _after_ the value has been changed.
+
+
+      If set to a non-number value, or set to a negative number, stack traces
+      will
+
+      not capture any frames.
+    fullName: stackTraceLimit
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static stackTraceLimit: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.stackTraceLimit](xref:@azure/msal-common.AuthError.stackTraceLimit)
   - name: subError
     uid: '@azure/msal-common.InteractionRequiredAuthError.subError'
     package: '@azure/msal-common'
     summary: Describes the subclass of an error
     fullName: subError
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'subError: string'
@@ -138,53 +251,122 @@ inheritedProperties:
       <b>Inherited From</b>
       [AuthError.subError](xref:@azure/msal-common.AuthError.subError)
 inheritedMethods:
-  - name: createPostRequestFailed(string)
-    uid: '@azure/msal-common.InteractionRequiredAuthError.createPostRequestFailed'
+  - name: captureStackTrace(object, Function)
+    uid: '@azure/msal-common.InteractionRequiredAuthError.captureStackTrace'
     package: '@azure/msal-common'
-    summary: Creates an error for post request failures.
+    summary: >-
+      Creates a `.stack` property on `targetObject`, which when accessed returns
+
+      a string representing the location in the code at which
+
+      `Error.captureStackTrace()` was called.
+
+
+      ```js
+
+      const myObject = {};
+
+      Error.captureStackTrace(myObject);
+
+      myObject.stack;  // Similar to `new Error().stack`
+
+      ```
+
+
+      The first line of the trace will be prefixed with
+
+      `${myObject.name}: ${myObject.message}`.
+
+
+      The optional `constructorOpt` argument accepts a function. If given, all
+      frames
+
+      above `constructorOpt`, including `constructorOpt`, will be omitted from
+      the
+
+      generated stack trace.
+
+
+      The `constructorOpt` argument is useful for hiding implementation
+
+      details of error generation from the user. For instance:
+
+
+      ```js
+
+      function a() {
+        b();
+      }
+
+
+      function b() {
+        c();
+      }
+
+
+      function c() {
+        // Create an error without stack trace to avoid calculating the stack trace twice.
+        const { stackTraceLimit } = Error;
+        Error.stackTraceLimit = 0;
+        const error = new Error();
+        Error.stackTraceLimit = stackTraceLimit;
+
+        // Capture the stack trace above function b
+        Error.captureStackTrace(error, b); // Neither function c, nor b is included in the stack trace
+        throw error;
+      }
+
+
+      a();
+
+      ```
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function createPostRequestFailed(errDesc: string): AuthError'
+      content: >-
+        static function captureStackTrace(targetObject: object, constructorOpt?:
+        Function)
       parameters:
-        - id: errDesc
-          type: string
+        - id: targetObject
+          type: object
+          description: ''
+        - id: constructorOpt
+          type: Function
+          description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.captureStackTrace](xref:@azure/msal-common.AuthError.captureStackTrace)
+  - name: prepareStackTrace(Error, CallSite[])
+    uid: '@azure/msal-common.InteractionRequiredAuthError.prepareStackTrace'
+    package: '@azure/msal-common'
+    summary: |-
+
+
+      See https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function prepareStackTrace(err: Error, stackTraces: CallSite[]):
+        any
+      parameters:
+        - id: err
+          type: Error
+          description: ''
+        - id: stackTraces
+          type: CallSite[]
           description: ''
       return:
         description: ''
-        type: <xref uid="@azure/msal-common.AuthError" />
+        type: any
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.createPostRequestFailed](xref:@azure/msal-common.AuthError.createPostRequestFailed)
-  - name: createUnexpectedError(string)
-    uid: '@azure/msal-common.InteractionRequiredAuthError.createUnexpectedError'
-    package: '@azure/msal-common'
-    summary: >-
-      Creates an error that is thrown when something unexpected happens in the
-      library.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static function createUnexpectedError(errDesc: string): AuthError'
-      parameters:
-        - id: errDesc
-          type: string
-          description: |+
-
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.AuthError" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.createUnexpectedError](xref:@azure/msal-common.AuthError.createUnexpectedError)
+      [AuthError.prepareStackTrace](xref:@azure/msal-common.AuthError.prepareStackTrace)
   - name: setCorrelationId(string)
     uid: '@azure/msal-common.InteractionRequiredAuthError.setCorrelationId'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setCorrelationId(correlationId: string)'
@@ -195,64 +377,4 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [AuthError.setCorrelationId](xref:@azure/msal-common.AuthError.setCorrelationId)
-methods:
-  - name: createNativeAccountUnavailableError()
-    uid: >-
-      @azure/msal-common.InteractionRequiredAuthError.createNativeAccountUnavailableError
-    package: '@azure/msal-common'
-    summary: >-
-      Creates an error thrown when the native broker returns ACCOUNT_UNAVAILABLE
-      status, indicating that the account was removed and interactive sign-in is
-      required
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        static function createNativeAccountUnavailableError():
-        InteractionRequiredAuthError
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.InteractionRequiredAuthError" />
-  - name: createNoTokensFoundError()
-    uid: '@azure/msal-common.InteractionRequiredAuthError.createNoTokensFoundError'
-    package: '@azure/msal-common'
-    summary: >-
-      Creates an error thrown when the authorization code required for a token
-      request is null or empty.
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: 'static function createNoTokensFoundError(): InteractionRequiredAuthError'
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.InteractionRequiredAuthError" />
-  - name: 'isInteractionRequiredError(string, string, string)'
-    uid: '@azure/msal-common.InteractionRequiredAuthError.isInteractionRequiredError'
-    package: '@azure/msal-common'
-    summary: >-
-      Helper function used to determine if an error thrown by the server
-      requires interaction to resolve
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: >-
-        static function isInteractionRequiredError(errorCode?: string,
-        errorString?: string, subError?: string): boolean
-      parameters:
-        - id: errorCode
-          type: string
-          description: ''
-        - id: errorString
-          type: string
-          description: ''
-        - id: subError
-          type: string
-          description: |+
-
-      return:
-        description: ''
-        type: boolean
 extends: <xref uid="@azure/msal-common.AuthError" />

@@ -8,7 +8,7 @@ ms.author: dmwendia
 ms.date: 05/21/2025
 ms.service: msal
 ms.subservice: msal-node
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
 #Customer intent: 
 ---

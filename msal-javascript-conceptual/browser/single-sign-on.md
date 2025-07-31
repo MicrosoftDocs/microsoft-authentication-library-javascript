@@ -9,7 +9,7 @@ ms.date: 05/21/2025
 ms.reviewer: saeeda
 ms.service: msal
 ms.subservice: msal-js
-ms.topic: conceptual
+ms.topic: how-to
 #Customer intent: As an application developer, I want to learn about enabling single sign on experiences with MSAL.js library so I can decide if this platform meets my application development needs and requirements.
 ---
 

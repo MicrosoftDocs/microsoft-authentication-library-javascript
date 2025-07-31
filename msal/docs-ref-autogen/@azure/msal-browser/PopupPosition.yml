@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: PopupPosition
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
-  type PopupPosition = { left: number, top: number }
+  type PopupPosition = { left: number; top: number }

@@ -9,7 +9,7 @@ ms.date: 05/21/2025
 ms.reviewer: saeeda, jmprieur
 ms.service: msal
 ms.subservice: msal-js
-ms.topic: conceptual
+ms.topic: concept-article
 #Customer intent:
 ---
 # Logging in MSAL.js

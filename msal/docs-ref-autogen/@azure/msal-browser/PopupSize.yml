@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: PopupSize
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
-  type PopupSize = { height: number, width: number }
+  type PopupSize = { height: number; width: number }

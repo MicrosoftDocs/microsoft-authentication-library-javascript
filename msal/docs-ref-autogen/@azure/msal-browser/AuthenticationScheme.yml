@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: AuthenticationScheme
+uid: '@azure/msal-browser.AuthenticationScheme'
+package: '@azure/msal-browser'
+summary: ''
+fullName: AuthenticationScheme
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AuthenticationScheme =
+    (typeof AuthenticationScheme)[keyof typeof AuthenticationScheme]

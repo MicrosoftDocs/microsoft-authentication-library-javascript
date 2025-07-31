@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: AzureCloudInstance
+uid: '@azure/msal-browser.AzureCloudInstance'
+package: '@azure/msal-browser'
+summary: ''
+fullName: AzureCloudInstance
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AzureCloudInstance =
+    (typeof AzureCloudInstance)[keyof typeof AzureCloudInstance]

@@ -1,0 +1,50 @@
+### YamlMime:TSType
+name: GetCurrentAccountAccessTokenError
+uid: '@azure/msal-browser.GetCurrentAccountAccessTokenError'
+package: '@azure/msal-browser'
+summary: The error class for getting the current account access token errors.
+fullName: GetCurrentAccountAccessTokenError
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: GetCurrentAccountAccessTokenError(CustomAuthError)
+    uid: '@azure/msal-browser.GetCurrentAccountAccessTokenError.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new GetCurrentAccountAccessTokenError(errorData: CustomAuthError)'
+      parameters:
+        - id: errorData
+          type: <xref uid="@azure/msal-browser.CustomAuthError" />
+          description: ''
+inheritedProperties:
+  - name: errorData
+    uid: '@azure/msal-browser.GetCurrentAccountAccessTokenError.errorData'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: errorData
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorData: CustomAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowErrorBase.errorData
+methods:
+  - name: isCurrentAccountNotFound()
+    uid: >-
+      @azure/msal-browser.GetCurrentAccountAccessTokenError.isCurrentAccountNotFound
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to no cached account found.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCurrentAccountNotFound(): boolean'
+      return:
+        description: true if the error is due to no cached account found, false otherwise.
+        type: boolean
+extends: AuthFlowErrorBase

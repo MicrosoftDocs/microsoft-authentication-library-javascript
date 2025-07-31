@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: ManagedIdentityIdParams
+uid: '@azure/msal-node.ManagedIdentityIdParams'
+package: '@azure/msal-node'
+summary: ''
+fullName: ManagedIdentityIdParams
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ManagedIdentityIdParams = {
+    userAssignedClientId?: string
+    userAssignedObjectId?: string
+    userAssignedResourceId?: string
+  }

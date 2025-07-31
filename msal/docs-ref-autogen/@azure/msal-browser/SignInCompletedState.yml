@@ -1,0 +1,12 @@
+### YamlMime:TSType
+name: SignInCompletedState
+uid: '@azure/msal-browser.SignInCompletedState'
+package: '@azure/msal-browser'
+summary: |-
+  Represents the completed state of the sign-in operation.
+  This state indicates that the sign-in process has finished successfully.
+fullName: SignInCompletedState
+remarks: ''
+isDeprecated: false
+type: class
+extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

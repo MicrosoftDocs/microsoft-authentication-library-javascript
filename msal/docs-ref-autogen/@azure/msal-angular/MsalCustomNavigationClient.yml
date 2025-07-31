@@ -4,18 +4,20 @@ uid: '@azure/msal-angular.MsalCustomNavigationClient'
 package: '@azure/msal-angular'
 summary: >-
   Custom navigation used for Angular client-side navigation.
+
+  See performance doc for details:
+
+  https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-angular/docs/performance.md
 fullName: MsalCustomNavigationClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'MsalCustomNavigationClient(MsalService, Router, Location)'
+  - name: MsalCustomNavigationClient(MsalService, Router, Location)
     uid: '@azure/msal-angular.MsalCustomNavigationClient.constructor'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -31,15 +33,43 @@ constructors:
         - id: location
           type: Location
           description: ''
+properties:
+  - name: ɵfac
+    uid: '@azure/msal-angular.MsalCustomNavigationClient.ɵfac'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵfac
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵfac: ɵɵFactoryDeclaration<MsalCustomNavigationClient, never>'
+      return:
+        description: ''
+        type: >-
+          ɵɵFactoryDeclaration&lt;<xref
+          uid="@azure/msal-angular.MsalCustomNavigationClient" />, never&gt;
+  - name: ɵprov
+    uid: '@azure/msal-angular.MsalCustomNavigationClient.ɵprov'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵprov
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵprov: ɵɵInjectableDeclaration<MsalCustomNavigationClient>'
+      return:
+        description: ''
+        type: >-
+          ɵɵInjectableDeclaration&lt;<xref
+          uid="@azure/msal-angular.MsalCustomNavigationClient" />&gt;
 inheritedMethods:
-  - name: 'navigateExternal(string, NavigationOptions)'
+  - name: navigateExternal(string, NavigationOptions)
     uid: '@azure/msal-angular.MsalCustomNavigationClient.navigateExternal'
     package: '@azure/msal-angular'
     summary: >-
       Navigates to other pages outside the web application i.e. the Identity
       Provider
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -50,20 +80,18 @@ inheritedMethods:
           type: string
           description: ''
         - id: options
-          type: NavigationOptions
-          description: |+
-
+          type: <xref uid="@azure/msal-browser.NavigationOptions" />
+          description: ''
       return:
         description: ''
         type: Promise&lt;boolean&gt;
     inheritanceDescription: <b>Inherited From</b> NavigationClient.navigateExternal
 methods:
-  - name: 'navigateInternal(string, NavigationOptions)'
+  - name: navigateInternal(string, NavigationOptions)
     uid: '@azure/msal-angular.MsalCustomNavigationClient.navigateInternal'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -74,9 +102,9 @@ methods:
           type: string
           description: ''
         - id: options
-          type: NavigationOptions
+          type: <xref uid="@azure/msal-browser.NavigationOptions" />
           description: ''
       return:
         description: ''
         type: Promise&lt;boolean&gt;
-extends: NavigationClient
+extends: <xref uid="@azure/msal-browser.NavigationClient" />

@@ -1,0 +1,9 @@
+### YamlMime:TSType
+name: AuthFlowStateBase
+uid: '@azure/msal-browser.AuthFlowStateBase'
+package: '@azure/msal-browser'
+summary: Base class for the state of an authentication flow.
+fullName: AuthFlowStateBase
+remarks: ''
+isDeprecated: false
+type: class

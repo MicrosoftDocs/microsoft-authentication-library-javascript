@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: IWindowStorage<T>
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
@@ -14,15 +13,13 @@ methods:
     package: '@azure/msal-browser'
     summary: Returns true or false if the given key is present in the cache.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function containsKey(key: string): boolean'
       parameters:
         - id: key
           type: string
-          description: |+
-
+          description: ''
       return:
         description: ''
         type: boolean
@@ -31,18 +28,16 @@ methods:
     package: '@azure/msal-browser'
     summary: Get the item from the window storage object matching the given key.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function getItem(key: string): T | null'
+      content: 'function getItem(key: string): null | T'
       parameters:
         - id: key
           type: string
-          description: |+
-
+          description: ''
       return:
         description: ''
-        type: T | null
+        type: null | T
   - name: getKeys()
     uid: '@azure/msal-browser.IWindowStorage.getKeys'
     package: '@azure/msal-browser'
@@ -50,33 +45,59 @@ methods:
       Get all the keys from the window storage object as an iterable array of
       strings.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getKeys(): string[]'
       return:
         description: ''
-        type: 'string[]'
+        type: string[]
+  - name: getUserData(string)
+    uid: '@azure/msal-browser.IWindowStorage.getUserData'
+    package: '@azure/msal-browser'
+    summary: Getter for sensitive data that may contain PII.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getUserData(key: string): null | T'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: null | T
+  - name: initialize(string)
+    uid: '@azure/msal-browser.IWindowStorage.initialize'
+    package: '@azure/msal-browser'
+    summary: Async initializer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function initialize(correlationId: string): Promise<void>'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
   - name: removeItem(string)
     uid: '@azure/msal-browser.IWindowStorage.removeItem'
     package: '@azure/msal-browser'
     summary: Removes the item in the window storage object matching the given key.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeItem(key: string)'
       parameters:
         - id: key
           type: string
-          description: |+
-
-  - name: 'setItem(string, T)'
+          description: ''
+  - name: setItem(string, T)
     uid: '@azure/msal-browser.IWindowStorage.setItem'
     package: '@azure/msal-browser'
     summary: Sets the item in the window storage object with the given key.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function setItem(key: string, value: T)'
@@ -86,5 +107,30 @@ methods:
           description: ''
         - id: value
           type: T
-          description: |+
-
+          description: ''
+  - name: setUserData(string, T, string, string)
+    uid: '@azure/msal-browser.IWindowStorage.setUserData'
+    package: '@azure/msal-browser'
+    summary: Setter for sensitive data that may contain PII.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setUserData(key: string, value: T, correlationId: string,
+        timestamp: string): Promise<void>
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: value
+          type: T
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: timestamp
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

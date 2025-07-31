@@ -5,7 +5,6 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: MsalRedirectComponent
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
@@ -14,7 +13,6 @@ constructors:
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new MsalRedirectComponent(authService: MsalService)'
@@ -22,13 +20,44 @@ constructors:
         - id: authService
           type: <xref uid="@azure/msal-angular.MsalService" />
           description: ''
+properties:
+  - name: ɵcmp
+    uid: '@azure/msal-angular.MsalRedirectComponent.ɵcmp'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵcmp
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static ɵcmp: ɵɵComponentDeclaration<MsalRedirectComponent,
+        "app-redirect", never, {}, {}, never, never, false, never>
+      return:
+        description: ''
+        type: >-
+          ɵɵComponentDeclaration&lt;<xref
+          uid="@azure/msal-angular.MsalRedirectComponent" />, "app-redirect",
+          never, {}, {}, never, never, false, never&gt;
+  - name: ɵfac
+    uid: '@azure/msal-angular.MsalRedirectComponent.ɵfac'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵfac
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵfac: ɵɵFactoryDeclaration<MsalRedirectComponent, never>'
+      return:
+        description: ''
+        type: >-
+          ɵɵFactoryDeclaration&lt;<xref
+          uid="@azure/msal-angular.MsalRedirectComponent" />, never&gt;
 methods:
   - name: ngOnInit()
     uid: '@azure/msal-angular.MsalRedirectComponent.ngOnInit'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function ngOnInit()

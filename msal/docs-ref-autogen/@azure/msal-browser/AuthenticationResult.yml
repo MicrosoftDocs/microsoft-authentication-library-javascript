@@ -1,0 +1,12 @@
+### YamlMime:TSTypeAlias
+name: AuthenticationResult
+uid: '@azure/msal-browser.AuthenticationResult'
+package: '@azure/msal-browser'
+summary: ''
+fullName: AuthenticationResult
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AuthenticationResult = CommonAuthenticationResult & {
+    account: AccountInfo
+  }

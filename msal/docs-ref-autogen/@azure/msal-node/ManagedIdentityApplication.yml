@@ -1,0 +1,55 @@
+### YamlMime:TSType
+name: ManagedIdentityApplication
+uid: '@azure/msal-node.ManagedIdentityApplication'
+package: '@azure/msal-node'
+summary: Class to initialize a managed identity and identify the service
+fullName: ManagedIdentityApplication
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: ManagedIdentityApplication(ManagedIdentityConfiguration)
+    uid: '@azure/msal-node.ManagedIdentityApplication.constructor'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new ManagedIdentityApplication(configuration?:
+        ManagedIdentityConfiguration)
+      parameters:
+        - id: configuration
+          type: <xref uid="@azure/msal-node.ManagedIdentityConfiguration" />
+          description: ''
+methods:
+  - name: acquireToken(ManagedIdentityRequestParams)
+    uid: '@azure/msal-node.ManagedIdentityApplication.acquireToken'
+    package: '@azure/msal-node'
+    summary: Acquire an access token from the cache or the managed identity
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireToken(managedIdentityRequestParams:
+        ManagedIdentityRequestParams): Promise<AuthenticationResult>
+      parameters:
+        - id: managedIdentityRequestParams
+          type: <xref uid="@azure/msal-node.ManagedIdentityRequestParams" />
+          description: ''
+      return:
+        description: the access token
+        type: Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" />&gt;
+  - name: getManagedIdentitySource()
+    uid: '@azure/msal-node.ManagedIdentityApplication.getManagedIdentitySource'
+    package: '@azure/msal-node'
+    summary: >-
+      Determine the Managed Identity Source based on available environment
+      variables. This API is consumed by Azure Identity SDK.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getManagedIdentitySource(): ManagedIdentitySourceNames'
+      return:
+        description: ManagedIdentitySourceNames - The Managed Identity source's name
+        type: ManagedIdentitySourceNames

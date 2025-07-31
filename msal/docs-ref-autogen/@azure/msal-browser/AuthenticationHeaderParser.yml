@@ -1,0 +1,41 @@
+### YamlMime:TSType
+name: AuthenticationHeaderParser
+uid: '@azure/msal-browser.AuthenticationHeaderParser'
+package: '@azure/msal-browser'
+summary: >-
+  This is a helper class that parses supported HTTP response authentication
+  headers to extract and return
+
+  header challenge values that can be used outside the basic authorization
+  flows.
+fullName: AuthenticationHeaderParser
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: AuthenticationHeaderParser(Record<string, string>)
+    uid: '@azure/msal-browser.AuthenticationHeaderParser.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new AuthenticationHeaderParser(headers: Record<string, string>)'
+      parameters:
+        - id: headers
+          type: Record&lt;string, string&gt;
+          description: ''
+methods:
+  - name: getShrNonce()
+    uid: '@azure/msal-browser.AuthenticationHeaderParser.getShrNonce'
+    package: '@azure/msal-browser'
+    summary: >-
+      This method parses the SHR nonce value out of either the
+      Authentication-Info or WWW-Authenticate authentication headers.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getShrNonce(): string'
+      return:
+        description: ''
+        type: string

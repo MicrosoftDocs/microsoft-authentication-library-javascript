@@ -1,0 +1,108 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.AuthorizeProtocol'
+name: AuthorizeProtocol
+type: module
+package: '@azure/msal-common'
+summary: ''
+functions:
+  - name: getAuthorizationCodePayload(AuthorizeResponse, string)
+    uid: '@azure/msal-common.AuthorizeProtocol.getAuthorizationCodePayload'
+    package: '@azure/msal-common'
+    summary: >-
+      Handles the hash fragment response from public client code request.
+      Returns a code response used by
+
+      the client to exchange for a token in acquireToken.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAuthorizationCodePayload(serverParams: AuthorizeResponse,
+        cachedState: string): AuthorizationCodePayload
+      parameters:
+        - id: serverParams
+          type: <xref uid="@azure/msal-common.AuthorizeResponse" />
+          description: ''
+        - id: cachedState
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthorizationCodePayload" />
+  - name: getAuthorizeUrl(Authority, Map<string, string>, boolean, StringDict)
+    uid: '@azure/msal-common.AuthorizeProtocol.getAuthorizeUrl'
+    package: '@azure/msal-common'
+    summary: >-
+      Returns authorize endpoint with given request parameters in the query
+      string
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAuthorizeUrl(authority: Authority, requestParameters:
+        Map<string, string>, encodeParams?: boolean, extraQueryParameters?:
+        StringDict): string
+      parameters:
+        - id: authority
+          type: Authority
+          description: ''
+        - id: requestParameters
+          type: Map&lt;string, string&gt;
+          description: ''
+        - id: encodeParams
+          type: boolean
+          description: ''
+        - id: extraQueryParameters
+          type: <xref uid="@azure/msal-common.StringDict" />
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: >-
+      getStandardAuthorizeRequestParameters(AuthOptions,
+      CommonAuthorizationUrlRequest, Logger, IPerformanceClient)
+    uid: '@azure/msal-common.AuthorizeProtocol.getStandardAuthorizeRequestParameters'
+    package: '@azure/msal-common'
+    summary: >-
+      Returns map of parameters that are applicable to all calls to /authorize
+      whether using PKCE or EAR
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getStandardAuthorizeRequestParameters(authOptions: AuthOptions,
+        request: CommonAuthorizationUrlRequest, logger: Logger,
+        performanceClient?: IPerformanceClient): Map<string, string>
+      parameters:
+        - id: authOptions
+          type: AuthOptions
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-common.CommonAuthorizationUrlRequest" />
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
+        - id: performanceClient
+          type: <xref uid="@azure/msal-common.IPerformanceClient" />
+          description: ''
+      return:
+        description: ''
+        type: Map&lt;string, string&gt;
+  - name: validateAuthorizationResponse(AuthorizeResponse, string)
+    uid: '@azure/msal-common.AuthorizeProtocol.validateAuthorizationResponse'
+    package: '@azure/msal-common'
+    summary: Function which validates server authorization code response.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function validateAuthorizationResponse(serverResponse:
+        AuthorizeResponse, requestState: string)
+      parameters:
+        - id: serverResponse
+          type: <xref uid="@azure/msal-common.AuthorizeResponse" />
+          description: ''
+        - id: requestState
+          type: string
+          description: ''

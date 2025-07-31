@@ -5,7 +5,6 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: InteractionType
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: None

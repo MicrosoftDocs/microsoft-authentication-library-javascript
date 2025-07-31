@@ -17,12 +17,14 @@ summary: >-
 
   - skipCache               - Skip token cache lookup and force request to
   authority to get a a new token. Defaults to false.
+
+  - tokenQueryParameters    - String to string map of custom query parameters
+  added to the /token call
 fullName: CommonOnBehalfOfRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type CommonOnBehalfOfRequest = BaseAuthRequest & {
-    oboAssertion: string,
-    skipCache?: boolean,
+    oboAssertion: string
+    skipCache?: boolean
   }

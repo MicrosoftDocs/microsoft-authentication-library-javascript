@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: ManagedIdentitySourceNames
+uid: '@azure/msal-node.ManagedIdentitySourceNames'
+package: '@azure/msal-node'
+summary: The ManagedIdentitySourceNames type
+fullName: ManagedIdentitySourceNames
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ManagedIdentitySourceNames =
+    (typeof ManagedIdentitySourceNames)[keyof typeof ManagedIdentitySourceNames]

@@ -1,0 +1,165 @@
+### YamlMime:TSType
+name: LocalStorage
+uid: '@azure/msal-browser.LocalStorage'
+package: '@azure/msal-browser'
+summary: ''
+fullName: LocalStorage
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: LocalStorage(string, Logger, IPerformanceClient)
+    uid: '@azure/msal-browser.LocalStorage.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new LocalStorage(clientId: string, logger: Logger, performanceClient:
+        IPerformanceClient)
+      parameters:
+        - id: clientId
+          type: string
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-browser.Logger" />
+          description: ''
+        - id: performanceClient
+          type: <xref uid="@azure/msal-browser.IPerformanceClient" />
+          description: ''
+methods:
+  - name: clear()
+    uid: '@azure/msal-browser.LocalStorage.clear'
+    package: '@azure/msal-browser'
+    summary: Removes all known MSAL keys from the cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function clear()
+  - name: containsKey(string)
+    uid: '@azure/msal-browser.LocalStorage.containsKey'
+    package: '@azure/msal-browser'
+    summary: Returns true or false if the given key is present in the cache.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function containsKey(key: string): boolean'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: getItem(string)
+    uid: '@azure/msal-browser.LocalStorage.getItem'
+    package: '@azure/msal-browser'
+    summary: Get the item from the window storage object matching the given key.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getItem(key: string): null | string'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: null | string
+  - name: getKeys()
+    uid: '@azure/msal-browser.LocalStorage.getKeys'
+    package: '@azure/msal-browser'
+    summary: >-
+      Get all the keys from the window storage object as an iterable array of
+      strings.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getKeys(): string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: getUserData(string)
+    uid: '@azure/msal-browser.LocalStorage.getUserData'
+    package: '@azure/msal-browser'
+    summary: Getter for sensitive data that may contain PII.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getUserData(key: string): null | string'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: null | string
+  - name: initialize(string)
+    uid: '@azure/msal-browser.LocalStorage.initialize'
+    package: '@azure/msal-browser'
+    summary: Async initializer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function initialize(correlationId: string): Promise<void>'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+  - name: removeItem(string)
+    uid: '@azure/msal-browser.LocalStorage.removeItem'
+    package: '@azure/msal-browser'
+    summary: Removes the item in the window storage object matching the given key.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeItem(key: string)'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+  - name: setItem(string, string)
+    uid: '@azure/msal-browser.LocalStorage.setItem'
+    package: '@azure/msal-browser'
+    summary: Sets the item in the window storage object with the given key.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setItem(key: string, value: string)'
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: value
+          type: string
+          description: ''
+  - name: setUserData(string, string, string, string)
+    uid: '@azure/msal-browser.LocalStorage.setUserData'
+    package: '@azure/msal-browser'
+    summary: Setter for sensitive data that may contain PII.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function setUserData(key: string, value: string, correlationId: string,
+        timestamp: string): Promise<void>
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: value
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: timestamp
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

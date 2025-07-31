@@ -1,0 +1,26 @@
+### YamlMime:TSTypeAlias
+name: SignUpResultState
+uid: '@azure/msal-browser.SignUpResultState'
+package: '@azure/msal-browser'
+summary: >-
+  The possible states for the SignUpResult.
+
+  This includes:
+
+  - SignUpCodeRequiredState: The sign-up process requires a code.
+
+  - SignUpPasswordRequiredState: The sign-up process requires a password.
+
+  - SignUpAttributesRequiredState: The sign-up process requires additional
+  attributes.
+
+  - SignUpFailedState: The sign-up process has failed.
+fullName: SignUpResultState
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignUpResultState =
+    | SignUpCodeRequiredState
+    | SignUpPasswordRequiredState
+    | SignUpAttributesRequiredState
+    | SignUpFailedState

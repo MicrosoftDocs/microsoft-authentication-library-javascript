@@ -1,0 +1,10 @@
+### YamlMime:TSType
+name: SignInFailedState
+uid: '@azure/msal-browser.SignInFailedState'
+package: '@azure/msal-browser'
+summary: Represents the state of a sign-in operation that has been failed.
+fullName: SignInFailedState
+remarks: ''
+isDeprecated: false
+type: class
+extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

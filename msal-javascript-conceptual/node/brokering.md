@@ -8,7 +8,7 @@ ms.author: dmwendia
 ms.service: msal
 ms.subservice: msal-node
 ms.date: 10/26/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
 #Customer intent: As a developer, I want to learn how to acquire tokens from the native token broker.
 ---

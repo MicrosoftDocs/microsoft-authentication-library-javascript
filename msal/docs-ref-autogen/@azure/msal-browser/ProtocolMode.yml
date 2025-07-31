@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: ProtocolMode
+uid: '@azure/msal-browser.ProtocolMode'
+package: '@azure/msal-browser'
+summary: ''
+fullName: ProtocolMode
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ProtocolMode = (typeof ProtocolMode)[keyof typeof ProtocolMode]
