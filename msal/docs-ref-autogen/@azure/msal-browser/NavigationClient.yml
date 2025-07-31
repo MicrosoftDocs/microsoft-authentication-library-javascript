@@ -5,18 +5,16 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: NavigationClient
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 methods:
-  - name: 'navigateExternal(string, NavigationOptions)'
+  - name: navigateExternal(string, NavigationOptions)
     uid: '@azure/msal-browser.NavigationClient.navigateExternal'
     package: '@azure/msal-browser'
     summary: >-
       Navigates to other pages outside the web application i.e. the Identity
       Provider
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -28,17 +26,15 @@ methods:
           description: ''
         - id: options
           type: <xref uid="@azure/msal-browser.NavigationOptions" />
-          description: |+
-
+          description: ''
       return:
         description: ''
         type: Promise&lt;boolean&gt;
-  - name: 'navigateInternal(string, NavigationOptions)'
+  - name: navigateInternal(string, NavigationOptions)
     uid: '@azure/msal-browser.NavigationClient.navigateInternal'
     package: '@azure/msal-browser'
     summary: Navigates to other pages within the same web application
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -50,8 +46,7 @@ methods:
           description: ''
         - id: options
           type: <xref uid="@azure/msal-browser.NavigationOptions" />
-          description: |+
-
+          description: ''
       return:
         description: ''
         type: Promise&lt;boolean&gt;

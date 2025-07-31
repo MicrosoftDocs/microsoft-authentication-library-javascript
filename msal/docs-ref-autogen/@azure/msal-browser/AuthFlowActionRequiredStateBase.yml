@@ -1,0 +1,10 @@
+### YamlMime:TSType
+name: AuthFlowActionRequiredStateBase
+uid: '@azure/msal-browser.AuthFlowActionRequiredStateBase'
+package: '@azure/msal-browser'
+summary: Base class for the action requried state in an authentication flow.
+fullName: AuthFlowActionRequiredStateBase<TParameter>
+remarks: ''
+isDeprecated: false
+type: class
+extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

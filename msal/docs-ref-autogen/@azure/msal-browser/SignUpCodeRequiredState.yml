@@ -1,0 +1,82 @@
+### YamlMime:TSType
+name: SignUpCodeRequiredState
+uid: '@azure/msal-browser.SignUpCodeRequiredState'
+package: '@azure/msal-browser'
+summary: Base class for the action requried state in an authentication flow.
+fullName: SignUpCodeRequiredState
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignUpCodeRequiredState(SignUpCodeRequiredStateParameters)
+    uid: '@azure/msal-browser.SignUpCodeRequiredState.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SignUpCodeRequiredState(stateParameters:
+        SignUpCodeRequiredStateParameters)
+      parameters:
+        - id: stateParameters
+          type: SignUpCodeRequiredStateParameters
+          description: ''
+methods:
+  - name: getCodeLength()
+    uid: '@azure/msal-browser.SignUpCodeRequiredState.getCodeLength'
+    package: '@azure/msal-browser'
+    summary: Gets the sent code length.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeLength(): number'
+      return:
+        description: The length of the code.
+        type: number
+  - name: getCodeResendInterval()
+    uid: '@azure/msal-browser.SignUpCodeRequiredState.getCodeResendInterval'
+    package: '@azure/msal-browser'
+    summary: Gets the interval in seconds for the code to be resent.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeResendInterval(): number'
+      return:
+        description: The interval in seconds for the code to be resent.
+        type: number
+  - name: resendCode()
+    uid: '@azure/msal-browser.SignUpCodeRequiredState.resendCode'
+    package: '@azure/msal-browser'
+    summary: >-
+      Resends the another one-time passcode for sign-up flow if the previous one
+      hasn't been verified.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function resendCode(): Promise<SignUpResendCodeResult>'
+      return:
+        description: The result of the operation.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.SignUpResendCodeResult"
+          />&gt;
+  - name: submitCode(string)
+    uid: '@azure/msal-browser.SignUpCodeRequiredState.submitCode'
+    package: '@azure/msal-browser'
+    summary: Submit one-time passcode to continue sign-up flow.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function submitCode(code: string): Promise<SignUpSubmitCodeResult>'
+      parameters:
+        - id: code
+          type: string
+          description: The code to submit.
+      return:
+        description: The result of the operation.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.SignUpSubmitCodeResult"
+          />&gt;
+extends: >-
+  <xref uid="@azure/msal-browser.SignUpState"
+  />&lt;SignUpCodeRequiredStateParameters&gt;

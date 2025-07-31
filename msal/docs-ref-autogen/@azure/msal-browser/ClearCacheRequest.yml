@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: ClearCacheRequest
+uid: '@azure/msal-browser.ClearCacheRequest'
+package: '@azure/msal-browser'
+summary: >-
+  ClearCacheRequest
+
+  - correlationId          - Unique GUID set per request to trace a request
+  end-to-end for telemetry purposes.
+
+  - account                - Account object that will be logged out of. All
+  tokens tied to this account will be cleared.
+fullName: ClearCacheRequest
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ClearCacheRequest = {
+    account?: AccountInfo | null
+    correlationId?: string
+  }

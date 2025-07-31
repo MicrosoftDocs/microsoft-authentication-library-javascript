@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Log message level.
 fullName: LogLevel
 remarks: ''
-isPreview: false
 isDeprecated: false
 fields:
   - name: Error

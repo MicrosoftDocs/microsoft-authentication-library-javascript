@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: SignOutRequest
+uid: '@azure/msal-node.SignOutRequest'
+package: '@azure/msal-node'
+summary: ''
+fullName: SignOutRequest
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignOutRequest = { account: AccountInfo; correlationId?: string }

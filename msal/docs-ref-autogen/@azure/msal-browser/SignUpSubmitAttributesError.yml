@@ -1,0 +1,92 @@
+### YamlMime:TSType
+name: SignUpSubmitAttributesError
+uid: '@azure/msal-browser.SignUpSubmitAttributesError'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignUpSubmitAttributesError
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignUpSubmitAttributesError(CustomAuthError)
+    uid: '@azure/msal-browser.SignUpSubmitAttributesError.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SignUpSubmitAttributesError(errorData: CustomAuthError)'
+      parameters:
+        - id: errorData
+          type: <xref uid="@azure/msal-browser.CustomAuthError" />
+          description: ''
+inheritedProperties:
+  - name: errorData
+    uid: '@azure/msal-browser.SignUpSubmitAttributesError.errorData'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: errorData
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorData: CustomAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthError" />
+    inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.errorData
+inheritedMethods:
+  - name: isTokenExpired()
+    uid: '@azure/msal-browser.SignUpSubmitAttributesError.isTokenExpired'
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to the expired continuation token.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isTokenExpired(): boolean'
+      return:
+        description: >-
+          True if the error is due to the expired continuation token, false
+          otherwise.
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.isTokenExpired
+methods:
+  - name: isAttributesValidationFailed()
+    uid: >-
+      @azure/msal-browser.SignUpSubmitAttributesError.isAttributesValidationFailed
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to the attributes validation failed.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isAttributesValidationFailed(): boolean'
+      return:
+        description: >-
+          True if the error is due to the attributes validation failed, false
+          otherwise.
+        type: boolean
+  - name: isMissingRequiredAttributes()
+    uid: >-
+      @azure/msal-browser.SignUpSubmitAttributesError.isMissingRequiredAttributes
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to the required attributes are missing.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isMissingRequiredAttributes(): boolean'
+      return:
+        description: >-
+          True if the error is due to the required attributes are missing, false
+          otherwise.
+        type: boolean
+  - name: isRedirectRequired()
+    uid: '@azure/msal-browser.SignUpSubmitAttributesError.isRedirectRequired'
+    package: '@azure/msal-browser'
+    summary: Check if client app supports the challenge type configured in Entra.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isRedirectRequired(): boolean'
+      return:
+        description: True if "loginPopup" function is required to continue sthe operation.
+        type: boolean
+extends: AuthActionErrorBase

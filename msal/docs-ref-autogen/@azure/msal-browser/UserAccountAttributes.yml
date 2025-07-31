@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: UserAccountAttributes
+uid: '@azure/msal-browser.UserAccountAttributes'
+package: '@azure/msal-browser'
+summary: ''
+fullName: UserAccountAttributes
+remarks: ''
+isDeprecated: false
+syntax: |
+  type UserAccountAttributes = Record<string, string> & {
+    city?: string
+    country?: string
+    displayName?: string
+    givenName?: string
+    jobTitle?: string
+    postalCode?: string
+    state?: string
+    streetAddress?: string
+    surname?: string
+  }

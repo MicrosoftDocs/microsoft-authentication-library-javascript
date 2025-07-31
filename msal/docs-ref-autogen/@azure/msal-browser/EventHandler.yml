@@ -5,63 +5,54 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: EventHandler
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'EventHandler(Logger, ICrypto)'
+  - name: EventHandler(Logger)
     uid: '@azure/msal-browser.EventHandler.constructor'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'new EventHandler(logger: Logger, browserCrypto: ICrypto)'
+      content: 'new EventHandler(logger?: Logger)'
       parameters:
         - id: logger
-          type: Logger
-          description: ''
-        - id: browserCrypto
-          type: ICrypto
+          type: <xref uid="@azure/msal-browser.Logger" />
           description: ''
 methods:
-  - name: addEventCallback(EventCallbackFunction)
+  - name: addEventCallback(EventCallbackFunction, EventType[], string)
     uid: '@azure/msal-browser.EventHandler.addEventCallback'
     package: '@azure/msal-browser'
     summary: Adds event callbacks to array
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function addEventCallback(callback: EventCallbackFunction): string |
-        null
+        function addEventCallback(callback: EventCallbackFunction, eventTypes?:
+        EventType[], callbackId?: string): null | string
       parameters:
         - id: callback
           type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
-          description: |+
-
+          description: callback to be invoked when an event is raised
+        - id: eventTypes
+          type: EventType[]
+          description: >-
+            list of events that this callback will be invoked for, if not
+            provided callback will be invoked for all events
+        - id: callbackId
+          type: string
+          description: >-
+            Identifier for the callback, used to locate and remove the callback
+            when no longer required
       return:
         description: ''
-        type: string | null
-  - name: disableAccountStorageEvents()
-    uid: '@azure/msal-browser.EventHandler.disableAccountStorageEvents'
-    package: '@azure/msal-browser'
-    summary: >-
-      Removes event listener that emits an event when a user account is added or
-      removed from localstorage in a different browser tab or window
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function disableAccountStorageEvents()
-  - name: 'emitEvent(EventType, InteractionType, EventPayload, EventError)'
+        type: null | string
+  - name: emitEvent(EventType, InteractionType, EventPayload, EventError)
     uid: '@azure/msal-browser.EventHandler.emitEvent'
     package: '@azure/msal-browser'
     summary: Emits events by calling callback with event message
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -69,7 +60,7 @@ methods:
         InteractionType, payload?: EventPayload, error?: EventError)
       parameters:
         - id: eventType
-          type: <xref uid="@azure/msal-browser.EventType" />
+          type: EventType
           description: ''
         - id: interactionType
           type: <xref uid="@azure/msal-browser.InteractionType" />
@@ -79,30 +70,32 @@ methods:
           description: ''
         - id: error
           type: <xref uid="@azure/msal-browser.EventError" />
-          description: |+
-
-  - name: enableAccountStorageEvents()
-    uid: '@azure/msal-browser.EventHandler.enableAccountStorageEvents'
-    package: '@azure/msal-browser'
-    summary: >-
-      Adds event listener that emits an event when a user account is added or
-      removed from localstorage in a different browser tab or window
-    remarks: ''
-    isPreview: false
-    isDeprecated: false
-    syntax:
-      content: function enableAccountStorageEvents()
+          description: ''
   - name: removeEventCallback(string)
     uid: '@azure/msal-browser.EventHandler.removeEventCallback'
     package: '@azure/msal-browser'
     summary: Removes callback with provided id from callback array
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function removeEventCallback(callbackId: string)'
       parameters:
         - id: callbackId
           type: string
-          description: |+
-
+          description: ''
+  - name: subscribeCrossTab()
+    uid: '@azure/msal-browser.EventHandler.subscribeCrossTab'
+    package: '@azure/msal-browser'
+    summary: Listen for events broadcasted from other tabs/instances
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function subscribeCrossTab()
+  - name: unsubscribeCrossTab()
+    uid: '@azure/msal-browser.EventHandler.unsubscribeCrossTab'
+    package: '@azure/msal-browser'
+    summary: Unsubscribe from broadcast events
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function unsubscribeCrossTab()

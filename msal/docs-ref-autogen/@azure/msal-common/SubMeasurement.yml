@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: SubMeasurement
+uid: '@azure/msal-common.SubMeasurement'
+package: '@azure/msal-common'
+summary: ''
+fullName: SubMeasurement
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SubMeasurement = { name: string; startTimeMs: number }

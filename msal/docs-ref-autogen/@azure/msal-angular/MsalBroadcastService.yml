@@ -5,30 +5,22 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: MsalBroadcastService
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: >-
-      MsalBroadcastService(IPublicClientApplication, MsalService,
-      MsalBroadcastConfiguration)
+  - name: MsalBroadcastService(IPublicClientApplication, MsalBroadcastConfiguration)
     uid: '@azure/msal-angular.MsalBroadcastService.constructor'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
         new MsalBroadcastService(msalInstance: IPublicClientApplication,
-        authService: MsalService, msalBroadcastConfig?:
-        MsalBroadcastConfiguration)
+        msalBroadcastConfig?: MsalBroadcastConfiguration)
       parameters:
         - id: msalInstance
-          type: IPublicClientApplication
-          description: ''
-        - id: authService
-          type: <xref uid="@azure/msal-angular.MsalService" />
+          type: <xref uid="@azure/msal-browser.IPublicClientApplication" />
           description: ''
         - id: msalBroadcastConfig
           type: <xref uid="@azure/msal-angular.MsalBroadcastConfiguration" />
@@ -40,23 +32,61 @@ properties:
     summary: ''
     fullName: inProgress$
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'inProgress$: Observable<InteractionStatus>'
       return:
         description: ''
-        type: Observable&lt;InteractionStatus&gt;
+        type: Observable&lt;<xref uid="@azure/msal-browser.InteractionStatus" />&gt;
   - name: msalSubject$
     uid: '@azure/msal-angular.MsalBroadcastService.msalSubject$'
     package: '@azure/msal-angular'
     summary: ''
     fullName: msalSubject$
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'msalSubject$: Observable<EventMessage>'
       return:
         description: ''
-        type: Observable&lt;EventMessage&gt;
+        type: Observable&lt;<xref uid="@azure/msal-browser.EventMessage" />&gt;
+  - name: ɵfac
+    uid: '@azure/msal-angular.MsalBroadcastService.ɵfac'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵfac
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static ɵfac: ɵɵFactoryDeclaration<MsalBroadcastService, [null, {
+        optional: true }]>
+      return:
+        description: ''
+        type: >-
+          ɵɵFactoryDeclaration&lt;<xref
+          uid="@azure/msal-angular.MsalBroadcastService" />, [null, { optional:
+          true }]&gt;
+  - name: ɵprov
+    uid: '@azure/msal-angular.MsalBroadcastService.ɵprov'
+    package: '@azure/msal-angular'
+    summary: ''
+    fullName: ɵprov
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static ɵprov: ɵɵInjectableDeclaration<MsalBroadcastService>'
+      return:
+        description: ''
+        type: >-
+          ɵɵInjectableDeclaration&lt;<xref
+          uid="@azure/msal-angular.MsalBroadcastService" />&gt;
+methods:
+  - name: resetInProgressEvent()
+    uid: '@azure/msal-angular.MsalBroadcastService.resetInProgressEvent'
+    package: '@azure/msal-angular'
+    summary: Resets inProgress state to None
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function resetInProgressEvent()

@@ -1,0 +1,104 @@
+### YamlMime:TSType
+name: GetAccountResult
+uid: '@azure/msal-browser.GetAccountResult'
+package: '@azure/msal-browser'
+summary: ''
+fullName: GetAccountResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: GetAccountResult(CustomAuthAccountData)
+    uid: '@azure/msal-browser.GetAccountResult.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of GetAccountResult.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new GetAccountResult(resultData?: CustomAuthAccountData)'
+      parameters:
+        - id: resultData
+          type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
+          description: The result data.
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.GetAccountResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: CustomAuthAccountData'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.GetAccountResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: GetAccountError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.GetAccountError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.GetAccountResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: GetAccountResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.GetAccountResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.GetAccountResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of GetAccountResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createWithError(error: unknown): GetAccountResult'
+      parameters:
+        - id: error
+          type: unknown
+          description: The error data.
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.GetAccountResult" />
+  - name: isCompleted()
+    uid: '@azure/msal-browser.GetAccountResult.isCompleted'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a completed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCompleted(): this'
+      return:
+        description: ''
+        type: this
+  - name: isFailed()
+    uid: '@azure/msal-browser.GetAccountResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a failed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): this'
+      return:
+        description: ''
+        type: this
+extends: >-
+  AuthFlowResultBase&lt;<xref uid="@azure/msal-browser.GetAccountResultState"
+  />, <xref uid="@azure/msal-browser.GetAccountError" />, <xref
+  uid="@azure/msal-browser.CustomAuthAccountData" />&gt;

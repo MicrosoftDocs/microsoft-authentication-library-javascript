@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: HttpMethod
+uid: '@azure/msal-common.HttpMethod'
+package: '@azure/msal-common'
+summary: ''
+fullName: HttpMethod
+remarks: ''
+isDeprecated: false
+syntax: |
+  type HttpMethod = (typeof HttpMethod)[keyof typeof HttpMethod]

@@ -1,0 +1,51 @@
+### YamlMime:TSType
+name: SignOutError
+uid: '@azure/msal-browser.SignOutError'
+package: '@azure/msal-browser'
+summary: The error class for sign-out errors.
+fullName: SignOutError
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignOutError(CustomAuthError)
+    uid: '@azure/msal-browser.SignOutError.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SignOutError(errorData: CustomAuthError)'
+      parameters:
+        - id: errorData
+          type: <xref uid="@azure/msal-browser.CustomAuthError" />
+          description: ''
+inheritedProperties:
+  - name: errorData
+    uid: '@azure/msal-browser.SignOutError.errorData'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: errorData
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorData: CustomAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowErrorBase.errorData
+methods:
+  - name: isUserNotSignedIn()
+    uid: '@azure/msal-browser.SignOutError.isUserNotSignedIn'
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to the user is not signed in.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isUserNotSignedIn(): boolean'
+      return:
+        description: >-
+          true if the error is due to the user is not signed in, false
+          otherwise.
+        type: boolean
+extends: AuthFlowErrorBase

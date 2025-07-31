@@ -1,50 +1,40 @@
-### YamlMime:TSType
-name: TimeUtils
+### YamlMime:TSPackage
 uid: '@azure/msal-common.TimeUtils'
+name: TimeUtils
+type: module
 package: '@azure/msal-common'
-summary: Utility class which exposes functions for managing date and time operations.
-fullName: TimeUtils
-remarks: ''
-isPreview: false
-isDeprecated: false
-type: class
-methods:
-  - name: 'delay<T>(number, T)'
+summary: ''
+functions:
+  - name: delay<T>(number, T)
     uid: '@azure/msal-common.TimeUtils.delay'
     package: '@azure/msal-common'
     summary: Waits for t number of milliseconds
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function delay<T>(t: number, value?: T): Promise<T | void>'
+      content: 'function delay<T>(t: number, value?: T): Promise<T | void>'
       parameters:
         - id: t
           type: number
           description: number
         - id: value
           type: T
-          description: |
-            T
+          description: T
       return:
         description: ''
         type: Promise&lt;T | void&gt;
-  - name: 'isTokenExpired(string, number)'
+  - name: isTokenExpired(string, number)
     uid: '@azure/msal-common.TimeUtils.isTokenExpired'
     package: '@azure/msal-common'
     summary: check if a token is expired based on given UTC time in seconds.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: >-
-        static function isTokenExpired(expiresOn: string, offset: number):
-        boolean
+      content: 'function isTokenExpired(expiresOn: string, offset: number): boolean'
       parameters:
         - id: expiresOn
           type: string
-          description: |+
-
+          description: ''
         - id: offset
           type: number
           description: ''
@@ -56,10 +46,41 @@ methods:
     package: '@azure/msal-common'
     summary: return the current time in Unix time (seconds).
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function nowSeconds(): number'
+      content: 'function nowSeconds(): number'
+      return:
+        description: ''
+        type: number
+  - name: toDateFromSeconds(undefined | string | number)
+    uid: '@azure/msal-common.TimeUtils.toDateFromSeconds'
+    package: '@azure/msal-common'
+    summary: >-
+      Convert seconds to JS Date object. Seconds can be in a number or string
+      format or undefined (will still return a date).
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toDateFromSeconds(seconds: undefined | string | number): Date'
+      parameters:
+        - id: seconds
+          type: undefined | string | number
+          description: ''
+      return:
+        description: ''
+        type: Date
+  - name: toSecondsFromDate(Date)
+    uid: '@azure/msal-common.TimeUtils.toSecondsFromDate'
+    package: '@azure/msal-common'
+    summary: Converts JS Date object to seconds
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toSecondsFromDate(date: Date): number'
+      parameters:
+        - id: date
+          type: Date
+          description: Date
       return:
         description: ''
         type: number
@@ -72,10 +93,9 @@ methods:
 
       i.e. The system clock was turned back after acquiring the cached token
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'static function wasClockTurnedBack(cachedAt: string): boolean'
+      content: 'function wasClockTurnedBack(cachedAt: string): boolean'
       parameters:
         - id: cachedAt
           type: string

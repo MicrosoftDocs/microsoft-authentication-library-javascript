@@ -1,0 +1,25 @@
+### YamlMime:TSType
+name: SignInState
+uid: '@azure/msal-browser.SignInState'
+package: '@azure/msal-browser'
+summary: Base class for the action requried state in an authentication flow.
+fullName: SignInState<TParameters>
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignInState<TParameters>(TParameters)
+    uid: '@azure/msal-browser.SignInState.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SignInState(stateParameters: TParameters)'
+      parameters:
+        - id: stateParameters
+          type: TParameters
+          description: ''
+extends: >-
+  <xref uid="@azure/msal-browser.AuthFlowActionRequiredStateBase"
+  />&lt;TParameters&gt;

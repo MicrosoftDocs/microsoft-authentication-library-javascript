@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: OIDCOptions
+uid: '@azure/msal-common.OIDCOptions'
+package: '@azure/msal-common'
+summary: Options for the OIDC protocol mode.
+fullName: OIDCOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type OIDCOptions = {
+    defaultScopes?: string[]
+    serverResponseType?: ServerResponseType
+  }

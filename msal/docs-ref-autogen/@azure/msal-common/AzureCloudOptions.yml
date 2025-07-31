@@ -2,8 +2,9 @@
 name: AzureCloudOptions
 uid: '@azure/msal-common.AzureCloudOptions'
 package: '@azure/msal-common'
-summary: >
+summary: >-
   AzureCloudInstance specific options
+
 
   - azureCloudInstance             - string enum providing short notation for
   soverign and public cloud authorities
@@ -11,10 +12,9 @@ summary: >
   - tenant                         - provision to provide the tenant info
 fullName: AzureCloudOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AzureCloudOptions = {
-    azureCloudInstance: AzureCloudInstance,
-    tenant?: string,
+    azureCloudInstance: AzureCloudInstance
+    tenant?: string
   }

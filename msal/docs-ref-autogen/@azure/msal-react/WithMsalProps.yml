@@ -5,7 +5,6 @@ package: '@azure/msal-react'
 summary: ''
 fullName: WithMsalProps
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type WithMsalProps = { msalContext: IMsalContext }

@@ -6,6 +6,7 @@ summary: >-
   Request object passed by user to acquire a token from the server exchanging a
   valid authorization code (second leg of OAuth2.0 Authorization Code flow)
 
+
   - scopes                  - Array of scopes the application is requesting
   access to.
 
@@ -26,7 +27,7 @@ summary: >-
   will redirect to after the user inputs credentials and consents. It must
   exactly match one of the redirect URIs you registered in the portal.
 
-  - tokenQueryParameters       - String to string map of custom query parameters
+  - tokenQueryParameters    - String to string map of custom query parameters
   added to the /token call
 
   - code                    - The authorization_code that the user acquired in
@@ -45,9 +46,8 @@ summary: >-
   https://datatracker.ietf.org/doc/html/rfc6819#section-3.6.
 fullName: AuthorizationCodeRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
-syntax: >
+syntax: |
   type AuthorizationCodeRequest = Partial<
     Omit<
       CommonAuthorizationCodeRequest,
@@ -58,6 +58,6 @@ syntax: >
       | "resourceRequestMethod"
       | "resourceRequestUri"
       | "requestedClaimsHash"
+      | "storeInCache"
     >
-  > & { code: string, redirectUri: string, scopes: Array<string>, state?: string
-  }
+  > & { code: string; redirectUri: string; scopes: string[]; state?: string }

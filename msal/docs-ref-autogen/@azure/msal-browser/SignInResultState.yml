@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: SignInResultState
+uid: '@azure/msal-browser.SignInResultState'
+package: '@azure/msal-browser'
+summary: |-
+  The possible states for the SignInResult.
+  This includes:
+  - SignInCodeRequiredState: The sign-in process requires a code.
+  - SignInPasswordRequiredState: The sign-in process requires a password.
+  - SignInFailedState: The sign-in process has failed.
+  - SignInCompletedState: The sign-in process is completed.
+fullName: SignInResultState
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignInResultState =
+    | SignInCodeRequiredState
+    | SignInPasswordRequiredState
+    | SignInFailedState
+    | SignInCompletedState

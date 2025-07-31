@@ -1,0 +1,6 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-node.internals'
+name: internals
+type: module
+package: '@azure/msal-node'
+summary: ''
