@@ -20,7 +20,7 @@
         "ReferenceContainer": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"   
+      "template_folder": "_themes"
     },
     {
       "docset_name": "msal-javascript-conceptual",
@@ -40,6 +40,8 @@
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
+  "git_repository_url_open_to_public_contributors": "",
+  "git_repository_branch_open_to_public_contributors": "",
   "need_preview_pull_request": true,
   "dependent_repositories": [
     {
@@ -50,8 +52,11 @@
     }
   ],
   "branch_target_mapping": {},
+  "targets": {},
   "docs_build_engine": {},
   "skip_source_output_uploading": false,
+  "contribution_branch_mappings": {},
+  "need_generate_pdf_url_template": false,
   "JoinTOCPlugin": [
     {
       "TopLevelTOC": "msal/docs-ref-toc/fxtoc.yml",
@@ -82,7 +87,5 @@
       "id": "Microsoft.OpenPublishing.CommonPlugins",
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
     }
-  ],
-  "contribution_branch_mappings": {},
-  "need_generate_pdf_url_template": false
+  ]
 }
