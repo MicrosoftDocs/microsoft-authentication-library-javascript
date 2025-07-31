@@ -1,0 +1,8 @@
+{
+    "redirections": [
+        {
+            "source_path": "msal/overview/msal-overview.md",
+            "redirect_url": "/entra/msal/javascript"
+        }
+    ]
+}

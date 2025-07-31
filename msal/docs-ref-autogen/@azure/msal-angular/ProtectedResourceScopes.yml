@@ -5,7 +5,6 @@ package: '@azure/msal-angular'
 summary: ''
 fullName: ProtectedResourceScopes
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
-  type ProtectedResourceScopes = { httpMethod: string, scopes: Array<string> }
+  type ProtectedResourceScopes = { httpMethod: string; scopes: string[] | null }

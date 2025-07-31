@@ -5,11 +5,7 @@ package: '@azure/msal-common'
 summary: Options allowed by network request APIs.
 fullName: NetworkRequestOptions
 remarks: ''
-isPreview: false
 isDeprecated: false
-syntax: |
-  type NetworkRequestOptions = {
-    body?: string,
-    headers?: Record<string, string>,
-    proxyUrl?: string,
+syntax: >
+  type NetworkRequestOptions = { body?: string; headers?: Record<string, string>
   }

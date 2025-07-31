@@ -1,0 +1,105 @@
+### YamlMime:TSType
+name: GetAccessTokenResult
+uid: '@azure/msal-browser.GetAccessTokenResult'
+package: '@azure/msal-browser'
+summary: ''
+fullName: GetAccessTokenResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: GetAccessTokenResult(AuthenticationResult)
+    uid: '@azure/msal-browser.GetAccessTokenResult.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of GetAccessTokenResult.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new GetAccessTokenResult(resultData?: AuthenticationResult)'
+      parameters:
+        - id: resultData
+          type: AuthenticationResult
+          description: The result data of the access token.
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.GetAccessTokenResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: AuthenticationResult'
+      return:
+        description: ''
+        type: AuthenticationResult
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.GetAccessTokenResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: GetCurrentAccountAccessTokenError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.GetCurrentAccountAccessTokenError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.GetAccessTokenResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: GetAccessTokenResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.GetAccessTokenResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.GetAccessTokenResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of GetAccessTokenResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createWithError(error: unknown): GetAccessTokenResult'
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+      return:
+        description: The result with the error.
+        type: <xref uid="@azure/msal-browser.GetAccessTokenResult" />
+  - name: isCompleted()
+    uid: '@azure/msal-browser.GetAccessTokenResult.isCompleted'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is completed.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCompleted(): this'
+      return:
+        description: ''
+        type: this
+  - name: isFailed()
+    uid: '@azure/msal-browser.GetAccessTokenResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is failed.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): this'
+      return:
+        description: ''
+        type: this
+extends: >-
+  AuthFlowResultBase&lt;<xref
+  uid="@azure/msal-browser.GetAccessTokenResultState" />, <xref
+  uid="@azure/msal-browser.GetCurrentAccountAccessTokenError" />,
+  AuthenticationResult&gt;

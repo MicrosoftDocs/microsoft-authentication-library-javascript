@@ -1,0 +1,153 @@
+### YamlMime:TSType
+name: StubPerformanceClient
+uid: '@azure/msal-browser.StubPerformanceClient'
+package: '@azure/msal-browser'
+summary: ''
+fullName: StubPerformanceClient
+remarks: ''
+isDeprecated: false
+type: class
+methods:
+  - name: addFields()
+    uid: '@azure/msal-browser.StubPerformanceClient.addFields'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function addFields()
+  - name: addPerformanceCallback()
+    uid: '@azure/msal-browser.StubPerformanceClient.addPerformanceCallback'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function addPerformanceCallback(): string'
+      return:
+        description: ''
+        type: string
+  - name: addQueueMeasurement()
+    uid: '@azure/msal-browser.StubPerformanceClient.addQueueMeasurement'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function addQueueMeasurement()
+  - name: cacheEventByCorrelationId()
+    uid: '@azure/msal-browser.StubPerformanceClient.cacheEventByCorrelationId'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function cacheEventByCorrelationId()
+  - name: calculateQueuedTime()
+    uid: '@azure/msal-browser.StubPerformanceClient.calculateQueuedTime'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function calculateQueuedTime(): number'
+      return:
+        description: ''
+        type: number
+  - name: discardMeasurements()
+    uid: '@azure/msal-browser.StubPerformanceClient.discardMeasurements'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function discardMeasurements()
+  - name: emitEvents()
+    uid: '@azure/msal-browser.StubPerformanceClient.emitEvents'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function emitEvents()
+  - name: endMeasurement()
+    uid: '@azure/msal-browser.StubPerformanceClient.endMeasurement'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function endMeasurement(): null | PerformanceEvent'
+      return:
+        description: ''
+        type: null | <xref uid="@azure/msal-browser.PerformanceEvent" />
+  - name: generateId()
+    uid: '@azure/msal-browser.StubPerformanceClient.generateId'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function generateId(): string'
+      return:
+        description: ''
+        type: string
+  - name: incrementFields()
+    uid: '@azure/msal-browser.StubPerformanceClient.incrementFields'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function incrementFields()
+  - name: removePerformanceCallback()
+    uid: '@azure/msal-browser.StubPerformanceClient.removePerformanceCallback'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removePerformanceCallback(): boolean'
+      return:
+        description: ''
+        type: boolean
+  - name: setPreQueueTime()
+    uid: '@azure/msal-browser.StubPerformanceClient.setPreQueueTime'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function setPreQueueTime()
+  - name: startMeasurement(string, string)
+    uid: '@azure/msal-browser.StubPerformanceClient.startMeasurement'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function startMeasurement(measureName: string, correlationId?: string):
+        InProgressPerformanceEvent
+      parameters:
+        - id: measureName
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.InProgressPerformanceEvent" />
+  - name: startPerformanceMeasurement()
+    uid: '@azure/msal-browser.StubPerformanceClient.startPerformanceMeasurement'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: This method will be removed in the next major version
+    syntax:
+      content: 'function startPerformanceMeasurement(): IPerformanceMeasurement'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.IPerformanceMeasurement" />

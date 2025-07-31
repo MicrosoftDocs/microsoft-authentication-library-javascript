@@ -1,0 +1,51 @@
+### YamlMime:TSType
+name: ILoopbackClient
+uid: '@azure/msal-node.ILoopbackClient'
+package: '@azure/msal-node'
+summary: >-
+  Interface for LoopbackClient allowing to replace the default loopback server
+  with a custom implementation.
+fullName: ILoopbackClient
+remarks: ''
+isDeprecated: false
+type: interface
+methods:
+  - name: closeServer()
+    uid: '@azure/msal-node.ILoopbackClient.closeServer'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function closeServer()
+  - name: getRedirectUri()
+    uid: '@azure/msal-node.ILoopbackClient.getRedirectUri'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getRedirectUri(): string'
+      return:
+        description: ''
+        type: string
+  - name: listenForAuthCode(string, string)
+    uid: '@azure/msal-node.ILoopbackClient.listenForAuthCode'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function listenForAuthCode(successTemplate?: string, errorTemplate?:
+        string): Promise<AuthorizeResponse>
+      parameters:
+        - id: successTemplate
+          type: string
+          description: ''
+        - id: errorTemplate
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-node.AuthorizeResponse" />&gt;

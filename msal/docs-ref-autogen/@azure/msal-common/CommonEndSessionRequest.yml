@@ -22,17 +22,19 @@ summary: >-
 
   - logoutHint             - A string that specifies the account that is being
   logged out in order to skip the server account picker on logout
+
+  - extraQueryParameters   - String to string map of custom query parameters
+  added to the /authorize call
 fullName: CommonEndSessionRequest
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type CommonEndSessionRequest = {
-    account?: AccountInfo | null,
-    correlationId: string,
-    extraQueryParameters?: StringDict,
-    idTokenHint?: string,
-    logoutHint?: string,
-    postLogoutRedirectUri?: string | null,
-    state?: string,
+    account?: AccountInfo | null
+    correlationId: string
+    extraQueryParameters?: StringDict
+    idTokenHint?: string
+    logoutHint?: string
+    postLogoutRedirectUri?: string | null
+    state?: string
   }

@@ -2,8 +2,9 @@
 name: AppTokenProviderResult
 uid: '@azure/msal-common.AppTokenProviderResult'
 package: '@azure/msal-common'
-summary: >
+summary: >-
   Output object for IAppTokenProvider extensiblity.
+
 
   - accessToken            - the actual access token, typically in JWT format,
   that satisfies the request data AppTokenProviderParameters
@@ -16,11 +17,10 @@ summary: >
   response.
 fullName: AppTokenProviderResult
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type AppTokenProviderResult = {
-    accessToken: string,
-    expiresInSeconds: number,
-    refreshInSeconds?: number,
+    accessToken: string
+    expiresInSeconds: number
+    refreshInSeconds?: number
   }

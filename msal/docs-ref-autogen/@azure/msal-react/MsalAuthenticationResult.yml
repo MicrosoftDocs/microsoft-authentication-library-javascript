@@ -5,18 +5,17 @@ package: '@azure/msal-react'
 summary: ''
 fullName: MsalAuthenticationResult
 remarks: ''
-isPreview: false
 isDeprecated: false
 syntax: |
   type MsalAuthenticationResult = {
     acquireToken: (
-      callbackInteractionType?: InteractionType | undefined,
-      callbackRequest?: SilentRequest | undefined
-    ) => Promise<AuthenticationResult | null>,
-    error: AuthError | null,
+      callbackInteractionType?: InteractionType,
+      callbackRequest?: SilentRequest
+    ) => Promise<AuthenticationResult | null>
+    error: AuthError | null
     login: (
-      callbackInteractionType?: InteractionType | undefined,
+      callbackInteractionType?: InteractionType,
       callbackRequest?: PopupRequest | RedirectRequest | SilentRequest
-    ) => Promise<AuthenticationResult | null>,
-    result: AuthenticationResult | null,
+    ) => Promise<AuthenticationResult | null>
+    result: AuthenticationResult | null
   }

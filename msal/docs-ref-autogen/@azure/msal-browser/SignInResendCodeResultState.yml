@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: SignInResendCodeResultState
+uid: '@azure/msal-browser.SignInResendCodeResultState'
+package: '@azure/msal-browser'
+summary: |-
+  The possible states for the SignInResendCodeResult.
+  This includes:
+  - SignInCodeRequiredState: The sign-in process requires a code.
+  - SignInFailedState: The sign-in process has failed.
+fullName: SignInResendCodeResultState
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignInResendCodeResultState = SignInCodeRequiredState | SignInFailedState

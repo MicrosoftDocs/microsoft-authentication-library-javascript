@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: NetworkResponse
+uid: '@azure/msal-browser.NetworkResponse'
+package: '@azure/msal-browser'
+summary: ''
+fullName: NetworkResponse<T>
+remarks: ''
+isDeprecated: false
+syntax: |
+  type NetworkResponse<T> = {
+    body: T
+    headers: Record<string, string>
+    status: number
+  }

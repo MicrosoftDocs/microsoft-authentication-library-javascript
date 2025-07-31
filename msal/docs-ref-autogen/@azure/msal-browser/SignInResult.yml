@@ -1,0 +1,131 @@
+### YamlMime:TSType
+name: SignInResult
+uid: '@azure/msal-browser.SignInResult'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignInResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignInResult(SignInResultState, CustomAuthAccountData)
+    uid: '@azure/msal-browser.SignInResult.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignInResultState.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SignInResult(state: SignInResultState, resultData?:
+        CustomAuthAccountData)
+      parameters:
+        - id: state
+          type: <xref uid="@azure/msal-browser.SignInResultState" />
+          description: The state of the result.
+        - id: resultData
+          type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
+          description: ''
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.SignInResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: CustomAuthAccountData'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.SignInResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: SignInError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignInError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.SignInResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: SignInResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignInResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.SignInResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignInResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createWithError(error: unknown): SignInResult'
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+      return:
+        description: A new instance of SignInResult with the error set.
+        type: <xref uid="@azure/msal-browser.SignInResult" />
+  - name: isCodeRequired()
+    uid: '@azure/msal-browser.SignInResult.isCodeRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a code required state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCodeRequired(): this'
+      return:
+        description: ''
+        type: this
+  - name: isCompleted()
+    uid: '@azure/msal-browser.SignInResult.isCompleted'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a completed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCompleted(): this'
+      return:
+        description: ''
+        type: this
+  - name: isFailed()
+    uid: '@azure/msal-browser.SignInResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a failed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): this'
+      return:
+        description: ''
+        type: this
+  - name: isPasswordRequired()
+    uid: '@azure/msal-browser.SignInResult.isPasswordRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a password required state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isPasswordRequired(): this'
+      return:
+        description: ''
+        type: this
+extends: >-
+  AuthFlowResultBase&lt;<xref uid="@azure/msal-browser.SignInResultState" />,
+  <xref uid="@azure/msal-browser.SignInError" />, <xref
+  uid="@azure/msal-browser.CustomAuthAccountData" />&gt;

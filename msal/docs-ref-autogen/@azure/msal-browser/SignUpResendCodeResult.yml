@@ -1,0 +1,104 @@
+### YamlMime:TSType
+name: SignUpResendCodeResult
+uid: '@azure/msal-browser.SignUpResendCodeResult'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignUpResendCodeResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignUpResendCodeResult(SignUpResendCodeResultState)
+    uid: '@azure/msal-browser.SignUpResendCodeResult.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignUpResendCodeResult.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SignUpResendCodeResult(state: SignUpResendCodeResultState)'
+      parameters:
+        - id: state
+          type: <xref uid="@azure/msal-browser.SignUpResendCodeResultState" />
+          description: The state of the result.
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.SignUpResendCodeResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: void'
+      return:
+        description: ''
+        type: void
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.SignUpResendCodeResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: SignUpResendCodeError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignUpResendCodeError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.SignUpResendCodeResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: SignUpResendCodeResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignUpResendCodeResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.SignUpResendCodeResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignUpResendCodeResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createWithError(error: unknown): SignUpResendCodeResult'
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+      return:
+        description: A new instance of SignUpResendCodeResult with the error set.
+        type: <xref uid="@azure/msal-browser.SignUpResendCodeResult" />
+  - name: isCodeRequired()
+    uid: '@azure/msal-browser.SignUpResendCodeResult.isCodeRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a code required state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCodeRequired(): this'
+      return:
+        description: ''
+        type: this
+  - name: isFailed()
+    uid: '@azure/msal-browser.SignUpResendCodeResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a failed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): this'
+      return:
+        description: ''
+        type: this
+extends: >-
+  AuthFlowResultBase&lt;<xref
+  uid="@azure/msal-browser.SignUpResendCodeResultState" />, <xref
+  uid="@azure/msal-browser.SignUpResendCodeError" />, void&gt;

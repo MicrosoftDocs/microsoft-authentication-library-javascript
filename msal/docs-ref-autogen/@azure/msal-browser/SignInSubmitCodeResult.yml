@@ -1,0 +1,110 @@
+### YamlMime:TSType
+name: SignInSubmitCodeResult
+uid: '@azure/msal-browser.SignInSubmitCodeResult'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignInSubmitCodeResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      SignInSubmitCodeResult(SignInSubmitCredentialResultState,
+      CustomAuthAccountData)
+    uid: '@azure/msal-browser.SignInSubmitCodeResult.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignInSubmitCredentialResult.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SignInSubmitCodeResult(state: SignInSubmitCredentialResultState,
+        resultData?: CustomAuthAccountData)
+      parameters:
+        - id: state
+          type: <xref uid="@azure/msal-browser.SignInSubmitCredentialResultState" />
+          description: The state of the result.
+        - id: resultData
+          type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
+          description: The result data.
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.SignInSubmitCodeResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: CustomAuthAccountData'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
+    inheritanceDescription: <b>Inherited From</b> SignInSubmitCredentialResult.data
+  - name: error
+    uid: '@azure/msal-browser.SignInSubmitCodeResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: SignInSubmitCodeError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignInSubmitCodeError" />
+    inheritanceDescription: <b>Inherited From</b> SignInSubmitCredentialResult.error
+  - name: state
+    uid: '@azure/msal-browser.SignInSubmitCodeResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: SignInSubmitCredentialResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignInSubmitCredentialResultState" />
+    inheritanceDescription: <b>Inherited From</b> SignInSubmitCredentialResult.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.SignInSubmitCodeResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignInSubmitCodeResult with error data.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createWithError(error: unknown): SignInSubmitCodeResult'
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+      return:
+        description: A new instance of SignInSubmitCodeResult with the error set.
+        type: <xref uid="@azure/msal-browser.SignInSubmitCodeResult" />
+  - name: isCompleted()
+    uid: '@azure/msal-browser.SignInSubmitCodeResult.isCompleted'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a completed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCompleted(): this'
+      return:
+        description: ''
+        type: this
+  - name: isFailed()
+    uid: '@azure/msal-browser.SignInSubmitCodeResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a failed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): this'
+      return:
+        description: ''
+        type: this
+extends: >-
+  SignInSubmitCredentialResult&lt;<xref
+  uid="@azure/msal-browser.SignInSubmitCodeError" />&gt;

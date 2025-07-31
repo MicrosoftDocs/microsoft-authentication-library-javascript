@@ -1,0 +1,6 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.CacheErrorCodes'
+name: CacheErrorCodes
+type: module
+package: '@azure/msal-common'
+summary: ''

@@ -1,0 +1,127 @@
+### YamlMime:TSType
+name: INativeBrokerPlugin
+uid: '@azure/msal-node.INativeBrokerPlugin'
+package: '@azure/msal-node'
+summary: ''
+fullName: INativeBrokerPlugin
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: isBrokerAvailable
+    uid: '@azure/msal-node.INativeBrokerPlugin.isBrokerAvailable'
+    package: '@azure/msal-node'
+    summary: ''
+    fullName: isBrokerAvailable
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'isBrokerAvailable: boolean'
+      return:
+        description: ''
+        type: boolean
+methods:
+  - name: acquireTokenInteractive(NativeRequest, Buffer)
+    uid: '@azure/msal-node.INativeBrokerPlugin.acquireTokenInteractive'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenInteractive(request: NativeRequest, windowHandle?:
+        Buffer): Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.NativeRequest" />
+          description: ''
+        - id: windowHandle
+          type: Buffer
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" />&gt;
+  - name: acquireTokenSilent(NativeRequest)
+    uid: '@azure/msal-node.INativeBrokerPlugin.acquireTokenSilent'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenSilent(request: NativeRequest):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.NativeRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" />&gt;
+  - name: getAccountById(string, string)
+    uid: '@azure/msal-node.INativeBrokerPlugin.getAccountById'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAccountById(accountId: string, correlationId: string):
+        Promise<AccountInfo>
+      parameters:
+        - id: accountId
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-node.AccountInfo" />&gt;
+  - name: getAllAccounts(string, string)
+    uid: '@azure/msal-node.INativeBrokerPlugin.getAllAccounts'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getAllAccounts(clientId: string, correlationId: string):
+        Promise<AccountInfo[]>
+      parameters:
+        - id: clientId
+          type: string
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-node.AccountInfo" />[]&gt;
+  - name: setLogger(LoggerOptions)
+    uid: '@azure/msal-node.INativeBrokerPlugin.setLogger'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setLogger(loggerOptions: LoggerOptions)'
+      parameters:
+        - id: loggerOptions
+          type: <xref uid="@azure/msal-common.LoggerOptions" />
+          description: ''
+  - name: signOut(NativeSignOutRequest)
+    uid: '@azure/msal-node.INativeBrokerPlugin.signOut'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function signOut(request: NativeSignOutRequest): Promise<void>'
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.NativeSignOutRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;

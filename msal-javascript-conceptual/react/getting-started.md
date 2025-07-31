@@ -6,7 +6,7 @@ manager: CelesteDG
 
 ms.service: msal
 ms.subservice: msal-react
-ms.topic: conceptual
+ms.topic: get-started
 ms.date: 11/29/2023
 ms.author: emilylauber
 ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus

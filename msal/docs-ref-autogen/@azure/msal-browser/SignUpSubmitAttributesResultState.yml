@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: SignUpSubmitAttributesResultState
+uid: '@azure/msal-browser.SignUpSubmitAttributesResultState'
+package: '@azure/msal-browser'
+summary: |-
+  The possible states for the SignUpSubmitAttributesResult.
+  This includes:
+  - SignUpCompletedState: The sign-up process has completed successfully.
+  - SignUpFailedState: The sign-up process has failed.
+fullName: SignUpSubmitAttributesResultState
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignUpSubmitAttributesResultState =
+    | SignUpCompletedState
+    | SignUpFailedState

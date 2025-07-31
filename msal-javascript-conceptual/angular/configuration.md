@@ -6,7 +6,7 @@ manager: CelesteDG
 
 ms.service: msal
 ms.subservice: msal-angular
-ms.topic: conceptual
+ms.topic: article
 ms.date: 01/10/2024
 ms.author: emilylauber
 ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
@@ -119,7 +119,7 @@ import { IPublicClientApplication, PublicClientApplication, InteractionType, Bro
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      clientId: "6226576d-37e9-49eb-b201-ec1eeb0029b6",
+      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444",
       redirectUri: "http://localhost:4200",
       postLogoutRedirectUri: "http://localhost:4200"
     },

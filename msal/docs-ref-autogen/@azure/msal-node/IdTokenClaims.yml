@@ -1,0 +1,44 @@
+### YamlMime:TSTypeAlias
+name: IdTokenClaims
+uid: '@azure/msal-node.IdTokenClaims'
+package: '@azure/msal-node'
+summary: Type which describes Id Token claims known by MSAL.
+fullName: IdTokenClaims
+remarks: ''
+isDeprecated: false
+syntax: |
+  type IdTokenClaims = {
+    acr?: string
+    amr?: string[]
+    at?: string
+    aud?: string
+    auth_time?: number
+    cloud_instance_host_name?: string
+    cnf?: { kid: string }
+    emails?: string[]
+    exp?: number
+    home_oid?: string
+    iat?: number
+    idp?: string
+    iss?: string
+    login_hint?: string
+    m?: string
+    name?: string
+    nbf?: number
+    nonce?: string
+    oid?: string
+    p?: string
+    preferred_username?: string
+    roles?: string[]
+    sid?: string
+    sub?: string
+    tenant_region_scope?: string
+    tenant_region_sub_scope?: string
+    tfp?: string
+    tid?: string
+    ts?: number
+    u?: string
+    upn?: string
+    ver?: string
+    x5c_ca?: string[]
+  }

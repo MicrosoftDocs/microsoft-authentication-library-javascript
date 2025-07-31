@@ -8,7 +8,7 @@ ms.author: emilylauber
 ms.date: 11/28/2023
 ms.service: msal
 ms.subservice: msal-node
-ms.topic: conceptual
+ms.topic: article
 ms.reviewer: dmwendia, cwerner, owenrichards, kengaderdus
 #Customer intent: 
 ---
@@ -30,7 +30,7 @@ require('dotenv').config(); // process.env now has the values defined in a .env 
 // Create msal application object
 const cca = new msal.ConfidentialClientApplication({
     auth: {
-        clientId: "Enter_the_Application_Id_Here", // e.g. "b1b60dca-c49d-496e-9851-xxxxxxxxxxxx" (guid)
+        clientId: "Enter_the_Application_Id_Here", // e.g. "00001111-aaaa-2222-bbbb-3333cccc4444" (guid)
         authority: "https://login.microsoftonline.com/Enter_the_Tenant_Info_Here", // e.g. "common" or your tenantId (guid)
         clientSecret: process.env.clientSecret // obtained during app registration
     }

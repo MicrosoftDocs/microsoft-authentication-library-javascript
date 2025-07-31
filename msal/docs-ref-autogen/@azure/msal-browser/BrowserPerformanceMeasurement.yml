@@ -5,16 +5,14 @@ package: '@azure/msal-browser'
 summary: ''
 fullName: BrowserPerformanceMeasurement
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: class
 constructors:
-  - name: 'BrowserPerformanceMeasurement(string, string)'
+  - name: BrowserPerformanceMeasurement(string, string)
     uid: '@azure/msal-browser.BrowserPerformanceMeasurement.constructor'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'new BrowserPerformanceMeasurement(name: string, correlationId: string)'
@@ -31,7 +29,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function endMeasurement()
@@ -40,19 +37,34 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function flushMeasurement(): number | null'
+      content: 'function flushMeasurement(): null | number'
       return:
         description: ''
-        type: number | null
+        type: null | number
+  - name: flushMeasurements(string, SubMeasurement[])
+    uid: '@azure/msal-browser.BrowserPerformanceMeasurement.flushMeasurements'
+    package: '@azure/msal-browser'
+    summary: Flush browser marks and measurements.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function flushMeasurements(correlationId: string, measurements:
+        SubMeasurement[])
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+        - id: measurements
+          type: <xref uid="@azure/msal-common.SubMeasurement" />[]
+          description: ''
   - name: startMeasurement()
     uid: '@azure/msal-browser.BrowserPerformanceMeasurement.startMeasurement'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: function startMeasurement()
@@ -62,7 +74,6 @@ methods:
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'static function supportsBrowserPerformance(): boolean'

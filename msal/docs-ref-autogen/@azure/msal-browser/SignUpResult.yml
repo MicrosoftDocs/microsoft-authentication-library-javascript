@@ -1,0 +1,125 @@
+### YamlMime:TSType
+name: SignUpResult
+uid: '@azure/msal-browser.SignUpResult'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignUpResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignUpResult(SignUpResultState)
+    uid: '@azure/msal-browser.SignUpResult.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignUpResult.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SignUpResult(state: SignUpResultState)'
+      parameters:
+        - id: state
+          type: <xref uid="@azure/msal-browser.SignUpResultState" />
+          description: The state of the result.
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.SignUpResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: void'
+      return:
+        description: ''
+        type: void
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.SignUpResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: SignUpError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignUpError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.SignUpResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: SignUpResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignUpResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.SignUpResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignUpResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createWithError(error: unknown): SignUpResult'
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+      return:
+        description: A new instance of SignUpResult with the error set.
+        type: <xref uid="@azure/msal-browser.SignUpResult" />
+  - name: isAttributesRequired()
+    uid: '@azure/msal-browser.SignUpResult.isAttributesRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in an attributes required state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isAttributesRequired(): this'
+      return:
+        description: ''
+        type: this
+  - name: isCodeRequired()
+    uid: '@azure/msal-browser.SignUpResult.isCodeRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a code required state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCodeRequired(): this'
+      return:
+        description: ''
+        type: this
+  - name: isFailed()
+    uid: '@azure/msal-browser.SignUpResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a failed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): this'
+      return:
+        description: ''
+        type: this
+  - name: isPasswordRequired()
+    uid: '@azure/msal-browser.SignUpResult.isPasswordRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a password required state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isPasswordRequired(): this'
+      return:
+        description: ''
+        type: this
+extends: >-
+  AuthFlowResultBase&lt;<xref uid="@azure/msal-browser.SignUpResultState" />,
+  <xref uid="@azure/msal-browser.SignUpError" />, void&gt;

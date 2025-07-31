@@ -5,7 +5,6 @@ package: '@azure/msal-common'
 summary: Interface for crypto functions used by library
 fullName: ICrypto
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
@@ -14,15 +13,13 @@ methods:
     package: '@azure/msal-common'
     summary: base64 decode string
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function base64Decode(input: string): string'
       parameters:
         - id: input
           type: string
-          description: |+
-
+          description: ''
       return:
         description: ''
         type: string
@@ -31,15 +28,28 @@ methods:
     package: '@azure/msal-common'
     summary: base64 Encode string
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function base64Encode(input: string): string'
       parameters:
         - id: input
           type: string
-          description: |+
-
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: base64UrlEncode(string)
+    uid: '@azure/msal-common.ICrypto.base64UrlEncode'
+    package: '@azure/msal-common'
+    summary: base64 URL safe encoded string
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function base64UrlEncode(input: string): string'
+      parameters:
+        - id: input
+          type: string
+          description: ''
       return:
         description: ''
         type: string
@@ -48,7 +58,6 @@ methods:
     package: '@azure/msal-common'
     summary: Removes all cryptographic keys from IndexedDB storage
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function clearKeystore(): Promise<boolean>'
@@ -60,33 +69,32 @@ methods:
     package: '@azure/msal-common'
     summary: Creates a guid randomly.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function createNewGuid(): string'
       return:
         description: ''
         type: string
-  - name: generatePkceCodes()
-    uid: '@azure/msal-common.ICrypto.generatePkceCodes'
+  - name: encodeKid(string)
+    uid: '@azure/msal-common.ICrypto.encodeKid'
     package: '@azure/msal-common'
-    summary: >-
-      Generate PKCE codes for OAuth. See RFC here:
-      https://tools.ietf.org/html/rfc7636
+    summary: Stringifies and base64Url encodes input public key
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function generatePkceCodes(): Promise<PkceCodes>'
+      content: 'function encodeKid(inputKid: string): string'
+      parameters:
+        - id: inputKid
+          type: string
+          description: ''
       return:
-        description: ''
-        type: Promise&lt;<xref uid="@azure/msal-common.PkceCodes" />&gt;
+        description: Base64Url encoded public key
+        type: string
   - name: getPublicKeyThumbprint(SignedHttpRequestParameters)
     uid: '@azure/msal-common.ICrypto.getPublicKeyThumbprint'
     package: '@azure/msal-common'
     summary: Generates an JWK RSA S256 Thumbprint
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
@@ -95,8 +103,7 @@ methods:
       parameters:
         - id: request
           type: <xref uid="@azure/msal-common.SignedHttpRequestParameters" />
-          description: |+
-
+          description: ''
       return:
         description: ''
         type: Promise&lt;string&gt;
@@ -105,15 +112,13 @@ methods:
     package: '@azure/msal-common'
     summary: Returns the SHA-256 hash of an input string
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function hashString(plainText: string): Promise<string>'
       parameters:
         - id: plainText
           type: string
-          description: |+
-
+          description: ''
       return:
         description: ''
         type: Promise&lt;string&gt;
@@ -122,37 +127,37 @@ methods:
     package: '@azure/msal-common'
     summary: Removes cryptographic keypair from key store matching the keyId passed in
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
-      content: 'function removeTokenBindingKey(kid: string): Promise<boolean>'
+      content: 'function removeTokenBindingKey(kid: string): Promise<void>'
       parameters:
         - id: kid
           type: string
-          description: |+
-
+          description: ''
       return:
         description: ''
-        type: Promise&lt;boolean&gt;
-  - name: 'signJwt(SignedHttpRequest, string, string)'
+        type: Promise&lt;void&gt;
+  - name: signJwt(SignedHttpRequest, string, ShrOptions, string)
     uid: '@azure/msal-common.ICrypto.signJwt'
     package: '@azure/msal-common'
     summary: >-
       Returns a signed proof-of-possession token with a given acces token that
       contains a cnf claim with the required kid.
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: >-
-        function signJwt(payload: SignedHttpRequest, kid: string,
-        correlationId?: string): Promise<string>
+        function signJwt(payload: SignedHttpRequest, kid: string, shrOptions?:
+        ShrOptions, correlationId?: string): Promise<string>
       parameters:
         - id: payload
           type: <xref uid="@azure/msal-common.SignedHttpRequest" />
           description: ''
         - id: kid
           type: string
+          description: ''
+        - id: shrOptions
+          type: <xref uid="@azure/msal-common.ShrOptions" />
           description: ''
         - id: correlationId
           type: string

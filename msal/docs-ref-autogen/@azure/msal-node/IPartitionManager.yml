@@ -2,57 +2,48 @@
 name: IPartitionManager
 uid: '@azure/msal-node.IPartitionManager'
 package: '@azure/msal-node'
-summary: ''
+summary: >-
+  Interface that defines getter methods to get keys used to identity data in the
+  cache
 fullName: IPartitionManager
 remarks: ''
-isPreview: false
 isDeprecated: false
 type: interface
 methods:
   - name: extractKey(AccountEntity)
     uid: '@azure/msal-node.IPartitionManager.extractKey'
     package: '@azure/msal-node'
-    summary: >
+    summary: |-
       This function should return the correct key being used to save each
-
       user's cache information to cache - given an AccountEntity
 
       Example: Your application may be partitioning the user's cache
-
       information for each user using the homeAccountId thus
-
       this function would return the homeAccountId from
-
       the provided AccountEntity
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function extractKey(accountEntity: AccountEntity): Promise<string>'
       parameters:
         - id: accountEntity
-          type: AccountEntity
-          description: ''
+          type: <xref uid="@azure/msal-common.AccountEntity" />
+          description: AccountEntity
       return:
         description: Promise<string>
         type: Promise&lt;string&gt;
   - name: getKey()
     uid: '@azure/msal-node.IPartitionManager.getKey'
     package: '@azure/msal-node'
-    summary: >
+    summary: |-
       This function should return the correct key from which to read
-
       the specific user's information from cache.
 
       Example: Your application may be partitioning the user's cache
-
       information for each user using the homeAccountId and thus
-
       this function would return the homeAccountId for
-
       the user in question
     remarks: ''
-    isPreview: false
     isDeprecated: false
     syntax:
       content: 'function getKey(): Promise<string>'

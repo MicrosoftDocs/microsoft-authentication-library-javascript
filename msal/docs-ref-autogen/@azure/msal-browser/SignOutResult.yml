@@ -1,0 +1,99 @@
+### YamlMime:TSType
+name: SignOutResult
+uid: '@azure/msal-browser.SignOutResult'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignOutResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignOutResult()
+    uid: '@azure/msal-browser.SignOutResult.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignOutResult.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: new SignOutResult()
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.SignOutResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: void'
+      return:
+        description: ''
+        type: void
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.SignOutResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: SignOutError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignOutError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.SignOutResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: SignOutResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignOutResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.SignOutResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignOutResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function createWithError(error: unknown): SignOutResult'
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred during the sign-out operation.
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignOutResult" />
+  - name: isCompleted()
+    uid: '@azure/msal-browser.SignOutResult.isCompleted'
+    package: '@azure/msal-browser'
+    summary: Checks if the sign-out operation is completed.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCompleted(): this'
+      return:
+        description: ''
+        type: this
+  - name: isFailed()
+    uid: '@azure/msal-browser.SignOutResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the sign-out operation failed.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): this'
+      return:
+        description: ''
+        type: this
+extends: >-
+  AuthFlowResultBase&lt;<xref uid="@azure/msal-browser.SignOutResultState" />,
+  <xref uid="@azure/msal-browser.SignOutError" />, void&gt;

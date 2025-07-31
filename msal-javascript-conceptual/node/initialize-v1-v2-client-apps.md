@@ -8,7 +8,7 @@ ms.custom: devx-track-js,
 ms.date: 05/16/2023
 ms.service: msal
 ms.subservice: msal-node
-ms.topic: conceptual
+ms.topic: how-to
 #Customer intent: As an application developer, I want to learn about initializing a client application in MSAL.js to enable support for authentication and authorization in a JavaScript single-page application (SPA).
 ---
 

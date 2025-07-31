@@ -1,0 +1,129 @@
+### YamlMime:TSType
+name: SignInError
+uid: '@azure/msal-browser.SignInError'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignInError
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignInError(CustomAuthError)
+    uid: '@azure/msal-browser.SignInError.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new SignInError(errorData: CustomAuthError)'
+      parameters:
+        - id: errorData
+          type: <xref uid="@azure/msal-browser.CustomAuthError" />
+          description: ''
+inheritedProperties:
+  - name: errorData
+    uid: '@azure/msal-browser.SignInError.errorData'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: errorData
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorData: CustomAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthError" />
+    inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.errorData
+inheritedMethods:
+  - name: isTokenExpired()
+    uid: '@azure/msal-browser.SignInError.isTokenExpired'
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to the expired continuation token.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isTokenExpired(): boolean'
+      return:
+        description: >-
+          True if the error is due to the expired continuation token, false
+          otherwise.
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.isTokenExpired
+methods:
+  - name: isInvalidUsername()
+    uid: '@azure/msal-browser.SignInError.isInvalidUsername'
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to the username being invalid.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isInvalidUsername(): boolean'
+      return:
+        description: >-
+          true if the error is due to the username being invalid, false
+          otherwise.
+        type: boolean
+  - name: isPasswordIncorrect()
+    uid: '@azure/msal-browser.SignInError.isPasswordIncorrect'
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to the provided password being incorrect.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isPasswordIncorrect(): boolean'
+      return:
+        description: >-
+          true if the error is due to the provided password being incorrect,
+          false otherwise.
+        type: boolean
+  - name: isPasswordResetRequired()
+    uid: '@azure/msal-browser.SignInError.isPasswordResetRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to password reset being required.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isPasswordResetRequired(): boolean'
+      return:
+        description: >-
+          true if the error is due to password reset being required, false
+          otherwise.
+        type: boolean
+  - name: isRedirectRequired()
+    uid: '@azure/msal-browser.SignInError.isRedirectRequired'
+    package: '@azure/msal-browser'
+    summary: Check if client app supports the challenge type configured in Entra.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isRedirectRequired(): boolean'
+      return:
+        description: True if "loginPopup" function is required to continue sthe operation.
+        type: boolean
+  - name: isUnsupportedChallengeType()
+    uid: '@azure/msal-browser.SignInError.isUnsupportedChallengeType'
+    package: '@azure/msal-browser'
+    summary: >-
+      Checks if the error is due to the provided challenge type is not
+      supported.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isUnsupportedChallengeType(): boolean'
+      return:
+        description: >-
+          True if the error is due to the provided challenge type is not
+          supported, false otherwise.
+        type: boolean
+  - name: isUserNotFound()
+    uid: '@azure/msal-browser.SignInError.isUserNotFound'
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to the user not being found.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isUserNotFound(): boolean'
+      return:
+        description: true if the error is due to the user not being found, false otherwise.
+        type: boolean
+extends: AuthActionErrorBase

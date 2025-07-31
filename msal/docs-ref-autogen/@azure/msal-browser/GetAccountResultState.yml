@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: GetAccountResultState
+uid: '@azure/msal-browser.GetAccountResultState'
+package: '@azure/msal-browser'
+summary: |-
+  The possible states for the GetAccountResult.
+  This includes:
+  - GetAccountCompletedState: The account was successfully retrieved.
+  - GetAccountFailedState: The account retrieval failed.
+fullName: GetAccountResultState
+remarks: ''
+isDeprecated: false
+syntax: |
+  type GetAccountResultState = GetAccountCompletedState | GetAccountFailedState

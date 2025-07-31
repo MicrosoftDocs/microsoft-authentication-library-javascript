@@ -1,0 +1,86 @@
+### YamlMime:TSType
+name: SignInCodeRequiredState
+uid: '@azure/msal-browser.SignInCodeRequiredState'
+package: '@azure/msal-browser'
+summary: Base class for the action requried state in an authentication flow.
+fullName: SignInCodeRequiredState
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignInCodeRequiredState(SignInCodeRequiredStateParameters)
+    uid: '@azure/msal-browser.SignInCodeRequiredState.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SignInCodeRequiredState(stateParameters:
+        SignInCodeRequiredStateParameters)
+      parameters:
+        - id: stateParameters
+          type: SignInCodeRequiredStateParameters
+          description: ''
+methods:
+  - name: getCodeLength()
+    uid: '@azure/msal-browser.SignInCodeRequiredState.getCodeLength'
+    package: '@azure/msal-browser'
+    summary: Gets the sent code length.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeLength(): number'
+      return:
+        description: The length of the code.
+        type: number
+  - name: getScopes()
+    uid: '@azure/msal-browser.SignInCodeRequiredState.getScopes'
+    package: '@azure/msal-browser'
+    summary: Gets the scopes to request.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getScopes(): undefined | string[]'
+      return:
+        description: The scopes to request.
+        type: undefined | string[]
+  - name: resendCode()
+    uid: '@azure/msal-browser.SignInCodeRequiredState.resendCode'
+    package: '@azure/msal-browser'
+    summary: >-
+      Resends the another one-time passcode for sign-in flow if the previous one
+      hasn't been verified.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function resendCode(): Promise<SignInResendCodeResult>'
+      return:
+        description: The result of the operation.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.SignInResendCodeResult"
+          />&gt;
+  - name: submitCode(string)
+    uid: '@azure/msal-browser.SignInCodeRequiredState.submitCode'
+    package: '@azure/msal-browser'
+    summary: >-
+      Once user configures email one-time passcode as a authentication method in
+      Microsoft Entra, a one-time passcode will be sent to the user’s email.
+
+      Submit this one-time passcode to continue sign-in flow.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function submitCode(code: string): Promise<SignInSubmitCodeResult>'
+      parameters:
+        - id: code
+          type: string
+          description: The code to submit.
+      return:
+        description: The result of the operation.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.SignInSubmitCodeResult"
+          />&gt;
+extends: >-
+  <xref uid="@azure/msal-browser.SignInState"
+  />&lt;SignInCodeRequiredStateParameters&gt;

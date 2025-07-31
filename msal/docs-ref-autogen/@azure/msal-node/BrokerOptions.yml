@@ -1,0 +1,18 @@
+### YamlMime:TSTypeAlias
+name: BrokerOptions
+uid: '@azure/msal-node.BrokerOptions'
+package: '@azure/msal-node'
+summary: >-
+  Use this to configure the below broker options:
+
+  - nativeBrokerPlugin - Native broker implementation (should be imported from
+  msal-node-extensions)
+
+
+  Note: These options are only available for PublicClientApplications using the
+  Authorization Code Flow
+fullName: BrokerOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type BrokerOptions = { nativeBrokerPlugin?: INativeBrokerPlugin }

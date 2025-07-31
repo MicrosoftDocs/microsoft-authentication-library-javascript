@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: ShrOptions
+uid: '@azure/msal-common.ShrOptions'
+package: '@azure/msal-common'
+summary: ''
+fullName: ShrOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ShrOptions = { header: JoseHeaderOptions }

@@ -23,7 +23,7 @@ This article provides an overview on migrating from MSAL v1 to `@azure/msal-reac
 
 ## Updating your app registration
 
-The `@azure/msal-react` library, is a wrapper around `@azure/msal-browser` which implements the [Auth Code Flow with PKCE](/entra/identity-platform/v2-oauth2-auth-code-flow). This is a significant update from the MSAL v1 library which implements the [Implicit Flow](/entra/identity-platform/v2-oauth2-implicit-grant-flow).
+The `@azure/msal-react` library, is a wrapper around `@azure/msal-browser` which implements the [Authorization Code Flow with PKCE](/entra/identity-platform/v2-oauth2-auth-code-flow). This is a significant update from the MSAL v1 library which implements the [Implicit Flow](/entra/identity-platform/v2-oauth2-implicit-grant-flow).
 
 You'll need to create a new app registration or update an existing one to use the new `redirectUri` type "SPA". Refer to [Single-page application: App registration](/entra/identity-platform/scenario-spa-app-registration#redirect-uri-msaljs-20-with-auth-code-flow) for more information.
 

@@ -1,0 +1,108 @@
+### YamlMime:TSType
+name: SignUpSubmitAttributesResult
+uid: '@azure/msal-browser.SignUpSubmitAttributesResult'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignUpSubmitAttributesResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignUpSubmitAttributesResult(SignUpSubmitAttributesResultState)
+    uid: '@azure/msal-browser.SignUpSubmitAttributesResult.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignUpSubmitAttributesResult.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SignUpSubmitAttributesResult(state:
+        SignUpSubmitAttributesResultState)
+      parameters:
+        - id: state
+          type: <xref uid="@azure/msal-browser.SignUpSubmitAttributesResultState" />
+          description: The state of the result.
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.SignUpSubmitAttributesResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: void'
+      return:
+        description: ''
+        type: void
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.SignUpSubmitAttributesResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: SignUpSubmitAttributesError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignUpSubmitAttributesError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.SignUpSubmitAttributesResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: SignUpSubmitAttributesResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.SignUpSubmitAttributesResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.SignUpSubmitAttributesResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of SignUpSubmitAttributesResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createWithError(error: unknown):
+        SignUpSubmitAttributesResult
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+      return:
+        description: A new instance of SignUpSubmitAttributesResult with the error set.
+        type: <xref uid="@azure/msal-browser.SignUpSubmitAttributesResult" />
+  - name: isCompleted()
+    uid: '@azure/msal-browser.SignUpSubmitAttributesResult.isCompleted'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a completed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCompleted(): this'
+      return:
+        description: ''
+        type: this
+  - name: isFailed()
+    uid: '@azure/msal-browser.SignUpSubmitAttributesResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a failed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): this'
+      return:
+        description: ''
+        type: this
+extends: >-
+  AuthFlowResultBase&lt;<xref
+  uid="@azure/msal-browser.SignUpSubmitAttributesResultState" />, <xref
+  uid="@azure/msal-browser.SignUpSubmitAttributesError" />, void&gt;

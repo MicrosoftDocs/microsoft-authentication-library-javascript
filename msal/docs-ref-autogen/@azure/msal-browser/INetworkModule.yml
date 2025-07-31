@@ -1,0 +1,61 @@
+### YamlMime:TSType
+name: INetworkModule
+uid: '@azure/msal-browser.INetworkModule'
+package: '@azure/msal-browser'
+summary: Client network interface to send backend requests.
+fullName: INetworkModule
+remarks: ''
+isDeprecated: false
+type: interface
+methods:
+  - name: sendGetRequestAsync<T>(string, NetworkRequestOptions, number)
+    uid: '@azure/msal-browser.INetworkModule.sendGetRequestAsync'
+    package: '@azure/msal-browser'
+    summary: >-
+      Interface function for async network "GET" requests. Based on the Fetch
+      standard: https://fetch.spec.whatwg.org/
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function sendGetRequestAsync<T>(url: string, options?:
+        NetworkRequestOptions, timeout?: number): Promise<NetworkResponse<T>>
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="@azure/msal-browser.NetworkRequestOptions" />
+          description: ''
+        - id: timeout
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.NetworkResponse"
+          />&lt;T&gt;&gt;
+  - name: sendPostRequestAsync<T>(string, NetworkRequestOptions)
+    uid: '@azure/msal-browser.INetworkModule.sendPostRequestAsync'
+    package: '@azure/msal-browser'
+    summary: >-
+      Interface function for async network "POST" requests. Based on the Fetch
+      standard: https://fetch.spec.whatwg.org/
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function sendPostRequestAsync<T>(url: string, options?:
+        NetworkRequestOptions): Promise<NetworkResponse<T>>
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: options
+          type: <xref uid="@azure/msal-browser.NetworkRequestOptions" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.NetworkResponse"
+          />&lt;T&gt;&gt;

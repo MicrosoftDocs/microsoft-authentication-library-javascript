@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: AccessTokenRetrievalInputs
+uid: '@azure/msal-browser.AccessTokenRetrievalInputs'
+package: '@azure/msal-browser'
+summary: ''
+fullName: AccessTokenRetrievalInputs
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AccessTokenRetrievalInputs = {
+    claims?: string
+    forceRefresh: boolean
+    scopes?: string[]
+  }

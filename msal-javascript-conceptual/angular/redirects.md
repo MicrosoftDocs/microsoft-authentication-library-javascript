@@ -6,7 +6,7 @@ manager: CelesteDG
 
 ms.service: msal
 ms.subservice: msal-angular
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 11/29/2023
 ms.author: emilylauber
 ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
@@ -83,7 +83,7 @@ export function loggerCallback(logLevel: LogLevel, message: string) {
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      clientId: '6226576d-37e9-49eb-b201-ec1eeb0029b6',
+      clientId: '00001111-aaaa-2222-bbbb-3333cccc4444',
       redirectUri: 'http://localhost:4200',
       postLogoutRedirectUri: 'http://localhost:4200'
     },

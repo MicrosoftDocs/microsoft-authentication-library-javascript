@@ -8,7 +8,7 @@ ms.date: 11/26/2023
 ms.reviewer: saeeda, hahamil
 ms.service: msal
 ms.subservice: msal-js
-ms.topic: conceptual
+ms.topic: how-to
 #Customer intent:
 ---
 
