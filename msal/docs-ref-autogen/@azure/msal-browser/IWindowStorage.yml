@@ -23,6 +23,29 @@ methods:
       return:
         description: ''
         type: boolean
+  - name: decryptData(string, EncryptedData, string)
+    uid: '@azure/msal-browser.IWindowStorage.decryptData'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function decryptData(key: string, data: EncryptedData, correlationId:
+        string): Promise<null | object>
+      parameters:
+        - id: key
+          type: string
+          description: ''
+        - id: data
+          type: EncryptedData
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;null | object&gt;
   - name: getItem(string)
     uid: '@azure/msal-browser.IWindowStorage.getItem'
     package: '@azure/msal-browser'

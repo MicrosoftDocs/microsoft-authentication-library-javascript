@@ -43,6 +43,7 @@ syntax: |
       [key: string]: string | number | string[] | object | undefined | unknown
     }
     localAccountId: string
+    loginHint?: string
     name?: string
     nativeAccountId?: string
     tenantId: string

@@ -19,8 +19,10 @@ syntax: |
     awaitIframeCorrelationId?: string
     cacheAtCount?: number
     cacheIdCount?: number
+    cacheLocation?: string
     cacheLookupPolicy?: number
     cacheOutcome?: number
+    cacheRetentionDays?: number
     cacheRtCount?: number
     clientId: string
     contentLengthHeader?: string
