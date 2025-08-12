@@ -13,15 +13,7 @@ ms.reviewer: cwerner, owenrichards, kengaderdus
 ---
 # Initializing MSAL angular
 
-Before using `@azure/msal-angular`, [register an application in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) to get the `clientId`.
-
-In this document:
-- [Initialization of MSAL angular](#initialization-of-msal-angular)
-    - [Include and initialize the MSAL module in your app module](#include-and-initialize-the-msal-module-in-your-app-module)
-    - [Secure the routes in your application](#secure-the-routes-in-your-application)
-    - [Get tokens for Web API calls](#get-tokens-for-web-api-calls)
-    - [Subscribe to events](#subscribe-to-events)
-- [Next steps](#next-steps)
+Before using `@azure/msal-angular`, [register an application in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) to get the `clientId`.
 
 ## Include and initialize the MSAL module in your app module
 
@@ -214,6 +206,6 @@ ngOnDestroy(): void {
 }
 ```
 
-# Next steps
+## Next steps
 
 You're ready to use `@azure/msal-angular` [public APIs](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/public-apis.md).

@@ -14,16 +14,6 @@ ms.reviewer: cwerner, owenrichards, kengaderdus
 
 # Errors in MSAL Angular
 
-***
-
-**[BrowserAuthErrors](#browserautherrors)**
-
-1. [interaction_in_progress](#interaction_in_progress)
-
-**[Additional Errors](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/errors.md)**
-
-***
-
 ## BrowserAuthErrors
 
 ### Interaction_in_progress
