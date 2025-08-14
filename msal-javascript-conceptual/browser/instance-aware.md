@@ -2,8 +2,7 @@
 title: Instance aware flow
 description: Learn how to use the instance aware flow
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: how-to
@@ -47,7 +46,7 @@ The MSAL response object will also inform you which graph hosts to use for a giv
 
 ### Difference Between cloud_graph_host_name and msgraph_host
 
-The STS will return two graph host names: `cloud_graph_host_name` and `msgraph_host`. `cloud_graph_host_name` is the Azure AD Graph host, and is used for Azure AD Graph API calls. `msgraph_host` is the Microsoft Graph, and is used for [MS Graph API calls](/graph/overview.md).
+The STS will return two graph host names: `cloud_graph_host_name` and `msgraph_host`. `cloud_graph_host_name` is the Azure AD Graph host, and is used for Azure AD Graph API calls. `msgraph_host` is the Microsoft Graph, and is used for [MS Graph API calls](/graph/overview).
 
 ### Using the graph hosts from the response
 

@@ -2,8 +2,7 @@
 title: Event callbacks in MSAL React
 description: Learn how to utilize MSAL React event callbacks to manage login responses and handle specific errors. 
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-react
 ms.topic: article

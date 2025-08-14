@@ -2,8 +2,7 @@
 title:  Acquiring Device Bound Tokens using Web Account Manager (WAM) on Windows
 description: Learn how to acquire Device Bound Tokens using Web Account Manager (WAM) on Windows
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: concept-article

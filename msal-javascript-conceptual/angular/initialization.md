@@ -2,8 +2,7 @@
 title: Initializing MSAL Angular
 description: Learn how to initialize MSAL in your Angular application
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: concept-article
@@ -69,7 +68,7 @@ export class AppModule {}
 
 Add authentication to secure specific routes in your application by adding `canActivate: [MsalGuard]` to your route definition. Add it to parent or child routes. When a user visits these routes, the library prompts the user to authenticate.
 
-Learn more in our [`MsalGuard` doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/msal-guard.md) about configuration and considerations, including using additional interfaces.
+Learn more in our [`MsalGuard` doc](msal-guard.md) about configuration and considerations, including using additional interfaces.
 
 Here is an example of a route defined with the `MsalGuard`:
 
@@ -101,7 +100,7 @@ export class AppRoutingModule { }
 
 ## Get tokens for web API calls
 
-`@azure/msal-angular` allows you to add an Http interceptor (`MsalInterceptor`) in your `app.module.ts` as follows. The `MsalInterceptor` will obtain tokens and add them to all your Http requests in API calls based on the `protectedResourceMap`. See our [MsalInterceptor doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/msal-interceptor.md) for more details on configuration and use.
+`@azure/msal-angular` allows you to add an Http interceptor (`MsalInterceptor`) in your `app.module.ts` as follows. The `MsalInterceptor` will obtain tokens and add them to all your Http requests in API calls based on the `protectedResourceMap`. See our [MsalInterceptor doc](msal-interceptor.md) for more details on configuration and use.
 
 ```js
 import { NgModule } from '@angular/core';
@@ -208,4 +207,4 @@ ngOnDestroy(): void {
 
 ## Next steps
 
-You're ready to use `@azure/msal-angular` [public APIs](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/public-apis.md).
+You're ready to use `@azure/msal-angular` [public APIs](public-apis.md).

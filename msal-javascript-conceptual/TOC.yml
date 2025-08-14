@@ -3,15 +3,17 @@
 - name: MSAL Browser
   items:
     - name: Getting started
-      items: 
+      items:
         - name: Install MSAL for browser-based apps
           href: browser/about-msal-browser.md
         - name: Initialize applications
           href: browser/initialization.md
         - name: Configure your application
           href: browser/configuration.md
+        - name: Accounts in MSAL Browser
+          href: browser/accounts.md
     - name: Acquire tokens
-      items: 
+      items:
         - name: Sign in users
           href: browser/login-user.md
         - name: Acquire tokens
@@ -19,13 +21,15 @@
         - name: Manage token lifetimes
           href: browser/token-lifetimes.md
         - name: Understanding resources and scopes
-          href: browser/resources-and-scopes.md 
+          href: browser/resources-and-scopes.md
         - name: Sign out users
           href: browser/logout.md
         - name: Acquire tokens using WAM
           href: browser/device-bound-tokens.md
+        - name: Acquire access tokens protected with PoP
+          href: browser/access-token-proof-of-possession.md
     - name: Advanced topics
-      items: 
+      items:
         - name: Single sign-on in MSAL.js
           href: browser/single-sign-on.md
         - name: Prompt behavior with MSAL.js
@@ -42,8 +46,40 @@
           href: browser/cdn-usage.md
         - name: Overriding window navigation
           href: browser/navigation.md
+        - name: Avoid page reloads
+          href: angular/avoid-page-reloads.md
+        - name: Caching in MSAL.js
+          href: browser/caching.md
+        - name: Events in MSAL Browser
+          href: browser/events.md
+        - name: Using MSAL in iframed apps
+          href: browser/iframe-usage.md
+        - name: Instance aware flow
+          href: browser/instance-aware.md
+        - name: Issues on Internet Explorer & Microsoft Edge
+          href: browser/known-issues-ie-edge-browsers.md
+        - name: Logging errors and exceptions
+          href: browser/MIP-logging.md
+        - name: Pass custom state in authentication requests
+          href: browser/MIP-pass-custom-state.md
+        - name: "Measure performance "
+          href: browser/performance.md
+        - name: Request and Response Objects
+          href: browser/request-response-object.md
+        - name: Custom Signed HTTP Request Claims
+          href: browser/shr-client-claims.md
+        - name: SHR Server Nonce
+          href: browser/shr-server-nonce.md
+        - name: Signed Http Request
+          href: browser/signed-http-request.md
+        - name: Test application in browser environments
+          href: browser/testing.md
+        - name: Issues on Internet Explorer
+          href: browser/use-ie-browser.md
+        - name: Use MSAL JavaScript with Azure AD B2C
+          href: browser/working-with-b2c.md
     - name: Migration guides
-      items: 
+      items:
         - name: Migrate apps from ADAL.js to MSAL.js
           href: browser/migrate-adal-js-to-msal-js.md
         - name: Migrate SPA from implicit to auth code flow
@@ -51,7 +87,7 @@
         - name: Migrate from MSAL v1.x to MSAL v2.x
           href: browser/v1-migration.md
         - name: Migrate from MSAL v2.x to MSAL v3.x
-          href: browser/v2-migration.md           
+          href: browser/v2-migration.md
 - name: MSAL Angular
   items:
     - name: Initialize MSAL
@@ -82,12 +118,12 @@
       href: angular/universal-ssr.md
     - name: Upgrading your MSAL Angular version
       items:
-      - name: Upgrade from MSAL Angular 0.x to MSAL Angular 1.x
-        href: angular/v0-v1-upgrade-guide.md
-      - name: Upgrade from MSAL Angular 1.x to MSAL Angular 2.x
-        href: angular/v1-V2-upgrade-guide.md
-      - name: Upgrade from MSAL Angular 2.x to MSAL Angular 3.x
-        href: angular/v2-v3-upgrade-guide.md
+        - name: Upgrade from MSAL Angular 0.x to MSAL Angular 1.x
+          href: angular/v0-v1-upgrade-guide.md
+        - name: Upgrade from MSAL Angular 1.x to MSAL Angular 2.x
+          href: angular/v1-V2-upgrade-guide.md
+        - name: Upgrade from MSAL Angular 2.x to MSAL Angular 3.x
+          href: angular/v2-v3-upgrade-guide.md
 - name: MSAL Node
   items:
     - name: Initialize public client applications
@@ -95,9 +131,33 @@
     - name: Initialize confidential client applications
       href: node/initialize-confidential-client-application.md
     - name: Configure your application
-      href: node/configuration.md     
+      href: node/configuration.md
     - name: Supported authorization code grants
-      href: node/request.md  
+      href: node/acquire-token-requests.md
+    - name: Accounts in MSAL Node
+      href: node/accounts.md
+    - name: Acquire device bound tokens with broker
+      href: node/brokering.md
+    - name: Token caching in MSAL Node
+      href: node/caching.md
+    - name: Use certificate credentials with MSAL Node
+      href: node/certificate-credentials.md
+    - name: Performance in MSAL Node
+      href: node/performance.md
+    - name: Enable regional authorities
+      href: node/regional-authorities.md
+    - name: Implement SNI Authentication
+      href: node/sni.md
+    - name: Microsoft Authentication Extensions for Node
+      href: node/extensions.md
+    - name: Caching in Microsoft Authentication Extensions for Node
+      href: node/caching-in-extensions.md
+    - name: Secure app credentials with Azure Key Vault and Azure Managed Identity
+      href: node/key-vault-managed-identity.md
+    - name: Migrate Node.js apps from ADAL to MSAL
+      href: node/migration.md
+    - name: MSAL Node FAQs
+      href: node/faq.md
 - name: MSAL React
   items:
     - name: Getting started with MSAL React
@@ -114,3 +174,5 @@
       href: react/errors.md
     - name: Migrate from MSAL v1 to MSAL React and MSAL Browser
       href: react/migration-guide.md
+    - name: MSAL React FAQs
+      href: react/faq.md

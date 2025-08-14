@@ -2,8 +2,7 @@
 title: Upgrading from MSAL Angular v0 to v1
 description: Learn how to upgrade applications using MSAL Angular v0 to V1
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: how-to

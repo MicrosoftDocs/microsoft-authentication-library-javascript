@@ -2,8 +2,7 @@
 title: Use the Microsoft Authentication Library for JavaScript to work with Azure AD B2C
 description: The Microsoft Authentication Library for JavaScript (MSAL.js) enables applications to work with Azure AD B2C and acquire tokens to call secured web APIs. These web APIs can be Microsoft Graph, other Microsoft APIs, web APIs from others, or your own web API.
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.author: dmwendia
 ms.service: msal
 ms.subservice: msal-js
@@ -30,10 +29,10 @@ MSAL.js enables [single-page applications](/azure/active-directory-b2c/applicati
 
 - Users **can** authenticate with their social and local identities.
 - Users **can** be authorized to access Azure AD B2C protected resources (but not Microsoft Entra protected resources).
-- Users **cannot** obtain tokens for Microsoft APIs (for example, MS Graph API) using [delegated permissions](/entra/identity-platform/permissions-consent-overview.md#types-of-permissions).
-- Users with administrator privileges **can** obtain tokens for Microsoft APIs (for example, MS Graph API) using [delegated permissions](/entra/identity-platform/permissions-consent-overview.md#types-of-permissions).
+- Users **cannot** obtain tokens for Microsoft APIs (for example, MS Graph API) using [delegated permissions](/entra/identity-platform/permissions-consent-overview#types-of-permissions).
+- Users with administrator privileges **can** obtain tokens for Microsoft APIs (for example, MS Graph API) using [delegated permissions](/entra/identity-platform/permissions-consent-overview#types-of-permissions).
 
-For more information, see: [Working with Azure AD B2C](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/working-with-b2c.md)
+For more information, see: [Working with Azure AD B2C](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/working-with-b2c)
 
 ## Next steps
 
@@ -187,4 +186,4 @@ MSAL.js will only process tokens which it originally requested. If your flow req
 
 ### B2C and iframe usage
 
-**Azure AD B2C** offers an [embedded sign-in experience](/azure/active-directory-b2c/embedded-login), which allows rendering a custom login UI in an iframe. Since MSAL prevents redirect in iframes by default, you'll need to set the [allowRedirectInIframe](/entra/identity-platform/configuration.md#system-config-options) configuration option to **true** in order to make use of this feature. For other considerations when using iframes, please refer to: [Using MSAL in iframed apps](/entra/identity-platform/iframe-usage)
+**Azure AD B2C** offers an [embedded sign-in experience](/azure/active-directory-b2c/embedded-login), which allows rendering a custom login UI in an iframe. Since MSAL prevents redirect in iframes by default, you'll need to set the [allowRedirectInIframe](/entra/identity-platform/configuration#system-config-options) configuration option to **true** in order to make use of this feature. For other considerations when using iframes, please refer to: [Using MSAL in iframed apps](iframe-usage.md)

@@ -2,8 +2,7 @@
 title: MSAL Angular Configuration
 description: Learn how to configure your Angular application to use MSAL Angular
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: article
@@ -11,17 +10,10 @@ ms.date: 05/21/2025
 ms.author: dmwendia
 ms.reviewer: cwerner, owenrichards, kengaderdus
 ---
+
 # MSAL Angular Configuration
 
-MSAL for Angular can be configured in multiple ways:
-
-1. [`MsalModule.forRoot`](#msalmoduleforroot)
-1. [Factory providers](#factory-providers)
-1. [`platformBrowserDynamic`](#platformbrowserdynamic)
-1. [Dynamic configurations using Factory Providers and `APP_INITIALIZER`](#dynamic-configurations-using-factory-providers-and-app_initializer)
-1. [Configurations for Angular apps with standalone components](#configurations-for-angular-apps-with-standalone-components)
-
-This guide will detail how to leverage each method for your application.
+MSAL for Angular can be configured in multiple ways. This article describes the available configuration options for MSAL Angular, including static and dynamic approaches, and provides code samples for integrating authentication into your app. Use this guide to select the configuration method that best fits your application’s requirements and provides a seamless sign-in experience for your users.
 
 ## Configuration Options
 
@@ -38,13 +30,13 @@ This guide will detail how to leverage each method for your application.
 - An optional `authRequest` object can be specified on `MsalGuardConfiguration` and `MsalInterceptorConfiguration` to set additional options.
 - An optional `loginFailedRoute` string can be set on `MsalGuardConfiguration`. Msal Guard will redirect to this route if login is required and fails.
 
-Please see our [MsalInterceptor](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/msal-interceptor.md) and [MsalGuard](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/msal-guard.md) docs for more details on configurations, usage, and differences to MSAL Angular v1.
+Please see our [MsalInterceptor](msal-interceptor.md) and [MsalGuard](msal-guard.md) docs for more details on configurations, usage, and differences to MSAL Angular v1.
 
 ### Configuration for redirects
 
-We recommend importing `MsalRedirectComponent` and bootstrapping with the `AppComponent` if you intend to use redirects. Please see the [redirect documentation](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-angular/docs/redirects.md) for more details.
+We recommend importing `MsalRedirectComponent` and bootstrapping with the `AppComponent` if you intend to use redirects. Please see the [redirect documentation](redirects.md) for more details.
 
-**Note:** As of MSAL v3.x, initialization of the application object is now required. See the [v2-v3 upgrade guide](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-angular/docs/v2-v3-upgrade-guide.md) for more details.
+**Note:** As of MSAL v3.x, initialization of the application object is now required. See the [v2-v3 upgrade guide](v2-v3-upgrade-guide.md) for more details.
 
 ## MsalModule.forRoot
 

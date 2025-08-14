@@ -2,9 +2,8 @@
 title: Configure MSAL Node
 description: Learn how to configure MSAL Node.
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Dougeby
 ms.author: dmwendia
-
 ms.date: 05/21/2025
 ms.service: msal
 ms.subservice: msal-node
@@ -15,7 +14,7 @@ ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
 
 # Configure MSAL Node
 
-The MSAL library has a set of configuration options that can be used to customize the behavior of your authentication flows. These options can be set either in the constructor of the [PublicClientApplication](/javascript/api/@azure/msal-node/publicclientapplication) object or as part of the [request APIs](request.md). Here we describe the configuration object that can be passed into the [PublicClientApplication](/javascript/api/@azure/msal-node/publicclientapplication) constructor.
+The MSAL library has a set of configuration options that can be used to customize the behavior of your authentication flows. These options can be set either in the constructor of the [PublicClientApplication](/javascript/api/@azure/msal-node/publicclientapplication) object or as part of the [request APIs](acquire-token-requests.md). Here we describe the configuration object that can be passed into the [PublicClientApplication](/javascript/api/@azure/msal-node/publicclientapplication) constructor.
 
 ## Prerequisites
 
@@ -135,4 +134,4 @@ const msalInstance = new PublicClientApplication(msalConfig);
 
 ## Next Steps
 
-Proceed to understand the public APIs provided by `msal-node` for acquiring tokens [here](request.md)
+Proceed to understand the public APIs provided by `msal-node` for acquiring tokens [here](acquire-token-requests.md)

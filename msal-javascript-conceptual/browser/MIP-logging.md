@@ -2,7 +2,7 @@
 title: Logging errors and exceptions in MSAL.js
 description: Learn how to log errors and exceptions in MSAL.js
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Dougeby
 ms.author: dmwendia
 ms.custom: devx-track-js
 ms.date: 05/21/2025
@@ -12,6 +12,7 @@ ms.subservice: msal-js
 ms.topic: concept-article
 #Customer intent:
 ---
+
 # Logging in MSAL.js
 
 This article gives an overview of the different types of errors and recommendations for handling common sign-in errors.
@@ -85,4 +86,4 @@ const msalConfig = {
 
 ## Next steps
 
-For more code samples, refer to [Microsoft identity platform code samples](/entra/identity-platform/sample-v2-code.md).
+For more code samples, refer to [Microsoft identity platform code samples](/entra/identity-platform/sample-v2-code).

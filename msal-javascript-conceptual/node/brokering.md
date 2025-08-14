@@ -2,9 +2,8 @@
 title: "Acquiring Device Bound Tokens"
 description: Learn how to acquire device bound tokens from the native token broker.
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Dougeby
 ms.author: dmwendia
-
 ms.service: msal
 ms.subservice: msal-node
 ms.date: 10/26/2023
