@@ -10,7 +10,6 @@
         "src": "docs-ref-autogen",
         "exclude": [
           "**/obj/**",
-          "**/msal-common/**",
           "**/includes/**",
           "README.md",
           "LICENSE",
