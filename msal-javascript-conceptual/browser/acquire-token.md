@@ -2,8 +2,7 @@
 title: Acquiring and using an access token
 description: Learn how to acquire and use an access token
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: how-to
@@ -16,10 +15,10 @@ ms.reviewer: cwerner, owenrichards, kengaderdus
 
 Before you acquire an access token, make sure you understand how to [initialize the application object](./initialization.md). It's also crucial to understand the relationship between [access tokens and resources](./resources-and-scopes.md).
 
-In MSAL, you can get access tokens for the APIs your app needs to call using the `acquireToken*` methods provided by the library. The `acquireToken*` methods abstract away the 2 steps involved in acquiring tokens with the [OAuth 2.0 authorization code flow](/entra/identity-platform/v2-oauth2-auth-code-flow.md):
+In MSAL, you can get access tokens for the APIs your app needs to call using the `acquireToken*` methods provided by the library. The `acquireToken*` methods abstract away the 2 steps involved in acquiring tokens with the [OAuth 2.0 authorization code flow](/entra/identity-platform/v2-oauth2-auth-code-flow):
 
 1. make a request to Microsoft Entra ID to obtain an `authorization code`
-1. exchange that code for an [access token](/entra/identity-platform/access-tokens.md) containing the user consented scopes
+1. exchange that code for an [access token](/entra/identity-platform/access-tokens) containing the user consented scopes
 
 ## Acquiring an Access Token
 

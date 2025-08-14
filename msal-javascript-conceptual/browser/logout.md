@@ -2,8 +2,7 @@
 title: Sign out users
 description: Learn how to sign out users 
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: how-to
@@ -119,7 +118,7 @@ await msalInstance.logoutPopup({
 
 ## Promptless logout
 
-If your client application has the [login_hint optional claim](/entra/identity-platform/active-directory-optional-claims#v10-and-v20-optional-claims-set.md) enabled for ID Tokens, you can leverage the ID Token's `login_hint` claim to perform a "silent" or promptless logout while using either `logoutRedirect` or `logoutPopup`. There are two ways to achieve a promptless logout:
+If your client application has the [login_hint optional claim](/entra/identity-platform/optional-claims#v10-and-v20-optional-claims-set) enabled for ID Tokens, you can leverage the ID Token's `login_hint` claim to perform a "silent" or promptless logout while using either `logoutRedirect` or `logoutPopup`. There are two ways to achieve a promptless logout:
 
 ### Option 1: Let MSAL automatically parse the login_hint out of the account's ID token claims
 
@@ -150,7 +149,7 @@ await msalInstance.logoutPopup({ logoutHint: logoutHint });
 Microsoft Entra ID and Azure AD B2C support the [OAuth front-channel logout feature](https://openid.net/specs/openid-connect-frontchannel-1_0.html), which enables single-sign out across all applications when a user initiates logout. To take advantage of this feature with MSAL.js, perform the following steps:
 
 1. In your application, create a dedicated logout page. This page **should not** perform any other function, such as acquiring tokens on page load (see below for details). Note, this page will be loaded in a hidden iframe, and for Microsoft Entra ID and MSA users, will include the `iss` and `sid` query parameters.
-2. In the Azure Portal, navigate to the **Authentication** page for your application, and register the page from step one under **Front-channel logout URL**. Note, this page must be loaded via `https`.
+2. Inin the Microsoft Entra admin center, navigate to the **Authentication** page for your application, and register the page from step one under **Front-channel logout URL**. Note, this page must be loaded via `https`.
 
 ### Requirements for front-channel logout page
 

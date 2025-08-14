@@ -2,9 +2,8 @@
 title: Performance in MSAL Node
 description: Learn how to measure performance in MSAL Node.
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Dougeby
 ms.author: dmwendia
-
 ms.date: 05/21/2025
 ms.service: msal
 ms.subservice: msal-node

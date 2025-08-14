@@ -83,7 +83,7 @@ If the information in the `login_hint` claim doesn't match any existing user, th
 
 #### Using a session ID
 
-To use a session ID, add `sid` as an [optional claim](/entra/identity-platform/optional-claims.md) to your app's ID tokens. The `sid` claim allows an application to identify a user's Microsoft Entra session independent of their account name or username. To learn how to add optional claims like `sid`, see [Provide optional claims to your app](/entra/identity-platform/optional-claims). Use the session ID (SID) in silent authentication requests you make with `ssoSilent` in MSAL.js.
+To use a session ID, add `sid` as an [optional claim](/entra/identity-platform/optional-claims) to your app's ID tokens. The `sid` claim allows an application to identify a user's Microsoft Entra session independent of their account name or username. To learn how to add optional claims like `sid`, see [Provide optional claims to your app](/entra/identity-platform/optional-claims). Use the session ID (SID) in silent authentication requests you make with `ssoSilent` in MSAL.js.
 
 ```javascript
 const request = {

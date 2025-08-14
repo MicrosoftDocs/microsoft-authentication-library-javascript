@@ -2,8 +2,7 @@
 title: Accounts in MSAL Browser
 description: Learn about accounts in MSAL Browser
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: article

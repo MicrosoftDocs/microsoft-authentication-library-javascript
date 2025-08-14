@@ -2,8 +2,7 @@
 title: Using MSAL React with class components
 description: Learn how to use MSAL React with class components, covering initialization, protecting components, accessing MSAL React context and logging in.
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-react
 ms.topic: concept-article

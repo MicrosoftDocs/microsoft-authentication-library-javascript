@@ -2,8 +2,7 @@
 title: Manage token lifetimes
 description: Learn how to manage token lifetimes
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: how-to
@@ -20,15 +19,15 @@ While using MSAL.js, you should understand the implications of retrieving tokens
 
 ## Token Lifetimes and Expiration
 
-A more detailed explanation of token lifetimes can be found [here](/entra/identity-platform/active-directory-configurable-token-lifetimes.md). Some of the information is summarized below.
+You can configure the [token lifetimes](/entra/identity-platform/configurable-token-lifetimes) of access, ID, or Security Assertion Markup Language (SAML) tokens issued by the Microsoft identity platform. Some of the information is summarized below.
 
 ### ID tokens
 
-ID tokens are bound to a specific combination of account and client, and usually contain profile information about the user. Typically, a web application's user session lifetime will match that of the ID token session lifetime, which is by default 24 hours. You can read more about configuring token lifetimes [here](/entra/identity-platform/active-directory-configurable-token-lifetimes.md).
+ID tokens are bound to a specific combination of account and client, and usually contain profile information about the user. Typically, a web application's user session lifetime will match that of the ID token session lifetime, which is by default 24 hours. You can read more about [configuring token lifetimes](/entra/identity-platform/configurable-token-lifetimes).
 
 ### Access tokens
 
-Access tokens in the browser have a default recommended expiration of 1 hour. After this 1 hour, any bearer calls with the expired token will be rejected. This token can be refreshed silently using the refresh token retrieved with this token. You can read more about configuring token lifetimes [here](/entra/identity-platform/active-directory-configurable-token-lifetimes.md).
+Access tokens in the browser have a default recommended expiration of 1 hour. After this 1 hour, any bearer calls with the expired token will be rejected. This token can be refreshed silently using the refresh token retrieved with this token. You can read more about [configuring token lifetimes](/entra/identity-platform/configurable-token-lifetimes).
 
 ### Refresh tokens
 

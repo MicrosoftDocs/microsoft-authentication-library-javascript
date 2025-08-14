@@ -2,8 +2,7 @@
 title: Caching in MSAL.js
 description: Learn about caching tokens in MSAL.js 
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: concept-article
@@ -90,4 +89,4 @@ To handle this scenario, you can configure MSAL to use `localStorage` as the cac
 
 ## More information
 
-- [Acquire and cache tokens using the Microsoft Authentication Library](/entra/identity-platform/msal-acquire-cache-tokens.md)
+- [Acquire and cache tokens using the Microsoft Authentication Library](/entra/identity-platform/msal-acquire-cache-tokens)

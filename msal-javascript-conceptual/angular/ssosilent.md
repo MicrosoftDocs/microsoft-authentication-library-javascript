@@ -2,8 +2,7 @@
 title: Silent login with ssoSilent()
 description: Learn how to acquire tokens silently using the `ssoSilent()` API
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: article

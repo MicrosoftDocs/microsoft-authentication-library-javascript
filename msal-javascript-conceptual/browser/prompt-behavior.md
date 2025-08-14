@@ -84,6 +84,6 @@ In some cases however, the prompt value `none` can be used together with an inte
 
 - [Single sign-on with MSAL.js](single-sign-on.md)
 - [Handle errors and exceptions in MSAL.js](errors.md)
-- [Handle ITP in Safari and other browsers where third-party cookies are blocked](/entra/identity-platform/reference-third-party-cookies-spas.md)
-- [OAuth 2.0 authorization code flow on the Microsoft identity platform](/entra/identity-platform/v2-oauth2-auth-code-flow.md)
-- [OpenID Connect on the Microsoft identity platform](/entra/identity-platform/v2-protocols-oidc.md)
+- [Handle ITP in Safari and other browsers where third-party cookies are blocked](/entra/identity-platform/reference-third-party-cookies-spas)
+- [OAuth 2.0 authorization code flow on the Microsoft identity platform](/entra/identity-platform/v2-oauth2-auth-code-flow)
+- [OpenID Connect on the Microsoft identity platform](/entra/identity-platform/v2-protocols-oidc)

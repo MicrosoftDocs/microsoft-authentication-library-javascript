@@ -2,8 +2,7 @@
 title: Initialize MSAL Browser
 description: Learn how to initialize MSAL in your JavaScript applications
 author: Dickson-Mwendia
-manager: CelesteDG
-
+manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: how-to
@@ -14,7 +13,7 @@ ms.reviewer: cwerner, owenrichards, kengaderdus
 
 # Initialization of MSAL
 
-Before initializing MSAL Browser, start by [registering your application in the Azure portal](/entra/identity-platform/quickstart-register-app.md) to obtain obtain the application (client) ID.
+Before initializing MSAL Browser, start by [registering your application in the Microsoft Entra admin center](/entra/identity-platform/quickstart-register-app) to obtain obtain the application (client) ID.
 
 ## Initializing the PublicClientApplication object
 

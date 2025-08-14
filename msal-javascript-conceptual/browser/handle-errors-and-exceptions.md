@@ -2,7 +2,7 @@
 title: Handle errors and exceptions in MSAL.js
 description: Learn how to handle errors and exceptions, Conditional Access claims challenges, and retries in MSAL.js applications.
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Dougeby
 ms.author: dmwendia
 ms.date: 05/21/2025
 ms.reviewer: saeeda, hahamil
@@ -156,7 +156,7 @@ Interactively acquiring the token prompts the user and gives them the opportunit
 
 When calling an API requiring Conditional Access, you can receive a claims challenge in the error from the API. In this case, you can pass the claims returned in the error to the `claims` parameter in the [access token request object](MIP-pass-custom-state.md) to satisfy the appropriate policy. 
 
-See [How to use Continuous Access Evaluation enabled APIs in your applications](/entra/identity-platform/app-resilience-continuous-access-evaluation.md) for more detail.
+See [How to use Continuous Access Evaluation enabled APIs in your applications](/entra/identity-platform/app-resilience-continuous-access-evaluation) for more detail.
 
 ### Using other frameworks
 
