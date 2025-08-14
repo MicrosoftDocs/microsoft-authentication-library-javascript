@@ -3,8 +3,6 @@ title: Custom Signed HTTP Request Claims
 description: Learn how to use Signed HTTP Request claims
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: article

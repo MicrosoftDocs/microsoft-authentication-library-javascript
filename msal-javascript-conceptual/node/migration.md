@@ -2,9 +2,7 @@
 title: "Migrate your Node.js application from ADAL to MSAL"
 description: How to update your existing Node.js application to use the Microsoft Authentication Library (MSAL) for authentication and authorization instead of the Active Directory Authentication Library (ADAL).
 author: Dickson-Mwendia
-manager: Dougeby
-
-ms.author: cwerner
+manager: Dougebyms.author: cwerner
 
 ms.date: 05/21/2025
 ms.service: msal
@@ -153,9 +151,9 @@ However, some methods in ADAL Node are deprecated, while MSAL Node offers new me
 | ADAL                              | MSAL                            | Notes                             |
 |-----------------------------------|---------------------------------|-----------------------------------|
 | `acquireUserCode`                   | N/A                             | Merged with `acquireTokeByDeviceCode` (see above)|
-| N/A                               | `acquireTokenOnBehalfOf`          | A new method that abstracts [OBO flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow.md) |
+| N/A                               | `acquireTokenOnBehalfOf`          | A new method that abstracts [OBO flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow) |
 | `acquireTokenWithClientCertificate` | N/A                             | No longer needed as certificates are assigned during initialization now (see [configuration options](#configure-msal)) |
-| N/A                               | `getAuthCodeUrl`                  | A new method that abstracts [authorize endpoint](/entra/identity-platform/v2-protocols.md#endpoints) URL construction |
+| N/A                               | `getAuthCodeUrl`                  | A new method that abstracts [authorize endpoint](/entra/identity-platform/v2-protocols#endpoints) URL construction |
 
 ## Use scopes instead of resources
 

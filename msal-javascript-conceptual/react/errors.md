@@ -3,8 +3,6 @@ title: Handle errors and exceptions in MSAL Node
 description: Learn how to handle use MSAL React with class components. covering initialization, protecting components, accessing MSAL React context and logging in.
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-react
 ms.topic: how-to

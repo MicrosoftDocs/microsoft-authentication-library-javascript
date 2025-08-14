@@ -3,8 +3,6 @@ title: Using redirects in MSAL Angular
 description: Learn how to use redirects in MSAL Angular
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: concept-article

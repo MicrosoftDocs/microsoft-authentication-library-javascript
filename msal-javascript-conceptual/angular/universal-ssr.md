@@ -3,8 +3,6 @@ title: Angular Universal SSR with MSAL Angular
 description: Angular Universal SSR with MSAL Angular
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: article

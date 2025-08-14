@@ -3,8 +3,6 @@ title: Sign in users
 description: Learn how to sign in users
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: how-to
@@ -17,7 +15,7 @@ ms.reviewer: cwerner, owenrichards, kengaderdus
 
 Before you start here, make sure you understand how to [initialize the application object](./initialization.md).
 
-The login APIs in MSAL retrieve an `authorization code` which can be exchanged for an [ID token](/entra/identity-platform/id-tokens.md) for a signed in user, while consenting scopes for an additional resource, and an [access token](/entra/identity-platform/access-tokens.md) containing the user consented scopes to allow your app to securely call the API.
+The login APIs in MSAL retrieve an `authorization code` which can be exchanged for an [ID token](/entra/identity-platform/id-tokens) for a signed in user, while consenting scopes for an additional resource, and an [access token](/entra/identity-platform/access-tokens) containing the user consented scopes to allow your app to securely call the API.
 
 ## Choosing an Interaction Type
 
@@ -116,7 +114,7 @@ If you already have a session that exists with the authentication server, you ca
 
 If you already have the user's sign-in information, you can pass this into the API to improve performance and ensure that the authorization server will look for the correct account session. You can pass one of the following into the request object in order to successfully obtain a token silently. 
 
-It is recommended to leverage the [`login_hint` optional ID token claim](/entra/identity-platform/active-directory-optional-claims#v10-and-v20-optional-claims-set.md) (provided to `ssoSilent` as `loginHint`), as it is the most reliable account hint of silent (and interactive) requests.
+It is recommended to leverage the [`login_hint` optional ID token claim](/entra/identity-platform/active-directory-optional-claims#v10-and-v20-optional-claims-set) (provided to `ssoSilent` as `loginHint`), as it is the most reliable account hint of silent (and interactive) requests.
 
 - `account` (which can be retrieved using on of the [account APIs](./accounts.md))
 - `sid` (which can be retrieved from the `idTokenClaims` of an `account` object)

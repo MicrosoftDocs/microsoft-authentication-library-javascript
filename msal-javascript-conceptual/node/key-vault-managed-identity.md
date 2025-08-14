@@ -2,9 +2,7 @@
 title: Securing MSAL Node app credentials with Azure Key Vault and Azure Managed Identity
 description: Learn how to secure MSAL Node app credentials with Azure Key Vault and Azure Managed Identity.
 author: Dickson-Mwendia
-manager: Dougeby
-
-ms.author: dmwendia
+manager: Dougebyms.author: dmwendia
 
 ms.date: 05/21/2025
 ms.service: msal

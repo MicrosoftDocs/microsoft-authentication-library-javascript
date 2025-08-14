@@ -2,9 +2,7 @@
 title: MSAL Angular Configuration
 description: Learn how to configure your Angular application to use MSAL Angular
 author: Dickson-Mwendia
-manager: Dougeby
-
-ms.service: msal
+manager: Dougebyms.service: msal
 ms.subservice: msal-angular
 ms.topic: article
 ms.date: 05/21/2025

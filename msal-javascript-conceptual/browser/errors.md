@@ -3,8 +3,6 @@ title: Common errors in MSAL JS
 description: Learn the common errors in MSAL JS
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: article

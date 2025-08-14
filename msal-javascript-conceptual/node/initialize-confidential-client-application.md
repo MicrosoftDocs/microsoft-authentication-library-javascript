@@ -2,9 +2,7 @@
 title: How to initialize the confidential client application object in MSAL Node 
 description: Learn how to initialize MSAL Node.
 author: Dickson-Mwendia
-manager: Dougeby
-
-ms.author: dmwendia
+manager: Dougebyms.author: dmwendia
 
 ms.date: 05/21/2025
 ms.service: msal

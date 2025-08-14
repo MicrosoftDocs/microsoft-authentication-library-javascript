@@ -3,8 +3,6 @@ title: Using the MSAL Interceptor
 description: Learn how to use the MSAL Interceptor
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: how-to

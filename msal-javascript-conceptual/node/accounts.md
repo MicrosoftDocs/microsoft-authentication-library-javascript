@@ -2,9 +2,7 @@
 title: Accounts in MSAL Node
 description: Learn how to use the different APIs in MSAL Node to access cached accounts.
 author: Dickson-Mwendia
-manager: Dougeby
-
-ms.author: dmwendia
+manager: Dougebyms.author: dmwendia
 
 ms.service: msal
 ms.subservice: msal-node

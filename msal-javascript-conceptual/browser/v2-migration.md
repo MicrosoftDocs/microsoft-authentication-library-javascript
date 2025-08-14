@@ -3,8 +3,6 @@ title: Migrating from MSAL v2.x to MSAL v3.x
 description: Learn how to migrate from MSAL v2.x to MSAL v3.x
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: concept-article

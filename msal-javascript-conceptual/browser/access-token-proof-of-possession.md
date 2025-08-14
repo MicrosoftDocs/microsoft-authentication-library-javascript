@@ -3,8 +3,6 @@ title: Acquiring access tokens protected with Proof-of-Possession
 description: Learn how to acquire access tokens protected with Proof-of-Possession
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: concept-article

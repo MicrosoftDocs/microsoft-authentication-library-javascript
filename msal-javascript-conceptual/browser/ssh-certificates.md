@@ -3,8 +3,6 @@ title: SSH Certificates
 description: Learn how to acquire and use SSH Certificates
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: article

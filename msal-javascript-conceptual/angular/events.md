@@ -3,8 +3,6 @@ title:  Events in MSAL Angular
 description: Learn more about working with events in MSAL Angular
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: article

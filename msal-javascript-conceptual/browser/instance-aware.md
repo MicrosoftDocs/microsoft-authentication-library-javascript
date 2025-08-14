@@ -3,8 +3,6 @@ title: Instance aware flow
 description: Learn how to use the instance aware flow
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: how-to

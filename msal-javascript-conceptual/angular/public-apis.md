@@ -3,8 +3,6 @@ title: Commonly used public APIs in MSAL Angular
 description: Commonly used public APIs in MSAL Angular
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: article
@@ -17,9 +15,7 @@ ms.reviewer: cwerner, owenrichards, kengaderdus
 
 Before you start here, make sure you understand how to [initialize the application object](initialization.md).
 
-The login APIs in MSAL retrieve an `authorization code` which can be exchanged for an [ID token](/entra/identity-platform/id-tokens.md) for a signed in user, while consenting scopes for an additional resource, and an [access token](/entra/identity-platform/access-tokens.md) containing the user consented scopes to allow your app to securely call the API.
-
-You can read more about ID tokens on our [Azure Docs pages](/entra/identity-platform/id-tokens.md).
+The login APIs in MSAL retrieve an `authorization code` which can be exchanged for an [ID token](/entra/identity-platform/id-tokens) for a signed in user, while consenting scopes for an additional resource, and an [access token](/entra/identity-platform/access-tokens) containing the user consented scopes to allow your app to securely call the API. Learn more about [ID tokens](/entra/identity-platform/id-tokens).
 
 ## Public APIs
 

@@ -3,8 +3,6 @@ title: Hooks in MSAL React
 description: Learn how to use MSAL React hooks to manage authentication state and perform authentication and authorization flows.
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-react
 ms.topic: article

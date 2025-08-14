@@ -3,8 +3,6 @@ title: CDN Usage for MSAL Browser
 description: Learn about CDN Usage for @azure/msal-browser
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: article

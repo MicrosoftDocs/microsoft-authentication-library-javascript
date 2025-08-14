@@ -3,8 +3,6 @@ title: Upgrading from MSAL Angular v2 to v3
 description: Learn how to upgrade applications using MSAL Angular v2 to V3
 author: Dickson-Mwendia
 manager: Dougeby
-
-
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: concept-article
