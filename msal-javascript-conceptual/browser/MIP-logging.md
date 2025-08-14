@@ -2,7 +2,8 @@
 title: Logging errors and exceptions in MSAL.js
 description: Learn how to log errors and exceptions in MSAL.js
 author: Dickson-Mwendia
-manager: Dougebyms.author: dmwendia
+manager: Dougeby
+ms.author: dmwendia
 ms.custom: devx-track-js
 ms.date: 05/21/2025
 ms.reviewer: saeeda, jmprieur
@@ -11,6 +12,7 @@ ms.subservice: msal-js
 ms.topic: concept-article
 #Customer intent:
 ---
+
 # Logging in MSAL.js
 
 This article gives an overview of the different types of errors and recommendations for handling common sign-in errors.

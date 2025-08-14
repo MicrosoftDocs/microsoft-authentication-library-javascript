@@ -2,8 +2,8 @@
 title: How to initialize the confidential client application object in MSAL Node 
 description: Learn how to initialize MSAL Node.
 author: Dickson-Mwendia
-manager: Dougebyms.author: dmwendia
-
+manager: Dougeby
+ms.author: dmwendia
 ms.date: 05/21/2025
 ms.service: msal
 ms.subservice: msal-node
@@ -94,4 +94,4 @@ If your application audience is a single tenant, you must provide an authority w
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Axquire tokens in MSAL Node](request.md)
+> [Axquire tokens in MSAL Node](acquire-token-requests.md)

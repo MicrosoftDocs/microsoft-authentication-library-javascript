@@ -53,7 +53,7 @@ Yes. Please refer to [MSAL Node samples](https://github.com/AzureAD/microsoft-au
 
 ### Is interactive flow supported?
 
-Currently No. Authentication for MSAL Node using authorization code grant is a two legged flow, as detailed [here](./request.md). There are plans to provide a single API to achieve this, and invoke the browser on the user's behalf. However it is currently not supported.
+Currently No. Authentication for MSAL Node using authorization code grant is a two legged flow, as detailed [here](./acquire-token-requests.md). There are plans to provide a single API to achieve this, and invoke the browser on the user's behalf. However it is currently not supported.
 
 ### Are SPAs supported by MSAL Node?
 
@@ -85,7 +85,7 @@ Developers can provide a `proxyUrl` string in the system config options as detai
 
 ### How do I implement a custom http(s) agent in MSAL Node?
 
-Developers can use a custom http(s) agent by providing a `customAgentOptions` object in the system config options as detailed [here](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/docs/configuration.md#system-config-options). Developers can also implement their own NetworkManager by instantiating an [INetworkModule](https://azuread.github.io/microsoft-authentication-library-for-js/ref/interfaces/_azure_msal_node.INetworkModule.html) and building custom http(s) agent support in it.
+Developers can use a custom http(s) agent by providing a `customAgentOptions` object in the system config options as detailed [here](configuration.md#system-config-options). Developers can also implement their own NetworkManager by instantiating an [INetworkModule](https://azuread.github.io/microsoft-authentication-library-for-js/ref/interfaces/_azure_msal_node.INetworkModule.html) and building custom http(s) agent support in it.
 
 ## B2C
 

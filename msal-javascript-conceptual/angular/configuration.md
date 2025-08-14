@@ -2,13 +2,15 @@
 title: MSAL Angular Configuration
 description: Learn how to configure your Angular application to use MSAL Angular
 author: Dickson-Mwendia
-manager: Dougebyms.service: msal
+manager: Dougeby
+ms.service: msal
 ms.subservice: msal-angular
 ms.topic: article
 ms.date: 05/21/2025
 ms.author: dmwendia
 ms.reviewer: cwerner, owenrichards, kengaderdus
 ---
+
 # MSAL Angular Configuration
 
 MSAL for Angular can be configured in multiple ways. This article describes the available configuration options for MSAL Angular, including static and dynamic approaches, and provides code samples for integrating authentication into your app. Use this guide to select the configuration method that best fits your application’s requirements and provides a seamless sign-in experience for your users.

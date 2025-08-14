@@ -2,8 +2,8 @@
 title: Using certificate credentials with MSAL Node
 description: Learn how to use certificate credentials with MSAL Node. Create, register and initialize certificates, and use them securely.
 author: Dickson-Mwendia
-manager: Dougebyms.author: dmwendia
-
+manager: Dougeby
+ms.author: dmwendia
 ms.date: 05/21/2025
 ms.service: msal
 ms.subservice: msal-node

@@ -2,8 +2,8 @@
 title: Initialize the public client application object in MSAL Node 
 description: Learn how to initialize the PublicClientApplication object in MSAL Node and how to configure the authority.
 author: Dickson-Mwendia
-manager: Dougebyms.author: dmwendia
-
+manager: Dougeby
+ms.author: dmwendia
 ms.date: 05/21/2025
 ms.service: msal
 ms.subservice: msal-node
@@ -93,4 +93,4 @@ const msalConfig = {
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Axquire tokens in MSAL Node](request.md)
+> [Axquire tokens in MSAL Node](acquire-token-requests.md)

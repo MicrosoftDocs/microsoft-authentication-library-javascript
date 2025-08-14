@@ -2,8 +2,8 @@
 title: "Migrate your Node.js application from ADAL to MSAL"
 description: How to update your existing Node.js application to use the Microsoft Authentication Library (MSAL) for authentication and authorization instead of the Active Directory Authentication Library (ADAL).
 author: Dickson-Mwendia
-manager: Dougebyms.author: cwerner
-
+manager: Dougeby
+ms.author: dmwendia
 ms.date: 05/21/2025
 ms.service: msal
 ms.subservice: msal-node
@@ -13,7 +13,7 @@ ms.topic: how-to
 
 # Migrate your Node.js application from ADAL to MSAL
 
-[Microsoft Authentication Library for Node](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-node) (MSAL Node) is now the recommended SDK for enabling authentication and authorization for your applications registered on the Microsoft identity platform. This article covers the important steps you need to go through in order to migrate your apps from Active Directory Authentication Library for Node (ADAL Node) to MSAL Node.
+[Microsoft Authentication Library for Node](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-node) (MSAL Node) is the recommended SDK for enabling authentication and authorization for your applications registered on the Microsoft identity platform. This article covers the important steps you need to go through in order to migrate your apps from Active Directory Authentication Library for Node (ADAL Node) to MSAL Node.
 
 ## Prerequisites
 
@@ -87,7 +87,7 @@ const cca = new msal.ConfidentialClientApplication({
     });
 ```
 
-Both `PublicClientApplication` and `ConfidentialClientApplication`, unlike ADAL's `AuthenticationContext`, is bound to a client ID. This means that if you have different client IDs that you like to use in your application, you need to instantiate a new MSAL instance for each. See for more: [Initialization of MSAL Node](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/docs/initialize-confidential-client-application.md)
+Both `PublicClientApplication` and `ConfidentialClientApplication`, unlike ADAL's `AuthenticationContext`, is bound to a client ID. This means that if you have different client IDs that you like to use in your application, you need to instantiate a new MSAL instance for each. See for more: [Initialization of MSAL Node](initialize-confidential-client-application.md)
 
 ## Configure MSAL
 
@@ -131,7 +131,7 @@ const msalConfig = {
 const cca = new msal.ConfidentialClientApplication(msalConfig);
 ```
 
-As a notable difference, MSAL doesn't have a flag to disable authority validation and authorities are always validated by default. MSAL compares your requested authority against a list of authorities known to Microsoft or a list of authorities you've specified in your configuration. See for more: [Configuration Options](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-node/docs/configuration.md)
+As a notable difference, MSAL doesn't have a flag to disable authority validation and authorities are always validated by default. MSAL compares your requested authority against a list of authorities known to Microsoft or a list of authorities you've specified in your configuration. See for more: [Configuration Options](configuration.md)
 
 ## Switch to MSAL API
 
@@ -386,7 +386,7 @@ For more information, please refer to the [ADAL Node to MSAL Node migration samp
 
 ## Handle errors and exceptions
 
-When using MSAL Node, the most common type of error you might face is the `interaction_required` error. This error is often resolved by initiating an interactive token acquisition prompt. For instance, when using `acquireTokenSilent`, if there are no cached refresh tokens, MSAL Node won't be able to acquire an access token silently. Similarly, the web API you're trying to access might have a [Conditional Access](/entra/identity/conditional-access/overview.md) policy in place, requiring the user to perform [multi-factor authentication](/entra/identity/authentication/concept-mfa-howitworks.md) (MFA). In such cases, handling `interaction_required` error by triggering `acquireTokenByCode` will prompt the user for MFA, allowing them to fullfil it.
+When using MSAL Node, the most common type of error you might face is the `interaction_required` error. This error is often resolved by initiating an interactive token acquisition prompt. For instance, when using `acquireTokenSilent`, if there are no cached refresh tokens, MSAL Node won't be able to acquire an access token silently. Similarly, the web API you're trying to access might have a [Conditional Access](/entra/identity/conditional-access/overview) policy in place, requiring the user to perform [multi-factor authentication](/entra/identity/authentication/concept-mfa-howitworks) (MFA). In such cases, handling `interaction_required` error by triggering `acquireTokenByCode` will prompt the user for MFA, allowing them to fullfil it.
 
 Yet another common error you might face is `consent_required`, which occurs when permissions required for obtaining an access token for a protected resource aren't consented by the user. As in `interaction_required`, the solution for `consent_required` error is often initiating an interactive token acquisition prompt, using the `acquireTokenByCode` method.
 

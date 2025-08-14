@@ -133,7 +133,7 @@
     - name: Configure your application
       href: node/configuration.md
     - name: Supported authorization code grants
-      href: node/request.md
+      href: node/acquire-token-requests.md
     - name: Accounts in MSAL Node
       href: node/accounts.md
     - name: Acquire device bound tokens with broker
