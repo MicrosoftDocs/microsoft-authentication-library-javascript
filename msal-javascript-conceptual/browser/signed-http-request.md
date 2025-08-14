@@ -2,7 +2,7 @@
 title: Signed Http Request
 description: Learn how to use signed Http requests
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-js

@@ -2,7 +2,7 @@
 title: Caching in MSAL.js
 description: Learn about caching tokens in MSAL.js 
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-js

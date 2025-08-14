@@ -2,7 +2,7 @@
 title: Testing your application in a browser environment
 description: Learn how to test your application in a browser environment
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-js

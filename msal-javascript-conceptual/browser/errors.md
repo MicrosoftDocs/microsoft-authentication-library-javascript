@@ -2,7 +2,7 @@
 title: Common errors in MSAL JS
 description: Learn the common errors in MSAL JS
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-js

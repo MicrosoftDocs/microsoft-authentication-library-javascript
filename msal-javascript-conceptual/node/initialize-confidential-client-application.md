@@ -2,7 +2,7 @@
 title: How to initialize the confidential client application object in MSAL Node 
 description: Learn how to initialize MSAL Node.
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 ms.author: dmwendia
 
 ms.date: 05/21/2025
@@ -19,9 +19,16 @@ This article shows you how to initialize the `ConfidentialClientApplication` obj
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/en/download/)
-- An Azure account that has an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- An application registered in Microsoft Entra tenant. Refer to [Register an application with the Microsoft identity platform](/entra/identity-platform/quickstart-register-app).
+Before initializing an application, you first need to [register it in the Microsoft Entra admin center](/entra/identity-platform/scenario-spa-app-registration), establishing a trust relationship between your application and the Microsoft identity platform.
+
+After registering your app, you'll need some or all of the following values that can be found in the Microsoft Entra admin center.
+
+| Value                   | Required | Description                                                                                                                                                                |
+| :---------------------- | :------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Application (client) ID | Required | A GUID that uniquely identifies your application within the Microsoft identity platform.                                                                                   |
+| Authority               | Optional | The identity provider URL (the _instance_) and the _sign-in audience_ for your application. The instance and sign-in audience, when concatenated, make up the _authority_. |
+| Directory (tenant) ID   | Optional | Specify Directory (tenant) ID if you're building a line-of-business application solely for your organization, often referred to as a _single-tenant application_.          |
+| Redirect URI            | Optional | If you're building a web app, the `redirectUri` specifies where the identity provider (the Microsoft identity platform) should return the security tokens it has issued.   |
 
 ## Initializing the `ConfidentialClientApplication` object
 

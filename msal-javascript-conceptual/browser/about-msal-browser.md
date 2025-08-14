@@ -2,7 +2,7 @@
 title: About MSAL Browser
 description: Learn how to use MSAL Browser in your JavaScript applications
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-js

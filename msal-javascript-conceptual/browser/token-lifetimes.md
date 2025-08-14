@@ -2,7 +2,7 @@
 title: Manage token lifetimes
 description: Learn how to manage token lifetimes
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-js

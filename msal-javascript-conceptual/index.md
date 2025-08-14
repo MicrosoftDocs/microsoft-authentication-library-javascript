@@ -3,7 +3,7 @@ title: Overview of the Microsoft Authentication Libraries for JavaScript
 description: Overview of the Microsoft Authentication Libraries for JavaScript
 services: active-directory
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 ms.topic: reference
 ms.date: 05/21/2025
 ms.author: dmwendia

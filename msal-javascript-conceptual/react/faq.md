@@ -2,7 +2,7 @@
 title: MSAL React frequently asked questions
 description: Frequently asked questions on MSAL React
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-react

@@ -2,7 +2,7 @@
 title: Using MSAL Guard to protect routes
 description: Learn how to use MSAL Guard to protect routes in your Angular application
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-angular

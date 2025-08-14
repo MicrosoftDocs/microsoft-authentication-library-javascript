@@ -2,7 +2,7 @@
 title: Commonly used public APIs in MSAL Angular
 description: Commonly used public APIs in MSAL Angular
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-angular

@@ -2,7 +2,7 @@
 title: Frequently asked questions about MSAL Node
 description: Learn about the most frequently asked questions about MSAL Node.
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 ms.author: dmwendia
 
 ms.date: 05/21/2025

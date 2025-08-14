@@ -2,7 +2,7 @@
 title: Initializing MSAL Angular
 description: Learn how to initialize MSAL in your Angular application
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-angular

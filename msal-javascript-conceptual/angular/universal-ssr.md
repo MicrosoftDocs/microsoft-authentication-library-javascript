@@ -2,7 +2,7 @@
 title: Angular Universal SSR with MSAL Angular
 description: Angular Universal SSR with MSAL Angular
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-angular

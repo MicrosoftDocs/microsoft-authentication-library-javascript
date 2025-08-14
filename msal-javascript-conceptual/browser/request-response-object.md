@@ -2,7 +2,7 @@
 title: Request and Response Objects
 description: Learn about the configuration options you can use to customize authentication flows
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-js

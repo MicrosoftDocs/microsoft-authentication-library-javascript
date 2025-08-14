@@ -2,7 +2,7 @@
 title: Logging errors and exceptions in MSAL.js
 description: Learn how to log errors and exceptions in MSAL.js
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 ms.author: dmwendia
 ms.custom: devx-track-js
 ms.date: 05/21/2025

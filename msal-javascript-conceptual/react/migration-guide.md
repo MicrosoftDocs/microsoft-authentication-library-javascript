@@ -2,7 +2,7 @@
 title: Migration Guide from MSAL v1 to MSAL React and MSAL Browser
 description: Learn how to migrate from msal.js v1 to MSAL React and MSAL Browser. This guide covers updating your app registration, installation, initialization, protecting components, acquiring an access token, acquiring an id token, updating redux store integration and reacting to events.
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-react

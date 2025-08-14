@@ -124,16 +124,12 @@
           href: angular/v1-V2-upgrade-guide.md
         - name: Upgrade from MSAL Angular 2.x to MSAL Angular 3.x
           href: angular/v2-v3-upgrade-guide.md
-        - name: Upgrade from MSAL Angular v1 to v2
-          href: angular/v1-v2-upgrade-guide.md
 - name: MSAL Node
   items:
     - name: Initialize public client applications
       href: node/initialize-public-client-application.md
     - name: Initialize confidential client applications
       href: node/initialize-confidential-client-application.md
-    - name: Initialize client applications
-      href: node/initialize-v1-v2-client-apps.md
     - name: Configure your application
       href: node/configuration.md
     - name: Supported authorization code grants
@@ -142,26 +138,26 @@
       href: node/accounts.md
     - name: Acquire device bound tokens with broker
       href: node/brokering.md
-    - name: Caching in Microsoft Authentication Extensions for Node
-      href: node/caching-in-extensions.md
     - name: Token caching in MSAL Node
       href: node/caching.md
     - name: Use certificate credentials with MSAL Node
       href: node/certificate-credentials.md
-    - name: Microsoft Authentication Extensions for Node
-      href: node/extensions.md
-    - name: MSAL Node FAQs
-      href: node/faq.md
-    - name: Secure app credentials with Azure Key Vault and Azure Managed Identity
-      href: node/key-vault-managed-identity.md
-    - name: Migrate Node.js apps from ADAL to MSAL
-      href: node/migration.md
     - name: Performance in MSAL Node
       href: node/performance.md
     - name: Enable regional authorities
       href: node/regional-authorities.md
     - name: Implement SNI Authentication
       href: node/sni.md
+    - name: Microsoft Authentication Extensions for Node
+      href: node/extensions.md
+    - name: Caching in Microsoft Authentication Extensions for Node
+      href: node/caching-in-extensions.md
+    - name: Secure app credentials with Azure Key Vault and Azure Managed Identity
+      href: node/key-vault-managed-identity.md
+    - name: Migrate Node.js apps from ADAL to MSAL
+      href: node/migration.md
+    - name: MSAL Node FAQs
+      href: node/faq.md
 - name: MSAL React
   items:
     - name: Getting started with MSAL React

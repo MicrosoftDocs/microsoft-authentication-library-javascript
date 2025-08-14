@@ -2,7 +2,7 @@
 title: Errors in MSAL Angular
 description: Learn how to deal wth errors in MSAL Angular
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-angular

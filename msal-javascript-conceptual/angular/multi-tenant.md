@@ -2,7 +2,7 @@
 title: Support for multi-tenant applications
 description: Learn more about support for multi-tenant applications in MSAL Angular
 author: Dickson-Mwendia
-manager: CelesteDG
+manager: Doueby
 
 ms.service: msal
 ms.subservice: msal-angular
