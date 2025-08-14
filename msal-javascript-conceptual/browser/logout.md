@@ -2,7 +2,8 @@
 title: Sign out users
 description: Learn how to sign out users 
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js

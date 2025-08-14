@@ -2,7 +2,8 @@
 title: Using MSAL in iframed apps
 description: Learn how to use MSAL in iframed apps
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js

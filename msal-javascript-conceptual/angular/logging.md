@@ -2,7 +2,8 @@
 title: Logging in MSAL Angular
 description: Learn about logging in MSAL Angular
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-angular

@@ -2,7 +2,8 @@
 title: Events in MSAL Browser
 description: Learn about events in MSAL Browser
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js

@@ -2,7 +2,8 @@
 title: Enable logging in your applications
 description: Learn how to enable MSAL JS logging for your applications
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js

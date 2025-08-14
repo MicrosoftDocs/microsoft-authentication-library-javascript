@@ -2,7 +2,8 @@
 title: Initialize the public client application object in MSAL Node 
 description: Learn how to initialize the PublicClientApplication object in MSAL Node and how to configure the authority.
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 ms.author: dmwendia
 
 ms.date: 05/21/2025

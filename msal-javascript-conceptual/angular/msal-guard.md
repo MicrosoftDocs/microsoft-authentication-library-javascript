@@ -2,7 +2,7 @@
 title: Using MSAL Guard to protect routes
 description: Learn how to use MSAL Guard to protect routes in your Angular application
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
 
 ms.service: msal
 ms.subservice: msal-angular
@@ -11,7 +11,7 @@ ms.date: 05/21/2025
 ms.author: dmwendia
 ms.reviewer: cwerner, owenrichards, kengaderdus
 ---
-# Using MSAL Guard to protect routes
+# Use MSAL Guard to protect routes
 
 MSAL Angular provides `MsalGuard`, a class you can use to protect routes and require authentication before accessing the protected route. This doc provides more information about configuring and considerations when using the `MsalGuard`.
 
@@ -27,7 +27,7 @@ The `MsalGuard` can be added to your application as a provider in the *app.modul
 
 The `MsalGuard` is then used to protect routes in the *app-routing.module.ts*. The code sample below demonstrates adding the `MsalGuard` to the `Profile` route. Protecting the `Profile` route means that even if a user does not sign in using the `Login` button, if they try to access the `Profile` route or click the `Profile` button, the `MsalGuard` will prompt the user to authenticate via popup or redirect before showing the `Profile` page.
 
-Your configuration may look like the below. See our [configuration doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/configuration.md) on other ways to configure MSAL Angular for your app, and the sections below for more details on the `MsalConfiguration` object and interfaces for routing.
+Your configuration may look like the below. See our [configuration doc](configuration.md) on other ways to configure MSAL Angular for your app, and the sections below for more details on the `MsalConfiguration` object and interfaces for routing.
 
 ```javascript
 // app.module.ts

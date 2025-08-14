@@ -2,7 +2,8 @@
 title:  Resources and Scopes
 description: Learn about accessing resources and the scopes included in token requests
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js

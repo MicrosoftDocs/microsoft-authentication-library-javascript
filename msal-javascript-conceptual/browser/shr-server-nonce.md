@@ -2,7 +2,8 @@
 title: SHR Server Nonce
 description: Learn about the SHR Server Nonce
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js

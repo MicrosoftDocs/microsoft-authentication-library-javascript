@@ -2,7 +2,8 @@
 title: Configure MSAL to use your router for client-side navigation
 description: How to configure MSAL Angular to use your router's navigate function for client-side navigation
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-angular

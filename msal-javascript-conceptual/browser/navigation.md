@@ -2,7 +2,8 @@
 title: Intercepting or overriding window navigation
 description: Learn how to intercept or override window navigation
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js

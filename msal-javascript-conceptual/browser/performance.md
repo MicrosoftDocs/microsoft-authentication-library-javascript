@@ -2,7 +2,8 @@
 title: Measuring performance in MSAL.js 
 description: Learn more about telemetry and performance of token acquisition in MSAL.js
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js

@@ -2,7 +2,8 @@
 title: Upgrading from MSAL Angular v1 to v2
 description: Learn how to upgrade applications using MSAL Angular v1 to V2
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-angular

@@ -2,7 +2,8 @@
 title: Initialize MSAL Browser
 description: Learn how to initialize MSAL in your JavaScript applications
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js

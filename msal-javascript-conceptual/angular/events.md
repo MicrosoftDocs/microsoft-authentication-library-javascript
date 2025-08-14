@@ -2,7 +2,8 @@
 title:  Events in MSAL Angular
 description: Learn more about working with events in MSAL Angular
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-angular
@@ -14,7 +15,7 @@ ms.reviewer: cwerner, owenrichards, kengaderdus
 
 # Events in MSAL Angular
 
-Before you start here, make sure you understand how to [initialize the application object](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/initialization.md).
+Before you start here, make sure you understand how to [initialize the application object](initialization.md).
 
 `@azure/msal-angular` uses the event system exposed by `@azure/msal-browser`, which emits events related to auth and MSAL, and can be used for updating UI, showing error messages, and so on.
 

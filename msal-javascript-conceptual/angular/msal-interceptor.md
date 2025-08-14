@@ -2,7 +2,8 @@
 title: Using the MSAL Interceptor
 description: Learn how to use the MSAL Interceptor
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-angular
@@ -26,7 +27,7 @@ Please note that the `MsalInterceptor` is provided for your convenience and may 
 
 The `MsalInterceptor` can be added to your application as a provider in the *app.module.ts*, with its configuration. The imports takes in an instance of MSAL, as well as two Angular-specific configuration objects. The third argument is a [`MsalInterceptorConfiguration`](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/src/msal.interceptor.config.ts) object, which contain the values for `interactionType`, a `protectedResourceMap`, and an optional `authRequest`.
 
-Your configuration may look like the below. See our [configuration doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/configuration.md) on other ways to configure MSAL Angular for your app.
+Your configuration may look like the below. See our [configuration doc](configuration.md) on other ways to configure MSAL Angular for your app.
 
 ```javascript
 import { NgModule } from '@angular/core';
@@ -162,7 +163,7 @@ Other things to note regarding the `protectedResourceMap`:
 
 ### Optional authRequest
 
-For more information on the optional `authRequest` that can be set in the `MsalInterceptorConfiguration`, please see our [multi-tenant doc here](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/multi-tenant.md#dynamic-auth-request).
+For more information on the optional `authRequest` that can be set in the `MsalInterceptorConfiguration`, please see our [multi-tenant doc here](multi-tenant.md#dynamic-auth-request).
 
 ## Changes from msal-angular v1 to v2
 

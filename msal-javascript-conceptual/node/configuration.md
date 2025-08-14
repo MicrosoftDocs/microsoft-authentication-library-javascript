@@ -2,7 +2,8 @@
 title: Configure MSAL Node
 description: Learn how to configure MSAL Node.
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 ms.author: dmwendia
 
 ms.date: 05/21/2025

@@ -2,7 +2,8 @@
 title: Enabling regional authorities
 description: Learn how to enable regional authorities in MSAL Node.
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 ms.author: dmwendia
 
 ms.date: 05/21/2025

@@ -2,7 +2,8 @@
 title: Implement SNI Authentication with MSAL Node
 description: Learn how to acquire tokens from the native token broker.
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 ms.author: dmwendia
 
 ms.date: 05/21/2025

@@ -2,7 +2,8 @@
 title: Sign in users
 description: Learn how to sign in users
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js

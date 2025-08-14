@@ -2,7 +2,8 @@
 title: Acquiring and using an access token
 description: Learn how to acquire and use an access token
 author: Dickson-Mwendia
-manager: Doueby
+manager: Dougeby
+
 
 ms.service: msal
 ms.subservice: msal-js
