@@ -30,7 +30,7 @@ syntax: |
   type InteractiveRequest = Partial<
     Omit<
       CommonAuthorizationUrlRequest,
-      "scopes" | "redirectUri" | "requestedClaimsHash" | "storeInCache"
+      "scopes" | "requestedClaimsHash" | "storeInCache"
     >
   > & {
     errorTemplate?: string
