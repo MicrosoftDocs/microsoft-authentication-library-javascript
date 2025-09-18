@@ -8,25 +8,23 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: >-
-      SignInSubmitCodeResult(SignInSubmitCredentialResultState,
-      CustomAuthAccountData)
+  - name: SignInSubmitCodeResult(SignInSubmitCodeResultState, CustomAuthAccountData)
     uid: '@azure/msal-browser.SignInSubmitCodeResult.constructor'
     package: '@azure/msal-browser'
-    summary: Creates a new instance of SignInSubmitCredentialResult.
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        new SignInSubmitCodeResult(state: SignInSubmitCredentialResultState,
-        resultData?: CustomAuthAccountData)
+        new SignInSubmitCodeResult(state: SignInSubmitCodeResultState, data?:
+        CustomAuthAccountData)
       parameters:
         - id: state
-          type: <xref uid="@azure/msal-browser.SignInSubmitCredentialResultState" />
-          description: The state of the result.
-        - id: resultData
+          type: <xref uid="@azure/msal-browser.SignInSubmitCodeResultState" />
+          description: ''
+        - id: data
           type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
-          description: The result data.
+          description: ''
 inheritedProperties:
   - name: data
     uid: '@azure/msal-browser.SignInSubmitCodeResult.data'
@@ -40,7 +38,7 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
-    inheritanceDescription: <b>Inherited From</b> SignInSubmitCredentialResult.data
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
   - name: error
     uid: '@azure/msal-browser.SignInSubmitCodeResult.error'
     package: '@azure/msal-browser'
@@ -53,7 +51,7 @@ inheritedProperties:
       return:
         description: ''
         type: <xref uid="@azure/msal-browser.SignInSubmitCodeError" />
-    inheritanceDescription: <b>Inherited From</b> SignInSubmitCredentialResult.error
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
   - name: state
     uid: '@azure/msal-browser.SignInSubmitCodeResult.state'
     package: '@azure/msal-browser'
@@ -62,11 +60,11 @@ inheritedProperties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'state: SignInSubmitCredentialResultState'
+      content: 'state: SignInSubmitCodeResultState'
       return:
         description: ''
-        type: <xref uid="@azure/msal-browser.SignInSubmitCredentialResultState" />
-    inheritanceDescription: <b>Inherited From</b> SignInSubmitCredentialResult.state
+        type: <xref uid="@azure/msal-browser.SignInSubmitCodeResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
 methods:
   - name: createWithError(unknown)
     uid: '@azure/msal-browser.SignInSubmitCodeResult.createWithError'
@@ -106,5 +104,7 @@ methods:
         description: ''
         type: this
 extends: >-
-  SignInSubmitCredentialResult&lt;<xref
-  uid="@azure/msal-browser.SignInSubmitCodeError" />&gt;
+  AuthFlowResultBase&lt;<xref
+  uid="@azure/msal-browser.SignInSubmitCodeResultState" />, <xref
+  uid="@azure/msal-browser.SignInSubmitCodeError" />, <xref
+  uid="@azure/msal-browser.CustomAuthAccountData" />&gt;

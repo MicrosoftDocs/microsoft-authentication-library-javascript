@@ -105,6 +105,11 @@
       no-loc:
         - AuthenticationHeaderParser
       items: []
+    - uid: '@azure/msal-browser.AuthenticationMethod'
+      name: AuthenticationMethod
+      no-loc:
+        - AuthenticationMethod
+      items: []
     - uid: '@azure/msal-browser.AuthenticationResult'
       name: AuthenticationResult
       no-loc:
@@ -134,6 +139,61 @@
       name: AuthFlowStateBase
       no-loc:
         - AuthFlowStateBase
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodDetails'
+      name: AuthMethodDetails
+      no-loc:
+        - AuthMethodDetails
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodRegistrationChallengeMethodError'
+      name: AuthMethodRegistrationChallengeMethodError
+      no-loc:
+        - AuthMethodRegistrationChallengeMethodError
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodRegistrationChallengeMethodResult'
+      name: AuthMethodRegistrationChallengeMethodResult
+      no-loc:
+        - AuthMethodRegistrationChallengeMethodResult
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodRegistrationChallengeMethodResultState'
+      name: AuthMethodRegistrationChallengeMethodResultState
+      no-loc:
+        - AuthMethodRegistrationChallengeMethodResultState
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodRegistrationCompletedState'
+      name: AuthMethodRegistrationCompletedState
+      no-loc:
+        - AuthMethodRegistrationCompletedState
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodRegistrationFailedState'
+      name: AuthMethodRegistrationFailedState
+      no-loc:
+        - AuthMethodRegistrationFailedState
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodRegistrationRequiredState'
+      name: AuthMethodRegistrationRequiredState
+      no-loc:
+        - AuthMethodRegistrationRequiredState
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeError'
+      name: AuthMethodRegistrationSubmitChallengeError
+      no-loc:
+        - AuthMethodRegistrationSubmitChallengeError
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult'
+      name: AuthMethodRegistrationSubmitChallengeResult
+      no-loc:
+        - AuthMethodRegistrationSubmitChallengeResult
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResultState'
+      name: AuthMethodRegistrationSubmitChallengeResultState
+      no-loc:
+        - AuthMethodRegistrationSubmitChallengeResultState
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodVerificationRequiredState'
+      name: AuthMethodVerificationRequiredState
+      no-loc:
+        - AuthMethodVerificationRequiredState
       items: []
     - uid: '@azure/msal-browser.AuthorizationCodeRequest'
       name: AuthorizationCodeRequest
@@ -775,10 +835,10 @@
       no-loc:
         - SignInSubmitCodeResult
       items: []
-    - uid: '@azure/msal-browser.SignInSubmitCredentialResultState'
-      name: SignInSubmitCredentialResultState
+    - uid: '@azure/msal-browser.SignInSubmitCodeResultState'
+      name: SignInSubmitCodeResultState
       no-loc:
-        - SignInSubmitCredentialResultState
+        - SignInSubmitCodeResultState
       items: []
     - uid: '@azure/msal-browser.SignInSubmitPasswordError'
       name: SignInSubmitPasswordError
@@ -789,6 +849,11 @@
       name: SignInSubmitPasswordResult
       no-loc:
         - SignInSubmitPasswordResult
+      items: []
+    - uid: '@azure/msal-browser.SignInSubmitPasswordResultState'
+      name: SignInSubmitPasswordResultState
+      no-loc:
+        - SignInSubmitPasswordResultState
       items: []
     - uid: '@azure/msal-browser.SignInWithContinuationTokenInputs'
       name: SignInWithContinuationTokenInputs

@@ -1,0 +1,58 @@
+### YamlMime:TSType
+name: AuthenticationMethod
+uid: '@azure/msal-browser.AuthenticationMethod'
+package: '@azure/msal-browser'
+summary: ''
+fullName: AuthenticationMethod
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: challenge_channel
+    uid: '@azure/msal-browser.AuthenticationMethod.challenge_channel'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: challenge_channel
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'challenge_channel: string'
+      return:
+        description: ''
+        type: string
+  - name: challenge_type
+    uid: '@azure/msal-browser.AuthenticationMethod.challenge_type'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: challenge_type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'challenge_type: string'
+      return:
+        description: ''
+        type: string
+  - name: id
+    uid: '@azure/msal-browser.AuthenticationMethod.id'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: login_hint
+    uid: '@azure/msal-browser.AuthenticationMethod.login_hint'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: login_hint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'login_hint: string'
+      return:
+        description: ''
+        type: string

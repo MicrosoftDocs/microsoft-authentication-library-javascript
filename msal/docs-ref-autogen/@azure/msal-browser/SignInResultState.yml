@@ -2,13 +2,21 @@
 name: SignInResultState
 uid: '@azure/msal-browser.SignInResultState'
 package: '@azure/msal-browser'
-summary: |-
+summary: >-
   The possible states for the SignInResult.
+
   This includes:
+
   - SignInCodeRequiredState: The sign-in process requires a code.
+
   - SignInPasswordRequiredState: The sign-in process requires a password.
+
   - SignInFailedState: The sign-in process has failed.
+
   - SignInCompletedState: The sign-in process is completed.
+
+  - AuthMethodRegistrationRequiredState: The sign-in process requires
+  authentication method registration.
 fullName: SignInResultState
 remarks: ''
 isDeprecated: false
@@ -18,3 +26,4 @@ syntax: |
     | SignInPasswordRequiredState
     | SignInFailedState
     | SignInCompletedState
+    | AuthMethodRegistrationRequiredState
