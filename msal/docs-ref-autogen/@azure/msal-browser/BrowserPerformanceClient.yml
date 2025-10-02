@@ -120,7 +120,7 @@ inheritedMethods:
           type: string
           description: ''
     inheritanceDescription: <b>Inherited From</b> PerformanceClient.emitEvents
-  - name: endMeasurement(PerformanceEvent, unknown)
+  - name: endMeasurement(PerformanceEvent, unknown, AccountInfo)
     uid: '@azure/msal-browser.BrowserPerformanceClient.endMeasurement'
     package: '@azure/msal-browser'
     summary: >-
@@ -137,14 +137,17 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function endMeasurement(event: PerformanceEvent, error?: unknown): null
-        | PerformanceEvent
+        function endMeasurement(event: PerformanceEvent, error?: unknown,
+        account?: AccountInfo): null | PerformanceEvent
       parameters:
         - id: event
           type: <xref uid="@azure/msal-browser.PerformanceEvent" />
           description: ''
         - id: error
           type: unknown
+          description: ''
+        - id: account
+          type: <xref uid="@azure/msal-browser.AccountInfo" />
           description: ''
       return:
         description: ''

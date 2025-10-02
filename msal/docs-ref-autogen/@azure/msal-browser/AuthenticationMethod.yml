@@ -52,7 +52,7 @@ properties:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'login_hint: string'
+      content: 'login_hint?: string'
       return:
         description: ''
         type: string

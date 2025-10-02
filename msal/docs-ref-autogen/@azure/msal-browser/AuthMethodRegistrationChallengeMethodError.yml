@@ -80,4 +80,21 @@ methods:
       return:
         description: true if the input is incorrect, false otherwise.
         type: boolean
+  - name: isVerificationContactBlocked()
+    uid: >-
+      @azure/msal-browser.AuthMethodRegistrationChallengeMethodError.isVerificationContactBlocked
+    package: '@azure/msal-browser'
+    summary: >-
+      Checks if the error is due to the verification contact (e.g., phone number
+      or email) being blocked. Consider using a different email/phone number or
+      a different authentication method.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isVerificationContactBlocked(): boolean'
+      return:
+        description: >-
+          true if the error is due to the verification contact being blocked,
+          false otherwise.
+        type: boolean
 extends: AuthActionErrorBase
