@@ -93,4 +93,4 @@ const msalConfig = {
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Axquire tokens in MSAL Node](acquire-token-requests.md)
+> [Acquire tokens in MSAL Node](acquire-token-requests.md)
