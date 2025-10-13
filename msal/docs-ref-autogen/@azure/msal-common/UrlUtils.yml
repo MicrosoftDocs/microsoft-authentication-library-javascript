@@ -45,6 +45,27 @@ functions:
       return:
         description: ''
         type: string
+  - name: normalizeUrlForComparison(string)
+    uid: '@azure/msal-common.UrlUtils.normalizeUrlForComparison'
+    package: '@azure/msal-common'
+    summary: >-
+      Normalizes URLs for comparison by removing hash, canonicalizing,
+
+      and ensuring consistent URL encoding in query parameters.
+
+      This fixes redirect loops when URLs contain encoded characters like
+      apostrophes (%27).
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function normalizeUrlForComparison(url: string): string'
+      parameters:
+        - id: url
+          type: string
+          description: URL to normalize
+      return:
+        description: Normalized URL string for comparison
+        type: string
   - name: stripLeadingHashOrQuery(string)
     uid: '@azure/msal-common.UrlUtils.stripLeadingHashOrQuery'
     package: '@azure/msal-common'

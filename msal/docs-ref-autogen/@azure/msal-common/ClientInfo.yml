@@ -2,9 +2,13 @@
 name: ClientInfo
 uid: '@azure/msal-common.ClientInfo'
 package: '@azure/msal-common'
-summary: Client info object which consists of two IDs. Need to add more info here.
+summary: |-
+  Client info object which consists of:
+  uid: user id
+  utid: tenant id
+  xms_tdbr: optional, only for non-US tenants
 fullName: ClientInfo
 remarks: ''
 isDeprecated: false
 syntax: |
-  type ClientInfo = { uid: string; utid: string }
+  type ClientInfo = { uid: string; utid: string; xms_tdbr?: string }

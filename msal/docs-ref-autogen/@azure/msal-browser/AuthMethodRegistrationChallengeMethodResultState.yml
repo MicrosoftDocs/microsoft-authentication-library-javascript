@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: AuthMethodRegistrationChallengeMethodResultState
+uid: '@azure/msal-browser.AuthMethodRegistrationChallengeMethodResultState'
+package: '@azure/msal-browser'
+summary: >-
+  Type definition for possible states in
+  AuthMethodRegistrationChallengeMethodResult.
+fullName: AuthMethodRegistrationChallengeMethodResultState
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AuthMethodRegistrationChallengeMethodResultState =
+    | AuthMethodVerificationRequiredState
+    | AuthMethodRegistrationCompletedState
+    | AuthMethodRegistrationFailedState

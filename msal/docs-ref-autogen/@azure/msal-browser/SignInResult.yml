@@ -81,6 +81,17 @@ methods:
       return:
         description: A new instance of SignInResult with the error set.
         type: <xref uid="@azure/msal-browser.SignInResult" />
+  - name: isAuthMethodRegistrationRequired()
+    uid: '@azure/msal-browser.SignInResult.isAuthMethodRegistrationRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result requires authentication method registration.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isAuthMethodRegistrationRequired(): this'
+      return:
+        description: ''
+        type: this
   - name: isCodeRequired()
     uid: '@azure/msal-browser.SignInResult.isCodeRequired'
     package: '@azure/msal-browser'

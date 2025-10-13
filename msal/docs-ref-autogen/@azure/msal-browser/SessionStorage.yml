@@ -23,6 +23,17 @@ methods:
       return:
         description: ''
         type: boolean
+  - name: decryptData()
+    uid: '@azure/msal-browser.SessionStorage.decryptData'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function decryptData(): Promise<null | object>'
+      return:
+        description: ''
+        type: Promise&lt;null | object&gt;
   - name: getItem(string)
     uid: '@azure/msal-browser.SessionStorage.getItem'
     package: '@azure/msal-browser'

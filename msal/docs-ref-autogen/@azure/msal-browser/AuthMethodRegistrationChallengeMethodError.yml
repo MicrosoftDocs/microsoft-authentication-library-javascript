@@ -1,28 +1,30 @@
 ### YamlMime:TSType
-name: SignUpSubmitPasswordError
-uid: '@azure/msal-browser.SignUpSubmitPasswordError'
+name: AuthMethodRegistrationChallengeMethodError
+uid: '@azure/msal-browser.AuthMethodRegistrationChallengeMethodError'
 package: '@azure/msal-browser'
-summary: ''
-fullName: SignUpSubmitPasswordError
+summary: Error that occurred during authentication method challenge request.
+fullName: AuthMethodRegistrationChallengeMethodError
 remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: SignUpSubmitPasswordError(CustomAuthError)
-    uid: '@azure/msal-browser.SignUpSubmitPasswordError.constructor'
+  - name: AuthMethodRegistrationChallengeMethodError(CustomAuthError)
+    uid: '@azure/msal-browser.AuthMethodRegistrationChallengeMethodError.constructor'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'new SignUpSubmitPasswordError(errorData: CustomAuthError)'
+      content: >-
+        new AuthMethodRegistrationChallengeMethodError(errorData:
+        CustomAuthError)
       parameters:
         - id: errorData
           type: <xref uid="@azure/msal-browser.CustomAuthError" />
           description: ''
 inheritedProperties:
   - name: errorData
-    uid: '@azure/msal-browser.SignUpSubmitPasswordError.errorData'
+    uid: '@azure/msal-browser.AuthMethodRegistrationChallengeMethodError.errorData'
     package: '@azure/msal-browser'
     summary: ''
     fullName: errorData
@@ -36,7 +38,8 @@ inheritedProperties:
     inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.errorData
 inheritedMethods:
   - name: isRedirectRequired()
-    uid: '@azure/msal-browser.SignUpSubmitPasswordError.isRedirectRequired'
+    uid: >-
+      @azure/msal-browser.AuthMethodRegistrationChallengeMethodError.isRedirectRequired
     package: '@azure/msal-browser'
     summary: Check if client app supports the challenge type configured in Entra.
     remarks: ''
@@ -50,7 +53,8 @@ inheritedMethods:
         type: boolean
     inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.isRedirectRequired
   - name: isTokenExpired()
-    uid: '@azure/msal-browser.SignUpSubmitPasswordError.isTokenExpired'
+    uid: >-
+      @azure/msal-browser.AuthMethodRegistrationChallengeMethodError.isTokenExpired
     package: '@azure/msal-browser'
     summary: Checks if the error is due to the expired continuation token.
     remarks: ''
@@ -64,17 +68,33 @@ inheritedMethods:
         type: boolean
     inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.isTokenExpired
 methods:
-  - name: isInvalidPassword()
-    uid: '@azure/msal-browser.SignUpSubmitPasswordError.isInvalidPassword'
+  - name: isInvalidInput()
+    uid: >-
+      @azure/msal-browser.AuthMethodRegistrationChallengeMethodError.isInvalidInput
     package: '@azure/msal-browser'
-    summary: Checks if the error is due to the password being invalid or incorrect.
+    summary: Checks if the input for auth method registration is incorrect.
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isInvalidPassword(): boolean'
+      content: 'function isInvalidInput(): boolean'
+      return:
+        description: true if the input is incorrect, false otherwise.
+        type: boolean
+  - name: isVerificationContactBlocked()
+    uid: >-
+      @azure/msal-browser.AuthMethodRegistrationChallengeMethodError.isVerificationContactBlocked
+    package: '@azure/msal-browser'
+    summary: >-
+      Checks if the error is due to the verification contact (e.g., phone number
+      or email) being blocked. Consider using a different email/phone number or
+      a different authentication method.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isVerificationContactBlocked(): boolean'
       return:
         description: >-
-          True if the error is due to the password being invalid, false
-          otherwise.
+          true if the error is due to the verification contact being blocked,
+          false otherwise.
         type: boolean
 extends: AuthActionErrorBase

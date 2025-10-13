@@ -30,12 +30,15 @@ summary: >-
 
   - tenantProfiles         - Map of tenant profile objects for each tenant that
   the account has authenticated with in the browser
+
+  - dataBoundary           - Data boundary extracted from clientInfo
 fullName: AccountInfo
 remarks: ''
 isDeprecated: false
 syntax: |
   type AccountInfo = {
     authorityType?: string
+    dataBoundary?: DataBoundary
     environment: string
     homeAccountId: string
     idToken?: string
@@ -43,6 +46,7 @@ syntax: |
       [key: string]: string | number | string[] | object | undefined | unknown
     }
     localAccountId: string
+    loginHint?: string
     name?: string
     nativeAccountId?: string
     tenantId: string

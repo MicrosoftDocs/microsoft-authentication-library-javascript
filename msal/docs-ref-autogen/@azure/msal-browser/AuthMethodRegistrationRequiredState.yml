@@ -1,0 +1,60 @@
+### YamlMime:TSType
+name: AuthMethodRegistrationRequiredState
+uid: '@azure/msal-browser.AuthMethodRegistrationRequiredState'
+package: '@azure/msal-browser'
+summary: State indicating that authentication method registration is required.
+fullName: AuthMethodRegistrationRequiredState
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      AuthMethodRegistrationRequiredState(AuthMethodRegistrationRequiredStateParameters)
+    uid: '@azure/msal-browser.AuthMethodRegistrationRequiredState.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of AuthFlowActionRequiredStateBase.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new AuthMethodRegistrationRequiredState(stateParameters:
+        AuthMethodRegistrationRequiredStateParameters)
+      parameters:
+        - id: stateParameters
+          type: AuthMethodRegistrationRequiredStateParameters
+          description: The parameters for the auth state.
+methods:
+  - name: challengeAuthMethod(AuthMethodDetails)
+    uid: >-
+      @azure/msal-browser.AuthMethodRegistrationRequiredState.challengeAuthMethod
+    package: '@azure/msal-browser'
+    summary: Challenges an authentication method for registration.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function challengeAuthMethod(authMethodDetails: AuthMethodDetails):
+        Promise<AuthMethodRegistrationChallengeMethodResult>
+      parameters:
+        - id: authMethodDetails
+          type: <xref uid="@azure/msal-browser.AuthMethodDetails" />
+          description: The authentication method details to challenge.
+      return:
+        description: Promise that resolves to AuthMethodRegistrationChallengeMethodResult.
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/msal-browser.AuthMethodRegistrationChallengeMethodResult"
+          />&gt;
+  - name: getAuthMethods()
+    uid: '@azure/msal-browser.AuthMethodRegistrationRequiredState.getAuthMethods'
+    package: '@azure/msal-browser'
+    summary: Gets the available authentication methods for registration.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAuthMethods(): AuthenticationMethod[]'
+      return:
+        description: Array of available authentication methods.
+        type: <xref uid="@azure/msal-browser.AuthenticationMethod" />[]
+extends: >-
+  AuthMethodRegistrationState&lt;AuthMethodRegistrationRequiredStateParameters&gt;

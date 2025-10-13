@@ -1,0 +1,36 @@
+### YamlMime:TSType
+name: AuthMethodDetails
+uid: '@azure/msal-browser.AuthMethodDetails'
+package: '@azure/msal-browser'
+summary: Details for an authentication method to be registered.
+fullName: AuthMethodDetails
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: authMethodType
+    uid: '@azure/msal-browser.AuthMethodDetails.authMethodType'
+    package: '@azure/msal-browser'
+    summary: The authentication method type to register.
+    fullName: authMethodType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authMethodType: AuthenticationMethod'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.AuthenticationMethod" />
+  - name: verificationContact
+    uid: '@azure/msal-browser.AuthMethodDetails.verificationContact'
+    package: '@azure/msal-browser'
+    summary: >-
+      The verification contact (email, phone number) for the authentication
+      method.
+    fullName: verificationContact
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'verificationContact: string'
+      return:
+        description: ''
+        type: string

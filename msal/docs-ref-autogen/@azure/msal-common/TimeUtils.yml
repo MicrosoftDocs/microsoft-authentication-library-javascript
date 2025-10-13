@@ -23,6 +23,28 @@ functions:
       return:
         description: ''
         type: Promise&lt;T | void&gt;
+  - name: isCacheExpired(string, number)
+    uid: '@azure/msal-common.TimeUtils.isCacheExpired'
+    package: '@azure/msal-common'
+    summary: >-
+      Checks if a cache entry is expired based on the last updated time and
+      cache retention days.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function isCacheExpired(lastUpdatedAt: string, cacheRetentionDays:
+        number): boolean
+      parameters:
+        - id: lastUpdatedAt
+          type: string
+          description: ''
+        - id: cacheRetentionDays
+          type: number
+          description: ''
+      return:
+        description: ''
+        type: boolean
   - name: isTokenExpired(string, number)
     uid: '@azure/msal-common.TimeUtils.isTokenExpired'
     package: '@azure/msal-common'
