@@ -7,4 +7,17 @@ fullName: AuthFlowActionRequiredStateBase<TParameter>
 remarks: ''
 isDeprecated: false
 type: class
+constructors:
+  - name: AuthFlowActionRequiredStateBase<TParameter>(TParameter)
+    uid: '@azure/msal-browser.AuthFlowActionRequiredStateBase.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of AuthFlowActionRequiredStateBase.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new AuthFlowActionRequiredStateBase(stateParameters: TParameter)'
+      parameters:
+        - id: stateParameters
+          type: TParameter
+          description: The parameters for the auth state.
 extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

@@ -10,6 +10,7 @@ syntax: |
   type CacheOptions = {
     cacheLocation?: BrowserCacheLocation | string
     cacheMigrationEnabled?: boolean
+    cacheRetentionDays?: number
     claimsBasedCachingEnabled?: boolean
     secureCookies?: boolean
     storeAuthStateInCookie?: boolean

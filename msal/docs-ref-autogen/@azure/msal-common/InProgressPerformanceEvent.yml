@@ -12,7 +12,8 @@ syntax: |
     discard: () => void
     end: (
       event?: Partial<PerformanceEvent>,
-      error?: unknown
+      error?: unknown,
+      account?: AccountInfo
     ) => PerformanceEvent | null
     event: PerformanceEvent
     increment: (fields: { [key: string]: number | undefined }) => void

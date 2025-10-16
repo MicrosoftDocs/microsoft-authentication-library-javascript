@@ -1,0 +1,10 @@
+### YamlMime:TSType
+name: AuthMethodRegistrationFailedState
+uid: '@azure/msal-browser.AuthMethodRegistrationFailedState'
+package: '@azure/msal-browser'
+summary: Base class for the state of an authentication flow.
+fullName: AuthMethodRegistrationFailedState
+remarks: ''
+isDeprecated: false
+type: class
+extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

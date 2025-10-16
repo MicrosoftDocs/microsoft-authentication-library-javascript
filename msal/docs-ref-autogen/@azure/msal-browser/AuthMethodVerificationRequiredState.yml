@@ -1,0 +1,106 @@
+### YamlMime:TSType
+name: AuthMethodVerificationRequiredState
+uid: '@azure/msal-browser.AuthMethodVerificationRequiredState'
+package: '@azure/msal-browser'
+summary: >-
+  State indicating that verification is required for the challenged
+  authentication method.
+fullName: AuthMethodVerificationRequiredState
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      AuthMethodVerificationRequiredState(AuthMethodVerificationRequiredStateParameters)
+    uid: '@azure/msal-browser.AuthMethodVerificationRequiredState.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of AuthFlowActionRequiredStateBase.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new AuthMethodVerificationRequiredState(stateParameters:
+        AuthMethodVerificationRequiredStateParameters)
+      parameters:
+        - id: stateParameters
+          type: AuthMethodVerificationRequiredStateParameters
+          description: The parameters for the auth state.
+methods:
+  - name: challengeAuthMethod(AuthMethodDetails)
+    uid: >-
+      @azure/msal-browser.AuthMethodVerificationRequiredState.challengeAuthMethod
+    package: '@azure/msal-browser'
+    summary: Challenges a different authentication method for registration.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function challengeAuthMethod(authMethodDetails: AuthMethodDetails):
+        Promise<AuthMethodRegistrationChallengeMethodResult>
+      parameters:
+        - id: authMethodDetails
+          type: <xref uid="@azure/msal-browser.AuthMethodDetails" />
+          description: The authentication method details to challenge.
+      return:
+        description: Promise that resolves to AuthMethodRegistrationChallengeMethodResult.
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/msal-browser.AuthMethodRegistrationChallengeMethodResult"
+          />&gt;
+  - name: getChannel()
+    uid: '@azure/msal-browser.AuthMethodVerificationRequiredState.getChannel'
+    package: '@azure/msal-browser'
+    summary: Gets the channel through which the challenge was sent.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getChannel(): string'
+      return:
+        description: The challenge channel (e.g., "email").
+        type: string
+  - name: getCodeLength()
+    uid: '@azure/msal-browser.AuthMethodVerificationRequiredState.getCodeLength'
+    package: '@azure/msal-browser'
+    summary: Gets the length of the expected verification code.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeLength(): number'
+      return:
+        description: The code length.
+        type: number
+  - name: getSentTo()
+    uid: '@azure/msal-browser.AuthMethodVerificationRequiredState.getSentTo'
+    package: '@azure/msal-browser'
+    summary: Gets the target label indicating where the challenge was sent.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getSentTo(): string'
+      return:
+        description: The challenge target label (e.g., masked email address).
+        type: string
+  - name: submitChallenge(string)
+    uid: '@azure/msal-browser.AuthMethodVerificationRequiredState.submitChallenge'
+    package: '@azure/msal-browser'
+    summary: >-
+      Submits the verification challenge to complete the authentication method
+      registration.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function submitChallenge(code: string):
+        Promise<AuthMethodRegistrationSubmitChallengeResult>
+      parameters:
+        - id: code
+          type: string
+          description: The verification code entered by the user.
+      return:
+        description: Promise that resolves to AuthMethodRegistrationSubmitChallengeResult.
+        type: >-
+          Promise&lt;<xref
+          uid="@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult"
+          />&gt;
+extends: >-
+  AuthMethodRegistrationState&lt;AuthMethodVerificationRequiredStateParameters&gt;

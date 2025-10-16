@@ -17,16 +17,21 @@ syntax: |
     appVersion?: string
     authority: string
     awaitIframeCorrelationId?: string
+    brokerErrorCode?: string
+    brokerErrorName?: string
     cacheAtCount?: number
     cacheIdCount?: number
+    cacheLocation?: string
     cacheLookupPolicy?: number
     cacheOutcome?: number
+    cacheRetentionDays?: number
     cacheRtCount?: number
     clientId: string
     contentLengthHeader?: string
     contentTypeHeader?: string
     context?: string
     correlationId: string
+    dataBoundary?: DataBoundary
     domainHintFromRequest?: boolean
     durationMs?: number
     embeddedClientId?: string
@@ -49,6 +54,8 @@ syntax: |
     incompleteSubsCount?: number
     isAsyncPopup?: boolean
     isNativeBroker?: boolean
+    isPlatformAuthorizeRequest?: boolean
+    isPlatformBrokerRequest?: boolean
     libraryName: string
     libraryVersion: string
     loginHintFromClaim?: boolean
@@ -72,6 +79,7 @@ syntax: |
     multiMatchedID?: number
     multiMatchedRT?: number
     name: string
+    navigateCallbackResult?: boolean
     nestedAppAuthRequest?: boolean
     previousLibraryVersion?: string
     prompt?: string

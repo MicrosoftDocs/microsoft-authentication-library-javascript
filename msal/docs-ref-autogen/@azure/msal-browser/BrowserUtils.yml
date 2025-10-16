@@ -5,6 +5,26 @@ type: module
 package: '@azure/msal-browser'
 summary: ''
 functions:
+  - name: addClientCapabilitiesToClaims(string, string[])
+    uid: '@azure/msal-browser.BrowserUtils.addClientCapabilitiesToClaims'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addClientCapabilitiesToClaims(claims?: string,
+        clientCapabilities?: string[]): string
+      parameters:
+        - id: claims
+          type: string
+          description: ''
+        - id: clientCapabilities
+          type: string[]
+          description: ''
+      return:
+        description: ''
+        type: string
   - name: blockAcquireTokenInPopups()
     uid: '@azure/msal-browser.BrowserUtils.blockAcquireTokenInPopups'
     package: '@azure/msal-browser'

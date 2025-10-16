@@ -8,7 +8,7 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: MsalCustomAuthError(string, string, string, string)
+  - name: MsalCustomAuthError(string, string, string, number[], string)
     uid: '@azure/msal-browser.MsalCustomAuthError.constructor'
     package: '@azure/msal-browser'
     summary: ''
@@ -17,7 +17,7 @@ constructors:
     syntax:
       content: >-
         new MsalCustomAuthError(error: string, errorDescription?: string,
-        subError?: string, correlationId?: string)
+        subError?: string, errorCodes?: number[], correlationId?: string)
       parameters:
         - id: error
           type: string
@@ -28,22 +28,12 @@ constructors:
         - id: subError
           type: string
           description: ''
+        - id: errorCodes
+          type: number[]
+          description: ''
         - id: correlationId
           type: string
           description: ''
-properties:
-  - name: subError
-    uid: '@azure/msal-browser.MsalCustomAuthError.subError'
-    package: '@azure/msal-browser'
-    summary: ''
-    fullName: subError
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'subError: undefined | string'
-      return:
-        description: ''
-        type: undefined | string
 inheritedProperties:
   - name: correlationId
     uid: '@azure/msal-browser.MsalCustomAuthError.correlationId'
@@ -182,6 +172,21 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [CustomAuthError.stackTraceLimit](xref:@azure/msal-browser.CustomAuthError.stackTraceLimit)
+  - name: subError
+    uid: '@azure/msal-browser.MsalCustomAuthError.subError'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: subError
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'subError?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [CustomAuthError.subError](xref:@azure/msal-browser.CustomAuthError.subError)
 inheritedMethods:
   - name: captureStackTrace(object, Function)
     uid: '@azure/msal-browser.MsalCustomAuthError.captureStackTrace'

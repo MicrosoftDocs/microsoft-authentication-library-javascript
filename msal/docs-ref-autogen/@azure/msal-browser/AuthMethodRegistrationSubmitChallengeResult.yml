@@ -1,0 +1,130 @@
+### YamlMime:TSType
+name: AuthMethodRegistrationSubmitChallengeResult
+uid: '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult'
+package: '@azure/msal-browser'
+summary: Result of submitting a challenge for authentication method registration.
+fullName: AuthMethodRegistrationSubmitChallengeResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      AuthMethodRegistrationSubmitChallengeResult(AuthMethodRegistrationSubmitChallengeResultState,
+      CustomAuthAccountData)
+    uid: >-
+      @azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult.constructor
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new AuthMethodRegistrationSubmitChallengeResult(state:
+        AuthMethodRegistrationSubmitChallengeResultState, data?:
+        CustomAuthAccountData)
+      parameters:
+        - id: state
+          type: >-
+            <xref
+            uid="@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResultState"
+            />
+          description: ''
+        - id: data
+          type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
+          description: ''
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: CustomAuthAccountData'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: AuthMethodRegistrationSubmitChallengeError'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/msal-browser.AuthMethodRegistrationSubmitChallengeError"
+          />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: AuthMethodRegistrationSubmitChallengeResultState'
+      return:
+        description: ''
+        type: >-
+          <xref
+          uid="@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResultState"
+          />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: >-
+      @azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult.createWithError
+    package: '@azure/msal-browser'
+    summary: Creates an AuthMethodRegistrationSubmitChallengeResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createWithError(error: unknown):
+        AuthMethodRegistrationSubmitChallengeResult
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+      return:
+        description: The AuthMethodRegistrationSubmitChallengeResult with error.
+        type: >-
+          <xref
+          uid="@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult"
+          />
+  - name: isCompleted()
+    uid: >-
+      @azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult.isCompleted
+    package: '@azure/msal-browser'
+    summary: Checks if the result indicates that registration is completed.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCompleted(): boolean'
+      return:
+        description: true if registration is completed, false otherwise.
+        type: boolean
+  - name: isFailed()
+    uid: '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a failed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): boolean'
+      return:
+        description: true if the result is failed, false otherwise.
+        type: boolean
+extends: >-
+  AuthFlowResultBase&lt;<xref
+  uid="@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResultState" />,
+  <xref uid="@azure/msal-browser.AuthMethodRegistrationSubmitChallengeError" />,
+  <xref uid="@azure/msal-browser.CustomAuthAccountData" />&gt;

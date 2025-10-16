@@ -35,6 +35,20 @@ inheritedProperties:
         type: <xref uid="@azure/msal-browser.CustomAuthError" />
     inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.errorData
 inheritedMethods:
+  - name: isRedirectRequired()
+    uid: '@azure/msal-browser.SignUpResendCodeError.isRedirectRequired'
+    package: '@azure/msal-browser'
+    summary: Check if client app supports the challenge type configured in Entra.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isRedirectRequired(): boolean'
+      return:
+        description: >-
+          True if client app doesn't support the challenge type configured in
+          Entra, "loginPopup" function is required to continue the operation.
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.isRedirectRequired
   - name: isTokenExpired()
     uid: '@azure/msal-browser.SignUpResendCodeError.isTokenExpired'
     package: '@azure/msal-browser'
@@ -49,16 +63,4 @@ inheritedMethods:
           otherwise.
         type: boolean
     inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.isTokenExpired
-methods:
-  - name: isRedirectRequired()
-    uid: '@azure/msal-browser.SignUpResendCodeError.isRedirectRequired'
-    package: '@azure/msal-browser'
-    summary: Check if client app supports the challenge type configured in Entra.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function isRedirectRequired(): boolean'
-      return:
-        description: True if "loginPopup" function is required to continue sthe operation.
-        type: boolean
 extends: AuthActionErrorBase
