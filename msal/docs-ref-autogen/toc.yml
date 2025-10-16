@@ -550,6 +550,56 @@
       no-loc:
         - MethodNotImplementedError
       items: []
+    - uid: '@azure/msal-browser.MfaAwaitingState'
+      name: MfaAwaitingState
+      no-loc:
+        - MfaAwaitingState
+      items: []
+    - uid: '@azure/msal-browser.MfaCompletedState'
+      name: MfaCompletedState
+      no-loc:
+        - MfaCompletedState
+      items: []
+    - uid: '@azure/msal-browser.MfaFailedState'
+      name: MfaFailedState
+      no-loc:
+        - MfaFailedState
+      items: []
+    - uid: '@azure/msal-browser.MfaRequestChallengeError'
+      name: MfaRequestChallengeError
+      no-loc:
+        - MfaRequestChallengeError
+      items: []
+    - uid: '@azure/msal-browser.MfaRequestChallengeResult'
+      name: MfaRequestChallengeResult
+      no-loc:
+        - MfaRequestChallengeResult
+      items: []
+    - uid: '@azure/msal-browser.MfaRequestChallengeResultState'
+      name: MfaRequestChallengeResultState
+      no-loc:
+        - MfaRequestChallengeResultState
+      items: []
+    - uid: '@azure/msal-browser.MfaSubmitChallengeError'
+      name: MfaSubmitChallengeError
+      no-loc:
+        - MfaSubmitChallengeError
+      items: []
+    - uid: '@azure/msal-browser.MfaSubmitChallengeResult'
+      name: MfaSubmitChallengeResult
+      no-loc:
+        - MfaSubmitChallengeResult
+      items: []
+    - uid: '@azure/msal-browser.MfaSubmitChallengeResultState'
+      name: MfaSubmitChallengeResultState
+      no-loc:
+        - MfaSubmitChallengeResultState
+      items: []
+    - uid: '@azure/msal-browser.MfaVerificationRequiredState'
+      name: MfaVerificationRequiredState
+      no-loc:
+        - MfaVerificationRequiredState
+      items: []
     - uid: '@azure/msal-browser.MsalCustomAuthError'
       name: MsalCustomAuthError
       no-loc:

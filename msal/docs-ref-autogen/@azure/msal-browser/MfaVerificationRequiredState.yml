@@ -1,0 +1,101 @@
+### YamlMime:TSType
+name: MfaVerificationRequiredState
+uid: '@azure/msal-browser.MfaVerificationRequiredState'
+package: '@azure/msal-browser'
+summary: |-
+  State indicating that MFA verification is required.
+  The challenge has been sent and the user needs to provide the code.
+fullName: MfaVerificationRequiredState
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: MfaVerificationRequiredState(MfaVerificationRequiredStateParameters)
+    uid: '@azure/msal-browser.MfaVerificationRequiredState.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of AuthFlowActionRequiredStateBase.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new MfaVerificationRequiredState(stateParameters:
+        MfaVerificationRequiredStateParameters)
+      parameters:
+        - id: stateParameters
+          type: MfaVerificationRequiredStateParameters
+          description: The parameters for the auth state.
+inheritedMethods:
+  - name: requestChallenge(string)
+    uid: '@azure/msal-browser.MfaVerificationRequiredState.requestChallenge'
+    package: '@azure/msal-browser'
+    summary: Requests an MFA challenge for a specific authentication method.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function requestChallenge(authMethodId: string):
+        Promise<MfaRequestChallengeResult>
+      parameters:
+        - id: authMethodId
+          type: string
+          description: The authentication method ID to use for the challenge.
+      return:
+        description: Promise that resolves to MfaRequestChallengeResult.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.MfaRequestChallengeResult"
+          />&gt;
+    inheritanceDescription: <b>Inherited From</b> MfaState.requestChallenge
+methods:
+  - name: getChannel()
+    uid: '@azure/msal-browser.MfaVerificationRequiredState.getChannel'
+    package: '@azure/msal-browser'
+    summary: Gets the channel through which the challenge was sent.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getChannel(): string'
+      return:
+        description: The challenge channel (e.g., "email").
+        type: string
+  - name: getCodeLength()
+    uid: '@azure/msal-browser.MfaVerificationRequiredState.getCodeLength'
+    package: '@azure/msal-browser'
+    summary: Gets the length of the code that the user needs to provide.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getCodeLength(): number'
+      return:
+        description: The expected code length.
+        type: number
+  - name: getSentTo()
+    uid: '@azure/msal-browser.MfaVerificationRequiredState.getSentTo'
+    package: '@azure/msal-browser'
+    summary: Gets the target label indicating where the challenge was sent.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getSentTo(): string'
+      return:
+        description: The challenge target label (e.g., masked email address).
+        type: string
+  - name: submitChallenge(string)
+    uid: '@azure/msal-browser.MfaVerificationRequiredState.submitChallenge'
+    package: '@azure/msal-browser'
+    summary: Submits the MFA challenge (e.g., OTP code) to complete the authentication.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function submitChallenge(challenge: string):
+        Promise<MfaSubmitChallengeResult>
+      parameters:
+        - id: challenge
+          type: string
+          description: The challenge code (e.g., OTP code) entered by the user.
+      return:
+        description: Promise that resolves to MfaSubmitChallengeResult.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.MfaSubmitChallengeResult"
+          />&gt;
+extends: MfaState&lt;MfaVerificationRequiredStateParameters&gt;

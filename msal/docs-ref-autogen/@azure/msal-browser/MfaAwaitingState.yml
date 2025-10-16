@@ -1,0 +1,60 @@
+### YamlMime:TSType
+name: MfaAwaitingState
+uid: '@azure/msal-browser.MfaAwaitingState'
+package: '@azure/msal-browser'
+summary: >-
+  State indicating that MFA is required and awaiting user action.
+
+  This state allows the developer to pause execution before sending the code to
+  the user's email.
+fullName: MfaAwaitingState
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: MfaAwaitingState(MfaAwaitingStateParameters)
+    uid: '@azure/msal-browser.MfaAwaitingState.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of AuthFlowActionRequiredStateBase.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new MfaAwaitingState(stateParameters: MfaAwaitingStateParameters)'
+      parameters:
+        - id: stateParameters
+          type: MfaAwaitingStateParameters
+          description: The parameters for the auth state.
+inheritedMethods:
+  - name: requestChallenge(string)
+    uid: '@azure/msal-browser.MfaAwaitingState.requestChallenge'
+    package: '@azure/msal-browser'
+    summary: Requests an MFA challenge for a specific authentication method.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function requestChallenge(authMethodId: string):
+        Promise<MfaRequestChallengeResult>
+      parameters:
+        - id: authMethodId
+          type: string
+          description: The authentication method ID to use for the challenge.
+      return:
+        description: Promise that resolves to MfaRequestChallengeResult.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.MfaRequestChallengeResult"
+          />&gt;
+    inheritanceDescription: <b>Inherited From</b> MfaState.requestChallenge
+methods:
+  - name: getAuthMethods()
+    uid: '@azure/msal-browser.MfaAwaitingState.getAuthMethods'
+    package: '@azure/msal-browser'
+    summary: Gets the available authentication methods for MFA.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAuthMethods(): AuthenticationMethod[]'
+      return:
+        description: Array of available authentication methods.
+        type: <xref uid="@azure/msal-browser.AuthenticationMethod" />[]
+extends: MfaState&lt;MfaAwaitingStateParameters&gt;

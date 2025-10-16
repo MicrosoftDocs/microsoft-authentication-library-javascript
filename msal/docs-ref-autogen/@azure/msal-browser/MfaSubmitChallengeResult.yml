@@ -1,0 +1,114 @@
+### YamlMime:TSType
+name: MfaSubmitChallengeResult
+uid: '@azure/msal-browser.MfaSubmitChallengeResult'
+package: '@azure/msal-browser'
+summary: Result of submitting an MFA challenge.
+fullName: MfaSubmitChallengeResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      MfaSubmitChallengeResult(MfaSubmitChallengeResultState,
+      CustomAuthAccountData)
+    uid: '@azure/msal-browser.MfaSubmitChallengeResult.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new MfaSubmitChallengeResult(state: MfaSubmitChallengeResultState,
+        data?: CustomAuthAccountData)
+      parameters:
+        - id: state
+          type: <xref uid="@azure/msal-browser.MfaSubmitChallengeResultState" />
+          description: ''
+        - id: data
+          type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
+          description: ''
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.MfaSubmitChallengeResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: CustomAuthAccountData'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthAccountData" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.MfaSubmitChallengeResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: MfaSubmitChallengeError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.MfaSubmitChallengeError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.MfaSubmitChallengeResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: MfaSubmitChallengeResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.MfaSubmitChallengeResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.MfaSubmitChallengeResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates an MfaSubmitChallengeResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createWithError(error: unknown):
+        MfaSubmitChallengeResult
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+      return:
+        description: The MfaSubmitChallengeResult with error.
+        type: <xref uid="@azure/msal-browser.MfaSubmitChallengeResult" />
+  - name: isCompleted()
+    uid: '@azure/msal-browser.MfaSubmitChallengeResult.isCompleted'
+    package: '@azure/msal-browser'
+    summary: Checks if the MFA flow is completed successfully.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isCompleted(): boolean'
+      return:
+        description: true if completed, false otherwise.
+        type: boolean
+  - name: isFailed()
+    uid: '@azure/msal-browser.MfaSubmitChallengeResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a failed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): boolean'
+      return:
+        description: true if the result is failed, false otherwise.
+        type: boolean
+extends: >-
+  AuthFlowResultBase&lt;<xref
+  uid="@azure/msal-browser.MfaSubmitChallengeResultState" />, <xref
+  uid="@azure/msal-browser.MfaSubmitChallengeError" />, <xref
+  uid="@azure/msal-browser.CustomAuthAccountData" />&gt;

@@ -1,0 +1,10 @@
+### YamlMime:TSType
+name: MfaFailedState
+uid: '@azure/msal-browser.MfaFailedState'
+package: '@azure/msal-browser'
+summary: State indicating that the MFA flow has failed.
+fullName: MfaFailedState
+remarks: ''
+isDeprecated: false
+type: class
+extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

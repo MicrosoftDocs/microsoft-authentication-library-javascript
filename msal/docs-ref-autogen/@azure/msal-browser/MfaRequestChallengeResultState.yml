@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: MfaRequestChallengeResultState
+uid: '@azure/msal-browser.MfaRequestChallengeResultState'
+package: '@azure/msal-browser'
+summary: |-
+  The possible states for the MfaRequestChallengeResult.
+  This includes:
+  - MfaVerificationRequiredState: The user needs to verify their challenge.
+  - MfaFailedState: The MFA request failed.
+fullName: MfaRequestChallengeResultState
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MfaRequestChallengeResultState =
+    | MfaVerificationRequiredState
+    | MfaFailedState
