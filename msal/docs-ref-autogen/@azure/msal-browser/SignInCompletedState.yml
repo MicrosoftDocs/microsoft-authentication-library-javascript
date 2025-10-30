@@ -9,4 +9,17 @@ fullName: SignInCompletedState
 remarks: ''
 isDeprecated: false
 type: class
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.SignInCompletedState.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: string'
+      return:
+        description: ''
+        type: string
 extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

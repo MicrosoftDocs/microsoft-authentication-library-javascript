@@ -131,7 +131,7 @@ methods:
         - id: value
           type: T
           description: ''
-  - name: setUserData(string, T, string, string)
+  - name: setUserData(string, T, string, string, boolean)
     uid: '@azure/msal-browser.IWindowStorage.setUserData'
     package: '@azure/msal-browser'
     summary: Setter for sensitive data that may contain PII.
@@ -140,7 +140,7 @@ methods:
     syntax:
       content: >-
         function setUserData(key: string, value: T, correlationId: string,
-        timestamp: string): Promise<void>
+        timestamp: string, kmsi: boolean): Promise<void>
       parameters:
         - id: key
           type: string
@@ -153,6 +153,9 @@ methods:
           description: ''
         - id: timestamp
           type: string
+          description: ''
+        - id: kmsi
+          type: boolean
           description: ''
       return:
         description: ''

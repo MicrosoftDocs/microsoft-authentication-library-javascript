@@ -112,10 +112,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCompleted(): boolean'
+      content: 'function isCompleted(): this'
       return:
         description: true if registration is completed, false otherwise.
-        type: boolean
+        type: this
   - name: isFailed()
     uid: '@azure/msal-browser.AuthMethodRegistrationChallengeMethodResult.isFailed'
     package: '@azure/msal-browser'
@@ -123,10 +123,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isFailed(): boolean'
+      content: 'function isFailed(): this'
       return:
         description: true if the result is failed, false otherwise.
-        type: boolean
+        type: this
   - name: isVerificationRequired()
     uid: >-
       @azure/msal-browser.AuthMethodRegistrationChallengeMethodResult.isVerificationRequired
@@ -135,10 +135,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isVerificationRequired(): boolean'
+      content: 'function isVerificationRequired(): this'
       return:
         description: true if verification is required, false otherwise.
-        type: boolean
+        type: this
 extends: >-
   AuthFlowResultBase&lt;<xref
   uid="@azure/msal-browser.AuthMethodRegistrationChallengeMethodResultState" />,

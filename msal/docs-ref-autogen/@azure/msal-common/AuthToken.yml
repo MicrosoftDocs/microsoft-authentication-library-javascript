@@ -55,3 +55,18 @@ functions:
       return:
         description: ''
         type: string
+  - name: isKmsi(TokenClaims)
+    uid: '@azure/msal-common.AuthToken.isKmsi'
+    package: '@azure/msal-common'
+    summary: Check if the signin_state claim contains "kmsi"
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isKmsi(idTokenClaims: TokenClaims): boolean'
+      parameters:
+        - id: idTokenClaims
+          type: <xref uid="@azure/msal-common.TokenClaims" />
+          description: ''
+      return:
+        description: ''
+        type: boolean
