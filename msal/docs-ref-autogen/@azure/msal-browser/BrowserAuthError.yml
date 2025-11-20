@@ -99,6 +99,21 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [AuthError.name](xref:@azure/msal-browser.AuthError.name)
+  - name: platformBrokerError
+    uid: '@azure/msal-browser.BrowserAuthError.platformBrokerError'
+    package: '@azure/msal-browser'
+    summary: Default PlatformBrokerError from MsalNodeRuntime when broker is enabled
+    fullName: platformBrokerError
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'platformBrokerError?: PlatformBrokerError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.PlatformBrokerError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.platformBrokerError](xref:@azure/msal-browser.AuthError.platformBrokerError)
   - name: stack
     uid: '@azure/msal-browser.BrowserAuthError.stack'
     package: '@azure/msal-browser'

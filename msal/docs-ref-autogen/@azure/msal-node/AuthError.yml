@@ -65,6 +65,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: platformBrokerError
+    uid: '@azure/msal-node.AuthError.platformBrokerError'
+    package: '@azure/msal-node'
+    summary: Default PlatformBrokerError from MsalNodeRuntime when broker is enabled
+    fullName: platformBrokerError
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'platformBrokerError?: PlatformBrokerError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.PlatformBrokerError" />
   - name: subError
     uid: '@azure/msal-node.AuthError.subError'
     package: '@azure/msal-node'

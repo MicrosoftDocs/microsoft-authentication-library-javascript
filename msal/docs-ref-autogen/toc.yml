@@ -1596,6 +1596,11 @@
       no-loc:
         - PkceCodes
       items: []
+    - uid: '@azure/msal-common.PlatformBrokerError'
+      name: PlatformBrokerError
+      no-loc:
+        - PlatformBrokerError
+      items: []
     - uid: '@azure/msal-common.PreQueueEvent'
       name: PreQueueEvent
       no-loc:

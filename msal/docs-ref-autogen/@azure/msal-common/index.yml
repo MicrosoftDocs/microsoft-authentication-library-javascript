@@ -17,6 +17,7 @@ classes:
   - '@azure/msal-common.Logger'
   - '@azure/msal-common.NetworkError'
   - '@azure/msal-common.PerformanceClient'
+  - '@azure/msal-common.PlatformBrokerError'
   - '@azure/msal-common.ProtocolUtils'
   - '@azure/msal-common.ScopeSet'
   - '@azure/msal-common.ServerError'

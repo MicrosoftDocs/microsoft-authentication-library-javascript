@@ -1,121 +1,65 @@
 ### YamlMime:TSType
-name: InteractionRequiredAuthError
-uid: '@azure/msal-browser.InteractionRequiredAuthError'
-package: '@azure/msal-browser'
-summary: Error thrown when user interaction is required.
-fullName: InteractionRequiredAuthError
+name: PlatformBrokerError
+uid: '@azure/msal-common.PlatformBrokerError'
+package: '@azure/msal-common'
+summary: Error class for MSAL Runtime errors that preserves detailed broker information
+fullName: PlatformBrokerError
 remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: >-
-      InteractionRequiredAuthError(string, string, string, string, string,
-      string, string, string)
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.constructor'
-    package: '@azure/msal-browser'
+  - name: PlatformBrokerError(string, string, number, number)
+    uid: '@azure/msal-common.PlatformBrokerError.constructor'
+    package: '@azure/msal-common'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        new InteractionRequiredAuthError(errorCode?: string, errorMessage?:
-        string, subError?: string, timestamp?: string, traceId?: string,
-        correlationId?: string, claims?: string, errorNo?: string)
+        new PlatformBrokerError(errorStatus: string, errorContext: string,
+        errorCode: number, errorTag: number)
       parameters:
+        - id: errorStatus
+          type: string
+          description: ''
+        - id: errorContext
+          type: string
+          description: ''
         - id: errorCode
-          type: string
+          type: number
           description: ''
-        - id: errorMessage
-          type: string
-          description: ''
-        - id: subError
-          type: string
-          description: ''
-        - id: timestamp
-          type: string
-          description: ''
-        - id: traceId
-          type: string
-          description: ''
-        - id: correlationId
-          type: string
-          description: ''
-        - id: claims
-          type: string
-          description: ''
-        - id: errorNo
-          type: string
+        - id: errorTag
+          type: number
           description: ''
 properties:
-  - name: claims
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.claims'
-    package: '@azure/msal-browser'
-    summary: >-
-      https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/docs/claims-challenge.md
-
-
-      A string with extra claims needed for the token request to succeed
-
-      web site: redirect the user to the authorization page and set the extra
-      claims
-
-      web api: include the claims in the WWW-Authenticate header that are sent
-      back to the client so that it knows to request a token with the extra
-      claims
-
-      desktop application or browser context: include the claims when acquiring
-      the token interactively
-
-      app to app context (client_credentials): include the claims in the
-      AcquireTokenByClientCredential request
-    fullName: claims
+  - name: statusCode
+    uid: '@azure/msal-common.PlatformBrokerError.statusCode'
+    package: '@azure/msal-common'
+    summary: Numeric error code from MSAL Runtime
+    fullName: statusCode
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'claims: string'
+      content: 'statusCode: number'
       return:
         description: ''
-        type: string
-  - name: errorNo
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.errorNo'
-    package: '@azure/msal-browser'
-    summary: Server error number;
-    fullName: errorNo
+        type: number
+  - name: tag
+    uid: '@azure/msal-common.PlatformBrokerError.tag'
+    package: '@azure/msal-common'
+    summary: Error tag from MSAL Runtime
+    fullName: tag
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'errorNo?: string'
-      return:
-        description: ''
-        type: string
-  - name: timestamp
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.timestamp'
-    package: '@azure/msal-browser'
-    summary: The time the error occured at
-    fullName: timestamp
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'timestamp: string'
-      return:
-        description: ''
-        type: string
-  - name: traceId
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.traceId'
-    package: '@azure/msal-browser'
-    summary: TraceId associated with the error
-    fullName: traceId
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'traceId: string'
+      content: 'tag: string'
       return:
         description: ''
         type: string
 inheritedProperties:
   - name: correlationId
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.correlationId'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.correlationId'
+    package: '@azure/msal-common'
     summary: CorrelationId associated with the error
     fullName: correlationId
     remarks: ''
@@ -127,10 +71,10 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.correlationId](xref:@azure/msal-browser.AuthError.correlationId)
+      [AuthError.correlationId](xref:@azure/msal-common.AuthError.correlationId)
   - name: errorCode
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.errorCode'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.errorCode'
+    package: '@azure/msal-common'
     summary: Short string denoting error
     fullName: errorCode
     remarks: ''
@@ -142,10 +86,10 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.errorCode](xref:@azure/msal-browser.AuthError.errorCode)
+      [AuthError.errorCode](xref:@azure/msal-common.AuthError.errorCode)
   - name: errorMessage
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.errorMessage'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.errorMessage'
+    package: '@azure/msal-common'
     summary: Detailed description of error
     fullName: errorMessage
     remarks: ''
@@ -157,10 +101,10 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.errorMessage](xref:@azure/msal-browser.AuthError.errorMessage)
+      [AuthError.errorMessage](xref:@azure/msal-common.AuthError.errorMessage)
   - name: message
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.message'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.message'
+    package: '@azure/msal-common'
     summary: ''
     fullName: message
     remarks: ''
@@ -172,10 +116,10 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.message](xref:@azure/msal-browser.AuthError.message)
+      [AuthError.message](xref:@azure/msal-common.AuthError.message)
   - name: name
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.name'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.name'
+    package: '@azure/msal-common'
     summary: ''
     fullName: name
     remarks: ''
@@ -187,10 +131,10 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.name](xref:@azure/msal-browser.AuthError.name)
+      [AuthError.name](xref:@azure/msal-common.AuthError.name)
   - name: platformBrokerError
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.platformBrokerError'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.platformBrokerError'
+    package: '@azure/msal-common'
     summary: Default PlatformBrokerError from MsalNodeRuntime when broker is enabled
     fullName: platformBrokerError
     remarks: ''
@@ -202,10 +146,10 @@ inheritedProperties:
         type: <xref uid="@azure/msal-common.PlatformBrokerError" />
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.platformBrokerError](xref:@azure/msal-browser.AuthError.platformBrokerError)
+      [AuthError.platformBrokerError](xref:@azure/msal-common.AuthError.platformBrokerError)
   - name: stack
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.stack'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.stack'
+    package: '@azure/msal-common'
     summary: ''
     fullName: stack
     remarks: ''
@@ -217,10 +161,10 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.stack](xref:@azure/msal-browser.AuthError.stack)
+      [AuthError.stack](xref:@azure/msal-common.AuthError.stack)
   - name: stackTraceLimit
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.stackTraceLimit'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.stackTraceLimit'
+    package: '@azure/msal-common'
     summary: >-
       The `Error.stackTraceLimit` property specifies the number of stack frames
 
@@ -249,10 +193,10 @@ inheritedProperties:
         type: number
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.stackTraceLimit](xref:@azure/msal-browser.AuthError.stackTraceLimit)
+      [AuthError.stackTraceLimit](xref:@azure/msal-common.AuthError.stackTraceLimit)
   - name: subError
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.subError'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.subError'
+    package: '@azure/msal-common'
     summary: Describes the subclass of an error
     fullName: subError
     remarks: ''
@@ -264,11 +208,11 @@ inheritedProperties:
         type: string
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.subError](xref:@azure/msal-browser.AuthError.subError)
+      [AuthError.subError](xref:@azure/msal-common.AuthError.subError)
 inheritedMethods:
   - name: captureStackTrace(object, Function)
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.captureStackTrace'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.captureStackTrace'
+    package: '@azure/msal-common'
     summary: >-
       Creates a `.stack` property on `targetObject`, which when accessed returns
 
@@ -350,10 +294,10 @@ inheritedMethods:
           description: ''
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.captureStackTrace](xref:@azure/msal-browser.AuthError.captureStackTrace)
+      [AuthError.captureStackTrace](xref:@azure/msal-common.AuthError.captureStackTrace)
   - name: prepareStackTrace(Error, CallSite[])
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.prepareStackTrace'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.prepareStackTrace'
+    package: '@azure/msal-common'
     summary: |-
 
 
@@ -376,10 +320,10 @@ inheritedMethods:
         type: any
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.prepareStackTrace](xref:@azure/msal-browser.AuthError.prepareStackTrace)
+      [AuthError.prepareStackTrace](xref:@azure/msal-common.AuthError.prepareStackTrace)
   - name: setCorrelationId(string)
-    uid: '@azure/msal-browser.InteractionRequiredAuthError.setCorrelationId'
-    package: '@azure/msal-browser'
+    uid: '@azure/msal-common.PlatformBrokerError.setCorrelationId'
+    package: '@azure/msal-common'
     summary: ''
     remarks: ''
     isDeprecated: false
@@ -391,5 +335,5 @@ inheritedMethods:
           description: ''
     inheritanceDescription: >-
       <b>Inherited From</b>
-      [AuthError.setCorrelationId](xref:@azure/msal-browser.AuthError.setCorrelationId)
-extends: <xref uid="@azure/msal-browser.AuthError" />
+      [AuthError.setCorrelationId](xref:@azure/msal-common.AuthError.setCorrelationId)
+extends: <xref uid="@azure/msal-common.AuthError" />
