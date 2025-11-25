@@ -3,6 +3,10 @@
         {
             "source_path": "msal/overview/msal-overview.md",
             "redirect_url": "/entra/msal/javascript"
+        },
+        {   
+            "source_path": "msal-javascript-conceptual/browser/instance-aware.md",
+            "redirect_url": "/entra/msal/javascript"
         }
     ]
 }
