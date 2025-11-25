@@ -54,8 +54,6 @@
           href: browser/events.md
         - name: Using MSAL in iframed apps
           href: browser/iframe-usage.md
-        - name: Instance aware flow
-          href: browser/instance-aware.md
         - name: Issues on Internet Explorer & Microsoft Edge
           href: browser/known-issues-ie-edge-browsers.md
         - name: Logging errors and exceptions
