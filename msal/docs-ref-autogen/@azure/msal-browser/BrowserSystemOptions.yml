@@ -9,6 +9,7 @@ isDeprecated: false
 syntax: |
   type BrowserSystemOptions = SystemOptions & {
     allowPlatformBroker?: boolean
+    allowPlatformBrokerWithDOM?: boolean
     allowRedirectInIframe?: boolean
     asyncPopups?: boolean
     iframeHashTimeout?: number

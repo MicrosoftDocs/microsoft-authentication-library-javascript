@@ -246,7 +246,9 @@ functions:
         type: >-
           Promise&lt;<xref uid="@azure/msal-browser.IPublicClientApplication"
           />&gt;
-  - name: isPlatformBrokerAvailable(LoggerOptions, IPerformanceClient, string)
+  - name: >-
+      isPlatformBrokerAvailable(LoggerOptions, IPerformanceClient, string,
+      boolean)
     uid: '@azure/msal-browser.isPlatformBrokerAvailable'
     package: '@azure/msal-browser'
     summary: Checks if the platform broker is available in the current environment.
@@ -255,8 +257,8 @@ functions:
     syntax:
       content: >-
         function isPlatformBrokerAvailable(loggerOptions?: LoggerOptions,
-        perfClient?: IPerformanceClient, correlationId?: string):
-        Promise<boolean>
+        perfClient?: IPerformanceClient, correlationId?: string, domConfig?:
+        boolean): Promise<boolean>
       parameters:
         - id: loggerOptions
           type: <xref uid="@azure/msal-common.LoggerOptions" />
@@ -266,6 +268,9 @@ functions:
           description: ''
         - id: correlationId
           type: string
+          description: ''
+        - id: domConfig
+          type: boolean
           description: ''
       return:
         description: ''
