@@ -11,6 +11,7 @@ isDeprecated: false
 syntax: |
   type PerformanceEvent = {
     accessTokenSize?: number
+    accountCachedBy?: string
     accountType?: "AAD" | "MSA" | "B2C"
     allowPlatformBroker?: boolean
     appName?: string
@@ -26,6 +27,7 @@ syntax: |
     cacheOutcome?: number
     cacheRetentionDays?: number
     cacheRtCount?: number
+    cacheRtExpiresOnSeconds?: number
     clientId: string
     contentLengthHeader?: string
     contentTypeHeader?: string
@@ -81,6 +83,7 @@ syntax: |
     name: string
     navigateCallbackResult?: boolean
     nestedAppAuthRequest?: boolean
+    ntwkRtExpiresOnSeconds?: number
     previousLibraryVersion?: string
     prompt?: string
     queuedCount?: number
@@ -89,7 +92,7 @@ syntax: |
     refreshTokenSize?: number
     requestId?: string
     retryError?: string
-    rtExpiresOnMs?: number
+    rtOffsetSeconds?: number
     sameClientIdInstanceCount?: number
     scenarioId?: string
     serverErrorNo?: string

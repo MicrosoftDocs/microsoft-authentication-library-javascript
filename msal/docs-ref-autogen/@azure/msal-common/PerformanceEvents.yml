@@ -301,6 +301,26 @@ fields:
     summary: >-
       Internal API for initializing silent request in SilentCacheClient
       (msal-browser)
+  - name: LoadAccessToken
+    uid: '@azure/msal-common.PerformanceEvents.LoadAccessToken'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: LoadAccount
+    uid: '@azure/msal-common.PerformanceEvents.LoadAccount'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: LoadExternalTokens
+    uid: '@azure/msal-common.PerformanceEvents.LoadExternalTokens'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: LoadIdToken
+    uid: '@azure/msal-common.PerformanceEvents.LoadIdToken'
+    package: '@azure/msal-common'
+    summary: ''
+  - name: LoadRefreshToken
+    uid: '@azure/msal-common.PerformanceEvents.LoadRefreshToken'
+    package: '@azure/msal-common'
+    summary: ''
   - name: LocalStorageUpdated
     uid: '@azure/msal-common.PerformanceEvents.LocalStorageUpdated'
     package: '@azure/msal-common'
