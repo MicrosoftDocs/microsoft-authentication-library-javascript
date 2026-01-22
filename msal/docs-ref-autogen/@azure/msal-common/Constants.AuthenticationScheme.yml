@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: AuthenticationScheme
-uid: '@azure/msal-common.AuthenticationScheme'
+uid: '@azure/msal-common.Constants.AuthenticationScheme'
 package: '@azure/msal-common'
 summary: ''
 fullName: AuthenticationScheme

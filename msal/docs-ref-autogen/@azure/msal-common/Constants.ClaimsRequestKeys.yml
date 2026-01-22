@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: ClaimsRequestKeys
-uid: '@azure/msal-common.ClaimsRequestKeys'
+uid: '@azure/msal-common.Constants.ClaimsRequestKeys'
 package: '@azure/msal-common'
 summary: ''
 fullName: ClaimsRequestKeys

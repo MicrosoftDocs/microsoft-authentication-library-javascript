@@ -4,3 +4,41 @@ name: BrowserConfigurationAuthErrorCodes
 type: module
 package: '@azure/msal-browser'
 summary: ''
+variables:
+  - name: inMemRedirectUnavailable
+    uid: >-
+      @azure/msal-browser.BrowserConfigurationAuthErrorCodes.inMemRedirectUnavailable
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'inMemRedirectUnavailable: "in_mem_redirect_unavailable"'
+      return:
+        description: ''
+        type: '"in_mem_redirect_unavailable"'
+  - name: storageNotSupported
+    uid: '@azure/msal-browser.BrowserConfigurationAuthErrorCodes.storageNotSupported'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'storageNotSupported: "storage_not_supported"'
+      return:
+        description: ''
+        type: '"storage_not_supported"'
+  - name: stubbedPublicClientApplicationCalled
+    uid: >-
+      @azure/msal-browser.BrowserConfigurationAuthErrorCodes.stubbedPublicClientApplicationCalled
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        stubbedPublicClientApplicationCalled:
+        "stubbed_public_client_application_called"
+      return:
+        description: ''
+        type: '"stubbed_public_client_application_called"'

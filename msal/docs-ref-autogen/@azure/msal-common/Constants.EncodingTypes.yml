@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: EncodingTypes
-uid: '@azure/msal-common.EncodingTypes'
+uid: '@azure/msal-common.Constants.EncodingTypes'
 package: '@azure/msal-common'
 summary: ''
 fullName: EncodingTypes

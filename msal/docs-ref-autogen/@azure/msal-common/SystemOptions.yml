@@ -8,6 +8,9 @@ summary: >-
 
   - tokenRenewalOffsetSeconds    - Sets the window of offset needed to renew the
   token before expiry
+
+  - protocolMode                - Enum that represents the protocol that msal
+  follows. Used for configuring proper endpoints.
 fullName: SystemOptions
 remarks: ''
 isDeprecated: false

@@ -15,14 +15,9 @@ syntax: |
     clientCapabilities?: string[]
     clientId: string
     cloudDiscoveryMetadata?: string
-    encodeExtraQueryParams?: boolean
     instanceAware?: boolean
     knownAuthorities?: string[]
-    navigateToLoginRequestUrl?: boolean
     onRedirectNavigate?: (url: string) => boolean | void
     postLogoutRedirectUri?: string | null
-    protocolMode?: ProtocolMode
     redirectUri?: string
-    skipAuthorityMetadataCache?: boolean
-    supportsNestedAppAuth?: boolean
   }

@@ -9,7 +9,7 @@ isDeprecated: false
 type: class
 methods:
   - name: addFields()
-    uid: '@azure/msal-common.StubPerformanceClient.addFields'
+    uid: '@azure/msal-common.StubPerformanceClient.addFields_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -17,7 +17,7 @@ methods:
     syntax:
       content: function addFields()
   - name: addPerformanceCallback()
-    uid: '@azure/msal-common.StubPerformanceClient.addPerformanceCallback'
+    uid: '@azure/msal-common.StubPerformanceClient.addPerformanceCallback_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -27,35 +27,16 @@ methods:
       return:
         description: ''
         type: string
-  - name: addQueueMeasurement()
-    uid: '@azure/msal-common.StubPerformanceClient.addQueueMeasurement'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: function addQueueMeasurement()
   - name: cacheEventByCorrelationId()
-    uid: '@azure/msal-common.StubPerformanceClient.cacheEventByCorrelationId'
+    uid: '@azure/msal-common.StubPerformanceClient.cacheEventByCorrelationId_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
       content: function cacheEventByCorrelationId()
-  - name: calculateQueuedTime()
-    uid: '@azure/msal-common.StubPerformanceClient.calculateQueuedTime'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function calculateQueuedTime(): number'
-      return:
-        description: ''
-        type: number
   - name: discardMeasurements()
-    uid: '@azure/msal-common.StubPerformanceClient.discardMeasurements'
+    uid: '@azure/msal-common.StubPerformanceClient.discardMeasurements_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -63,7 +44,7 @@ methods:
     syntax:
       content: function discardMeasurements()
   - name: emitEvents()
-    uid: '@azure/msal-common.StubPerformanceClient.emitEvents'
+    uid: '@azure/msal-common.StubPerformanceClient.emitEvents_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -71,7 +52,7 @@ methods:
     syntax:
       content: function emitEvents()
   - name: endMeasurement()
-    uid: '@azure/msal-common.StubPerformanceClient.endMeasurement'
+    uid: '@azure/msal-common.StubPerformanceClient.endMeasurement_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -82,7 +63,7 @@ methods:
         description: ''
         type: null | <xref uid="@azure/msal-common.PerformanceEvent" />
   - name: generateId()
-    uid: '@azure/msal-common.StubPerformanceClient.generateId'
+    uid: '@azure/msal-common.StubPerformanceClient.generateId_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -93,7 +74,7 @@ methods:
         description: ''
         type: string
   - name: incrementFields()
-    uid: '@azure/msal-common.StubPerformanceClient.incrementFields'
+    uid: '@azure/msal-common.StubPerformanceClient.incrementFields_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -101,7 +82,7 @@ methods:
     syntax:
       content: function incrementFields()
   - name: removePerformanceCallback()
-    uid: '@azure/msal-common.StubPerformanceClient.removePerformanceCallback'
+    uid: '@azure/msal-common.StubPerformanceClient.removePerformanceCallback_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -111,16 +92,8 @@ methods:
       return:
         description: ''
         type: boolean
-  - name: setPreQueueTime()
-    uid: '@azure/msal-common.StubPerformanceClient.setPreQueueTime'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: function setPreQueueTime()
   - name: startMeasurement(string, string)
-    uid: '@azure/msal-common.StubPerformanceClient.startMeasurement'
+    uid: '@azure/msal-common.StubPerformanceClient.startMeasurement_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -139,15 +112,3 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.InProgressPerformanceEvent" />
-  - name: startPerformanceMeasurement()
-    uid: '@azure/msal-common.StubPerformanceClient.startPerformanceMeasurement'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: This method will be removed in the next major version
-    syntax:
-      content: 'function startPerformanceMeasurement(): IPerformanceMeasurement'
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.IPerformanceMeasurement" />

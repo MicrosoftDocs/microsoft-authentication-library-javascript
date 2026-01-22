@@ -4,3 +4,26 @@ name: CacheErrorCodes
 type: module
 package: '@azure/msal-common'
 summary: ''
+variables:
+  - name: cacheErrorUnknown
+    uid: '@azure/msal-common.CacheErrorCodes.cacheErrorUnknown'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cacheErrorUnknown: "cache_error_unknown"'
+      return:
+        description: ''
+        type: '"cache_error_unknown"'
+  - name: cacheQuotaExceeded
+    uid: '@azure/msal-common.CacheErrorCodes.cacheQuotaExceeded'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cacheQuotaExceeded: "cache_quota_exceeded"'
+      return:
+        description: ''
+        type: '"cache_quota_exceeded"'

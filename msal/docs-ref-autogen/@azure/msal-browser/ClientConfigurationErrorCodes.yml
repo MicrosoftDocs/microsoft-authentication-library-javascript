@@ -4,3 +4,253 @@ name: ClientConfigurationErrorCodes
 type: module
 package: '@azure/msal-browser'
 summary: ''
+variables:
+  - name: authorityMismatch
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.authorityMismatch'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authorityMismatch: "authority_mismatch"'
+      return:
+        description: ''
+        type: '"authority_mismatch"'
+  - name: authorityUriInsecure
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.authorityUriInsecure'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authorityUriInsecure: "authority_uri_insecure"'
+      return:
+        description: ''
+        type: '"authority_uri_insecure"'
+  - name: cannotAllowPlatformBroker
+    uid: >-
+      @azure/msal-browser.ClientConfigurationErrorCodes.cannotAllowPlatformBroker
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cannotAllowPlatformBroker: "cannot_allow_platform_broker"'
+      return:
+        description: ''
+        type: '"cannot_allow_platform_broker"'
+  - name: cannotSetOIDCOptions
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.cannotSetOIDCOptions'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cannotSetOIDCOptions: "cannot_set_OIDCOptions"'
+      return:
+        description: ''
+        type: '"cannot_set_OIDCOptions"'
+  - name: claimsRequestParsingError
+    uid: >-
+      @azure/msal-browser.ClientConfigurationErrorCodes.claimsRequestParsingError
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'claimsRequestParsingError: "claims_request_parsing_error"'
+      return:
+        description: ''
+        type: '"claims_request_parsing_error"'
+  - name: emptyInputScopesError
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.emptyInputScopesError'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'emptyInputScopesError: "empty_input_scopes_error"'
+      return:
+        description: ''
+        type: '"empty_input_scopes_error"'
+  - name: invalidAuthenticationHeader
+    uid: >-
+      @azure/msal-browser.ClientConfigurationErrorCodes.invalidAuthenticationHeader
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidAuthenticationHeader: "invalid_authentication_header"'
+      return:
+        description: ''
+        type: '"invalid_authentication_header"'
+  - name: invalidAuthorityMetadata
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.invalidAuthorityMetadata'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidAuthorityMetadata: "invalid_authority_metadata"'
+      return:
+        description: ''
+        type: '"invalid_authority_metadata"'
+  - name: invalidClaims
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.invalidClaims'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidClaims: "invalid_claims"'
+      return:
+        description: ''
+        type: '"invalid_claims"'
+  - name: invalidCloudDiscoveryMetadata
+    uid: >-
+      @azure/msal-browser.ClientConfigurationErrorCodes.invalidCloudDiscoveryMetadata
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidCloudDiscoveryMetadata: "invalid_cloud_discovery_metadata"'
+      return:
+        description: ''
+        type: '"invalid_cloud_discovery_metadata"'
+  - name: invalidCodeChallengeMethod
+    uid: >-
+      @azure/msal-browser.ClientConfigurationErrorCodes.invalidCodeChallengeMethod
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidCodeChallengeMethod: "invalid_code_challenge_method"'
+      return:
+        description: ''
+        type: '"invalid_code_challenge_method"'
+  - name: invalidRequestMethodForEAR
+    uid: >-
+      @azure/msal-browser.ClientConfigurationErrorCodes.invalidRequestMethodForEAR
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidRequestMethodForEAR: "invalid_request_method_for_EAR"'
+      return:
+        description: ''
+        type: '"invalid_request_method_for_EAR"'
+  - name: logoutRequestEmpty
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.logoutRequestEmpty'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'logoutRequestEmpty: "logout_request_empty"'
+      return:
+        description: ''
+        type: '"logout_request_empty"'
+  - name: missingNonceAuthenticationHeader
+    uid: >-
+      @azure/msal-browser.ClientConfigurationErrorCodes.missingNonceAuthenticationHeader
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'missingNonceAuthenticationHeader: "missing_nonce_authentication_header"'
+      return:
+        description: ''
+        type: '"missing_nonce_authentication_header"'
+  - name: missingSshJwk
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.missingSshJwk'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'missingSshJwk: "missing_ssh_jwk"'
+      return:
+        description: ''
+        type: '"missing_ssh_jwk"'
+  - name: missingSshKid
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.missingSshKid'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'missingSshKid: "missing_ssh_kid"'
+      return:
+        description: ''
+        type: '"missing_ssh_kid"'
+  - name: pkceParamsMissing
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.pkceParamsMissing'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pkceParamsMissing: "pkce_params_missing"'
+      return:
+        description: ''
+        type: '"pkce_params_missing"'
+  - name: redirectUriEmpty
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.redirectUriEmpty'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'redirectUriEmpty: "redirect_uri_empty"'
+      return:
+        description: ''
+        type: '"redirect_uri_empty"'
+  - name: tokenRequestEmpty
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.tokenRequestEmpty'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tokenRequestEmpty: "token_request_empty"'
+      return:
+        description: ''
+        type: '"token_request_empty"'
+  - name: untrustedAuthority
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.untrustedAuthority'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'untrustedAuthority: "untrusted_authority"'
+      return:
+        description: ''
+        type: '"untrusted_authority"'
+  - name: urlEmptyError
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.urlEmptyError'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'urlEmptyError: "empty_url_error"'
+      return:
+        description: ''
+        type: '"empty_url_error"'
+  - name: urlParseError
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.urlParseError'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'urlParseError: "url_parse_error"'
+      return:
+        description: ''
+        type: '"url_parse_error"'

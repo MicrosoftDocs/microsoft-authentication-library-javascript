@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: GrantType
-uid: '@azure/msal-common.GrantType'
+uid: '@azure/msal-common.Constants.GrantType'
 package: '@azure/msal-common'
 summary: ''
 fullName: GrantType

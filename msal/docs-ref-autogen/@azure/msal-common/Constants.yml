@@ -1,0 +1,1226 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.Constants'
+name: Constants
+summary: ''
+type: module
+typeAliases:
+  - '@azure/msal-common.Constants.AADAuthority'
+  - '@azure/msal-common.Constants.AuthenticationScheme'
+  - '@azure/msal-common.Constants.AuthorityMetadataSource'
+  - '@azure/msal-common.Constants.CacheOutcome'
+  - '@azure/msal-common.Constants.CacheType'
+  - '@azure/msal-common.Constants.ClaimsRequestKeys'
+  - '@azure/msal-common.Constants.CredentialType'
+  - '@azure/msal-common.Constants.EncodingTypes'
+  - '@azure/msal-common.Constants.GrantType'
+  - '@azure/msal-common.Constants.HeaderNames'
+  - '@azure/msal-common.Constants.HttpMethod'
+  - '@azure/msal-common.Constants.JsonWebTokenTypes'
+  - '@azure/msal-common.Constants.OAuthResponseType'
+  - '@azure/msal-common.Constants.PasswordGrantConstants'
+  - '@azure/msal-common.Constants.PersistentCacheKeys'
+  - '@azure/msal-common.Constants.RegionDiscoveryOutcomes'
+  - '@azure/msal-common.Constants.RegionDiscoverySources'
+  - '@azure/msal-common.Constants.ResponseMode'
+  - '@azure/msal-common.Constants.AADAuthority'
+  - '@azure/msal-common.Constants.AuthenticationScheme'
+  - '@azure/msal-common.Constants.AuthorityMetadataSource'
+  - '@azure/msal-common.Constants.CacheOutcome'
+  - '@azure/msal-common.Constants.CacheType'
+  - '@azure/msal-common.Constants.ClaimsRequestKeys'
+  - '@azure/msal-common.Constants.CredentialType'
+  - '@azure/msal-common.Constants.EncodingTypes'
+  - '@azure/msal-common.Constants.GrantType'
+  - '@azure/msal-common.Constants.HeaderNames'
+  - '@azure/msal-common.Constants.HttpMethod'
+  - '@azure/msal-common.Constants.JsonWebTokenTypes'
+  - '@azure/msal-common.Constants.OAuthResponseType'
+  - '@azure/msal-common.Constants.PasswordGrantConstants'
+  - '@azure/msal-common.Constants.PersistentCacheKeys'
+  - '@azure/msal-common.Constants.RegionDiscoveryOutcomes'
+  - '@azure/msal-common.Constants.RegionDiscoverySources'
+  - '@azure/msal-common.Constants.ResponseMode'
+package: '@azure/msal-common'
+variables:
+  - name: AADAuthority
+    uid: '@azure/msal-common.Constants.AADAuthority'
+    package: '@azure/msal-common'
+    summary: String constants related to AAD Authority
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        AADAuthority: { COMMON: "common", CONSUMERS: "consumers", ORGANIZATIONS:
+        "organizations" }
+      return:
+        description: ''
+        type: >-
+          { COMMON: "common", CONSUMERS: "consumers", ORGANIZATIONS:
+          "organizations" }
+  - name: AAD_INSTANCE_DISCOVERY_ENDPT
+    uid: '@azure/msal-common.Constants.AAD_INSTANCE_DISCOVERY_ENDPT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AAD_INSTANCE_DISCOVERY_ENDPT: string'
+      return:
+        description: ''
+        type: string
+  - name: AAD_TENANT_DOMAIN_SUFFIX
+    uid: '@azure/msal-common.Constants.AAD_TENANT_DOMAIN_SUFFIX'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AAD_TENANT_DOMAIN_SUFFIX: ".onmicrosoft.com"'
+      return:
+        description: ''
+        type: '".<xref uid="onmicrosoft.com" />"'
+  - name: ADFS
+    uid: '@azure/msal-common.Constants.ADFS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ADFS: "adfs"'
+      return:
+        description: ''
+        type: '"adfs"'
+  - name: APP_METADATA
+    uid: '@azure/msal-common.Constants.APP_METADATA'
+    package: '@azure/msal-common'
+    summary: More Cache related constants
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'APP_METADATA: string'
+      return:
+        description: ''
+        type: string
+  - name: AuthenticationScheme
+    uid: '@azure/msal-common.Constants.AuthenticationScheme'
+    package: '@azure/msal-common'
+    summary: Type of the authentication request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AuthenticationScheme: { BEARER: "Bearer", POP: "pop", SSH: "ssh-cert" }'
+      return:
+        description: ''
+        type: '{ BEARER: "Bearer", POP: "pop", SSH: "ssh-cert" }'
+  - name: AuthorityMetadataSource
+    uid: '@azure/msal-common.Constants.AuthorityMetadataSource'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        AuthorityMetadataSource: { CACHE: "cache", CONFIG: "config",
+        HARDCODED_VALUES: "hardcoded_values", NETWORK: "network" }
+      return:
+        description: ''
+        type: >-
+          { CACHE: "cache", CONFIG: "config", HARDCODED_VALUES:
+          "hardcoded_values", NETWORK: "network" }
+  - name: AUTHORITY_METADATA_CACHE_KEY
+    uid: '@azure/msal-common.Constants.AUTHORITY_METADATA_CACHE_KEY'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AUTHORITY_METADATA_CACHE_KEY: string'
+      return:
+        description: ''
+        type: string
+  - name: AUTHORITY_METADATA_REFRESH_TIME_SECONDS
+    uid: '@azure/msal-common.Constants.AUTHORITY_METADATA_REFRESH_TIME_SECONDS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AUTHORITY_METADATA_REFRESH_TIME_SECONDS: number'
+      return:
+        description: ''
+        type: number
+  - name: AUTHORIZATION_PENDING
+    uid: '@azure/msal-common.Constants.AUTHORIZATION_PENDING'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AUTHORIZATION_PENDING: "authorization_pending"'
+      return:
+        description: ''
+        type: '"authorization_pending"'
+  - name: AZURE_REGION_AUTO_DISCOVER_FLAG
+    uid: '@azure/msal-common.Constants.AZURE_REGION_AUTO_DISCOVER_FLAG'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AZURE_REGION_AUTO_DISCOVER_FLAG: "TryAutoDetect"'
+      return:
+        description: ''
+        type: '"TryAutoDetect"'
+  - name: CacheOutcome
+    uid: '@azure/msal-common.Constants.CacheOutcome'
+    package: '@azure/msal-common'
+    summary: >-
+      Specifies the reason for fetching the access token from the identity
+      provider
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        CacheOutcome: { CACHED_ACCESS_TOKEN_EXPIRED: "3",
+        FORCE_REFRESH_OR_CLAIMS: "1", NOT_APPLICABLE: "0",
+        NO_CACHED_ACCESS_TOKEN: "2", PROACTIVELY_REFRESHED: "4" }
+      return:
+        description: ''
+        type: >-
+          { CACHED_ACCESS_TOKEN_EXPIRED: "3", FORCE_REFRESH_OR_CLAIMS: "1",
+          NOT_APPLICABLE: "0", NO_CACHED_ACCESS_TOKEN: "2",
+          PROACTIVELY_REFRESHED: "4" }
+  - name: CacheType
+    uid: '@azure/msal-common.Constants.CacheType'
+    package: '@azure/msal-common'
+    summary: Combine all cache types
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        CacheType: { ACCESS_TOKEN: 2001, ADFS: 1001, APP_METADATA: 3001,
+        GENERIC: 1004, ID_TOKEN: 2003, MSA: 1002, MSSTS: 1003, REFRESH_TOKEN:
+        2002, UNDEFINED: 9999 }
+      return:
+        description: ''
+        type: >-
+          { ACCESS_TOKEN: 2001, ADFS: 1001, APP_METADATA: 3001, GENERIC: 1004,
+          ID_TOKEN: 2003, MSA: 1002, MSSTS: 1003, REFRESH_TOKEN: 2002,
+          UNDEFINED: 9999 }
+  - name: CACHE_ACCOUNT_TYPE_ADFS
+    uid: '@azure/msal-common.Constants.CACHE_ACCOUNT_TYPE_ADFS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CACHE_ACCOUNT_TYPE_ADFS: string'
+      return:
+        description: ''
+        type: string
+  - name: CACHE_ACCOUNT_TYPE_GENERIC
+    uid: '@azure/msal-common.Constants.CACHE_ACCOUNT_TYPE_GENERIC'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CACHE_ACCOUNT_TYPE_GENERIC: string'
+      return:
+        description: ''
+        type: string
+  - name: CACHE_ACCOUNT_TYPE_MSAV1
+    uid: '@azure/msal-common.Constants.CACHE_ACCOUNT_TYPE_MSAV1'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CACHE_ACCOUNT_TYPE_MSAV1: string'
+      return:
+        description: ''
+        type: string
+  - name: CACHE_ACCOUNT_TYPE_MSSTS
+    uid: '@azure/msal-common.Constants.CACHE_ACCOUNT_TYPE_MSSTS'
+    package: '@azure/msal-common'
+    summary: Account types in Cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CACHE_ACCOUNT_TYPE_MSSTS: string'
+      return:
+        description: ''
+        type: string
+  - name: CACHE_KEY_SEPARATOR
+    uid: '@azure/msal-common.Constants.CACHE_KEY_SEPARATOR'
+    package: '@azure/msal-common'
+    summary: Separators used in cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CACHE_KEY_SEPARATOR: string'
+      return:
+        description: ''
+        type: string
+  - name: CIAM_AUTH_URL
+    uid: '@azure/msal-common.Constants.CIAM_AUTH_URL'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CIAM_AUTH_URL: ".ciamlogin.com"'
+      return:
+        description: ''
+        type: '".<xref uid="ciamlogin.com" />"'
+  - name: ClaimsRequestKeys
+    uid: '@azure/msal-common.Constants.ClaimsRequestKeys'
+    package: '@azure/msal-common'
+    summary: Claims request keys
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ClaimsRequestKeys: { ACCESS_TOKEN: "access_token", XMS_CC: "xms_cc" }'
+      return:
+        description: ''
+        type: '{ ACCESS_TOKEN: "access_token", XMS_CC: "xms_cc" }'
+  - name: CLIENT_INFO
+    uid: '@azure/msal-common.Constants.CLIENT_INFO'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLIENT_INFO: string'
+      return:
+        description: ''
+        type: string
+  - name: CLIENT_INFO_SEPARATOR
+    uid: '@azure/msal-common.Constants.CLIENT_INFO_SEPARATOR'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLIENT_INFO_SEPARATOR: string'
+      return:
+        description: ''
+        type: string
+  - name: CLIENT_MISMATCH_ERROR
+    uid: '@azure/msal-common.Constants.CLIENT_MISMATCH_ERROR'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLIENT_MISMATCH_ERROR: string'
+      return:
+        description: ''
+        type: string
+  - name: CodeChallengeMethodValues
+    uid: '@azure/msal-common.Constants.CodeChallengeMethodValues'
+    package: '@azure/msal-common'
+    summary: allowed values for codeVerifier
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CodeChallengeMethodValues: { PLAIN: string, S256: string }'
+      return:
+        description: ''
+        type: '{ PLAIN: string, S256: string }'
+  - name: CODE_GRANT_TYPE
+    uid: '@azure/msal-common.Constants.CODE_GRANT_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CODE_GRANT_TYPE: "authorization_code"'
+      return:
+        description: ''
+        type: '"authorization_code"'
+  - name: CONSUMER_UTID
+    uid: '@azure/msal-common.Constants.CONSUMER_UTID'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CONSUMER_UTID: "9188040d-6c67-4c5b-b112-36a304b66dad"'
+      return:
+        description: ''
+        type: '"9188040d-6c67-4c5b-b112-36a304b66dad"'
+  - name: CredentialType
+    uid: '@azure/msal-common.Constants.CredentialType'
+    package: '@azure/msal-common'
+    summary: Credential Type stored in the cache
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        CredentialType: { ACCESS_TOKEN: "AccessToken",
+        ACCESS_TOKEN_WITH_AUTH_SCHEME: "AccessToken_With_AuthScheme", ID_TOKEN:
+        "IdToken", REFRESH_TOKEN: "RefreshToken" }
+      return:
+        description: ''
+        type: >-
+          { ACCESS_TOKEN: "AccessToken", ACCESS_TOKEN_WITH_AUTH_SCHEME:
+          "AccessToken_With_AuthScheme", ID_TOKEN: "IdToken", REFRESH_TOKEN:
+          "RefreshToken" }
+  - name: DEFAULT_AUTHORITY
+    uid: '@azure/msal-common.Constants.DEFAULT_AUTHORITY'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DEFAULT_AUTHORITY: "https://login.microsoftonline.com/common/"'
+      return:
+        description: ''
+        type: '"https:<xref uid="//login.microsoftonline.com/common/" />"'
+  - name: DEFAULT_AUTHORITY_HOST
+    uid: '@azure/msal-common.Constants.DEFAULT_AUTHORITY_HOST'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DEFAULT_AUTHORITY_HOST: "login.microsoftonline.com"'
+      return:
+        description: ''
+        type: '"<xref uid="login.microsoftonline.com" />"'
+  - name: DEFAULT_COMMON_TENANT
+    uid: '@azure/msal-common.Constants.DEFAULT_COMMON_TENANT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DEFAULT_COMMON_TENANT: "common"'
+      return:
+        description: ''
+        type: '"common"'
+  - name: DEFAULT_MAX_THROTTLE_TIME_SECONDS
+    uid: '@azure/msal-common.Constants.DEFAULT_MAX_THROTTLE_TIME_SECONDS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DEFAULT_MAX_THROTTLE_TIME_SECONDS: number'
+      return:
+        description: ''
+        type: number
+  - name: DEFAULT_THROTTLE_TIME_SECONDS
+    uid: '@azure/msal-common.Constants.DEFAULT_THROTTLE_TIME_SECONDS'
+    package: '@azure/msal-common'
+    summary: Constants related to throttling
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DEFAULT_THROTTLE_TIME_SECONDS: number'
+      return:
+        description: ''
+        type: number
+  - name: DEFAULT_TOKEN_RENEWAL_OFFSET_SEC
+    uid: '@azure/msal-common.Constants.DEFAULT_TOKEN_RENEWAL_OFFSET_SEC'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DEFAULT_TOKEN_RENEWAL_OFFSET_SEC: 300'
+      return:
+        description: ''
+        type: '300'
+  - name: DSTS
+    uid: '@azure/msal-common.Constants.DSTS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DSTS: "dstsv2"'
+      return:
+        description: ''
+        type: '"dstsv2"'
+  - name: EMAIL_SCOPE
+    uid: '@azure/msal-common.Constants.EMAIL_SCOPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'EMAIL_SCOPE: "email"'
+      return:
+        description: ''
+        type: '"email"'
+  - name: EncodingTypes
+    uid: '@azure/msal-common.Constants.EncodingTypes'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'EncodingTypes: { BASE64: "base64", HEX: "hex", UTF8: "utf-8" }'
+      return:
+        description: ''
+        type: '{ BASE64: "base64", HEX: "hex", UTF8: "utf-8" }'
+  - name: FORWARD_SLASH
+    uid: '@azure/msal-common.Constants.FORWARD_SLASH'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'FORWARD_SLASH: "/"'
+      return:
+        description: ''
+        type: '"/"'
+  - name: GrantType
+    uid: '@azure/msal-common.Constants.GrantType'
+    package: '@azure/msal-common'
+    summary: allowed grant_type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        GrantType: { AUTHORIZATION_CODE_GRANT: "authorization_code",
+        CLIENT_CREDENTIALS_GRANT: "client_credentials", DEVICE_CODE_GRANT:
+        "device_code", IMPLICIT_GRANT: "implicit", JWT_BEARER:
+        "urn:ietf:params:oauth:grant-type:jwt-bearer", REFRESH_TOKEN_GRANT:
+        "refresh_token", RESOURCE_OWNER_PASSWORD_GRANT: "password" }
+      return:
+        description: ''
+        type: >-
+          { AUTHORIZATION_CODE_GRANT: "authorization_code",
+          CLIENT_CREDENTIALS_GRANT: "client_credentials", DEVICE_CODE_GRANT:
+          "device_code", IMPLICIT_GRANT: "implicit", JWT_BEARER:
+          "urn:ietf:params:oauth:grant-type:jwt-bearer", REFRESH_TOKEN_GRANT:
+          "refresh_token", RESOURCE_OWNER_PASSWORD_GRANT: "password" }
+  - name: HeaderNames
+    uid: '@azure/msal-common.Constants.HeaderNames'
+    package: '@azure/msal-common'
+    summary: Request header names
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        HeaderNames: { AuthenticationInfo: "Authentication-Info", CCS_HEADER:
+        "X-AnchorMailbox", CONTENT_LENGTH: "Content-Length", CONTENT_TYPE:
+        "Content-Type", RETRY_AFTER: "Retry-After", WWWAuthenticate:
+        "WWW-Authenticate", X_MS_HTTP_VERSION: "x-ms-httpver", X_MS_REQUEST_ID:
+        "x-ms-request-id" }
+      return:
+        description: ''
+        type: >-
+          { AuthenticationInfo: "Authentication-Info", CCS_HEADER:
+          "X-AnchorMailbox", CONTENT_LENGTH: "Content-Length", CONTENT_TYPE:
+          "Content-Type", RETRY_AFTER: "Retry-After", WWWAuthenticate:
+          "WWW-Authenticate", X_MS_HTTP_VERSION: "x-ms-httpver",
+          X_MS_REQUEST_ID: "x-ms-request-id" }
+  - name: HttpMethod
+    uid: '@azure/msal-common.Constants.HttpMethod'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HttpMethod: { GET: "GET", POST: "POST" }'
+      return:
+        description: ''
+        type: '{ GET: "GET", POST: "POST" }'
+  - name: HTTP_BAD_REQUEST
+    uid: '@azure/msal-common.Constants.HTTP_BAD_REQUEST'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_BAD_REQUEST: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_CLIENT_ERROR
+    uid: '@azure/msal-common.Constants.HTTP_CLIENT_ERROR'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_CLIENT_ERROR: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_CLIENT_ERROR_RANGE_END
+    uid: '@azure/msal-common.Constants.HTTP_CLIENT_ERROR_RANGE_END'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_CLIENT_ERROR_RANGE_END: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_CLIENT_ERROR_RANGE_START
+    uid: '@azure/msal-common.Constants.HTTP_CLIENT_ERROR_RANGE_START'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_CLIENT_ERROR_RANGE_START: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_GATEWAY_TIMEOUT
+    uid: '@azure/msal-common.Constants.HTTP_GATEWAY_TIMEOUT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_GATEWAY_TIMEOUT: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_GONE
+    uid: '@azure/msal-common.Constants.HTTP_GONE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_GONE: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_MULTI_SIDED_ERROR
+    uid: '@azure/msal-common.Constants.HTTP_MULTI_SIDED_ERROR'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_MULTI_SIDED_ERROR: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_NOT_FOUND
+    uid: '@azure/msal-common.Constants.HTTP_NOT_FOUND'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_NOT_FOUND: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_REDIRECT
+    uid: '@azure/msal-common.Constants.HTTP_REDIRECT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_REDIRECT: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_REQUEST_TIMEOUT
+    uid: '@azure/msal-common.Constants.HTTP_REQUEST_TIMEOUT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_REQUEST_TIMEOUT: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_SERVER_ERROR
+    uid: '@azure/msal-common.Constants.HTTP_SERVER_ERROR'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_SERVER_ERROR: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_SERVER_ERROR_RANGE_END
+    uid: '@azure/msal-common.Constants.HTTP_SERVER_ERROR_RANGE_END'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_SERVER_ERROR_RANGE_END: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_SERVER_ERROR_RANGE_START
+    uid: '@azure/msal-common.Constants.HTTP_SERVER_ERROR_RANGE_START'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_SERVER_ERROR_RANGE_START: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_SERVICE_UNAVAILABLE
+    uid: '@azure/msal-common.Constants.HTTP_SERVICE_UNAVAILABLE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_SERVICE_UNAVAILABLE: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_SUCCESS
+    uid: '@azure/msal-common.Constants.HTTP_SUCCESS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_SUCCESS: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_SUCCESS_RANGE_END
+    uid: '@azure/msal-common.Constants.HTTP_SUCCESS_RANGE_END'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_SUCCESS_RANGE_END: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_SUCCESS_RANGE_START
+    uid: '@azure/msal-common.Constants.HTTP_SUCCESS_RANGE_START'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_SUCCESS_RANGE_START: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_TOO_MANY_REQUESTS
+    uid: '@azure/msal-common.Constants.HTTP_TOO_MANY_REQUESTS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_TOO_MANY_REQUESTS: number'
+      return:
+        description: ''
+        type: number
+  - name: HTTP_UNAUTHORIZED
+    uid: '@azure/msal-common.Constants.HTTP_UNAUTHORIZED'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HTTP_UNAUTHORIZED: number'
+      return:
+        description: ''
+        type: number
+  - name: IMDS_ENDPOINT
+    uid: '@azure/msal-common.Constants.IMDS_ENDPOINT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        IMDS_ENDPOINT:
+        "http://169.254.169.254/metadata/instance/compute/location"
+      return:
+        description: ''
+        type: >-
+          "http:<xref uid="//169.254.169.254/metadata/instance/compute/location"
+          />"
+  - name: IMDS_TIMEOUT
+    uid: '@azure/msal-common.Constants.IMDS_TIMEOUT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'IMDS_TIMEOUT: 2000'
+      return:
+        description: ''
+        type: '2000'
+  - name: IMDS_VERSION
+    uid: '@azure/msal-common.Constants.IMDS_VERSION'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'IMDS_VERSION: "2020-06-01"'
+      return:
+        description: ''
+        type: '"2020-06-01"'
+  - name: INVALID_GRANT_ERROR
+    uid: '@azure/msal-common.Constants.INVALID_GRANT_ERROR'
+    package: '@azure/msal-common'
+    summary: Errors
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'INVALID_GRANT_ERROR: string'
+      return:
+        description: ''
+        type: string
+  - name: INVALID_INSTANCE
+    uid: '@azure/msal-common.Constants.INVALID_INSTANCE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'INVALID_INSTANCE: "invalid_instance"'
+      return:
+        description: ''
+        type: '"invalid_instance"'
+  - name: JsonWebTokenTypes
+    uid: '@azure/msal-common.Constants.JsonWebTokenTypes'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'JsonWebTokenTypes: { Jwk: "JWK", Jwt: "JWT", Pop: "pop" }'
+      return:
+        description: ''
+        type: '{ Jwk: "JWK", Jwt: "JWT", Pop: "pop" }'
+  - name: KNOWN_PUBLIC_CLOUDS
+    uid: '@azure/msal-common.Constants.KNOWN_PUBLIC_CLOUDS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'KNOWN_PUBLIC_CLOUDS: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: NOT_APPLICABLE
+    uid: '@azure/msal-common.Constants.NOT_APPLICABLE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'NOT_APPLICABLE: "N/A"'
+      return:
+        description: ''
+        type: '"N/A"'
+  - name: NOT_AVAILABLE
+    uid: '@azure/msal-common.Constants.NOT_AVAILABLE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'NOT_AVAILABLE: "Not Available"'
+      return:
+        description: ''
+        type: '"Not Available"'
+  - name: OAuthResponseType
+    uid: '@azure/msal-common.Constants.OAuthResponseType'
+    package: '@azure/msal-common'
+    summary: Allowed values for response_type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        OAuthResponseType: { CODE: "code", IDTOKEN_TOKEN: "id_token token",
+        IDTOKEN_TOKEN_REFRESHTOKEN: "id_token token refresh_token" }
+      return:
+        description: ''
+        type: >-
+          { CODE: "code", IDTOKEN_TOKEN: "id_token token",
+          IDTOKEN_TOKEN_REFRESHTOKEN: "id_token token refresh_token" }
+  - name: OFFLINE_ACCESS_SCOPE
+    uid: '@azure/msal-common.Constants.OFFLINE_ACCESS_SCOPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'OFFLINE_ACCESS_SCOPE: "offline_access"'
+      return:
+        description: ''
+        type: '"offline_access"'
+  - name: OIDC_DEFAULT_SCOPES
+    uid: '@azure/msal-common.Constants.OIDC_DEFAULT_SCOPES'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'OIDC_DEFAULT_SCOPES: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: OIDC_SCOPES
+    uid: '@azure/msal-common.Constants.OIDC_SCOPES'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'OIDC_SCOPES: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: ONE_DAY_IN_MS
+    uid: '@azure/msal-common.Constants.ONE_DAY_IN_MS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ONE_DAY_IN_MS: 86400000'
+      return:
+        description: ''
+        type: '86400000'
+  - name: OPENID_SCOPE
+    uid: '@azure/msal-common.Constants.OPENID_SCOPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'OPENID_SCOPE: "openid"'
+      return:
+        description: ''
+        type: '"openid"'
+  - name: PasswordGrantConstants
+    uid: '@azure/msal-common.Constants.PasswordGrantConstants'
+    package: '@azure/msal-common'
+    summary: Password grant parameters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'PasswordGrantConstants: { password: "password", username: "username" }'
+      return:
+        description: ''
+        type: '{ password: "password", username: "username" }'
+  - name: PersistentCacheKeys
+    uid: '@azure/msal-common.Constants.PersistentCacheKeys'
+    package: '@azure/msal-common'
+    summary: Persistent cache keys MSAL which stay while user is logged in.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        PersistentCacheKeys: { ACTIVE_ACCOUNT_FILTERS: "active-account-filters"
+        }
+      return:
+        description: ''
+        type: '{ ACTIVE_ACCOUNT_FILTERS: "active-account-filters" }'
+  - name: PROFILE_SCOPE
+    uid: '@azure/msal-common.Constants.PROFILE_SCOPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'PROFILE_SCOPE: "profile"'
+      return:
+        description: ''
+        type: '"profile"'
+  - name: PromptValue
+    uid: '@azure/msal-common.Constants.PromptValue'
+    package: '@azure/msal-common'
+    summary: >-
+      we considered making this "enum" in the request instead of string, however
+      it looks like the allowed list of
+
+      prompt values kept changing over past couple of years. There are some
+      undocumented prompt values for some
+
+      internal partners too, hence the choice of generic "string" type instead
+      of the "enum"
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        PromptValue: { CONSENT: string, CREATE: string, LOGIN: string, NONE:
+        string, NO_SESSION: string, SELECT_ACCOUNT: string }
+      return:
+        description: ''
+        type: >-
+          { CONSENT: string, CREATE: string, LOGIN: string, NONE: string,
+          NO_SESSION: string, SELECT_ACCOUNT: string }
+  - name: REGIONAL_AUTH_PUBLIC_CLOUD_SUFFIX
+    uid: '@azure/msal-common.Constants.REGIONAL_AUTH_PUBLIC_CLOUD_SUFFIX'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'REGIONAL_AUTH_PUBLIC_CLOUD_SUFFIX: "login.microsoft.com"'
+      return:
+        description: ''
+        type: '"<xref uid="login.microsoft.com" />"'
+  - name: RegionDiscoveryOutcomes
+    uid: '@azure/msal-common.Constants.RegionDiscoveryOutcomes'
+    package: '@azure/msal-common'
+    summary: Region Discovery Outcomes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        RegionDiscoveryOutcomes: { AUTO_DETECTION_REQUESTED_FAILED: "5",
+        AUTO_DETECTION_REQUESTED_SUCCESSFUL: "4", CONFIGURED_MATCHES_DETECTED:
+        "1", CONFIGURED_NOT_DETECTED: "3", CONFIGURED_NO_AUTO_DETECTION: "2" }
+      return:
+        description: ''
+        type: >-
+          { AUTO_DETECTION_REQUESTED_FAILED: "5",
+          AUTO_DETECTION_REQUESTED_SUCCESSFUL: "4", CONFIGURED_MATCHES_DETECTED:
+          "1", CONFIGURED_NOT_DETECTED: "3", CONFIGURED_NO_AUTO_DETECTION: "2" }
+  - name: RegionDiscoverySources
+    uid: '@azure/msal-common.Constants.RegionDiscoverySources'
+    package: '@azure/msal-common'
+    summary: Region Discovery Sources
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        RegionDiscoverySources: { ENVIRONMENT_VARIABLE: "3",
+        FAILED_AUTO_DETECTION: "1", IMDS: "4", INTERNAL_CACHE: "2" }
+      return:
+        description: ''
+        type: >-
+          { ENVIRONMENT_VARIABLE: "3", FAILED_AUTO_DETECTION: "1", IMDS: "4",
+          INTERNAL_CACHE: "2" }
+  - name: RESOURCE_DELIM
+    uid: '@azure/msal-common.Constants.RESOURCE_DELIM'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'RESOURCE_DELIM: "|"'
+      return:
+        description: ''
+        type: '"|"'
+  - name: ResponseMode
+    uid: '@azure/msal-common.Constants.ResponseMode'
+    package: '@azure/msal-common'
+    summary: allowed values for response_mode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        ResponseMode: { FORM_POST: "form_post", FRAGMENT: "fragment", QUERY:
+        "query" }
+      return:
+        description: ''
+        type: '{ FORM_POST: "form_post", FRAGMENT: "fragment", QUERY: "query" }'
+  - name: S256_CODE_CHALLENGE_METHOD
+    uid: '@azure/msal-common.Constants.S256_CODE_CHALLENGE_METHOD'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'S256_CODE_CHALLENGE_METHOD: "S256"'
+      return:
+        description: ''
+        type: '"S256"'
+  - name: SERVER_TELEM_CACHE_KEY
+    uid: '@azure/msal-common.Constants.SERVER_TELEM_CACHE_KEY'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SERVER_TELEM_CACHE_KEY: string'
+      return:
+        description: ''
+        type: string
+  - name: SERVER_TELEM_CATEGORY_SEPARATOR
+    uid: '@azure/msal-common.Constants.SERVER_TELEM_CATEGORY_SEPARATOR'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SERVER_TELEM_CATEGORY_SEPARATOR: string'
+      return:
+        description: ''
+        type: string
+  - name: SERVER_TELEM_MAX_CACHED_ERRORS
+    uid: '@azure/msal-common.Constants.SERVER_TELEM_MAX_CACHED_ERRORS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SERVER_TELEM_MAX_CACHED_ERRORS: number'
+      return:
+        description: ''
+        type: number
+  - name: SERVER_TELEM_MAX_CUR_HEADER_BYTES
+    uid: '@azure/msal-common.Constants.SERVER_TELEM_MAX_CUR_HEADER_BYTES'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SERVER_TELEM_MAX_CUR_HEADER_BYTES: number'
+      return:
+        description: ''
+        type: number
+  - name: SERVER_TELEM_MAX_LAST_HEADER_BYTES
+    uid: '@azure/msal-common.Constants.SERVER_TELEM_MAX_LAST_HEADER_BYTES'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SERVER_TELEM_MAX_LAST_HEADER_BYTES: number'
+      return:
+        description: ''
+        type: number
+  - name: SERVER_TELEM_OVERFLOW_FALSE
+    uid: '@azure/msal-common.Constants.SERVER_TELEM_OVERFLOW_FALSE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SERVER_TELEM_OVERFLOW_FALSE: string'
+      return:
+        description: ''
+        type: string
+  - name: SERVER_TELEM_OVERFLOW_TRUE
+    uid: '@azure/msal-common.Constants.SERVER_TELEM_OVERFLOW_TRUE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SERVER_TELEM_OVERFLOW_TRUE: string'
+      return:
+        description: ''
+        type: string
+  - name: SERVER_TELEM_SCHEMA_VERSION
+    uid: '@azure/msal-common.Constants.SERVER_TELEM_SCHEMA_VERSION'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SERVER_TELEM_SCHEMA_VERSION: number'
+      return:
+        description: ''
+        type: number
+  - name: SERVER_TELEM_UNKNOWN_ERROR
+    uid: '@azure/msal-common.Constants.SERVER_TELEM_UNKNOWN_ERROR'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SERVER_TELEM_UNKNOWN_ERROR: string'
+      return:
+        description: ''
+        type: string
+  - name: SERVER_TELEM_VALUE_SEPARATOR
+    uid: '@azure/msal-common.Constants.SERVER_TELEM_VALUE_SEPARATOR'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SERVER_TELEM_VALUE_SEPARATOR: string'
+      return:
+        description: ''
+        type: string
+  - name: SHR_NONCE_VALIDITY
+    uid: '@azure/msal-common.Constants.SHR_NONCE_VALIDITY'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SHR_NONCE_VALIDITY: 240'
+      return:
+        description: ''
+        type: '240'
+  - name: SKU
+    uid: '@azure/msal-common.Constants.SKU'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SKU: "msal.js.common"'
+      return:
+        description: ''
+        type: '"<xref uid="msal.js.common" />"'
+  - name: THE_FAMILY_ID
+    uid: '@azure/msal-common.Constants.THE_FAMILY_ID'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'THE_FAMILY_ID: string'
+      return:
+        description: ''
+        type: string
+  - name: THROTTLING_PREFIX
+    uid: '@azure/msal-common.Constants.THROTTLING_PREFIX'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'THROTTLING_PREFIX: string'
+      return:
+        description: ''
+        type: string
+  - name: URL_FORM_CONTENT_TYPE
+    uid: '@azure/msal-common.Constants.URL_FORM_CONTENT_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'URL_FORM_CONTENT_TYPE: "application/x-www-form-urlencoded;charset=utf-8"'
+      return:
+        description: ''
+        type: '"application/x-www-form-urlencoded;charset=utf-8"'
+  - name: X_MS_LIB_CAPABILITY_VALUE
+    uid: '@azure/msal-common.Constants.X_MS_LIB_CAPABILITY_VALUE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_MS_LIB_CAPABILITY_VALUE: string'
+      return:
+        description: ''
+        type: string

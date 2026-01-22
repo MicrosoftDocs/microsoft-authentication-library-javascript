@@ -36,7 +36,7 @@ methods:
           type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
           description: callback to be invoked when an event is raised
         - id: eventTypes
-          type: EventType[]
+          type: <xref uid="@azure/msal-browser.EventType" />[]
           description: >-
             list of events that this callback will be invoked for, if not
             provided callback will be invoked for all events
@@ -60,7 +60,7 @@ methods:
         InteractionType, payload?: EventPayload, error?: EventError)
       parameters:
         - id: eventType
-          type: EventType
+          type: <xref uid="@azure/msal-browser.EventType" />
           description: ''
         - id: interactionType
           type: <xref uid="@azure/msal-browser.InteractionType" />

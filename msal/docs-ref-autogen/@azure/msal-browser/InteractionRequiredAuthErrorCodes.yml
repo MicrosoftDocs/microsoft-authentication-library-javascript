@@ -4,3 +4,93 @@ name: InteractionRequiredAuthErrorCodes
 type: module
 package: '@azure/msal-browser'
 summary: ''
+variables:
+  - name: badToken
+    uid: '@azure/msal-browser.InteractionRequiredAuthErrorCodes.badToken'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'badToken: "bad_token"'
+      return:
+        description: ''
+        type: '"bad_token"'
+  - name: consentRequired
+    uid: '@azure/msal-browser.InteractionRequiredAuthErrorCodes.consentRequired'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'consentRequired: "consent_required"'
+      return:
+        description: ''
+        type: '"consent_required"'
+  - name: interactionRequired
+    uid: '@azure/msal-browser.InteractionRequiredAuthErrorCodes.interactionRequired'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'interactionRequired: "interaction_required"'
+      return:
+        description: ''
+        type: '"interaction_required"'
+  - name: loginRequired
+    uid: '@azure/msal-browser.InteractionRequiredAuthErrorCodes.loginRequired'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'loginRequired: "login_required"'
+      return:
+        description: ''
+        type: '"login_required"'
+  - name: nativeAccountUnavailable
+    uid: >-
+      @azure/msal-browser.InteractionRequiredAuthErrorCodes.nativeAccountUnavailable
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nativeAccountUnavailable: "native_account_unavailable"'
+      return:
+        description: ''
+        type: '"native_account_unavailable"'
+  - name: noTokensFound
+    uid: '@azure/msal-browser.InteractionRequiredAuthErrorCodes.noTokensFound'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'noTokensFound: "no_tokens_found"'
+      return:
+        description: ''
+        type: '"no_tokens_found"'
+  - name: refreshTokenExpired
+    uid: '@azure/msal-browser.InteractionRequiredAuthErrorCodes.refreshTokenExpired'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'refreshTokenExpired: "refresh_token_expired"'
+      return:
+        description: ''
+        type: '"refresh_token_expired"'
+  - name: uxNotAllowed
+    uid: '@azure/msal-browser.InteractionRequiredAuthErrorCodes.uxNotAllowed'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'uxNotAllowed: "ux_not_allowed"'
+      return:
+        description: ''
+        type: '"ux_not_allowed"'

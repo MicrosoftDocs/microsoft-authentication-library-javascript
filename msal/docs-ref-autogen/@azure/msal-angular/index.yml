@@ -20,3 +20,67 @@ typeAliases:
   - '@azure/msal-angular.MsalInterceptorAuthRequest'
   - '@azure/msal-angular.MsalInterceptorConfiguration'
   - '@azure/msal-angular.ProtectedResourceScopes'
+variables:
+  - name: MSAL_BROADCAST_CONFIG
+    uid: '@azure/msal-angular.MSAL_BROADCAST_CONFIG'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'MSAL_BROADCAST_CONFIG: InjectionToken<MsalBroadcastConfiguration>'
+      return:
+        description: ''
+        type: >-
+          InjectionToken&lt;<xref
+          uid="@azure/msal-angular.MsalBroadcastConfiguration" />&gt;
+  - name: MSAL_GUARD_CONFIG
+    uid: '@azure/msal-angular.MSAL_GUARD_CONFIG'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'MSAL_GUARD_CONFIG: InjectionToken<MsalGuardConfiguration>'
+      return:
+        description: ''
+        type: >-
+          InjectionToken&lt;<xref
+          uid="@azure/msal-angular.MsalGuardConfiguration" />&gt;
+  - name: MSAL_INSTANCE
+    uid: '@azure/msal-angular.MSAL_INSTANCE'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'MSAL_INSTANCE: InjectionToken<IPublicClientApplication>'
+      return:
+        description: ''
+        type: >-
+          InjectionToken&lt;<xref
+          uid="@azure/msal-browser.IPublicClientApplication" />&gt;
+  - name: MSAL_INTERCEPTOR_CONFIG
+    uid: '@azure/msal-angular.MSAL_INTERCEPTOR_CONFIG'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'MSAL_INTERCEPTOR_CONFIG: InjectionToken<MsalInterceptorConfiguration>'
+      return:
+        description: ''
+        type: >-
+          InjectionToken&lt;<xref
+          uid="@azure/msal-angular.MsalInterceptorConfiguration" />&gt;
+  - name: version
+    uid: '@azure/msal-angular.version'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'version: "5.0.2"'
+      return:
+        description: ''
+        type: '"<xref uid="5.0.2" />"'

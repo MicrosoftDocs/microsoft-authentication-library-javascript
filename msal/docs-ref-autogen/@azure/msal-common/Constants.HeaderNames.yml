@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: HeaderNames
-uid: '@azure/msal-common.HeaderNames'
+uid: '@azure/msal-common.Constants.HeaderNames'
 package: '@azure/msal-common'
 summary: ''
 fullName: HeaderNames

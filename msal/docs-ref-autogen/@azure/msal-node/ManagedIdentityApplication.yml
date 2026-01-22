@@ -52,4 +52,4 @@ methods:
       content: 'function getManagedIdentitySource(): ManagedIdentitySourceNames'
       return:
         description: ManagedIdentitySourceNames - The Managed Identity source's name
-        type: ManagedIdentitySourceNames
+        type: <xref uid="@azure/msal-node.ManagedIdentitySourceNames" />

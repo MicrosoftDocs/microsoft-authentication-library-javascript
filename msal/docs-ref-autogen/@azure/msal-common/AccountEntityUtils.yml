@@ -1,0 +1,165 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.AccountEntityUtils'
+name: AccountEntityUtils
+type: module
+package: '@azure/msal-common'
+summary: ''
+functions:
+  - name: >-
+      createAccountEntity({ clientInfo?: string, cloudGraphHostName?: string,
+      environment?: string, homeAccountId: string, idTokenClaims?: TokenClaims,
+      msGraphHost?: string, nativeAccountId?: string, tenantProfiles?:
+      TenantProfile[] }, Authority, (input: string) => string)
+    uid: '@azure/msal-common.AccountEntityUtils.createAccountEntity_1'
+    package: '@azure/msal-common'
+    summary: >-
+      Build Account cache from IdToken, clientInfo and authority/policy.
+      Associated with AAD.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAccountEntity(accountDetails: { clientInfo?: string,
+        cloudGraphHostName?: string, environment?: string, homeAccountId:
+        string, idTokenClaims?: TokenClaims, msGraphHost?: string,
+        nativeAccountId?: string, tenantProfiles?: TenantProfile[] }, authority:
+        Authority, base64Decode?: (input: string) => string): AccountEntity
+      parameters:
+        - id: accountDetails
+          type: >-
+            { clientInfo?: string, cloudGraphHostName?: string, environment?:
+            string, homeAccountId: string, idTokenClaims?: TokenClaims,
+            msGraphHost?: string, nativeAccountId?: string, tenantProfiles?:
+            TenantProfile[] }
+          description: ''
+        - id: authority
+          type: Authority
+          description: ''
+        - id: base64Decode
+          type: '(input: string) =&gt; string'
+          description: ''
+      return:
+        description: ''
+        type: AccountEntity
+  - name: createAccountEntityFromAccountInfo(AccountInfo, string, string)
+    uid: '@azure/msal-common.AccountEntityUtils.createAccountEntityFromAccountInfo_1'
+    package: '@azure/msal-common'
+    summary: Creates an AccountEntity object from AccountInfo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAccountEntityFromAccountInfo(accountInfo: AccountInfo,
+        cloudGraphHostName?: string, msGraphHost?: string): AccountEntity
+      parameters:
+        - id: accountInfo
+          type: <xref uid="@azure/msal-common.AccountInfo" />
+          description: ''
+        - id: cloudGraphHostName
+          type: string
+          description: ''
+        - id: msGraphHost
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: AccountEntity
+  - name: generateAccountId(AccountEntity)
+    uid: '@azure/msal-common.AccountEntityUtils.generateAccountId_1'
+    package: '@azure/msal-common'
+    summary: >-
+      Generate Account Id key component as per the schema:
+      <home_account_id>-<environment>
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function generateAccountId(accountEntity: AccountEntity): string'
+      parameters:
+        - id: accountEntity
+          type: AccountEntity
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: >-
+      generateHomeAccountId(string, AuthorityType, Logger, ICrypto, string,
+      TokenClaims)
+    uid: '@azure/msal-common.AccountEntityUtils.generateHomeAccountId_1'
+    package: '@azure/msal-common'
+    summary: Generate HomeAccountId from server response
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function generateHomeAccountId(serverClientInfo: string, authType:
+        AuthorityType, logger: Logger, cryptoObj: ICrypto, correlationId:
+        string, idTokenClaims?: TokenClaims): string
+      parameters:
+        - id: serverClientInfo
+          type: string
+          description: ''
+        - id: authType
+          type: <xref uid="@azure/msal-common.AuthorityType" />
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
+        - id: cryptoObj
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: idTokenClaims
+          type: <xref uid="@azure/msal-common.TokenClaims" />
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: getAccountInfo(AccountEntity)
+    uid: '@azure/msal-common.AccountEntityUtils.getAccountInfo_1'
+    package: '@azure/msal-common'
+    summary: Returns the AccountInfo interface for this account.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAccountInfo(accountEntity: AccountEntity): AccountInfo'
+      parameters:
+        - id: accountEntity
+          type: AccountEntity
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AccountInfo" />
+  - name: isAccountEntity(object)
+    uid: '@azure/msal-common.AccountEntityUtils.isAccountEntity_1'
+    package: '@azure/msal-common'
+    summary: 'Validates an entity: checks for all expected params'
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isAccountEntity(entity: object): entity'
+      parameters:
+        - id: entity
+          type: object
+          description: ''
+      return:
+        description: ''
+        type: entity
+  - name: isSingleTenant(AccountEntity)
+    uid: '@azure/msal-common.AccountEntityUtils.isSingleTenant_1'
+    package: '@azure/msal-common'
+    summary: >-
+      Returns true if the account entity is in single tenant format (outdated),
+      false otherwise
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isSingleTenant(accountEntity: AccountEntity): boolean'
+      parameters:
+        - id: accountEntity
+          type: AccountEntity
+          description: ''
+      return:
+        description: ''
+        type: boolean

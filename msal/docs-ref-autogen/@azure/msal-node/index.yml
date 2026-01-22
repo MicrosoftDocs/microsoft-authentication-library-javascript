@@ -7,24 +7,18 @@ enums:
   - '@azure/msal-node.LogLevel'
 classes:
   - '@azure/msal-node.AuthError'
-  - '@azure/msal-node.ClientApplication'
   - '@azure/msal-node.ClientAssertion'
   - '@azure/msal-node.ClientAuthError'
   - '@azure/msal-node.ClientConfigurationError'
-  - '@azure/msal-node.ClientCredentialClient'
   - '@azure/msal-node.ConfidentialClientApplication'
-  - '@azure/msal-node.CryptoProvider'
-  - '@azure/msal-node.DeviceCodeClient'
   - '@azure/msal-node.DistributedCachePlugin'
   - '@azure/msal-node.InteractionRequiredAuthError'
   - '@azure/msal-node.Logger'
   - '@azure/msal-node.ManagedIdentityApplication'
-  - '@azure/msal-node.OnBehalfOfClient'
   - '@azure/msal-node.PublicClientApplication'
   - '@azure/msal-node.ServerError'
   - '@azure/msal-node.TokenCache'
   - '@azure/msal-node.TokenCacheContext'
-  - '@azure/msal-node.UsernamePasswordClient'
 interfaces:
   - '@azure/msal-node.IAppTokenProvider'
   - '@azure/msal-node.ICacheClient'
@@ -46,7 +40,6 @@ typeAliases:
   - '@azure/msal-node.AuthorizationCodeRequest'
   - '@azure/msal-node.AuthorizationUrlRequest'
   - '@azure/msal-node.AuthorizeResponse'
-  - '@azure/msal-node.AzureCloudInstance'
   - '@azure/msal-node.AzureCloudOptions'
   - '@azure/msal-node.BrokerOptions'
   - '@azure/msal-node.CacheKVStore'
@@ -62,16 +55,13 @@ typeAliases:
   - '@azure/msal-node.ManagedIdentityConfiguration'
   - '@azure/msal-node.ManagedIdentityIdParams'
   - '@azure/msal-node.ManagedIdentityRequestParams'
-  - '@azure/msal-node.ManagedIdentitySourceNames'
   - '@azure/msal-node.NetworkRequestOptions'
   - '@azure/msal-node.NetworkResponse'
   - '@azure/msal-node.NodeAuthOptions'
   - '@azure/msal-node.NodeSystemOptions'
   - '@azure/msal-node.NodeTelemetryOptions'
   - '@azure/msal-node.OnBehalfOfRequest'
-  - '@azure/msal-node.ProtocolMode'
   - '@azure/msal-node.RefreshTokenRequest'
-  - '@azure/msal-node.ResponseMode'
   - '@azure/msal-node.SerializedAccessTokenEntity'
   - '@azure/msal-node.SerializedAccountEntity'
   - '@azure/msal-node.SerializedAppMetadataEntity'
@@ -80,3 +70,93 @@ typeAliases:
   - '@azure/msal-node.SignOutRequest'
   - '@azure/msal-node.SilentFlowRequest'
   - '@azure/msal-node.UsernamePasswordRequest'
+variables:
+  - name: AzureCloudInstance
+    uid: '@azure/msal-node.AzureCloudInstance'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        AzureCloudInstance: { AzureChina: "https://login.chinacloudapi.cn",
+        AzureGermany: "https://login.microsoftonline.de", AzurePpe:
+        "https://login.windows-ppe.net", AzurePublic:
+        "https://login.microsoftonline.com", AzureUsGovernment:
+        "https://login.microsoftonline.us", None: "none" }
+      return:
+        description: ''
+        type: >-
+          { AzureChina: "https:<xref uid="//login.chinacloudapi.cn" />",
+          AzureGermany: "https:<xref uid="//login.microsoftonline.de" />",
+          AzurePpe: "https:<xref uid="//login.windows-ppe.net" />", AzurePublic:
+          "https:<xref uid="//login.microsoftonline.com" />", AzureUsGovernment:
+          "https:<xref uid="//login.microsoftonline.us" />", None: "none" }
+  - name: ManagedIdentitySourceNames
+    uid: '@azure/msal-node.ManagedIdentitySourceNames'
+    package: '@azure/msal-node'
+    summary: Managed Identity Source Names
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        ManagedIdentitySourceNames: { APP_SERVICE: "AppService", AZURE_ARC:
+        "AzureArc", CLOUD_SHELL: "CloudShell", DEFAULT_TO_IMDS: "DefaultToImds",
+        IMDS: "Imds", MACHINE_LEARNING: "MachineLearning", SERVICE_FABRIC:
+        "ServiceFabric" }
+      return:
+        description: ''
+        type: >-
+          { APP_SERVICE: "AppService", AZURE_ARC: "AzureArc", CLOUD_SHELL:
+          "CloudShell", DEFAULT_TO_IMDS: "DefaultToImds", IMDS: "Imds",
+          MACHINE_LEARNING: "MachineLearning", SERVICE_FABRIC: "ServiceFabric" }
+  - name: ProtocolMode
+    uid: '@azure/msal-node.ProtocolMode'
+    package: '@azure/msal-node'
+    summary: Protocol modes supported by MSAL.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ProtocolMode: { AAD: "AAD", EAR: "EAR", OIDC: "OIDC" }'
+      return:
+        description: ''
+        type: '{ AAD: "AAD", EAR: "EAR", OIDC: "OIDC" }'
+  - name: PromptValue
+    uid: '@azure/msal-node.PromptValue'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        PromptValue: { CONSENT: string, CREATE: string, LOGIN: string, NONE:
+        string, NO_SESSION: string, SELECT_ACCOUNT: string }
+      return:
+        description: ''
+        type: >-
+          { CONSENT: string, CREATE: string, LOGIN: string, NONE: string,
+          NO_SESSION: string, SELECT_ACCOUNT: string }
+  - name: ResponseMode
+    uid: '@azure/msal-node.ResponseMode'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        ResponseMode: { FORM_POST: "form_post", FRAGMENT: "fragment", QUERY:
+        "query" }
+      return:
+        description: ''
+        type: '{ FORM_POST: "form_post", FRAGMENT: "fragment", QUERY: "query" }'
+  - name: version
+    uid: '@azure/msal-node.version'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'version: "5.0.2"'
+      return:
+        description: ''
+        type: '"<xref uid="5.0.2" />"'

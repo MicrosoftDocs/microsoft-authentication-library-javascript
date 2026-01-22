@@ -11,15 +11,12 @@ isDeprecated: false
 syntax: |
   type PerformanceEvent = {
     accessTokenSize?: number
-    accountCachedBy?: string
     accountType?: "AAD" | "MSA" | "B2C"
     allowPlatformBroker?: boolean
     appName?: string
     appVersion?: string
     authority: string
     awaitIframeCorrelationId?: string
-    brokerErrorCode?: string
-    brokerErrorName?: string
     cacheAtCount?: number
     cacheIdCount?: number
     cacheLocation?: string
@@ -56,13 +53,12 @@ syntax: |
     incompleteSubsCount?: number
     isAsyncPopup?: boolean
     isNativeBroker?: boolean
-    isPlatformAuthorizeRequest?: boolean
-    isPlatformBrokerRequest?: boolean
     libraryName: string
     libraryVersion: string
     loginHintFromClaim?: boolean
     loginHintFromRequest?: boolean
     loginHintFromUpn?: boolean
+    logs?: string
     matsAccountJoinOnEnd?: string
     matsAccountJoinOnStart?: string
     matsApiErrorCode?: number
@@ -86,9 +82,6 @@ syntax: |
     ntwkRtExpiresOnSeconds?: number
     previousLibraryVersion?: string
     prompt?: string
-    queuedCount?: number
-    queuedManuallyCompletedCount?: number
-    queuedTimeMs?: number
     refreshTokenSize?: number
     requestId?: string
     retryError?: string

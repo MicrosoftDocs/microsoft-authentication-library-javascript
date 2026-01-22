@@ -9,7 +9,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: UrlString(string)
-    uid: '@azure/msal-common.UrlString.constructor'
+    uid: '@azure/msal-common.UrlString.constructor_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -35,7 +35,7 @@ properties:
         type: string
 methods:
   - name: appendQueryString(string, string)
-    uid: '@azure/msal-common.UrlString.appendQueryString'
+    uid: '@azure/msal-common.UrlString.appendQueryString_1'
     package: '@azure/msal-common'
     summary: >-
       Given a url and a query string return the url with provided query string
@@ -57,7 +57,7 @@ methods:
         description: ''
         type: string
   - name: canonicalizeUri(string)
-    uid: '@azure/msal-common.UrlString.canonicalizeUri'
+    uid: '@azure/msal-common.UrlString.canonicalizeUri_1'
     package: '@azure/msal-common'
     summary: Ensure urls are lower case and end with a / character.
     remarks: ''
@@ -72,7 +72,7 @@ methods:
         description: ''
         type: string
   - name: constructAuthorityUriFromObject(IUri)
-    uid: '@azure/msal-common.UrlString.constructAuthorityUriFromObject'
+    uid: '@azure/msal-common.UrlString.constructAuthorityUriFromObject_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -89,7 +89,7 @@ methods:
         description: ''
         type: <xref uid="@azure/msal-common.UrlString" />
   - name: getAbsoluteUrl(string, string)
-    uid: '@azure/msal-common.UrlString.getAbsoluteUrl'
+    uid: '@azure/msal-common.UrlString.getAbsoluteUrl_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -109,7 +109,7 @@ methods:
         description: ''
         type: string
   - name: getDomainFromUrl(string)
-    uid: '@azure/msal-common.UrlString.getDomainFromUrl'
+    uid: '@azure/msal-common.UrlString.getDomainFromUrl_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -124,7 +124,7 @@ methods:
         description: ''
         type: string
   - name: getUrlComponents()
-    uid: '@azure/msal-common.UrlString.getUrlComponents'
+    uid: '@azure/msal-common.UrlString.getUrlComponents_1'
     package: '@azure/msal-common'
     summary: Parses out the components from a url string.
     remarks: ''
@@ -136,24 +136,8 @@ methods:
           An object with the various components. Please cache this value insted
           of calling this multiple times on the same url.
         type: <xref uid="@azure/msal-common.IUri" />
-  - name: hashContainsKnownProperties(string)
-    uid: '@azure/msal-common.UrlString.hashContainsKnownProperties'
-    package: '@azure/msal-common'
-    summary: Check if the hash of the URL string contains known properties
-    remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: This API will be removed in a future version
-    syntax:
-      content: 'static function hashContainsKnownProperties(response: string): boolean'
-      parameters:
-        - id: response
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: boolean
   - name: removeHashFromUrl(string)
-    uid: '@azure/msal-common.UrlString.removeHashFromUrl'
+    uid: '@azure/msal-common.UrlString.removeHashFromUrl_1'
     package: '@azure/msal-common'
     summary: Returns a url with the hash removed
     remarks: ''
@@ -168,7 +152,7 @@ methods:
         description: ''
         type: string
   - name: replaceTenantPath(string)
-    uid: '@azure/msal-common.UrlString.replaceTenantPath'
+    uid: '@azure/msal-common.UrlString.replaceTenantPath_1'
     package: '@azure/msal-common'
     summary: >-
       Given a url like https://a:b/common/d?e=f#g, and a tenantId, returns
@@ -185,7 +169,7 @@ methods:
         description: ''
         type: <xref uid="@azure/msal-common.UrlString" />
   - name: validateAsUri()
-    uid: '@azure/msal-common.UrlString.validateAsUri'
+    uid: '@azure/msal-common.UrlString.validateAsUri_1'
     package: '@azure/msal-common'
     summary: Throws if urlString passed is not a valid authority URI string.
     remarks: ''
