@@ -200,21 +200,25 @@ variables:
       0-99 Silent Flow
 
       800-899 Auth Code Flow
+
+      900-999 Misc
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
         ApiId: { acquireTokenByCode: 866, acquireTokenPopup: 862,
         acquireTokenRedirect: 861, acquireTokenSilent_authCode: 864,
-        acquireTokenSilent_silentFlow: 61, handleRedirectPromise: 865, logout:
-        961, logoutPopup: 962, ssoSilent: 863 }
+        acquireTokenSilent_silentFlow: 61, handleRedirectPromise: 865,
+        hydrateCache: 963, loadExternalTokens: 964, logout: 961, logoutPopup:
+        962, ssoSilent: 863 }
       return:
         description: ''
         type: >-
           { acquireTokenByCode: 866, acquireTokenPopup: 862,
           acquireTokenRedirect: 861, acquireTokenSilent_authCode: 864,
-          acquireTokenSilent_silentFlow: 61, handleRedirectPromise: 865, logout:
-          961, logoutPopup: 962, ssoSilent: 863 }
+          acquireTokenSilent_silentFlow: 61, handleRedirectPromise: 865,
+          hydrateCache: 963, loadExternalTokens: 964, logout: 961, logoutPopup:
+          962, ssoSilent: 863 }
   - name: AuthenticationScheme
     uid: '@azure/msal-browser.AuthenticationScheme'
     package: '@azure/msal-browser'
@@ -442,10 +446,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.0.2"'
+      content: 'version: "5.1.0"'
       return:
         description: ''
-        type: '"<xref uid="5.0.2" />"'
+        type: '"<xref uid="5.1.0" />"'
 functions:
   - name: >-
       createNestablePublicClientApplication(Configuration, string,

@@ -221,10 +221,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "16.0.2"'
+      content: 'version: "16.0.3"'
       return:
         description: ''
-        type: '"<xref uid="16.0.2" />"'
+        type: '"<xref uid="16.0.3" />"'
 functions:
   - name: >-
       buildAccountToCache(CacheManager, Authority, string, (input: string) =>

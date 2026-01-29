@@ -11,7 +11,9 @@ isDeprecated: false
 syntax: |
   type PerformanceEvent = {
     accessTokenSize?: number
+    accountCachedBy?: string
     accountType?: "AAD" | "MSA" | "B2C"
+    acntLoggedOut?: boolean
     allowPlatformBroker?: boolean
     appName?: string
     appVersion?: string
@@ -40,6 +42,7 @@ syntax: |
     errorName?: string
     errorStack?: string[]
     eventId: string
+    extRtExpiresOnSeconds?: number
     extensionHandshakeTimedOut?: boolean
     extensionHandshakeTimeoutMs?: number
     extensionId?: string
