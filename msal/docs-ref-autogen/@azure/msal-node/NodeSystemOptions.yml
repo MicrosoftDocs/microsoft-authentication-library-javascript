@@ -11,14 +11,16 @@ summary: >-
 
   - networkClient                - Http client used for all http get and post
   calls. Defaults to using MSAL's default http client.
+
+  - protocolMode           - Enum that represents the protocol that msal
+  follows. Used for configuring proper endpoints.
 fullName: NodeSystemOptions
 remarks: ''
 isDeprecated: false
 syntax: |
   type NodeSystemOptions = {
-    customAgentOptions?: http.AgentOptions | https.AgentOptions
     disableInternalRetries?: boolean
     loggerOptions?: LoggerOptions
     networkClient?: INetworkModule
-    proxyUrl?: string
+    protocolMode?: ProtocolMode
   }

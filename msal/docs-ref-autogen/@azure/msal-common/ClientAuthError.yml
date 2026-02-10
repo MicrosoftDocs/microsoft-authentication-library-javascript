@@ -9,7 +9,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: ClientAuthError(string, string)
-    uid: '@azure/msal-common.ClientAuthError.constructor'
+    uid: '@azure/msal-common.ClientAuthError.constructor_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -99,6 +99,21 @@ inheritedProperties:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [AuthError.name](xref:@azure/msal-common.AuthError.name)
+  - name: platformBrokerError
+    uid: '@azure/msal-common.ClientAuthError.platformBrokerError'
+    package: '@azure/msal-common'
+    summary: Default PlatformBrokerError from MsalNodeRuntime when broker is enabled
+    fullName: platformBrokerError
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'platformBrokerError?: PlatformBrokerError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.PlatformBrokerError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.platformBrokerError](xref:@azure/msal-common.AuthError.platformBrokerError)
   - name: stack
     uid: '@azure/msal-common.ClientAuthError.stack'
     package: '@azure/msal-common'
@@ -163,7 +178,7 @@ inheritedProperties:
       [AuthError.subError](xref:@azure/msal-common.AuthError.subError)
 inheritedMethods:
   - name: captureStackTrace(object, Function)
-    uid: '@azure/msal-common.ClientAuthError.captureStackTrace'
+    uid: '@azure/msal-common.ClientAuthError.captureStackTrace_1'
     package: '@azure/msal-common'
     summary: >-
       Creates a `.stack` property on `targetObject`, which when accessed returns
@@ -248,7 +263,7 @@ inheritedMethods:
       <b>Inherited From</b>
       [AuthError.captureStackTrace](xref:@azure/msal-common.AuthError.captureStackTrace)
   - name: prepareStackTrace(Error, CallSite[])
-    uid: '@azure/msal-common.ClientAuthError.prepareStackTrace'
+    uid: '@azure/msal-common.ClientAuthError.prepareStackTrace_1'
     package: '@azure/msal-common'
     summary: |-
 
@@ -274,7 +289,7 @@ inheritedMethods:
       <b>Inherited From</b>
       [AuthError.prepareStackTrace](xref:@azure/msal-common.AuthError.prepareStackTrace)
   - name: setCorrelationId(string)
-    uid: '@azure/msal-common.ClientAuthError.setCorrelationId'
+    uid: '@azure/msal-common.ClientAuthError.setCorrelationId_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''

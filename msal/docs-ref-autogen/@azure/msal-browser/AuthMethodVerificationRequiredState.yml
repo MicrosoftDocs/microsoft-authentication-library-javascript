@@ -25,6 +25,19 @@ constructors:
         - id: stateParameters
           type: AuthMethodVerificationRequiredStateParameters
           description: The parameters for the auth state.
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.AuthMethodVerificationRequiredState.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: string'
+      return:
+        description: ''
+        type: string
 methods:
   - name: challengeAuthMethod(AuthMethodDetails)
     uid: >-

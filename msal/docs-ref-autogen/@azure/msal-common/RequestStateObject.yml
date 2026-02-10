@@ -3,8 +3,8 @@ name: RequestStateObject
 uid: '@azure/msal-common.RequestStateObject'
 package: '@azure/msal-common'
 summary: >-
-  Type which defines the stringified and encoded object sent to the service in
-  the authorize request.
+  Type which defines the stringified and encoded state object sent to the
+  service in the authorize request.
 fullName: RequestStateObject
 remarks: ''
 isDeprecated: false

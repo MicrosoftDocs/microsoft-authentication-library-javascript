@@ -6,7 +6,7 @@ package: '@azure/msal-common'
 summary: ''
 functions:
   - name: checkMaxAge(number, number)
-    uid: '@azure/msal-common.AuthToken.checkMaxAge'
+    uid: '@azure/msal-common.AuthToken.checkMaxAge_1'
     package: '@azure/msal-common'
     summary: Determine if the token's max_age has transpired
     remarks: ''
@@ -21,7 +21,7 @@ functions:
           type: number
           description: ''
   - name: 'extractTokenClaims(string, (input: string) => string)'
-    uid: '@azure/msal-common.AuthToken.extractTokenClaims'
+    uid: '@azure/msal-common.AuthToken.extractTokenClaims_1'
     package: '@azure/msal-common'
     summary: Extract token by decoding the rawToken
     remarks: ''
@@ -41,7 +41,7 @@ functions:
         description: ''
         type: <xref uid="@azure/msal-common.TokenClaims" />
   - name: getJWSPayload(string)
-    uid: '@azure/msal-common.AuthToken.getJWSPayload'
+    uid: '@azure/msal-common.AuthToken.getJWSPayload_1'
     package: '@azure/msal-common'
     summary: decode a JWT
     remarks: ''
@@ -55,3 +55,18 @@ functions:
       return:
         description: ''
         type: string
+  - name: isKmsi(TokenClaims)
+    uid: '@azure/msal-common.AuthToken.isKmsi_1'
+    package: '@azure/msal-common'
+    summary: Check if the signin_state claim contains "kmsi"
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isKmsi(idTokenClaims: TokenClaims): boolean'
+      parameters:
+        - id: idTokenClaims
+          type: <xref uid="@azure/msal-common.TokenClaims" />
+          description: ''
+      return:
+        description: ''
+        type: boolean

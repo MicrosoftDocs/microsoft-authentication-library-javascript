@@ -23,8 +23,8 @@ methods:
           type: <xref uid="@azure/msal-browser.EventMessage" />
           description: ''
         - id: currentStatus
-          type: InteractionStatus
+          type: <xref uid="@azure/msal-browser.InteractionStatus" />
           description: ''
       return:
         description: ''
-        type: null | InteractionStatus
+        type: null | <xref uid="@azure/msal-browser.InteractionStatus" />

@@ -11,14 +11,14 @@ isDeprecated: false
 syntax: |
   type PerformanceEvent = {
     accessTokenSize?: number
+    accountCachedBy?: string
     accountType?: "AAD" | "MSA" | "B2C"
+    acntLoggedOut?: boolean
     allowPlatformBroker?: boolean
     appName?: string
     appVersion?: string
     authority: string
     awaitIframeCorrelationId?: string
-    brokerErrorCode?: string
-    brokerErrorName?: string
     cacheAtCount?: number
     cacheIdCount?: number
     cacheLocation?: string
@@ -26,6 +26,7 @@ syntax: |
     cacheOutcome?: number
     cacheRetentionDays?: number
     cacheRtCount?: number
+    cacheRtExpiresOnSeconds?: number
     clientId: string
     contentLengthHeader?: string
     contentTypeHeader?: string
@@ -41,6 +42,7 @@ syntax: |
     errorName?: string
     errorStack?: string[]
     eventId: string
+    extRtExpiresOnSeconds?: number
     extensionHandshakeTimedOut?: boolean
     extensionHandshakeTimeoutMs?: number
     extensionId?: string
@@ -54,13 +56,12 @@ syntax: |
     incompleteSubsCount?: number
     isAsyncPopup?: boolean
     isNativeBroker?: boolean
-    isPlatformAuthorizeRequest?: boolean
-    isPlatformBrokerRequest?: boolean
     libraryName: string
     libraryVersion: string
     loginHintFromClaim?: boolean
     loginHintFromRequest?: boolean
     loginHintFromUpn?: boolean
+    logs?: string
     matsAccountJoinOnEnd?: string
     matsAccountJoinOnStart?: string
     matsApiErrorCode?: number
@@ -81,15 +82,13 @@ syntax: |
     name: string
     navigateCallbackResult?: boolean
     nestedAppAuthRequest?: boolean
+    ntwkRtExpiresOnSeconds?: number
     previousLibraryVersion?: string
     prompt?: string
-    queuedCount?: number
-    queuedManuallyCompletedCount?: number
-    queuedTimeMs?: number
     refreshTokenSize?: number
     requestId?: string
     retryError?: string
-    rtExpiresOnMs?: number
+    rtOffsetSeconds?: number
     sameClientIdInstanceCount?: number
     scenarioId?: string
     serverErrorNo?: string

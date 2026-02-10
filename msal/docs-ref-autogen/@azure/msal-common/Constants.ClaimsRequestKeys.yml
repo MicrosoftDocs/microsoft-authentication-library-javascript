@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: ClaimsRequestKeys
+uid: '@azure/msal-common.Constants.ClaimsRequestKeys'
+package: '@azure/msal-common'
+summary: ''
+fullName: ClaimsRequestKeys
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ClaimsRequestKeys =
+    (typeof ClaimsRequestKeys)[keyof typeof ClaimsRequestKeys]

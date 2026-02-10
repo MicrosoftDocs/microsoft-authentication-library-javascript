@@ -27,14 +27,6 @@ methods:
       return:
         description: ''
         type: string
-  - name: addQueueMeasurement()
-    uid: '@azure/msal-browser.StubPerformanceClient.addQueueMeasurement'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: function addQueueMeasurement()
   - name: cacheEventByCorrelationId()
     uid: '@azure/msal-browser.StubPerformanceClient.cacheEventByCorrelationId'
     package: '@azure/msal-browser'
@@ -43,17 +35,6 @@ methods:
     isDeprecated: false
     syntax:
       content: function cacheEventByCorrelationId()
-  - name: calculateQueuedTime()
-    uid: '@azure/msal-browser.StubPerformanceClient.calculateQueuedTime'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function calculateQueuedTime(): number'
-      return:
-        description: ''
-        type: number
   - name: discardMeasurements()
     uid: '@azure/msal-browser.StubPerformanceClient.discardMeasurements'
     package: '@azure/msal-browser'
@@ -111,14 +92,6 @@ methods:
       return:
         description: ''
         type: boolean
-  - name: setPreQueueTime()
-    uid: '@azure/msal-browser.StubPerformanceClient.setPreQueueTime'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: function setPreQueueTime()
   - name: startMeasurement(string, string)
     uid: '@azure/msal-browser.StubPerformanceClient.startMeasurement'
     package: '@azure/msal-browser'
@@ -139,15 +112,3 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-browser.InProgressPerformanceEvent" />
-  - name: startPerformanceMeasurement()
-    uid: '@azure/msal-browser.StubPerformanceClient.startPerformanceMeasurement'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: This method will be removed in the next major version
-    syntax:
-      content: 'function startPerformanceMeasurement(): IPerformanceMeasurement'
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.IPerformanceMeasurement" />

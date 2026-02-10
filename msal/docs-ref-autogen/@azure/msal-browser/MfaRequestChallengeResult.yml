@@ -1,0 +1,113 @@
+### YamlMime:TSType
+name: MfaRequestChallengeResult
+uid: '@azure/msal-browser.MfaRequestChallengeResult'
+package: '@azure/msal-browser'
+summary: |-
+  Result of requesting an MFA challenge.
+  Uses base state type to avoid circular dependencies.
+fullName: MfaRequestChallengeResult
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: MfaRequestChallengeResult(MfaRequestChallengeResultState, void)
+    uid: '@azure/msal-browser.MfaRequestChallengeResult.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new MfaRequestChallengeResult(state: MfaRequestChallengeResultState,
+        data?: void)
+      parameters:
+        - id: state
+          type: <xref uid="@azure/msal-browser.MfaRequestChallengeResultState" />
+          description: ''
+        - id: data
+          type: void
+          description: ''
+inheritedProperties:
+  - name: data
+    uid: '@azure/msal-browser.MfaRequestChallengeResult.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: void'
+      return:
+        description: ''
+        type: void
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
+  - name: error
+    uid: '@azure/msal-browser.MfaRequestChallengeResult.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: MfaRequestChallengeError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.MfaRequestChallengeError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.error
+  - name: state
+    uid: '@azure/msal-browser.MfaRequestChallengeResult.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: MfaRequestChallengeResultState'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.MfaRequestChallengeResultState" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.state
+methods:
+  - name: createWithError(unknown)
+    uid: '@azure/msal-browser.MfaRequestChallengeResult.createWithError'
+    package: '@azure/msal-browser'
+    summary: Creates an MfaRequestChallengeResult with an error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createWithError(error: unknown):
+        MfaRequestChallengeResult
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+      return:
+        description: The MfaRequestChallengeResult with error.
+        type: <xref uid="@azure/msal-browser.MfaRequestChallengeResult" />
+  - name: isFailed()
+    uid: '@azure/msal-browser.MfaRequestChallengeResult.isFailed'
+    package: '@azure/msal-browser'
+    summary: Checks if the result is in a failed state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isFailed(): this'
+      return:
+        description: true if the result is failed, false otherwise.
+        type: this
+  - name: isVerificationRequired()
+    uid: '@azure/msal-browser.MfaRequestChallengeResult.isVerificationRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result indicates that verification is required.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isVerificationRequired(): this'
+      return:
+        description: true if verification is required, false otherwise.
+        type: this
+extends: >-
+  AuthFlowResultBase&lt;<xref
+  uid="@azure/msal-browser.MfaRequestChallengeResultState" />, <xref
+  uid="@azure/msal-browser.MfaRequestChallengeError" />&gt;

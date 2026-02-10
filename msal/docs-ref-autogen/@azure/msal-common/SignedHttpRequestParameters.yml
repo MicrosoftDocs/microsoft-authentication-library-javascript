@@ -14,4 +14,4 @@ syntax: |
     | "shrClaims"
     | "shrNonce"
     | "shrOptions"
-  > & { correlationId?: string }
+  > & { correlationId: string }

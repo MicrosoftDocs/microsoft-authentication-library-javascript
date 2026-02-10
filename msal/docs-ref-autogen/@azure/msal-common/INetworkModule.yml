@@ -9,7 +9,7 @@ isDeprecated: false
 type: interface
 methods:
   - name: sendGetRequestAsync<T>(string, NetworkRequestOptions, number)
-    uid: '@azure/msal-common.INetworkModule.sendGetRequestAsync'
+    uid: '@azure/msal-common.INetworkModule.sendGetRequestAsync_1'
     package: '@azure/msal-common'
     summary: >-
       Interface function for async network "GET" requests. Based on the Fetch
@@ -36,7 +36,7 @@ methods:
           Promise&lt;<xref uid="@azure/msal-common.NetworkResponse"
           />&lt;T&gt;&gt;
   - name: sendPostRequestAsync<T>(string, NetworkRequestOptions)
-    uid: '@azure/msal-common.INetworkModule.sendPostRequestAsync'
+    uid: '@azure/msal-common.INetworkModule.sendPostRequestAsync_1'
     package: '@azure/msal-common'
     summary: >-
       Interface function for async network "POST" requests. Based on the Fetch

@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: CacheType
+uid: '@azure/msal-common.Constants.CacheType'
+package: '@azure/msal-common'
+summary: ''
+fullName: CacheType
+remarks: ''
+isDeprecated: false
+syntax: |
+  type CacheType = (typeof CacheType)[keyof typeof CacheType]

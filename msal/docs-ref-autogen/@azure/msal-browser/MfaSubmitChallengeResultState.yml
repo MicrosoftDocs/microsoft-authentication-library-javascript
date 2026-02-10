@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: MfaSubmitChallengeResultState
+uid: '@azure/msal-browser.MfaSubmitChallengeResultState'
+package: '@azure/msal-browser'
+summary: ''
+fullName: MfaSubmitChallengeResultState
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MfaSubmitChallengeResultState = MfaCompletedState | MfaFailedState

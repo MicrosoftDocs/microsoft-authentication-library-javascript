@@ -204,21 +204,6 @@ methods:
       return:
         description: ''
         type: Observable&lt;void&gt;
-  - name: logout(EndSessionRequest)
-    uid: '@azure/msal-angular.MsalService.logout'
-    package: '@azure/msal-angular'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function logout(logoutRequest?: EndSessionRequest): Observable<void>'
-      parameters:
-        - id: logoutRequest
-          type: <xref uid="@azure/msal-browser.EndSessionRequest" />
-          description: ''
-      return:
-        description: ''
-        type: Observable&lt;void&gt;
   - name: logoutPopup(EndSessionPopupRequest)
     uid: '@azure/msal-angular.MsalService.logoutPopup'
     package: '@azure/msal-angular'
@@ -267,8 +252,7 @@ methods:
           description: ''
   - name: >-
       ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash"
-      | "platformBroker">>)
+      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
     uid: '@azure/msal-angular.MsalService.ssoSilent'
     package: '@azure/msal-angular'
     summary: ''
@@ -278,15 +262,14 @@ methods:
       content: >-
         function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
         "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "requestedClaimsHash" | "platformBroker">>):
-        Observable<AuthenticationResult>
+        "platformBroker">>): Observable<AuthenticationResult>
       parameters:
         - id: request
           type: >-
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
             "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
+            | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''

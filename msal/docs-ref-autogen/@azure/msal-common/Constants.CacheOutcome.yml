@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: CacheOutcome
+uid: '@azure/msal-common.Constants.CacheOutcome'
+package: '@azure/msal-common'
+summary: ''
+fullName: CacheOutcome
+remarks: ''
+isDeprecated: false
+syntax: |
+  type CacheOutcome = (typeof CacheOutcome)[keyof typeof CacheOutcome]

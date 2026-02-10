@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: JsonWebTokenTypes
+uid: '@azure/msal-common.Constants.JsonWebTokenTypes'
+package: '@azure/msal-common'
+summary: ''
+fullName: JsonWebTokenTypes
+remarks: ''
+isDeprecated: false
+syntax: |
+  type JsonWebTokenTypes =
+    (typeof JsonWebTokenTypes)[keyof typeof JsonWebTokenTypes]

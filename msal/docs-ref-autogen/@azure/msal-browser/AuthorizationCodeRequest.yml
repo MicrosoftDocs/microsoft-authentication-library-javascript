@@ -2,16 +2,15 @@
 name: AuthorizationCodeRequest
 uid: '@azure/msal-browser.AuthorizationCodeRequest'
 package: '@azure/msal-browser'
-summary: ''
+summary: >-
+  AuthorizationCodeRequest: Request object passed by browser clients to exchange
+  an authorization code for tokens.
 fullName: AuthorizationCodeRequest
 remarks: ''
 isDeprecated: false
 syntax: |
   type AuthorizationCodeRequest = Partial<
-    Omit<
-      CommonAuthorizationCodeRequest,
-      "code" | "enableSpaAuthorizationCode" | "requestedClaimsHash"
-    >
+    Omit<CommonAuthorizationCodeRequest, "code" | "enableSpaAuthorizationCode">
   > & {
     cloudGraphHostName?: string
     cloudInstanceHostName?: string

@@ -96,7 +96,7 @@ methods:
         jwtAudience: string): string
       parameters:
         - id: cryptoProvider
-          type: <xref uid="@azure/msal-node.CryptoProvider" />
+          type: CryptoProvider
           description: library's crypto helper
         - id: issuer
           type: string

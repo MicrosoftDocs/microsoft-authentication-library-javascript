@@ -1,0 +1,78 @@
+### YamlMime:TSType
+name: MfaSubmitChallengeError
+uid: '@azure/msal-browser.MfaSubmitChallengeError'
+package: '@azure/msal-browser'
+summary: Error that occurred during MFA challenge submission.
+fullName: MfaSubmitChallengeError
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: MfaSubmitChallengeError(CustomAuthError)
+    uid: '@azure/msal-browser.MfaSubmitChallengeError.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new MfaSubmitChallengeError(errorData: CustomAuthError)'
+      parameters:
+        - id: errorData
+          type: <xref uid="@azure/msal-browser.CustomAuthError" />
+          description: ''
+inheritedProperties:
+  - name: errorData
+    uid: '@azure/msal-browser.MfaSubmitChallengeError.errorData'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: errorData
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorData: CustomAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthError" />
+    inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.errorData
+inheritedMethods:
+  - name: isRedirectRequired()
+    uid: '@azure/msal-browser.MfaSubmitChallengeError.isRedirectRequired'
+    package: '@azure/msal-browser'
+    summary: Check if client app supports the challenge type configured in Entra.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isRedirectRequired(): boolean'
+      return:
+        description: >-
+          True if client app doesn't support the challenge type configured in
+          Entra, "loginPopup" function is required to continue the operation.
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.isRedirectRequired
+  - name: isTokenExpired()
+    uid: '@azure/msal-browser.MfaSubmitChallengeError.isTokenExpired'
+    package: '@azure/msal-browser'
+    summary: Checks if the error is due to the expired continuation token.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isTokenExpired(): boolean'
+      return:
+        description: >-
+          True if the error is due to the expired continuation token, false
+          otherwise.
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> AuthActionErrorBase.isTokenExpired
+methods:
+  - name: isIncorrectChallenge()
+    uid: '@azure/msal-browser.MfaSubmitChallengeError.isIncorrectChallenge'
+    package: '@azure/msal-browser'
+    summary: Checks if the submitted challenge code (e.g., OTP code) is incorrect.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isIncorrectChallenge(): boolean'
+      return:
+        description: true if the challenge code is invalid, false otherwise.
+        type: boolean
+extends: AuthActionErrorBase

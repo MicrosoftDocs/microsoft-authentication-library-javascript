@@ -1,0 +1,339 @@
+### YamlMime:TSType
+name: PlatformBrokerError
+uid: '@azure/msal-common.PlatformBrokerError'
+package: '@azure/msal-common'
+summary: Error class for MSAL Runtime errors that preserves detailed broker information
+fullName: PlatformBrokerError
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: PlatformBrokerError(string, string, number, number)
+    uid: '@azure/msal-common.PlatformBrokerError.constructor_1'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new PlatformBrokerError(errorStatus: string, errorContext: string,
+        errorCode: number, errorTag: number)
+      parameters:
+        - id: errorStatus
+          type: string
+          description: ''
+        - id: errorContext
+          type: string
+          description: ''
+        - id: errorCode
+          type: number
+          description: ''
+        - id: errorTag
+          type: number
+          description: ''
+properties:
+  - name: statusCode
+    uid: '@azure/msal-common.PlatformBrokerError.statusCode'
+    package: '@azure/msal-common'
+    summary: Numeric error code from MSAL Runtime
+    fullName: statusCode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'statusCode: number'
+      return:
+        description: ''
+        type: number
+  - name: tag
+    uid: '@azure/msal-common.PlatformBrokerError.tag'
+    package: '@azure/msal-common'
+    summary: Error tag from MSAL Runtime
+    fullName: tag
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tag: string'
+      return:
+        description: ''
+        type: string
+inheritedProperties:
+  - name: correlationId
+    uid: '@azure/msal-common.PlatformBrokerError.correlationId'
+    package: '@azure/msal-common'
+    summary: CorrelationId associated with the error
+    fullName: correlationId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'correlationId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.correlationId](xref:@azure/msal-common.AuthError.correlationId)
+  - name: errorCode
+    uid: '@azure/msal-common.PlatformBrokerError.errorCode'
+    package: '@azure/msal-common'
+    summary: Short string denoting error
+    fullName: errorCode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorCode: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorCode](xref:@azure/msal-common.AuthError.errorCode)
+  - name: errorMessage
+    uid: '@azure/msal-common.PlatformBrokerError.errorMessage'
+    package: '@azure/msal-common'
+    summary: Detailed description of error
+    fullName: errorMessage
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorMessage: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.errorMessage](xref:@azure/msal-common.AuthError.errorMessage)
+  - name: message
+    uid: '@azure/msal-common.PlatformBrokerError.message'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: message
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'message: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.message](xref:@azure/msal-common.AuthError.message)
+  - name: name
+    uid: '@azure/msal-common.PlatformBrokerError.name'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.name](xref:@azure/msal-common.AuthError.name)
+  - name: platformBrokerError
+    uid: '@azure/msal-common.PlatformBrokerError.platformBrokerError'
+    package: '@azure/msal-common'
+    summary: Default PlatformBrokerError from MsalNodeRuntime when broker is enabled
+    fullName: platformBrokerError
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'platformBrokerError?: PlatformBrokerError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.PlatformBrokerError" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.platformBrokerError](xref:@azure/msal-common.AuthError.platformBrokerError)
+  - name: stack
+    uid: '@azure/msal-common.PlatformBrokerError.stack'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: stack
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stack?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.stack](xref:@azure/msal-common.AuthError.stack)
+  - name: stackTraceLimit
+    uid: '@azure/msal-common.PlatformBrokerError.stackTraceLimit'
+    package: '@azure/msal-common'
+    summary: >-
+      The `Error.stackTraceLimit` property specifies the number of stack frames
+
+      collected by a stack trace (whether generated by `new Error().stack` or
+
+      `Error.captureStackTrace(obj)`).
+
+
+      The default value is `10` but may be set to any valid JavaScript number.
+      Changes
+
+      will affect any stack trace captured _after_ the value has been changed.
+
+
+      If set to a non-number value, or set to a negative number, stack traces
+      will
+
+      not capture any frames.
+    fullName: stackTraceLimit
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static stackTraceLimit: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.stackTraceLimit](xref:@azure/msal-common.AuthError.stackTraceLimit)
+  - name: subError
+    uid: '@azure/msal-common.PlatformBrokerError.subError'
+    package: '@azure/msal-common'
+    summary: Describes the subclass of an error
+    fullName: subError
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'subError: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.subError](xref:@azure/msal-common.AuthError.subError)
+inheritedMethods:
+  - name: captureStackTrace(object, Function)
+    uid: '@azure/msal-common.PlatformBrokerError.captureStackTrace_1'
+    package: '@azure/msal-common'
+    summary: >-
+      Creates a `.stack` property on `targetObject`, which when accessed returns
+
+      a string representing the location in the code at which
+
+      `Error.captureStackTrace()` was called.
+
+
+      ```js
+
+      const myObject = {};
+
+      Error.captureStackTrace(myObject);
+
+      myObject.stack;  // Similar to `new Error().stack`
+
+      ```
+
+
+      The first line of the trace will be prefixed with
+
+      `${myObject.name}: ${myObject.message}`.
+
+
+      The optional `constructorOpt` argument accepts a function. If given, all
+      frames
+
+      above `constructorOpt`, including `constructorOpt`, will be omitted from
+      the
+
+      generated stack trace.
+
+
+      The `constructorOpt` argument is useful for hiding implementation
+
+      details of error generation from the user. For instance:
+
+
+      ```js
+
+      function a() {
+        b();
+      }
+
+
+      function b() {
+        c();
+      }
+
+
+      function c() {
+        // Create an error without stack trace to avoid calculating the stack trace twice.
+        const { stackTraceLimit } = Error;
+        Error.stackTraceLimit = 0;
+        const error = new Error();
+        Error.stackTraceLimit = stackTraceLimit;
+
+        // Capture the stack trace above function b
+        Error.captureStackTrace(error, b); // Neither function c, nor b is included in the stack trace
+        throw error;
+      }
+
+
+      a();
+
+      ```
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function captureStackTrace(targetObject: object, constructorOpt?:
+        Function)
+      parameters:
+        - id: targetObject
+          type: object
+          description: ''
+        - id: constructorOpt
+          type: Function
+          description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.captureStackTrace](xref:@azure/msal-common.AuthError.captureStackTrace)
+  - name: prepareStackTrace(Error, CallSite[])
+    uid: '@azure/msal-common.PlatformBrokerError.prepareStackTrace_1'
+    package: '@azure/msal-common'
+    summary: |-
+
+
+      See https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function prepareStackTrace(err: Error, stackTraces: CallSite[]):
+        any
+      parameters:
+        - id: err
+          type: Error
+          description: ''
+        - id: stackTraces
+          type: CallSite[]
+          description: ''
+      return:
+        description: ''
+        type: any
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.prepareStackTrace](xref:@azure/msal-common.AuthError.prepareStackTrace)
+  - name: setCorrelationId(string)
+    uid: '@azure/msal-common.PlatformBrokerError.setCorrelationId_1'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setCorrelationId(correlationId: string)'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthError.setCorrelationId](xref:@azure/msal-common.AuthError.setCorrelationId)
+extends: <xref uid="@azure/msal-common.AuthError" />

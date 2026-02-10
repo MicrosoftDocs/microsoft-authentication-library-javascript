@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: ResponseMode
+uid: '@azure/msal-browser.ResponseMode'
+package: '@azure/msal-browser'
+summary: ''
+fullName: ResponseMode
+remarks: ''
+isDeprecated: false
+syntax: |
+  type ResponseMode = Constants.ResponseMode

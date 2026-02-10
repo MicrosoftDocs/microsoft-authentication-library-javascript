@@ -4,3 +4,591 @@ name: BrowserAuthErrorCodes
 type: module
 package: '@azure/msal-browser'
 summary: ''
+variables:
+  - name: authCodeOrNativeAccountIdRequired
+    uid: >-
+      @azure/msal-browser.BrowserAuthErrorCodes.authCodeOrNativeAccountIdRequired
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        authCodeOrNativeAccountIdRequired:
+        "auth_code_or_nativeAccountId_required"
+      return:
+        description: ''
+        type: '"auth_code_or_nativeAccountId_required"'
+  - name: authCodeRequired
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.authCodeRequired'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authCodeRequired: "auth_code_required"'
+      return:
+        description: ''
+        type: '"auth_code_required"'
+  - name: authRequestNotSetError
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.authRequestNotSetError'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authRequestNotSetError: "auth_request_not_set_error"'
+      return:
+        description: ''
+        type: '"auth_request_not_set_error"'
+  - name: blockIframeReload
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.blockIframeReload'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'blockIframeReload: "block_iframe_reload"'
+      return:
+        description: ''
+        type: '"block_iframe_reload"'
+  - name: blockNestedPopups
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.blockNestedPopups'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'blockNestedPopups: "block_nested_popups"'
+      return:
+        description: ''
+        type: '"block_nested_popups"'
+  - name: cryptoKeyNotFound
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.cryptoKeyNotFound'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cryptoKeyNotFound: "crypto_key_not_found"'
+      return:
+        description: ''
+        type: '"crypto_key_not_found"'
+  - name: cryptoNonExistent
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.cryptoNonExistent'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cryptoNonExistent: "crypto_nonexistent"'
+      return:
+        description: ''
+        type: '"crypto_nonexistent"'
+  - name: databaseNotOpen
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.databaseNotOpen'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'databaseNotOpen: "database_not_open"'
+      return:
+        description: ''
+        type: '"database_not_open"'
+  - name: databaseUnavailable
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.databaseUnavailable'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'databaseUnavailable: "database_unavailable"'
+      return:
+        description: ''
+        type: '"database_unavailable"'
+  - name: earJweEmpty
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.earJweEmpty'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'earJweEmpty: "ear_jwe_empty"'
+      return:
+        description: ''
+        type: '"ear_jwe_empty"'
+  - name: earJwkEmpty
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.earJwkEmpty'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'earJwkEmpty: "ear_jwk_empty"'
+      return:
+        description: ''
+        type: '"ear_jwk_empty"'
+  - name: emptyNavigateUri
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.emptyNavigateUri'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'emptyNavigateUri: "empty_navigate_uri"'
+      return:
+        description: ''
+        type: '"empty_navigate_uri"'
+  - name: emptyResponse
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.emptyResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'emptyResponse: "empty_response"'
+      return:
+        description: ''
+        type: '"empty_response"'
+  - name: emptyWindowError
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.emptyWindowError'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'emptyWindowError: "empty_window_error"'
+      return:
+        description: ''
+        type: '"empty_window_error"'
+  - name: failedToBuildHeaders
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.failedToBuildHeaders'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'failedToBuildHeaders: "failed_to_build_headers"'
+      return:
+        description: ''
+        type: '"failed_to_build_headers"'
+  - name: failedToDecryptEarResponse
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.failedToDecryptEarResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'failedToDecryptEarResponse: "failed_to_decrypt_ear_response"'
+      return:
+        description: ''
+        type: '"failed_to_decrypt_ear_response"'
+  - name: failedToParseHeaders
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.failedToParseHeaders'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'failedToParseHeaders: "failed_to_parse_headers"'
+      return:
+        description: ''
+        type: '"failed_to_parse_headers"'
+  - name: failedToParseResponse
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.failedToParseResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'failedToParseResponse: "failed_to_parse_response"'
+      return:
+        description: ''
+        type: '"failed_to_parse_response"'
+  - name: getRequestFailed
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.getRequestFailed'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'getRequestFailed: "get_request_failed"'
+      return:
+        description: ''
+        type: '"get_request_failed"'
+  - name: hashDoesNotContainKnownProperties
+    uid: >-
+      @azure/msal-browser.BrowserAuthErrorCodes.hashDoesNotContainKnownProperties
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        hashDoesNotContainKnownProperties:
+        "hash_does_not_contain_known_properties"
+      return:
+        description: ''
+        type: '"hash_does_not_contain_known_properties"'
+  - name: hashEmptyError
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.hashEmptyError'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hashEmptyError: "hash_empty_error"'
+      return:
+        description: ''
+        type: '"hash_empty_error"'
+  - name: iframeClosedPrematurely
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.iframeClosedPrematurely'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'iframeClosedPrematurely: "iframe_closed_prematurely"'
+      return:
+        description: ''
+        type: '"iframe_closed_prematurely"'
+  - name: interactionInProgress
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.interactionInProgress'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'interactionInProgress: "interaction_in_progress"'
+      return:
+        description: ''
+        type: '"interaction_in_progress"'
+  - name: interactionInProgressCancelled
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.interactionInProgressCancelled'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'interactionInProgressCancelled: "interaction_in_progress_cancelled"'
+      return:
+        description: ''
+        type: '"interaction_in_progress_cancelled"'
+  - name: invalidBase64String
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.invalidBase64String'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidBase64String: "invalid_base64_string"'
+      return:
+        description: ''
+        type: '"invalid_base64_string"'
+  - name: invalidCacheType
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.invalidCacheType'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidCacheType: "invalid_cache_type"'
+      return:
+        description: ''
+        type: '"invalid_cache_type"'
+  - name: invalidPopTokenRequest
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.invalidPopTokenRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidPopTokenRequest: "invalid_pop_token_request"'
+      return:
+        description: ''
+        type: '"invalid_pop_token_request"'
+  - name: nativeConnectionNotEstablished
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.nativeConnectionNotEstablished'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nativeConnectionNotEstablished: "native_connection_not_established"'
+      return:
+        description: ''
+        type: '"native_connection_not_established"'
+  - name: nativeExtensionNotInstalled
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.nativeExtensionNotInstalled'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nativeExtensionNotInstalled: "native_extension_not_installed"'
+      return:
+        description: ''
+        type: '"native_extension_not_installed"'
+  - name: nativeHandshakeTimeout
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.nativeHandshakeTimeout'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nativeHandshakeTimeout: "native_handshake_timeout"'
+      return:
+        description: ''
+        type: '"native_handshake_timeout"'
+  - name: nativePromptNotSupported
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.nativePromptNotSupported'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nativePromptNotSupported: "native_prompt_not_supported"'
+      return:
+        description: ''
+        type: '"native_prompt_not_supported"'
+  - name: noAccountError
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.noAccountError'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'noAccountError: "no_account_error"'
+      return:
+        description: ''
+        type: '"no_account_error"'
+  - name: nonBrowserEnvironment
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.nonBrowserEnvironment'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nonBrowserEnvironment: "non_browser_environment"'
+      return:
+        description: ''
+        type: '"non_browser_environment"'
+  - name: noNetworkConnectivity
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.noNetworkConnectivity'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'noNetworkConnectivity: "no_network_connectivity"'
+      return:
+        description: ''
+        type: '"no_network_connectivity"'
+  - name: noStateInHash
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.noStateInHash'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'noStateInHash: "no_state_in_hash"'
+      return:
+        description: ''
+        type: '"no_state_in_hash"'
+  - name: noTokenRequestCacheError
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.noTokenRequestCacheError'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'noTokenRequestCacheError: "no_token_request_cache_error"'
+      return:
+        description: ''
+        type: '"no_token_request_cache_error"'
+  - name: pkceNotCreated
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.pkceNotCreated'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'pkceNotCreated: "pkce_not_created"'
+      return:
+        description: ''
+        type: '"pkce_not_created"'
+  - name: popupWindowError
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.popupWindowError'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'popupWindowError: "popup_window_error"'
+      return:
+        description: ''
+        type: '"popup_window_error"'
+  - name: postRequestFailed
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.postRequestFailed'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'postRequestFailed: "post_request_failed"'
+      return:
+        description: ''
+        type: '"post_request_failed"'
+  - name: redirectBridgeEmptyResponse
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.redirectBridgeEmptyResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'redirectBridgeEmptyResponse: "redirect_bridge_empty_response"'
+      return:
+        description: ''
+        type: '"redirect_bridge_empty_response"'
+  - name: redirectInIframe
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.redirectInIframe'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'redirectInIframe: "redirect_in_iframe"'
+      return:
+        description: ''
+        type: '"redirect_in_iframe"'
+  - name: silentLogoutUnsupported
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.silentLogoutUnsupported'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'silentLogoutUnsupported: "silent_logout_unsupported"'
+      return:
+        description: ''
+        type: '"silent_logout_unsupported"'
+  - name: silentPromptValueError
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.silentPromptValueError'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'silentPromptValueError: "silent_prompt_value_error"'
+      return:
+        description: ''
+        type: '"silent_prompt_value_error"'
+  - name: spaCodeAndNativeAccountIdPresent
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.spaCodeAndNativeAccountIdPresent'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'spaCodeAndNativeAccountIdPresent: "spa_code_and_nativeAccountId_present"'
+      return:
+        description: ''
+        type: '"spa_code_and_nativeAccountId_present"'
+  - name: stateInteractionTypeMismatch
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.stateInteractionTypeMismatch'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateInteractionTypeMismatch: "state_interaction_type_mismatch"'
+      return:
+        description: ''
+        type: '"state_interaction_type_mismatch"'
+  - name: timedOut
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.timedOut'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'timedOut: "timed_out"'
+      return:
+        description: ''
+        type: '"timed_out"'
+  - name: unableToAcquireTokenFromNativePlatform
+    uid: >-
+      @azure/msal-browser.BrowserAuthErrorCodes.unableToAcquireTokenFromNativePlatform
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        unableToAcquireTokenFromNativePlatform:
+        "unable_to_acquire_token_from_native_platform"
+      return:
+        description: ''
+        type: '"unable_to_acquire_token_from_native_platform"'
+  - name: unableToLoadToken
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.unableToLoadToken'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'unableToLoadToken: "unable_to_load_token"'
+      return:
+        description: ''
+        type: '"unable_to_load_token"'
+  - name: unableToParseState
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.unableToParseState'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'unableToParseState: "unable_to_parse_state"'
+      return:
+        description: ''
+        type: '"unable_to_parse_state"'
+  - name: unableToParseTokenRequestCacheError
+    uid: >-
+      @azure/msal-browser.BrowserAuthErrorCodes.unableToParseTokenRequestCacheError
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        unableToParseTokenRequestCacheError:
+        "unable_to_parse_token_request_cache_error"
+      return:
+        description: ''
+        type: '"unable_to_parse_token_request_cache_error"'
+  - name: uninitializedPublicClientApplication
+    uid: >-
+      @azure/msal-browser.BrowserAuthErrorCodes.uninitializedPublicClientApplication
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        uninitializedPublicClientApplication:
+        "uninitialized_public_client_application"
+      return:
+        description: ''
+        type: '"uninitialized_public_client_application"'
+  - name: userCancelled
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.userCancelled'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'userCancelled: "user_cancelled"'
+      return:
+        description: ''
+        type: '"user_cancelled"'

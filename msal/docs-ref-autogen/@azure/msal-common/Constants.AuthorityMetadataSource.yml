@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: AuthorityMetadataSource
+uid: '@azure/msal-common.Constants.AuthorityMetadataSource'
+package: '@azure/msal-common'
+summary: ''
+fullName: AuthorityMetadataSource
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AuthorityMetadataSource =
+    (typeof AuthorityMetadataSource)[keyof typeof AuthorityMetadataSource]

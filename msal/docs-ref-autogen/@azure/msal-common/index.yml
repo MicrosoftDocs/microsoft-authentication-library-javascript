@@ -4,10 +4,10 @@ name: '@azure/msal-common'
 summary: ''
 type: package
 enums:
-  - '@azure/msal-common.LogLevel'
   - '@azure/msal-common.PerformanceEventStatus'
-  - '@azure/msal-common.PerformanceEvents'
+  - '@azure/msal-common.LogLevel'
 classes:
+  - '@azure/msal-common.PerformanceClient'
   - '@azure/msal-common.AuthError'
   - '@azure/msal-common.AuthenticationHeaderParser'
   - '@azure/msal-common.CacheError'
@@ -16,28 +16,50 @@ classes:
   - '@azure/msal-common.InteractionRequiredAuthError'
   - '@azure/msal-common.Logger'
   - '@azure/msal-common.NetworkError'
-  - '@azure/msal-common.PerformanceClient'
-  - '@azure/msal-common.ProtocolUtils'
+  - '@azure/msal-common.PlatformBrokerError'
   - '@azure/msal-common.ScopeSet'
   - '@azure/msal-common.ServerError'
   - '@azure/msal-common.StubPerformanceClient'
   - '@azure/msal-common.UrlString'
   - '@azure/msal-common.TokenCacheContext'
 interfaces:
+  - '@azure/msal-common.IPerformanceClient'
+  - '@azure/msal-common.IPerformanceMeasurement'
   - '@azure/msal-common.ICrypto'
   - '@azure/msal-common.ILoggerCallback'
   - '@azure/msal-common.INetworkModule'
-  - '@azure/msal-common.IPerformanceClient'
-  - '@azure/msal-common.IPerformanceMeasurement'
   - '@azure/msal-common.IUri'
-  - '@azure/msal-common.PreQueueEvent'
   - '@azure/msal-common.IAppTokenProvider'
   - '@azure/msal-common.ICachePlugin'
   - '@azure/msal-common.IGuidGenerator'
   - '@azure/msal-common.INativeBrokerPlugin'
   - '@azure/msal-common.ISerializableTokenCache'
 typeAliases:
-  - '@azure/msal-common.AADAuthorityConstants'
+  - '@azure/msal-common.ExternalTokenResponse'
+  - '@azure/msal-common.InProgressPerformanceEvent'
+  - '@azure/msal-common.PerformanceCallbackFunction'
+  - '@azure/msal-common.PerformanceEvent'
+  - '@azure/msal-common.ShrOptions'
+  - '@azure/msal-common.SignedHttpRequest'
+  - '@azure/msal-common.SubMeasurement'
+  - '@azure/msal-common.Constants.AADAuthority'
+  - '@azure/msal-common.Constants.AuthenticationScheme'
+  - '@azure/msal-common.Constants.AuthorityMetadataSource'
+  - '@azure/msal-common.Constants.CacheOutcome'
+  - '@azure/msal-common.Constants.CacheType'
+  - '@azure/msal-common.Constants.ClaimsRequestKeys'
+  - '@azure/msal-common.Constants.CredentialType'
+  - '@azure/msal-common.Constants.EncodingTypes'
+  - '@azure/msal-common.Constants.GrantType'
+  - '@azure/msal-common.Constants.HeaderNames'
+  - '@azure/msal-common.Constants.HttpMethod'
+  - '@azure/msal-common.Constants.JsonWebTokenTypes'
+  - '@azure/msal-common.Constants.OAuthResponseType'
+  - '@azure/msal-common.Constants.PasswordGrantConstants'
+  - '@azure/msal-common.Constants.PersistentCacheKeys'
+  - '@azure/msal-common.Constants.RegionDiscoveryOutcomes'
+  - '@azure/msal-common.Constants.RegionDiscoverySources'
+  - '@azure/msal-common.Constants.ResponseMode'
   - '@azure/msal-common.AccessTokenEntity'
   - '@azure/msal-common.AccountFilter'
   - '@azure/msal-common.AccountInfo'
@@ -45,23 +67,14 @@ typeAliases:
   - '@azure/msal-common.AppMetadataEntity'
   - '@azure/msal-common.ApplicationTelemetry'
   - '@azure/msal-common.AuthenticationResult'
-  - '@azure/msal-common.AuthenticationScheme'
   - '@azure/msal-common.AuthorityOptions'
-  - '@azure/msal-common.AuthorityType'
   - '@azure/msal-common.AuthorizationCodePayload'
   - '@azure/msal-common.AuthorizeResponse'
-  - '@azure/msal-common.AzureCloudInstance'
   - '@azure/msal-common.AzureCloudOptions'
   - '@azure/msal-common.AzureRegion'
   - '@azure/msal-common.AzureRegionConfiguration'
   - '@azure/msal-common.BaseAuthRequest'
-  - '@azure/msal-common.CacheAccountType'
-  - '@azure/msal-common.CacheOptions'
-  - '@azure/msal-common.CacheOutcome'
-  - '@azure/msal-common.CacheType'
   - '@azure/msal-common.CcsCredential'
-  - '@azure/msal-common.CcsCredentialType'
-  - '@azure/msal-common.ClaimsRequestKeys'
   - '@azure/msal-common.ClientInfo'
   - '@azure/msal-common.CommonAuthorizationCodeRequest'
   - '@azure/msal-common.CommonAuthorizationUrlRequest'
@@ -70,44 +83,23 @@ typeAliases:
   - '@azure/msal-common.CommonSilentFlowRequest'
   - '@azure/msal-common.CredentialEntity'
   - '@azure/msal-common.CredentialFilter'
-  - '@azure/msal-common.CredentialType'
-  - '@azure/msal-common.EncodingTypes'
-  - '@azure/msal-common.ExternalTokenResponse'
-  - '@azure/msal-common.GrantType'
-  - '@azure/msal-common.HeaderNames'
-  - '@azure/msal-common.HttpMethod'
-  - '@azure/msal-common.HttpStatus'
   - '@azure/msal-common.IdTokenEntity'
-  - '@azure/msal-common.InProgressPerformanceEvent'
-  - '@azure/msal-common.JsonWebTokenTypes'
   - '@azure/msal-common.LibraryStateObject'
   - '@azure/msal-common.LoggerOptions'
   - '@azure/msal-common.NetworkRequestOptions'
   - '@azure/msal-common.NetworkResponse'
-  - '@azure/msal-common.OAuthResponseType'
   - '@azure/msal-common.OIDCOptions'
-  - '@azure/msal-common.PasswordGrantConstants'
-  - '@azure/msal-common.PerformanceCallbackFunction'
-  - '@azure/msal-common.PerformanceEvent'
-  - '@azure/msal-common.PersistentCacheKeys'
   - '@azure/msal-common.PkceCodes'
-  - '@azure/msal-common.ProtocolMode'
-  - '@azure/msal-common.QueueMeasurement'
   - '@azure/msal-common.RefreshTokenEntity'
   - '@azure/msal-common.RequestStateObject'
   - '@azure/msal-common.RequestThumbprint'
-  - '@azure/msal-common.ResponseMode'
   - '@azure/msal-common.ServerAuthorizationTokenResponse'
-  - '@azure/msal-common.ServerResponseType'
   - '@azure/msal-common.ServerTelemetryEntity'
   - '@azure/msal-common.ServerTelemetryRequest'
-  - '@azure/msal-common.ShrOptions'
-  - '@azure/msal-common.SignedHttpRequest'
   - '@azure/msal-common.SignedHttpRequestParameters'
   - '@azure/msal-common.StaticAuthorityOptions'
   - '@azure/msal-common.StoreInCache'
   - '@azure/msal-common.StringDict'
-  - '@azure/msal-common.SubMeasurement'
   - '@azure/msal-common.SystemOptions'
   - '@azure/msal-common.TenantProfile'
   - '@azure/msal-common.ThrottlingEntity'
@@ -118,14 +110,121 @@ typeAliases:
   - '@azure/msal-common.ClientAssertion'
   - '@azure/msal-common.ClientAssertionCallback'
   - '@azure/msal-common.ClientAssertionConfig'
-  - '@azure/msal-common.CommonClientCredentialRequest'
-  - '@azure/msal-common.CommonDeviceCodeRequest'
-  - '@azure/msal-common.CommonOnBehalfOfRequest'
-  - '@azure/msal-common.CommonUsernamePasswordRequest'
+  - '@azure/msal-common.CommonClientConfiguration'
   - '@azure/msal-common.DeviceCodeResponse'
   - '@azure/msal-common.NativeRequest'
   - '@azure/msal-common.NativeSignOutRequest'
   - '@azure/msal-common.ServerDeviceCodeResponse'
+variables:
+  - name: IntFields
+    uid: '@azure/msal-common.IntFields'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'IntFields: ReadonlySet<string>'
+      return:
+        description: ''
+        type: ReadonlySet&lt;string&gt;
+  - name: AuthorityType
+    uid: '@azure/msal-common.AuthorityType'
+    package: '@azure/msal-common'
+    summary: Authority types supported by MSAL.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AuthorityType: { Adfs: 1, Ciam: 3, Default: 0, Dsts: 2 }'
+      return:
+        description: ''
+        type: '{ Adfs: 1, Ciam: 3, Default: 0, Dsts: 2 }'
+  - name: AzureCloudInstance
+    uid: '@azure/msal-common.AzureCloudInstance'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        AzureCloudInstance: { AzureChina: "https://login.chinacloudapi.cn",
+        AzureGermany: "https://login.microsoftonline.de", AzurePpe:
+        "https://login.windows-ppe.net", AzurePublic:
+        "https://login.microsoftonline.com", AzureUsGovernment:
+        "https://login.microsoftonline.us", None: "none" }
+      return:
+        description: ''
+        type: >-
+          { AzureChina: "https:<xref uid="//login.chinacloudapi.cn" />",
+          AzureGermany: "https:<xref uid="//login.microsoftonline.de" />",
+          AzurePpe: "https:<xref uid="//login.windows-ppe.net" />", AzurePublic:
+          "https:<xref uid="//login.microsoftonline.com" />", AzureUsGovernment:
+          "https:<xref uid="//login.microsoftonline.us" />", None: "none" }
+  - name: CcsCredentialType
+    uid: '@azure/msal-common.CcsCredentialType'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CcsCredentialType: { HOME_ACCOUNT_ID: "home_account_id", UPN: "UPN" }'
+      return:
+        description: ''
+        type: '{ HOME_ACCOUNT_ID: "home_account_id", UPN: "UPN" }'
+  - name: ProtocolMode
+    uid: '@azure/msal-common.ProtocolMode'
+    package: '@azure/msal-common'
+    summary: Protocol modes supported by MSAL.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ProtocolMode: { AAD: "AAD", EAR: "EAR", OIDC: "OIDC" }'
+      return:
+        description: ''
+        type: '{ AAD: "AAD", EAR: "EAR", OIDC: "OIDC" }'
+  - name: DEFAULT_CRYPTO_IMPLEMENTATION
+    uid: '@azure/msal-common.DEFAULT_CRYPTO_IMPLEMENTATION'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DEFAULT_CRYPTO_IMPLEMENTATION: ICrypto'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ICrypto" />
+  - name: DEFAULT_SYSTEM_OPTIONS
+    uid: '@azure/msal-common.DEFAULT_SYSTEM_OPTIONS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DEFAULT_SYSTEM_OPTIONS: Required<SystemOptions>'
+      return:
+        description: ''
+        type: Required&lt;<xref uid="@azure/msal-common.SystemOptions" />&gt;
+  - name: StubbedNetworkModule
+    uid: '@azure/msal-common.StubbedNetworkModule'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'StubbedNetworkModule: INetworkModule'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.INetworkModule" />
+  - name: version
+    uid: '@azure/msal-common.version'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'version: "16.0.3"'
+      return:
+        description: ''
+        type: '"<xref uid="16.0.3" />"'
 functions:
   - name: >-
       buildAccountToCache(CacheManager, Authority, string, (input: string) =>
@@ -336,7 +435,7 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.ClientConfigurationError" />
-  - name: createInteractionRequiredAuthError(string)
+  - name: createInteractionRequiredAuthError(string, string)
     uid: '@azure/msal-common.createInteractionRequiredAuthError'
     package: '@azure/msal-common'
     summary: Creates an InteractionRequiredAuthError
@@ -344,10 +443,13 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function createInteractionRequiredAuthError(errorCode: string):
-        InteractionRequiredAuthError
+        function createInteractionRequiredAuthError(errorCode: string,
+        errorMessage?: string): InteractionRequiredAuthError
       parameters:
         - id: errorCode
+          type: string
+          description: ''
+        - id: errorMessage
           type: string
           description: ''
       return:
@@ -472,6 +574,400 @@ functions:
       updateAccountTenantProfileData(AccountInfo, TenantProfile, TokenClaims,
       string)
     uid: '@azure/msal-common.updateAccountTenantProfileData'
+    package: '@azure/msal-common'
+    summary: >-
+      Replaces account info that varies by tenant profile sourced from the ID
+      token claims passed in with the tenant-specific account info
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function updateAccountTenantProfileData(baseAccountInfo: AccountInfo,
+        tenantProfile?: TenantProfile, idTokenClaims?: TokenClaims,
+        idTokenSecret?: string): AccountInfo
+      parameters:
+        - id: baseAccountInfo
+          type: <xref uid="@azure/msal-common.AccountInfo" />
+          description: ''
+        - id: tenantProfile
+          type: <xref uid="@azure/msal-common.TenantProfile" />
+          description: ''
+        - id: idTokenClaims
+          type: <xref uid="@azure/msal-common.TokenClaims" />
+          description: ''
+        - id: idTokenSecret
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AccountInfo" />
+  - name: >-
+      buildAccountToCache(CacheManager, Authority, string, (input: string) =>
+      string, string, TokenClaims, string, string, null | string,
+      AuthorizationCodePayload, string, Logger)
+    uid: '@azure/msal-common.buildAccountToCache_1'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildAccountToCache(cacheStorage: CacheManager, authority:
+        Authority, homeAccountId: string, base64Decode: (input: string) =>
+        string, correlationId: string, idTokenClaims?: TokenClaims, clientInfo?:
+        string, environment?: string, claimsTenantId?: null | string,
+        authCodePayload?: AuthorizationCodePayload, nativeAccountId?: string,
+        logger?: Logger): AccountEntity
+      parameters:
+        - id: cacheStorage
+          type: CacheManager
+          description: ''
+        - id: authority
+          type: Authority
+          description: ''
+        - id: homeAccountId
+          type: string
+          description: ''
+        - id: base64Decode
+          type: '(input: string) =&gt; string'
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: idTokenClaims
+          type: <xref uid="@azure/msal-common.TokenClaims" />
+          description: ''
+        - id: clientInfo
+          type: string
+          description: ''
+        - id: environment
+          type: string
+          description: ''
+        - id: claimsTenantId
+          type: null | string
+          description: ''
+        - id: authCodePayload
+          type: <xref uid="@azure/msal-common.AuthorizationCodePayload" />
+          description: ''
+        - id: nativeAccountId
+          type: string
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
+      return:
+        description: ''
+        type: AccountEntity
+  - name: buildClientConfiguration(ClientConfiguration)
+    uid: '@azure/msal-common.buildClientConfiguration'
+    package: '@azure/msal-common'
+    summary: >-
+      Function that sets the default options when not explicitly configured from
+      app developer
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildClientConfiguration(Configuration: ClientConfiguration):
+        CommonClientConfiguration
+      parameters:
+        - id: Configuration
+          type: ClientConfiguration
+          description: ''
+      return:
+        description: Configuration
+        type: <xref uid="@azure/msal-common.CommonClientConfiguration" />
+  - name: 'buildClientInfo(string, (input: string) => string)'
+    uid: '@azure/msal-common.buildClientInfo_1'
+    package: '@azure/msal-common'
+    summary: Function to build a client info object from server clientInfo string
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildClientInfo(rawClientInfo: string, base64Decode: (input:
+        string) => string): ClientInfo
+      parameters:
+        - id: rawClientInfo
+          type: string
+          description: ''
+        - id: base64Decode
+          type: '(input: string) =&gt; string'
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ClientInfo" />
+  - name: buildClientInfoFromHomeAccountId(string)
+    uid: '@azure/msal-common.buildClientInfoFromHomeAccountId_1'
+    package: '@azure/msal-common'
+    summary: Function to build a client info object from cached homeAccountId string
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildClientInfoFromHomeAccountId(homeAccountId: string):
+        ClientInfo
+      parameters:
+        - id: homeAccountId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ClientInfo" />
+  - name: buildStaticAuthorityOptions(Partial<AuthorityOptions>)
+    uid: '@azure/msal-common.buildStaticAuthorityOptions_1'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildStaticAuthorityOptions(authOptions:
+        Partial<AuthorityOptions>): StaticAuthorityOptions
+      parameters:
+        - id: authOptions
+          type: Partial&lt;<xref uid="@azure/msal-common.AuthorityOptions" />&gt;
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.StaticAuthorityOptions" />
+  - name: buildTenantProfile(string, string, string, TokenClaims)
+    uid: '@azure/msal-common.buildTenantProfile_1'
+    package: '@azure/msal-common'
+    summary: Build tenant profile
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildTenantProfile(homeAccountId: string, localAccountId:
+        string, tenantId: string, idTokenClaims?: TokenClaims): TenantProfile
+      parameters:
+        - id: homeAccountId
+          type: string
+          description: Home account identifier for this account object
+        - id: localAccountId
+          type: string
+          description: Local account identifer for this account object
+        - id: tenantId
+          type: string
+          description: Full tenant or organizational id that this account belongs to
+        - id: idTokenClaims
+          type: <xref uid="@azure/msal-common.TokenClaims" />
+          description: Claims from the ID token
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.TenantProfile" />
+  - name: createAuthError(string, string)
+    uid: '@azure/msal-common.createAuthError_1'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createAuthError(code: string, additionalMessage?: string):
+        AuthError
+      parameters:
+        - id: code
+          type: string
+          description: ''
+        - id: additionalMessage
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.AuthError" />
+  - name: createCacheError(unknown)
+    uid: '@azure/msal-common.createCacheError_1'
+    package: '@azure/msal-common'
+    summary: Helper function to wrap browser errors in a CacheError object
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function createCacheError(e: unknown): CacheError'
+      parameters:
+        - id: e
+          type: unknown
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.CacheError" />
+  - name: createClientAuthError(string, string)
+    uid: '@azure/msal-common.createClientAuthError_1'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createClientAuthError(errorCode: string, additionalMessage?:
+        string): ClientAuthError
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+        - id: additionalMessage
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ClientAuthError" />
+  - name: createClientConfigurationError(string)
+    uid: '@azure/msal-common.createClientConfigurationError_1'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createClientConfigurationError(errorCode: string):
+        ClientConfigurationError
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.ClientConfigurationError" />
+  - name: createInteractionRequiredAuthError(string, string)
+    uid: '@azure/msal-common.createInteractionRequiredAuthError_1'
+    package: '@azure/msal-common'
+    summary: Creates an InteractionRequiredAuthError
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createInteractionRequiredAuthError(errorCode: string,
+        errorMessage?: string): InteractionRequiredAuthError
+      parameters:
+        - id: errorCode
+          type: string
+          description: ''
+        - id: errorMessage
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.InteractionRequiredAuthError" />
+  - name: createNetworkError(AuthError, number, Record<string, string>, Error)
+    uid: '@azure/msal-common.createNetworkError_1'
+    package: '@azure/msal-common'
+    summary: Creates NetworkError object for a failed network request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createNetworkError(error: AuthError, httpStatus?: number,
+        responseHeaders?: Record<string, string>, additionalError?: Error):
+        NetworkError
+      parameters:
+        - id: error
+          type: <xref uid="@azure/msal-common.AuthError" />
+          description: Error to be thrown back to the caller
+        - id: httpStatus
+          type: number
+          description: Status code of the network request
+        - id: responseHeaders
+          type: Record&lt;string, string&gt;
+          description: Response headers of the network request, when available
+        - id: additionalError
+          type: Error
+          description: ''
+      return:
+        description: NetworkError object
+        type: <xref uid="@azure/msal-common.NetworkError" />
+  - name: formatAuthorityUri(string)
+    uid: '@azure/msal-common.formatAuthorityUri_1'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function formatAuthorityUri(authorityUri: string): string'
+      parameters:
+        - id: authorityUri
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: getRequestThumbprint(string, BaseAuthRequest, string)
+    uid: '@azure/msal-common.getRequestThumbprint_1'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getRequestThumbprint(clientId: string, request:
+        BaseAuthRequest, homeAccountId?: string): RequestThumbprint
+      parameters:
+        - id: clientId
+          type: string
+          description: ''
+        - id: request
+          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
+          description: ''
+        - id: homeAccountId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.RequestThumbprint" />
+  - name: getTenantIdFromIdTokenClaims(TokenClaims)
+    uid: '@azure/msal-common.getTenantIdFromIdTokenClaims_1'
+    package: '@azure/msal-common'
+    summary: >-
+      Gets tenantId from available ID token claims to set as credential realm
+      with the following precedence:
+
+      1. tid - if the token is acquired from an Azure AD tenant tid will be
+      present
+
+      2. tfp - if the token is acquired from a modern B2C tenant tfp should be
+      present
+
+      3. acr - if the token is acquired from a legacy B2C tenant acr should be
+      present
+
+      Downcased to match the realm case-insensitive comparison requirements
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getTenantIdFromIdTokenClaims(idTokenClaims?: TokenClaims):
+        string | null
+      parameters:
+        - id: idTokenClaims
+          type: <xref uid="@azure/msal-common.TokenClaims" />
+          description: ''
+      return:
+        description: ''
+        type: string | null
+  - name: tenantIdMatchesHomeTenant(string, string)
+    uid: '@azure/msal-common.tenantIdMatchesHomeTenant_1'
+    package: '@azure/msal-common'
+    summary: Returns true if tenantId matches the utid portion of homeAccountId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function tenantIdMatchesHomeTenant(tenantId?: string, homeAccountId?:
+        string): boolean
+      parameters:
+        - id: tenantId
+          type: string
+          description: ''
+        - id: homeAccountId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: >-
+      updateAccountTenantProfileData(AccountInfo, TenantProfile, TokenClaims,
+      string)
+    uid: '@azure/msal-common.updateAccountTenantProfileData_1'
     package: '@azure/msal-common'
     summary: >-
       Replaces account info that varies by tenant profile sourced from the ID

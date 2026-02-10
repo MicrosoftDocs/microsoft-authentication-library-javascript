@@ -31,6 +31,7 @@ syntax: |
     preferred_username?: string
     roles?: string[]
     sid?: string
+    signin_state?: string[]
     sub?: string
     tenant_region_scope?: string
     tenant_region_sub_scope?: string

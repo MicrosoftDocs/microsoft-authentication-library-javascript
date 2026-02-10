@@ -17,6 +17,8 @@ summary: >-
 
   - AuthMethodRegistrationRequiredState: The sign-in process requires
   authentication method registration.
+
+  - MfaAwaitingState: The sign-in process requires MFA.
 fullName: SignInResultState
 remarks: ''
 isDeprecated: false
@@ -27,3 +29,4 @@ syntax: |
     | SignInFailedState
     | SignInCompletedState
     | AuthMethodRegistrationRequiredState
+    | MfaAwaitingState

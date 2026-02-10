@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: PersistentCacheKeys
+uid: '@azure/msal-common.Constants.PersistentCacheKeys'
+package: '@azure/msal-common'
+summary: ''
+fullName: PersistentCacheKeys
+remarks: ''
+isDeprecated: false
+syntax: |
+  type PersistentCacheKeys =
+    (typeof PersistentCacheKeys)[keyof typeof PersistentCacheKeys]

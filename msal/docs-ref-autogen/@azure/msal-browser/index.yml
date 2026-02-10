@@ -5,7 +5,6 @@ summary: ''
 type: package
 enums:
   - '@azure/msal-browser.InteractionType'
-  - '@azure/msal-browser.PerformanceEvents'
   - '@azure/msal-browser.LogLevel'
 classes:
   - '@azure/msal-browser.AuthError'
@@ -24,12 +23,10 @@ classes:
   - '@azure/msal-browser.MemoryStorage'
   - '@azure/msal-browser.NavigationClient'
   - '@azure/msal-browser.PublicClientApplication'
-  - '@azure/msal-browser.PublicClientNext'
   - '@azure/msal-browser.ServerError'
   - '@azure/msal-browser.SessionStorage'
   - '@azure/msal-browser.SignedHttpRequest'
   - '@azure/msal-browser.StubPerformanceClient'
-  - '@azure/msal-browser.UrlString'
   - '@azure/msal-browser.AuthFlowActionRequiredStateBase'
   - '@azure/msal-browser.AuthFlowStateBase'
   - '@azure/msal-browser.AuthMethodRegistrationChallengeMethodError'
@@ -52,6 +49,14 @@ classes:
   - '@azure/msal-browser.InvalidArgumentError'
   - '@azure/msal-browser.InvalidConfigurationError'
   - '@azure/msal-browser.MethodNotImplementedError'
+  - '@azure/msal-browser.MfaAwaitingState'
+  - '@azure/msal-browser.MfaCompletedState'
+  - '@azure/msal-browser.MfaFailedState'
+  - '@azure/msal-browser.MfaRequestChallengeError'
+  - '@azure/msal-browser.MfaRequestChallengeResult'
+  - '@azure/msal-browser.MfaSubmitChallengeError'
+  - '@azure/msal-browser.MfaSubmitChallengeResult'
+  - '@azure/msal-browser.MfaVerificationRequiredState'
   - '@azure/msal-browser.MsalCustomAuthError'
   - '@azure/msal-browser.NoCachedAccountFoundError'
   - '@azure/msal-browser.ParsedUrlError'
@@ -105,32 +110,24 @@ classes:
   - '@azure/msal-browser.UserAccountAttributeError'
   - '@azure/msal-browser.UserAlreadySignedInError'
 interfaces:
-  - '@azure/msal-browser.IController'
   - '@azure/msal-browser.ILoggerCallback'
   - '@azure/msal-browser.INavigationClient'
   - '@azure/msal-browser.INetworkModule'
   - '@azure/msal-browser.IPerformanceClient'
   - '@azure/msal-browser.IPublicClientApplication'
-  - '@azure/msal-browser.ITokenCache'
   - '@azure/msal-browser.IWindowStorage'
   - '@azure/msal-browser.AuthMethodDetails'
   - '@azure/msal-browser.AuthenticationMethod'
   - '@azure/msal-browser.ICustomAuthPublicClientApplication'
 typeAliases:
   - '@azure/msal-browser.AccountInfo'
-  - '@azure/msal-browser.ApiId'
   - '@azure/msal-browser.AuthenticationResult'
-  - '@azure/msal-browser.AuthenticationScheme'
   - '@azure/msal-browser.AuthorizationCodeRequest'
-  - '@azure/msal-browser.AuthorizationUrlRequest'
-  - '@azure/msal-browser.AzureCloudInstance'
   - '@azure/msal-browser.AzureCloudOptions'
   - '@azure/msal-browser.BrokerConnectionEvent'
   - '@azure/msal-browser.BrowserAuthOptions'
-  - '@azure/msal-browser.BrowserCacheLocation'
   - '@azure/msal-browser.BrowserSystemOptions'
   - '@azure/msal-browser.BrowserTelemetryOptions'
-  - '@azure/msal-browser.CacheLookupPolicy'
   - '@azure/msal-browser.CacheOptions'
   - '@azure/msal-browser.ClearCacheRequest'
   - '@azure/msal-browser.Configuration'
@@ -140,13 +137,12 @@ typeAliases:
   - '@azure/msal-browser.EventError'
   - '@azure/msal-browser.EventMessage'
   - '@azure/msal-browser.EventPayload'
-  - '@azure/msal-browser.EventType'
   - '@azure/msal-browser.ExternalTokenResponse'
+  - '@azure/msal-browser.HandleRedirectPromiseOptions'
+  - '@azure/msal-browser.IController'
   - '@azure/msal-browser.IdTokenClaims'
   - '@azure/msal-browser.InProgressPerformanceEvent'
   - '@azure/msal-browser.InitializeApplicationRequest'
-  - '@azure/msal-browser.InteractionStatus'
-  - '@azure/msal-browser.JsonWebTokenTypes'
   - '@azure/msal-browser.LoadTokenOptions'
   - '@azure/msal-browser.NavigationOptions'
   - '@azure/msal-browser.NetworkRequestOptions'
@@ -158,14 +154,11 @@ typeAliases:
   - '@azure/msal-browser.PopupRequest'
   - '@azure/msal-browser.PopupSize'
   - '@azure/msal-browser.PopupWindowAttributes'
-  - '@azure/msal-browser.ProtocolMode'
   - '@azure/msal-browser.RedirectRequest'
-  - '@azure/msal-browser.ServerResponseType'
   - '@azure/msal-browser.SignedHttpRequestOptions'
   - '@azure/msal-browser.SilentRequest'
   - '@azure/msal-browser.SsoSilentRequest'
   - '@azure/msal-browser.TenantProfile'
-  - '@azure/msal-browser.WrapperSKU'
   - '@azure/msal-browser.AccessTokenRetrievalInputs'
   - '@azure/msal-browser.AccountRetrievalInputs'
   - '@azure/msal-browser.AuthMethodRegistrationChallengeMethodResultState'
@@ -173,6 +166,8 @@ typeAliases:
   - '@azure/msal-browser.CustomAuthConfiguration'
   - '@azure/msal-browser.GetAccessTokenResultState'
   - '@azure/msal-browser.GetAccountResultState'
+  - '@azure/msal-browser.MfaRequestChallengeResultState'
+  - '@azure/msal-browser.MfaSubmitChallengeResultState'
   - '@azure/msal-browser.ResetPasswordInputs'
   - '@azure/msal-browser.ResetPasswordResendCodeResultState'
   - '@azure/msal-browser.ResetPasswordStartResultState'
@@ -192,8 +187,274 @@ typeAliases:
   - '@azure/msal-browser.SignUpSubmitCodeResultState'
   - '@azure/msal-browser.SignUpSubmitPasswordResultState'
   - '@azure/msal-browser.UserAccountAttributes'
+variables:
+  - name: ApiId
+    uid: '@azure/msal-browser.ApiId'
+    package: '@azure/msal-browser'
+    summary: >-
+      API Codes for Telemetry purposes.
+
+      Before adding a new code you must claim it in the MSAL Telemetry tracker
+      as these number spaces are shared across all MSALs
+
+      0-99 Silent Flow
+
+      800-899 Auth Code Flow
+
+      900-999 Misc
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        ApiId: { acquireTokenByCode: 866, acquireTokenPopup: 862,
+        acquireTokenRedirect: 861, acquireTokenSilent_authCode: 864,
+        acquireTokenSilent_silentFlow: 61, handleRedirectPromise: 865,
+        hydrateCache: 963, loadExternalTokens: 964, logout: 961, logoutPopup:
+        962, ssoSilent: 863 }
+      return:
+        description: ''
+        type: >-
+          { acquireTokenByCode: 866, acquireTokenPopup: 862,
+          acquireTokenRedirect: 861, acquireTokenSilent_authCode: 864,
+          acquireTokenSilent_silentFlow: 61, handleRedirectPromise: 865,
+          hydrateCache: 963, loadExternalTokens: 964, logout: 961, logoutPopup:
+          962, ssoSilent: 863 }
+  - name: AuthenticationScheme
+    uid: '@azure/msal-browser.AuthenticationScheme'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AuthenticationScheme: { BEARER: "Bearer", POP: "pop", SSH: "ssh-cert" }'
+      return:
+        description: ''
+        type: '{ BEARER: "Bearer", POP: "pop", SSH: "ssh-cert" }'
+  - name: AzureCloudInstance
+    uid: '@azure/msal-browser.AzureCloudInstance'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        AzureCloudInstance: { AzureChina: "https://login.chinacloudapi.cn",
+        AzureGermany: "https://login.microsoftonline.de", AzurePpe:
+        "https://login.windows-ppe.net", AzurePublic:
+        "https://login.microsoftonline.com", AzureUsGovernment:
+        "https://login.microsoftonline.us", None: "none" }
+      return:
+        description: ''
+        type: >-
+          { AzureChina: "https:<xref uid="//login.chinacloudapi.cn" />",
+          AzureGermany: "https:<xref uid="//login.microsoftonline.de" />",
+          AzurePpe: "https:<xref uid="//login.windows-ppe.net" />", AzurePublic:
+          "https:<xref uid="//login.microsoftonline.com" />", AzureUsGovernment:
+          "https:<xref uid="//login.microsoftonline.us" />", None: "none" }
+  - name: BrowserCacheLocation
+    uid: '@azure/msal-browser.BrowserCacheLocation'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        BrowserCacheLocation: { LocalStorage: "localStorage", MemoryStorage:
+        "memoryStorage", SessionStorage: "sessionStorage" }
+      return:
+        description: ''
+        type: >-
+          { LocalStorage: "localStorage", MemoryStorage: "memoryStorage",
+          SessionStorage: "sessionStorage" }
+  - name: CacheLookupPolicy
+    uid: '@azure/msal-browser.CacheLookupPolicy'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        CacheLookupPolicy: { AccessToken: 1, AccessTokenAndRefreshToken: 2,
+        Default: 0, RefreshToken: 3, RefreshTokenAndNetwork: 4, Skip: 5 }
+      return:
+        description: ''
+        type: >-
+          { AccessToken: 1, AccessTokenAndRefreshToken: 2, Default: 0,
+          RefreshToken: 3, RefreshTokenAndNetwork: 4, Skip: 5 }
+  - name: EventType
+    uid: '@azure/msal-browser.EventType'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        EventType: { ACQUIRE_TOKEN_FAILURE: "msal:acquireTokenFailure",
+        ACQUIRE_TOKEN_NETWORK_START: "msal:acquireTokenFromNetworkStart",
+        ACQUIRE_TOKEN_START: "msal:acquireTokenStart", ACQUIRE_TOKEN_SUCCESS:
+        "msal:acquireTokenSuccess", ACTIVE_ACCOUNT_CHANGED:
+        "msal:activeAccountChanged", BROKERED_REQUEST_FAILURE:
+        "msal:brokeredRequestFailure", BROKERED_REQUEST_START:
+        "msal:brokeredRequestStart", BROKERED_REQUEST_SUCCESS:
+        "msal:brokeredRequestSuccess", BROKER_CONNECTION_ESTABLISHED:
+        "msal:brokerConnectionEstablished", HANDLE_REDIRECT_END:
+        "msal:handleRedirectEnd", HANDLE_REDIRECT_START:
+        "msal:handleRedirectStart", INITIALIZE_END: "msal:initializeEnd",
+        INITIALIZE_START: "msal:initializeStart", LOGIN_SUCCESS:
+        "msal:loginSuccess", LOGOUT_END: "msal:logoutEnd", LOGOUT_FAILURE:
+        "msal:logoutFailure", LOGOUT_START: "msal:logoutStart", LOGOUT_SUCCESS:
+        "msal:logoutSuccess", POPUP_OPENED: "msal:popupOpened",
+        RESTORE_FROM_BFCACHE: "msal:restoreFromBFCache" }
+      return:
+        description: ''
+        type: >-
+          { ACQUIRE_TOKEN_FAILURE: "msal:acquireTokenFailure",
+          ACQUIRE_TOKEN_NETWORK_START: "msal:acquireTokenFromNetworkStart",
+          ACQUIRE_TOKEN_START: "msal:acquireTokenStart", ACQUIRE_TOKEN_SUCCESS:
+          "msal:acquireTokenSuccess", ACTIVE_ACCOUNT_CHANGED:
+          "msal:activeAccountChanged", BROKERED_REQUEST_FAILURE:
+          "msal:brokeredRequestFailure", BROKERED_REQUEST_START:
+          "msal:brokeredRequestStart", BROKERED_REQUEST_SUCCESS:
+          "msal:brokeredRequestSuccess", BROKER_CONNECTION_ESTABLISHED:
+          "msal:brokerConnectionEstablished", HANDLE_REDIRECT_END:
+          "msal:handleRedirectEnd", HANDLE_REDIRECT_START:
+          "msal:handleRedirectStart", INITIALIZE_END: "msal:initializeEnd",
+          INITIALIZE_START: "msal:initializeStart", LOGIN_SUCCESS:
+          "msal:loginSuccess", LOGOUT_END: "msal:logoutEnd", LOGOUT_FAILURE:
+          "msal:logoutFailure", LOGOUT_START: "msal:logoutStart",
+          LOGOUT_SUCCESS: "msal:logoutSuccess", POPUP_OPENED:
+          "msal:popupOpened", RESTORE_FROM_BFCACHE: "msal:restoreFromBFCache" }
+  - name: InteractionStatus
+    uid: '@azure/msal-browser.InteractionStatus'
+    package: '@azure/msal-browser'
+    summary: >-
+      Types of interaction currently in progress.
+
+      Used in events in wrapper libraries to invoke functions when certain
+      interaction is in progress or all interactions are complete.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        InteractionStatus: { AcquireToken: "acquireToken", HandleRedirect:
+        "handleRedirect", Logout: "logout", None: "none", Startup: "startup" }
+      return:
+        description: ''
+        type: >-
+          { AcquireToken: "acquireToken", HandleRedirect: "handleRedirect",
+          Logout: "logout", None: "none", Startup: "startup" }
+  - name: JsonWebTokenTypes
+    uid: '@azure/msal-browser.JsonWebTokenTypes'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'JsonWebTokenTypes: { Jwk: "JWK", Jwt: "JWT", Pop: "pop" }'
+      return:
+        description: ''
+        type: '{ Jwk: "JWK", Jwt: "JWT", Pop: "pop" }'
+  - name: ProtocolMode
+    uid: '@azure/msal-browser.ProtocolMode'
+    package: '@azure/msal-browser'
+    summary: Protocol modes supported by MSAL.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ProtocolMode: { AAD: "AAD", EAR: "EAR", OIDC: "OIDC" }'
+      return:
+        description: ''
+        type: '{ AAD: "AAD", EAR: "EAR", OIDC: "OIDC" }'
+  - name: ResponseMode
+    uid: '@azure/msal-browser.ResponseMode'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        ResponseMode: { FORM_POST: "form_post", FRAGMENT: "fragment", QUERY:
+        "query" }
+      return:
+        description: ''
+        type: '{ FORM_POST: "form_post", FRAGMENT: "fragment", QUERY: "query" }'
+  - name: WrapperSKU
+    uid: '@azure/msal-browser.WrapperSKU'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        WrapperSKU: { Angular: "@azure/msal-angular", React: "@azure/msal-react"
+        }
+      return:
+        description: ''
+        type: '{ Angular: "@azure/msal-angular", React: "@azure/msal-react" }'
+  - name: DEFAULT_IFRAME_TIMEOUT_MS
+    uid: '@azure/msal-browser.DEFAULT_IFRAME_TIMEOUT_MS'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DEFAULT_IFRAME_TIMEOUT_MS: 10000'
+      return:
+        description: ''
+        type: '10000'
+  - name: OIDC_DEFAULT_SCOPES
+    uid: '@azure/msal-browser.OIDC_DEFAULT_SCOPES'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'OIDC_DEFAULT_SCOPES: string[]'
+      return:
+        description: ''
+        type: string[]
+  - name: PromptValue
+    uid: '@azure/msal-browser.PromptValue'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        PromptValue: { CONSENT: string, CREATE: string, LOGIN: string, NONE:
+        string, NO_SESSION: string, SELECT_ACCOUNT: string }
+      return:
+        description: ''
+        type: >-
+          { CONSENT: string, CREATE: string, LOGIN: string, NONE: string,
+          NO_SESSION: string, SELECT_ACCOUNT: string }
+  - name: stubbedPublicClientApplication
+    uid: '@azure/msal-browser.stubbedPublicClientApplication'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stubbedPublicClientApplication: IPublicClientApplication'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.IPublicClientApplication" />
+  - name: version
+    uid: '@azure/msal-browser.version'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'version: "5.1.0"'
+      return:
+        description: ''
+        type: '"<xref uid="5.1.0" />"'
 functions:
-  - name: createNestablePublicClientApplication(Configuration)
+  - name: >-
+      createNestablePublicClientApplication(Configuration, string,
+      (configuration: Configuration, controller: IPublicClientApplication) =>
+      IPublicClientApplication)
     uid: '@azure/msal-browser.createNestablePublicClientApplication'
     package: '@azure/msal-browser'
     summary: >-
@@ -207,10 +468,20 @@ functions:
     syntax:
       content: >-
         function createNestablePublicClientApplication(configuration:
-        Configuration): Promise<IPublicClientApplication>
+        Configuration, correlationId?: string, pcaFactory?: (configuration:
+        Configuration, controller: IPublicClientApplication) =>
+        IPublicClientApplication): Promise<IPublicClientApplication>
       parameters:
         - id: configuration
           type: <xref uid="@azure/msal-browser.Configuration" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: pcaFactory
+          type: >-
+            (configuration: Configuration, controller: IPublicClientApplication)
+            =&gt; IPublicClientApplication
           description: ''
       return:
         description: IPublicClientApplication
@@ -260,3 +531,58 @@ functions:
       return:
         description: ''
         type: Promise&lt;boolean&gt;
+  - name: >-
+      loadExternalTokens(Configuration, SilentRequest, ExternalTokenResponse,
+      LoadTokenOptions, IPerformanceClient)
+    uid: '@azure/msal-browser.loadExternalTokens'
+    package: '@azure/msal-browser'
+    summary: API to load tokens to msal-browser cache.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function loadExternalTokens(config: Configuration, request:
+        SilentRequest, response: ExternalTokenResponse, options:
+        LoadTokenOptions, performanceClient?: IPerformanceClient):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: config
+          type: <xref uid="@azure/msal-browser.Configuration" />
+          description: Object to configure the MSAL app.
+        - id: request
+          type: <xref uid="@azure/msal-browser.SilentRequest" />
+          description: Silent request containing authority, scopes, and account.
+        - id: response
+          type: <xref uid="@azure/msal-browser.ExternalTokenResponse" />
+          description: External token response to load into the cache.
+        - id: options
+          type: <xref uid="@azure/msal-browser.LoadTokenOptions" />
+          description: Options controlling how tokens are loaded into the cache.
+        - id: performanceClient
+          type: <xref uid="@azure/msal-browser.IPerformanceClient" />
+          description: Optional performance client used for telemetry measurements.
+      return:
+        description: '`AuthenticationResult` for the response that was loaded.'
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+  - name: broadcastResponseToMainFrame(NavigationClient)
+    uid: '@azure/msal-browser.broadcastResponseToMainFrame'
+    package: '@azure/msal-browser'
+    summary: |-
+      Processes the authentication response from the redirect URL
+      For SSO and popup scenarios broadcasts it to the main frame
+      For redirect scenario navigates to the home page
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function broadcastResponseToMainFrame(navigationClient?:
+        NavigationClient): Promise<void>
+      parameters:
+        - id: navigationClient
+          type: NavigationClient
+          description: Optional navigation client for redirect scenario.
+      return:
+        description: >-
+          A promise that resolves when the response has been broadcast and
+          cleanup is complete.
+        type: Promise&lt;void&gt;

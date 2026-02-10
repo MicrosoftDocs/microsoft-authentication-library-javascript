@@ -4,3 +4,416 @@ name: ClientAuthErrorCodes
 type: module
 package: '@azure/msal-node'
 summary: ''
+variables:
+  - name: authorizationCodeMissingFromServerResponse
+    uid: >-
+      @azure/msal-node.ClientAuthErrorCodes.authorizationCodeMissingFromServerResponse
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        authorizationCodeMissingFromServerResponse:
+        "authorization_code_missing_from_server_response"
+      return:
+        description: ''
+        type: '"authorization_code_missing_from_server_response"'
+  - name: authTimeNotFound
+    uid: '@azure/msal-node.ClientAuthErrorCodes.authTimeNotFound'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authTimeNotFound: "auth_time_not_found"'
+      return:
+        description: ''
+        type: '"auth_time_not_found"'
+  - name: bindingKeyNotRemoved
+    uid: '@azure/msal-node.ClientAuthErrorCodes.bindingKeyNotRemoved'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'bindingKeyNotRemoved: "binding_key_not_removed"'
+      return:
+        description: ''
+        type: '"binding_key_not_removed"'
+  - name: cannotAppendScopeSet
+    uid: '@azure/msal-node.ClientAuthErrorCodes.cannotAppendScopeSet'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cannotAppendScopeSet: "cannot_append_scopeset"'
+      return:
+        description: ''
+        type: '"cannot_append_scopeset"'
+  - name: cannotRemoveEmptyScope
+    uid: '@azure/msal-node.ClientAuthErrorCodes.cannotRemoveEmptyScope'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'cannotRemoveEmptyScope: "cannot_remove_empty_scope"'
+      return:
+        description: ''
+        type: '"cannot_remove_empty_scope"'
+  - name: clientInfoDecodingError
+    uid: '@azure/msal-node.ClientAuthErrorCodes.clientInfoDecodingError'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'clientInfoDecodingError: "client_info_decoding_error"'
+      return:
+        description: ''
+        type: '"client_info_decoding_error"'
+  - name: clientInfoEmptyError
+    uid: '@azure/msal-node.ClientAuthErrorCodes.clientInfoEmptyError'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'clientInfoEmptyError: "client_info_empty_error"'
+      return:
+        description: ''
+        type: '"client_info_empty_error"'
+  - name: emptyInputScopeSet
+    uid: '@azure/msal-node.ClientAuthErrorCodes.emptyInputScopeSet'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'emptyInputScopeSet: "empty_input_scopeset"'
+      return:
+        description: ''
+        type: '"empty_input_scopeset"'
+  - name: endpointResolutionError
+    uid: '@azure/msal-node.ClientAuthErrorCodes.endpointResolutionError'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'endpointResolutionError: "endpoints_resolution_error"'
+      return:
+        description: ''
+        type: '"endpoints_resolution_error"'
+  - name: endSessionEndpointNotSupported
+    uid: '@azure/msal-node.ClientAuthErrorCodes.endSessionEndpointNotSupported'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'endSessionEndpointNotSupported: "end_session_endpoint_not_supported"'
+      return:
+        description: ''
+        type: '"end_session_endpoint_not_supported"'
+  - name: hashNotDeserialized
+    uid: '@azure/msal-node.ClientAuthErrorCodes.hashNotDeserialized'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hashNotDeserialized: "hash_not_deserialized"'
+      return:
+        description: ''
+        type: '"hash_not_deserialized"'
+  - name: invalidCacheEnvironment
+    uid: '@azure/msal-node.ClientAuthErrorCodes.invalidCacheEnvironment'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidCacheEnvironment: "invalid_cache_environment"'
+      return:
+        description: ''
+        type: '"invalid_cache_environment"'
+  - name: invalidCacheRecord
+    uid: '@azure/msal-node.ClientAuthErrorCodes.invalidCacheRecord'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidCacheRecord: "invalid_cache_record"'
+      return:
+        description: ''
+        type: '"invalid_cache_record"'
+  - name: invalidState
+    uid: '@azure/msal-node.ClientAuthErrorCodes.invalidState'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidState: "invalid_state"'
+      return:
+        description: ''
+        type: '"invalid_state"'
+  - name: keyIdMissing
+    uid: '@azure/msal-node.ClientAuthErrorCodes.keyIdMissing'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'keyIdMissing: "key_id_missing"'
+      return:
+        description: ''
+        type: '"key_id_missing"'
+  - name: maxAgeTranspired
+    uid: '@azure/msal-node.ClientAuthErrorCodes.maxAgeTranspired'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'maxAgeTranspired: "max_age_transpired"'
+      return:
+        description: ''
+        type: '"max_age_transpired"'
+  - name: methodNotImplemented
+    uid: '@azure/msal-node.ClientAuthErrorCodes.methodNotImplemented'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'methodNotImplemented: "method_not_implemented"'
+      return:
+        description: ''
+        type: '"method_not_implemented"'
+  - name: multipleMatchingAppMetadata
+    uid: '@azure/msal-node.ClientAuthErrorCodes.multipleMatchingAppMetadata'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'multipleMatchingAppMetadata: "multiple_matching_appMetadata"'
+      return:
+        description: ''
+        type: '"multiple_matching_appMetadata"'
+  - name: multipleMatchingTokens
+    uid: '@azure/msal-node.ClientAuthErrorCodes.multipleMatchingTokens'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'multipleMatchingTokens: "multiple_matching_tokens"'
+      return:
+        description: ''
+        type: '"multiple_matching_tokens"'
+  - name: nestedAppAuthBridgeDisabled
+    uid: '@azure/msal-node.ClientAuthErrorCodes.nestedAppAuthBridgeDisabled'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nestedAppAuthBridgeDisabled: "nested_app_auth_bridge_disabled"'
+      return:
+        description: ''
+        type: '"nested_app_auth_bridge_disabled"'
+  - name: networkError
+    uid: '@azure/msal-node.ClientAuthErrorCodes.networkError'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'networkError: "network_error"'
+      return:
+        description: ''
+        type: '"network_error"'
+  - name: noAccountFound
+    uid: '@azure/msal-node.ClientAuthErrorCodes.noAccountFound'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'noAccountFound: "no_account_found"'
+      return:
+        description: ''
+        type: '"no_account_found"'
+  - name: noAccountInSilentRequest
+    uid: '@azure/msal-node.ClientAuthErrorCodes.noAccountInSilentRequest'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'noAccountInSilentRequest: "no_account_in_silent_request"'
+      return:
+        description: ''
+        type: '"no_account_in_silent_request"'
+  - name: noCryptoObject
+    uid: '@azure/msal-node.ClientAuthErrorCodes.noCryptoObject'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'noCryptoObject: "no_crypto_object"'
+      return:
+        description: ''
+        type: '"no_crypto_object"'
+  - name: nonceMismatch
+    uid: '@azure/msal-node.ClientAuthErrorCodes.nonceMismatch'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nonceMismatch: "nonce_mismatch"'
+      return:
+        description: ''
+        type: '"nonce_mismatch"'
+  - name: noNetworkConnectivity
+    uid: '@azure/msal-node.ClientAuthErrorCodes.noNetworkConnectivity'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'noNetworkConnectivity: "no_network_connectivity"'
+      return:
+        description: ''
+        type: '"no_network_connectivity"'
+  - name: nullOrEmptyToken
+    uid: '@azure/msal-node.ClientAuthErrorCodes.nullOrEmptyToken'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'nullOrEmptyToken: "null_or_empty_token"'
+      return:
+        description: ''
+        type: '"null_or_empty_token"'
+  - name: openIdConfigError
+    uid: '@azure/msal-node.ClientAuthErrorCodes.openIdConfigError'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'openIdConfigError: "openid_config_error"'
+      return:
+        description: ''
+        type: '"openid_config_error"'
+  - name: platformBrokerError
+    uid: '@azure/msal-node.ClientAuthErrorCodes.platformBrokerError'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'platformBrokerError: "platform_broker_error"'
+      return:
+        description: ''
+        type: '"platform_broker_error"'
+  - name: requestCannotBeMade
+    uid: '@azure/msal-node.ClientAuthErrorCodes.requestCannotBeMade'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'requestCannotBeMade: "request_cannot_be_made"'
+      return:
+        description: ''
+        type: '"request_cannot_be_made"'
+  - name: stateMismatch
+    uid: '@azure/msal-node.ClientAuthErrorCodes.stateMismatch'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateMismatch: "state_mismatch"'
+      return:
+        description: ''
+        type: '"state_mismatch"'
+  - name: stateNotFound
+    uid: '@azure/msal-node.ClientAuthErrorCodes.stateNotFound'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateNotFound: "state_not_found"'
+      return:
+        description: ''
+        type: '"state_not_found"'
+  - name: tokenClaimsCnfRequiredForSignedJwt
+    uid: '@azure/msal-node.ClientAuthErrorCodes.tokenClaimsCnfRequiredForSignedJwt'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        tokenClaimsCnfRequiredForSignedJwt:
+        "token_claims_cnf_required_for_signedjwt"
+      return:
+        description: ''
+        type: '"token_claims_cnf_required_for_signedjwt"'
+  - name: tokenParsingError
+    uid: '@azure/msal-node.ClientAuthErrorCodes.tokenParsingError'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tokenParsingError: "token_parsing_error"'
+      return:
+        description: ''
+        type: '"token_parsing_error"'
+  - name: tokenRefreshRequired
+    uid: '@azure/msal-node.ClientAuthErrorCodes.tokenRefreshRequired'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tokenRefreshRequired: "token_refresh_required"'
+      return:
+        description: ''
+        type: '"token_refresh_required"'
+  - name: unexpectedCredentialType
+    uid: '@azure/msal-node.ClientAuthErrorCodes.unexpectedCredentialType'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'unexpectedCredentialType: "unexpected_credential_type"'
+      return:
+        description: ''
+        type: '"unexpected_credential_type"'
+  - name: userCanceled
+    uid: '@azure/msal-node.ClientAuthErrorCodes.userCanceled'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'userCanceled: "user_canceled"'
+      return:
+        description: ''
+        type: '"user_canceled"'
