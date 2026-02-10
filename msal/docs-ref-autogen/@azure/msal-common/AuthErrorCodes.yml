@@ -4,3 +4,28 @@ name: AuthErrorCodes
 type: module
 package: '@azure/msal-common'
 summary: ''
+variables:
+  - name: postRequestFailed
+    uid: '@azure/msal-common.AuthErrorCodes.postRequestFailed'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'postRequestFailed: "post_request_failed"'
+      return:
+        description: ''
+        type: '"post_request_failed"'
+  - name: unexpectedError
+    uid: '@azure/msal-common.AuthErrorCodes.unexpectedError'
+    package: '@azure/msal-common'
+    summary: >-
+      AuthErrorMessage class containing string constants used by error codes and
+      messages.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'unexpectedError: "unexpected_error"'
+      return:
+        description: ''
+        type: '"unexpected_error"'

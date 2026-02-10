@@ -29,24 +29,19 @@ constructors:
           type: string
           description: ''
 methods:
-  - name: clone(string, string, string)
+  - name: clone(string, string)
     uid: '@azure/msal-node.Logger.clone'
     package: '@azure/msal-node'
     summary: Create new Logger with existing configurations.
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        function clone(packageName: string, packageVersion: string,
-        correlationId?: string): Logger
+      content: 'function clone(packageName: string, packageVersion: string): Logger'
       parameters:
         - id: packageName
           type: string
           description: ''
         - id: packageVersion
-          type: string
-          description: ''
-        - id: correlationId
           type: string
           description: ''
       return:
@@ -59,7 +54,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function error(message: string, correlationId?: string)'
+      content: 'function error(message: string, correlationId: string)'
       parameters:
         - id: message
           type: string
@@ -74,7 +69,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function errorPii(message: string, correlationId?: string)'
+      content: 'function errorPii(message: string, correlationId: string)'
       parameters:
         - id: message
           type: string
@@ -109,7 +104,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function info(message: string, correlationId?: string)'
+      content: 'function info(message: string, correlationId: string)'
       parameters:
         - id: message
           type: string
@@ -124,7 +119,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function infoPii(message: string, correlationId?: string)'
+      content: 'function infoPii(message: string, correlationId: string)'
       parameters:
         - id: message
           type: string
@@ -150,7 +145,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function trace(message: string, correlationId?: string)'
+      content: 'function trace(message: string, correlationId: string)'
       parameters:
         - id: message
           type: string
@@ -165,7 +160,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function tracePii(message: string, correlationId?: string)'
+      content: 'function tracePii(message: string, correlationId: string)'
       parameters:
         - id: message
           type: string
@@ -180,7 +175,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function verbose(message: string, correlationId?: string)'
+      content: 'function verbose(message: string, correlationId: string)'
       parameters:
         - id: message
           type: string
@@ -195,7 +190,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function verbosePii(message: string, correlationId?: string)'
+      content: 'function verbosePii(message: string, correlationId: string)'
       parameters:
         - id: message
           type: string
@@ -210,7 +205,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function warning(message: string, correlationId?: string)'
+      content: 'function warning(message: string, correlationId: string)'
       parameters:
         - id: message
           type: string
@@ -225,7 +220,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function warningPii(message: string, correlationId?: string)'
+      content: 'function warningPii(message: string, correlationId: string)'
       parameters:
         - id: message
           type: string

@@ -1,0 +1,23 @@
+### YamlMime:TSType
+name: MfaCompletedState
+uid: '@azure/msal-browser.MfaCompletedState'
+package: '@azure/msal-browser'
+summary: State indicating that the MFA flow has completed successfully.
+fullName: MfaCompletedState
+remarks: ''
+isDeprecated: false
+type: class
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.MfaCompletedState.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: string'
+      return:
+        description: ''
+        type: string
+extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

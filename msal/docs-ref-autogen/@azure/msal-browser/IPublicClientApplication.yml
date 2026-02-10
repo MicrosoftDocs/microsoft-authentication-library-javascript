@@ -89,7 +89,7 @@ methods:
           type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
           description: ''
         - id: eventTypes
-          type: EventType[]
+          type: <xref uid="@azure/msal-browser.EventType" />[]
           description: ''
       return:
         description: ''
@@ -126,22 +126,6 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: disableAccountStorageEvents()
-    uid: '@azure/msal-browser.IPublicClientApplication.disableAccountStorageEvents'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: function disableAccountStorageEvents()
-  - name: enableAccountStorageEvents()
-    uid: '@azure/msal-browser.IPublicClientApplication.enableAccountStorageEvents'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: function enableAccountStorageEvents()
   - name: getAccount(AccountFilter)
     uid: '@azure/msal-browser.IPublicClientApplication.getAccount'
     package: '@azure/msal-browser'
@@ -157,51 +141,6 @@ methods:
       return:
         description: ''
         type: null | <xref uid="@azure/msal-browser.AccountInfo" />
-  - name: getAccountByHomeId(string)
-    uid: '@azure/msal-browser.IPublicClientApplication.getAccountByHomeId'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function getAccountByHomeId(homeAccountId: string): null | AccountInfo'
-      parameters:
-        - id: homeAccountId
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
-  - name: getAccountByLocalId(string)
-    uid: '@azure/msal-browser.IPublicClientApplication.getAccountByLocalId'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function getAccountByLocalId(localId: string): null | AccountInfo'
-      parameters:
-        - id: localId
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
-  - name: getAccountByUsername(string)
-    uid: '@azure/msal-browser.IPublicClientApplication.getAccountByUsername'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function getAccountByUsername(userName: string): null | AccountInfo'
-      parameters:
-        - id: userName
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
   - name: getActiveAccount()
     uid: '@azure/msal-browser.IPublicClientApplication.getActiveAccount'
     package: '@azure/msal-browser'
@@ -213,14 +152,18 @@ methods:
       return:
         description: ''
         type: null | <xref uid="@azure/msal-browser.AccountInfo" />
-  - name: getAllAccounts()
+  - name: getAllAccounts(AccountFilter)
     uid: '@azure/msal-browser.IPublicClientApplication.getAllAccounts'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getAllAccounts(): AccountInfo[]'
+      content: 'function getAllAccounts(accountFilter?: AccountFilter): AccountInfo[]'
+      parameters:
+        - id: accountFilter
+          type: <xref uid="@azure/msal-common.AccountFilter" />
+          description: ''
       return:
         description: ''
         type: <xref uid="@azure/msal-browser.AccountInfo" />[]
@@ -235,18 +178,7 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-browser.Logger" />
-  - name: getTokenCache()
-    uid: '@azure/msal-browser.IPublicClientApplication.getTokenCache'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function getTokenCache(): ITokenCache'
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-browser.ITokenCache" />
-  - name: handleRedirectPromise(string)
+  - name: handleRedirectPromise(HandleRedirectPromiseOptions)
     uid: '@azure/msal-browser.IPublicClientApplication.handleRedirectPromise'
     package: '@azure/msal-browser'
     summary: ''
@@ -254,11 +186,11 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function handleRedirectPromise(hash?: string): Promise<null |
-        AuthenticationResult>
+        function handleRedirectPromise(options?: HandleRedirectPromiseOptions):
+        Promise<null | AuthenticationResult>
       parameters:
-        - id: hash
-          type: string
+        - id: options
+          type: <xref uid="@azure/msal-browser.HandleRedirectPromiseOptions" />
           description: ''
       return:
         description: ''
@@ -268,8 +200,7 @@ methods:
   - name: >-
       hydrateCache(AuthenticationResult, PopupRequest | RedirectRequest |
       SilentRequest | Partial<Omit<CommonAuthorizationUrlRequest, "responseMode"
-      | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-      "requestedClaimsHash" | "platformBroker">>)
+      | "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
     uid: '@azure/msal-browser.IPublicClientApplication.hydrateCache'
     package: '@azure/msal-browser'
     summary: ''
@@ -280,8 +211,8 @@ methods:
         function hydrateCache(result: AuthenticationResult, request:
         PopupRequest | RedirectRequest | SilentRequest |
         Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
-        "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
-        "platformBroker">>): Promise<void>
+        "codeChallenge" | "codeChallengeMethod" | "platformBroker">>):
+        Promise<void>
       parameters:
         - id: result
           type: <xref uid="@azure/msal-browser.AuthenticationResult" />
@@ -294,7 +225,7 @@ methods:
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
             "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
+            | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''
@@ -326,7 +257,7 @@ methods:
       content: 'function initializeWrapperLibrary(sku: WrapperSKU, version: string)'
       parameters:
         - id: sku
-          type: WrapperSKU
+          type: <xref uid="@azure/msal-browser.WrapperSKU" />
           description: ''
         - id: version
           type: string
@@ -359,21 +290,6 @@ methods:
       parameters:
         - id: request
           type: <xref uid="@azure/msal-browser.RedirectRequest" />
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;void&gt;
-  - name: logout(EndSessionRequest)
-    uid: '@azure/msal-browser.IPublicClientApplication.logout'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function logout(logoutRequest?: EndSessionRequest): Promise<void>'
-      parameters:
-        - id: logoutRequest
-          type: <xref uid="@azure/msal-browser.EndSessionRequest" />
           description: ''
       return:
         description: ''
@@ -477,8 +393,7 @@ methods:
           description: ''
   - name: >-
       ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash"
-      | "platformBroker">>)
+      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
     uid: '@azure/msal-browser.IPublicClientApplication.ssoSilent'
     package: '@azure/msal-browser'
     summary: ''
@@ -488,15 +403,14 @@ methods:
       content: >-
         function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
         "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "requestedClaimsHash" | "platformBroker">>):
-        Promise<AuthenticationResult>
+        "platformBroker">>): Promise<AuthenticationResult>
       parameters:
         - id: request
           type: >-
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
             "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
+            | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''

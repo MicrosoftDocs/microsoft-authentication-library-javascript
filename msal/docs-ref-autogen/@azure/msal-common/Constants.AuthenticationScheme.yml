@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: AuthenticationScheme
+uid: '@azure/msal-common.Constants.AuthenticationScheme'
+package: '@azure/msal-common'
+summary: ''
+fullName: AuthenticationScheme
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AuthenticationScheme =
+    (typeof AuthenticationScheme)[keyof typeof AuthenticationScheme]

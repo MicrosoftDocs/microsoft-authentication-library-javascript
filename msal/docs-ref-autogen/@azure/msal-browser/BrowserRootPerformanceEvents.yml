@@ -1,0 +1,127 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-browser.BrowserRootPerformanceEvents'
+name: BrowserRootPerformanceEvents
+type: module
+package: '@azure/msal-browser'
+summary: ''
+variables:
+  - name: AcquireTokenByCode
+    uid: '@azure/msal-browser.BrowserRootPerformanceEvents.AcquireTokenByCode'
+    package: '@azure/msal-browser'
+    summary: >-
+      acquireTokenByCode API (msal-browser and msal-node).
+
+      Used to acquire tokens by trading an authorization code against the token
+      endpoint.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AcquireTokenByCode: "acquireTokenByCode"'
+      return:
+        description: ''
+        type: '"acquireTokenByCode"'
+  - name: AcquireTokenPopup
+    uid: '@azure/msal-browser.BrowserRootPerformanceEvents.AcquireTokenPopup'
+    package: '@azure/msal-browser'
+    summary: |-
+      acquireTokenPopup (msal-browser).
+      Used to acquire a new access token interactively through pop ups
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AcquireTokenPopup: "acquireTokenPopup"'
+      return:
+        description: ''
+        type: '"acquireTokenPopup"'
+  - name: AcquireTokenPreRedirect
+    uid: '@azure/msal-browser.BrowserRootPerformanceEvents.AcquireTokenPreRedirect'
+    package: '@azure/msal-browser'
+    summary: |-
+      acquireTokenPreRedirect (msal-browser).
+      First part of the redirect flow.
+      Used to acquire a new access token interactively through redirects.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AcquireTokenPreRedirect: "acquireTokenPreRedirect"'
+      return:
+        description: ''
+        type: '"acquireTokenPreRedirect"'
+  - name: AcquireTokenRedirect
+    uid: '@azure/msal-browser.BrowserRootPerformanceEvents.AcquireTokenRedirect'
+    package: '@azure/msal-browser'
+    summary: |-
+      acquireTokenRedirect (msal-browser).
+      Second part of the redirect flow.
+      Used to acquire a new access token interactively through redirects.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AcquireTokenRedirect: "acquireTokenRedirect"'
+      return:
+        description: ''
+        type: '"acquireTokenRedirect"'
+  - name: AcquireTokenSilent
+    uid: '@azure/msal-browser.BrowserRootPerformanceEvents.AcquireTokenSilent'
+    package: '@azure/msal-browser'
+    summary: >-
+      acquireTokenSilent API (msal-browser and msal-node).
+
+      Used to silently acquire a new access token (from the cache or the
+      network).
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AcquireTokenSilent: "acquireTokenSilent"'
+      return:
+        description: ''
+        type: '"acquireTokenSilent"'
+  - name: InitializeClientApplication
+    uid: >-
+      @azure/msal-browser.BrowserRootPerformanceEvents.InitializeClientApplication
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'InitializeClientApplication: "initializeClientApplication"'
+      return:
+        description: ''
+        type: '"initializeClientApplication"'
+  - name: LoadExternalTokens
+    uid: '@azure/msal-browser.BrowserRootPerformanceEvents.LoadExternalTokens'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'LoadExternalTokens: "loadExternalTokens"'
+      return:
+        description: ''
+        type: '"loadExternalTokens"'
+  - name: LocalStorageUpdated
+    uid: '@azure/msal-browser.BrowserRootPerformanceEvents.LocalStorageUpdated'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'LocalStorageUpdated: "localStorageUpdated"'
+      return:
+        description: ''
+        type: '"localStorageUpdated"'
+  - name: SsoSilent
+    uid: '@azure/msal-browser.BrowserRootPerformanceEvents.SsoSilent'
+    package: '@azure/msal-browser'
+    summary: >-
+      ssoSilent API (msal-browser).
+
+      Used to silently acquire an authorization code and set of tokens using a
+      hidden iframe.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SsoSilent: "ssoSilent"'
+      return:
+        description: ''
+        type: '"ssoSilent"'

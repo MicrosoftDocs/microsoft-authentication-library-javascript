@@ -53,7 +53,7 @@ syntax: |
     extExpiresOn?: Date
     familyId?: string
     fromCache: boolean
-    fromNativeBroker?: boolean
+    fromPlatformBroker?: boolean
     idToken: string
     idTokenClaims: object
     msGraphHost?: string

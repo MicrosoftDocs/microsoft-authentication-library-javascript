@@ -2,18 +2,7 @@
 name: LibraryStateObject
 uid: '@azure/msal-common.LibraryStateObject'
 package: '@azure/msal-common'
-summary: >-
-  Type which defines the object that is stringified, encoded and sent in the
-  state value.
-
-  Contains the following:
-
-  - id - unique identifier for this request
-
-  - ts - timestamp for the time the request was made. Used to ensure that token
-  expiration is not calculated incorrectly.
-
-  - platformState - string value sent from the platform.
+summary: Type which defines library state
 fullName: LibraryStateObject
 remarks: ''
 isDeprecated: false

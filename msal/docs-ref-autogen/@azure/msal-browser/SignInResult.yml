@@ -125,6 +125,17 @@ methods:
       return:
         description: ''
         type: this
+  - name: isMfaRequired()
+    uid: '@azure/msal-browser.SignInResult.isMfaRequired'
+    package: '@azure/msal-browser'
+    summary: Checks if the result requires MFA.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isMfaRequired(): this'
+      return:
+        description: ''
+        type: this
   - name: isPasswordRequired()
     uid: '@azure/msal-browser.SignInResult.isPasswordRequired'
     package: '@azure/msal-browser'

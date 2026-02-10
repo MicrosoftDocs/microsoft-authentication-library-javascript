@@ -1,354 +1,216 @@
-### YamlMime:TSEnum
-name: PerformanceEvents
+### YamlMime:TSPackage
 uid: '@azure/msal-common.PerformanceEvents'
+name: PerformanceEvents
+type: module
 package: '@azure/msal-common'
-summary: >-
-  Enumeration of operations that are instrumented by have their performance
-  measured by the PerformanceClient.
-fullName: PerformanceEvents
-remarks: ''
-isDeprecated: false
-fields:
-  - name: AcquireTokenByBroker
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenByBroker'
-    package: '@azure/msal-common'
-    summary: Time taken for token acquisition by broker
-  - name: AcquireTokenByCode
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenByCode'
-    package: '@azure/msal-common'
-    summary: >-
-      acquireTokenByCode API (msal-browser and msal-node).
-
-      Used to acquire tokens by trading an authorization code against the token
-      endpoint.
-  - name: AcquireTokenByCodeAsync
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenByCodeAsync'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: AcquireTokenByRefreshToken
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenByRefreshToken'
-    package: '@azure/msal-common'
-    summary: >-
-      acquireTokenByRefreshToken API (msal-browser and msal-node).
-
-      Used to renew an access token using a refresh token against the token
-      endpoint.
-  - name: AcquireTokenByRefreshTokenInBroker
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenByRefreshTokenInBroker'
-    package: '@azure/msal-common'
-    summary: acquireTokenByRefreshToken API in BrokerClientApplication (PW-Broker) .
-  - name: AcquireTokenBySilentIframe
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenBySilentIframe'
-    package: '@azure/msal-common'
-    summary: |-
-      acquireTokenBySilentIframe (msal-browser).
-      Internal API for acquiring token by silent Iframe
-  - name: AcquireTokenFromCache
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenFromCache'
-    package: '@azure/msal-common'
-    summary: |-
-      acquireTokenFromCache (msal-browser).
-      Internal API for acquiring token from cache
-  - name: AcquireTokenPopup
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenPopup'
-    package: '@azure/msal-common'
-    summary: |-
-      acquireTokenPopup (msal-browser).
-      Used to acquire a new access token interactively through pop ups
-  - name: AcquireTokenPreRedirect
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenPreRedirect'
-    package: '@azure/msal-common'
-    summary: |-
-      acquireTokenPreRedirect (msal-browser).
-      First part of the redirect flow.
-      Used to acquire a new access token interactively through redirects.
-  - name: AcquireTokenRedirect
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenRedirect'
-    package: '@azure/msal-common'
-    summary: |-
-      acquireTokenRedirect (msal-browser).
-      Second part of the redirect flow.
-      Used to acquire a new access token interactively through redirects.
-  - name: AcquireTokenSilent
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenSilent'
-    package: '@azure/msal-common'
-    summary: >-
-      acquireTokenSilent API (msal-browser and msal-node).
-
-      Used to silently acquire a new access token (from the cache or the
-      network).
-  - name: AcquireTokenSilentAsync
-    uid: '@azure/msal-common.PerformanceEvents.AcquireTokenSilentAsync'
-    package: '@azure/msal-common'
-    summary: |-
-      acquireTokenSilentAsync (msal-browser).
-      Internal API for acquireTokenSilent.
-  - name: AuthClientAcquireToken
-    uid: '@azure/msal-common.PerformanceEvents.AuthClientAcquireToken'
-    package: '@azure/msal-common'
-    summary: APIs in Authorization Code Client (msal-common)
+summary: ''
+variables:
   - name: AuthClientCreateTokenRequestBody
     uid: '@azure/msal-common.PerformanceEvents.AuthClientCreateTokenRequestBody'
     package: '@azure/msal-common'
     summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AuthClientCreateTokenRequestBody: "authClientCreateTokenRequestBody"'
+      return:
+        description: ''
+        type: '"authClientCreateTokenRequestBody"'
   - name: AuthClientExecuteTokenRequest
     uid: '@azure/msal-common.PerformanceEvents.AuthClientExecuteTokenRequest'
     package: '@azure/msal-common'
-    summary: ''
-  - name: AuthorityFactoryCreateDiscoveredInstance
-    uid: >-
-      @azure/msal-common.PerformanceEvents.AuthorityFactoryCreateDiscoveredInstance
-    package: '@azure/msal-common'
-    summary: Authority functions
+    summary: APIs in Authorization Code Client (msal-common)
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AuthClientExecuteTokenRequest: "authClientExecuteTokenRequest"'
+      return:
+        description: ''
+        type: '"authClientExecuteTokenRequest"'
   - name: AuthorityGetCloudDiscoveryMetadataFromNetwork
     uid: >-
       @azure/msal-common.PerformanceEvents.AuthorityGetCloudDiscoveryMetadataFromNetwork
     package: '@azure/msal-common'
     summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        AuthorityGetCloudDiscoveryMetadataFromNetwork:
+        "authorityGetCloudDiscoveryMetadataFromNetwork"
+      return:
+        description: ''
+        type: '"authorityGetCloudDiscoveryMetadataFromNetwork"'
   - name: AuthorityGetEndpointMetadataFromNetwork
     uid: >-
       @azure/msal-common.PerformanceEvents.AuthorityGetEndpointMetadataFromNetwork
     package: '@azure/msal-common'
     summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        AuthorityGetEndpointMetadataFromNetwork:
+        "authorityGetEndpointMetadataFromNetwork"
+      return:
+        description: ''
+        type: '"authorityGetEndpointMetadataFromNetwork"'
   - name: AuthorityResolveEndpointsAsync
     uid: '@azure/msal-common.PerformanceEvents.AuthorityResolveEndpointsAsync'
     package: '@azure/msal-common'
-    summary: ''
-  - name: AuthorityResolveEndpointsFromLocalSources
-    uid: >-
-      @azure/msal-common.PerformanceEvents.AuthorityResolveEndpointsFromLocalSources
-    package: '@azure/msal-common'
-    summary: ''
+    summary: Authority functions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AuthorityResolveEndpointsAsync: "authorityResolveEndpointsAsync"'
+      return:
+        description: ''
+        type: '"authorityResolveEndpointsAsync"'
   - name: AuthorityUpdateCloudDiscoveryMetadata
     uid: '@azure/msal-common.PerformanceEvents.AuthorityUpdateCloudDiscoveryMetadata'
     package: '@azure/msal-common'
     summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        AuthorityUpdateCloudDiscoveryMetadata:
+        "authorityUpdateCloudDiscoveryMetadata"
+      return:
+        description: ''
+        type: '"authorityUpdateCloudDiscoveryMetadata"'
   - name: AuthorityUpdateEndpointMetadata
     uid: '@azure/msal-common.PerformanceEvents.AuthorityUpdateEndpointMetadata'
     package: '@azure/msal-common'
     summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AuthorityUpdateEndpointMetadata: "authorityUpdateEndpointMetadata"'
+      return:
+        description: ''
+        type: '"authorityUpdateEndpointMetadata"'
   - name: AuthorityUpdateMetadataWithRegionalInformation
     uid: >-
       @azure/msal-common.PerformanceEvents.AuthorityUpdateMetadataWithRegionalInformation
     package: '@azure/msal-common'
     summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        AuthorityUpdateMetadataWithRegionalInformation:
+        "authorityUpdateMetadataWithRegionalInformation"
+      return:
+        description: ''
+        type: '"authorityUpdateMetadataWithRegionalInformation"'
   - name: AuthorizationCodeClientExecutePostToTokenEndpoint
     uid: >-
       @azure/msal-common.PerformanceEvents.AuthorizationCodeClientExecutePostToTokenEndpoint
     package: '@azure/msal-common'
     summary: ''
-  - name: AwaitConcurrentIframe
-    uid: '@azure/msal-common.PerformanceEvents.AwaitConcurrentIframe'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: Base64Decode
-    uid: '@azure/msal-common.PerformanceEvents.Base64Decode'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: BaseClientCreateTokenRequestHeaders
-    uid: '@azure/msal-common.PerformanceEvents.BaseClientCreateTokenRequestHeaders'
-    package: '@azure/msal-common'
-    summary: Time spent creating default headers for requests to token endpoint
-  - name: BrokerHandhshake
-    uid: '@azure/msal-common.PerformanceEvents.BrokerHandhshake'
-    package: '@azure/msal-common'
-    summary: >-
-      Used to measure the time taken for completing embedded-broker handshake
-      (PW-Broker).
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        AuthorizationCodeClientExecutePostToTokenEndpoint:
+        "authorizationCodeClientExecutePostToTokenEndpoint"
+      return:
+        description: ''
+        type: '"authorizationCodeClientExecutePostToTokenEndpoint"'
   - name: CacheManagerGetRefreshToken
     uid: '@azure/msal-common.PerformanceEvents.CacheManagerGetRefreshToken'
     package: '@azure/msal-common'
-    summary: ''
-  - name: ClearTokensAndKeysWithClaims
-    uid: '@azure/msal-common.PerformanceEvents.ClearTokensAndKeysWithClaims'
-    package: '@azure/msal-common'
     summary: Cache operations
-  - name: CryptoOptsGetPublicKeyThumbprint
-    uid: '@azure/msal-common.PerformanceEvents.CryptoOptsGetPublicKeyThumbprint'
-    package: '@azure/msal-common'
-    summary: >-
-      getPublicKeyThumbprint API in CryptoOpts class (msal-browser).
-
-      Used to generate a public/private keypair and generate a public key
-      thumbprint for pop requests.
-  - name: CryptoOptsSignJwt
-    uid: '@azure/msal-common.PerformanceEvents.CryptoOptsSignJwt'
-    package: '@azure/msal-common'
-    summary: |-
-      signJwt API in CryptoOpts class (msal-browser).
-      Used to signed a pop token.
-  - name: Decrypt
-    uid: '@azure/msal-common.PerformanceEvents.Decrypt'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: DecryptEarResponse
-    uid: '@azure/msal-common.PerformanceEvents.DecryptEarResponse'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: DeserializeResponse
-    uid: '@azure/msal-common.PerformanceEvents.DeserializeResponse'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: Encrypt
-    uid: '@azure/msal-common.PerformanceEvents.Encrypt'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: FetchAccountIdWithNativeBroker
-    uid: '@azure/msal-common.PerformanceEvents.FetchAccountIdWithNativeBroker'
-    package: '@azure/msal-common'
-    summary: |-
-      acquireToken APIs in msal-browser.
-      Used to make an /authorize endpoint call with native brokering enabled.
-  - name: GenerateBaseKey
-    uid: '@azure/msal-common.PerformanceEvents.GenerateBaseKey'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: GenerateCodeChallengeFromVerifier
-    uid: '@azure/msal-common.PerformanceEvents.GenerateCodeChallengeFromVerifier'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: GenerateCodeVerifier
-    uid: '@azure/msal-common.PerformanceEvents.GenerateCodeVerifier'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: GenerateEarKey
-    uid: '@azure/msal-common.PerformanceEvents.GenerateEarKey'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: GenerateHKDF
-    uid: '@azure/msal-common.PerformanceEvents.GenerateHKDF'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: GeneratePkceCodes
-    uid: '@azure/msal-common.PerformanceEvents.GeneratePkceCodes'
-    package: '@azure/msal-common'
-    summary: Crypto Operations
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CacheManagerGetRefreshToken: "cacheManagerGetRefreshToken"'
+      return:
+        description: ''
+        type: '"cacheManagerGetRefreshToken"'
   - name: GetAuthCodeUrl
     uid: '@azure/msal-common.PerformanceEvents.GetAuthCodeUrl'
     package: '@azure/msal-common'
     summary: getAuthCodeUrl API (msal-browser and msal-node).
-  - name: GetCloudDiscoveryMetadataFromNetworkMeasurement
-    uid: >-
-      @azure/msal-common.PerformanceEvents.GetCloudDiscoveryMetadataFromNetworkMeasurement
-    package: '@azure/msal-common'
-    summary: ''
-  - name: GetEndpointMetadataFromNetwork
-    uid: '@azure/msal-common.PerformanceEvents.GetEndpointMetadataFromNetwork'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: GetRandomValues
-    uid: '@azure/msal-common.PerformanceEvents.GetRandomValues'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: GetStandardParams
-    uid: '@azure/msal-common.PerformanceEvents.GetStandardParams'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: HandleCodeResponse
-    uid: '@azure/msal-common.PerformanceEvents.HandleCodeResponse'
-    package: '@azure/msal-common'
-    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'GetAuthCodeUrl: "getAuthCodeUrl"'
+      return:
+        description: ''
+        type: '"getAuthCodeUrl"'
   - name: HandleCodeResponseFromServer
     uid: '@azure/msal-common.PerformanceEvents.HandleCodeResponseFromServer'
     package: '@azure/msal-common'
     summary: Functions from InteractionHandler (msal-browser)
-  - name: HandleNativeRedirectPromiseMeasurement
-    uid: >-
-      @azure/msal-common.PerformanceEvents.HandleNativeRedirectPromiseMeasurement
-    package: '@azure/msal-common'
-    summary: ''
-  - name: HandleRedirectPromiseMeasurement
-    uid: '@azure/msal-common.PerformanceEvents.HandleRedirectPromiseMeasurement'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: HandleResponseCode
-    uid: '@azure/msal-common.PerformanceEvents.HandleResponseCode'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: HandleResponseEar
-    uid: '@azure/msal-common.PerformanceEvents.HandleResponseEar'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: HandleResponsePlatformBroker
-    uid: '@azure/msal-common.PerformanceEvents.HandleResponsePlatformBroker'
-    package: '@azure/msal-common'
-    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HandleCodeResponseFromServer: "handleCodeResponseFromServer"'
+      return:
+        description: ''
+        type: '"handleCodeResponseFromServer"'
   - name: HandleServerTokenResponse
     uid: '@azure/msal-common.PerformanceEvents.HandleServerTokenResponse'
     package: '@azure/msal-common'
     summary: handleServerTokenResponse API in ResponseHandler (msal-common)
-  - name: ImportExistingCache
-    uid: '@azure/msal-common.PerformanceEvents.ImportExistingCache'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: InitializeBaseRequest
-    uid: '@azure/msal-common.PerformanceEvents.InitializeBaseRequest'
-    package: '@azure/msal-common'
-    summary: >-
-      Internal API for initializing base request in BaseInteractionClient
-      (msal-browser)
-  - name: InitializeCache
-    uid: '@azure/msal-common.PerformanceEvents.InitializeCache'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: InitializeClientApplication
-    uid: '@azure/msal-common.PerformanceEvents.InitializeClientApplication'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: InitializeSilentRequest
-    uid: '@azure/msal-common.PerformanceEvents.InitializeSilentRequest'
-    package: '@azure/msal-common'
-    summary: >-
-      Internal API for initializing silent request in SilentCacheClient
-      (msal-browser)
-  - name: LocalStorageUpdated
-    uid: '@azure/msal-common.PerformanceEvents.LocalStorageUpdated'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: NativeGenerateAuthResult
-    uid: '@azure/msal-common.PerformanceEvents.NativeGenerateAuthResult'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: NativeInteractionClientAcquireToken
-    uid: '@azure/msal-common.PerformanceEvents.NativeInteractionClientAcquireToken'
-    package: '@azure/msal-common'
-    summary: >-
-      acquireToken API in NativeInteractionClient class (msal-browser).
-
-      Used to acquire a token from Native component when native brokering is
-      enabled.
-  - name: NativeMessageHandlerHandshake
-    uid: '@azure/msal-common.PerformanceEvents.NativeMessageHandlerHandshake'
-    package: '@azure/msal-common'
-    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HandleServerTokenResponse: "handleServerTokenResponse"'
+      return:
+        description: ''
+        type: '"handleServerTokenResponse"'
   - name: NetworkClientSendPostRequestAsync
     uid: '@azure/msal-common.PerformanceEvents.NetworkClientSendPostRequestAsync'
     package: '@azure/msal-common'
     summary: >-
       Time spent sending/waiting for the response of a request to the token
       endpoint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'NetworkClientSendPostRequestAsync: "networkClientSendPostRequestAsync"'
+      return:
+        description: ''
+        type: '"networkClientSendPostRequestAsync"'
   - name: PopTokenGenerateCnf
     uid: '@azure/msal-common.PerformanceEvents.PopTokenGenerateCnf'
     package: '@azure/msal-common'
     summary: Generate functions in PopTokenGenerator (msal-common)
-  - name: PopTokenGenerateKid
-    uid: '@azure/msal-common.PerformanceEvents.PopTokenGenerateKid'
-    package: '@azure/msal-common'
-    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'PopTokenGenerateCnf: "popTokenGenerateCnf"'
+      return:
+        description: ''
+        type: '"popTokenGenerateCnf"'
   - name: RefreshTokenClientAcquireToken
     uid: '@azure/msal-common.PerformanceEvents.RefreshTokenClientAcquireToken'
     package: '@azure/msal-common'
     summary: Time taken for acquiring refresh token , records RT size
-  - name: RefreshTokenClientAcquireTokenByRefreshToken
-    uid: >-
-      @azure/msal-common.PerformanceEvents.RefreshTokenClientAcquireTokenByRefreshToken
-    package: '@azure/msal-common'
-    summary: acquireTokenByRefreshToken API in RefreshTokenClient (msal-common).
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'RefreshTokenClientAcquireToken: "refreshTokenClientAcquireToken"'
+      return:
+        description: ''
+        type: '"refreshTokenClientAcquireToken"'
   - name: RefreshTokenClientAcquireTokenWithCachedRefreshToken
     uid: >-
       @azure/msal-common.PerformanceEvents.RefreshTokenClientAcquireTokenWithCachedRefreshToken
     package: '@azure/msal-common'
     summary: Time taken for acquiring cached refresh token
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        RefreshTokenClientAcquireTokenWithCachedRefreshToken:
+        "refreshTokenClientAcquireTokenWithCachedRefreshToken"
+      return:
+        description: ''
+        type: '"refreshTokenClientAcquireTokenWithCachedRefreshToken"'
   - name: RefreshTokenClientCreateTokenRequestBody
     uid: >-
       @azure/msal-common.PerformanceEvents.RefreshTokenClientCreateTokenRequestBody
@@ -356,136 +218,108 @@ fields:
     summary: >-
       Helper function to create token request body in RefreshTokenClient
       (msal-common).
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        RefreshTokenClientCreateTokenRequestBody:
+        "refreshTokenClientCreateTokenRequestBody"
+      return:
+        description: ''
+        type: '"refreshTokenClientCreateTokenRequestBody"'
   - name: RefreshTokenClientExecutePostToTokenEndpoint
     uid: >-
       @azure/msal-common.PerformanceEvents.RefreshTokenClientExecutePostToTokenEndpoint
     package: '@azure/msal-common'
     summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        RefreshTokenClientExecutePostToTokenEndpoint:
+        "refreshTokenClientExecutePostToTokenEndpoint"
+      return:
+        description: ''
+        type: '"refreshTokenClientExecutePostToTokenEndpoint"'
   - name: RefreshTokenClientExecuteTokenRequest
     uid: '@azure/msal-common.PerformanceEvents.RefreshTokenClientExecuteTokenRequest'
     package: '@azure/msal-common'
     summary: Time spent on the network for refresh token acquisition
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        RefreshTokenClientExecuteTokenRequest:
+        "refreshTokenClientExecuteTokenRequest"
+      return:
+        description: ''
+        type: '"refreshTokenClientExecuteTokenRequest"'
   - name: RegionDiscoveryDetectRegion
     uid: '@azure/msal-common.PerformanceEvents.RegionDiscoveryDetectRegion'
     package: '@azure/msal-common'
     summary: Region Discovery functions
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'RegionDiscoveryDetectRegion: "regionDiscoveryDetectRegion"'
+      return:
+        description: ''
+        type: '"regionDiscoveryDetectRegion"'
   - name: RegionDiscoveryGetCurrentVersion
     uid: '@azure/msal-common.PerformanceEvents.RegionDiscoveryGetCurrentVersion'
     package: '@azure/msal-common'
     summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'RegionDiscoveryGetCurrentVersion: "regionDiscoveryGetCurrentVersion"'
+      return:
+        description: ''
+        type: '"regionDiscoveryGetCurrentVersion"'
   - name: RegionDiscoveryGetRegionFromIMDS
     uid: '@azure/msal-common.PerformanceEvents.RegionDiscoveryGetRegionFromIMDS'
     package: '@azure/msal-common'
     summary: ''
-  - name: RemoveHiddenIframe
-    uid: '@azure/msal-common.PerformanceEvents.RemoveHiddenIframe'
-    package: '@azure/msal-common'
-    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'RegionDiscoveryGetRegionFromIMDS: "regionDiscoveryGetRegionFromIMDS"'
+      return:
+        description: ''
+        type: '"regionDiscoveryGetRegionFromIMDS"'
   - name: SetUserData
     uid: '@azure/msal-common.PerformanceEvents.SetUserData'
     package: '@azure/msal-common'
     summary: ''
-  - name: Sha256Digest
-    uid: '@azure/msal-common.PerformanceEvents.Sha256Digest'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: SilentCacheClientAcquireToken
-    uid: '@azure/msal-common.PerformanceEvents.SilentCacheClientAcquireToken'
-    package: '@azure/msal-common'
-    summary: |-
-      acquireToken API in the SilentCacheClient class (msal-browser).
-      Used to read access tokens from the cache.
-  - name: SilentFlowClientAcquireCachedToken
-    uid: '@azure/msal-common.PerformanceEvents.SilentFlowClientAcquireCachedToken'
-    package: '@azure/msal-common'
-    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SetUserData: "setUserData"'
+      return:
+        description: ''
+        type: '"setUserData"'
   - name: SilentFlowClientGenerateResultFromCacheRecord
     uid: >-
       @azure/msal-common.PerformanceEvents.SilentFlowClientGenerateResultFromCacheRecord
     package: '@azure/msal-common'
     summary: ''
-  - name: SilentHandlerInitiateAuthRequest
-    uid: '@azure/msal-common.PerformanceEvents.SilentHandlerInitiateAuthRequest'
-    package: '@azure/msal-common'
-    summary: SilentHandler
-  - name: SilentHandlerLoadFrame
-    uid: '@azure/msal-common.PerformanceEvents.SilentHandlerLoadFrame'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: SilentHandlerLoadFrameSync
-    uid: '@azure/msal-common.PerformanceEvents.SilentHandlerLoadFrameSync'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: SilentHandlerMonitorIframeForHash
-    uid: '@azure/msal-common.PerformanceEvents.SilentHandlerMonitorIframeForHash'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: SilentIframeClientAcquireToken
-    uid: '@azure/msal-common.PerformanceEvents.SilentIframeClientAcquireToken'
-    package: '@azure/msal-common'
-    summary: >-
-      acquireToken API in the SilentIframeClient class (msal-browser).
-
-      Used to acquire a new set of tokens from the authorize endpoint in a
-      hidden iframe.
-  - name: SilentIframeClientTokenHelper
-    uid: '@azure/msal-common.PerformanceEvents.SilentIframeClientTokenHelper'
-    package: '@azure/msal-common'
-    summary: Helper function in SilentIframeClient class (msal-browser).
-  - name: SilentRefreshClientAcquireToken
-    uid: '@azure/msal-common.PerformanceEvents.SilentRefreshClientAcquireToken'
-    package: '@azure/msal-common'
-    summary: >-
-      acquireToken API in SilentRereshClient (msal-browser).
-
-      Used to acquire a new set of tokens from the token endpoint using a
-      refresh token.
-  - name: SsoSilent
-    uid: '@azure/msal-common.PerformanceEvents.SsoSilent'
-    package: '@azure/msal-common'
-    summary: >-
-      ssoSilent API (msal-browser).
-
-      Used to silently acquire an authorization code and set of tokens using a
-      hidden iframe.
-  - name: StandardInteractionClientCreateAuthCodeClient
-    uid: >-
-      @azure/msal-common.PerformanceEvents.StandardInteractionClientCreateAuthCodeClient
-    package: '@azure/msal-common'
-    summary: Helper functions in StandardInteractionClient class (msal-browser)
-  - name: StandardInteractionClientGetClientConfiguration
-    uid: >-
-      @azure/msal-common.PerformanceEvents.StandardInteractionClientGetClientConfiguration
-    package: '@azure/msal-common'
-    summary: ''
-  - name: StandardInteractionClientGetDiscoveredAuthority
-    uid: >-
-      @azure/msal-common.PerformanceEvents.StandardInteractionClientGetDiscoveredAuthority
-    package: '@azure/msal-common'
-    summary: >-
-      getDiscoveredAuthority API in StandardInteractionClient class
-      (msal-browser).
-
-      Used to load authority metadata for a request.
-  - name: StandardInteractionClientInitializeAuthorizationRequest
-    uid: >-
-      @azure/msal-common.PerformanceEvents.StandardInteractionClientInitializeAuthorizationRequest
-    package: '@azure/msal-common'
-    summary: ''
-  - name: UpdateCloudDiscoveryMetadataMeasurement
-    uid: >-
-      @azure/msal-common.PerformanceEvents.UpdateCloudDiscoveryMetadataMeasurement
-    package: '@azure/msal-common'
-    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        SilentFlowClientGenerateResultFromCacheRecord:
+        "silentFlowClientGenerateResultFromCacheRecord"
+      return:
+        description: ''
+        type: '"silentFlowClientGenerateResultFromCacheRecord"'
   - name: UpdateTokenEndpointAuthority
     uid: '@azure/msal-common.PerformanceEvents.UpdateTokenEndpointAuthority'
     package: '@azure/msal-common'
     summary: ''
-  - name: UrlEncodeArr
-    uid: '@azure/msal-common.PerformanceEvents.UrlEncodeArr'
-    package: '@azure/msal-common'
-    summary: ''
-  - name: UsernamePasswordClientAcquireToken
-    uid: '@azure/msal-common.PerformanceEvents.UsernamePasswordClientAcquireToken'
-    package: '@azure/msal-common'
-    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'UpdateTokenEndpointAuthority: "updateTokenEndpointAuthority"'
+      return:
+        description: ''
+        type: '"updateTokenEndpointAuthority"'

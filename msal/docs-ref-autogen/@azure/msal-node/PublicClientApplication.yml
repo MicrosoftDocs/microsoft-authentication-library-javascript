@@ -96,9 +96,7 @@ inheritedMethods:
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" />&gt;
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.acquireTokenByCode](xref:@azure/msal-node.ClientApplication.acquireTokenByCode)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.acquireTokenByCode
   - name: acquireTokenByRefreshToken(RefreshTokenRequest)
     uid: '@azure/msal-node.PublicClientApplication.acquireTokenByRefreshToken'
     package: '@azure/msal-node'
@@ -129,9 +127,7 @@ inheritedMethods:
         type: >-
           Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
           />&gt;
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.acquireTokenByRefreshToken](xref:@azure/msal-node.ClientApplication.acquireTokenByRefreshToken)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.acquireTokenByRefreshToken
   - name: acquireTokenByUsernamePassword(UsernamePasswordRequest)
     uid: '@azure/msal-node.PublicClientApplication.acquireTokenByUsernamePassword'
     package: '@azure/msal-node'
@@ -165,9 +161,7 @@ inheritedMethods:
         type: >-
           Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
           />&gt;
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.acquireTokenByUsernamePassword](xref:@azure/msal-node.ClientApplication.acquireTokenByUsernamePassword)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.acquireTokenByUsernamePassword
   - name: clearCache()
     uid: '@azure/msal-node.PublicClientApplication.clearCache'
     package: '@azure/msal-node'
@@ -176,9 +170,7 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: function clearCache()
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.clearCache](xref:@azure/msal-node.ClientApplication.clearCache)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.clearCache
   - name: getAuthCodeUrl(AuthorizationUrlRequest)
     uid: '@azure/msal-node.PublicClientApplication.getAuthCodeUrl'
     package: '@azure/msal-node'
@@ -212,9 +204,7 @@ inheritedMethods:
       return:
         description: ''
         type: Promise&lt;string&gt;
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.getAuthCodeUrl](xref:@azure/msal-node.ClientApplication.getAuthCodeUrl)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.getAuthCodeUrl
   - name: getLogger()
     uid: '@azure/msal-node.PublicClientApplication.getLogger'
     package: '@azure/msal-node'
@@ -226,9 +216,7 @@ inheritedMethods:
       return:
         description: ''
         type: <xref uid="@azure/msal-node.Logger" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.getLogger](xref:@azure/msal-node.ClientApplication.getLogger)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.getLogger
   - name: getTokenCache()
     uid: '@azure/msal-node.PublicClientApplication.getTokenCache'
     package: '@azure/msal-node'
@@ -240,9 +228,7 @@ inheritedMethods:
       return:
         description: ''
         type: <xref uid="@azure/msal-node.TokenCache" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.getTokenCache](xref:@azure/msal-node.ClientApplication.getTokenCache)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.getTokenCache
   - name: setLogger(Logger)
     uid: '@azure/msal-node.PublicClientApplication.setLogger'
     package: '@azure/msal-node'
@@ -257,9 +243,7 @@ inheritedMethods:
         - id: logger
           type: <xref uid="@azure/msal-node.Logger" />
           description: Logger instance
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.setLogger](xref:@azure/msal-node.ClientApplication.setLogger)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.setLogger
 methods:
   - name: acquireTokenByDeviceCode(DeviceCodeRequest)
     uid: '@azure/msal-node.PublicClientApplication.acquireTokenByDeviceCode'
@@ -365,4 +349,4 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-extends: <xref uid="@azure/msal-node.ClientApplication" />
+extends: ClientApplication

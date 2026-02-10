@@ -2,36 +2,13 @@
 name: InteractiveRequest
 uid: '@azure/msal-node.InteractiveRequest'
 package: '@azure/msal-node'
-summary: >-
-  Request object passed by user to configure acquireTokenInteractive API
-
-
-  - openBrowser             - Function to open a browser instance on user's
-  system.
-
-  - scopes                  - Array of scopes the application is requesting
-  access to.
-
-  - successTemplate:        - Template to be displayed on the opened browser
-  instance upon successful token acquisition.
-
-  - errorTemplate           - Template to be displayed on the opened browser
-  instance upon token acquisition failure.
-
-  - windowHandle            - Used in native broker flows to properly parent the
-  native broker window
-
-  - loopbackClient          - Custom implementation for a loopback server to
-  listen for authorization code response.
+summary: Request object passed by user to configure acquireTokenInteractive API
 fullName: InteractiveRequest
 remarks: ''
 isDeprecated: false
 syntax: |
   type InteractiveRequest = Partial<
-    Omit<
-      CommonAuthorizationUrlRequest,
-      "scopes" | "requestedClaimsHash" | "storeInCache"
-    >
+    Omit<CommonAuthorizationUrlRequest, "scopes" | "storeInCache">
   > & {
     errorTemplate?: string
     loopbackClient?: ILoopbackClient

@@ -9,7 +9,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: AuthError(string, string, string)
-    uid: '@azure/msal-common.AuthError.constructor'
+    uid: '@azure/msal-common.AuthError.constructor_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -65,6 +65,18 @@ properties:
       return:
         description: ''
         type: string
+  - name: platformBrokerError
+    uid: '@azure/msal-common.AuthError.platformBrokerError'
+    package: '@azure/msal-common'
+    summary: Default PlatformBrokerError from MsalNodeRuntime when broker is enabled
+    fullName: platformBrokerError
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'platformBrokerError?: PlatformBrokerError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.PlatformBrokerError" />
   - name: subError
     uid: '@azure/msal-common.AuthError.subError'
     package: '@azure/msal-common'
@@ -149,7 +161,7 @@ inheritedProperties:
     inheritanceDescription: <b>Inherited From</b> Error.stackTraceLimit
 inheritedMethods:
   - name: captureStackTrace(object, Function)
-    uid: '@azure/msal-common.AuthError.captureStackTrace'
+    uid: '@azure/msal-common.AuthError.captureStackTrace_1'
     package: '@azure/msal-common'
     summary: >-
       Creates a `.stack` property on `targetObject`, which when accessed returns
@@ -232,7 +244,7 @@ inheritedMethods:
           description: ''
     inheritanceDescription: <b>Inherited From</b> Error.captureStackTrace
   - name: prepareStackTrace(Error, CallSite[])
-    uid: '@azure/msal-common.AuthError.prepareStackTrace'
+    uid: '@azure/msal-common.AuthError.prepareStackTrace_1'
     package: '@azure/msal-common'
     summary: |-
 
@@ -257,7 +269,7 @@ inheritedMethods:
     inheritanceDescription: <b>Inherited From</b> Error.prepareStackTrace
 methods:
   - name: setCorrelationId(string)
-    uid: '@azure/msal-common.AuthError.setCorrelationId'
+    uid: '@azure/msal-common.AuthError.setCorrelationId_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''

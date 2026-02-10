@@ -8,8 +8,8 @@ functions:
   - name: >-
       createAccessTokenEntity(string, string, string, string, string, string,
       number, number, (input: string) => string, number, AuthenticationScheme,
-      string, string, string, string)
-    uid: '@azure/msal-common.CacheHelpers.createAccessTokenEntity'
+      string, string)
+    uid: '@azure/msal-common.CacheHelpers.createAccessTokenEntity_1'
     package: '@azure/msal-common'
     summary: Create AccessTokenEntity
     remarks: ''
@@ -20,8 +20,7 @@ functions:
         string, accessToken: string, clientId: string, tenantId: string, scopes:
         string, expiresOn: number, extExpiresOn: number, base64Decode: (input:
         string) => string, refreshOn?: number, tokenType?: AuthenticationScheme,
-        userAssertionHash?: string, keyId?: string, requestedClaims?: string,
-        requestedClaimsHash?: string): AccessTokenEntity
+        userAssertionHash?: string, keyId?: string): AccessTokenEntity
       parameters:
         - id: homeAccountId
           type: string
@@ -54,7 +53,7 @@ functions:
           type: number
           description: ''
         - id: tokenType
-          type: AuthenticationScheme
+          type: <xref uid="@azure/msal-common.Constants.AuthenticationScheme" />
           description: ''
         - id: userAssertionHash
           type: string
@@ -62,17 +61,11 @@ functions:
         - id: keyId
           type: string
           description: ''
-        - id: requestedClaims
-          type: string
-          description: ''
-        - id: requestedClaimsHash
-          type: string
-          description: ''
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AccessTokenEntity" />
   - name: createIdTokenEntity(string, string, string, string, string)
-    uid: '@azure/msal-common.CacheHelpers.createIdTokenEntity'
+    uid: '@azure/msal-common.CacheHelpers.createIdTokenEntity_1'
     package: '@azure/msal-common'
     summary: Create IdTokenEntity
     remarks: ''
@@ -103,7 +96,7 @@ functions:
   - name: >-
       createRefreshTokenEntity(string, string, string, string, string, string,
       number)
-    uid: '@azure/msal-common.CacheHelpers.createRefreshTokenEntity'
+    uid: '@azure/msal-common.CacheHelpers.createRefreshTokenEntity_1'
     package: '@azure/msal-common'
     summary: Create RefreshTokenEntity
     remarks: ''
@@ -139,7 +132,7 @@ functions:
         description: ''
         type: <xref uid="@azure/msal-common.RefreshTokenEntity" />
   - name: generateAppMetadataKey(AppMetadataEntity)
-    uid: '@azure/msal-common.CacheHelpers.generateAppMetadataKey'
+    uid: '@azure/msal-common.CacheHelpers.generateAppMetadataKey_1'
     package: '@azure/msal-common'
     summary: >-
       Generate AppMetadata Cache Key as per the schema:
@@ -158,7 +151,7 @@ functions:
         description: ''
         type: string
   - name: generateAuthorityMetadataExpiresAt()
-    uid: '@azure/msal-common.CacheHelpers.generateAuthorityMetadataExpiresAt'
+    uid: '@azure/msal-common.CacheHelpers.generateAuthorityMetadataExpiresAt_1'
     package: '@azure/msal-common'
     summary: Reset the exiresAt value
     remarks: ''
@@ -169,7 +162,7 @@ functions:
         description: ''
         type: number
   - name: isAccessTokenEntity(object)
-    uid: '@azure/msal-common.CacheHelpers.isAccessTokenEntity'
+    uid: '@azure/msal-common.CacheHelpers.isAccessTokenEntity_1'
     package: '@azure/msal-common'
     summary: 'Validates an entity: checks for all expected params'
     remarks: ''
@@ -184,7 +177,7 @@ functions:
         description: ''
         type: entity
   - name: isAppMetadataEntity(string, object)
-    uid: '@azure/msal-common.CacheHelpers.isAppMetadataEntity'
+    uid: '@azure/msal-common.CacheHelpers.isAppMetadataEntity_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -202,7 +195,7 @@ functions:
         description: ''
         type: boolean
   - name: isAuthorityMetadataEntity(string, object)
-    uid: '@azure/msal-common.CacheHelpers.isAuthorityMetadataEntity'
+    uid: '@azure/msal-common.CacheHelpers.isAuthorityMetadataEntity_1'
     package: '@azure/msal-common'
     summary: 'Validates an entity: checks for all expected params'
     remarks: ''
@@ -220,7 +213,7 @@ functions:
         description: ''
         type: boolean
   - name: isAuthorityMetadataExpired(AuthorityMetadataEntity)
-    uid: '@azure/msal-common.CacheHelpers.isAuthorityMetadataExpired'
+    uid: '@azure/msal-common.CacheHelpers.isAuthorityMetadataExpired_1'
     package: '@azure/msal-common'
     summary: Returns whether or not the data needs to be refreshed
     remarks: ''
@@ -237,7 +230,7 @@ functions:
         description: ''
         type: boolean
   - name: isCredentialEntity(object)
-    uid: '@azure/msal-common.CacheHelpers.isCredentialEntity'
+    uid: '@azure/msal-common.CacheHelpers.isCredentialEntity_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -252,7 +245,7 @@ functions:
         description: ''
         type: entity
   - name: isIdTokenEntity(object)
-    uid: '@azure/msal-common.CacheHelpers.isIdTokenEntity'
+    uid: '@azure/msal-common.CacheHelpers.isIdTokenEntity_1'
     package: '@azure/msal-common'
     summary: 'Validates an entity: checks for all expected params'
     remarks: ''
@@ -267,7 +260,7 @@ functions:
         description: ''
         type: entity
   - name: isRefreshTokenEntity(object)
-    uid: '@azure/msal-common.CacheHelpers.isRefreshTokenEntity'
+    uid: '@azure/msal-common.CacheHelpers.isRefreshTokenEntity_1'
     package: '@azure/msal-common'
     summary: 'Validates an entity: checks for all expected params'
     remarks: ''
@@ -282,7 +275,7 @@ functions:
         description: ''
         type: entity
   - name: isServerTelemetryEntity(string, object)
-    uid: '@azure/msal-common.CacheHelpers.isServerTelemetryEntity'
+    uid: '@azure/msal-common.CacheHelpers.isServerTelemetryEntity_1'
     package: '@azure/msal-common'
     summary: validates if a given cache entry is "Telemetry", parses <key,value>
     remarks: ''
@@ -300,7 +293,7 @@ functions:
         description: ''
         type: boolean
   - name: isThrottlingEntity(string, object)
-    uid: '@azure/msal-common.CacheHelpers.isThrottlingEntity'
+    uid: '@azure/msal-common.CacheHelpers.isThrottlingEntity_1'
     package: '@azure/msal-common'
     summary: validates if a given cache entry is "Throttling", parses <key,value>
     remarks: ''
@@ -320,7 +313,7 @@ functions:
   - name: >-
       updateAuthorityEndpointMetadata(AuthorityMetadataEntity,
       OpenIdConfigResponse, boolean)
-    uid: '@azure/msal-common.CacheHelpers.updateAuthorityEndpointMetadata'
+    uid: '@azure/msal-common.CacheHelpers.updateAuthorityEndpointMetadata_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -343,7 +336,7 @@ functions:
   - name: >-
       updateCloudDiscoveryMetadata(AuthorityMetadataEntity,
       CloudDiscoveryMetadata, boolean)
-    uid: '@azure/msal-common.CacheHelpers.updateCloudDiscoveryMetadata'
+    uid: '@azure/msal-common.CacheHelpers.updateCloudDiscoveryMetadata_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''

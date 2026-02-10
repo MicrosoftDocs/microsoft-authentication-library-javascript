@@ -75,6 +75,26 @@ functions:
     isDeprecated: false
     syntax:
       content: function blockReloadInHiddenIframes()
+  - name: cancelPendingBridgeResponse(Logger, string)
+    uid: '@azure/msal-browser.BrowserUtils.cancelPendingBridgeResponse'
+    package: '@azure/msal-browser'
+    summary: |-
+      Cancels the pending bridge response monitor if one exists.
+      This is called when overrideInteractionInProgress is used to cancel
+      any pending popup interaction before starting a new one.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function cancelPendingBridgeResponse(logger: Logger, correlationId:
+        string)
+      parameters:
+        - id: logger
+          type: <xref uid="@azure/msal-browser.Logger" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
   - name: clearHash(Window)
     uid: '@azure/msal-browser.BrowserUtils.clearHash'
     package: '@azure/msal-browser'
@@ -144,6 +164,29 @@ functions:
       return:
         description: ''
         type: boolean
+  - name: parseAuthResponseFromUrl()
+    uid: '@azure/msal-browser.BrowserUtils.parseAuthResponseFromUrl'
+    package: '@azure/msal-browser'
+    summary: >-
+      Extracts and parses the authentication response from URL (hash and/or
+      query string).
+
+      This is a shared utility used across multiple components in msal-browser.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function parseAuthResponseFromUrl(): { hasResponseInHash: boolean,
+        hasResponseInQuery: boolean, libraryState: { id: string, meta:
+        Record<string, string> }, params: URLSearchParams, payload: string,
+        urlHash: string, urlQuery: string }
+      return:
+        description: An object containing the parsed state information and URL parameters.
+        type: >-
+          { hasResponseInHash: boolean, hasResponseInQuery: boolean,
+          libraryState: { id: string, meta: Record&lt;string, string&gt; },
+          params: URLSearchParams, payload: string, urlHash: string, urlQuery:
+          string }
   - name: preconnect(string)
     uid: '@azure/msal-browser.BrowserUtils.preconnect'
     package: '@azure/msal-browser'
@@ -199,3 +242,34 @@ functions:
         - id: url
           type: string
           description: ''
+  - name: >-
+      waitForBridgeResponse(number, Logger, ICrypto,
+      CommonAuthorizationUrlRequest | CommonEndSessionRequest)
+    uid: '@azure/msal-browser.BrowserUtils.waitForBridgeResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function waitForBridgeResponse(timeoutMs: number, logger: Logger,
+        browserCrypto: ICrypto, request: CommonAuthorizationUrlRequest |
+        CommonEndSessionRequest): Promise<string>
+      parameters:
+        - id: timeoutMs
+          type: number
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-browser.Logger" />
+          description: ''
+        - id: browserCrypto
+          type: <xref uid="@azure/msal-common.ICrypto" />
+          description: ''
+        - id: request
+          type: >-
+            <xref uid="@azure/msal-common.CommonAuthorizationUrlRequest" /> |
+            <xref uid="@azure/msal-common.CommonEndSessionRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;string&gt;

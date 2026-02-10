@@ -16,6 +16,44 @@ typeAliases:
   - '@azure/msal-react.Subtract'
   - '@azure/msal-react.UnauthenticatedTemplateProps'
   - '@azure/msal-react.WithMsalProps'
+variables:
+  - name: MsalConsumer
+    uid: '@azure/msal-react.MsalConsumer'
+    package: '@azure/msal-react'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'MsalConsumer: React.Consumer<IMsalContext>'
+      return:
+        description: ''
+        type: >-
+          <xref uid="React.Consumer" />&lt;<xref
+          uid="@azure/msal-react.IMsalContext" />&gt;
+  - name: MsalContext
+    uid: '@azure/msal-react.MsalContext'
+    package: '@azure/msal-react'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'MsalContext: React.Context<IMsalContext>'
+      return:
+        description: ''
+        type: >-
+          <xref uid="React.Context" />&lt;<xref
+          uid="@azure/msal-react.IMsalContext" />&gt;
+  - name: version
+    uid: '@azure/msal-react.version'
+    package: '@azure/msal-react'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'version: "5.0.3"'
+      return:
+        description: ''
+        type: '"<xref uid="5.0.3" />"'
 functions:
   - name: >-
       AuthenticatedTemplate(PropsWithChildren<Partial<Pick<AccountInfo,
@@ -45,9 +83,9 @@ functions:
       "homeAccountId" | "localAccountId" | "username">> & {
       authenticationRequest?: PopupRequest | RedirectRequest |
       Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
-      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
-      "platformBroker">>, errorComponent?: any, interactionType:
-      InteractionType, loadingComponent?: any }>)
+      "codeChallenge" | "codeChallengeMethod" | "platformBroker">>,
+      errorComponent?: any, interactionType: InteractionType, loadingComponent?:
+      any }>)
     uid: '@azure/msal-react.MsalAuthenticationTemplate'
     package: '@azure/msal-react'
     summary: >-
@@ -62,9 +100,8 @@ functions:
         "localAccountId" | "username">> & { authenticationRequest?: PopupRequest
         | RedirectRequest | Partial<Omit<CommonAuthorizationUrlRequest,
         "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "requestedClaimsHash" | "platformBroker">>, errorComponent?: any,
-        interactionType: InteractionType, loadingComponent?: any }>):
-        React.ReactElement | null
+        "platformBroker">>, errorComponent?: any, interactionType:
+        InteractionType, loadingComponent?: any }>): React.ReactElement | null
       parameters:
         - id: props
           type: >-
@@ -74,8 +111,8 @@ functions:
             PopupRequest | RedirectRequest |
             Partial&lt;Omit&lt;CommonAuthorizationUrlRequest, "responseMode" |
             "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-            "requestedClaimsHash" | "platformBroker"&gt;&gt;, errorComponent?:
-            any, interactionType: InteractionType, loadingComponent?: any }&gt;
+            "platformBroker"&gt;&gt;, errorComponent?: any, interactionType:
+            InteractionType, loadingComponent?: any }&gt;
           description: ''
       return:
         description: ''
@@ -182,9 +219,9 @@ functions:
   - name: >-
       useMsalAuthentication(InteractionType, PopupRequest | RedirectRequest |
       Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
-      "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
-      "platformBroker">>, Partial<Pick<AccountInfo, "homeAccountId" |
-      "localAccountId" | "username">>)
+      "codeChallenge" | "codeChallengeMethod" | "platformBroker">>,
+      Partial<Pick<AccountInfo, "homeAccountId" | "localAccountId" |
+      "username">>)
     uid: '@azure/msal-react.useMsalAuthentication'
     package: '@azure/msal-react'
     summary: >-
@@ -205,10 +242,9 @@ functions:
         function useMsalAuthentication(interactionType: InteractionType,
         authenticationRequest?: PopupRequest | RedirectRequest |
         Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
-        "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
-        "platformBroker">>, accountIdentifiers?: Partial<Pick<AccountInfo,
-        "homeAccountId" | "localAccountId" | "username">>):
-        MsalAuthenticationResult
+        "codeChallenge" | "codeChallengeMethod" | "platformBroker">>,
+        accountIdentifiers?: Partial<Pick<AccountInfo, "homeAccountId" |
+        "localAccountId" | "username">>): MsalAuthenticationResult
       parameters:
         - id: interactionType
           type: <xref uid="@azure/msal-browser.InteractionType" />
@@ -220,7 +256,7 @@ functions:
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
             "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
+            | "platformBroker"&gt;&gt;
           description: ''
         - id: accountIdentifiers
           type: >-

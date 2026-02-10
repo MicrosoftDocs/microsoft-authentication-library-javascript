@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: EncodingTypes
+uid: '@azure/msal-common.Constants.EncodingTypes'
+package: '@azure/msal-common'
+summary: ''
+fullName: EncodingTypes
+remarks: ''
+isDeprecated: false
+syntax: |
+  type EncodingTypes = (typeof EncodingTypes)[keyof typeof EncodingTypes]

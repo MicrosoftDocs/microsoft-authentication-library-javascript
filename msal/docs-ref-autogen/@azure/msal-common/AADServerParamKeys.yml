@@ -4,3 +4,642 @@ name: AADServerParamKeys
 type: module
 package: '@azure/msal-common'
 summary: ''
+variables:
+  - name: ACCESS_TOKEN
+    uid: '@azure/msal-common.AADServerParamKeys.ACCESS_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ACCESS_TOKEN: "access_token"'
+      return:
+        description: ''
+        type: '"access_token"'
+  - name: BROKER_CLIENT_ID
+    uid: '@azure/msal-common.AADServerParamKeys.BROKER_CLIENT_ID'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'BROKER_CLIENT_ID: "brk_client_id"'
+      return:
+        description: ''
+        type: '"brk_client_id"'
+  - name: BROKER_REDIRECT_URI
+    uid: '@azure/msal-common.AADServerParamKeys.BROKER_REDIRECT_URI'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'BROKER_REDIRECT_URI: "brk_redirect_uri"'
+      return:
+        description: ''
+        type: '"brk_redirect_uri"'
+  - name: CCS_HEADER
+    uid: '@azure/msal-common.AADServerParamKeys.CCS_HEADER'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CCS_HEADER: "X-AnchorMailbox"'
+      return:
+        description: ''
+        type: '"X-AnchorMailbox"'
+  - name: CLAIMS
+    uid: '@azure/msal-common.AADServerParamKeys.CLAIMS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLAIMS: "claims"'
+      return:
+        description: ''
+        type: '"claims"'
+  - name: CLIENT_ASSERTION
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_ASSERTION'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLIENT_ASSERTION: "client_assertion"'
+      return:
+        description: ''
+        type: '"client_assertion"'
+  - name: CLIENT_ASSERTION_TYPE
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_ASSERTION_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLIENT_ASSERTION_TYPE: "client_assertion_type"'
+      return:
+        description: ''
+        type: '"client_assertion_type"'
+  - name: CLIENT_ID
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_ID'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLIENT_ID: "client_id"'
+      return:
+        description: ''
+        type: '"client_id"'
+  - name: CLIENT_INFO
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_INFO'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLIENT_INFO: "client_info"'
+      return:
+        description: ''
+        type: '"client_info"'
+  - name: CLIENT_REQUEST_ID
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_REQUEST_ID'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLIENT_REQUEST_ID: "client-request-id"'
+      return:
+        description: ''
+        type: '"client-request-id"'
+  - name: CLIENT_SECRET
+    uid: '@azure/msal-common.AADServerParamKeys.CLIENT_SECRET'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLIENT_SECRET: "client_secret"'
+      return:
+        description: ''
+        type: '"client_secret"'
+  - name: CODE
+    uid: '@azure/msal-common.AADServerParamKeys.CODE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CODE: "code"'
+      return:
+        description: ''
+        type: '"code"'
+  - name: CODE_CHALLENGE
+    uid: '@azure/msal-common.AADServerParamKeys.CODE_CHALLENGE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CODE_CHALLENGE: "code_challenge"'
+      return:
+        description: ''
+        type: '"code_challenge"'
+  - name: CODE_CHALLENGE_METHOD
+    uid: '@azure/msal-common.AADServerParamKeys.CODE_CHALLENGE_METHOD'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CODE_CHALLENGE_METHOD: "code_challenge_method"'
+      return:
+        description: ''
+        type: '"code_challenge_method"'
+  - name: CODE_VERIFIER
+    uid: '@azure/msal-common.AADServerParamKeys.CODE_VERIFIER'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CODE_VERIFIER: "code_verifier"'
+      return:
+        description: ''
+        type: '"code_verifier"'
+  - name: DEVICE_CODE
+    uid: '@azure/msal-common.AADServerParamKeys.DEVICE_CODE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DEVICE_CODE: "device_code"'
+      return:
+        description: ''
+        type: '"device_code"'
+  - name: DOMAIN_HINT
+    uid: '@azure/msal-common.AADServerParamKeys.DOMAIN_HINT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DOMAIN_HINT: "domain_hint"'
+      return:
+        description: ''
+        type: '"domain_hint"'
+  - name: EAR_JWE_CRYPTO
+    uid: '@azure/msal-common.AADServerParamKeys.EAR_JWE_CRYPTO'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'EAR_JWE_CRYPTO: "ear_jwe_crypto"'
+      return:
+        description: ''
+        type: '"ear_jwe_crypto"'
+  - name: EAR_JWK
+    uid: '@azure/msal-common.AADServerParamKeys.EAR_JWK'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'EAR_JWK: "ear_jwk"'
+      return:
+        description: ''
+        type: '"ear_jwk"'
+  - name: ERROR
+    uid: '@azure/msal-common.AADServerParamKeys.ERROR'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ERROR: "error"'
+      return:
+        description: ''
+        type: '"error"'
+  - name: ERROR_DESCRIPTION
+    uid: '@azure/msal-common.AADServerParamKeys.ERROR_DESCRIPTION'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ERROR_DESCRIPTION: "error_description"'
+      return:
+        description: ''
+        type: '"error_description"'
+  - name: EXPIRES_IN
+    uid: '@azure/msal-common.AADServerParamKeys.EXPIRES_IN'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'EXPIRES_IN: "expires_in"'
+      return:
+        description: ''
+        type: '"expires_in"'
+  - name: FOCI
+    uid: '@azure/msal-common.AADServerParamKeys.FOCI'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'FOCI: "foci"'
+      return:
+        description: ''
+        type: '"foci"'
+  - name: GRANT_TYPE
+    uid: '@azure/msal-common.AADServerParamKeys.GRANT_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'GRANT_TYPE: "grant_type"'
+      return:
+        description: ''
+        type: '"grant_type"'
+  - name: ID_TOKEN
+    uid: '@azure/msal-common.AADServerParamKeys.ID_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ID_TOKEN: "id_token"'
+      return:
+        description: ''
+        type: '"id_token"'
+  - name: ID_TOKEN_HINT
+    uid: '@azure/msal-common.AADServerParamKeys.ID_TOKEN_HINT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ID_TOKEN_HINT: "id_token_hint"'
+      return:
+        description: ''
+        type: '"id_token_hint"'
+  - name: INSTANCE_AWARE
+    uid: '@azure/msal-common.AADServerParamKeys.INSTANCE_AWARE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'INSTANCE_AWARE: "instance_aware"'
+      return:
+        description: ''
+        type: '"instance_aware"'
+  - name: LOGIN_HINT
+    uid: '@azure/msal-common.AADServerParamKeys.LOGIN_HINT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'LOGIN_HINT: "login_hint"'
+      return:
+        description: ''
+        type: '"login_hint"'
+  - name: LOGOUT_HINT
+    uid: '@azure/msal-common.AADServerParamKeys.LOGOUT_HINT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'LOGOUT_HINT: "logout_hint"'
+      return:
+        description: ''
+        type: '"logout_hint"'
+  - name: NATIVE_BROKER
+    uid: '@azure/msal-common.AADServerParamKeys.NATIVE_BROKER'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'NATIVE_BROKER: "nativebroker"'
+      return:
+        description: ''
+        type: '"nativebroker"'
+  - name: NONCE
+    uid: '@azure/msal-common.AADServerParamKeys.NONCE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'NONCE: "nonce"'
+      return:
+        description: ''
+        type: '"nonce"'
+  - name: OBO_ASSERTION
+    uid: '@azure/msal-common.AADServerParamKeys.OBO_ASSERTION'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'OBO_ASSERTION: "assertion"'
+      return:
+        description: ''
+        type: '"assertion"'
+  - name: ON_BEHALF_OF
+    uid: '@azure/msal-common.AADServerParamKeys.ON_BEHALF_OF'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ON_BEHALF_OF: "on_behalf_of"'
+      return:
+        description: ''
+        type: '"on_behalf_of"'
+  - name: POST_LOGOUT_URI
+    uid: '@azure/msal-common.AADServerParamKeys.POST_LOGOUT_URI'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'POST_LOGOUT_URI: "post_logout_redirect_uri"'
+      return:
+        description: ''
+        type: '"post_logout_redirect_uri"'
+  - name: PROMPT
+    uid: '@azure/msal-common.AADServerParamKeys.PROMPT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'PROMPT: "prompt"'
+      return:
+        description: ''
+        type: '"prompt"'
+  - name: REDIRECT_URI
+    uid: '@azure/msal-common.AADServerParamKeys.REDIRECT_URI'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'REDIRECT_URI: "redirect_uri"'
+      return:
+        description: ''
+        type: '"redirect_uri"'
+  - name: REFRESH_TOKEN
+    uid: '@azure/msal-common.AADServerParamKeys.REFRESH_TOKEN'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'REFRESH_TOKEN: "refresh_token"'
+      return:
+        description: ''
+        type: '"refresh_token"'
+  - name: REFRESH_TOKEN_EXPIRES_IN
+    uid: '@azure/msal-common.AADServerParamKeys.REFRESH_TOKEN_EXPIRES_IN'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'REFRESH_TOKEN_EXPIRES_IN: "refresh_token_expires_in"'
+      return:
+        description: ''
+        type: '"refresh_token_expires_in"'
+  - name: REQUESTED_TOKEN_USE
+    uid: '@azure/msal-common.AADServerParamKeys.REQUESTED_TOKEN_USE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'REQUESTED_TOKEN_USE: "requested_token_use"'
+      return:
+        description: ''
+        type: '"requested_token_use"'
+  - name: REQ_CNF
+    uid: '@azure/msal-common.AADServerParamKeys.REQ_CNF'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'REQ_CNF: "req_cnf"'
+      return:
+        description: ''
+        type: '"req_cnf"'
+  - name: RESPONSE_MODE
+    uid: '@azure/msal-common.AADServerParamKeys.RESPONSE_MODE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'RESPONSE_MODE: "response_mode"'
+      return:
+        description: ''
+        type: '"response_mode"'
+  - name: RESPONSE_TYPE
+    uid: '@azure/msal-common.AADServerParamKeys.RESPONSE_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'RESPONSE_TYPE: "response_type"'
+      return:
+        description: ''
+        type: '"response_type"'
+  - name: RETURN_SPA_CODE
+    uid: '@azure/msal-common.AADServerParamKeys.RETURN_SPA_CODE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'RETURN_SPA_CODE: "return_spa_code"'
+      return:
+        description: ''
+        type: '"return_spa_code"'
+  - name: SCOPE
+    uid: '@azure/msal-common.AADServerParamKeys.SCOPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SCOPE: "scope"'
+      return:
+        description: ''
+        type: '"scope"'
+  - name: SESSION_STATE
+    uid: '@azure/msal-common.AADServerParamKeys.SESSION_STATE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SESSION_STATE: "session_state"'
+      return:
+        description: ''
+        type: '"session_state"'
+  - name: SID
+    uid: '@azure/msal-common.AADServerParamKeys.SID'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SID: "sid"'
+      return:
+        description: ''
+        type: '"sid"'
+  - name: STATE
+    uid: '@azure/msal-common.AADServerParamKeys.STATE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'STATE: "state"'
+      return:
+        description: ''
+        type: '"state"'
+  - name: TOKEN_TYPE
+    uid: '@azure/msal-common.AADServerParamKeys.TOKEN_TYPE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'TOKEN_TYPE: "token_type"'
+      return:
+        description: ''
+        type: '"token_type"'
+  - name: X_APP_NAME
+    uid: '@azure/msal-common.AADServerParamKeys.X_APP_NAME'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_APP_NAME: "x-app-name"'
+      return:
+        description: ''
+        type: '"x-app-name"'
+  - name: X_APP_VER
+    uid: '@azure/msal-common.AADServerParamKeys.X_APP_VER'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_APP_VER: "x-app-ver"'
+      return:
+        description: ''
+        type: '"x-app-ver"'
+  - name: X_CLIENT_CPU
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_CPU'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_CLIENT_CPU: "x-client-CPU"'
+      return:
+        description: ''
+        type: '"x-client-CPU"'
+  - name: X_CLIENT_CURR_TELEM
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_CURR_TELEM'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_CLIENT_CURR_TELEM: "x-client-current-telemetry"'
+      return:
+        description: ''
+        type: '"x-client-current-telemetry"'
+  - name: X_CLIENT_EXTRA_SKU
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_EXTRA_SKU'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_CLIENT_EXTRA_SKU: "x-client-xtra-sku"'
+      return:
+        description: ''
+        type: '"x-client-xtra-sku"'
+  - name: X_CLIENT_LAST_TELEM
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_LAST_TELEM'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_CLIENT_LAST_TELEM: "x-client-last-telemetry"'
+      return:
+        description: ''
+        type: '"x-client-last-telemetry"'
+  - name: X_CLIENT_OS
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_OS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_CLIENT_OS: "x-client-OS"'
+      return:
+        description: ''
+        type: '"x-client-OS"'
+  - name: X_CLIENT_SKU
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_SKU'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_CLIENT_SKU: "x-client-SKU"'
+      return:
+        description: ''
+        type: '"x-client-SKU"'
+  - name: X_CLIENT_VER
+    uid: '@azure/msal-common.AADServerParamKeys.X_CLIENT_VER'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_CLIENT_VER: "x-client-VER"'
+      return:
+        description: ''
+        type: '"x-client-VER"'
+  - name: X_MS_LIB_CAPABILITY
+    uid: '@azure/msal-common.AADServerParamKeys.X_MS_LIB_CAPABILITY'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'X_MS_LIB_CAPABILITY: "x-ms-lib-capability"'
+      return:
+        description: ''
+        type: '"x-ms-lib-capability"'

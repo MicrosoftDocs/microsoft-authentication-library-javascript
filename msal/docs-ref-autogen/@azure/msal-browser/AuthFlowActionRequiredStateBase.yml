@@ -20,4 +20,20 @@ constructors:
         - id: stateParameters
           type: TParameter
           description: The parameters for the auth state.
+inheritedProperties:
+  - name: stateType
+    uid: '@azure/msal-browser.AuthFlowActionRequiredStateBase.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [AuthFlowStateBase.stateType](xref:@azure/msal-browser.AuthFlowStateBase.stateType)
 extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

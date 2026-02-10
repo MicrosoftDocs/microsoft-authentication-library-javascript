@@ -2,9 +2,24 @@
 name: AuthMethodRegistrationCompletedState
 uid: '@azure/msal-browser.AuthMethodRegistrationCompletedState'
 package: '@azure/msal-browser'
-summary: Base class for the state of an authentication flow.
+summary: >-
+  State indicating that the auth method registration flow has completed
+  successfully.
 fullName: AuthMethodRegistrationCompletedState
 remarks: ''
 isDeprecated: false
 type: class
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.AuthMethodRegistrationCompletedState.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: string'
+      return:
+        description: ''
+        type: string
 extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />
