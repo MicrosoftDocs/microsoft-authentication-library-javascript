@@ -80,7 +80,7 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.0.3"'
+      content: 'version: "5.0.4"'
       return:
         description: ''
-        type: '"<xref uid="5.0.3" />"'
+        type: '"<xref uid="5.0.4" />"'
