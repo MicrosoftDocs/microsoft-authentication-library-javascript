@@ -8,6 +8,7 @@ remarks: ''
 isDeprecated: false
 syntax: |
   type EventMessage = {
+    correlationId: string
     error: EventError
     eventType: EventType
     interactionType: InteractionType | null

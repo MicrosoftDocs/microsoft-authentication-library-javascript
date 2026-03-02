@@ -74,16 +74,42 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.Logger" />
-  - name: handleRedirectObservable()
-    uid: '@azure/msal-angular.IMsalService.handleRedirectObservable'
+  - name: handleRedirectObservable(HandleRedirectPromiseOptions)
+    uid: '@azure/msal-angular.IMsalService.handleRedirectObservable_1'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function handleRedirectObservable(): Observable<null |
+        function handleRedirectObservable(options?:
+        HandleRedirectPromiseOptions): Observable<null | AuthenticationResult>
+      parameters:
+        - id: options
+          type: <xref uid="@azure/msal-browser.HandleRedirectPromiseOptions" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Observable&lt;null | <xref
+          uid="@azure/msal-browser.AuthenticationResult" />&gt;
+  - name: handleRedirectObservable(string)
+    uid: '@azure/msal-angular.IMsalService.handleRedirectObservable'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: >-
+      Pass options object instead of hash string. Use handleRedirectObservable({
+      hash: "#..." }) instead.
+    syntax:
+      content: >-
+        function handleRedirectObservable(hash: string): Observable<null |
         AuthenticationResult>
+      parameters:
+        - id: hash
+          type: string
+          description: ''
       return:
         description: ''
         type: >-

@@ -48,7 +48,7 @@ methods:
       return:
         description: ''
         type: null | string
-  - name: emitEvent(EventType, InteractionType, EventPayload, EventError)
+  - name: emitEvent(EventType, string, InteractionType, EventPayload, EventError)
     uid: '@azure/msal-browser.EventHandler.emitEvent'
     package: '@azure/msal-browser'
     summary: Emits events by calling callback with event message
@@ -56,11 +56,15 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function emitEvent(eventType: EventType, interactionType?:
-        InteractionType, payload?: EventPayload, error?: EventError)
+        function emitEvent(eventType: EventType, correlationId: string,
+        interactionType?: InteractionType, payload?: EventPayload, error?:
+        EventError)
       parameters:
         - id: eventType
           type: <xref uid="@azure/msal-browser.EventType" />
+          description: ''
+        - id: correlationId
+          type: string
           description: ''
         - id: interactionType
           type: <xref uid="@azure/msal-browser.InteractionType" />
