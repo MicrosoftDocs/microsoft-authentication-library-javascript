@@ -2434,6 +2434,11 @@
       no-loc:
         - Configuration
       items: []
+    - uid: '@azure/msal-node.CryptoProvider'
+      name: CryptoProvider
+      no-loc:
+        - CryptoProvider
+      items: []
     - uid: '@azure/msal-node.DeviceCodeRequest'
       name: DeviceCodeRequest
       no-loc:
