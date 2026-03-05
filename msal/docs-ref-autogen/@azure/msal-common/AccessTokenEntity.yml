@@ -13,6 +13,8 @@ syntax: |
     extendedExpiresOn?: string
     realm: string
     refreshOn?: string
+    requestedClaims?: string
+    requestedClaimsHash?: string
     target: string
     tokenType?: AuthenticationScheme
   }

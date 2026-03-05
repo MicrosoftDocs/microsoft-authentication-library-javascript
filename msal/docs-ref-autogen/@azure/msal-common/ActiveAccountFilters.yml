@@ -9,6 +9,7 @@ isDeprecated: false
 syntax: |
   type ActiveAccountFilters = {
     homeAccountId: string
+    lastUpdatedAt?: string
     localAccountId: string
     tenantId?: string
   }

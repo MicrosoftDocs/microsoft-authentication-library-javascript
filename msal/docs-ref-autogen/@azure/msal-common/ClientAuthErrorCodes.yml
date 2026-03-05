@@ -85,6 +85,39 @@ variables:
       return:
         description: ''
         type: '"client_info_empty_error"'
+  - name: deviceCodeExpired
+    uid: '@azure/msal-common.ClientAuthErrorCodes.deviceCodeExpired'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'deviceCodeExpired: "device_code_expired"'
+      return:
+        description: ''
+        type: '"device_code_expired"'
+  - name: deviceCodePollingCancelled
+    uid: '@azure/msal-common.ClientAuthErrorCodes.deviceCodePollingCancelled'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'deviceCodePollingCancelled: "device_code_polling_cancelled"'
+      return:
+        description: ''
+        type: '"device_code_polling_cancelled"'
+  - name: deviceCodeUnknownError
+    uid: '@azure/msal-common.ClientAuthErrorCodes.deviceCodeUnknownError'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'deviceCodeUnknownError: "device_code_unknown_error"'
+      return:
+        description: ''
+        type: '"device_code_unknown_error"'
   - name: emptyInputScopeSet
     uid: '@azure/msal-common.ClientAuthErrorCodes.emptyInputScopeSet'
     package: '@azure/msal-common'
@@ -129,6 +162,17 @@ variables:
       return:
         description: ''
         type: '"hash_not_deserialized"'
+  - name: invalidAssertion
+    uid: '@azure/msal-common.ClientAuthErrorCodes.invalidAssertion'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidAssertion: "invalid_assertion"'
+      return:
+        description: ''
+        type: '"invalid_assertion"'
   - name: invalidCacheEnvironment
     uid: '@azure/msal-common.ClientAuthErrorCodes.invalidCacheEnvironment'
     package: '@azure/msal-common'
@@ -151,6 +195,17 @@ variables:
       return:
         description: ''
         type: '"invalid_cache_record"'
+  - name: invalidClientCredential
+    uid: '@azure/msal-common.ClientAuthErrorCodes.invalidClientCredential'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidClientCredential: "invalid_client_credential"'
+      return:
+        description: ''
+        type: '"invalid_client_credential"'
   - name: invalidState
     uid: '@azure/msal-common.ClientAuthErrorCodes.invalidState'
     package: '@azure/msal-common'
@@ -195,6 +250,28 @@ variables:
       return:
         description: ''
         type: '"method_not_implemented"'
+  - name: missingTenantIdError
+    uid: '@azure/msal-common.ClientAuthErrorCodes.missingTenantIdError'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'missingTenantIdError: "missing_tenant_id_error"'
+      return:
+        description: ''
+        type: '"missing_tenant_id_error"'
+  - name: multipleMatchingAccounts
+    uid: '@azure/msal-common.ClientAuthErrorCodes.multipleMatchingAccounts'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'multipleMatchingAccounts: "multiple_matching_accounts"'
+      return:
+        description: ''
+        type: '"multiple_matching_accounts"'
   - name: multipleMatchingAppMetadata
     uid: '@azure/msal-common.ClientAuthErrorCodes.multipleMatchingAppMetadata'
     package: '@azure/msal-common'
@@ -417,3 +494,14 @@ variables:
       return:
         description: ''
         type: '"user_canceled"'
+  - name: userTimeoutReached
+    uid: '@azure/msal-common.ClientAuthErrorCodes.userTimeoutReached'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'userTimeoutReached: "user_timeout_reached"'
+      return:
+        description: ''
+        type: '"user_timeout_reached"'
