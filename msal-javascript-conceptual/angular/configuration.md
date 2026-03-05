@@ -109,7 +109,7 @@ import { IPublicClientApplication, PublicClientApplication, InteractionType, Bro
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      clientId: "b5c2e510-4a17-4feb-b219-e55aa5b74144",
+      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444",
       redirectUri: "http://localhost:4200",
       postLogoutRedirectUri: "http://localhost:4200",
     },
