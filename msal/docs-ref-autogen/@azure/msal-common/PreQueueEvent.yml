@@ -1,0 +1,34 @@
+### YamlMime:TSType
+name: PreQueueEvent
+uid: '@azure/msal-common.PreQueueEvent'
+package: '@azure/msal-common'
+summary: ''
+fullName: PreQueueEvent
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: name
+    uid: '@azure/msal-common.PreQueueEvent.name'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: name
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'name: PerformanceEvents'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.PerformanceEvents" />
+  - name: time
+    uid: '@azure/msal-common.PreQueueEvent.time'
+    package: '@azure/msal-common'
+    summary: ''
+    fullName: time
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'time: number'
+      return:
+        description: ''
+        type: number

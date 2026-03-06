@@ -11,4 +11,4 @@ syntax: >-
   | (msalService: MsalService, req: HttpRequest<unknown>, originalAuthRequest:
   MsalInterceptorAuthRequest) => MsalInterceptorAuthRequest, interactionType:
   InteractionType, protectedResourceMap: Map<string, (string |
-  ProtectedResourceScopes)[] | null> }
+  ProtectedResourceScopes)[] | null>, strictMatching?: boolean }

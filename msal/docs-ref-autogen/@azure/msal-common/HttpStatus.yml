@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: HttpStatus
+uid: '@azure/msal-common.HttpStatus'
+package: '@azure/msal-common'
+summary: ''
+fullName: HttpStatus
+remarks: ''
+isDeprecated: false
+syntax: |
+  type HttpStatus = (typeof HttpStatus)[keyof typeof HttpStatus]

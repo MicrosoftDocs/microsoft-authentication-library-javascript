@@ -19,6 +19,8 @@ syntax: |
     appVersion?: string
     authority: string
     awaitIframeCorrelationId?: string
+    brokerErrorCode?: string
+    brokerErrorName?: string
     cacheAtCount?: number
     cacheIdCount?: number
     cacheLocation?: string
@@ -56,12 +58,13 @@ syntax: |
     incompleteSubsCount?: number
     isAsyncPopup?: boolean
     isNativeBroker?: boolean
+    isPlatformAuthorizeRequest?: boolean
+    isPlatformBrokerRequest?: boolean
     libraryName: string
     libraryVersion: string
     loginHintFromClaim?: boolean
     loginHintFromRequest?: boolean
     loginHintFromUpn?: boolean
-    logs?: string
     matsAccountJoinOnEnd?: string
     matsAccountJoinOnStart?: string
     matsApiErrorCode?: number
@@ -85,6 +88,9 @@ syntax: |
     ntwkRtExpiresOnSeconds?: number
     previousLibraryVersion?: string
     prompt?: string
+    queuedCount?: number
+    queuedManuallyCompletedCount?: number
+    queuedTimeMs?: number
     refreshTokenSize?: number
     requestId?: string
     retryError?: string
@@ -94,6 +100,7 @@ syntax: |
     serverErrorNo?: string
     sidFromClaims?: boolean
     sidFromRequest?: boolean
+    silentRefreshReason?: string
     startPageVisibility?: string | null
     startTimeMs: number
     status: PerformanceEventStatus

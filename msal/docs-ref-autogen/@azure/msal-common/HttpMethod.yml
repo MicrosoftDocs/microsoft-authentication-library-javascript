@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: HttpMethod
-uid: '@azure/msal-common.Constants.HttpMethod'
+uid: '@azure/msal-common.HttpMethod'
 package: '@azure/msal-common'
 summary: ''
 fullName: HttpMethod
