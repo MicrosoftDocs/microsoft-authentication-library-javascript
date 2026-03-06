@@ -122,6 +122,10 @@
           href: angular/v1-V2-upgrade-guide.md
         - name: Upgrade from MSAL Angular 2.x to MSAL Angular 3.x
           href: angular/v2-v3-upgrade-guide.md
+        - name: Upgrade from MSAL Angular 3.x to MSAL Angular 4.x
+          href: angular/v3-v4-upgrade-guide.md
+        - name: Upgrade from MSAL Angular 4.x to MSAL Angular 5.x
+          href: angular/v4-v5-upgrade-guide.md
 - name: MSAL Node
   items:
     - name: Initialize public client applications
@@ -154,6 +158,10 @@
       href: node/key-vault-managed-identity.md
     - name: Migrate Node.js apps from ADAL to MSAL
       href: node/migration.md
+    - name: Migrate from MSAL Node v3 to v5
+      href: node/v5-migration.md
+    - name: Use managed identity with MSAL Node
+      href: node/managed-identity.md
     - name: MSAL Node FAQs
       href: node/faq.md
 - name: MSAL React
