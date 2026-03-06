@@ -8,7 +8,7 @@ variables:
   - name: badToken
     uid: '@azure/msal-common.InteractionRequiredAuthErrorCodes.badToken'
     package: '@azure/msal-common'
-    summary: ''
+    summary: Server-originated error code indicating the token is invalid or corrupted.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -19,7 +19,7 @@ variables:
   - name: consentRequired
     uid: '@azure/msal-common.InteractionRequiredAuthErrorCodes.consentRequired'
     package: '@azure/msal-common'
-    summary: ''
+    summary: Server-originated error code indicating user consent is required.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -30,7 +30,9 @@ variables:
   - name: interactionRequired
     uid: '@azure/msal-common.InteractionRequiredAuthErrorCodes.interactionRequired'
     package: '@azure/msal-common'
-    summary: ''
+    summary: >-
+      Server-originated error code indicating interaction is required to
+      complete the request.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -38,10 +40,23 @@ variables:
       return:
         description: ''
         type: '"interaction_required"'
+  - name: interruptedUser
+    uid: '@azure/msal-common.InteractionRequiredAuthErrorCodes.interruptedUser'
+    package: '@azure/msal-common'
+    summary: >-
+      Server-originated error code indicating the user was interrupted and must
+      reattempt the flow.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'interruptedUser: "interrupted_user"'
+      return:
+        description: ''
+        type: '"interrupted_user"'
   - name: loginRequired
     uid: '@azure/msal-common.InteractionRequiredAuthErrorCodes.loginRequired'
     package: '@azure/msal-common'
-    summary: ''
+    summary: Server-originated error code indicating user login is required.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -53,7 +68,9 @@ variables:
     uid: >-
       @azure/msal-common.InteractionRequiredAuthErrorCodes.nativeAccountUnavailable
     package: '@azure/msal-common'
-    summary: ''
+    summary: >-
+      MSAL-defined error code indicating a native account is unavailable on the
+      platform.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -64,7 +81,9 @@ variables:
   - name: noTokensFound
     uid: '@azure/msal-common.InteractionRequiredAuthErrorCodes.noTokensFound'
     package: '@azure/msal-common'
-    summary: ''
+    summary: >-
+      MSAL-defined interaction required error code indicating no tokens are
+      found in cache.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -75,7 +94,9 @@ variables:
   - name: refreshTokenExpired
     uid: '@azure/msal-common.InteractionRequiredAuthErrorCodes.refreshTokenExpired'
     package: '@azure/msal-common'
-    summary: ''
+    summary: >-
+      MSAL-defined error code indicating the refresh token has expired and user
+      interaction is needed.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -86,7 +107,9 @@ variables:
   - name: uxNotAllowed
     uid: '@azure/msal-common.InteractionRequiredAuthErrorCodes.uxNotAllowed'
     package: '@azure/msal-common'
-    summary: ''
+    summary: >-
+      MSAL-defined error code indicating UI/UX is not allowed (e.g., blocked by
+      policy), requiring alternate interaction.
     remarks: ''
     isDeprecated: false
     syntax:

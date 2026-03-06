@@ -1081,10 +1081,10 @@
   items:
     - name: Overview
       uid: '@azure/msal-common'
-    - uid: '@azure/msal-common.AADServerParamKeys'
-      name: AADServerParamKeys
+    - uid: '@azure/msal-common.AADAuthorityConstants'
+      name: AADAuthorityConstants
       no-loc:
-        - AADServerParamKeys
+        - AADAuthorityConstants
       items: []
     - uid: '@azure/msal-common.AADServerParamKeys'
       name: AADServerParamKeys
@@ -1096,35 +1096,10 @@
       no-loc:
         - AccessTokenEntity
       items: []
-    - uid: '@azure/msal-common.AccessTokenEntity'
-      name: AccessTokenEntity
-      no-loc:
-        - AccessTokenEntity
-      items: []
-    - uid: '@azure/msal-common.AccountEntityUtils'
-      name: AccountEntityUtils
-      no-loc:
-        - AccountEntityUtils
-      items: []
-    - uid: '@azure/msal-common.AccountEntityUtils'
-      name: AccountEntityUtils
-      no-loc:
-        - AccountEntityUtils
-      items: []
     - uid: '@azure/msal-common.AccountFilter'
       name: AccountFilter
       no-loc:
         - AccountFilter
-      items: []
-    - uid: '@azure/msal-common.AccountFilter'
-      name: AccountFilter
-      no-loc:
-        - AccountFilter
-      items: []
-    - uid: '@azure/msal-common.AccountInfo'
-      name: AccountInfo
-      no-loc:
-        - AccountInfo
       items: []
     - uid: '@azure/msal-common.AccountInfo'
       name: AccountInfo
@@ -1136,25 +1111,10 @@
       no-loc:
         - ActiveAccountFilters
       items: []
-    - uid: '@azure/msal-common.ActiveAccountFilters'
-      name: ActiveAccountFilters
-      no-loc:
-        - ActiveAccountFilters
-      items: []
     - uid: '@azure/msal-common.ApplicationTelemetry'
       name: ApplicationTelemetry
       no-loc:
         - ApplicationTelemetry
-      items: []
-    - uid: '@azure/msal-common.ApplicationTelemetry'
-      name: ApplicationTelemetry
-      no-loc:
-        - ApplicationTelemetry
-      items: []
-    - uid: '@azure/msal-common.AppMetadataEntity'
-      name: AppMetadataEntity
-      no-loc:
-        - AppMetadataEntity
       items: []
     - uid: '@azure/msal-common.AppMetadataEntity'
       name: AppMetadataEntity
@@ -1176,25 +1136,15 @@
       no-loc:
         - AuthenticationHeaderParser
       items: []
-    - uid: '@azure/msal-common.AuthenticationHeaderParser'
-      name: AuthenticationHeaderParser
-      no-loc:
-        - AuthenticationHeaderParser
-      items: []
     - uid: '@azure/msal-common.AuthenticationResult'
       name: AuthenticationResult
       no-loc:
         - AuthenticationResult
       items: []
-    - uid: '@azure/msal-common.AuthenticationResult'
-      name: AuthenticationResult
+    - uid: '@azure/msal-common.AuthenticationScheme'
+      name: AuthenticationScheme
       no-loc:
-        - AuthenticationResult
-      items: []
-    - uid: '@azure/msal-common.AuthError'
-      name: AuthError
-      no-loc:
-        - AuthError
+        - AuthenticationScheme
       items: []
     - uid: '@azure/msal-common.AuthError'
       name: AuthError
@@ -1206,25 +1156,10 @@
       no-loc:
         - AuthErrorCodes
       items: []
-    - uid: '@azure/msal-common.AuthErrorCodes'
-      name: AuthErrorCodes
-      no-loc:
-        - AuthErrorCodes
-      items: []
     - uid: '@azure/msal-common.AuthorityFactory'
       name: AuthorityFactory
       no-loc:
         - AuthorityFactory
-      items: []
-    - uid: '@azure/msal-common.AuthorityFactory'
-      name: AuthorityFactory
-      no-loc:
-        - AuthorityFactory
-      items: []
-    - uid: '@azure/msal-common.AuthorityOptions'
-      name: AuthorityOptions
-      no-loc:
-        - AuthorityOptions
       items: []
     - uid: '@azure/msal-common.AuthorityOptions'
       name: AuthorityOptions
@@ -1236,25 +1171,10 @@
       no-loc:
         - AuthorityType
       items: []
-    - uid: '@azure/msal-common.AuthorityType'
-      name: AuthorityType
-      no-loc:
-        - AuthorityType
-      items: []
     - uid: '@azure/msal-common.AuthorizationCodePayload'
       name: AuthorizationCodePayload
       no-loc:
         - AuthorizationCodePayload
-      items: []
-    - uid: '@azure/msal-common.AuthorizationCodePayload'
-      name: AuthorizationCodePayload
-      no-loc:
-        - AuthorizationCodePayload
-      items: []
-    - uid: '@azure/msal-common.AuthorizeProtocol'
-      name: AuthorizeProtocol
-      no-loc:
-        - AuthorizeProtocol
       items: []
     - uid: '@azure/msal-common.AuthorizeProtocol'
       name: AuthorizeProtocol
@@ -1266,25 +1186,10 @@
       no-loc:
         - AuthorizeResponse
       items: []
-    - uid: '@azure/msal-common.AuthorizeResponse'
-      name: AuthorizeResponse
-      no-loc:
-        - AuthorizeResponse
-      items: []
     - uid: '@azure/msal-common.AuthToken'
       name: AuthToken
       no-loc:
         - AuthToken
-      items: []
-    - uid: '@azure/msal-common.AuthToken'
-      name: AuthToken
-      no-loc:
-        - AuthToken
-      items: []
-    - uid: '@azure/msal-common.AzureCloudInstance'
-      name: AzureCloudInstance
-      no-loc:
-        - AzureCloudInstance
       items: []
     - uid: '@azure/msal-common.AzureCloudInstance'
       name: AzureCloudInstance
@@ -1296,25 +1201,10 @@
       no-loc:
         - AzureCloudOptions
       items: []
-    - uid: '@azure/msal-common.AzureCloudOptions'
-      name: AzureCloudOptions
-      no-loc:
-        - AzureCloudOptions
-      items: []
     - uid: '@azure/msal-common.AzureRegion'
       name: AzureRegion
       no-loc:
         - AzureRegion
-      items: []
-    - uid: '@azure/msal-common.AzureRegion'
-      name: AzureRegion
-      no-loc:
-        - AzureRegion
-      items: []
-    - uid: '@azure/msal-common.AzureRegionConfiguration'
-      name: AzureRegionConfiguration
-      no-loc:
-        - AzureRegionConfiguration
       items: []
     - uid: '@azure/msal-common.AzureRegionConfiguration'
       name: AzureRegionConfiguration
@@ -1326,15 +1216,10 @@
       no-loc:
         - BaseAuthRequest
       items: []
-    - uid: '@azure/msal-common.BaseAuthRequest'
-      name: BaseAuthRequest
+    - uid: '@azure/msal-common.CacheAccountType'
+      name: CacheAccountType
       no-loc:
-        - BaseAuthRequest
-      items: []
-    - uid: '@azure/msal-common.CacheError'
-      name: CacheError
-      no-loc:
-        - CacheError
+        - CacheAccountType
       items: []
     - uid: '@azure/msal-common.CacheError'
       name: CacheError
@@ -1346,25 +1231,25 @@
       no-loc:
         - CacheErrorCodes
       items: []
-    - uid: '@azure/msal-common.CacheErrorCodes'
-      name: CacheErrorCodes
-      no-loc:
-        - CacheErrorCodes
-      items: []
     - uid: '@azure/msal-common.CacheHelpers'
       name: CacheHelpers
       no-loc:
         - CacheHelpers
       items: []
-    - uid: '@azure/msal-common.CacheHelpers'
-      name: CacheHelpers
+    - uid: '@azure/msal-common.CacheOptions'
+      name: CacheOptions
       no-loc:
-        - CacheHelpers
+        - CacheOptions
       items: []
-    - uid: '@azure/msal-common.CcsCredential'
-      name: CcsCredential
+    - uid: '@azure/msal-common.CacheOutcome'
+      name: CacheOutcome
       no-loc:
-        - CcsCredential
+        - CacheOutcome
+      items: []
+    - uid: '@azure/msal-common.CacheType'
+      name: CacheType
+      no-loc:
+        - CacheType
       items: []
     - uid: '@azure/msal-common.CcsCredential'
       name: CcsCredential
@@ -1376,10 +1261,10 @@
       no-loc:
         - CcsCredentialType
       items: []
-    - uid: '@azure/msal-common.CcsCredentialType'
-      name: CcsCredentialType
+    - uid: '@azure/msal-common.ClaimsRequestKeys'
+      name: ClaimsRequestKeys
       no-loc:
-        - CcsCredentialType
+        - ClaimsRequestKeys
       items: []
     - uid: '@azure/msal-common.ClientAssertion'
       name: ClientAssertion
@@ -1406,25 +1291,10 @@
       no-loc:
         - ClientAuthError
       items: []
-    - uid: '@azure/msal-common.ClientAuthError'
-      name: ClientAuthError
-      no-loc:
-        - ClientAuthError
-      items: []
     - uid: '@azure/msal-common.ClientAuthErrorCodes'
       name: ClientAuthErrorCodes
       no-loc:
         - ClientAuthErrorCodes
-      items: []
-    - uid: '@azure/msal-common.ClientAuthErrorCodes'
-      name: ClientAuthErrorCodes
-      no-loc:
-        - ClientAuthErrorCodes
-      items: []
-    - uid: '@azure/msal-common.ClientConfigurationError'
-      name: ClientConfigurationError
-      no-loc:
-        - ClientConfigurationError
       items: []
     - uid: '@azure/msal-common.ClientConfigurationError'
       name: ClientConfigurationError
@@ -1436,25 +1306,10 @@
       no-loc:
         - ClientConfigurationErrorCodes
       items: []
-    - uid: '@azure/msal-common.ClientConfigurationErrorCodes'
-      name: ClientConfigurationErrorCodes
-      no-loc:
-        - ClientConfigurationErrorCodes
-      items: []
     - uid: '@azure/msal-common.ClientInfo'
       name: ClientInfo
       no-loc:
         - ClientInfo
-      items: []
-    - uid: '@azure/msal-common.ClientInfo'
-      name: ClientInfo
-      no-loc:
-        - ClientInfo
-      items: []
-    - uid: '@azure/msal-common.CommonAuthorizationCodeRequest'
-      name: CommonAuthorizationCodeRequest
-      no-loc:
-        - CommonAuthorizationCodeRequest
       items: []
     - uid: '@azure/msal-common.CommonAuthorizationCodeRequest'
       name: CommonAuthorizationCodeRequest
@@ -1466,30 +1321,25 @@
       no-loc:
         - CommonAuthorizationUrlRequest
       items: []
-    - uid: '@azure/msal-common.CommonAuthorizationUrlRequest'
-      name: CommonAuthorizationUrlRequest
+    - uid: '@azure/msal-common.CommonClientCredentialRequest'
+      name: CommonClientCredentialRequest
       no-loc:
-        - CommonAuthorizationUrlRequest
+        - CommonClientCredentialRequest
       items: []
-    - uid: '@azure/msal-common.CommonClientConfiguration'
-      name: CommonClientConfiguration
+    - uid: '@azure/msal-common.CommonDeviceCodeRequest'
+      name: CommonDeviceCodeRequest
       no-loc:
-        - CommonClientConfiguration
-      items: []
-    - uid: '@azure/msal-common.CommonEndSessionRequest'
-      name: CommonEndSessionRequest
-      no-loc:
-        - CommonEndSessionRequest
+        - CommonDeviceCodeRequest
       items: []
     - uid: '@azure/msal-common.CommonEndSessionRequest'
       name: CommonEndSessionRequest
       no-loc:
         - CommonEndSessionRequest
       items: []
-    - uid: '@azure/msal-common.CommonRefreshTokenRequest'
-      name: CommonRefreshTokenRequest
+    - uid: '@azure/msal-common.CommonOnBehalfOfRequest'
+      name: CommonOnBehalfOfRequest
       no-loc:
-        - CommonRefreshTokenRequest
+        - CommonOnBehalfOfRequest
       items: []
     - uid: '@azure/msal-common.CommonRefreshTokenRequest'
       name: CommonRefreshTokenRequest
@@ -1501,207 +1351,10 @@
       no-loc:
         - CommonSilentFlowRequest
       items: []
-    - uid: '@azure/msal-common.CommonSilentFlowRequest'
-      name: CommonSilentFlowRequest
+    - uid: '@azure/msal-common.CommonUsernamePasswordRequest'
+      name: CommonUsernamePasswordRequest
       no-loc:
-        - CommonSilentFlowRequest
-      items: []
-    - name: Constants
-      no-loc:
-        - Constants
-      items:
-        - name: Overview
-          uid: '@azure/msal-common.Constants'
-        - uid: '@azure/msal-common.Constants.AADAuthority'
-          name: AADAuthority
-          no-loc:
-            - AADAuthority
-          items: []
-        - uid: '@azure/msal-common.Constants.AuthenticationScheme'
-          name: AuthenticationScheme
-          no-loc:
-            - AuthenticationScheme
-          items: []
-        - uid: '@azure/msal-common.Constants.AuthorityMetadataSource'
-          name: AuthorityMetadataSource
-          no-loc:
-            - AuthorityMetadataSource
-          items: []
-        - uid: '@azure/msal-common.Constants.CacheOutcome'
-          name: CacheOutcome
-          no-loc:
-            - CacheOutcome
-          items: []
-        - uid: '@azure/msal-common.Constants.CacheType'
-          name: CacheType
-          no-loc:
-            - CacheType
-          items: []
-        - uid: '@azure/msal-common.Constants.ClaimsRequestKeys'
-          name: ClaimsRequestKeys
-          no-loc:
-            - ClaimsRequestKeys
-          items: []
-        - uid: '@azure/msal-common.Constants.CredentialType'
-          name: CredentialType
-          no-loc:
-            - CredentialType
-          items: []
-        - uid: '@azure/msal-common.Constants.EncodingTypes'
-          name: EncodingTypes
-          no-loc:
-            - EncodingTypes
-          items: []
-        - uid: '@azure/msal-common.Constants.GrantType'
-          name: GrantType
-          no-loc:
-            - GrantType
-          items: []
-        - uid: '@azure/msal-common.Constants.HeaderNames'
-          name: HeaderNames
-          no-loc:
-            - HeaderNames
-          items: []
-        - uid: '@azure/msal-common.Constants.HttpMethod'
-          name: HttpMethod
-          no-loc:
-            - HttpMethod
-          items: []
-        - uid: '@azure/msal-common.Constants.JsonWebTokenTypes'
-          name: JsonWebTokenTypes
-          no-loc:
-            - JsonWebTokenTypes
-          items: []
-        - uid: '@azure/msal-common.Constants.OAuthResponseType'
-          name: OAuthResponseType
-          no-loc:
-            - OAuthResponseType
-          items: []
-        - uid: '@azure/msal-common.Constants.PasswordGrantConstants'
-          name: PasswordGrantConstants
-          no-loc:
-            - PasswordGrantConstants
-          items: []
-        - uid: '@azure/msal-common.Constants.PersistentCacheKeys'
-          name: PersistentCacheKeys
-          no-loc:
-            - PersistentCacheKeys
-          items: []
-        - uid: '@azure/msal-common.Constants.RegionDiscoveryOutcomes'
-          name: RegionDiscoveryOutcomes
-          no-loc:
-            - RegionDiscoveryOutcomes
-          items: []
-        - uid: '@azure/msal-common.Constants.RegionDiscoverySources'
-          name: RegionDiscoverySources
-          no-loc:
-            - RegionDiscoverySources
-          items: []
-        - uid: '@azure/msal-common.Constants.ResponseMode'
-          name: ResponseMode
-          no-loc:
-            - ResponseMode
-          items: []
-    - name: Constants
-      no-loc:
-        - Constants
-      items:
-        - name: Overview
-          uid: '@azure/msal-common.Constants'
-        - uid: '@azure/msal-common.Constants.AADAuthority'
-          name: AADAuthority
-          no-loc:
-            - AADAuthority
-          items: []
-        - uid: '@azure/msal-common.Constants.AuthenticationScheme'
-          name: AuthenticationScheme
-          no-loc:
-            - AuthenticationScheme
-          items: []
-        - uid: '@azure/msal-common.Constants.AuthorityMetadataSource'
-          name: AuthorityMetadataSource
-          no-loc:
-            - AuthorityMetadataSource
-          items: []
-        - uid: '@azure/msal-common.Constants.CacheOutcome'
-          name: CacheOutcome
-          no-loc:
-            - CacheOutcome
-          items: []
-        - uid: '@azure/msal-common.Constants.CacheType'
-          name: CacheType
-          no-loc:
-            - CacheType
-          items: []
-        - uid: '@azure/msal-common.Constants.ClaimsRequestKeys'
-          name: ClaimsRequestKeys
-          no-loc:
-            - ClaimsRequestKeys
-          items: []
-        - uid: '@azure/msal-common.Constants.CredentialType'
-          name: CredentialType
-          no-loc:
-            - CredentialType
-          items: []
-        - uid: '@azure/msal-common.Constants.EncodingTypes'
-          name: EncodingTypes
-          no-loc:
-            - EncodingTypes
-          items: []
-        - uid: '@azure/msal-common.Constants.GrantType'
-          name: GrantType
-          no-loc:
-            - GrantType
-          items: []
-        - uid: '@azure/msal-common.Constants.HeaderNames'
-          name: HeaderNames
-          no-loc:
-            - HeaderNames
-          items: []
-        - uid: '@azure/msal-common.Constants.HttpMethod'
-          name: HttpMethod
-          no-loc:
-            - HttpMethod
-          items: []
-        - uid: '@azure/msal-common.Constants.JsonWebTokenTypes'
-          name: JsonWebTokenTypes
-          no-loc:
-            - JsonWebTokenTypes
-          items: []
-        - uid: '@azure/msal-common.Constants.OAuthResponseType'
-          name: OAuthResponseType
-          no-loc:
-            - OAuthResponseType
-          items: []
-        - uid: '@azure/msal-common.Constants.PasswordGrantConstants'
-          name: PasswordGrantConstants
-          no-loc:
-            - PasswordGrantConstants
-          items: []
-        - uid: '@azure/msal-common.Constants.PersistentCacheKeys'
-          name: PersistentCacheKeys
-          no-loc:
-            - PersistentCacheKeys
-          items: []
-        - uid: '@azure/msal-common.Constants.RegionDiscoveryOutcomes'
-          name: RegionDiscoveryOutcomes
-          no-loc:
-            - RegionDiscoveryOutcomes
-          items: []
-        - uid: '@azure/msal-common.Constants.RegionDiscoverySources'
-          name: RegionDiscoverySources
-          no-loc:
-            - RegionDiscoverySources
-          items: []
-        - uid: '@azure/msal-common.Constants.ResponseMode'
-          name: ResponseMode
-          no-loc:
-            - ResponseMode
-          items: []
-    - uid: '@azure/msal-common.CredentialEntity'
-      name: CredentialEntity
-      no-loc:
-        - CredentialEntity
+        - CommonUsernamePasswordRequest
       items: []
     - uid: '@azure/msal-common.CredentialEntity'
       name: CredentialEntity
@@ -1713,25 +1366,45 @@
       no-loc:
         - CredentialFilter
       items: []
-    - uid: '@azure/msal-common.CredentialFilter'
-      name: CredentialFilter
+    - uid: '@azure/msal-common.CredentialType'
+      name: CredentialType
       no-loc:
-        - CredentialFilter
+        - CredentialType
       items: []
     - uid: '@azure/msal-common.DeviceCodeResponse'
       name: DeviceCodeResponse
       no-loc:
         - DeviceCodeResponse
       items: []
-    - uid: '@azure/msal-common.ExternalTokenResponse'
-      name: ExternalTokenResponse
+    - uid: '@azure/msal-common.EncodingTypes'
+      name: EncodingTypes
       no-loc:
-        - ExternalTokenResponse
+        - EncodingTypes
       items: []
     - uid: '@azure/msal-common.ExternalTokenResponse'
       name: ExternalTokenResponse
       no-loc:
         - ExternalTokenResponse
+      items: []
+    - uid: '@azure/msal-common.GrantType'
+      name: GrantType
+      no-loc:
+        - GrantType
+      items: []
+    - uid: '@azure/msal-common.HeaderNames'
+      name: HeaderNames
+      no-loc:
+        - HeaderNames
+      items: []
+    - uid: '@azure/msal-common.HttpMethod'
+      name: HttpMethod
+      no-loc:
+        - HttpMethod
+      items: []
+    - uid: '@azure/msal-common.HttpStatus'
+      name: HttpStatus
+      no-loc:
+        - HttpStatus
       items: []
     - uid: '@azure/msal-common.IAppTokenProvider'
       name: IAppTokenProvider
@@ -1748,16 +1421,6 @@
       no-loc:
         - ICrypto
       items: []
-    - uid: '@azure/msal-common.ICrypto'
-      name: ICrypto
-      no-loc:
-        - ICrypto
-      items: []
-    - uid: '@azure/msal-common.IdTokenEntity'
-      name: IdTokenEntity
-      no-loc:
-        - IdTokenEntity
-      items: []
     - uid: '@azure/msal-common.IdTokenEntity'
       name: IdTokenEntity
       no-loc:
@@ -1767,11 +1430,6 @@
       name: IGuidGenerator
       no-loc:
         - IGuidGenerator
-      items: []
-    - uid: '@azure/msal-common.ILoggerCallback'
-      name: ILoggerCallback
-      no-loc:
-        - ILoggerCallback
       items: []
     - uid: '@azure/msal-common.ILoggerCallback'
       name: ILoggerCallback
@@ -1788,25 +1446,10 @@
       no-loc:
         - INetworkModule
       items: []
-    - uid: '@azure/msal-common.INetworkModule'
-      name: INetworkModule
-      no-loc:
-        - INetworkModule
-      items: []
     - uid: '@azure/msal-common.InProgressPerformanceEvent'
       name: InProgressPerformanceEvent
       no-loc:
         - InProgressPerformanceEvent
-      items: []
-    - uid: '@azure/msal-common.InProgressPerformanceEvent'
-      name: InProgressPerformanceEvent
-      no-loc:
-        - InProgressPerformanceEvent
-      items: []
-    - uid: '@azure/msal-common.InteractionRequiredAuthError'
-      name: InteractionRequiredAuthError
-      no-loc:
-        - InteractionRequiredAuthError
       items: []
     - uid: '@azure/msal-common.InteractionRequiredAuthError'
       name: InteractionRequiredAuthError
@@ -1818,25 +1461,10 @@
       no-loc:
         - InteractionRequiredAuthErrorCodes
       items: []
-    - uid: '@azure/msal-common.InteractionRequiredAuthErrorCodes'
-      name: InteractionRequiredAuthErrorCodes
-      no-loc:
-        - InteractionRequiredAuthErrorCodes
-      items: []
     - uid: '@azure/msal-common.IPerformanceClient'
       name: IPerformanceClient
       no-loc:
         - IPerformanceClient
-      items: []
-    - uid: '@azure/msal-common.IPerformanceClient'
-      name: IPerformanceClient
-      no-loc:
-        - IPerformanceClient
-      items: []
-    - uid: '@azure/msal-common.IPerformanceMeasurement'
-      name: IPerformanceMeasurement
-      no-loc:
-        - IPerformanceMeasurement
       items: []
     - uid: '@azure/msal-common.IPerformanceMeasurement'
       name: IPerformanceMeasurement
@@ -1853,15 +1481,10 @@
       no-loc:
         - IUri
       items: []
-    - uid: '@azure/msal-common.IUri'
-      name: IUri
+    - uid: '@azure/msal-common.JsonWebTokenTypes'
+      name: JsonWebTokenTypes
       no-loc:
-        - IUri
-      items: []
-    - uid: '@azure/msal-common.LibraryStateObject'
-      name: LibraryStateObject
-      no-loc:
-        - LibraryStateObject
+        - JsonWebTokenTypes
       items: []
     - uid: '@azure/msal-common.LibraryStateObject'
       name: LibraryStateObject
@@ -1873,25 +1496,10 @@
       no-loc:
         - Logger
       items: []
-    - uid: '@azure/msal-common.Logger'
-      name: Logger
-      no-loc:
-        - Logger
-      items: []
     - uid: '@azure/msal-common.LoggerOptions'
       name: LoggerOptions
       no-loc:
         - LoggerOptions
-      items: []
-    - uid: '@azure/msal-common.LoggerOptions'
-      name: LoggerOptions
-      no-loc:
-        - LoggerOptions
-      items: []
-    - uid: '@azure/msal-common.LogLevel'
-      name: LogLevel
-      no-loc:
-        - LogLevel
       items: []
     - uid: '@azure/msal-common.LogLevel'
       name: LogLevel
@@ -1913,16 +1521,6 @@
       no-loc:
         - NetworkError
       items: []
-    - uid: '@azure/msal-common.NetworkError'
-      name: NetworkError
-      no-loc:
-        - NetworkError
-      items: []
-    - uid: '@azure/msal-common.NetworkRequestOptions'
-      name: NetworkRequestOptions
-      no-loc:
-        - NetworkRequestOptions
-      items: []
     - uid: '@azure/msal-common.NetworkRequestOptions'
       name: NetworkRequestOptions
       no-loc:
@@ -1933,25 +1531,20 @@
       no-loc:
         - NetworkResponse
       items: []
-    - uid: '@azure/msal-common.NetworkResponse'
-      name: NetworkResponse
+    - uid: '@azure/msal-common.OAuthResponseType'
+      name: OAuthResponseType
       no-loc:
-        - NetworkResponse
+        - OAuthResponseType
       items: []
     - uid: '@azure/msal-common.OIDCOptions'
       name: OIDCOptions
       no-loc:
         - OIDCOptions
       items: []
-    - uid: '@azure/msal-common.OIDCOptions'
-      name: OIDCOptions
+    - uid: '@azure/msal-common.PasswordGrantConstants'
+      name: PasswordGrantConstants
       no-loc:
-        - OIDCOptions
-      items: []
-    - uid: '@azure/msal-common.PerformanceCallbackFunction'
-      name: PerformanceCallbackFunction
-      no-loc:
-        - PerformanceCallbackFunction
+        - PasswordGrantConstants
       items: []
     - uid: '@azure/msal-common.PerformanceCallbackFunction'
       name: PerformanceCallbackFunction
@@ -1963,25 +1556,10 @@
       no-loc:
         - PerformanceClient
       items: []
-    - uid: '@azure/msal-common.PerformanceClient'
-      name: PerformanceClient
-      no-loc:
-        - PerformanceClient
-      items: []
     - uid: '@azure/msal-common.PerformanceEvent'
       name: PerformanceEvent
       no-loc:
         - PerformanceEvent
-      items: []
-    - uid: '@azure/msal-common.PerformanceEvent'
-      name: PerformanceEvent
-      no-loc:
-        - PerformanceEvent
-      items: []
-    - uid: '@azure/msal-common.PerformanceEvents'
-      name: PerformanceEvents
-      no-loc:
-        - PerformanceEvents
       items: []
     - uid: '@azure/msal-common.PerformanceEvents'
       name: PerformanceEvents
@@ -1993,15 +1571,10 @@
       no-loc:
         - PerformanceEventStatus
       items: []
-    - uid: '@azure/msal-common.PerformanceEventStatus'
-      name: PerformanceEventStatus
+    - uid: '@azure/msal-common.PersistentCacheKeys'
+      name: PersistentCacheKeys
       no-loc:
-        - PerformanceEventStatus
-      items: []
-    - uid: '@azure/msal-common.PkceCodes'
-      name: PkceCodes
-      no-loc:
-        - PkceCodes
+        - PersistentCacheKeys
       items: []
     - uid: '@azure/msal-common.PkceCodes'
       name: PkceCodes
@@ -2013,15 +1586,10 @@
       no-loc:
         - PlatformBrokerError
       items: []
-    - uid: '@azure/msal-common.PlatformBrokerError'
-      name: PlatformBrokerError
+    - uid: '@azure/msal-common.PreQueueEvent'
+      name: PreQueueEvent
       no-loc:
-        - PlatformBrokerError
-      items: []
-    - uid: '@azure/msal-common.ProtocolMode'
-      name: ProtocolMode
-      no-loc:
-        - ProtocolMode
+        - PreQueueEvent
       items: []
     - uid: '@azure/msal-common.ProtocolMode'
       name: ProtocolMode
@@ -2033,15 +1601,10 @@
       no-loc:
         - ProtocolUtils
       items: []
-    - uid: '@azure/msal-common.ProtocolUtils'
-      name: ProtocolUtils
+    - uid: '@azure/msal-common.QueueMeasurement'
+      name: QueueMeasurement
       no-loc:
-        - ProtocolUtils
-      items: []
-    - uid: '@azure/msal-common.RefreshTokenEntity'
-      name: RefreshTokenEntity
-      no-loc:
-        - RefreshTokenEntity
+        - QueueMeasurement
       items: []
     - uid: '@azure/msal-common.RefreshTokenEntity'
       name: RefreshTokenEntity
@@ -2053,16 +1616,6 @@
       no-loc:
         - RequestParameterBuilder
       items: []
-    - uid: '@azure/msal-common.RequestParameterBuilder'
-      name: RequestParameterBuilder
-      no-loc:
-        - RequestParameterBuilder
-      items: []
-    - uid: '@azure/msal-common.RequestStateObject'
-      name: RequestStateObject
-      no-loc:
-        - RequestStateObject
-      items: []
     - uid: '@azure/msal-common.RequestStateObject'
       name: RequestStateObject
       no-loc:
@@ -2073,25 +1626,15 @@
       no-loc:
         - RequestThumbprint
       items: []
-    - uid: '@azure/msal-common.RequestThumbprint'
-      name: RequestThumbprint
+    - uid: '@azure/msal-common.ResponseMode'
+      name: ResponseMode
       no-loc:
-        - RequestThumbprint
+        - ResponseMode
       items: []
     - uid: '@azure/msal-common.ScopeSet'
       name: ScopeSet
       no-loc:
         - ScopeSet
-      items: []
-    - uid: '@azure/msal-common.ScopeSet'
-      name: ScopeSet
-      no-loc:
-        - ScopeSet
-      items: []
-    - uid: '@azure/msal-common.ServerAuthorizationTokenResponse'
-      name: ServerAuthorizationTokenResponse
-      no-loc:
-        - ServerAuthorizationTokenResponse
       items: []
     - uid: '@azure/msal-common.ServerAuthorizationTokenResponse'
       name: ServerAuthorizationTokenResponse
@@ -2108,15 +1651,10 @@
       no-loc:
         - ServerError
       items: []
-    - uid: '@azure/msal-common.ServerError'
-      name: ServerError
+    - uid: '@azure/msal-common.ServerResponseType'
+      name: ServerResponseType
       no-loc:
-        - ServerError
-      items: []
-    - uid: '@azure/msal-common.ServerTelemetryEntity'
-      name: ServerTelemetryEntity
-      no-loc:
-        - ServerTelemetryEntity
+        - ServerResponseType
       items: []
     - uid: '@azure/msal-common.ServerTelemetryEntity'
       name: ServerTelemetryEntity
@@ -2128,25 +1666,10 @@
       no-loc:
         - ServerTelemetryRequest
       items: []
-    - uid: '@azure/msal-common.ServerTelemetryRequest'
-      name: ServerTelemetryRequest
-      no-loc:
-        - ServerTelemetryRequest
-      items: []
     - uid: '@azure/msal-common.ShrOptions'
       name: ShrOptions
       no-loc:
         - ShrOptions
-      items: []
-    - uid: '@azure/msal-common.ShrOptions'
-      name: ShrOptions
-      no-loc:
-        - ShrOptions
-      items: []
-    - uid: '@azure/msal-common.SignedHttpRequest'
-      name: SignedHttpRequest
-      no-loc:
-        - SignedHttpRequest
       items: []
     - uid: '@azure/msal-common.SignedHttpRequest'
       name: SignedHttpRequest
@@ -2158,25 +1681,10 @@
       no-loc:
         - SignedHttpRequestParameters
       items: []
-    - uid: '@azure/msal-common.SignedHttpRequestParameters'
-      name: SignedHttpRequestParameters
-      no-loc:
-        - SignedHttpRequestParameters
-      items: []
     - uid: '@azure/msal-common.StaticAuthorityOptions'
       name: StaticAuthorityOptions
       no-loc:
         - StaticAuthorityOptions
-      items: []
-    - uid: '@azure/msal-common.StaticAuthorityOptions'
-      name: StaticAuthorityOptions
-      no-loc:
-        - StaticAuthorityOptions
-      items: []
-    - uid: '@azure/msal-common.StoreInCache'
-      name: StoreInCache
-      no-loc:
-        - StoreInCache
       items: []
     - uid: '@azure/msal-common.StoreInCache'
       name: StoreInCache
@@ -2188,25 +1696,10 @@
       no-loc:
         - StringDict
       items: []
-    - uid: '@azure/msal-common.StringDict'
-      name: StringDict
-      no-loc:
-        - StringDict
-      items: []
     - uid: '@azure/msal-common.StubPerformanceClient'
       name: StubPerformanceClient
       no-loc:
         - StubPerformanceClient
-      items: []
-    - uid: '@azure/msal-common.StubPerformanceClient'
-      name: StubPerformanceClient
-      no-loc:
-        - StubPerformanceClient
-      items: []
-    - uid: '@azure/msal-common.SubMeasurement'
-      name: SubMeasurement
-      no-loc:
-        - SubMeasurement
       items: []
     - uid: '@azure/msal-common.SubMeasurement'
       name: SubMeasurement
@@ -2218,16 +1711,6 @@
       no-loc:
         - SystemOptions
       items: []
-    - uid: '@azure/msal-common.SystemOptions'
-      name: SystemOptions
-      no-loc:
-        - SystemOptions
-      items: []
-    - uid: '@azure/msal-common.TenantProfile'
-      name: TenantProfile
-      no-loc:
-        - TenantProfile
-      items: []
     - uid: '@azure/msal-common.TenantProfile'
       name: TenantProfile
       no-loc:
@@ -2237,16 +1720,6 @@
       name: ThrottlingEntity
       no-loc:
         - ThrottlingEntity
-      items: []
-    - uid: '@azure/msal-common.ThrottlingEntity'
-      name: ThrottlingEntity
-      no-loc:
-        - ThrottlingEntity
-      items: []
-    - uid: '@azure/msal-common.TimeUtils'
-      name: TimeUtils
-      no-loc:
-        - TimeUtils
       items: []
     - uid: '@azure/msal-common.TimeUtils'
       name: TimeUtils
@@ -2263,45 +1736,15 @@
       no-loc:
         - TokenClaims
       items: []
-    - uid: '@azure/msal-common.TokenClaims'
-      name: TokenClaims
-      no-loc:
-        - TokenClaims
-      items: []
     - uid: '@azure/msal-common.TokenKeys'
       name: TokenKeys
       no-loc:
         - TokenKeys
       items: []
-    - uid: '@azure/msal-common.TokenKeys'
-      name: TokenKeys
-      no-loc:
-        - TokenKeys
-      items: []
-    - uid: '@azure/msal-common.TokenProtocol'
-      name: TokenProtocol
-      no-loc:
-        - TokenProtocol
-      items: []
-    - uid: '@azure/msal-common.TokenProtocol'
-      name: TokenProtocol
-      no-loc:
-        - TokenProtocol
-      items: []
     - uid: '@azure/msal-common.UrlString'
       name: UrlString
       no-loc:
         - UrlString
-      items: []
-    - uid: '@azure/msal-common.UrlString'
-      name: UrlString
-      no-loc:
-        - UrlString
-      items: []
-    - uid: '@azure/msal-common.UrlUtils'
-      name: UrlUtils
-      no-loc:
-        - UrlUtils
       items: []
     - uid: '@azure/msal-common.UrlUtils'
       name: UrlUtils
