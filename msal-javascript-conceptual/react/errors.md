@@ -1,17 +1,17 @@
 ---
-title: Handle errors and exceptions in MSAL Node
-description: Learn how to handle use MSAL React with class components. covering initialization, protecting components, accessing MSAL React context and logging in.
+title: Handle errors and exceptions in MSAL React
+description: Learn how to handle errors and exceptions in MSAL React, including common authentication errors and troubleshooting steps
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-react
 ms.topic: how-to
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
-# Handle errors and exceptions in MSAL Node
+# Handle errors and exceptions in MSAL React
 
 This article covers how to handle some of the errors and exceptions that can be thrown by MSAL React. We'll cover BrowserConfigurationAuthErrors, and BrowserAuthErrors and provide some troubleshooting steps to help you resolve them.
 

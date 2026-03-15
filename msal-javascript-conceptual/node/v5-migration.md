@@ -8,7 +8,7 @@ ms.date: 03/06/2026
 ms.service: msal
 ms.subservice: msal-node
 ms.topic: how-to
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to migrate my application from MSAL Node v3 to v5 so that I can use the latest features and security improvements.
 ---
 

@@ -8,7 +8,7 @@ ms.date: 03/06/2026
 ms.service: msal
 ms.subservice: msal-node
 ms.topic: how-to
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to use managed identity with MSAL Node so that I can acquire tokens without manually managing secrets and credentials.
 ---
 
@@ -34,17 +34,13 @@ Both MSAL Node and [Azure SDK](/javascript/api/overview/azure/identity-readme) a
 
 If your application already uses one of the SDKs, continue using the same SDK. Use Azure SDK if you are writing a new application and plan to call other Azure resources, as this SDK provides a better developer experience by allowing the app to run on private developer machines where managed identity doesn't exist. Consider using MSAL if you need to call other downstream web APIs like Microsoft Graph or your own web API.
 
-## Quick start
-
-To quickly get started and see Azure Managed Identity in action, you can use one of [the samples](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/Managed-Identity) the team has built for this purpose.
+To get started and see Azure Managed Identity in action, you can use one of [the MSAL Node managed identity samples](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/Managed-Identity).
 
 ## How to use managed identities
 
-There are two types of managed identities available to developers — **system-assigned** and **user-assigned**. You can learn more about the differences in the [Managed identity types](/entra/identity/managed-identities-azure-resources/overview#managed-identity-types) article. MSAL Node supports acquiring tokens with both.
+There are two types of managed identities available to developers - **system-assigned** and **user-assigned**. You can learn more about the differences in the [Managed identity types](/entra/identity/managed-identities-azure-resources/overview#managed-identity-types) article. MSAL Node supports acquiring tokens with both.
 
-Prior to using managed identities from MSAL Node, developers must enable them for the resources they want to use through Azure CLI or the Azure portal.
-
-## Examples
+Before you can use managed identities from MSAL Node, you must enable them for the resources they want to use through Azure CLI or the Azure portal.
 
 For both user-assigned and system-assigned identities, developers can use the `ManagedIdentityApplication` class.
 
@@ -136,11 +132,9 @@ console.log(response);
 
 MSAL Node caches tokens from managed identity in memory. There is no eviction, but memory is not a concern because a limited number of managed identities can be defined. Cache extensibility is not supported in this scenario because tokens should not be shared between machines.
 
-## Troubleshooting
+## Troubleshooting commmon errors
 
 For failed requests, the error response contains a correlation ID that can be used for further diagnostics and log analysis. Keep in mind that the correlation IDs generated in MSAL or passed into MSAL are different from the one returned in server error responses, as MSAL can't pass the correlation ID to managed identity token acquisition endpoints.
-
-### Potential errors
 
 #### `ManagedIdentityError` — Error Code: `invalid_resource`
 

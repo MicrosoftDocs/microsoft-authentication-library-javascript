@@ -6,9 +6,9 @@ manager: Dougeby
 ms.author: dmwendia
 ms.service: msal
 ms.subservice: msal-node
-ms.date: 10/26/2023
+ms.date: 03/15/2026
 ms.topic: article
-ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to learn how to use the different APIs in MSAL Node to access cached accounts.
 ---
 
@@ -36,7 +36,7 @@ For a multiple accounts scenario:
 
 ```javascript
 // Initiates Acquire Token Silent flow
-function callAcquireTokenSilent()
+function callAcquireTokenSilent() {
     // Find all accounts
     const msalTokenCache = myMSALObj.getTokenCache();
     const cachedAccounts = await msalTokenCache.getAllAccounts();
@@ -59,7 +59,7 @@ function callAcquireTokenSilent()
         .catch((error) => {
             // Error handling
         });
-});
+}
 ```
 
 ### `getAccountByHomeId` and `getAccountByLocalId`

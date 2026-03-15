@@ -1,6 +1,6 @@
 ---
 title: Using the MSAL Interceptor
-description: Learn how to use the MSAL Interceptor
+description: Learn how to use MsalInterceptor to automatically acquire and attach tokens to HTTP requests in Angular
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
@@ -8,7 +8,7 @@ ms.subservice: msal-angular
 ms.topic: how-to
 ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to configure the MSAL Interceptor so that my Angular app automatically acquires tokens for protected API calls.
 ---
 

@@ -1,17 +1,17 @@
 ---
-title:  Acquiring Device Bound Tokens using Web Account Manager (WAM) on Windows
+title: Acquire device bound tokens using WAM on Windows
 description: Learn how to acquire Device Bound Tokens using Web Account Manager (WAM) on Windows
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: concept-article
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
-# Acquiring Device Bound Tokens using Web Account Manager (WAM) on Windows
+# Acquire device bound tokens using WAM on Windows
 
 MSAL.js supports acquiring tokens from the Web Account Manager (WAM) on Windows. These tokens are bound to the device they were acquired on and are not cached in the browser's localStorage or sessionStorage.
 
@@ -28,7 +28,7 @@ Additionally, this feature is currently only supported for Work and School Accou
 
 ## Enable the feature in MSAL.js
 
-In order to enable this feature in MSAL.js set the `allowNativeBroker` flag to true in your configuration object like so:
+In order to enable this feature in MSAL.js set the `allowPlatformBroker` flag to true in your configuration object like so:
 
 ```javascript
 const msalConfig = {
@@ -36,7 +36,7 @@ const msalConfig = {
         clientId: "insert-clientId"
     },
     system: {
-        allowNativeBroker: true
+        allowPlatformBroker: true
     }
 };
 ```

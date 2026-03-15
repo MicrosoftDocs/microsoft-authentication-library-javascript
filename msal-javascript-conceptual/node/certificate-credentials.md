@@ -4,11 +4,11 @@ description: Learn how to use certificate credentials with MSAL Node. Create, re
 author: Dickson-Mwendia
 manager: Dougeby
 ms.author: dmwendia
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.service: msal
 ms.subservice: msal-node
 ms.topic: how-to
-ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: 
 ---
 
@@ -22,9 +22,9 @@ You can build confidential client applications with MSAL Node (web apps, daemon 
 
 You can build confidential client applications with MSAL Node (web apps, daemon apps etc). A **client credential** is mandatory for confidential clients. Client credential can be:
 
-* `managed identity`: this is a certificate-less scenario, where trust is established via the Azure infrastructure. No secret / certificate management is required. MSAL does not yet implement this feature, but you may use Azure Identity SDK instead. See [Managed identities for Azure resources documentation](/entra/identity/managed-identities-azure-resources/)
-* `clientSecret`: a secret string generated during the app registration, or updated post registration for an existing application. This is not recommended for production.
-* `clientCertificate`: a certificate set during the app registration. The certificate needs to have the private key, because it will be used for signing [an assertion](/entra/identity-platform/certificate-credentials) that MSAL generates. The `thumbprint` is a *X.509 SHA-1* thumbprint of the certificate (x5t), and the `privateKey` is the PEM encoded private key.
+* `managed identity`: this is a certificateless scenario, where trust is established via the Azure infrastructure. No secret / certificate management is required. MSAL doesn't yet implement this feature, but you may use Azure Identity SDK instead. See [Managed identities for Azure resources documentation](/entra/identity/managed-identities-azure-resources/)
+* `clientSecret`: a secret string generated during the app registration, or updated post registration for an existing application. This isn't recommended for production.
+* `clientCertificate`: a certificate set during the app registration. The certificate needs to have the private key, because it's used for signing [an assertion](/entra/identity-platform/certificate-credentials) that MSAL generates. The `thumbprintSha256` is a *X.509 SHA-256* thumbprint of the certificate, and the `privateKey` is the PEM encoded private key.
 * `clientAssertion`: instead of letting MSAL create an [assertion](/entra/identity-platform/certificate-credentials#using-a-client-assertion), the app developer takes control. Useful for adding extra claims to the assertion or for using KeyVault for signing, instead of a local certificate. The certificate used to sign the assertion still needs to be set during app registration.
 
 Note: 1p apps may be required to also send `x5c`. This is the *X.509* certificate chain used in [subject name/issuer auth scenarios](./sni.md).
@@ -48,7 +48,7 @@ You need to upload your certificate to **Microsoft Entra ID**.
 1. Navigate to [Azure portal](https://portal.azure.com) and select your Microsoft Entra app registration.
 2. Select **Certificates & secrets** blade on the left.
 3. Click on **Upload** certificate and select the certificate file to upload (e.g. *example.crt*).
-4. Click **Add**. Once the certificate is uploaded, the *thumbprint*, *start date*, and *expiration* values are displayed.
+4. Click **Add**. Once the certificate is uploaded, the *thumbprint (SHA-256)*, *start date*, and *expiration* values are displayed.
 
 For more information, see: [Register your certificate with Microsoft identity platform](/entra/identity-platform/certificate-credentials#register-your-certificate-with-microsoft-identity-platform)
 
@@ -63,7 +63,7 @@ const config = {
         clientId: "YOUR_CLIENT_ID",
         authority: "https://login.microsoftonline.com/YOUR_TENANT_ID",
         clientCertificate: {
-            thumbprint: process.env.thumbprint, // a 40-digit hexadecimal string 
+            thumbprintSha256: process.env.thumbprint,
             privateKey: process.env.privateKey,
         }
     }
@@ -73,7 +73,7 @@ const config = {
 const cca = new msal.ConfidentialClientApplication(config);
 ```
 
-Both `thumbprint` and `privateKey` are expected to be strings. `privateKey` is further expected to be in the following form (*PKCS#8*):
+Both `thumbprintSha256` and `privateKey` are expected to be strings. `privateKey` is further expected to be in the following form (*PKCS#8*):
 
 ```text
 -----BEGIN ENCRYPTED PRIVATE KEY-----
@@ -83,7 +83,8 @@ z2HCpDsa7dxOsKIrm7F1AtGBjyB0yVDjlh/FA7jT5sd2ypBh3FVsZGJudQsLRKfE
 -----END ENCRYPTED PRIVATE KEY-----
 ```
 
-> :information_source: Alternatively, your private key may begin with `-----BEGIN PRIVATE KEY-----` (unencrypted *PKCS#8*) or `-----BEGIN RSA PRIVATE KEY-----` (*PKCS#1*). These formats are also permissible. The following can be used to convert any compatible key to the PKCS#8 key type:
+> [!NOTE]
+> Alternatively, your private key may begin with `-----BEGIN PRIVATE KEY-----` (unencrypted *PKCS#8*) or `-----BEGIN RSA PRIVATE KEY-----` (*PKCS#1*). These formats are also permissible. The following can be used to convert any compatible key to the PKCS#8 key type:
 >
 > ```bash
 > openssl pkcs8 -topk8 -inform PEM -outform PEM -in example.key -out example.key
@@ -165,7 +166,7 @@ function convertPFX(pfx, passphrase = null) {
 
 ### (Optional) Creating an HTTPS server
 
-The OAuth 2.0 protocol recommends using an HTTPS connection whenever possible. Most cloud services like Azure App Service will provide HTTPS connection by default via proxy. If for testing purposes you would like to setup your own HTTPS server, see the [Node.js HTTPS guide](/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in).
+The OAuth 2.0 protocol recommends using an HTTPS connection whenever possible. Most cloud services like Azure App Service will provide HTTPS connection by default via proxy. If for testing purposes you would like to setup your own HTTPS server, see the [Node.js HTTPS guide](https://nodejs.org/knowledge/HTTP/servers/how-to-create-a-HTTPS-server/).
 
 You'll also need to add your self-signed certificates to the *credential manager* / *key chain* of your **OS** to bypass the browser's security policy. You may still see a warning in your browser afterwards (e.g. Chrome).
 
@@ -173,7 +174,8 @@ You'll also need to add your self-signed certificates to the *credential manager
 
 * For Linux and MacOS users, please consult your operating system documentation on how to install certificates.
 
-> :warning: You might need **administrator** privileges for running the commands above.
+> [!WARNING]
+> You might need **administrator** privileges for running the commands above.
 
 ### Common issues
 
@@ -213,7 +215,7 @@ const config = {
         clientId: "YOUR_CLIENT_ID",
         authority: "https://login.microsoftonline.com/YOUR_TENANT_ID",
         clientCertificate: {
-            thumbprint: process.env.thumbprint, // a 40-digit hexadecimal string 
+            thumbprintSha256: process.env.thumbprint,
             privateKey: privateKey,
         }
     }

@@ -1,14 +1,14 @@
 ---
 title: Measuring performance in MSAL.js 
-description: Learn more about telemetry and performance of token acquisition in MSAL.js
+description: Learn how to measure and monitor authentication performance and telemetry for token acquisition in MSAL.js applications
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: concept-article
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Measuring performance
@@ -80,13 +80,13 @@ const event: PerformanceEvent = {
     clientId: "00001111-aaaa-2222-bbbb-3333cccc4444",
     authority: "https://login.microsoftonline.com/common",
     libraryName: "@azure/msal-browser-1p",
-    libraryVersion: "2.22.2-beta.2",
+    libraryVersion: "5.0.0",
     appName: "my-application",
     appVersion: "1.0.0"
 }
 ```
 
-The complete details for `PerformanceEvents` objects can be found [here](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/telemetry/performance/PerformanceClient.ts). Below is a list of some notable properties:
+The complete details for `PerformanceEvents` objects can be found [here](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-common/src/telemetry/performance/PerformanceEvent.ts). Below is a list of some notable properties:
 
 | **Property**                       | Type      | Description                                                            |
 | ---------------------------------- | --------- | ---------------------------------------------------------------------- |
@@ -116,3 +116,19 @@ const callbackId: string = msalInstance.addPerformanceCallback((events: Performa
 
 const removed: boolean = msalInstance.removePerformanceCallback(callbackId);
 ```
+
+### Measuring browser performance
+
+Browser performance measurements are disabled by default due to significant performance overhead they impose.
+Applications that want to enable performance measurements reported to the browser's performance timeline should:
+
+1. Open browser developer tools
+    - Edge, Chrome and Firefox browsers: press F12
+    - Safari: go into Safari's preferences (`Safari Menu` > `Preferences`), select the `Advanced Tab` and enable `Show features for web developers`. Once that menu is enabled, you will find the developer console by clicking on `Develop` > `Show Javascript Console`
+2. Navigate to `Session Storage`:
+    - [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/storage/sessionstorage)
+    - [Chrome](https://developer.chrome.com/docs/devtools/storage/sessionstorage)
+    - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/local_storage_session_storage)
+    - Safari: navigate to `Storage` tab and expand `Session Storage`
+3. Select target domain
+4. Add `msal.browser.performance.enabled` key to `Session Storage`, set its value to `1`, refresh the page and check the browser's performance timeline.

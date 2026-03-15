@@ -8,7 +8,7 @@ ms.subservice: msal-angular
 ms.topic: how-to
 ms.date: 05/21/2025
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # How to configure `@azure/msal-angular` to use your router's navigate function for client-side navigation

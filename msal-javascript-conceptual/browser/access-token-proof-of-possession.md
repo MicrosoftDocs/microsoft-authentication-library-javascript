@@ -1,14 +1,14 @@
 ---
 title: Acquiring access tokens protected with Proof-of-Possession
-description: Learn how to acquire access tokens protected with Proof-of-Possession
+description: Learn how to use Access Token Proof-of-Possession (AT PoP) to cryptographically bind tokens in MSAL.js browser applications
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: concept-article
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Acquiring access tokens protected with Proof-of-Possession
@@ -163,6 +163,15 @@ fetch(endpoint, options)
 The Proof-of-Possession authentication scheme relies on an asymmetric cryptographic keypair to bind the access token to the user's browser. MSAL Browser generates this keypair when initially requesting an access token from the authorization service and stores it using [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API). This cryptographic keypair is then used to sign the `SHR` every time the bound access token is requested silently.
 
 In the event of refreshing a bound access token, MSAL will delete the cryptographic keypair that was generated when requesting the expired bound access token, generate a new cryptographic keypair for the new access token, and store the new keypair in the keystore.
+
+## Advanced feature: Application managed cryptographic keypair
+
+> [!WARNING]
+> We do not recommend using this feature unless you are familiar with the [Proof of Possession protocol](https://oauth.net/2/dpop/) and have a specific requirement to generate your own cryptographic keypair. For most cases, we recommend the PoP usage as described in the rest of this document.
+
+If you choose to generate your own cryptographic keypair, then this feature enables the application to provide the `popKid` as a request parameter. MSAL JS ensures the token issuer embeds the `cnf` in the token but returns the issued token _unsigned_. The onus of signing the access token before it is forwarded to the intended resource will be on the application.
+
+Please also note to make sure the remaining [PoP parameters](#at-pop-request-parameters) except the `authenticationScheme` are not set if you choose to leverage this behavior.
 
 ### Why access tokens are saved asynchronously
 

@@ -1,20 +1,21 @@
 ---
-title: Implement SNI Authentication with MSAL Node
-description: Learn how to acquire tokens from the native token broker.
+title: Subject Name/Issuer (SNI) authentication with MSAL Node
+description: Learn how to use Subject Name/Issuer (SNI) authentication with certificates for secure token acquisition in MSAL Node
 author: Dickson-Mwendia
 manager: Dougeby
 ms.author: dmwendia
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.service: msal
 ms.subservice: msal-node
 ms.topic: how-to
-ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: 
 ---
 
-# Subject Name/Issuer Authentication
+# Subject Name/Issuer (SNI) authentication with MSAL Node
 
-> :warning: Before you start here, make sure you understand [Using certificate credentials with MSAL Node](./certificate-credentials.md).
+> [!WARNING]
+> Before you start here, make sure you understand [Using certificate credentials with MSAL Node](./certificate-credentials.md).
 
 SNI (Subject Name/Issuer) authentication allows an app to authenticate using a public certificate from a predetermined trusted CA to support complex certificate rollover scenarios. It uses the [X5C header parameter](https://tools.ietf.org/html/rfc7515#section-4.1.6) to provide the certificate to the server.
 
@@ -22,7 +23,7 @@ First party users should follow the instructions on the [internal Microsoft Entr
 
 ## `x5c` claim
 
-You will need to supply the string from your `pem` encoded certificate to MSAL configuration object in the `clientCertificate.x5c` field in addition to providing both `clientCertificate.thumbprint` and `clientCertificate.privateKey`:
+You will need to supply the string from your `pem` encoded certificate to MSAL configuration object in the `clientCertificate.x5c` field in addition to providing both `clientCertificate.thumbprintSha256` and `clientCertificate.privateKey`:
 
 Example `x5c` string from a `.pem` file:
 
@@ -63,7 +64,7 @@ const config = {
         clientId: "ENTER_CLIENT_ID",
         authority: "https://login.microsoftonline.com/ENTER_TENANT_ID",
         clientCertificate: {
-                thumbprint: process.env.thumbprint; // a 40-digit hexadecimal string
+                thumbprintSha256: process.env.thumbprint, // a 64-digit hexadecimal string
                 privateKey: process.env.privateKey,
                 x5c: process.env.x5c 
             }

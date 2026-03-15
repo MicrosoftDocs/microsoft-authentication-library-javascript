@@ -1,14 +1,14 @@
 ---
 title: Events in MSAL Browser
-description: Learn about events in MSAL Browser
+description: Learn how to use the MSAL Browser event API to handle authentication events and update your application UI
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: article
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Events
@@ -96,25 +96,22 @@ const callbackId = msalInstance.addEventCallback((message: EventMessage) => {
 
 ## Syncing logged in state across tabs and windows
 
-If you would like to update your UI when a user logs in or out of your app in a different tab or window you can subscribe to the `ACCOUNT_ADDED` and `ACCOUNT_REMOVED` events. The payload will be the `AccountInfo` object that was added or removed.
+If you would like to update your UI when a user logs in or out of your app or changes the active account in a different tab or window you can subscribe to the `LOGIN_SUCCESS`, `LOGOUT_SUCCESS`, and `ACTIVE_ACCOUNT_CHANGED` events.
 
-These events will not be emitted by default. In order to enable these events you must call the `enableAccountStorageEvents` API before registering your event callbacks:
+- For account additions and removals, the payload will be the `AccountInfo` object that was added or removed.
+- For active account updates, there will be no payload
 
 ```javascript
-msalInstance.enableAccountStorageEvents();
 msalInstance.addEventCallback((message: EventMessage) => {
-    if (message.eventType === EventType.ACCOUNT_ADDED) {
+    if (message.eventType === EventType.LOGIN_SUCCESS) {
         // Update UI with new account
-    } else if (message.eventType === EventType.ACCOUNT_REMOVED) {
+    } else if (message.eventType === EventType.LOGOUT_SUCCESS) {
         // Update UI with account logged out
+    } else if (message.eventType === EventType.ACTIVE_ACCOUNT_CHANGED) {
+        const accountInfo = msalInstance.getActiveAccount();
+        // Update UI with new active account info
     }
 });
-```
-
-You can also disable these events if no longer needed by calling `disableAccountStorageEvents`:
-
-```javascript
-msalInstance.disableAccountStorageEvents();
 ```
 
 ## Table of events
@@ -123,7 +120,7 @@ These are the events currently emitted by msal-browser.
 | Event Type                    | Description                                                                | Interaction Type                 | Payload                                         | Error              |
 |:-----------------------------:|:--------------------------------------------------------------------------:|:--------------------------------:|:-----------------------------------------------:|:------------------:|
 | `LOGIN_START`                 | LoginPopup or loginRedirect is called                                      | `Popup` or `Redirect`            | [PopupRequest](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_browser.html#popuprequest) or [RedirectRequest](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_browser.html#redirectrequest)                 |                    |
-| `LOGIN_SUCCESS`               | Successfully logged in                                                     | `Popup` or `Redirect`            | [AuthenticationResult](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_common.html#authenticationresult)                            |                    |
+| `LOGIN_SUCCESS`               | Successfully logged in                                                     | `Popup` or `Redirect`            | [AccountInfo](https://azuread.github.io/microsoft-authentication-library-for-js/ref/types/_azure_msal_common.AccountInfo.html)                            |                    |
 | `LOGIN_FAILURE`               | Error when logging in                                                      | `Popup` or `Redirect`            |                                                 | [AuthError](https://azuread.github.io/microsoft-authentication-library-for-js/ref/classes/_azure_msal_common.autherror.html) or Error |
 | `ACQUIRE_TOKEN_START`         | AcquireTokenPopup or acquireTokenRedirect or acquireTokenSilent is called  | `Popup` or `Redirect` or `Silent`| [PopupRequest](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_browser.html#popuprequest) or [RedirectRequest](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_browser.html#redirectrequest) or [SilentRequest](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_browser.html#silentrequest) |                    |
 | `ACQUIRE_TOKEN_SUCCESS`       | Successfully acquired token from cache or network                          | `Popup` or `Redirect` or `Silent`| [AuthenticationResult](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_common.html#authenticationresult)                            |                    |
@@ -138,7 +135,6 @@ These are the events currently emitted by msal-browser.
 | `LOGOUT_END`                  | Logout finished                                                            | `Redirect` or `Popup`            |                           |                    |
 | `LOGOUT_SUCCESS`              | Logout success                                                             | `Redirect` or `Popup`            | [EndSessionRequest](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_browser.html#endsessionrequest) or [EndSessionPopupRequest](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_browser.html#endsessionpopuprequest)                              |                    |
 | `LOGOUT_FAILURE`              | Logout failed                                                              | `Redirect` or `Popup`            |                                                 | [AuthError](https://azuread.github.io/microsoft-authentication-library-for-js/ref/classes/_azure_msal_common.autherror.html) or Error |
-| `ACCOUNT_ADDED`               | Account logged-in in a different tab or window                             | N/A            | [AccountInfo](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_common.html#accountinfo)                                               | N/A |
-| `ACCOUNT_REMOVED`             | Account logged-out in a different tab or window                            | N/A            | [AccountInfo](https://azuread.github.io/microsoft-authentication-library-for-js/ref/modules/_azure_msal_common.html#accountinfo)                                               | N/A |
+| `ACTIVE_ACCOUNT_CHANGED`      | Active account filters where changed in a different tab or window          | N/A            | N/A                                                                                                                                                                            | N/A |
 | `INITIALIZE_START`            | Initialize function called                                                 | N/A            | N/A    | N/A |
 | `INITIALIZE_END`              | Initialize function completed                                              | N/A            | N/A    | N/A |
