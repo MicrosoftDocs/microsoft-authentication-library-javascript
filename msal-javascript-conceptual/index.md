@@ -34,7 +34,7 @@ The [`lib`](https://github.com/AzureAD/microsoft-authentication-library-for-js/t
 
 -   [Microsoft Authentication Library for JavaScript](./browser/about-msal-browser.md) (v5.4.0): A browser-based, framework-agnostic browser library that enables authentication and token acquisition with the Microsoft Identity platform in JavaScript applications. Implements the OAuth 2.0 [Authorization Code Flow with PKCE](/entra/identity-platform/v2-oauth2-auth-code-flow), and is [OpenID-compliant](/entra/identity-platform/v2-protocols-oidc). See the [source on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-browser/).
 
--   **[Native authentication](/entra/identity-platform/concept-native-authentication) support in MSAL**: MSAL JS provides native authentication APIs that allow applications to implement a native experience with end-to-end customizable flows in their web applications. With native authentication, user can fully customize the user interface, including design elements, logo placement, and layout, ensuring a consistent and branded look.The native authentication feature is available for SPAs on [External ID for customers](/entra/identity-platform/concept-native-authentication)
+-   **[Native authentication](/entra/identity-platform/concept-native-authentication) support in MSAL**: MSAL JS provides native authentication APIs that allow applications to implement a native experience with end-to-end customizable flows in their web applications. With native authentication, user can fully customize the user interface, including design elements, logo placement, and layout, ensuring a consistent and branded look. The native authentication feature is available for SPAs on [External ID for customers](/entra/identity-platform/concept-native-authentication)
 
 -   [Microsoft Authentication Library for React](./react/getting-started.md) (v5.0.6): A wrapper of the msal-browser library for apps using React. See the [source on GitHub](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-react/).
 
@@ -55,10 +55,10 @@ MSAL.js v5 introduces several key features:
 
 > [!NOTE]
 > For migration guides, see:
-> - [MSAL Browser v4 migration](./browser/v4-migration.md)
-> - [MSAL Node v5 migration](./node/v5-migration.md)
+> - [MSAL Browser v2 to v3 migration](./browser/v2-migration.md)
+> - [MSAL Node v3 to v5 migration](./node/v5-migration.md)
 > - [MSAL Angular v4 to v5 upgrade](./angular/v4-v5-upgrade-guide.md)
-> - [MSAL React v4 to v5 migration](./react/migration-guide-v4-v5.md)
+> - [MSAL React migration guide](./react/migration-guide.md)
 
 ### Libraries in Long-term Support (LTS)
 
@@ -68,7 +68,7 @@ The following table shows the active and LTS versions for each MSAL.js library:
 |---|---|---|
 | msal-browser | v5.x | v2.x |
 | msal-node | v5.x | v1.x |
-| msal-react | v3.x | v1.x |
+| msal-react | v5.x | v1.x |
 | msal-angular | v5.x | v2.x |
 
 The LTS libraries, hosted on the [`msal-lts` branch](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/msal-lts), are no longer in active development but still receive critical security bug fix support.
