@@ -16,9 +16,15 @@ ms.reviewer: kengaderdus
 
 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open standard that enables AI applications to connect securely with external tools, data sources, and services. MSAL Browser supports MCP flows by enforcing that all token requests include a `resource` parameter and caching access tokens keyed by that resource.
 
-When `isMcp` is set to `true` in the MSAL configuration, MSAL enforces resource-scoped token acquisition and caching. This behavior is supported for both standard browser applications using `PublicClientApplication` and Nested App Authentication (NAA) applications using `createNestablePublicClientApplication`.
+> [!NOTE]
+> MCP flows are supported for both standard browser applications using `PublicClientApplication` and Nested App Authentication (NAA) applications using `createNestablePublicClientApplication`.
 
 For server-side implementations, see [MSAL Node MCP flows](../node/mcp.md).
+
+## Prerequisites
+
+- [Register an application with the Microsoft identity platform](/entra/identity-platform/quickstart-register-app)
+- `@azure/msal-browser` v5 or later installed in your project
 
 ## Enabling MCP
 
@@ -113,3 +119,12 @@ Two errors are specific to MCP flows:
 | `misplaced_resource_parameter` | A `resource` was found both in the `resource` property and in `extraQueryParameters` or `extraParameters`. Use only one.  |
 
 Both errors are thrown as `ClientAuthError`. For more information, see the [errors documentation](errors.md).
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Initialize applications](initialization.md)
+
+- [Acquire tokens](acquire-token.md)
+- [Caching in MSAL.js](caching.md)
+- [MSAL Node MCP flows](../node/mcp.md)

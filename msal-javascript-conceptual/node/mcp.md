@@ -8,7 +8,7 @@ ms.date: 03/15/2026
 ms.service: msal
 ms.subservice: msal-node
 ms.topic: how-to
-ms.reviewer: kengaderdus
+ms.reviewer: cwerner, owenrichards, kengaderdus
 #Customer intent: As a developer building MCP applications, I want to use MSAL Node to acquire resource-scoped tokens so that my MCP server can authenticate against multiple resources.
 ---
 
@@ -16,7 +16,14 @@ ms.reviewer: kengaderdus
 
 When building [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) applications, you can configure MSAL Node to enforce resource-scoped token acquisition and caching. When MCP mode is enabled, MSAL requires every token request to include a `resource` parameter and caches access tokens keyed by that resource.
 
-MCP flows are available for public client applications only.
+> [!NOTE]
+> MCP flows are available for public client applications only.
+
+## Prerequisites
+
+- [Register an application with the Microsoft identity platform](/entra/identity-platform/quickstart-register-app)
+- An application configured as a public client (for example, a desktop or CLI application)
+- `@azure/msal-node` v5 or later installed in your project
 
 ## Enable MCP mode
 
@@ -115,4 +122,13 @@ Both errors are thrown as `ClientAuthError`. For more information, see [MSAL Nod
 
 ## Samples
 
-- [MCP Flows Sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/mcp-flows) -Express app demonstrating MCP with authorization code and silent flows.
+- [MCP Flows Sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/mcp-flows) — Express app demonstrating MCP with authorization code and silent flows.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Initialize public client applications](initialize-public-client-application.md)
+
+- [Supported authorization code grants](acquire-token-requests.md)
+- [Token caching in MSAL Node](caching.md)
+- [MSAL Node FAQs](faq.md)
