@@ -8,7 +8,7 @@ ms.date: 03/06/2026
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: how-to
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to upgrade my Angular application from MSAL Angular v3 to v4 so that I can get security updates and Angular 19 support.
 ---
 

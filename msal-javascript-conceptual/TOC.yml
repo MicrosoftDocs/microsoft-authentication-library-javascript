@@ -28,6 +28,8 @@
           href: browser/device-bound-tokens.md
         - name: Acquire access tokens protected with PoP
           href: browser/access-token-proof-of-possession.md
+        - name: Use MCP flows with MSAL Browser
+          href: browser/mcp.md
     - name: Advanced topics
       items:
         - name: Single sign-on in MSAL.js
@@ -86,6 +88,12 @@
           href: browser/v1-migration.md
         - name: Migrate from MSAL v2.x to MSAL v3.x
           href: browser/v2-migration.md
+        - name: Migrate from MSAL v3.x to MSAL v4.x
+          href: browser/v3-migration.md
+        - name: Migrate from MSAL v4.x to MSAL v5.x
+          href: browser/v4-migration.md
+        - name: Set up the redirect bridge page
+          href: browser/redirect-bridge.md
 - name: MSAL Angular
   items:
     - name: Getting started
@@ -125,7 +133,7 @@
         - name: Upgrade from MSAL Angular 0.x to MSAL Angular 1.x
           href: angular/v0-v1-upgrade-guide.md
         - name: Upgrade from MSAL Angular 1.x to MSAL Angular 2.x
-          href: angular/v1-V2-upgrade-guide.md
+          href: angular/v1-v2-upgrade-guide.md
         - name: Upgrade from MSAL Angular 2.x to MSAL Angular 3.x
           href: angular/v2-v3-upgrade-guide.md
         - name: Upgrade from MSAL Angular 3.x to MSAL Angular 4.x
@@ -152,6 +160,8 @@
           href: node/brokering.md
         - name: Use managed identity with MSAL Node
           href: node/managed-identity.md
+        - name: Use MCP flows with MSAL Node
+          href: node/mcp.md
     - name: Advanced topics
       items:
         - name: Token caching in MSAL Node
@@ -180,19 +190,27 @@
           href: node/v5-migration.md
 - name: MSAL React
   items:
-    - name: Getting started with MSAL React
-      href: react/getting-started.md
-    - name: Class components
-      href: react/class-components.md
-    - name: Events
-      href: react/events.md
-    - name: Hooks
-      href: react/hooks.md
-    - name: Performance
-      href: react/performance.md
-    - name: Errors
-      href: react/errors.md
-    - name: Migrate from MSAL v1 to MSAL React and MSAL Browser
-      href: react/migration-guide.md
-    - name: MSAL React FAQs
-      href: react/faq.md
+    - name: Getting started
+      items:
+        - name: Getting started with MSAL React
+          href: react/getting-started.md
+        - name: Class components
+          href: react/class-components.md
+        - name: Hooks
+          href: react/hooks.md
+    - name: Advanced topics
+      items:
+        - name: Events
+          href: react/events.md
+        - name: Performance
+          href: react/performance.md
+        - name: Errors
+          href: react/errors.md
+        - name: MSAL React FAQs
+          href: react/faq.md
+    - name: Migration guides
+      items:
+        - name: Migrate from MSAL v1 to MSAL React and MSAL Browser
+          href: react/migration-guide.md
+        - name: Migrate from MSAL React v3 to v5
+          href: react/migration-guide-v4-v5.md

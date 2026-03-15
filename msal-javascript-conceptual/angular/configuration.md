@@ -1,6 +1,6 @@
 ---
 title: MSAL Angular Configuration
-description: Learn how to configure your Angular application to use MSAL Angular
+description: Learn how to configure MSAL Angular with MsalGuardConfiguration, MsalInterceptorConfiguration, and browser settings
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
@@ -8,7 +8,7 @@ ms.subservice: msal-angular
 ms.topic: article
 ms.date: 03/06/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to configure MSAL Angular so that I can integrate authentication into my Angular application.
 ---
 

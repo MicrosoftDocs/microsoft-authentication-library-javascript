@@ -6,9 +6,9 @@ manager: Dougeby
 ms.service: msal
 ms.subservice: msal-react
 ms.topic: get-started
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Get started with MSAL React
@@ -25,7 +25,7 @@ This article will walk you through how to get started with `@azure/msal-react`. 
 
 ```javascript
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import { MsalProvider } from "@azure/msal-react";
 import { Configuration,  PublicClientApplication } from "@azure/msal-browser";
@@ -48,7 +48,8 @@ const AppProvider = () => (
     </MsalProvider>
 );
 
-ReactDOM.render(<AppProvider />, document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
+root.render(<AppProvider />);
 ```
 
 All components underneath `MsalProvider` will have access to the `PublicClientApplication` instance via context as well as all hooks and components provided by `@azure/msal-react`.
@@ -152,7 +153,7 @@ export function Example() {
 The `useMsalAuthentication` hook will first check if a user is signed in, then attempt to sign a user in if there are no users signed in. You will need to provide the interaction type you would like to use (redirect or popup).
 It will return the result of the login operation, any error that occurred and the login function you can use if you need to retry.
 
-You can read more about this hook in the [hooks doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/hooks.md#usemsalauthentication-hook).
+You can read more about this hook in the [hooks doc](./hooks.md#usemsalauthentication-hook).
 
 ```javascript
 import React from 'react';
@@ -184,7 +185,7 @@ Another way to invoke a sign-in is by using `@azure/msal-browser` APIs directly 
 
 A hook that returns the `PublicClientApplication` instance, an array of all accounts currently signed in and an `inProgress` value that tells you what msal is currently doing.
 
-You can read more about this hook in the [hooks doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/hooks.md#usemsal-hook).
+You can read more about this hook in the [hooks doc](./hooks.md#usemsal-hook).
 
 ```javascript
 import React from 'react';
@@ -211,7 +212,7 @@ export function App() {
 ### Consuming the raw context
 
 If you are using a class component and can't use hooks you can consume the raw msal context through `MsalContext`.
-You can read more about using `@azure/msal-react` in class components [here](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/class-components.md).
+You can read more about using `@azure/msal-react` in class components [here](./class-components.md).
 
 ```javascript
 import React from "react";
@@ -262,7 +263,7 @@ export default YourWrappedComponent = withMsal(LoginButton);
 
 ## Acquiring an access token
 
-We recommend that your app calls the `acquireTokenSilent` API on your `PublicClientApplication` object each time you need an access token to access an API. T
+We recommend that your app calls the `acquireTokenSilent` API on your `PublicClientApplication` object each time you need an access token to access an API. This can be done similar to the ways laid out in the previous section.
 
 ```javascript
 import React, { useState, useEffect } from "react"

@@ -8,7 +8,7 @@ ms.subservice: msal-angular
 ms.topic: concept-article
 ms.date: 03/06/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to handle redirects correctly in my MSAL Angular application so that authentication works seamlessly.
 ---
 

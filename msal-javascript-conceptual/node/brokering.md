@@ -6,9 +6,9 @@ manager: Dougeby
 ms.author: dmwendia
 ms.service: msal
 ms.subservice: msal-node
-ms.date: 10/26/2023
+ms.date: 03/15/2026
 ms.topic: concept-article
-ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to learn how to acquire tokens from the native token broker.
 ---
 
@@ -64,6 +64,51 @@ pca.acquireTokenInteractive({
     windowHandle: win.getNativeWindowHandle()
 });
 ```
+
+## Proof of Possession
+
+Access token proof of possession (PoP) is supported when acquiring tokens through the native broker. To request a PoP token, add the following properties to the request object provided to `acquireTokenInteractive` or `acquireTokenSilent`.
+
+### AT PoP Request Parameters
+
+| Name | Description | Required |
+|---|---|---|
+| `authenticationScheme` | Indicates whether MSAL should acquire a `Bearer` or `PoP` token. Default is `Bearer`. | **Required** |
+| `resourceRequestMethod` | The all-caps name of the HTTP method of the request that will use the signed token (`GET`, `POST`, `PUT`, etc.) | **Required** |
+| `resourceRequestUri` | The URL of the protected resource for which the access token is being issued | **Required** |
+| `shrNonce` | A server-generated, signed timestamp that is Base64URL encoded as a string. This nonce is used to mitigate clock-skew and time-travel attacks meant to enable PoP token pre-generation. | *Optional* |
+
+### Usage Example
+
+```javascript
+import { PublicClientApplication, Configuration, AuthenticationScheme } from "@azure/msal-node";
+import { NativeBrokerPlugin } from "@azure/msal-node-extensions";
+
+const msalConfig: Configuration = {
+    auth: {
+        clientId: "your-client-id",
+    },
+    broker: {
+        nativeBrokerPlugin: new NativeBrokerPlugin(),
+    },
+};
+
+const pca = new PublicClientApplication(msalConfig);
+
+const popTokenRequest = {
+    scopes: ["User.Read"],
+    authenticationScheme: AuthenticationScheme.POP,
+    resourceRequestMethod: "POST",
+    resourceRequestUri: "YOUR_RESOURCE_ENDPOINT",
+    shrNonce: "NONCE_ACQUIRED_FROM_RESOURCE_SERVER",
+};
+
+pca.acquireTokenInteractive(popTokenRequest);
+pca.acquireTokenSilent(popTokenRequest);
+```
+
+> [!NOTE]
+> Access token proof-of-possession is only supported through the native broker flow and is not available in the non-brokered flow.
 
 ## Differences when using the broker to acquire tokens
 
