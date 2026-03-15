@@ -82,7 +82,7 @@ These are the steps to override MSAL log level and PII settings to troubleshoot 
    - Edge, Chrome and Firefox browsers: press F12
    - Safari: go into Safari's preferences (`Safari Menu` > `Preferences`), select the `Advanced Tab` and enable `Show features for web developers`. Once that menu is enabled, you will find the developer console by clicking on `Develop` > `Show Javascript Console`
 2. Navigate to `Session Storage`:
-   - [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/storage/sessionstorage)
+   - [Edge](https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/storage/sessionstorage)
    - [Chrome](https://developer.chrome.com/docs/devtools/storage/sessionstorage)
    - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/local_storage_session_storage)
    - Safari: navigate to `Storage` tab and expand `Session Storage`
@@ -99,7 +99,7 @@ Add `msal.browser.log.pii` key to `Session Storage`, set its value to `true` or 
 ## Retrieve captured logs
 
 1. Navigate to the console tab:
-   - [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console)
+   - [Edge](https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/console)
    - [Chrome](https://developer.chrome.com/docs/devtools/console)
    - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/browser_console)
    - Safari: open JavaScript console and navigate to `Console`

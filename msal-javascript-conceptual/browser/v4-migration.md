@@ -371,7 +371,7 @@ The setup varies by build system — see the **[Redirect Bridge — Framework-Sp
 | [Vite](redirect-bridge.md#vite)                                   | Multi-page `rollupOptions.input` |
 | [Webpack](redirect-bridge.md#webpack)                             | Separate entry + `HtmlWebpackPlugin` |
 | [Next.js](redirect-bridge.md#nextjs)                              | Page component excluded from `MsalProvider` |
-| [CRA (Create React App)](redirect-bridge.md#create-react-app-cra) | Static `public/redirect.html` page |
+| CRA (Create React App) | Static `public/redirect.html` page |
 | [Express.js](redirect-bridge.md#expressjs--nodejs-backend)        | Server-side COOP header exclusion |
 
 **See also:** [Redirect URI considerations](login-user.md#redirecturi-considerations) | [Popup interaction_in_progress errors](login-user.md#handling-popup-interaction_in_progress-errors) | [MDN: COOP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy)
