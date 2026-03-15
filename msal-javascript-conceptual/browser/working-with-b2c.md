@@ -186,4 +186,4 @@ MSAL.js will only process tokens which it originally requested. If your flow req
 
 ### B2C and iframe usage
 
-**Azure AD B2C** offers an [embedded sign-in experience](/azure/active-directory-b2c/embedded-login), which allows rendering a custom login UI in an iframe. Since MSAL prevents redirect in iframes by default, you'll need to set the [allowRedirectInIframe](/entra/identity-platform/configuration#system-config-options) configuration option to **true** in order to make use of this feature. For other considerations when using iframes, please refer to: [Using MSAL in iframed apps](iframe-usage.md)
+**Azure AD B2C** offers an [embedded sign-in experience](/azure/active-directory-b2c/embedded-login), which allows rendering a custom login UI in an iframe. Since MSAL prevents redirect in iframes by default, you'll need to set the [allowRedirectInIframe](/entra/identity-platform/msal-js-initializing-client-applications) configuration option to **true** in order to make use of this feature. For other considerations when using iframes, please refer to: [Using MSAL in iframed apps](iframe-usage.md)

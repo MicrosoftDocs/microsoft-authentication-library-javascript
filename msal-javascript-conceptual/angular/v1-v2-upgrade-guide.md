@@ -65,7 +65,7 @@ See our [configuration doc](https://github.com/AzureAD/microsoft-authentication-
 
 * We recommend subscribing to the `inProgress$` observable and filtering for `InteractionStatus.None` before retrieving account information. This ensures that all interactions have completed before getting account information. See [our sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/msal-lts/samples/msal-angular-v2-samples/angular10-sample-app/src/app/app.component.ts#L27) for an example of this use.
 * When getting accounts, we recommend using `getAccountByHomeId()` and `getAccountByLocalId()`, available on the MSAL instance. `getAccount()` is now `getAccountByUsername()`, but should be a secondary choice, as it may be less reliable and is for convenience only.
-* `getAllAccounts()` is also available on the MSAL instance. Please see [docs](https://azuread.github.io/microsoft-authentication-library-for-js/ref/classes/_azure_msal_browser.publicclientapplication.html) for `@azure/msal-browser` for more details on account methods.
+* `getAllAccounts()` is also available on the MSAL instance. Please see [docs](/javascript/api/@azure/msal-browser/publicclientapplication) for `@azure/msal-browser` for more details on account methods.
 * Additionally, you can now get and set active acccounts using `getActiveAccount()` and `setActiveAccount()`. See our [FAQ](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/msal-lts/lib/msal-angular/docs/v2-docs/FAQ.md#how-do-i-get-and-set-active-accounts) for more information.
 
 ## Angular 9+ and rxjs@6

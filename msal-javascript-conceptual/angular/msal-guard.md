@@ -103,7 +103,7 @@ The optional `authRequest` is an advanced featured that is not required. However
 
 Consenting to scopes upfront is demonstrated in the code samples above, and in our [samples](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-angular-samples).
 
-All possible parameters for the request object can be found here: [`PopupRequest`](https://azuread.github.io/microsoft-authentication-library-for-js/ref/msal-browser/modules/_src_request_popuprequest_.html) and [`RedirectRequest`](https://azuread.github.io/microsoft-authentication-library-for-js/ref/msal-browser/modules/_src_request_redirectrequest_.html).
+All possible parameters for the request object can be found here: [`PopupRequest`](/javascript/api/@azure/msal-browser/popuprequest) and [`RedirectRequest`](/javascript/api/@azure/msal-browser/redirectrequest).
 
 ### Login Failed Route
 

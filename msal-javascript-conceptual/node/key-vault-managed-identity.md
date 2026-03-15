@@ -159,7 +159,7 @@ Now that your app deployed to App Service has a managed identity, in this step y
 1. Click on **Select Principal**, add your account and pre-created **system-assigned** identity.
 1. Click on **OK** to add the new Access Policy, then click **Save** to save the Access Policy.
 
-For more information, see [Use Key Vault from App Service with Azure Managed Identity](/samples/azure-samples/app-service-msi-keyvault-dotnet/keyvault-msi-appservice-sample/)
+For more information, see [Use Key Vault from App Service with Azure Managed Identity](/entra/identity/managed-identities-azure-resources/tutorial-windows-vm-access-nonaad)
 
 #### Add environment variables
 

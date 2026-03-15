@@ -392,7 +392,7 @@ const msalConfig = {
 
 > [!IMPORTANT]
 > You **MUST** also update the redirect URI in your
-> [Entra ID app registration](https://learn.microsoft.com/azure/active-directory/develop/quickstart-register-app#add-a-redirect-uri).
+> [Entra ID app registration](/entra/identity-platform/quickstart-register-app#add-a-redirect-uri).
 > The URI must match **exactly** — including path, protocol, and port.
 > Failure to do so results in `redirect_uri_mismatch` errors.
 

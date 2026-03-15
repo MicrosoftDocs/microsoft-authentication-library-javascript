@@ -23,7 +23,7 @@ Since MSAL Node supports various authorization code grants, there is support for
 - [getAuthCodeUrl()](/javascript/api/@azure/msal-node/publicclientapplication#@azure-msal-node-publicclientapplication-getauthcodeurl): This API is the first leg of the `authorization code grant` for MSAL Node. The request is of the type [AuthorizationUrlRequest](/javascript/api/@azure/msal-node/authorizationurlrequest).
 The application is sent a URL that can be used to generate an `authorization code`. This URL can be opened in a browser of choice, where the user can input their credentials, and will be redirected back to the `redirectUri` (registered during the [app registration](/entra/identity-platform/scenario-desktop-app-registration)) with an `authorization code`. The `authorization code` can now be redeemed for a `token` with the following step. Note that if authorization code flow is being done for a public client application, [PKCE](https://tools.ietf.org/html/rfc7636) is recommended.
 
-- [acquireTokenByCode()](/javascript/api/@azure/msal-node/publicclientapplication#@azure-msal-node-publicclientapplication-acquiretokenbycode): This API is the second leg of the `authorization code grant` for MSAL Node. The request constructed here should be of the type [AuthorizationCodeRequest](/javascript/api/@azure/msal-node/authorizationcodereques). The application passed the `authorization code` received as a part of the above step and exchanges it for a `token`. Not that if authorization code flow is being done for a public client application, [PKCE](https://tools.ietf.org/html/rfc7636) is recommended.
+- [acquireTokenByCode()](/javascript/api/@azure/msal-node/publicclientapplication#@azure-msal-node-publicclientapplication-acquiretokenbycode): This API is the second leg of the `authorization code grant` for MSAL Node. The request constructed here should be of the type [AuthorizationCodeRequest](/javascript/api/@azure/msal-node/authorizationcoderequest). The application passed the `authorization code` received as a part of the above step and exchanges it for a `token`. Not that if authorization code flow is being done for a public client application, [PKCE](https://tools.ietf.org/html/rfc7636) is recommended.
 
 ``` javascript
 
@@ -84,7 +84,7 @@ pca.acquireTokenByDeviceCode(deviceCodeRequest).then((response) => {
 
 ### Public APIs
 
-- [acquireTokenByRefreshToken](/javascript/api/@azure/msal-node/apiid#@azure-msal-node-apiid-acquiretokenbyrefreshtoken): This API acquires a token by exchanging the refresh token provided for a new set of tokens. The request is of the type [RefreshTokenRequest](/javascript/api/@azure/msal-node/refreshtokenrequest). The `refresh token` is never returned to the user in a response, but can be accessed from the user cache. It is recommended that you use `acquireTokenSilent()` for non-interactive scenarios. When using [acquireTokenSilent()](/javascript/api/@azure/msal-node/clientapplication#@azure-msal-node-clientapplication-acquiretokensilent), MSAL will handle the caching and refreshing of tokens automatically.
+- [acquireTokenByRefreshToken](/javascript/api/@azure/msal-node/apiid): This API acquires a token by exchanging the refresh token provided for a new set of tokens. The request is of the type [RefreshTokenRequest](/javascript/api/@azure/msal-node/refreshtokenrequest). The `refresh token` is never returned to the user in a response, but can be accessed from the user cache. It is recommended that you use `acquireTokenSilent()` for non-interactive scenarios. When using [acquireTokenSilent()](/javascript/api/@azure/msal-node/clientapplication), MSAL will handle the caching and refreshing of tokens automatically.
 
 ``` javascript
 const config = {
@@ -112,7 +112,7 @@ pca.acquireTokenByRefreshToken(refreshTokenRequest).then((response) => {
 
 ### Public APIs
 
-- [acquireTokenSilent](/javascript/api/@azure/msal-node/clientapplication#@azure-msal-node-clientapplication-acquiretokensilent): This API acquires a token silently, in case cache is provided by the user, or when cache is created by preceding this call with any other interactive flow (eg: authorization code flow). The request is of the type [SilentFlowRequest](/javascript/api/@azure/msal-node/silentflowrequest). The `token` is acquired silently when a user specifies the account the token is requested for.
+- [acquireTokenSilent](/javascript/api/@azure/msal-node/clientapplication): This API acquires a token silently, in case cache is provided by the user, or when cache is created by preceding this call with any other interactive flow (eg: authorization code flow). The request is of the type [SilentFlowRequest](/javascript/api/@azure/msal-node/silentflowrequest). The `token` is acquired silently when a user specifies the account the token is requested for.
 
 ``` javascript
 /**

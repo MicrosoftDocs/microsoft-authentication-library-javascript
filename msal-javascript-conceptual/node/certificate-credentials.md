@@ -166,7 +166,7 @@ function convertPFX(pfx, passphrase = null) {
 
 ### (Optional) Creating an HTTPS server
 
-The OAuth 2.0 protocol recommends using an HTTPS connection whenever possible. Most cloud services like Azure App Service will provide HTTPS connection by default via proxy. If for testing purposes you would like to setup your own HTTPS server, see the [Node.js HTTPS guide](https://nodejs.org/knowledge/HTTP/servers/how-to-create-a-HTTPS-server/).
+The OAuth 2.0 protocol recommends using an HTTPS connection whenever possible. Most cloud services like Azure App Service will provide HTTPS connection by default via proxy. If for testing purposes you would like to setup your own HTTPS server, see the Node.js documentation for guidance on creating an HTTPS server.
 
 You'll also need to add your self-signed certificates to the *credential manager* / *key chain* of your **OS** to bypass the browser's security policy. You may still see a warning in your browser afterwards (e.g. Chrome).
 

@@ -22,7 +22,7 @@ This guide provides framework-specific instructions for setting up the redirect 
 > [!IMPORTANT]
 > After updating your `redirectUri` to point to the new redirect bridge page,
 > you **MUST** also update the redirect URI in your
-> [Entra ID app registration](https://learn.microsoft.com/azure/active-directory/develop/quickstart-register-app#add-a-redirect-uri).
+> [Entra ID app registration](/entra/identity-platform/quickstart-register-app#add-a-redirect-uri).
 > The URI must match **exactly** — including path, protocol, and port.
 > Failure to update the app registration will result in `redirect_uri_mismatch` errors.
 
