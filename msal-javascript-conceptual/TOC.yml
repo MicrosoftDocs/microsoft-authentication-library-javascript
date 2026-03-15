@@ -88,33 +88,39 @@
           href: browser/v2-migration.md
 - name: MSAL Angular
   items:
-    - name: Initialize MSAL
-      href: angular/initialization.md
-    - name: Common public APIs in MSAL Angular
-      href: angular/public-apis.md
-    - name: Configure your application
-      href: angular/configuration.md
-    - name: Using MSAL Guard
-      href: angular/msal-guard.md
-    - name: Acquire tokens silently
-      href: angular/ssosilent.md
-    - name: Using your router for client-side navigation
-      href: angular/performance.md
-    - name: Using events in your application
-      href: angular/events.md
-    - name: Handling redirects
-      href: angular/redirects.md
-    - name: Using the MSAL Interceptor
-      href: angular/msal-interceptor.md
-    - name: Support for multi-tenant applications
-      href: angular/multi-tenant.md
-    - name: Logging
-      href: angular/logging.md
-    - name: Errors
-      href: angular/errors.md
-    - name: Angular Universal SSR with MSAL Angular
-      href: angular/universal-ssr.md
-    - name: Upgrading your MSAL Angular version
+    - name: Getting started
+      items:
+        - name: Initialize MSAL
+          href: angular/initialization.md
+        - name: Configure your application
+          href: angular/configuration.md
+        - name: Common public APIs in MSAL Angular
+          href: angular/public-apis.md
+    - name: Acquire tokens
+      items:
+        - name: Using MSAL Guard
+          href: angular/msal-guard.md
+        - name: Acquire tokens silently
+          href: angular/ssosilent.md
+        - name: Using the MSAL Interceptor
+          href: angular/msal-interceptor.md
+        - name: Handling redirects
+          href: angular/redirects.md
+    - name: Advanced topics
+      items:
+        - name: Using your router for client-side navigation
+          href: angular/performance.md
+        - name: Using events in your application
+          href: angular/events.md
+        - name: Support for multi-tenant applications
+          href: angular/multi-tenant.md
+        - name: Logging
+          href: angular/logging.md
+        - name: Errors
+          href: angular/errors.md
+        - name: Angular Universal SSR with MSAL Angular
+          href: angular/universal-ssr.md
+    - name: Migration guides
       items:
         - name: Upgrade from MSAL Angular 0.x to MSAL Angular 1.x
           href: angular/v0-v1-upgrade-guide.md
@@ -128,42 +134,50 @@
           href: angular/v4-v5-upgrade-guide.md
 - name: MSAL Node
   items:
-    - name: Initialize public client applications
-      href: node/initialize-public-client-application.md
-    - name: Initialize confidential client applications
-      href: node/initialize-confidential-client-application.md
-    - name: Configure your application
-      href: node/configuration.md
-    - name: Supported authorization code grants
-      href: node/acquire-token-requests.md
-    - name: Accounts in MSAL Node
-      href: node/accounts.md
-    - name: Acquire device bound tokens with broker
-      href: node/brokering.md
-    - name: Token caching in MSAL Node
-      href: node/caching.md
-    - name: Use certificate credentials with MSAL Node
-      href: node/certificate-credentials.md
-    - name: Performance in MSAL Node
-      href: node/performance.md
-    - name: Enable regional authorities
-      href: node/regional-authorities.md
-    - name: Implement SNI Authentication
-      href: node/sni.md
-    - name: Microsoft Authentication Extensions for Node
-      href: node/extensions.md
-    - name: Caching in Microsoft Authentication Extensions for Node
-      href: node/caching-in-extensions.md
-    - name: Secure app credentials with Azure Key Vault and Azure Managed Identity
-      href: node/key-vault-managed-identity.md
-    - name: Migrate Node.js apps from ADAL to MSAL
-      href: node/migration.md
-    - name: Migrate from MSAL Node v3 to v5
-      href: node/v5-migration.md
-    - name: Use managed identity with MSAL Node
-      href: node/managed-identity.md
-    - name: MSAL Node FAQs
-      href: node/faq.md
+    - name: Getting started
+      items:
+        - name: Initialize public client applications
+          href: node/initialize-public-client-application.md
+        - name: Initialize confidential client applications
+          href: node/initialize-confidential-client-application.md
+        - name: Configure your application
+          href: node/configuration.md
+        - name: Accounts in MSAL Node
+          href: node/accounts.md
+    - name: Acquire tokens
+      items:
+        - name: Supported authorization code grants
+          href: node/acquire-token-requests.md
+        - name: Acquire device bound tokens with broker
+          href: node/brokering.md
+        - name: Use managed identity with MSAL Node
+          href: node/managed-identity.md
+    - name: Advanced topics
+      items:
+        - name: Token caching in MSAL Node
+          href: node/caching.md
+        - name: Use certificate credentials with MSAL Node
+          href: node/certificate-credentials.md
+        - name: Performance in MSAL Node
+          href: node/performance.md
+        - name: Enable regional authorities
+          href: node/regional-authorities.md
+        - name: Implement SNI Authentication
+          href: node/sni.md
+        - name: Microsoft Authentication Extensions for Node
+          href: node/extensions.md
+        - name: Caching in Microsoft Authentication Extensions for Node
+          href: node/caching-in-extensions.md
+        - name: Secure app credentials with Azure Key Vault and Azure Managed Identity
+          href: node/key-vault-managed-identity.md
+        - name: MSAL Node FAQs
+          href: node/faq.md
+    - name: Migration guides
+      items:
+        - name: Migrate Node.js apps from ADAL to MSAL
+          href: node/migration.md
+        - name: Migrate from MSAL Node v3 to v5
+          href: node/v5-migration.md
 - name: MSAL React
   items:
     - name: Getting started with MSAL React
