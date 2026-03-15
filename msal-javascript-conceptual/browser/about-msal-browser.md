@@ -32,11 +32,11 @@ MSAL Browser provides the following capabilities for your single-page applicatio
 - [Acquire tokens silently from cache or via refresh](./acquire-token.md)
 - [Support for Cross-Origin-Opener-Policy (COOP) popup flows](./login-user.md)
 - [Model Context Protocol (MCP) authentication](./mcp.md)
-- [Nested App Authentication (NAA) for Microsoft 365 apps](./nested-app-auth.md)
 - [Device-bound tokens via platform broker (WAM)](./device-bound-tokens.md)
 - [AES-GCM encrypted token cache in localStorage](./caching.md)
 - [Proof of Possession (PoP) tokens](./access-token-proof-of-possession.md)
 - [Single sign-on across tabs and applications](./single-sign-on.md)
+- Nested App Authentication (NAA) for Microsoft 365 apps
 
 ## Installation
 
