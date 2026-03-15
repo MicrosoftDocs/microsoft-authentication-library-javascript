@@ -53,12 +53,11 @@ MSAL.js v5 introduces several key features:
 - **Factory functions**: Use `createStandardPublicClientApplication` or `createNestablePublicClientApplication` to initialize MSAL with async configuration.
 - **Platform broker (WAM) integration**: Enable Windows Authentication Manager (WAM) brokered authentication via the `allowPlatformBroker` configuration option.
 
-> [!NOTE]
-> For migration guides, see:
-> - [MSAL Browser v2 to v3 migration](./browser/v2-migration.md)
-> - [MSAL Node v3 to v5 migration](./node/v5-migration.md)
-> - [MSAL Angular v4 to v5 upgrade](./angular/v4-v5-upgrade-guide.md)
-> - [MSAL React migration guide](./react/migration-guide.md)
+For migration guides to MSAL JavaScript v5.x, see:
+ - [MSAL Browser v4 to v5 migration](./browser/4-migration.md)
+ - [MSAL Node v3 to v5 migration](./node/v5-migration.md)
+ - [MSAL Angular v4 to v5 upgrade](./angular/v4-v5-upgrade-guide.md)
+ - [MSAL React migration guide](./react/migration-guide.md)
 
 ### Libraries in Long-term Support (LTS)
 
