@@ -1,14 +1,14 @@
 ---
 title: Enable logging in your applications
-description: Learn how to enable MSAL JS logging for your applications
+description: Learn how to enable and configure MSAL.js logging with log levels and callbacks to collect diagnostic information
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: how-to
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Enable logging in your applications
@@ -71,3 +71,36 @@ An example usage in a sample can be accessed [here](https://github.com/AzureAD/m
 3. Make sure you have the appropriate log level enabled in your browser console to see these logs, eg: "verbose" may need to be enabled for the browser to load these.
 
     ![browser console](./images/BrowserLogEnablement.png)
+
+## Override log level and PII setting
+
+These are the steps to override MSAL log level and PII settings to troubleshoot errors in non-dev environments:
+
+### Navigate to session storage
+
+1. Open browser developer tools
+   - Edge, Chrome and Firefox browsers: press F12
+   - Safari: go into Safari's preferences (`Safari Menu` > `Preferences`), select the `Advanced Tab` and enable `Show features for web developers`. Once that menu is enabled, you will find the developer console by clicking on `Develop` > `Show Javascript Console`
+2. Navigate to `Session Storage`:
+   - [Edge](/microsoft-edge/devtools-guide-chromium/storage/sessionstorage)
+   - [Chrome](https://developer.chrome.com/docs/devtools/storage/sessionstorage)
+   - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/local_storage_session_storage)
+   - Safari: navigate to `Storage` tab and expand `Session Storage`
+3. Select target domain
+
+### Override log level
+
+Add `msal.browser.log.level` key to `Session Storage`, set its value to the desired log level (`Verbose`, for example), refresh the page and retry the sign-in operation.
+
+### Override PII log setting
+
+Add `msal.browser.log.pii` key to `Session Storage`, set its value to `true` or `false`, refresh the page and retry the sign-in operation.
+
+## Retrieve captured logs
+
+1. Navigate to the console tab:
+   - [Edge](/microsoft-edge/devtools-guide-chromium/console)
+   - [Chrome](https://developer.chrome.com/docs/devtools/console)
+   - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/browser_console)
+   - Safari: open JavaScript console and navigate to `Console`
+2. Please review the logs to ensure they do not contain sensitive data before sharing them

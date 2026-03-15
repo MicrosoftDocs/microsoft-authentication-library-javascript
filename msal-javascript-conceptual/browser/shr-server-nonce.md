@@ -8,7 +8,7 @@ ms.subservice: msal-js
 ms.topic: article
 ms.date: 05/21/2025
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # SHR Server Nonce

@@ -1,14 +1,14 @@
 ---
 title: Manage token lifetimes
-description: Learn how to manage token lifetimes
+description: Learn how to manage token lifetimes and automatic renewal of ID tokens, access tokens, and refresh tokens in MSAL.js
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: how-to
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Token Lifetimes, Expiration, and Renewal
@@ -47,6 +47,40 @@ The `PublicClientApplication` object exposes an API called `acquireTokenSilent` 
 
 See [the request and response objects](./request-response-object.md) article for more information on what configuration parameters you can set for the `acquireTokenSilent` method.
 
+### Avoiding interactive interruptions in the middle of a user's session
+
+In some cases you may want to pre-emptively invoke interaction, if needed, at the beginning of a user's session to ensure they can continue to acquire tokens silently and use your application without further interruptions. You can of course achieve this by invoking interaction each time your application is loaded for the first time, this is, however, a poor user experience and less performant when a user already has tokens from a previous session or another window/tab. Instead, with a few request parameters you can use `acquireTokenSilent` to ensure the cache has the necessary tokens available to return silently for some arbitrary length of time.
+
+To ensure `acquireTokenSilent` can return valid tokens for a minimum of up to 1 hour:
+
+-   Call `acquireTokenSilent` on page load with the `forceRefresh` request parameter set to `true`. This will skip the cache and acquire a fresh token which can then be served from the cache on subsequent calls.
+-   On subsequent calls leave `forceRefresh` unset or explicitly `false` to ensure tokens can be served from the cache
+
+To ensure `acquireTokenSilent` can return valid tokens for a minimum of any length of time up to 24 hours:
+
+-   Call `acquireTokenSilent` on page load with the `forceRefresh` request parameter set to `true` & the `refreshTokenExpirationOffsetSeconds` parameter set to the desired length of time (in seconds) to be interaction-free
+-   On subsequent calls leave `forceRefresh` and `refreshTokenExpirationOffsetSeconds` unset to ensure tokens can be served from the cache
+
+For example if you'd like to ensure the user can acquire tokens silently for the next 2 hours:
+
+```javascript
+var request = {
+    scopes: ["Mail.Read"],
+    account: currentAccount,
+    forceRefresh: true,
+    refreshTokenExpirationOffsetSeconds: 7200 // 2 hours * 60 minutes * 60 seconds = 7200 seconds
+};
+
+const tokenResponse = await msalInstance.acquireTokenSilent(request).catch(async (error) => {
+    if (error instanceof InteractionRequiredAuthError) {
+        // fallback to interaction when silent call fails
+        await msalInstance.acquireTokenRedirect(request);
+    }
+});
+```
+
+Note: There is never a guarantee that a token can be acquired silently even if the refresh token has not expired yet. The patterns described above are best effort attempts to minimize interaction at inconvenient times but will not eliminate the possibility of required interactions within the desired timeframes. Additionally, not all identity providers return the refresh token expiration - in those cases the `refreshTokenExpirationOffsetSeconds` request parameter will not be evaluated.
+
 ### Cache Lookup Policy
 
 A Cache Lookup Policy can be optionally provided to the request. The Cache Lookup Policies are:
@@ -64,11 +98,11 @@ A Cache Lookup Policy can be optionally provided to the request. The Cache Looku
 
 ```javascript
 var username = "test@contoso.com";
-var currentAccount = msalInstance.getAccountByUsername(username);
+var currentAccount = msalInstance.getAccount({ username });
 var silentRequest = {
     scopes: ["Mail.Read"],
     account: currentAccount,
-    forceRefresh: false
+    forceRefresh: false,
     cacheLookupPolicy: CacheLookupPolicy.Default // will default to CacheLookupPolicy.Default if omitted
 };
 
@@ -94,12 +128,12 @@ const tokenResponse = await msalInstance.acquireTokenSilent(silentRequest).catch
 
 ```javascript
 var username = "test@contoso.com";
-var currentAccount = msalInstance.getAccountByUsername(username);
+var currentAccount = msalInstance.getAccount({ username });
 var silentRequest = {
     scopes: ["Mail.Read"],
     account: currentAccount,
-    forceRefresh: false
-    cacheLookupPolicy: cacheLookupPolicy.Default // will default to CacheLookupPolicy.Default if omitted
+    forceRefresh: false,
+    cacheLookupPolicy: CacheLookupPolicy.Default // will default to CacheLookupPolicy.Default if omitted
 };
 
 var request = {

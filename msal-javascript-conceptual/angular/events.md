@@ -1,14 +1,14 @@
 ---
 title:  Events in MSAL Angular
-description: Learn more about working with events in MSAL Angular
+description: Learn how to subscribe to and handle authentication events in MSAL Angular using MsalBroadcastService
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: article
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Events in MSAL Angular
@@ -235,7 +235,6 @@ import { PublicClientApplication, InteractionType, BrowserCacheLocation } from "
             },
             cache: {
                 cacheLocation : BrowserCacheLocation.LocalStorage,
-                storeAuthStateInCookie: true, // set to true for IE 11
             },
             system: {
                 loggerOptions: {

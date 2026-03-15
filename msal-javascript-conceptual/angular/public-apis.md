@@ -8,7 +8,7 @@ ms.subservice: msal-angular
 ms.topic: article
 ms.date: 05/21/2025
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Commonly used public APIs in MSAL Angular

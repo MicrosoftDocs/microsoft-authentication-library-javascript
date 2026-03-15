@@ -1,6 +1,6 @@
 ---
 title: Custom Signed HTTP Request Claims
-description: Learn how to use Signed HTTP Request claims
+description: Learn how to add custom client claims to Signed HTTP Requests (SHR) with Proof-of-Possession tokens in MSAL.js
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
@@ -8,7 +8,7 @@ ms.subservice: msal-js
 ms.topic: concept-article
 ms.date: 05/21/2025
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Custom SHR Claims

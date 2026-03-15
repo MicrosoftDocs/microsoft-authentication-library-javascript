@@ -1,14 +1,14 @@
 ---
 title: Accounts in MSAL Browser
-description: Learn about accounts in MSAL Browser
+description: Learn how to manage and filter cached account objects using account APIs in MSAL Browser
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: article
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Accounts in MSAL Browser
@@ -18,19 +18,21 @@ This is the platform-specific Accounts documentation for the `@azure/msal-browse
 -   `getAllAccounts()`: returns all the accounts currently in the cache. Supports an optional filter to return a specific set of accounts. An application must choose an account to acquire tokens silently.
 -   `getAccount()`: returns the first cached account that matches the filter passed in. The order in which accounts are read from the cache is arbitrary and there is no guarantee that the first account in the filtered list will be the same for any two calls of `getAccount`. As explained below, increasing the number of filter attributes will provide more exact matches.
 
-### Account Filter Object
+## Account Filter Object
 
 The [AccountFilter](https://azuread.github.io/microsoft-authentication-library-for-js/ref/types/_azure_msal_common.AccountFilter.html) type documentation lists the properties that can be used and combined to filter accounts.
 
-> Note: A single account filter attribute is usually not guaranteed to uniquely identify a cached account object. Adding a combination of attributes that don't repeat together, such as `homeAccountId` + `localAccountId`, can help refine the search.
+> [!NOTE]
+> A single account filter attribute is usually not guaranteed to uniquely identify a cached account object. Adding a combination of attributes that don't repeat together, such as `homeAccountId` + `localAccountId`, can help refine the search.
 
-> Note: `realm` is `tenantId` in the cache.
+> [!NOTE]
+> `realm` is `tenantId` in the cache.
 
-The following `getAccountBy` APIs are marked for deprecation and will be removed in a future version of MSAL. Please migrate to `getAccount()`:
+The following `getAccountBy` APIs have been deprecated. Please use `getAccount()` with an appropriate filter object instead:
 
--   `getAccountByHomeId()`: receives a `homeAccountId` string and returns the matching account from the cache.
--   `getAccountByLocalId()`: receives a `localAccountId` string and returns the matching account from the cache.
--   `getAccountByUsername()`: receives a `username` string and returns the matching account from the cache.
+-   `getAccountByHomeId()`: use `getAccount({ homeAccountId })` instead.
+-   `getAccountByLocalId()`: use `getAccount({ localAccountId })` instead.
+-   `getAccountByUsername()`: use `getAccount({ username })` instead.
 
 The following is a usage examples that covers these APIs:
 
@@ -81,7 +83,8 @@ As of `@azure/msal-browser@3.2.0`, all login hint values can be used to search f
 -   `username` account property
 -   `upn` ID token claim
 
-> Note: All attributes above can be passed into the account filter as the `loginHint` property. The account filter will also accept the `username` attribute as `username`, and will yield a more performant search.
+> [!NOTE]
+> All attributes above can be passed into the account filter as the `loginHint` property. The account filter will also accept the `username` attribute as `username`, and will yield a more performant search.
 
 #### Using `login_hint` claim
 
@@ -98,7 +101,8 @@ return await myMSALObj.acquireTokenSilent(request).catch(async (error) => {
 
 #### Using `username``
 
-> Note: The `username` value can included in the `AccountFilter` object as either `username` or `loginHint`. This is because the `username` claim is one of the 3 values (along with the `login_hint` and `upn` ID token claims) that the token service accepts as login hint. If your application is certain that the value in question is a `username`, setting it as the `AccountFilter.username` property will yield better search performance. Being able to set a `username` value as `loginHint` is useful if your application utilizes a login hint and does not keep context on whether that value came from a `username`, `login_hint`, or `upn` claim.
+> [!NOTE]
+> The `username` value can included in the `AccountFilter` object as either `username` or `loginHint`. This is because the `username` claim is one of the 3 values (along with the `login_hint` and `upn` ID token claims) that the token service accepts as login hint. If your application is certain that the value in question is a `username`, setting it as the `AccountFilter.username` property will yield better search performance. Being able to set a `username` value as `loginHint` is useful if your application utilizes a login hint and does not keep context on whether that value came from a `username`, `login_hint`, or `upn` claim.
 
 Passing `username` as `loginHint`
 
@@ -166,11 +170,15 @@ function getAccessToken() {
 
 Note: As of version 2.16.0 the active account is stored in the cache location configured on your `PublicClientApplication` instance. If you are using a previous version the active account is stored in-memory and thus must be reset on every page load.
 
+### Nested App Authentication
+
+For NAA applications, `setActiveAccount()` and `getActiveAccount()` are NO-OP APIs. Though users can set and get active accounts, they are actively ignored since the NAA application is always expected to have _one_ account and the account is supplied by the host application with `accountContext`. In the future when multiple accounts are supported across the hubs, this behavior is expected to change.
+
 ## Notes
 
 -   The current msal-browser default [sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-browser-samples/VanillaJSTestApp2.0/) has a working single account scenario.
 -   If you have a multiple accounts scenario, please modify the [sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-browser-samples/VanillaJSTestApp2.0/app/default/auth.js) (in `handleResponse()`) to list all cached accounts and choose a specific account.
--   If an application wants to retrieve an account based on the `username`, it needs to save the `username` (from the response of a `login` API for a specific user) prior to using `getAccountByUsername()` API.
+-   If an application wants to retrieve an account based on the `username`, it needs to save the `username` (from the response of a `login` API for a specific user) prior to using the `username` filter in the `getAccount()` API.
 -   `getAllAccounts()` will return multiple accounts if you have made several interactive token requests and the user has selected different accounts in two or more of those interactions. You may need to pass `prompt: "select_account"` or `prompt: "login"` to the interactive acquireToken or login API in order for Microsoft Entra ID to display the account selection screen after the first interaction.
 -   The account APIs return local account state and do not necessarily reflect server state. They return accounts that have previously signed into this app using MSAL.js and the server session may or may not still be active.
 -   Two apps hosted on different domains do not share account state due to browser storage being segemented by domain.

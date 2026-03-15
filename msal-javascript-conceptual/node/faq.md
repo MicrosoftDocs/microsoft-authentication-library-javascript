@@ -8,7 +8,7 @@ ms.date: 03/06/2026
 ms.service: msal
 ms.subservice: msal-node
 ms.topic: faq
-ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to find answers to common questions about MSAL Node so that I can troubleshoot issues and understand the library.
 ---
 

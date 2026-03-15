@@ -8,7 +8,7 @@ ms.subservice: msal-js
 ms.topic: concept-article
 ms.date: 05/21/2025
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Using MSAL Browser in your JavaScript applications
