@@ -54,7 +54,7 @@ MSAL.js v5 introduces several key features:
 - **Platform broker (WAM) integration**: Enable Windows Authentication Manager (WAM) brokered authentication via the `allowPlatformBroker` configuration option.
 
 For migration guides to MSAL JavaScript v5.x, see:
- - [MSAL Browser v4 to v5 migration](./browser/4-migration.md)
+ - [MSAL Browser v4 to v5 migration](./browser/v4-migration.md)
  - [MSAL Node v3 to v5 migration](./node/v5-migration.md)
  - [MSAL Angular v4 to v5 upgrade](./angular/v4-v5-upgrade-guide.md)
  - [MSAL React migration guide](./react/migration-guide.md)
