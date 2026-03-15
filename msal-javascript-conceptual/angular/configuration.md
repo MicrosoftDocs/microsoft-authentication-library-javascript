@@ -6,9 +6,10 @@ manager: Dougeby
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: article
-ms.date: 05/21/2025
+ms.date: 03/06/2026
 ms.author: dmwendia
 ms.reviewer: cwerner, owenrichards, kengaderdus
+#Customer intent: As a developer, I want to configure MSAL Angular so that I can integrate authentication into my Angular application.
 ---
 
 # MSAL Angular Configuration
@@ -36,7 +37,7 @@ Please see our [MsalInterceptor](msal-interceptor.md) and [MsalGuard](msal-guard
 
 We recommend importing `MsalRedirectComponent` and bootstrapping with the `AppComponent` if you intend to use redirects. Please see the [redirect documentation](redirects.md) for more details.
 
-**Note:** As of MSAL v3.x, initialization of the application object is now required. See the [v2-v3 upgrade guide](v2-v3-upgrade-guide.md) for more details.
+**Note:** As of MSAL v3.x, initialization of the application object is now required. See the [v2-v3 upgrade guide](v2-v3-upgrade-guide.md) for more details. For details on upgrading to MSAL Angular v5, see the [v4-v5 upgrade guide](v4-v5-upgrade-guide.md).
 
 ## MsalModule.forRoot
 
@@ -59,11 +60,9 @@ import { PublicClientApplication, InteractionType, BrowserCacheLocation } from "
           authority: "https://login.microsoftonline.com/common/",
           redirectUri: "http://localhost:4200/",
           postLogoutRedirectUri: "http://localhost:4200/",
-          navigateToLoginRequestUrl: true,
         },
         cache: {
           cacheLocation: BrowserCacheLocation.LocalStorage,
-          storeAuthStateInCookie: true, // Deprecated, will be removed in the next major version
         },
         system: {
           loggerOptions: {
@@ -109,7 +108,7 @@ import { IPublicClientApplication, PublicClientApplication, InteractionType, Bro
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      clientId: "b5c2e510-4a17-4feb-b219-e55aa5b74144",
+      clientId: "00001111-aaaa-2222-bbbb-3333cccc4444",
       redirectUri: "http://localhost:4200",
       postLogoutRedirectUri: "http://localhost:4200",
     },
