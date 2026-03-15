@@ -6,22 +6,37 @@ manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
 ms.topic: concept-article
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
 ms.reviewer: kengaderdus
+#Customer intent: As a JavaScript developer, I want to understand how to install and set up MSAL Browser so that I can add authentication to my single-page application.
 ---
 
 # Using MSAL Browser in your JavaScript applications
 
-The MSAL library for JavaScript enables client-side JavaScript applications to authenticate users using [Microsoft Entra ID](/entra/identity-platform/v2-overview) work and school accounts, Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through [Azure AD B2C](/azure/active-directory-b2c/active-directory-b2c-overview#identity-providers) service. It also enables your app to get tokens to access [Microsoft Cloud](https://www.microsoft.com/enterprise) services such as [Microsoft Graph](https://graph.microsoft.io).
+The MSAL library for JavaScript enables client-side JavaScript applications to authenticate users using [Microsoft Entra ID](/entra/identity-platform/v2-overview) work and school accounts, Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through [Azure AD B2C](/azure/active-directory-b2c/overview#identity-providers) service. It also enables your app to get tokens to access [Microsoft Cloud](https://www.microsoft.com/enterprise) services such as [Microsoft Graph](https://graph.microsoft.com).
 
-The `@azure/msal-browser` package uses the [`@azure/msal-common` package](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-common) as a dependency to enable authentication in JavaScript single-page applications without backend servers. This version of the library uses the OAuth 2.0 Authorization Code Flow with PKCE and does NOT support the implicit flow. If you're using MSAL.js v1.0, consider migrating to MSAL.js v2.0+ to take advantage of the authorization code flow with PKCE which is more secure. 
+The `@azure/msal-browser` package enables authentication in JavaScript single-page applications using the OAuth 2.0 Authorization Code Flow with PKCE. It doesn't support the implicit flow. The current version is MSAL.js v5.x. If you're using an older version, see the [migration guides](./v4-migration.md) to upgrade.
 
 ## Prerequisites
 
 -   `@azure/msal-browser` is meant to be used in [Single-Page Application scenarios](/entra/identity-platform/scenario-spa-overview).
 
 -   Before using `@azure/msal-browser` you will need to [register a Single Page Application in Microsoft Entra ID](/entra/identity-platform/scenario-spa-app-registration) to get a valid `clientId` for configuration, and to register the routes that your app will accept redirect traffic on.
+
+## Key features
+
+MSAL Browser provides the following capabilities for your single-page applications:
+
+- [Sign in users with popup or redirect flows](./login-user.md)
+- [Acquire tokens silently from cache or via refresh](./acquire-token.md)
+- [Support for Cross-Origin-Opener-Policy (COOP) popup flows](./login-user.md)
+- [Model Context Protocol (MCP) authentication](./mcp.md)
+- [Device-bound tokens via platform broker (WAM)](./device-bound-tokens.md)
+- [AES-GCM encrypted token cache in localStorage](./caching.md)
+- [Proof of Possession (PoP) tokens](./access-token-proof-of-possession.md)
+- [Single sign-on across tabs and applications](./single-sign-on.md)
+- Nested App Authentication (NAA) for Microsoft 365 apps
 
 ## Installation
 
@@ -43,40 +58,15 @@ More advanced samples backed with a tutorial can be found in the [Azure Samples]
 -   [JavaScript SPA calling Microsoft Graph via Express.js web API using on-behalf-of flow](https://github.com/Azure-Samples/ms-identity-javascript-tutorial/tree/main/4-AdvancedGrants/1-call-api-graph)
 -   [Deployment tutorial for Azure App Service and Azure Storage](https://github.com/Azure-Samples/ms-identity-javascript-tutorial/tree/main/5-Deployment)
 
-### Building the package
-
-To build the `@azure/msal-browser` library, you can do the following:
-
-```bash
-// Change to the msal-browser package directory
-cd lib/msal-browser/
-// To run build only for browser package
-npm run build
-```
-
-To build both the `@azure/msal-browser` library and `@azure/msal-common` libraries, you can do the following:
-
-```bash
-// Change to the msal-browser package directory
-cd lib/msal-browser/
-// To run build only for browser package
-npm run build:all
-```
-
-### Running Tests
-
-`@azure/msal-browser` uses [jest](https://jestjs.io) to run unit tests.
-
-```bash
-// To run tests
-npm test
-// To run tests with code coverage
-npm run test:coverage
-```
-
 ## Framework Wrappers
 
-If you are using a framework such as Angular or React you may be interested in using one of our wrapper libraries:
+If you're using a framework such as Angular or React you may be interested in using one of our wrapper libraries:
 
--   Angular: [`@azure/msal-angular` v2](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-angular)
--   React: [`@azure/msal-react`](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-react)
+-   Angular: [`@azure/msal-angular` (current: v5.1.1)](../angular/initialization.md)
+-   React: [`@azure/msal-react` (current: v5.0.6)](../react/getting-started.md)
+
+## Next steps
+
+- [Initialize your application](./initialization.md)
+- [Configure MSAL Browser](./configuration.md)
+- [Sign in users](./login-user.md)
