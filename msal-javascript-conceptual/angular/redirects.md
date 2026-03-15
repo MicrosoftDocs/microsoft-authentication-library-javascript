@@ -6,22 +6,33 @@ manager: Dougeby
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: concept-article
-ms.date: 05/21/2025
+ms.date: 03/06/2026
 ms.author: dmwendia
 ms.reviewer: cwerner, owenrichards, kengaderdus
+#Customer intent: As a developer, I want to handle redirects correctly in my MSAL Angular application so that authentication works seamlessly.
 ---
+
 # Using redirects in MSAL Angular
 
-When using redirects with MSAL, it is **mandatory** to handle redirects with either the `MsalRedirectComponent` or `handleRedirectObservable`. While we recommend `MsalRedirectComponent` as the best approach, both approaches are detailed below.
+When using redirects with MSAL, it is **mandatory** to handle redirects with either the `MsalRedirectComponent` or `handleRedirectObservable`.
+
+Note that specific guidance has been added for using MSAL Angular with Angular standalone components below.
+
+1. [`MsalRedirectComponent`](#1-msalredirectcomponent-a-dedicated-handleredirectobservable-component)
+1. [Subscribing to `handleRedirectObservable` manually](#2-subscribing-to-handleredirectobservable-manually)
+1. [Redirects with standalone components](#3-redirects-with-standalone-components)
 
 ## 1. `MsalRedirectComponent`: A dedicated `handleRedirectObservable` component
+
+> [!NOTE]
+> This approach is not compatible with Angular standalone components. See the section on [redirects with standalone components below](#3-redirects-with-standalone-components) for further guidance.
 
 This is our recommended approach for handling redirects:
 
 - `@azure/msal-angular` provides a dedicated redirect component that can be imported  into your application. We recommend importing the `MsalRedirectComponent` and bootstrapping this alongside `AppComponent` in your application on the `app.module.ts`, as this will handle all redirects without your components needing to subscribe to `handleRedirectObservable()` manually.
 - Pages that wish to perform functions following redirects (e.g. user account functions, UI changes, etc) should subscribe to the `inProgress$` observable, filtering for `InteractionStatus.None`. This will ensure that there are no interactions in progress when performing the functions. Note that the last / most recent `InteractionStatus` will also be available when subscribing to the `inProgress$` observable. Please see our documentation on [events](events.md#the-inprogress-observable) for more information on checking for interactions.
 - If you do not wish to use the `MsalRedirectComponent`, you **must** handle redirects with `handleRedirectObservable()` yourself, as laid out in the approach below.
-- See our [Angular 15 sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-angular-v3-samples/angular15-sample-app/src/app/app.module.ts#L110) for an example of this approach.
+- See our [Angular modules sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-angular-samples/angular-modules-sample/src/app/app.module.ts#L110) for an example of this approach.
 
 msal.redirect.component.ts
 ```js
@@ -73,8 +84,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { IPublicClientApplication, PublicClientApplication, InteractionType, BrowserCacheLocation, LogLevel } from '@azure/msal-browser';
 import { MsalGuard, MsalInterceptor, MsalBroadcastService, MsalInterceptorConfiguration, MsalModule, MsalService, MSAL_GUARD_CONFIG, MSAL_INSTANCE, MSAL_INTERCEPTOR_CONFIG, MsalGuardConfiguration, MsalRedirectComponent } from '@azure/msal-angular'; // Redirect component imported from msal-angular
 
-const isIE = window.navigator.userAgent.indexOf("MSIE ") > -1 || window.navigator.userAgent.indexOf("Trident/") > -1;
-
 export function loggerCallback(logLevel: LogLevel, message: string) {
   console.log(message);
 }
@@ -88,7 +97,6 @@ export function MSALInstanceFactory(): IPublicClientApplication {
     },
     cache: {
       cacheLocation: BrowserCacheLocation.LocalStorage,
-      storeAuthStateInCookie: isIE, // set to true for IE 11
     },
     system: {
       loggerOptions: {
@@ -196,7 +204,7 @@ This is not our recommended approach, but if you are unable to bootstrap the `Ms
 
 - `handleRedirectObservable()` should be subscribed to on **every** page to which a redirect may occur. Pages protected by the MSAL Guard do not need to subscribe to `handleRedirectObservable()`, as redirects are processed in the Guard.
 - Accessing or performing any action related to user accounts should not be done until `handleRedirectObservable()` is complete, as it may not be fully populated until then. Additionally, if interactive APIs are called while `handleRedirectObservables()` is in progress, it will result in an `interaction_in_progress` error. See our document on [events](events.md#the-inprogress-observable) for more information on checking for interactions, and our document on [errors](errors.md) for details about the `interaction_in_progress` error. 
-- See our [older MSAL Angular v2 Angular 9 sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/msal-lts/samples/msal-angular-v2-samples/angular9-v2-sample-app) for examples of this approach.
+- See our [MSAL Angular modules sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-angular-samples/angular-modules-sample/src/app/app.component.ts) for examples of this approach.
 
 Example of home.component.ts file:
 ```js
@@ -222,5 +230,74 @@ export class HomeComponent implements OnInit {
     });
   }
 
+}
+```
+
+### `handleRedirectObservable` options
+
+`handleRedirectObservable` accepts an optional `HandleRedirectPromiseOptions` object with the following properties:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `hash` | `string` | Optional hash to process instead of the current URL hash. |
+| `navigateToLoginRequestUrl` | `boolean` | Whether to navigate to the original request URL after processing the redirect. Defaults to `true`. Set to `false` if you want to handle navigation yourself. |
+
+Example usage:
+
+```js
+// Basic usage - processes redirect and navigates to original URL
+this.authService.handleRedirectObservable().subscribe();
+
+// Disable automatic navigation after redirect
+this.authService.handleRedirectObservable({ navigateToLoginRequestUrl: false }).subscribe({
+  next: (result: AuthenticationResult) => {
+    if (result) {
+      // Handle navigation yourself
+      this.router.navigate(['/home']);
+    }
+  }
+});
+
+// Process a specific hash
+this.authService.handleRedirectObservable({ hash: '#code=...' }).subscribe();
+```
+
+> [!NOTE]
+> Passing a hash string directly to `handleRedirectObservable(hash)` is deprecated. Use the options object instead: `handleRedirectObservable({ hash: "#..." })`.
+
+## 3. Redirects with standalone components
+
+As many Angular applications using standalone components are unable to bootstrap the `MsalRedirectComponent`, `handleRedirectObservable` must be subscribed to directly. Our recommendation is to subscribe to it in the `app.component.ts` file.
+
+- Depending on your application architecture, you may have to subscribe to `handleRedirectObservable()` in other areas as well.
+- Checking for interactions in progress still applies, please see our document on [events](events.md#the-inprogress-observable) for more information on checking for interactions.
+- See our [Angular standalone sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/samples/msal-angular-samples/angular-standalone-sample) for examples of this approach.
+
+Example of `app.component.ts` file:
+
+```js
+import { Component, OnInit, Inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { MsalService, MsalBroadcastService, MSAL_GUARD_CONFIG, MsalGuardConfiguration } from '@azure/msal-angular';
+
+@Component({
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: true,
+    imports: [CommonModule, RouterModule]
+})
+export class AppComponent implements OnInit {
+
+  constructor(
+    @Inject(MSAL_GUARD_CONFIG) private msalGuardConfig: MsalGuardConfiguration,
+    private authService: MsalService,
+    private msalBroadcastService: MsalBroadcastService
+  ) {}
+
+  ngOnInit(): void {
+    this.authService.handleRedirectObservable().subscribe();
+  }
 }
 ```

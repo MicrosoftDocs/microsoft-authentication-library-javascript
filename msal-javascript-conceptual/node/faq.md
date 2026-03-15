@@ -4,12 +4,12 @@ description: Learn about the most frequently asked questions about MSAL Node.
 author: Dickson-Mwendia
 manager: Dougeby
 ms.author: dmwendia
-ms.date: 05/21/2025
+ms.date: 03/06/2026
 ms.service: msal
 ms.subservice: msal-node
 ms.topic: faq
 ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
-#Customer intent: 
+#Customer intent: As a developer, I want to find answers to common questions about MSAL Node so that I can troubleshoot issues and understand the library.
 ---
 
 # Frequently asked questions about MSAL Node
@@ -53,7 +53,7 @@ Yes. Please refer to [MSAL Node samples](https://github.com/AzureAD/microsoft-au
 
 ### Is interactive flow supported?
 
-Currently No. Authentication for MSAL Node using authorization code grant is a two legged flow, as detailed [here](./acquire-token-requests.md). There are plans to provide a single API to achieve this, and invoke the browser on the user's behalf. However it is currently not supported.
+Yes. MSAL Node provides the `acquireTokenInteractive()` API on `PublicClientApplication` that handles both legs of the authorization code flow. It opens a browser window for the user to sign in and returns an `AuthenticationResult`. See the [acquire token requests](./acquire-token-requests.md) documentation for more details and the [auth-code-cli-app sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/auth-code-cli-app) for an implementation example.
 
 ### Are SPAs supported by MSAL Node?
 
@@ -75,17 +75,20 @@ If you want to work around this, please note:
 - **Yarn**: Pass the `--ignore-engines` flag to the `yarn` command.
 - **npm**: Add `engine-strict=false` to your .npmrc file.
 
+> [!IMPORTANT]
+> MSAL Node v5 requires Node.js 20 or later. Node.js 16 and 18 are no longer supported.
+
 ### How do I implement self-service sign-up with MSAL Node?
 
 MSAL Node supports self-service sign-up in the auth code flow. Please see our docs [here](/javascript/api/@azure/msal-node/authorizationurlrequest) for supported prompt values in the request and their expected outcomes, and [here](https://aka.ms/s3u) for an overview of self-service sign-up and configuration changes that need to be made to your Azure tenant. Please note that that self-service sign-up is not available in B2C and test environments.
 
 ### Why doesn't my app function correctly when it's running behind a proxy?
 
-Developers can provide a `proxyUrl` string in the system config options as detailed [here](./configuration.md#system-config-options). Developers can also implement their own NetworkManager by instantiating an [INetworkModule](https://azuread.github.io/microsoft-authentication-library-for-js/ref/interfaces/_azure_msal_node.INetworkModule.html) and building proxy support in it.
+As of MSAL Node v5, proxy configuration is handled through a custom HTTP client. Implement your own network client by instantiating an [INetworkModule](/javascript/api/@azure/msal-node/inetworkmodule) with proxy support and provide it as the `networkClient` in [system config options](./configuration.md#system-config-options). See the [custom INetworkModule sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/custom-INetworkModule-and-network-tracing) for an example.
 
 ### How do I implement a custom http(s) agent in MSAL Node?
 
-Developers can use a custom http(s) agent by providing a `customAgentOptions` object in the system config options as detailed [here](configuration.md#system-config-options). Developers can also implement their own NetworkManager by instantiating an [INetworkModule](https://azuread.github.io/microsoft-authentication-library-for-js/ref/interfaces/_azure_msal_node.INetworkModule.html) and building custom http(s) agent support in it.
+As of MSAL Node v5, the `customAgentOptions` parameter has been removed. To use a custom HTTP(S) agent, implement your own network client by instantiating an [INetworkModule](/javascript/api/@azure/msal-node/inetworkmodule) and configuring the agent within it. Provide the custom network client as the `networkClient` in [system config options](./configuration.md#system-config-options). See the [custom INetworkModule sample](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-node-samples/custom-INetworkModule-and-network-tracing) for an example.
 
 ## B2C
 
