@@ -8,7 +8,7 @@ ms.subservice: msal-js
 ms.topic: article
 ms.date: 05/21/2025
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Resources and scopes
@@ -104,4 +104,4 @@ In the code snippet above, even though the user consents to both `User.Read` and
 
 ## Consent lifetime
 
-In Microsoft Entra ID, consent lives beyond the lifetime of the application. This means that, when you request an **Access Token** for a resource, all the scopes you have previously consented to for that resource will be returned, regardless of what scope was requested at the time. In other words, if you consent to `User.Read` and `Mail.Read` today and run a new instance of your application tomorrow requesting an **Access Token** for `User.Read` only, you will still receive a token issued for **both** `User.Read` and `Mail.Read`. For more information, refer to [Permissions and Consent](/entra/identity-platform/v2-permissions-and-consent#using-permissions).
+In Microsoft Entra ID, consent lives beyond the lifetime of the application. This means that, when you request an **Access Token** for a resource, all the scopes you have previously consented to for that resource will be returned, regardless of what scope was requested at the time. In other words, if you consent to `User.Read` and `Mail.Read` today and run a new instance of your application tomorrow requesting an **Access Token** for `User.Read` only, you will still receive a token issued for **both** `User.Read` and `Mail.Read`. For more information, refer to [Permissions and Consent](/entra/identity-platform/v2-permissions-and-consent#scopes-and-permissions).

@@ -1,18 +1,18 @@
 ---
-title: How to initialize the confidential client application object in MSAL Node 
-description: Learn how to initialize MSAL Node.
+title: Initialize confidential client applications in MSAL Node
+description: Learn how to initialize ConfidentialClientApplication in MSAL Node with secrets, certificates, and secure configuration
 author: Dickson-Mwendia
 manager: Dougeby
 ms.author: dmwendia
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.service: msal
 ms.subservice: msal-node
 ms.topic: how-to
-ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: 
 ---
 
-# How to initialize the confidential client application object in MSAL Node
+# Initialize confidential client applications in MSAL Node
 
 This article shows you how to initialize the `ConfidentialClientApplication` object in MSAL Node. You'll learn how to use secrets and certificates securely, and how to configure the authority.
 
@@ -47,19 +47,27 @@ See the MSAL sample: [auth-code-with-certs](https://github.com/AzureAD/microsoft
 import * as msal from "@azure/msal-node";
 import "dotenv/config"; // process.env now has the values defined in a .env file
 
+const clientAssertionCallback = async (config) => {
+    // network request that uses config.clientId and (optionally) config.tokenEndpoint
+    const result = await Promise.resolve(
+        "network request which gets assertion"
+    );
+    return result;
+};
+
 const clientConfig = {
     auth: {
         clientId: "your_client_id",
         authority: "your_authority",
         clientSecret: process.env.clientSecret, // OR
         clientCertificate: {
-            thumbprint: process.env.thumbprint,
-            privateKey: process.env.privateKey
+            thumbprintSha256: process.env.thumbprint,
+            privateKey: process.env.privateKey,
         }, // OR
-        clientAssertion: "assertion"
-    }
+        clientAssertion: clientAssertionCallback, // or a predetermined clientAssertion string
+    },
 };
-const pca = new msal.ConfidentialClientApplication(clientConfig);
+const cca = new msal.ConfidentialClientApplication(clientConfig);
 ```
 
 Please refer to [Common issues when importing certificates](./certificate-credentials.md#common-issues).
@@ -72,8 +80,8 @@ Please refer to [Common issues when importing certificates](./certificate-creden
 - `authority` defaults to `https://login.microsoftonline.com/common/` if the user does not set it during configuration
 - A Client credential is mandatory for confidential clients. Client credential can be a:
     - `clientSecret` is secret string generated set on the app registration.
-    - `clientCertificate` is a certificate set on the app registration. The `thumbprint` is a X.509 SHA-1 thumbprint of the certificate, and the `privateKey` is the PEM encoded private key. `x5c` is the optional X.509 certificate chain used in [subject name/issuer auth scenarios](./sni.md).
-    - `clientAssertion` is string that the application uses when requesting a token. The certificate used to sign the assertion should be set on the app registration. Assertion should be of type urn:ietf:params:oauth:client-assertion-type:jwt-bearer.
+    - `clientCertificate` is a certificate set on the app registration. The `thumbprintSha256` is a X.509 SHA-256 thumbprint of the certificate, and the `privateKey` is the PEM encoded private key. `x5c` is the optional X.509 certificate chain used in [subject name/issuer auth scenarios](./sni.md).
+    - `clientAssertion` is a ClientAssertion object containing an assertion string or a callback function that returns an assertion string that the application uses when requesting a token, as well as the assertion's type (urn:ietf:params:oauth:client-assertion-type:jwt-bearer). The callback is invoked every time MSAL needs to acquire a token from the token issuer. App developers should generally use the callback because assertions expire and new assertions need to be created. App developers are responsible for the assertion lifetime. Use [this mechanism](/entra/workload-id/workload-identity-federation-create-trust) to get tokens for a downstream API using a Federated Identity Credential.
 
 For more options on [Configuration](/javascript/api/@azure/msal-node/configuration) refer to [Configuration in MSAL Node](./configuration.md).
 
@@ -94,4 +102,4 @@ If your application audience is a single tenant, you must provide an authority w
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Axquire tokens in MSAL Node](acquire-token-requests.md)
+> [Acquire tokens in MSAL Node](acquire-token-requests.md)

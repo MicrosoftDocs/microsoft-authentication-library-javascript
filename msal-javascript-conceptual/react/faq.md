@@ -1,14 +1,14 @@
 ---
 title: MSAL React frequently asked questions
-description: Frequently asked questions on MSAL React
+description: Find answers to frequently asked questions about MSAL React, including compatibility, SSR support, and class components
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-react
 ms.topic: faq
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # MSAL React FAQ
@@ -21,7 +21,10 @@ Please see [here](https://github.com/AzureAD/microsoft-authentication-library-fo
 
 ### What versions of React are supported?
 
-React versions 16.8.0+, 17 and 18 are supported.
+The latest version of `@azure/msal-react` (v3.x) requires React 18 or later. React 19 is recommended for new projects.
+
+> [!NOTE]
+> The previous version of `@azure/msal-react` (v2.x) supported React 16.8+, 17, and 18. If you are upgrading from v2.x to v3.x, ensure your app is running React 18 or later.
 
 ### Does `@azure/msal-react` support Server Side Rendering (SSR) or static site generation?
 
@@ -29,7 +32,7 @@ Yes! However, authentication cannot be done server side and you should avoid inv
 
 ### Does `@azure/msal-react` support class components?
 
-Yes, `@azure/msal-react` supports both function and class components. Hooks, however, cannot be used in class components so you will need to consume the MSAL context and use the APIs provided by `@azure/msal-browser` to build equivalent logic. More information about using `@azure/msal-react` in class components can be found [here](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/class-components.md).
+Yes, `@azure/msal-react` supports both function and class components. Hooks, however, cannot be used in class components so you will need to consume the MSAL context and use the APIs provided by `@azure/msal-browser` to build equivalent logic. More information about using `@azure/msal-react` in class components can be found [here](./class-components.md).
 
 ## Can `@azure/msal-react` be used with Microsoft Graph JavaScript SDK?
 
@@ -64,8 +67,8 @@ const GetDataFromAPI = () => {
 
 If you need direct access to the response object or error returned by a redirect operation there are 3 ways you can do this:
 
-1. Use the [event API](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/events.md) to register a callback that will be invoked with the response when you return to your app. Make sure this is registered in a code path that is run __after__ the redirect as any callbacks registered __before__ the redirect will be lost.
-1. Use the [useMsalAuthentication hook](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/hooks.md#usemsalauthentication-hook) to login. This hook will return the result or error when you are returned to your app.
+1. Use the [event API](./events.md) to register a callback that will be invoked with the response when you return to your app. Make sure this is registered in a code path that is run __after__ the redirect as any callbacks registered __before__ the redirect will be lost.
+1. Use the [useMsalAuthentication hook](./hooks.md#usemsalauthentication-hook) to login. This hook will return the result or error when you are returned to your app.
 1. Call `handleRedirectPromise` which will resolve with the result or reject with an error if the page was loaded as a result of a redirect.
 
 ### What can I do outside of `@azure/msal-react` context?
@@ -113,7 +116,7 @@ function Example() {
 }
 ```
 
-If you're using the `MsalAuthenticationTemplate` or you're calling one of the login APIs directly you should use the [event API](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-react/docs/events.md) to catch the error and handle it.
+If you're using the `MsalAuthenticationTemplate` or you're calling one of the login APIs directly you should use the [event API](./events.md) to catch the error and handle it.
 
 ```javascript
 function Example() {
@@ -147,8 +150,8 @@ function Example() {
 
 If you have questions about specific errors you are receiving please see the following documents detailing some of the common errors:
 
-- [`@azure/msal-browser` error doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/errors.md)
-- [`@azure/msal-react` error doc](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-react/docs/errors.md)
+- [`@azure/msal-browser` error doc](../browser/errors.md)
+- [`@azure/msal-react` error doc](./errors.md)
 
 ## What if my question has not been answered?
 

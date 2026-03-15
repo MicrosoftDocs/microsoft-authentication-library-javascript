@@ -8,7 +8,7 @@ ms.subservice: msal-react
 ms.topic: how-to
 ms.date: 05/21/2025
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Migration Guide from MSAL v1 to `@azure/msal-react` and `@azure/msal-browser`

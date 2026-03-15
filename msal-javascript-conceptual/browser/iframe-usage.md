@@ -8,7 +8,7 @@ ms.subservice: msal-js
 ms.topic: concept-article
 ms.date: 05/21/2025
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Using MSAL in iframed apps
@@ -115,8 +115,8 @@ window.addEventListener("message", (event) => {
 
 You should catch and handle any errors if `ssoSilent()` fails. In particular:
 
-- [InteractionRequiredError](https://azuread.github.io/microsoft-authentication-library-for-js/ref/classes/_azure_msal_common.interactionrequiredautherror.html): will be thrown if consent is required, user needs to perform MFA and etc. This error can often be handled by simply initiating an interactive API.
-- [BrowserAuthError](https://azuread.github.io/microsoft-authentication-library-for-js/ref/classes/_azure_msal_browser.browserautherror.html): will be thrown if no or invalid *account hint* is provided, popups are blocked and etc. You'll need to inspect the `errorCode` and handle these appropriately.
+- [InteractionRequiredError](/javascript/api/@azure/msal-browser/interactionrequiredautherror): will be thrown if consent is required, user needs to perform MFA and etc. This error can often be handled by simply initiating an interactive API.
+- [BrowserAuthError](/javascript/api/@azure/msal-browser/browserautherror): will be thrown if no or invalid *account hint* is provided, popups are blocked and etc. You'll need to inspect the `errorCode` and handle these appropriately.
 
 ```javascript
     myMSALObj.ssoSilent({

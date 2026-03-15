@@ -8,7 +8,7 @@ ms.subservice: msal-react
 ms.topic: article
 ms.date: 05/21/2025
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 
 # Event callbacks in MSAL React

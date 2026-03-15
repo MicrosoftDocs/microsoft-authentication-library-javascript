@@ -1,14 +1,14 @@
 ---
 title: Initializing MSAL Angular
-description: Learn how to initialize MSAL in your Angular application
+description: Learn how to initialize MSAL Angular by importing MsalModule and configuring PublicClientApplication in your app module
 author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-angular
 ms.topic: concept-article
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.author: dmwendia
-ms.reviewer: cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 ---
 # Initializing MSAL angular
 
@@ -35,7 +35,6 @@ import { PublicClientApplication, InteractionType, BrowserCacheLocation } from "
             },
             cache: {
                 cacheLocation : BrowserCacheLocation.LocalStorage,
-                storeAuthStateInCookie: true, // Deprecated, removed in a future version
             },
             system: {
                 loggerOptions: {
@@ -119,7 +118,6 @@ import { PublicClientApplication, InteractionType, BrowserCacheLocation } from "
             },
             cache: {
                 cacheLocation : BrowserCacheLocation.LocalStorage,
-                storeAuthStateInCookie: true, // Deprecated, will be removed in future version
             },
             system: {
                 loggerOptions: {

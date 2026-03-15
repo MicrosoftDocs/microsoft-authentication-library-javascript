@@ -1,18 +1,21 @@
 ---
 title: Enabling regional authorities
-description: Learn how to enable regional authorities in MSAL Node.
+description: Learn how to enable regional authorities in MSAL Node to route token requests within specific Azure geographical regions
 author: Dickson-Mwendia
 manager: Dougeby
 ms.author: dmwendia
-ms.date: 05/21/2025
+ms.date: 03/15/2026
 ms.service: msal
 ms.subservice: msal-node
 ms.topic: concept-article
-ms.reviewer: dmwendia,cwerner, owenrichards, kengaderdus
+ms.reviewer: kengaderdus
 #Customer intent: 
 ---
 
 # Enabling regional authorities
+
+> [!IMPORTANT]
+> Regional authorities is a legacy feature that is only available for internal Microsoft services and the client credential flow. It is recommended to use [Managed Identity](managed-identity.md) instead.
 
 To increase the reliability, availability and performance of Azure, regionalization aims to keep all traffic inside a geographical area. For example, if an app needs to fetch data from Key Vault in WestUs2, all the traffic this entails - including MSAL generated traffic - should stay in WestUs2.
 
@@ -22,7 +25,8 @@ A few important notes about regional authorities:
 
 - A token obtained for one region is valid for the non-regional endpoint (tokens for "westus2.login.microsoft.com " are the same as tokens for "login.microsoftonline.com "). And vice-versa. It's the same token, minus one claim called rh
 
-> NOTE: This feature is currently only available for the client credential flow.
+> [!NOTE]
+> This legacy feature is only available for internal Microsoft services and the client credential flow.
 
 ## Configuration
 
@@ -62,7 +66,8 @@ cca
     });
 ```
 
-> NOTE: If you provide the value `"TryAutoDetect"` in the `azureRegion` field, the msal library which will try to discover the region the application has been deployed to and use that region. If no region is auto discovered the library will fall back to using the global authority.
+> [!NOTE]
+> If you provide the value `"TryAutoDetect"` in the `azureRegion` field, the MSAL library will try to discover the region the application has been deployed to and use that region. This auto-detection is unreliable and should be avoided. Specify the region explicitly instead.
 
 ## See also
 
