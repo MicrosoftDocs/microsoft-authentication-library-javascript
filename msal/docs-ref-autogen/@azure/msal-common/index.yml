@@ -746,10 +746,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "15.16.0"'
+      content: 'version: "15.17.0"'
       return:
         description: ''
-        type: '"<xref uid="15.16.0" />"'
+        type: '"<xref uid="15.17.0" />"'
 typeAliases:
   - '@azure/msal-common.AccessTokenEntity'
   - '@azure/msal-common.AccountFilter'

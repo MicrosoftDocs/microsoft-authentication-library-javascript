@@ -26,7 +26,7 @@ methods:
           description: ''
         - id: options
           type: <xref uid="@azure/msal-browser.NetworkRequestOptions" />
-          description: Headers and/or body to include on the request
+          description: ''
         - id: timeout
           type: number
           description: ''
@@ -53,7 +53,7 @@ methods:
           description: ''
         - id: options
           type: <xref uid="@azure/msal-browser.NetworkRequestOptions" />
-          description: Headers and/or body to include on the request
+          description: ''
       return:
         description: ''
         type: >-

@@ -111,6 +111,18 @@ functions:
         - id: clientCapabilities
           type: string[]
           description: ''
+  - name: addCliData(Map<string, string>)
+    uid: '@azure/msal-common.RequestParameterBuilder.addCliData'
+    package: '@azure/msal-common'
+    summary: add clidata=1 to request to indicate client data support
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function addCliData(parameters: Map<string, string>)'
+      parameters:
+        - id: parameters
+          type: Map&lt;string, string&gt;
+          description: ''
   - name: addClientAssertion(Map<string, string>, string)
     uid: '@azure/msal-common.RequestParameterBuilder.addClientAssertion'
     package: '@azure/msal-common'

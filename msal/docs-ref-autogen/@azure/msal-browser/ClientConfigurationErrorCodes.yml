@@ -96,6 +96,20 @@ variables:
       return:
         description: ''
         type: '"invalid_authority_metadata"'
+  - name: invalidAuthorizePostBodyParameters
+    uid: >-
+      @azure/msal-browser.ClientConfigurationErrorCodes.invalidAuthorizePostBodyParameters
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        invalidAuthorizePostBodyParameters:
+        "invalid_authorize_post_body_parameters"
+      return:
+        description: ''
+        type: '"invalid_authorize_post_body_parameters"'
   - name: invalidClaims
     uid: '@azure/msal-browser.ClientConfigurationErrorCodes.invalidClaims'
     package: '@azure/msal-browser'
@@ -131,6 +145,20 @@ variables:
       return:
         description: ''
         type: '"invalid_code_challenge_method"'
+  - name: invalidPlatformBrokerConfiguration
+    uid: >-
+      @azure/msal-browser.ClientConfigurationErrorCodes.invalidPlatformBrokerConfiguration
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        invalidPlatformBrokerConfiguration:
+        "invalid_platform_broker_configuration"
+      return:
+        description: ''
+        type: '"invalid_platform_broker_configuration"'
   - name: invalidRequestMethodForEAR
     uid: >-
       @azure/msal-browser.ClientConfigurationErrorCodes.invalidRequestMethodForEAR
