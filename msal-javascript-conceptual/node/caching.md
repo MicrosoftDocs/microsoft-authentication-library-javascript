@@ -7,7 +7,7 @@ ms.author: dmwendia
 ms.date: 05/21/2025
 ms.service: msal
 ms.subservice: msal-node
-ms.topic: article
+ms.topic: concept-article
 ms.reviewer: kengaderdus
 #Customer intent: 
 ---

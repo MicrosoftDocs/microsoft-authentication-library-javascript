@@ -7,7 +7,7 @@ ms.author: dmwendia
 ms.date: 03/06/2026
 ms.service: msal
 ms.subservice: msal-node
-ms.topic: article
+ms.topic: reference
 ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to configure MSAL Node so that I can customize authentication behavior for my application.
 ---

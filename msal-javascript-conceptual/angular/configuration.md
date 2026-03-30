@@ -5,7 +5,7 @@ author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-angular
-ms.topic: article
+ms.topic: feature-guide
 ms.date: 03/06/2026
 ms.author: dmwendia
 ms.reviewer: kengaderdus

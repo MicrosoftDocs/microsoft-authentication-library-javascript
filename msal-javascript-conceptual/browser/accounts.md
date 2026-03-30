@@ -5,7 +5,7 @@ author: Dickson-Mwendia
 manager: Dougeby
 ms.service: msal
 ms.subservice: msal-js
-ms.topic: article
+ms.topic: reference
 ms.date: 03/15/2026
 ms.author: dmwendia
 ms.reviewer: kengaderdus
