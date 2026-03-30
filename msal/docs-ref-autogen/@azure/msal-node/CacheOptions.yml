@@ -10,4 +10,7 @@ fullName: CacheOptions
 remarks: ''
 isDeprecated: false
 syntax: |
-  type CacheOptions = { cachePlugin?: ICachePlugin }
+  type CacheOptions = {
+    cachePlugin?: ICachePlugin
+    claimsBasedCachingEnabled?: boolean
+  }

@@ -17,4 +17,5 @@ syntax: |
     ) => PerformanceEvent | null
     event: PerformanceEvent
     increment: (fields: { [key: string]: number | undefined }) => void
+    measurement: IPerformanceMeasurement
   }

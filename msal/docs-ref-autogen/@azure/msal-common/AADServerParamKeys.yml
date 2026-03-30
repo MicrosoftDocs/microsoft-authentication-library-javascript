@@ -126,6 +126,17 @@ variables:
       return:
         description: ''
         type: '"client_secret"'
+  - name: CLI_DATA
+    uid: '@azure/msal-common.AADServerParamKeys.CLI_DATA'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'CLI_DATA: "clidata"'
+      return:
+        description: ''
+        type: '"clidata"'
   - name: CODE
     uid: '@azure/msal-common.AADServerParamKeys.CODE'
     package: '@azure/msal-common'

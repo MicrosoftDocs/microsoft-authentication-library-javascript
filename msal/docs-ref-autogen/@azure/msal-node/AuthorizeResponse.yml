@@ -11,6 +11,7 @@ syntax: |
     accountId?: string
     claims?: string
     client_info?: string
+    clientdata?: string
     cloud_graph_host_name?: string
     cloud_instance_host_name?: string
     cloud_instance_name?: string

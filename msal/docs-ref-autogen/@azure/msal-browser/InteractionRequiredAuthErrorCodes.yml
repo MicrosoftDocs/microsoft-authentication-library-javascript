@@ -44,8 +44,8 @@ variables:
     uid: '@azure/msal-browser.InteractionRequiredAuthErrorCodes.interruptedUser'
     package: '@azure/msal-browser'
     summary: >-
-      Server-originated error code indicating the user is in an interrupted
-      state and interaction is required.
+      Server-originated error code indicating the user was interrupted and must
+      reattempt the flow.
     remarks: ''
     isDeprecated: false
     syntax:

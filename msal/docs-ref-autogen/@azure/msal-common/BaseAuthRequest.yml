@@ -76,6 +76,11 @@ summary: >-
 
   - authorizePostBodyParameters - String to string map of custom parameters
   added to the body of the /authorize call when httpMethod is set to POST
+
+  - skipBrokerClaims         - When true and a brokered flow is used (for
+  example, when broker params or an embeddedClientId are present),
+  clientCapabilities from configuration will be excluded from claims; ignored
+  for non-brokered flows.
 fullName: BaseAuthRequest
 remarks: ''
 isDeprecated: false
@@ -99,6 +104,7 @@ syntax: |
     shrClaims?: string
     shrNonce?: string
     shrOptions?: ShrOptions
+    skipBrokerClaims?: boolean
     sshJwk?: string
     sshKid?: string
     storeInCache?: StoreInCache
