@@ -200,6 +200,11 @@
       no-loc:
         - AuthorizationCodeRequest
       items: []
+    - uid: '@azure/msal-browser.AuthorizationUrlRequest'
+      name: AuthorizationUrlRequest
+      no-loc:
+        - AuthorizationUrlRequest
+      items: []
     - uid: '@azure/msal-browser.AzureCloudInstance'
       name: AzureCloudInstance
       no-loc:
@@ -254,11 +259,6 @@
       name: BrowserPerformanceMeasurement
       no-loc:
         - BrowserPerformanceMeasurement
-      items: []
-    - uid: '@azure/msal-browser.BrowserRootPerformanceEvents'
-      name: BrowserRootPerformanceEvents
-      no-loc:
-        - BrowserRootPerformanceEvents
       items: []
     - uid: '@azure/msal-browser.BrowserSystemOptions'
       name: BrowserSystemOptions
@@ -420,11 +420,6 @@
       no-loc:
         - GetCurrentAccountAccessTokenError
       items: []
-    - uid: '@azure/msal-browser.HandleRedirectPromiseOptions'
-      name: HandleRedirectPromiseOptions
-      no-loc:
-        - HandleRedirectPromiseOptions
-      items: []
     - uid: '@azure/msal-browser.HttpError'
       name: HttpError
       no-loc:
@@ -509,6 +504,11 @@
       name: IPublicClientApplication
       no-loc:
         - IPublicClientApplication
+      items: []
+    - uid: '@azure/msal-browser.ITokenCache'
+      name: ITokenCache
+      no-loc:
+        - ITokenCache
       items: []
     - uid: '@azure/msal-browser.IWindowStorage'
       name: IWindowStorage
@@ -645,6 +645,11 @@
       no-loc:
         - PerformanceEvent
       items: []
+    - uid: '@azure/msal-browser.PerformanceEvents'
+      name: PerformanceEvents
+      no-loc:
+        - PerformanceEvents
+      items: []
     - uid: '@azure/msal-browser.PopupEvent'
       name: PopupEvent
       no-loc:
@@ -679,6 +684,11 @@
       name: PublicClientApplication
       no-loc:
         - PublicClientApplication
+      items: []
+    - uid: '@azure/msal-browser.PublicClientNext'
+      name: PublicClientNext
+      no-loc:
+        - PublicClientNext
       items: []
     - uid: '@azure/msal-browser.RedirectRequest'
       name: RedirectRequest
@@ -775,15 +785,15 @@
       no-loc:
         - ResetPasswordSubmitPasswordResultState
       items: []
-    - uid: '@azure/msal-browser.ResponseMode'
-      name: ResponseMode
-      no-loc:
-        - ResponseMode
-      items: []
     - uid: '@azure/msal-browser.ServerError'
       name: ServerError
       no-loc:
         - ServerError
+      items: []
+    - uid: '@azure/msal-browser.ServerResponseType'
+      name: ServerResponseType
+      no-loc:
+        - ServerResponseType
       items: []
     - uid: '@azure/msal-browser.SessionStorage'
       name: SessionStorage
@@ -1054,6 +1064,11 @@
       name: UnsupportedEnvironmentError
       no-loc:
         - UnsupportedEnvironmentError
+      items: []
+    - uid: '@azure/msal-browser.UrlString'
+      name: UrlString
+      no-loc:
+        - UrlString
       items: []
     - uid: '@azure/msal-browser.UserAccountAttributeError'
       name: UserAccountAttributeError
@@ -1832,6 +1847,11 @@
       no-loc:
         - CacheOptions
       items: []
+    - uid: '@azure/msal-node.ClientApplication'
+      name: ClientApplication
+      no-loc:
+        - ClientApplication
+      items: []
     - uid: '@azure/msal-node.ClientAssertion'
       name: ClientAssertion
       no-loc:
@@ -1862,6 +1882,11 @@
       no-loc:
         - ClientConfigurationErrorCodes
       items: []
+    - uid: '@azure/msal-node.ClientCredentialClient'
+      name: ClientCredentialClient
+      no-loc:
+        - ClientCredentialClient
+      items: []
     - uid: '@azure/msal-node.ClientCredentialRequest'
       name: ClientCredentialRequest
       no-loc:
@@ -1881,6 +1906,11 @@
       name: CryptoProvider
       no-loc:
         - CryptoProvider
+      items: []
+    - uid: '@azure/msal-node.DeviceCodeClient'
+      name: DeviceCodeClient
+      no-loc:
+        - DeviceCodeClient
       items: []
     - uid: '@azure/msal-node.DeviceCodeRequest'
       name: DeviceCodeRequest
@@ -2042,6 +2072,11 @@
       no-loc:
         - NodeTelemetryOptions
       items: []
+    - uid: '@azure/msal-node.OnBehalfOfClient'
+      name: OnBehalfOfClient
+      no-loc:
+        - OnBehalfOfClient
+      items: []
     - uid: '@azure/msal-node.OnBehalfOfRequest'
       name: OnBehalfOfRequest
       no-loc:
@@ -2061,6 +2096,11 @@
       name: RefreshTokenRequest
       no-loc:
         - RefreshTokenRequest
+      items: []
+    - uid: '@azure/msal-node.ResponseMode'
+      name: ResponseMode
+      no-loc:
+        - ResponseMode
       items: []
     - uid: '@azure/msal-node.SerializedAccessTokenEntity'
       name: SerializedAccessTokenEntity
@@ -2111,6 +2151,11 @@
       name: TokenCacheContext
       no-loc:
         - TokenCacheContext
+      items: []
+    - uid: '@azure/msal-node.UsernamePasswordClient'
+      name: UsernamePasswordClient
+      no-loc:
+        - UsernamePasswordClient
       items: []
     - uid: '@azure/msal-node.UsernamePasswordRequest'
       name: UsernamePasswordRequest

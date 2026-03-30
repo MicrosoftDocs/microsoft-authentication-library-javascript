@@ -1,0 +1,194 @@
+### YamlMime:TSType
+name: UrlString
+uid: '@azure/msal-browser.UrlString'
+package: '@azure/msal-browser'
+summary: Url object class which can perform various transformations on url strings.
+fullName: UrlString
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: UrlString(string)
+    uid: '@azure/msal-browser.UrlString.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new UrlString(url: string)'
+      parameters:
+        - id: url
+          type: string
+          description: ''
+properties:
+  - name: urlString
+    uid: '@azure/msal-browser.UrlString.urlString'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: urlString
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: string urlString
+      return:
+        description: ''
+        type: string
+methods:
+  - name: appendQueryString(string, string)
+    uid: '@azure/msal-browser.UrlString.appendQueryString'
+    package: '@azure/msal-browser'
+    summary: >-
+      Given a url and a query string return the url with provided query string
+      appended
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function appendQueryString(url: string, queryString: string):
+        string
+      parameters:
+        - id: url
+          type: string
+          description: ''
+        - id: queryString
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: canonicalizeUri(string)
+    uid: '@azure/msal-browser.UrlString.canonicalizeUri'
+    package: '@azure/msal-browser'
+    summary: Ensure urls are lower case and end with a / character.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function canonicalizeUri(url: string): string'
+      parameters:
+        - id: url
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: constructAuthorityUriFromObject(IUri)
+    uid: '@azure/msal-browser.UrlString.constructAuthorityUriFromObject'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function constructAuthorityUriFromObject(urlObject: IUri):
+        UrlString
+      parameters:
+        - id: urlObject
+          type: <xref uid="@azure/msal-common.IUri" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.UrlString" />
+  - name: getAbsoluteUrl(string, string)
+    uid: '@azure/msal-browser.UrlString.getAbsoluteUrl'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function getAbsoluteUrl(relativeUrl: string, baseUrl: string):
+        string
+      parameters:
+        - id: relativeUrl
+          type: string
+          description: ''
+        - id: baseUrl
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: getDomainFromUrl(string)
+    uid: '@azure/msal-browser.UrlString.getDomainFromUrl'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function getDomainFromUrl(url: string): string'
+      parameters:
+        - id: url
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: getUrlComponents()
+    uid: '@azure/msal-browser.UrlString.getUrlComponents'
+    package: '@azure/msal-browser'
+    summary: Parses out the components from a url string.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getUrlComponents(): IUri'
+      return:
+        description: >-
+          An object with the various components. Please cache this value insted
+          of calling this multiple times on the same url.
+        type: <xref uid="@azure/msal-common.IUri" />
+  - name: hashContainsKnownProperties(string)
+    uid: '@azure/msal-browser.UrlString.hashContainsKnownProperties'
+    package: '@azure/msal-browser'
+    summary: Check if the hash of the URL string contains known properties
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: This API will be removed in a future version
+    syntax:
+      content: 'static function hashContainsKnownProperties(response: string): boolean'
+      parameters:
+        - id: response
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: removeHashFromUrl(string)
+    uid: '@azure/msal-browser.UrlString.removeHashFromUrl'
+    package: '@azure/msal-browser'
+    summary: Returns a url with the hash removed
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'static function removeHashFromUrl(url: string): string'
+      parameters:
+        - id: url
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: replaceTenantPath(string)
+    uid: '@azure/msal-browser.UrlString.replaceTenantPath'
+    package: '@azure/msal-browser'
+    summary: >-
+      Given a url like https://a:b/common/d?e=f#g, and a tenantId, returns
+      https://a:b/tenantId/d
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function replaceTenantPath(tenantId: string): UrlString'
+      parameters:
+        - id: tenantId
+          type: string
+          description: The tenant id to replace
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.UrlString" />
+  - name: validateAsUri()
+    uid: '@azure/msal-browser.UrlString.validateAsUri'
+    package: '@azure/msal-browser'
+    summary: Throws if urlString passed is not a valid authority URI string.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function validateAsUri()

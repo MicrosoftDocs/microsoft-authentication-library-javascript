@@ -135,6 +135,26 @@ inheritedMethods:
         description: ''
         type: Promise&lt;void&gt;
     inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.clearCache
+  - name: disableAccountStorageEvents()
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplication.disableAccountStorageEvents
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function disableAccountStorageEvents()
+    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.disableAccountStorageEvents
+  - name: enableAccountStorageEvents()
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplication.enableAccountStorageEvents
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function enableAccountStorageEvents()
+    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.enableAccountStorageEvents
   - name: getAccount(AccountFilter)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getAccount'
     package: '@azure/msal-browser'
@@ -151,6 +171,55 @@ inheritedMethods:
         description: ''
         type: null | <xref uid="@azure/msal-browser.AccountInfo" />
     inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getAccount
+  - name: getAccountByHomeId(string)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getAccountByHomeId'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAccountByHomeId(homeAccountId: string): null | AccountInfo'
+      parameters:
+        - id: homeAccountId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getAccountByHomeId
+  - name: getAccountByLocalId(string)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getAccountByLocalId'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAccountByLocalId(localId: string): null | AccountInfo'
+      parameters:
+        - id: localId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getAccountByLocalId
+  - name: getAccountByUsername(string)
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplication.getAccountByUsername
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAccountByUsername(userName: string): null | AccountInfo'
+      parameters:
+        - id: userName
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getAccountByUsername
   - name: getActiveAccount()
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getActiveAccount'
     package: '@azure/msal-browser'
@@ -163,18 +232,14 @@ inheritedMethods:
         description: ''
         type: null | <xref uid="@azure/msal-browser.AccountInfo" />
     inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getActiveAccount
-  - name: getAllAccounts(AccountFilter)
+  - name: getAllAccounts()
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getAllAccounts'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getAllAccounts(accountFilter?: AccountFilter): AccountInfo[]'
-      parameters:
-        - id: accountFilter
-          type: <xref uid="@azure/msal-common.AccountFilter" />
-          description: ''
+      content: 'function getAllAccounts(): AccountInfo[]'
       return:
         description: ''
         type: <xref uid="@azure/msal-browser.AccountInfo" />[]
@@ -191,7 +256,19 @@ inheritedMethods:
         description: ''
         type: <xref uid="@azure/msal-browser.Logger" />
     inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getLogger
-  - name: handleRedirectPromise(HandleRedirectPromiseOptions)
+  - name: getTokenCache()
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getTokenCache'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getTokenCache(): ITokenCache'
+      return:
+        description: ''
+        type: ITokenCache
+    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getTokenCache
+  - name: handleRedirectPromise(string)
     uid: >-
       @azure/msal-browser.ICustomAuthPublicClientApplication.handleRedirectPromise
     package: '@azure/msal-browser'
@@ -200,11 +277,11 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function handleRedirectPromise(options?: HandleRedirectPromiseOptions):
-        Promise<null | AuthenticationResult>
+        function handleRedirectPromise(hash?: string): Promise<null |
+        AuthenticationResult>
       parameters:
-        - id: options
-          type: HandleRedirectPromiseOptions
+        - id: hash
+          type: string
           description: ''
       return:
         description: ''
@@ -213,7 +290,8 @@ inheritedMethods:
   - name: >-
       hydrateCache(AuthenticationResult, PopupRequest | RedirectRequest |
       SilentRequest | Partial<Omit<CommonAuthorizationUrlRequest, "responseMode"
-      | "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
+      | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
+      "requestedClaimsHash" | "platformBroker">>)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.hydrateCache'
     package: '@azure/msal-browser'
     summary: ''
@@ -224,8 +302,8 @@ inheritedMethods:
         function hydrateCache(result: AuthenticationResult, request:
         PopupRequest | RedirectRequest | SilentRequest |
         Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
-        "codeChallenge" | "codeChallengeMethod" | "platformBroker">>):
-        Promise<void>
+        "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash" |
+        "platformBroker">>): Promise<void>
       parameters:
         - id: result
           type: AuthenticationResult
@@ -236,7 +314,7 @@ inheritedMethods:
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
             "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "platformBroker"&gt;&gt;
+            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''
@@ -311,6 +389,22 @@ inheritedMethods:
         description: ''
         type: Promise&lt;void&gt;
     inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.loginRedirect
+  - name: logout(EndSessionRequest)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.logout'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function logout(logoutRequest?: EndSessionRequest): Promise<void>'
+      parameters:
+        - id: logoutRequest
+          type: EndSessionRequest
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.logout
   - name: logoutPopup(EndSessionPopupRequest)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.logoutPopup'
     package: '@azure/msal-browser'
@@ -418,7 +512,8 @@ inheritedMethods:
     inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.setNavigationClient
   - name: >-
       ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
+      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash"
+      | "platformBroker">>)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.ssoSilent'
     package: '@azure/msal-browser'
     summary: ''
@@ -428,14 +523,15 @@ inheritedMethods:
       content: >-
         function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
         "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "platformBroker">>): Promise<AuthenticationResult>
+        "requestedClaimsHash" | "platformBroker">>):
+        Promise<AuthenticationResult>
       parameters:
         - id: request
           type: >-
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
             "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "platformBroker"&gt;&gt;
+            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''

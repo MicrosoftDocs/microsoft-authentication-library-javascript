@@ -7,19 +7,24 @@ enums:
   - '@azure/msal-node.LogLevel'
 classes:
   - '@azure/msal-node.AuthError'
+  - '@azure/msal-node.ClientApplication'
   - '@azure/msal-node.ClientAssertion'
   - '@azure/msal-node.ClientAuthError'
   - '@azure/msal-node.ClientConfigurationError'
+  - '@azure/msal-node.ClientCredentialClient'
   - '@azure/msal-node.ConfidentialClientApplication'
   - '@azure/msal-node.CryptoProvider'
+  - '@azure/msal-node.DeviceCodeClient'
   - '@azure/msal-node.DistributedCachePlugin'
   - '@azure/msal-node.InteractionRequiredAuthError'
   - '@azure/msal-node.Logger'
   - '@azure/msal-node.ManagedIdentityApplication'
+  - '@azure/msal-node.OnBehalfOfClient'
   - '@azure/msal-node.PublicClientApplication'
   - '@azure/msal-node.ServerError'
   - '@azure/msal-node.TokenCache'
   - '@azure/msal-node.TokenCacheContext'
+  - '@azure/msal-node.UsernamePasswordClient'
 interfaces:
   - '@azure/msal-node.IAppTokenProvider'
   - '@azure/msal-node.ICacheClient'
@@ -122,10 +127,219 @@ variables:
       return:
         description: ''
         type: '{ AAD: "AAD", EAR: "EAR", OIDC: "OIDC" }'
+  - name: ResponseMode
+    uid: '@azure/msal-node.ResponseMode'
+    package: '@azure/msal-node'
+    summary: allowed values for response_mode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        ResponseMode: { FORM_POST: "form_post", FRAGMENT: "fragment", QUERY:
+        "query" }
+      return:
+        description: ''
+        type: '{ FORM_POST: "form_post", FRAGMENT: "fragment", QUERY: "query" }'
+  - name: AuthErrorMessage
+    uid: '@azure/msal-node.AuthErrorMessage'
+    package: '@azure/msal-node'
+    summary: >-
+      AuthErrorMessage class containing string constants used by error codes and
+      messages.
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: Use AuthErrorCodes instead
+    syntax:
+      content: >-
+        AuthErrorMessage: { postRequestFailed: { code: string, desc: string },
+        unexpectedError: { code: string, desc: string } }
+      return:
+        description: ''
+        type: >-
+          { postRequestFailed: { code: string, desc: string }, unexpectedError:
+          { code: string, desc: string } }
+  - name: ClientAuthErrorMessage
+    uid: '@azure/msal-node.ClientAuthErrorMessage'
+    package: '@azure/msal-node'
+    summary: String constants used by error codes and messages.
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: Use ClientAuthErrorCodes instead
+    syntax:
+      content: >-
+        ClientAuthErrorMessage: { DeviceCodeExpired: { code: string, desc:
+        string }, DeviceCodePollingCancelled: { code: string, desc: string },
+        DeviceCodeUnknownError: { code: string, desc: string },
+        NoAccountInSilentRequest: { code: string, desc: string },
+        appendScopeSetError: { code: string, desc: string },
+        authTimeNotFoundError: { code: string, desc: string },
+        bindingKeyNotRemovedError: { code: string, desc: string },
+        clientInfoDecodingError: { code: string, desc: string },
+        clientInfoEmptyError: { code: string, desc: string },
+        emptyInputScopeSetError: { code: string, desc: string },
+        endpointResolutionError: { code: string, desc: string },
+        hashNotDeserialized: { code: string, desc: string }, invalidAssertion: {
+        code: string, desc: string }, invalidCacheEnvironment: { code: string,
+        desc: string }, invalidCacheRecord: { code: string, desc: string },
+        invalidClientCredential: { code: string, desc: string },
+        invalidStateError: { code: string, desc: string }, keyIdMissing: { code:
+        string, desc: string }, logoutNotSupported: { code: string, desc: string
+        }, maxAgeTranspired: { code: string, desc: string },
+        missingTenantIdError: { code: string, desc: string },
+        multipleMatchingAccounts: { code: string, desc: string },
+        multipleMatchingAppMetadata: { code: string, desc: string },
+        multipleMatchingTokens: { code: string, desc: string },
+        nestedAppAuthBridgeDisabled: { code: string, desc: string },
+        networkError: { code: string, desc: string }, noAccountFound: { code:
+        string, desc: string }, noAuthorizationCodeFromServer: { code: string,
+        desc: string }, noCryptoObj: { code: string, desc: string },
+        noNetworkConnectivity: { code: string, desc: string },
+        nonceMismatchError: { code: string, desc: string }, nullOrEmptyToken: {
+        code: string, desc: string }, platformBrokerError: { code: string, desc:
+        string }, removeEmptyScopeError: { code: string, desc: string },
+        stateMismatchError: { code: string, desc: string }, stateNotFoundError:
+        { code: string, desc: string }, tokenClaimsRequired: { code: string,
+        desc: string }, tokenParsingError: { code: string, desc: string },
+        tokenRefreshRequired: { code: string, desc: string },
+        tokenRequestCannotBeMade: { code: string, desc: string },
+        unableToGetOpenidConfigError: { code: string, desc: string },
+        unexpectedCredentialType: { code: string, desc: string },
+        userCanceledError: { code: string, desc: string }, userTimeoutReached: {
+        code: string, desc: string } }
+      return:
+        description: ''
+        type: >-
+          { DeviceCodeExpired: { code: string, desc: string },
+          DeviceCodePollingCancelled: { code: string, desc: string },
+          DeviceCodeUnknownError: { code: string, desc: string },
+          NoAccountInSilentRequest: { code: string, desc: string },
+          appendScopeSetError: { code: string, desc: string },
+          authTimeNotFoundError: { code: string, desc: string },
+          bindingKeyNotRemovedError: { code: string, desc: string },
+          clientInfoDecodingError: { code: string, desc: string },
+          clientInfoEmptyError: { code: string, desc: string },
+          emptyInputScopeSetError: { code: string, desc: string },
+          endpointResolutionError: { code: string, desc: string },
+          hashNotDeserialized: { code: string, desc: string }, invalidAssertion:
+          { code: string, desc: string }, invalidCacheEnvironment: { code:
+          string, desc: string }, invalidCacheRecord: { code: string, desc:
+          string }, invalidClientCredential: { code: string, desc: string },
+          invalidStateError: { code: string, desc: string }, keyIdMissing: {
+          code: string, desc: string }, logoutNotSupported: { code: string,
+          desc: string }, maxAgeTranspired: { code: string, desc: string },
+          missingTenantIdError: { code: string, desc: string },
+          multipleMatchingAccounts: { code: string, desc: string },
+          multipleMatchingAppMetadata: { code: string, desc: string },
+          multipleMatchingTokens: { code: string, desc: string },
+          nestedAppAuthBridgeDisabled: { code: string, desc: string },
+          networkError: { code: string, desc: string }, noAccountFound: { code:
+          string, desc: string }, noAuthorizationCodeFromServer: { code: string,
+          desc: string }, noCryptoObj: { code: string, desc: string },
+          noNetworkConnectivity: { code: string, desc: string },
+          nonceMismatchError: { code: string, desc: string }, nullOrEmptyToken:
+          { code: string, desc: string }, platformBrokerError: { code: string,
+          desc: string }, removeEmptyScopeError: { code: string, desc: string },
+          stateMismatchError: { code: string, desc: string },
+          stateNotFoundError: { code: string, desc: string },
+          tokenClaimsRequired: { code: string, desc: string },
+          tokenParsingError: { code: string, desc: string },
+          tokenRefreshRequired: { code: string, desc: string },
+          tokenRequestCannotBeMade: { code: string, desc: string },
+          unableToGetOpenidConfigError: { code: string, desc: string },
+          unexpectedCredentialType: { code: string, desc: string },
+          userCanceledError: { code: string, desc: string }, userTimeoutReached:
+          { code: string, desc: string } }
+  - name: ClientConfigurationErrorMessage
+    uid: '@azure/msal-node.ClientConfigurationErrorMessage'
+    package: '@azure/msal-node'
+    summary: >-
+      ClientConfigurationErrorMessage class containing string constants used by
+      error codes and messages.
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: Use ClientConfigurationErrorCodes instead
+    syntax:
+      content: >-
+        ClientConfigurationErrorMessage: { authorityMismatch: { code: string,
+        desc: string }, authorityUriInsecure: { code: string, desc: string },
+        cannotAllowPlatformBroker: { code: string, desc: string },
+        cannotSetOIDCOptions: { code: string, desc: string },
+        claimsRequestParsingError: { code: string, desc: string },
+        emptyScopesError: { code: string, desc: string },
+        invalidAuthenticationHeader: { code: string, desc: string },
+        invalidAuthorityMetadata: { code: string, desc: string },
+        invalidAuthorizePostBodyParameters: { code: string, desc: string },
+        invalidClaimsRequest: { code: string, desc: string },
+        invalidCloudDiscoveryMetadata: { code: string, desc: string },
+        invalidCodeChallengeMethod: { code: string, desc: string },
+        invalidCodeChallengeParams: { code: string, desc: string },
+        invalidPlatformBrokerConfiguration: { code: string, desc: string },
+        invalidRequestMethodForEAR: { code: string, desc: string },
+        logoutRequestEmptyError: { code: string, desc: string },
+        missingNonceAuthenticationHeader: { code: string, desc: string },
+        missingSshJwk: { code: string, desc: string }, missingSshKid: { code:
+        string, desc: string }, redirectUriNotSet: { code: string, desc: string
+        }, tokenRequestEmptyError: { code: string, desc: string },
+        untrustedAuthority: { code: string, desc: string }, urlEmptyError: {
+        code: string, desc: string }, urlParseError: { code: string, desc:
+        string } }
+      return:
+        description: ''
+        type: >-
+          { authorityMismatch: { code: string, desc: string },
+          authorityUriInsecure: { code: string, desc: string },
+          cannotAllowPlatformBroker: { code: string, desc: string },
+          cannotSetOIDCOptions: { code: string, desc: string },
+          claimsRequestParsingError: { code: string, desc: string },
+          emptyScopesError: { code: string, desc: string },
+          invalidAuthenticationHeader: { code: string, desc: string },
+          invalidAuthorityMetadata: { code: string, desc: string },
+          invalidAuthorizePostBodyParameters: { code: string, desc: string },
+          invalidClaimsRequest: { code: string, desc: string },
+          invalidCloudDiscoveryMetadata: { code: string, desc: string },
+          invalidCodeChallengeMethod: { code: string, desc: string },
+          invalidCodeChallengeParams: { code: string, desc: string },
+          invalidPlatformBrokerConfiguration: { code: string, desc: string },
+          invalidRequestMethodForEAR: { code: string, desc: string },
+          logoutRequestEmptyError: { code: string, desc: string },
+          missingNonceAuthenticationHeader: { code: string, desc: string },
+          missingSshJwk: { code: string, desc: string }, missingSshKid: { code:
+          string, desc: string }, redirectUriNotSet: { code: string, desc:
+          string }, tokenRequestEmptyError: { code: string, desc: string },
+          untrustedAuthority: { code: string, desc: string }, urlEmptyError: {
+          code: string, desc: string }, urlParseError: { code: string, desc:
+          string } }
+  - name: InteractionRequiredAuthErrorMessage
+    uid: '@azure/msal-node.InteractionRequiredAuthErrorMessage'
+    package: '@azure/msal-node'
+    summary: Interaction required errors defined by the SDK
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: Use InteractionRequiredAuthErrorCodes instead
+    syntax:
+      content: >-
+        InteractionRequiredAuthErrorMessage: { bad_token: { code: string, desc:
+        string }, interrupted_user: { code: string, desc: string },
+        native_account_unavailable: { code: string, desc: string },
+        noTokensFoundError: { code: string, desc: string } }
+      return:
+        description: ''
+        type: >-
+          { bad_token: { code: string, desc: string }, interrupted_user: { code:
+          string, desc: string }, native_account_unavailable: { code: string,
+          desc: string }, noTokensFoundError: { code: string, desc: string } }
   - name: PromptValue
     uid: '@azure/msal-node.PromptValue'
     package: '@azure/msal-node'
-    summary: ''
+    summary: >-
+      we considered making this "enum" in the request instead of string, however
+      it looks like the allowed list of
+
+      prompt values kept changing over past couple of years. There are some
+      undocumented prompt values for some
+
+      internal partners too, hence the choice of generic "string" type instead
+      of the "enum"
     remarks: ''
     isDeprecated: false
     syntax:
@@ -137,19 +351,6 @@ variables:
         type: >-
           { CONSENT: string, CREATE: string, LOGIN: string, NONE: string,
           NO_SESSION: string, SELECT_ACCOUNT: string }
-  - name: ResponseMode
-    uid: '@azure/msal-node.ResponseMode'
-    package: '@azure/msal-node'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        ResponseMode: { FORM_POST: "form_post", FRAGMENT: "fragment", QUERY:
-        "query" }
-      return:
-        description: ''
-        type: '{ FORM_POST: "form_post", FRAGMENT: "fragment", QUERY: "query" }'
   - name: version
     uid: '@azure/msal-node.version'
     package: '@azure/msal-node'
@@ -157,7 +358,7 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.0.6"'
+      content: 'version: "3.8.10"'
       return:
         description: ''
-        type: '"<xref uid="5.0.6" />"'
+        type: '"<xref uid="3.8.10" />"'

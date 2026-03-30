@@ -7,4 +7,5 @@ fullName: JsonWebTokenTypes
 remarks: ''
 isDeprecated: false
 syntax: |
-  type JsonWebTokenTypes = Constants.JsonWebTokenTypes
+  type JsonWebTokenTypes =
+    (typeof JsonWebTokenTypes)[keyof typeof JsonWebTokenTypes]

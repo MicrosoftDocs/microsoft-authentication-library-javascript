@@ -34,6 +34,7 @@ syntax: |
     contentTypeHeader?: string
     context?: string
     correlationId: string
+    crossOriginTickCount?: number
     dataBoundary?: DataBoundary
     domainHintFromRequest?: boolean
     durationMs?: number
@@ -54,12 +55,16 @@ syntax: |
     httpStatus?: number
     httpVerToken?: string
     idTokenSize?: number
+    iframePollIntervalMs?: number
+    iframeTickCount?: number
+    iframeTimeoutMs?: number
     incompleteSubMeasurements?: Map<string, SubMeasurement>
     incompleteSubsCount?: number
     isAsyncPopup?: boolean
     isNativeBroker?: boolean
     isPlatformAuthorizeRequest?: boolean
     isPlatformBrokerRequest?: boolean
+    isRedirectUriCrossOrigin?: boolean
     libraryName: string
     libraryVersion: string
     loginHintFromClaim?: boolean
@@ -85,7 +90,10 @@ syntax: |
     name: string
     navigateCallbackResult?: boolean
     nestedAppAuthRequest?: boolean
+    networkEffectiveType?: string
+    networkRtt?: number
     ntwkRtExpiresOnSeconds?: number
+    onlineStatusChangeCount?: number
     previousLibraryVersion?: string
     prompt?: string
     queuedCount?: number
@@ -98,9 +106,11 @@ syntax: |
     sameClientIdInstanceCount?: number
     scenarioId?: string
     serverErrorNo?: string
+    serverSubErrorNo?: string
     sidFromClaims?: boolean
     sidFromRequest?: boolean
     silentRefreshReason?: string
+    startOnlineStatus?: boolean | null
     startPageVisibility?: string | null
     startTimeMs: number
     status: PerformanceEventStatus

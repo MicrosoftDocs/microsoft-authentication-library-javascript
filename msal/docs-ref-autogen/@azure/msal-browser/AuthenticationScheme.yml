@@ -7,4 +7,5 @@ fullName: AuthenticationScheme
 remarks: ''
 isDeprecated: false
 syntax: |
-  type AuthenticationScheme = Constants.AuthenticationScheme
+  type AuthenticationScheme =
+    (typeof AuthenticationScheme)[keyof typeof AuthenticationScheme]

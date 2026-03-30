@@ -9,14 +9,17 @@ isDeprecated: false
 syntax: |
   type BrowserSystemOptions = SystemOptions & {
     allowPlatformBroker?: boolean
+    allowPlatformBrokerWithDOM?: boolean
     allowRedirectInIframe?: boolean
-    iframeBridgeTimeout?: number
+    asyncPopups?: boolean
+    iframeHashTimeout?: number
+    loadFrameTimeout?: number
     loggerOptions?: LoggerOptions
     nativeBrokerHandshakeTimeout?: number
-    navigatePopups?: boolean
+    navigateFrameWait?: number
     navigationClient?: INavigationClient
     networkClient?: INetworkModule
-    popupBridgeTimeout?: number
-    protocolMode?: ProtocolMode
+    pollIntervalMilliseconds?: number
     redirectNavigationTimeout?: number
+    windowHashTimeout?: number
   }

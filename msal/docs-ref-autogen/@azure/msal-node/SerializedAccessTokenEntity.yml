@@ -18,6 +18,8 @@ syntax: |
     key_id?: string
     realm: string
     refresh_on?: string
+    requestedClaims?: string
+    requestedClaimsHash?: string
     secret: string
     target: string
     token_type?: string
