@@ -7,7 +7,7 @@ ms.author: dmwendia
 ms.service: msal
 ms.subservice: msal-node
 ms.date: 03/15/2026
-ms.topic: article
+ms.topic: how-to
 ms.reviewer: kengaderdus
 #Customer intent: As a developer, I want to learn how to use the different APIs in MSAL Node to access cached accounts.
 ---
