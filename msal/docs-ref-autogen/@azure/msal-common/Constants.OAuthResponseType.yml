@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: OAuthResponseType
-uid: '@azure/msal-common.OAuthResponseType'
+uid: '@azure/msal-common.Constants.OAuthResponseType'
 package: '@azure/msal-common'
 summary: ''
 fullName: OAuthResponseType

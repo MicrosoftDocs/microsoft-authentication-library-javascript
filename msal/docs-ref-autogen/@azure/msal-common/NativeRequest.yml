@@ -20,6 +20,7 @@ syntax: |
     loginHint?: string
     prompt?: string
     redirectUri: string
+    resource?: string
     resourceRequestMethod?: string
     resourceRequestUri?: string
     scopes: string[]

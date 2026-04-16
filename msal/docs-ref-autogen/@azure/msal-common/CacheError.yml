@@ -9,7 +9,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: CacheError(string, string)
-    uid: '@azure/msal-common.CacheError.constructor'
+    uid: '@azure/msal-common.CacheError.constructor_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -49,21 +49,6 @@ properties:
         description: ''
         type: string
 inheritedProperties:
-  - name: correlationId
-    uid: '@azure/msal-common.CacheError.correlationId'
-    package: '@azure/msal-common'
-    summary: CorrelationId associated with the error
-    fullName: correlationId
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'correlationId: string'
-      return:
-        description: ''
-        type: string
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.correlationId](xref:@azure/msal-common.AuthError.correlationId)
   - name: message
     uid: '@azure/msal-common.CacheError.message'
     package: '@azure/msal-common'
@@ -76,9 +61,7 @@ inheritedProperties:
       return:
         description: ''
         type: string
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.message](xref:@azure/msal-common.AuthError.message)
+    inheritanceDescription: <b>Inherited From</b> Error.message
   - name: name
     uid: '@azure/msal-common.CacheError.name'
     package: '@azure/msal-common'
@@ -91,24 +74,7 @@ inheritedProperties:
       return:
         description: ''
         type: string
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.name](xref:@azure/msal-common.AuthError.name)
-  - name: platformBrokerError
-    uid: '@azure/msal-common.CacheError.platformBrokerError'
-    package: '@azure/msal-common'
-    summary: Default PlatformBrokerError from MsalNodeRuntime when broker is enabled
-    fullName: platformBrokerError
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'platformBrokerError?: PlatformBrokerError'
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.PlatformBrokerError" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.platformBrokerError](xref:@azure/msal-common.AuthError.platformBrokerError)
+    inheritanceDescription: <b>Inherited From</b> Error.name
   - name: stack
     uid: '@azure/msal-common.CacheError.stack'
     package: '@azure/msal-common'
@@ -121,9 +87,7 @@ inheritedProperties:
       return:
         description: ''
         type: string
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.stack](xref:@azure/msal-common.AuthError.stack)
+    inheritanceDescription: <b>Inherited From</b> Error.stack
   - name: stackTraceLimit
     uid: '@azure/msal-common.CacheError.stackTraceLimit'
     package: '@azure/msal-common'
@@ -153,27 +117,10 @@ inheritedProperties:
       return:
         description: ''
         type: number
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.stackTraceLimit](xref:@azure/msal-common.AuthError.stackTraceLimit)
-  - name: subError
-    uid: '@azure/msal-common.CacheError.subError'
-    package: '@azure/msal-common'
-    summary: Describes the subclass of an error
-    fullName: subError
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'subError: string'
-      return:
-        description: ''
-        type: string
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.subError](xref:@azure/msal-common.AuthError.subError)
+    inheritanceDescription: <b>Inherited From</b> Error.stackTraceLimit
 inheritedMethods:
   - name: captureStackTrace(object, Function)
-    uid: '@azure/msal-common.CacheError.captureStackTrace'
+    uid: '@azure/msal-common.CacheError.captureStackTrace_1'
     package: '@azure/msal-common'
     summary: >-
       Creates a `.stack` property on `targetObject`, which when accessed returns
@@ -254,11 +201,9 @@ inheritedMethods:
         - id: constructorOpt
           type: Function
           description: ''
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.captureStackTrace](xref:@azure/msal-common.AuthError.captureStackTrace)
+    inheritanceDescription: <b>Inherited From</b> Error.captureStackTrace
   - name: prepareStackTrace(Error, CallSite[])
-    uid: '@azure/msal-common.CacheError.prepareStackTrace'
+    uid: '@azure/msal-common.CacheError.prepareStackTrace_1'
     package: '@azure/msal-common'
     summary: |-
 
@@ -280,22 +225,5 @@ inheritedMethods:
       return:
         description: ''
         type: any
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.prepareStackTrace](xref:@azure/msal-common.AuthError.prepareStackTrace)
-  - name: setCorrelationId(string)
-    uid: '@azure/msal-common.CacheError.setCorrelationId'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function setCorrelationId(correlationId: string)'
-      parameters:
-        - id: correlationId
-          type: string
-          description: ''
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.setCorrelationId](xref:@azure/msal-common.AuthError.setCorrelationId)
-extends: <xref uid="@azure/msal-common.AuthError" />
+    inheritanceDescription: <b>Inherited From</b> Error.prepareStackTrace
+extends: Error

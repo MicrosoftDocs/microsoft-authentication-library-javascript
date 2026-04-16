@@ -62,76 +62,6 @@ constructors:
           type: <xref uid="@azure/msal-node.Configuration" />
           description: ''
 inheritedMethods:
-  - name: acquireTokenByCode(AuthorizationCodeRequest, AuthorizationCodePayload)
-    uid: '@azure/msal-node.PublicClientApplication.acquireTokenByCode'
-    package: '@azure/msal-node'
-    summary: >-
-      Acquires a token by exchanging the Authorization Code received from the
-      first step of OAuth2.0
-
-      Authorization Code flow.
-
-
-      `getAuthCodeUrl(AuthorizationCodeUrlRequest)` can be used to create the
-      URL for the first step of OAuth2.0
-
-      Authorization Code flow. Ensure that values for redirectUri and scopes in
-      AuthorizationCodeUrlRequest and
-
-      AuthorizationCodeRequest are the same.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function acquireTokenByCode(request: AuthorizationCodeRequest,
-        authCodePayLoad?: AuthorizationCodePayload):
-        Promise<AuthenticationResult>
-      parameters:
-        - id: request
-          type: <xref uid="@azure/msal-node.AuthorizationCodeRequest" />
-          description: ''
-        - id: authCodePayLoad
-          type: <xref uid="@azure/msal-node.AuthorizationCodePayload" />
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" />&gt;
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.acquireTokenByCode](xref:@azure/msal-node.ClientApplication.acquireTokenByCode)
-  - name: acquireTokenByRefreshToken(RefreshTokenRequest)
-    uid: '@azure/msal-node.PublicClientApplication.acquireTokenByRefreshToken'
-    package: '@azure/msal-node'
-    summary: >-
-      Acquires a token by exchanging the refresh token provided for a new set of
-      tokens.
-
-
-      This API is provided only for scenarios where you would like to migrate
-      from ADAL to MSAL. Otherwise, it is
-
-      recommended that you use `acquireTokenSilent()` for silent scenarios. When
-      using `acquireTokenSilent()`, MSAL will
-
-      handle the caching and refreshing of tokens automatically.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function acquireTokenByRefreshToken(request: RefreshTokenRequest):
-        Promise<null | AuthenticationResult>
-      parameters:
-        - id: request
-          type: <xref uid="@azure/msal-node.RefreshTokenRequest" />
-          description: ''
-      return:
-        description: ''
-        type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.acquireTokenByRefreshToken](xref:@azure/msal-node.ClientApplication.acquireTokenByRefreshToken)
   - name: acquireTokenByUsernamePassword(UsernamePasswordRequest)
     uid: '@azure/msal-node.PublicClientApplication.acquireTokenByUsernamePassword'
     package: '@azure/msal-node'
@@ -165,9 +95,7 @@ inheritedMethods:
         type: >-
           Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
           />&gt;
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.acquireTokenByUsernamePassword](xref:@azure/msal-node.ClientApplication.acquireTokenByUsernamePassword)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.acquireTokenByUsernamePassword
   - name: clearCache()
     uid: '@azure/msal-node.PublicClientApplication.clearCache'
     package: '@azure/msal-node'
@@ -176,9 +104,7 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: function clearCache()
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.clearCache](xref:@azure/msal-node.ClientApplication.clearCache)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.clearCache
   - name: getAuthCodeUrl(AuthorizationUrlRequest)
     uid: '@azure/msal-node.PublicClientApplication.getAuthCodeUrl'
     package: '@azure/msal-node'
@@ -212,9 +138,7 @@ inheritedMethods:
       return:
         description: ''
         type: Promise&lt;string&gt;
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.getAuthCodeUrl](xref:@azure/msal-node.ClientApplication.getAuthCodeUrl)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.getAuthCodeUrl
   - name: getLogger()
     uid: '@azure/msal-node.PublicClientApplication.getLogger'
     package: '@azure/msal-node'
@@ -226,9 +150,7 @@ inheritedMethods:
       return:
         description: ''
         type: <xref uid="@azure/msal-node.Logger" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.getLogger](xref:@azure/msal-node.ClientApplication.getLogger)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.getLogger
   - name: getTokenCache()
     uid: '@azure/msal-node.PublicClientApplication.getTokenCache'
     package: '@azure/msal-node'
@@ -240,9 +162,7 @@ inheritedMethods:
       return:
         description: ''
         type: <xref uid="@azure/msal-node.TokenCache" />
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.getTokenCache](xref:@azure/msal-node.ClientApplication.getTokenCache)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.getTokenCache
   - name: setLogger(Logger)
     uid: '@azure/msal-node.PublicClientApplication.setLogger'
     package: '@azure/msal-node'
@@ -257,10 +177,33 @@ inheritedMethods:
         - id: logger
           type: <xref uid="@azure/msal-node.Logger" />
           description: Logger instance
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [ClientApplication.setLogger](xref:@azure/msal-node.ClientApplication.setLogger)
+    inheritanceDescription: <b>Inherited From</b> ClientApplication.setLogger
 methods:
+  - name: acquireTokenByCode(AuthorizationCodeRequest, AuthorizationCodePayload)
+    uid: '@azure/msal-node.PublicClientApplication.acquireTokenByCode'
+    package: '@azure/msal-node'
+    summary: >-
+      Acquires a token by exchanging the authorization code received from the
+      first step of OAuth 2.0 Authorization Code Flow.
+
+      In MCP mode, a resource parameter is required on the request.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenByCode(request: AuthorizationCodeRequest,
+        authCodePayLoad?: AuthorizationCodePayload):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-node.AuthorizationCodeRequest" />
+          description: ''
+        - id: authCodePayLoad
+          type: <xref uid="@azure/msal-node.AuthorizationCodePayload" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" />&gt;
   - name: acquireTokenByDeviceCode(DeviceCodeRequest)
     uid: '@azure/msal-node.PublicClientApplication.acquireTokenByDeviceCode'
     package: '@azure/msal-node'
@@ -292,6 +235,29 @@ methods:
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.DeviceCodeRequest" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
+  - name: acquireTokenByRefreshToken(RefreshTokenRequest)
+    uid: '@azure/msal-node.PublicClientApplication.acquireTokenByRefreshToken'
+    package: '@azure/msal-node'
+    summary: >-
+      Acquires a token by exchanging the refresh token provided for a new set of
+      tokens.
+
+      In MCP mode, a resource parameter is required on the request.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenByRefreshToken(request: RefreshTokenRequest):
+        Promise<null | AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-node.RefreshTokenRequest" />
           description: ''
       return:
         description: ''
@@ -365,4 +331,4 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-extends: <xref uid="@azure/msal-node.ClientApplication" />
+extends: ClientApplication

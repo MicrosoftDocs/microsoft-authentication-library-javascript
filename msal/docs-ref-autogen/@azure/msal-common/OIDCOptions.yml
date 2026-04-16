@@ -7,7 +7,4 @@ fullName: OIDCOptions
 remarks: ''
 isDeprecated: false
 syntax: |
-  type OIDCOptions = {
-    defaultScopes?: string[]
-    serverResponseType?: ServerResponseType
-  }
+  type OIDCOptions = { defaultScopes?: string[]; responseMode?: ResponseMode }

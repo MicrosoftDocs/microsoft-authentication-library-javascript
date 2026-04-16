@@ -14,7 +14,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: AuthenticationHeaderParser(Record<string, string>)
-    uid: '@azure/msal-common.AuthenticationHeaderParser.constructor'
+    uid: '@azure/msal-common.AuthenticationHeaderParser.constructor_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -27,7 +27,7 @@ constructors:
           description: ''
 methods:
   - name: getShrNonce()
-    uid: '@azure/msal-common.AuthenticationHeaderParser.getShrNonce'
+    uid: '@azure/msal-common.AuthenticationHeaderParser.getShrNonce_1'
     package: '@azure/msal-common'
     summary: >-
       This method parses the SHR nonce value out of either the

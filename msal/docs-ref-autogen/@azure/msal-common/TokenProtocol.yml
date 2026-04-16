@@ -1,0 +1,157 @@
+### YamlMime:TSPackage
+uid: '@azure/msal-common.TokenProtocol'
+name: TokenProtocol
+type: module
+package: '@azure/msal-common'
+summary: ''
+functions:
+  - name: >-
+      createTokenQueryParameters(BaseAuthRequest, string, string,
+      IPerformanceClient)
+    uid: '@azure/msal-common.TokenProtocol.createTokenQueryParameters_1'
+    package: '@azure/msal-common'
+    summary: Creates query string for the /token request
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createTokenQueryParameters(request: BaseAuthRequest, clientId:
+        string, redirectUri: string, performanceClient: IPerformanceClient):
+        string
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-common.BaseAuthRequest" />
+          description: ''
+        - id: clientId
+          type: string
+          description: ''
+        - id: redirectUri
+          type: string
+          description: ''
+        - id: performanceClient
+          type: <xref uid="@azure/msal-common.IPerformanceClient" />
+          description: ''
+      return:
+        description: ''
+        type: string
+  - name: createTokenRequestHeaders(Logger, boolean, CcsCredential)
+    uid: '@azure/msal-common.TokenProtocol.createTokenRequestHeaders_1'
+    package: '@azure/msal-common'
+    summary: Creates default headers for requests to token endpoint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function createTokenRequestHeaders(logger: Logger, preventCorsPreflight:
+        boolean, ccsCred?: CcsCredential): Record<string, string>
+      parameters:
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
+        - id: preventCorsPreflight
+          type: boolean
+          description: ''
+        - id: ccsCred
+          type: <xref uid="@azure/msal-common.CcsCredential" />
+          description: ''
+      return:
+        description: ''
+        type: Record&lt;string, string&gt;
+  - name: >-
+      executePostToTokenEndpoint(string, string, Record<string, string>,
+      RequestThumbprint, string, CacheManager, INetworkModule, Logger,
+      IPerformanceClient, null | ServerTelemetryManager)
+    uid: '@azure/msal-common.TokenProtocol.executePostToTokenEndpoint_1'
+    package: '@azure/msal-common'
+    summary: Http post to token endpoint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function executePostToTokenEndpoint(tokenEndpoint: string, queryString:
+        string, headers: Record<string, string>, thumbprint: RequestThumbprint,
+        correlationId: string, cacheManager: CacheManager, networkClient:
+        INetworkModule, logger: Logger, performanceClient: IPerformanceClient,
+        serverTelemetryManager: null | ServerTelemetryManager):
+        Promise<NetworkResponse<ServerAuthorizationTokenResponse>>
+      parameters:
+        - id: tokenEndpoint
+          type: string
+          description: ''
+        - id: queryString
+          type: string
+          description: ''
+        - id: headers
+          type: Record&lt;string, string&gt;
+          description: ''
+        - id: thumbprint
+          type: <xref uid="@azure/msal-common.RequestThumbprint" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: cacheManager
+          type: CacheManager
+          description: ''
+        - id: networkClient
+          type: <xref uid="@azure/msal-common.INetworkModule" />
+          description: ''
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: ''
+        - id: performanceClient
+          type: <xref uid="@azure/msal-common.IPerformanceClient" />
+          description: ''
+        - id: serverTelemetryManager
+          type: null | ServerTelemetryManager
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-common.NetworkResponse" />&lt;<xref
+          uid="@azure/msal-common.ServerAuthorizationTokenResponse" />&gt;&gt;
+  - name: >-
+      sendPostRequest<T>(RequestThumbprint, string, NetworkRequestOptions,
+      string, CacheManager, INetworkModule, Logger, IPerformanceClient)
+    uid: '@azure/msal-common.TokenProtocol.sendPostRequest_1'
+    package: '@azure/msal-common'
+    summary: Wraps sendPostRequestAsync with necessary preflight and postflight logic
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function sendPostRequest<T>(thumbprint: RequestThumbprint,
+        tokenEndpoint: string, options: NetworkRequestOptions, correlationId:
+        string, cacheManager: CacheManager, networkClient: INetworkModule,
+        logger: Logger, performanceClient: IPerformanceClient):
+        Promise<NetworkResponse<T>>
+      parameters:
+        - id: thumbprint
+          type: <xref uid="@azure/msal-common.RequestThumbprint" />
+          description: Request thumbprint for throttling
+        - id: tokenEndpoint
+          type: string
+          description: Endpoint to make the POST to
+        - id: options
+          type: <xref uid="@azure/msal-common.NetworkRequestOptions" />
+          description: Body and Headers to include on the POST request
+        - id: correlationId
+          type: string
+          description: CorrelationId for telemetry
+        - id: cacheManager
+          type: CacheManager
+          description: Cache manager instance
+        - id: networkClient
+          type: <xref uid="@azure/msal-common.INetworkModule" />
+          description: Network module instance
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: Logger instance
+        - id: performanceClient
+          type: <xref uid="@azure/msal-common.IPerformanceClient" />
+          description: Performance client instance
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-common.NetworkResponse"
+          />&lt;T&gt;&gt;

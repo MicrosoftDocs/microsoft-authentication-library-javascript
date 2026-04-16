@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: HandleRedirectPromiseOptions
+uid: '@azure/msal-browser.HandleRedirectPromiseOptions'
+package: '@azure/msal-browser'
+summary: ''
+fullName: HandleRedirectPromiseOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type HandleRedirectPromiseOptions = {
+    hash?: string
+    navigateToLoginRequestUrl?: boolean
+  }

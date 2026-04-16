@@ -6,7 +6,7 @@ package: '@azure/msal-common'
 summary: ''
 functions:
   - name: getDeserializedResponse(string)
-    uid: '@azure/msal-common.UrlUtils.getDeserializedResponse'
+    uid: '@azure/msal-common.UrlUtils.getDeserializedResponse_1'
     package: '@azure/msal-common'
     summary: Returns URL hash as server auth code response object.
     remarks: ''
@@ -22,31 +22,23 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AuthorizeResponse" /> | null
-  - name: mapToQueryString(Map<string, string>, boolean, StringDict)
-    uid: '@azure/msal-common.UrlUtils.mapToQueryString'
+  - name: mapToQueryString(Map<string, string>)
+    uid: '@azure/msal-common.UrlUtils.mapToQueryString_1'
     package: '@azure/msal-common'
     summary: Utility to create a URL from the params map
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        function mapToQueryString(parameters: Map<string, string>,
-        encodeExtraParams?: boolean, extraQueryParameters?: StringDict): string
+      content: 'function mapToQueryString(parameters: Map<string, string>): string'
       parameters:
         - id: parameters
           type: Map&lt;string, string&gt;
-          description: ''
-        - id: encodeExtraParams
-          type: boolean
-          description: ''
-        - id: extraQueryParameters
-          type: <xref uid="@azure/msal-common.StringDict" />
           description: ''
       return:
         description: ''
         type: string
   - name: normalizeUrlForComparison(string)
-    uid: '@azure/msal-common.UrlUtils.normalizeUrlForComparison'
+    uid: '@azure/msal-common.UrlUtils.normalizeUrlForComparison_1'
     package: '@azure/msal-common'
     summary: >-
       Normalizes URLs for comparison by removing hash, canonicalizing,
@@ -67,7 +59,7 @@ functions:
         description: Normalized URL string for comparison
         type: string
   - name: stripLeadingHashOrQuery(string)
-    uid: '@azure/msal-common.UrlUtils.stripLeadingHashOrQuery'
+    uid: '@azure/msal-common.UrlUtils.stripLeadingHashOrQuery_1'
     package: '@azure/msal-common'
     summary: >-
       Parses hash string from given string. Returns empty string if no hash

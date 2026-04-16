@@ -9,7 +9,7 @@ isDeprecated: false
 type: interface
 methods:
   - name: 'addFields({[key: string]: {} | undefined}, string)'
-    uid: '@azure/msal-common.IPerformanceClient.addFields'
+    uid: '@azure/msal-common.IPerformanceClient.addFields_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -26,7 +26,7 @@ methods:
           type: string
           description: ''
   - name: addPerformanceCallback(PerformanceCallbackFunction)
-    uid: '@azure/msal-common.IPerformanceClient.addPerformanceCallback'
+    uid: '@azure/msal-common.IPerformanceClient.addPerformanceCallback_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -42,51 +42,8 @@ methods:
       return:
         description: ''
         type: string
-  - name: addQueueMeasurement(string, string, number, boolean)
-    uid: '@azure/msal-common.IPerformanceClient.addQueueMeasurement'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function addQueueMeasurement(eventName: string, correlationId?: string,
-        queueTime?: number, manuallyCompleted?: boolean)
-      parameters:
-        - id: eventName
-          type: string
-          description: ''
-        - id: correlationId
-          type: string
-          description: ''
-        - id: queueTime
-          type: number
-          description: ''
-        - id: manuallyCompleted
-          type: boolean
-          description: ''
-  - name: calculateQueuedTime(number, number)
-    uid: '@azure/msal-common.IPerformanceClient.calculateQueuedTime'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function calculateQueuedTime(preQueueTime: number, currentTime: number):
-        number
-      parameters:
-        - id: preQueueTime
-          type: number
-          description: ''
-        - id: currentTime
-          type: number
-          description: ''
-      return:
-        description: ''
-        type: number
   - name: discardMeasurements(string)
-    uid: '@azure/msal-common.IPerformanceClient.discardMeasurements'
+    uid: '@azure/msal-common.IPerformanceClient.discardMeasurements_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -98,7 +55,7 @@ methods:
           type: string
           description: ''
   - name: emitEvents(PerformanceEvent[], string)
-    uid: '@azure/msal-common.IPerformanceClient.emitEvents'
+    uid: '@azure/msal-common.IPerformanceClient.emitEvents_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -113,7 +70,7 @@ methods:
           type: string
           description: ''
   - name: endMeasurement(PerformanceEvent)
-    uid: '@azure/msal-common.IPerformanceClient.endMeasurement'
+    uid: '@azure/msal-common.IPerformanceClient.endMeasurement_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -130,7 +87,7 @@ methods:
         description: ''
         type: null | <xref uid="@azure/msal-common.PerformanceEvent" />
   - name: generateId()
-    uid: '@azure/msal-common.IPerformanceClient.generateId'
+    uid: '@azure/msal-common.IPerformanceClient.generateId_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -141,7 +98,7 @@ methods:
         description: ''
         type: string
   - name: 'incrementFields({[key: string]: number | undefined}, string)'
-    uid: '@azure/msal-common.IPerformanceClient.incrementFields'
+    uid: '@azure/msal-common.IPerformanceClient.incrementFields_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -158,7 +115,7 @@ methods:
           type: string
           description: ''
   - name: removePerformanceCallback(string)
-    uid: '@azure/msal-common.IPerformanceClient.removePerformanceCallback'
+    uid: '@azure/msal-common.IPerformanceClient.removePerformanceCallback_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -172,23 +129,8 @@ methods:
       return:
         description: ''
         type: boolean
-  - name: setPreQueueTime(string, string)
-    uid: '@azure/msal-common.IPerformanceClient.setPreQueueTime'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function setPreQueueTime(eventName: string, correlationId?: string)'
-      parameters:
-        - id: eventName
-          type: string
-          description: ''
-        - id: correlationId
-          type: string
-          description: ''
   - name: startMeasurement(string, string)
-    uid: '@azure/msal-common.IPerformanceClient.startMeasurement'
+    uid: '@azure/msal-common.IPerformanceClient.startMeasurement_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -207,24 +149,3 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.InProgressPerformanceEvent" />
-  - name: startPerformanceMeasurement(string, string)
-    uid: '@azure/msal-common.IPerformanceClient.startPerformanceMeasurement'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: This method will be removed in the next major version
-    syntax:
-      content: >-
-        function startPerformanceMeasurement(measureName: string, correlationId:
-        string): IPerformanceMeasurement
-      parameters:
-        - id: measureName
-          type: string
-          description: ''
-        - id: correlationId
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-common.IPerformanceMeasurement" />

@@ -16,7 +16,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: ScopeSet(string[])
-    uid: '@azure/msal-common.ScopeSet.constructor'
+    uid: '@azure/msal-common.ScopeSet.constructor_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -29,7 +29,7 @@ constructors:
           description: ''
 methods:
   - name: appendScope(string)
-    uid: '@azure/msal-common.ScopeSet.appendScope'
+    uid: '@azure/msal-common.ScopeSet.appendScope_1'
     package: '@azure/msal-common'
     summary: Appends single scope if passed
     remarks: ''
@@ -41,7 +41,7 @@ methods:
           type: string
           description: ''
   - name: appendScopes(string[])
-    uid: '@azure/msal-common.ScopeSet.appendScopes'
+    uid: '@azure/msal-common.ScopeSet.appendScopes_1'
     package: '@azure/msal-common'
     summary: Appends multiple scopes if passed
     remarks: ''
@@ -53,7 +53,7 @@ methods:
           type: string[]
           description: ''
   - name: asArray()
-    uid: '@azure/msal-common.ScopeSet.asArray'
+    uid: '@azure/msal-common.ScopeSet.asArray_1'
     package: '@azure/msal-common'
     summary: Returns the scopes as an array of string values
     remarks: ''
@@ -64,7 +64,7 @@ methods:
         description: ''
         type: string[]
   - name: containsOnlyOIDCScopes()
-    uid: '@azure/msal-common.ScopeSet.containsOnlyOIDCScopes'
+    uid: '@azure/msal-common.ScopeSet.containsOnlyOIDCScopes_1'
     package: '@azure/msal-common'
     summary: Check if set of scopes contains only the defaults
     remarks: ''
@@ -75,7 +75,7 @@ methods:
         description: ''
         type: boolean
   - name: containsScope(string)
-    uid: '@azure/msal-common.ScopeSet.containsScope'
+    uid: '@azure/msal-common.ScopeSet.containsScope_1'
     package: '@azure/msal-common'
     summary: Check if a given scope is present in this set of scopes.
     remarks: ''
@@ -90,7 +90,7 @@ methods:
         description: ''
         type: boolean
   - name: containsScopeSet(ScopeSet)
-    uid: '@azure/msal-common.ScopeSet.containsScopeSet'
+    uid: '@azure/msal-common.ScopeSet.containsScopeSet_1'
     package: '@azure/msal-common'
     summary: Check if a set of scopes is present in this set of scopes.
     remarks: ''
@@ -105,7 +105,7 @@ methods:
         description: ''
         type: boolean
   - name: createSearchScopes(string[])
-    uid: '@azure/msal-common.ScopeSet.createSearchScopes'
+    uid: '@azure/msal-common.ScopeSet.createSearchScopes_1'
     package: '@azure/msal-common'
     summary: Creates the set of scopes to search for in cache lookups
     remarks: ''
@@ -120,7 +120,7 @@ methods:
         description: ''
         type: <xref uid="@azure/msal-common.ScopeSet" />
   - name: fromString(string)
-    uid: '@azure/msal-common.ScopeSet.fromString'
+    uid: '@azure/msal-common.ScopeSet.fromString_1'
     package: '@azure/msal-common'
     summary: Factory method to create ScopeSet from space-delimited string
     remarks: ''
@@ -135,7 +135,7 @@ methods:
         description: ''
         type: <xref uid="@azure/msal-common.ScopeSet" />
   - name: getScopeCount()
-    uid: '@azure/msal-common.ScopeSet.getScopeCount'
+    uid: '@azure/msal-common.ScopeSet.getScopeCount_1'
     package: '@azure/msal-common'
     summary: Returns size of set of scopes.
     remarks: ''
@@ -146,7 +146,7 @@ methods:
         description: ''
         type: number
   - name: intersectingScopeSets(ScopeSet)
-    uid: '@azure/msal-common.ScopeSet.intersectingScopeSets'
+    uid: '@azure/msal-common.ScopeSet.intersectingScopeSets_1'
     package: '@azure/msal-common'
     summary: Check if scopes intersect between this set and another.
     remarks: ''
@@ -161,7 +161,7 @@ methods:
         description: ''
         type: boolean
   - name: printScopes()
-    uid: '@azure/msal-common.ScopeSet.printScopes'
+    uid: '@azure/msal-common.ScopeSet.printScopes_1'
     package: '@azure/msal-common'
     summary: Prints scopes into a space-delimited string
     remarks: ''
@@ -172,7 +172,7 @@ methods:
         description: ''
         type: string
   - name: printScopesLowerCase()
-    uid: '@azure/msal-common.ScopeSet.printScopesLowerCase'
+    uid: '@azure/msal-common.ScopeSet.printScopesLowerCase_1'
     package: '@azure/msal-common'
     summary: Prints scopes into a space-delimited lower-case string (used for caching)
     remarks: ''
@@ -183,7 +183,7 @@ methods:
         description: ''
         type: string
   - name: removeOIDCScopes()
-    uid: '@azure/msal-common.ScopeSet.removeOIDCScopes'
+    uid: '@azure/msal-common.ScopeSet.removeOIDCScopes_1'
     package: '@azure/msal-common'
     summary: >-
       Removes default scopes from set of scopes
@@ -195,7 +195,7 @@ methods:
     syntax:
       content: function removeOIDCScopes()
   - name: removeScope(string)
-    uid: '@azure/msal-common.ScopeSet.removeScope'
+    uid: '@azure/msal-common.ScopeSet.removeScope_1'
     package: '@azure/msal-common'
     summary: Removes element from set of scopes.
     remarks: ''
@@ -207,7 +207,7 @@ methods:
           type: string
           description: ''
   - name: unionScopeSets(ScopeSet)
-    uid: '@azure/msal-common.ScopeSet.unionScopeSets'
+    uid: '@azure/msal-common.ScopeSet.unionScopeSets_1'
     package: '@azure/msal-common'
     summary: Combines an array of scopes with the current set of scopes.
     remarks: ''

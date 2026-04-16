@@ -37,21 +37,26 @@ methods:
       return:
         description: Public key digest, which should be sent to the token issuer.
         type: Promise&lt;string&gt;
-  - name: removeKeys(string)
+  - name: removeKeys(string, string)
     uid: '@azure/msal-browser.SignedHttpRequest.removeKeys'
     package: '@azure/msal-browser'
     summary: Removes cached keys from browser for given public key thumbprint
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeKeys(publicKeyThumbprint: string): Promise<boolean>'
+      content: >-
+        function removeKeys(publicKeyThumbprint: string, correlationId: string):
+        Promise<void>
       parameters:
         - id: publicKeyThumbprint
           type: string
           description: Public key digest (from generatePublicKeyThumbprint API)
+        - id: correlationId
+          type: string
+          description: ''
       return:
         description: If keys are properly deleted
-        type: Promise&lt;boolean&gt;
+        type: Promise&lt;void&gt;
   - name: signRequest(string, string, object)
     uid: '@azure/msal-browser.SignedHttpRequest.signRequest'
     package: '@azure/msal-browser'

@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: AADAuthority
+uid: '@azure/msal-common.Constants.AADAuthority'
+package: '@azure/msal-common'
+summary: ''
+fullName: AADAuthority
+remarks: ''
+isDeprecated: false
+syntax: |
+  type AADAuthority = (typeof AADAuthority)[keyof typeof AADAuthority]

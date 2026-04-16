@@ -6,7 +6,7 @@ package: '@azure/msal-common'
 summary: ''
 functions:
   - name: getAuthorizationCodePayload(AuthorizeResponse, string)
-    uid: '@azure/msal-common.AuthorizeProtocol.getAuthorizationCodePayload'
+    uid: '@azure/msal-common.AuthorizeProtocol.getAuthorizationCodePayload_1'
     package: '@azure/msal-common'
     summary: >-
       Handles the hash fragment response from public client code request.
@@ -29,8 +29,8 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AuthorizationCodePayload" />
-  - name: getAuthorizeUrl(Authority, Map<string, string>, boolean, StringDict)
-    uid: '@azure/msal-common.AuthorizeProtocol.getAuthorizeUrl'
+  - name: getAuthorizeUrl(Authority, Map<string, string>)
+    uid: '@azure/msal-common.AuthorizeProtocol.getAuthorizeUrl_1'
     package: '@azure/msal-common'
     summary: >-
       Returns authorize endpoint with given request parameters in the query
@@ -40,8 +40,7 @@ functions:
     syntax:
       content: >-
         function getAuthorizeUrl(authority: Authority, requestParameters:
-        Map<string, string>, encodeParams?: boolean, extraQueryParameters?:
-        StringDict): string
+        Map<string, string>): string
       parameters:
         - id: authority
           type: Authority
@@ -49,19 +48,14 @@ functions:
         - id: requestParameters
           type: Map&lt;string, string&gt;
           description: ''
-        - id: encodeParams
-          type: boolean
-          description: ''
-        - id: extraQueryParameters
-          type: <xref uid="@azure/msal-common.StringDict" />
-          description: ''
       return:
         description: ''
         type: string
   - name: >-
       getStandardAuthorizeRequestParameters(AuthOptions,
       CommonAuthorizationUrlRequest, Logger, IPerformanceClient)
-    uid: '@azure/msal-common.AuthorizeProtocol.getStandardAuthorizeRequestParameters'
+    uid: >-
+      @azure/msal-common.AuthorizeProtocol.getStandardAuthorizeRequestParameters_1
     package: '@azure/msal-common'
     summary: >-
       Returns map of parameters that are applicable to all calls to /authorize
@@ -90,7 +84,7 @@ functions:
         description: ''
         type: Map&lt;string, string&gt;
   - name: validateAuthorizationResponse(AuthorizeResponse, string)
-    uid: '@azure/msal-common.AuthorizeProtocol.validateAuthorizationResponse'
+    uid: '@azure/msal-common.AuthorizeProtocol.validateAuthorizationResponse_1'
     package: '@azure/msal-common'
     summary: Function which validates server authorization code response.
     remarks: ''

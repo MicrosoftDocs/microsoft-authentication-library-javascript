@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: CacheType
-uid: '@azure/msal-common.CacheType'
+uid: '@azure/msal-common.Constants.CacheType'
 package: '@azure/msal-common'
 summary: ''
 fullName: CacheType

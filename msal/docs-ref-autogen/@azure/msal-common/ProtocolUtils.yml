@@ -1,23 +1,20 @@
-### YamlMime:TSType
-name: ProtocolUtils
+### YamlMime:TSPackage
 uid: '@azure/msal-common.ProtocolUtils'
+name: ProtocolUtils
+type: module
 package: '@azure/msal-common'
-summary: Class which provides helpers for OAuth 2.0 protocol specific values
-fullName: ProtocolUtils
-remarks: ''
-isDeprecated: false
-type: class
-methods:
+summary: ''
+functions:
   - name: generateLibraryState(ICrypto, Record<string, string>)
-    uid: '@azure/msal-common.ProtocolUtils.generateLibraryState'
+    uid: '@azure/msal-common.ProtocolUtils.generateLibraryState_1'
     package: '@azure/msal-common'
     summary: Generates the state value used by the common library.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        static function generateLibraryState(cryptoObj: ICrypto, meta?:
-        Record<string, string>): string
+        function generateLibraryState(cryptoObj: ICrypto, meta?: Record<string,
+        string>): string
       parameters:
         - id: cryptoObj
           type: <xref uid="@azure/msal-common.ICrypto" />
@@ -28,8 +25,8 @@ methods:
       return:
         description: ''
         type: string
-  - name: parseRequestState(ICrypto, string)
-    uid: '@azure/msal-common.ProtocolUtils.parseRequestState'
+  - name: 'parseRequestState((input: string) => string, string)'
+    uid: '@azure/msal-common.ProtocolUtils.parseRequestState_1'
     package: '@azure/msal-common'
     summary: >-
       Parses the state into the RequestStateObject, which contains the
@@ -38,11 +35,11 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        static function parseRequestState(cryptoObj: ICrypto, state: string):
-        RequestStateObject
+        function parseRequestState(base64Decode: (input: string) => string,
+        state: string): RequestStateObject
       parameters:
-        - id: cryptoObj
-          type: <xref uid="@azure/msal-common.ICrypto" />
+        - id: base64Decode
+          type: '(input: string) =&gt; string'
           description: ''
         - id: state
           type: string
@@ -51,15 +48,15 @@ methods:
         description: ''
         type: <xref uid="@azure/msal-common.RequestStateObject" />
   - name: setRequestState(ICrypto, string, Record<string, string>)
-    uid: '@azure/msal-common.ProtocolUtils.setRequestState'
+    uid: '@azure/msal-common.ProtocolUtils.setRequestState_1'
     package: '@azure/msal-common'
     summary: Appends user state with random guid, or returns random guid.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        static function setRequestState(cryptoObj: ICrypto, userState?: string,
-        meta?: Record<string, string>): string
+        function setRequestState(cryptoObj: ICrypto, userState?: string, meta?:
+        Record<string, string>): string
       parameters:
         - id: cryptoObj
           type: <xref uid="@azure/msal-common.ICrypto" />

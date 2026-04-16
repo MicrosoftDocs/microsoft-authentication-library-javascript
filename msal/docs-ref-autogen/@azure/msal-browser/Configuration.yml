@@ -12,6 +12,7 @@ syntax: |
   type Configuration = {
     auth: BrowserAuthOptions
     cache?: CacheOptions
+    experimental?: BrowserExperimentalOptions
     system?: BrowserSystemOptions
     telemetry?: BrowserTelemetryOptions
   }

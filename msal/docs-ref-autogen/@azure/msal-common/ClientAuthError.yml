@@ -9,7 +9,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: ClientAuthError(string, string)
-    uid: '@azure/msal-common.ClientAuthError.constructor'
+    uid: '@azure/msal-common.ClientAuthError.constructor_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -178,7 +178,7 @@ inheritedProperties:
       [AuthError.subError](xref:@azure/msal-common.AuthError.subError)
 inheritedMethods:
   - name: captureStackTrace(object, Function)
-    uid: '@azure/msal-common.ClientAuthError.captureStackTrace'
+    uid: '@azure/msal-common.ClientAuthError.captureStackTrace_1'
     package: '@azure/msal-common'
     summary: >-
       Creates a `.stack` property on `targetObject`, which when accessed returns
@@ -263,7 +263,7 @@ inheritedMethods:
       <b>Inherited From</b>
       [AuthError.captureStackTrace](xref:@azure/msal-common.AuthError.captureStackTrace)
   - name: prepareStackTrace(Error, CallSite[])
-    uid: '@azure/msal-common.ClientAuthError.prepareStackTrace'
+    uid: '@azure/msal-common.ClientAuthError.prepareStackTrace_1'
     package: '@azure/msal-common'
     summary: |-
 
@@ -289,7 +289,7 @@ inheritedMethods:
       <b>Inherited From</b>
       [AuthError.prepareStackTrace](xref:@azure/msal-common.AuthError.prepareStackTrace)
   - name: setCorrelationId(string)
-    uid: '@azure/msal-common.ClientAuthError.setCorrelationId'
+    uid: '@azure/msal-common.ClientAuthError.setCorrelationId_1'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''

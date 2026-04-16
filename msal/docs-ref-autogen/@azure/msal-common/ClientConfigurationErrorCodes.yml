@@ -94,20 +94,6 @@ variables:
       return:
         description: ''
         type: '"invalid_authority_metadata"'
-  - name: invalidAuthorizePostBodyParameters
-    uid: >-
-      @azure/msal-common.ClientConfigurationErrorCodes.invalidAuthorizePostBodyParameters
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        invalidAuthorizePostBodyParameters:
-        "invalid_authorize_post_body_parameters"
-      return:
-        description: ''
-        type: '"invalid_authorize_post_body_parameters"'
   - name: invalidClaims
     uid: '@azure/msal-common.ClientConfigurationErrorCodes.invalidClaims'
     package: '@azure/msal-common'
@@ -143,20 +129,6 @@ variables:
       return:
         description: ''
         type: '"invalid_code_challenge_method"'
-  - name: invalidPlatformBrokerConfiguration
-    uid: >-
-      @azure/msal-common.ClientConfigurationErrorCodes.invalidPlatformBrokerConfiguration
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        invalidPlatformBrokerConfiguration:
-        "invalid_platform_broker_configuration"
-      return:
-        description: ''
-        type: '"invalid_platform_broker_configuration"'
   - name: invalidRequestMethodForEAR
     uid: >-
       @azure/msal-common.ClientConfigurationErrorCodes.invalidRequestMethodForEAR

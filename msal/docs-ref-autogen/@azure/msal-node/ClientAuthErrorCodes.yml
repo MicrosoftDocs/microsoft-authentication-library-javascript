@@ -85,39 +85,6 @@ variables:
       return:
         description: ''
         type: '"client_info_empty_error"'
-  - name: deviceCodeExpired
-    uid: '@azure/msal-node.ClientAuthErrorCodes.deviceCodeExpired'
-    package: '@azure/msal-node'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'deviceCodeExpired: "device_code_expired"'
-      return:
-        description: ''
-        type: '"device_code_expired"'
-  - name: deviceCodePollingCancelled
-    uid: '@azure/msal-node.ClientAuthErrorCodes.deviceCodePollingCancelled'
-    package: '@azure/msal-node'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'deviceCodePollingCancelled: "device_code_polling_cancelled"'
-      return:
-        description: ''
-        type: '"device_code_polling_cancelled"'
-  - name: deviceCodeUnknownError
-    uid: '@azure/msal-node.ClientAuthErrorCodes.deviceCodeUnknownError'
-    package: '@azure/msal-node'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'deviceCodeUnknownError: "device_code_unknown_error"'
-      return:
-        description: ''
-        type: '"device_code_unknown_error"'
   - name: emptyInputScopeSet
     uid: '@azure/msal-node.ClientAuthErrorCodes.emptyInputScopeSet'
     package: '@azure/msal-node'
@@ -162,17 +129,6 @@ variables:
       return:
         description: ''
         type: '"hash_not_deserialized"'
-  - name: invalidAssertion
-    uid: '@azure/msal-node.ClientAuthErrorCodes.invalidAssertion'
-    package: '@azure/msal-node'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'invalidAssertion: "invalid_assertion"'
-      return:
-        description: ''
-        type: '"invalid_assertion"'
   - name: invalidCacheEnvironment
     uid: '@azure/msal-node.ClientAuthErrorCodes.invalidCacheEnvironment'
     package: '@azure/msal-node'
@@ -195,17 +151,6 @@ variables:
       return:
         description: ''
         type: '"invalid_cache_record"'
-  - name: invalidClientCredential
-    uid: '@azure/msal-node.ClientAuthErrorCodes.invalidClientCredential'
-    package: '@azure/msal-node'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'invalidClientCredential: "invalid_client_credential"'
-      return:
-        description: ''
-        type: '"invalid_client_credential"'
   - name: invalidState
     uid: '@azure/msal-node.ClientAuthErrorCodes.invalidState'
     package: '@azure/msal-node'
@@ -250,28 +195,17 @@ variables:
       return:
         description: ''
         type: '"method_not_implemented"'
-  - name: missingTenantIdError
-    uid: '@azure/msal-node.ClientAuthErrorCodes.missingTenantIdError'
+  - name: misplacedResourceParam
+    uid: '@azure/msal-node.ClientAuthErrorCodes.misplacedResourceParam'
     package: '@azure/msal-node'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'missingTenantIdError: "missing_tenant_id_error"'
+      content: 'misplacedResourceParam: "misplaced_resource_parameter"'
       return:
         description: ''
-        type: '"missing_tenant_id_error"'
-  - name: multipleMatchingAccounts
-    uid: '@azure/msal-node.ClientAuthErrorCodes.multipleMatchingAccounts'
-    package: '@azure/msal-node'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'multipleMatchingAccounts: "multiple_matching_accounts"'
-      return:
-        description: ''
-        type: '"multiple_matching_accounts"'
+        type: '"misplaced_resource_parameter"'
   - name: multipleMatchingAppMetadata
     uid: '@azure/msal-node.ClientAuthErrorCodes.multipleMatchingAppMetadata'
     package: '@azure/msal-node'
@@ -415,6 +349,17 @@ variables:
       return:
         description: ''
         type: '"request_cannot_be_made"'
+  - name: resourceParameterRequired
+    uid: '@azure/msal-node.ClientAuthErrorCodes.resourceParameterRequired'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resourceParameterRequired: "resource_parameter_required"'
+      return:
+        description: ''
+        type: '"resource_parameter_required"'
   - name: stateMismatch
     uid: '@azure/msal-node.ClientAuthErrorCodes.stateMismatch'
     package: '@azure/msal-node'
@@ -494,14 +439,3 @@ variables:
       return:
         description: ''
         type: '"user_canceled"'
-  - name: userTimeoutReached
-    uid: '@azure/msal-node.ClientAuthErrorCodes.userTimeoutReached'
-    package: '@azure/msal-node'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'userTimeoutReached: "user_timeout_reached"'
-      return:
-        description: ''
-        type: '"user_timeout_reached"'

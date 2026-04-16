@@ -5,7 +5,6 @@ summary: ''
 type: package
 enums:
   - '@azure/msal-browser.InteractionType'
-  - '@azure/msal-browser.PerformanceEvents'
   - '@azure/msal-browser.LogLevel'
 classes:
   - '@azure/msal-browser.AuthError'
@@ -24,12 +23,10 @@ classes:
   - '@azure/msal-browser.MemoryStorage'
   - '@azure/msal-browser.NavigationClient'
   - '@azure/msal-browser.PublicClientApplication'
-  - '@azure/msal-browser.PublicClientNext'
   - '@azure/msal-browser.ServerError'
   - '@azure/msal-browser.SessionStorage'
   - '@azure/msal-browser.SignedHttpRequest'
   - '@azure/msal-browser.StubPerformanceClient'
-  - '@azure/msal-browser.UrlString'
   - '@azure/msal-browser.AuthFlowActionRequiredStateBase'
   - '@azure/msal-browser.AuthFlowStateBase'
   - '@azure/msal-browser.AuthMethodRegistrationChallengeMethodError'
@@ -113,13 +110,11 @@ classes:
   - '@azure/msal-browser.UserAccountAttributeError'
   - '@azure/msal-browser.UserAlreadySignedInError'
 interfaces:
-  - '@azure/msal-browser.IController'
   - '@azure/msal-browser.ILoggerCallback'
   - '@azure/msal-browser.INavigationClient'
   - '@azure/msal-browser.INetworkModule'
   - '@azure/msal-browser.IPerformanceClient'
   - '@azure/msal-browser.IPublicClientApplication'
-  - '@azure/msal-browser.ITokenCache'
   - '@azure/msal-browser.IWindowStorage'
   - '@azure/msal-browser.AuthMethodDetails'
   - '@azure/msal-browser.AuthenticationMethod'
@@ -128,7 +123,6 @@ typeAliases:
   - '@azure/msal-browser.AccountInfo'
   - '@azure/msal-browser.AuthenticationResult'
   - '@azure/msal-browser.AuthorizationCodeRequest'
-  - '@azure/msal-browser.AuthorizationUrlRequest'
   - '@azure/msal-browser.AzureCloudOptions'
   - '@azure/msal-browser.BrokerConnectionEvent'
   - '@azure/msal-browser.BrowserAuthOptions'
@@ -144,6 +138,8 @@ typeAliases:
   - '@azure/msal-browser.EventMessage'
   - '@azure/msal-browser.EventPayload'
   - '@azure/msal-browser.ExternalTokenResponse'
+  - '@azure/msal-browser.HandleRedirectPromiseOptions'
+  - '@azure/msal-browser.IController'
   - '@azure/msal-browser.IdTokenClaims'
   - '@azure/msal-browser.InProgressPerformanceEvent'
   - '@azure/msal-browser.InitializeApplicationRequest'
@@ -195,11 +191,17 @@ variables:
   - name: ApiId
     uid: '@azure/msal-browser.ApiId'
     package: '@azure/msal-browser'
-    summary: |-
+    summary: >-
       API Codes for Telemetry purposes.
+
+      Before adding a new code you must claim it in the MSAL Telemetry tracker
+      as these number spaces are shared across all MSALs
+
       0-99 Silent Flow
+
       800-899 Auth Code Flow
-      900-999 Miscellaneous
+
+      900-999 Misc
     remarks: ''
     isDeprecated: false
     syntax:
@@ -220,7 +222,7 @@ variables:
   - name: AuthenticationScheme
     uid: '@azure/msal-browser.AuthenticationScheme'
     package: '@azure/msal-browser'
-    summary: Type of the authentication request
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
@@ -287,51 +289,41 @@ variables:
     isDeprecated: false
     syntax:
       content: >-
-        EventType: { ACCOUNT_ADDED: "msal:accountAdded", ACCOUNT_REMOVED:
-        "msal:accountRemoved", ACQUIRE_TOKEN_BY_CODE_FAILURE:
-        "msal:acquireTokenByCodeFailure", ACQUIRE_TOKEN_BY_CODE_START:
-        "msal:acquireTokenByCodeStart", ACQUIRE_TOKEN_BY_CODE_SUCCESS:
-        "msal:acquireTokenByCodeSuccess", ACQUIRE_TOKEN_FAILURE:
-        "msal:acquireTokenFailure", ACQUIRE_TOKEN_NETWORK_START:
-        "msal:acquireTokenFromNetworkStart", ACQUIRE_TOKEN_START:
-        "msal:acquireTokenStart", ACQUIRE_TOKEN_SUCCESS:
+        EventType: { ACQUIRE_TOKEN_FAILURE: "msal:acquireTokenFailure",
+        ACQUIRE_TOKEN_NETWORK_START: "msal:acquireTokenFromNetworkStart",
+        ACQUIRE_TOKEN_START: "msal:acquireTokenStart", ACQUIRE_TOKEN_SUCCESS:
         "msal:acquireTokenSuccess", ACTIVE_ACCOUNT_CHANGED:
-        "msal:activeAccountChanged", BROKER_CONNECTION_ESTABLISHED:
+        "msal:activeAccountChanged", BROKERED_REQUEST_FAILURE:
+        "msal:brokeredRequestFailure", BROKERED_REQUEST_START:
+        "msal:brokeredRequestStart", BROKERED_REQUEST_SUCCESS:
+        "msal:brokeredRequestSuccess", BROKER_CONNECTION_ESTABLISHED:
         "msal:brokerConnectionEstablished", HANDLE_REDIRECT_END:
         "msal:handleRedirectEnd", HANDLE_REDIRECT_START:
         "msal:handleRedirectStart", INITIALIZE_END: "msal:initializeEnd",
-        INITIALIZE_START: "msal:initializeStart", LOGIN_FAILURE:
-        "msal:loginFailure", LOGIN_START: "msal:loginStart", LOGIN_SUCCESS:
+        INITIALIZE_START: "msal:initializeStart", LOGIN_SUCCESS:
         "msal:loginSuccess", LOGOUT_END: "msal:logoutEnd", LOGOUT_FAILURE:
         "msal:logoutFailure", LOGOUT_START: "msal:logoutStart", LOGOUT_SUCCESS:
         "msal:logoutSuccess", POPUP_OPENED: "msal:popupOpened",
-        RESTORE_FROM_BFCACHE: "msal:restoreFromBFCache", SSO_SILENT_FAILURE:
-        "msal:ssoSilentFailure", SSO_SILENT_START: "msal:ssoSilentStart",
-        SSO_SILENT_SUCCESS: "msal:ssoSilentSuccess" }
+        RESTORE_FROM_BFCACHE: "msal:restoreFromBFCache" }
       return:
         description: ''
         type: >-
-          { ACCOUNT_ADDED: "msal:accountAdded", ACCOUNT_REMOVED:
-          "msal:accountRemoved", ACQUIRE_TOKEN_BY_CODE_FAILURE:
-          "msal:acquireTokenByCodeFailure", ACQUIRE_TOKEN_BY_CODE_START:
-          "msal:acquireTokenByCodeStart", ACQUIRE_TOKEN_BY_CODE_SUCCESS:
-          "msal:acquireTokenByCodeSuccess", ACQUIRE_TOKEN_FAILURE:
-          "msal:acquireTokenFailure", ACQUIRE_TOKEN_NETWORK_START:
-          "msal:acquireTokenFromNetworkStart", ACQUIRE_TOKEN_START:
-          "msal:acquireTokenStart", ACQUIRE_TOKEN_SUCCESS:
+          { ACQUIRE_TOKEN_FAILURE: "msal:acquireTokenFailure",
+          ACQUIRE_TOKEN_NETWORK_START: "msal:acquireTokenFromNetworkStart",
+          ACQUIRE_TOKEN_START: "msal:acquireTokenStart", ACQUIRE_TOKEN_SUCCESS:
           "msal:acquireTokenSuccess", ACTIVE_ACCOUNT_CHANGED:
-          "msal:activeAccountChanged", BROKER_CONNECTION_ESTABLISHED:
+          "msal:activeAccountChanged", BROKERED_REQUEST_FAILURE:
+          "msal:brokeredRequestFailure", BROKERED_REQUEST_START:
+          "msal:brokeredRequestStart", BROKERED_REQUEST_SUCCESS:
+          "msal:brokeredRequestSuccess", BROKER_CONNECTION_ESTABLISHED:
           "msal:brokerConnectionEstablished", HANDLE_REDIRECT_END:
           "msal:handleRedirectEnd", HANDLE_REDIRECT_START:
           "msal:handleRedirectStart", INITIALIZE_END: "msal:initializeEnd",
-          INITIALIZE_START: "msal:initializeStart", LOGIN_FAILURE:
-          "msal:loginFailure", LOGIN_START: "msal:loginStart", LOGIN_SUCCESS:
+          INITIALIZE_START: "msal:initializeStart", LOGIN_SUCCESS:
           "msal:loginSuccess", LOGOUT_END: "msal:logoutEnd", LOGOUT_FAILURE:
           "msal:logoutFailure", LOGOUT_START: "msal:logoutStart",
           LOGOUT_SUCCESS: "msal:logoutSuccess", POPUP_OPENED:
-          "msal:popupOpened", RESTORE_FROM_BFCACHE: "msal:restoreFromBFCache",
-          SSO_SILENT_FAILURE: "msal:ssoSilentFailure", SSO_SILENT_START:
-          "msal:ssoSilentStart", SSO_SILENT_SUCCESS: "msal:ssoSilentSuccess" }
+          "msal:popupOpened", RESTORE_FROM_BFCACHE: "msal:restoreFromBFCache" }
   - name: InteractionStatus
     uid: '@azure/msal-browser.InteractionStatus'
     package: '@azure/msal-browser'
@@ -345,14 +337,12 @@ variables:
     syntax:
       content: >-
         InteractionStatus: { AcquireToken: "acquireToken", HandleRedirect:
-        "handleRedirect", Login: "login", Logout: "logout", None: "none",
-        SsoSilent: "ssoSilent", Startup: "startup" }
+        "handleRedirect", Logout: "logout", None: "none", Startup: "startup" }
       return:
         description: ''
         type: >-
           { AcquireToken: "acquireToken", HandleRedirect: "handleRedirect",
-          Login: "login", Logout: "logout", None: "none", SsoSilent:
-          "ssoSilent", Startup: "startup" }
+          Logout: "logout", None: "none", Startup: "startup" }
   - name: JsonWebTokenTypes
     uid: '@azure/msal-browser.JsonWebTokenTypes'
     package: '@azure/msal-browser'
@@ -375,18 +365,19 @@ variables:
       return:
         description: ''
         type: '{ AAD: "AAD", EAR: "EAR", OIDC: "OIDC" }'
-  - name: ServerResponseType
-    uid: '@azure/msal-browser.ServerResponseType'
+  - name: ResponseMode
+    uid: '@azure/msal-browser.ResponseMode'
     package: '@azure/msal-browser'
-    summary: allowed values for server response type
+    summary: ''
     remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: Use ResponseMode instead
+    isDeprecated: false
     syntax:
-      content: 'ServerResponseType: { FRAGMENT: "fragment", QUERY: "query" }'
+      content: >-
+        ResponseMode: { FORM_POST: "form_post", FRAGMENT: "fragment", QUERY:
+        "query" }
       return:
         description: ''
-        type: '{ FRAGMENT: "fragment", QUERY: "query" }'
+        type: '{ FORM_POST: "form_post", FRAGMENT: "fragment", QUERY: "query" }'
   - name: WrapperSKU
     uid: '@azure/msal-browser.WrapperSKU'
     package: '@azure/msal-browser'
@@ -400,298 +391,6 @@ variables:
       return:
         description: ''
         type: '{ Angular: "@azure/msal-angular", React: "@azure/msal-react" }'
-  - name: AuthErrorMessage
-    uid: '@azure/msal-browser.AuthErrorMessage'
-    package: '@azure/msal-browser'
-    summary: >-
-      AuthErrorMessage class containing string constants used by error codes and
-      messages.
-    remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: Use AuthErrorCodes instead
-    syntax:
-      content: >-
-        AuthErrorMessage: { postRequestFailed: { code: string, desc: string },
-        unexpectedError: { code: string, desc: string } }
-      return:
-        description: ''
-        type: >-
-          { postRequestFailed: { code: string, desc: string }, unexpectedError:
-          { code: string, desc: string } }
-  - name: BrowserAuthErrorMessage
-    uid: '@azure/msal-browser.BrowserAuthErrorMessage'
-    package: '@azure/msal-browser'
-    summary: >-
-      BrowserAuthErrorMessage class containing string constants used by error
-      codes and messages.
-    remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: |-
-      Use exported BrowserAuthErrorCodes instead.
-      In your app you can do :
-      ```
-      import { BrowserAuthErrorCodes } from "@azure/msal-browser";
-      ```
-    syntax:
-      content: >-
-        BrowserAuthErrorMessage: { authCodeOrNativeAccountRequired: { code:
-        string, desc: string }, authCodeRequired: { code: string, desc: string
-        }, authRequestNotSet: { code: string, desc: string },
-        blockAcquireTokenInPopupsError: { code: string, desc: string },
-        blockTokenRequestsInHiddenIframeError: { code: string, desc: string },
-        cryptoDoesNotExist: { code: string, desc: string }, databaseNotOpen: {
-        code: string, desc: string }, databaseUnavailable: { code: string, desc:
-        string }, emptyNavigateUriError: { code: string, desc: string },
-        emptyWindowError: { code: string, desc: string },
-        failedToParseNetworkResponse: { code: string, desc: string },
-        getRequestFailed: { code: string, desc: string },
-        hashDoesNotContainKnownPropertiesError: { code: string, desc: string },
-        hashDoesNotContainStateError: { code: string, desc: string },
-        hashEmptyError: { code: string, desc: string },
-        iframeClosedPrematurelyError: { code: string, desc: string },
-        interactionInProgress: { code: string, desc: string },
-        invalidBase64StringError: { code: string, desc: string },
-        invalidCacheType: { code: string, desc: string },
-        invalidPopTokenRequest: { code: string, desc: string },
-        monitorIframeTimeoutError: { code: string, desc: string },
-        monitorPopupTimeoutError: { code: string, desc: string },
-        nativeConnectionNotEstablished: { code: string, desc: string },
-        nativeExtensionNotInstalled: { code: string, desc: string },
-        nativeHandshakeTimeout: { code: string, desc: string },
-        nativePromptNotSupported: { code: string, desc: string },
-        noAccountError: { code: string, desc: string }, noNetworkConnectivity: {
-        code: string, desc: string }, noTokenRequestCacheError: { code: string,
-        desc: string }, notInBrowserEnvironment: { code: string, desc: string },
-        pkceNotGenerated: { code: string, desc: string }, popupWindowError: {
-        code: string, desc: string }, postRequestFailed: { code: string, desc:
-        string }, redirectInIframeError: { code: string, desc: string },
-        signingKeyNotFoundInStorage: { code: string, desc: string },
-        silentLogoutUnsupportedError: { code: string, desc: string },
-        silentPromptValueError: { code: string, desc: string },
-        spaCodeAndNativeAccountPresent: { code: string, desc: string },
-        stateInteractionTypeMismatchError: { code: string, desc: string },
-        unableToAcquireTokenFromNativePlatform: { code: string, desc: string },
-        unableToLoadTokenError: { code: string, desc: string },
-        unableToParseStateError: { code: string, desc: string },
-        unableToParseTokenRequestCacheError: { code: string, desc: string },
-        uninitializedPublicClientApplication: { code: string, desc: string },
-        userCancelledError: { code: string, desc: string } }
-      return:
-        description: ''
-        type: >-
-          { authCodeOrNativeAccountRequired: { code: string, desc: string },
-          authCodeRequired: { code: string, desc: string }, authRequestNotSet: {
-          code: string, desc: string }, blockAcquireTokenInPopupsError: { code:
-          string, desc: string }, blockTokenRequestsInHiddenIframeError: { code:
-          string, desc: string }, cryptoDoesNotExist: { code: string, desc:
-          string }, databaseNotOpen: { code: string, desc: string },
-          databaseUnavailable: { code: string, desc: string },
-          emptyNavigateUriError: { code: string, desc: string },
-          emptyWindowError: { code: string, desc: string },
-          failedToParseNetworkResponse: { code: string, desc: string },
-          getRequestFailed: { code: string, desc: string },
-          hashDoesNotContainKnownPropertiesError: { code: string, desc: string
-          }, hashDoesNotContainStateError: { code: string, desc: string },
-          hashEmptyError: { code: string, desc: string },
-          iframeClosedPrematurelyError: { code: string, desc: string },
-          interactionInProgress: { code: string, desc: string },
-          invalidBase64StringError: { code: string, desc: string },
-          invalidCacheType: { code: string, desc: string },
-          invalidPopTokenRequest: { code: string, desc: string },
-          monitorIframeTimeoutError: { code: string, desc: string },
-          monitorPopupTimeoutError: { code: string, desc: string },
-          nativeConnectionNotEstablished: { code: string, desc: string },
-          nativeExtensionNotInstalled: { code: string, desc: string },
-          nativeHandshakeTimeout: { code: string, desc: string },
-          nativePromptNotSupported: { code: string, desc: string },
-          noAccountError: { code: string, desc: string }, noNetworkConnectivity:
-          { code: string, desc: string }, noTokenRequestCacheError: { code:
-          string, desc: string }, notInBrowserEnvironment: { code: string, desc:
-          string }, pkceNotGenerated: { code: string, desc: string },
-          popupWindowError: { code: string, desc: string }, postRequestFailed: {
-          code: string, desc: string }, redirectInIframeError: { code: string,
-          desc: string }, signingKeyNotFoundInStorage: { code: string, desc:
-          string }, silentLogoutUnsupportedError: { code: string, desc: string
-          }, silentPromptValueError: { code: string, desc: string },
-          spaCodeAndNativeAccountPresent: { code: string, desc: string },
-          stateInteractionTypeMismatchError: { code: string, desc: string },
-          unableToAcquireTokenFromNativePlatform: { code: string, desc: string
-          }, unableToLoadTokenError: { code: string, desc: string },
-          unableToParseStateError: { code: string, desc: string },
-          unableToParseTokenRequestCacheError: { code: string, desc: string },
-          uninitializedPublicClientApplication: { code: string, desc: string },
-          userCancelledError: { code: string, desc: string } }
-  - name: BrowserConfigurationAuthErrorMessage
-    uid: '@azure/msal-browser.BrowserConfigurationAuthErrorMessage'
-    package: '@azure/msal-browser'
-    summary: >-
-      BrowserAuthErrorMessage class containing string constants used by error
-      codes and messages.
-    remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: Use BrowserAuthErrorCodes instead
-    syntax:
-      content: >-
-        BrowserConfigurationAuthErrorMessage: { inMemRedirectUnavailable: {
-        code: string, desc: string }, storageNotSupportedError: { code: string,
-        desc: string }, stubPcaInstanceCalled: { code: string, desc: string } }
-      return:
-        description: ''
-        type: >-
-          { inMemRedirectUnavailable: { code: string, desc: string },
-          storageNotSupportedError: { code: string, desc: string },
-          stubPcaInstanceCalled: { code: string, desc: string } }
-  - name: ClientAuthErrorMessage
-    uid: '@azure/msal-browser.ClientAuthErrorMessage'
-    package: '@azure/msal-browser'
-    summary: String constants used by error codes and messages.
-    remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: Use ClientAuthErrorCodes instead
-    syntax:
-      content: >-
-        ClientAuthErrorMessage: { DeviceCodeExpired: { code: string, desc:
-        string }, DeviceCodePollingCancelled: { code: string, desc: string },
-        DeviceCodeUnknownError: { code: string, desc: string },
-        NoAccountInSilentRequest: { code: string, desc: string },
-        appendScopeSetError: { code: string, desc: string },
-        authTimeNotFoundError: { code: string, desc: string },
-        bindingKeyNotRemovedError: { code: string, desc: string },
-        clientInfoDecodingError: { code: string, desc: string },
-        clientInfoEmptyError: { code: string, desc: string },
-        emptyInputScopeSetError: { code: string, desc: string },
-        endpointResolutionError: { code: string, desc: string },
-        hashNotDeserialized: { code: string, desc: string }, invalidAssertion: {
-        code: string, desc: string }, invalidCacheEnvironment: { code: string,
-        desc: string }, invalidCacheRecord: { code: string, desc: string },
-        invalidClientCredential: { code: string, desc: string },
-        invalidStateError: { code: string, desc: string }, keyIdMissing: { code:
-        string, desc: string }, logoutNotSupported: { code: string, desc: string
-        }, maxAgeTranspired: { code: string, desc: string },
-        missingTenantIdError: { code: string, desc: string },
-        multipleMatchingAccounts: { code: string, desc: string },
-        multipleMatchingAppMetadata: { code: string, desc: string },
-        multipleMatchingTokens: { code: string, desc: string },
-        nestedAppAuthBridgeDisabled: { code: string, desc: string },
-        networkError: { code: string, desc: string }, noAccountFound: { code:
-        string, desc: string }, noAuthorizationCodeFromServer: { code: string,
-        desc: string }, noCryptoObj: { code: string, desc: string },
-        noNetworkConnectivity: { code: string, desc: string },
-        nonceMismatchError: { code: string, desc: string }, nullOrEmptyToken: {
-        code: string, desc: string }, platformBrokerError: { code: string, desc:
-        string }, removeEmptyScopeError: { code: string, desc: string },
-        stateMismatchError: { code: string, desc: string }, stateNotFoundError:
-        { code: string, desc: string }, tokenClaimsRequired: { code: string,
-        desc: string }, tokenParsingError: { code: string, desc: string },
-        tokenRefreshRequired: { code: string, desc: string },
-        tokenRequestCannotBeMade: { code: string, desc: string },
-        unableToGetOpenidConfigError: { code: string, desc: string },
-        unexpectedCredentialType: { code: string, desc: string },
-        userCanceledError: { code: string, desc: string }, userTimeoutReached: {
-        code: string, desc: string } }
-      return:
-        description: ''
-        type: >-
-          { DeviceCodeExpired: { code: string, desc: string },
-          DeviceCodePollingCancelled: { code: string, desc: string },
-          DeviceCodeUnknownError: { code: string, desc: string },
-          NoAccountInSilentRequest: { code: string, desc: string },
-          appendScopeSetError: { code: string, desc: string },
-          authTimeNotFoundError: { code: string, desc: string },
-          bindingKeyNotRemovedError: { code: string, desc: string },
-          clientInfoDecodingError: { code: string, desc: string },
-          clientInfoEmptyError: { code: string, desc: string },
-          emptyInputScopeSetError: { code: string, desc: string },
-          endpointResolutionError: { code: string, desc: string },
-          hashNotDeserialized: { code: string, desc: string }, invalidAssertion:
-          { code: string, desc: string }, invalidCacheEnvironment: { code:
-          string, desc: string }, invalidCacheRecord: { code: string, desc:
-          string }, invalidClientCredential: { code: string, desc: string },
-          invalidStateError: { code: string, desc: string }, keyIdMissing: {
-          code: string, desc: string }, logoutNotSupported: { code: string,
-          desc: string }, maxAgeTranspired: { code: string, desc: string },
-          missingTenantIdError: { code: string, desc: string },
-          multipleMatchingAccounts: { code: string, desc: string },
-          multipleMatchingAppMetadata: { code: string, desc: string },
-          multipleMatchingTokens: { code: string, desc: string },
-          nestedAppAuthBridgeDisabled: { code: string, desc: string },
-          networkError: { code: string, desc: string }, noAccountFound: { code:
-          string, desc: string }, noAuthorizationCodeFromServer: { code: string,
-          desc: string }, noCryptoObj: { code: string, desc: string },
-          noNetworkConnectivity: { code: string, desc: string },
-          nonceMismatchError: { code: string, desc: string }, nullOrEmptyToken:
-          { code: string, desc: string }, platformBrokerError: { code: string,
-          desc: string }, removeEmptyScopeError: { code: string, desc: string },
-          stateMismatchError: { code: string, desc: string },
-          stateNotFoundError: { code: string, desc: string },
-          tokenClaimsRequired: { code: string, desc: string },
-          tokenParsingError: { code: string, desc: string },
-          tokenRefreshRequired: { code: string, desc: string },
-          tokenRequestCannotBeMade: { code: string, desc: string },
-          unableToGetOpenidConfigError: { code: string, desc: string },
-          unexpectedCredentialType: { code: string, desc: string },
-          userCanceledError: { code: string, desc: string }, userTimeoutReached:
-          { code: string, desc: string } }
-  - name: ClientConfigurationErrorMessage
-    uid: '@azure/msal-browser.ClientConfigurationErrorMessage'
-    package: '@azure/msal-browser'
-    summary: >-
-      ClientConfigurationErrorMessage class containing string constants used by
-      error codes and messages.
-    remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: Use ClientConfigurationErrorCodes instead
-    syntax:
-      content: >-
-        ClientConfigurationErrorMessage: { authorityMismatch: { code: string,
-        desc: string }, authorityUriInsecure: { code: string, desc: string },
-        cannotAllowPlatformBroker: { code: string, desc: string },
-        cannotSetOIDCOptions: { code: string, desc: string },
-        claimsRequestParsingError: { code: string, desc: string },
-        emptyScopesError: { code: string, desc: string },
-        invalidAuthenticationHeader: { code: string, desc: string },
-        invalidAuthorityMetadata: { code: string, desc: string },
-        invalidAuthorizePostBodyParameters: { code: string, desc: string },
-        invalidClaimsRequest: { code: string, desc: string },
-        invalidCloudDiscoveryMetadata: { code: string, desc: string },
-        invalidCodeChallengeMethod: { code: string, desc: string },
-        invalidCodeChallengeParams: { code: string, desc: string },
-        invalidPlatformBrokerConfiguration: { code: string, desc: string },
-        invalidRequestMethodForEAR: { code: string, desc: string },
-        logoutRequestEmptyError: { code: string, desc: string },
-        missingNonceAuthenticationHeader: { code: string, desc: string },
-        missingSshJwk: { code: string, desc: string }, missingSshKid: { code:
-        string, desc: string }, redirectUriNotSet: { code: string, desc: string
-        }, tokenRequestEmptyError: { code: string, desc: string },
-        untrustedAuthority: { code: string, desc: string }, urlEmptyError: {
-        code: string, desc: string }, urlParseError: { code: string, desc:
-        string } }
-      return:
-        description: ''
-        type: >-
-          { authorityMismatch: { code: string, desc: string },
-          authorityUriInsecure: { code: string, desc: string },
-          cannotAllowPlatformBroker: { code: string, desc: string },
-          cannotSetOIDCOptions: { code: string, desc: string },
-          claimsRequestParsingError: { code: string, desc: string },
-          emptyScopesError: { code: string, desc: string },
-          invalidAuthenticationHeader: { code: string, desc: string },
-          invalidAuthorityMetadata: { code: string, desc: string },
-          invalidAuthorizePostBodyParameters: { code: string, desc: string },
-          invalidClaimsRequest: { code: string, desc: string },
-          invalidCloudDiscoveryMetadata: { code: string, desc: string },
-          invalidCodeChallengeMethod: { code: string, desc: string },
-          invalidCodeChallengeParams: { code: string, desc: string },
-          invalidPlatformBrokerConfiguration: { code: string, desc: string },
-          invalidRequestMethodForEAR: { code: string, desc: string },
-          logoutRequestEmptyError: { code: string, desc: string },
-          missingNonceAuthenticationHeader: { code: string, desc: string },
-          missingSshJwk: { code: string, desc: string }, missingSshKid: { code:
-          string, desc: string }, redirectUriNotSet: { code: string, desc:
-          string }, tokenRequestEmptyError: { code: string, desc: string },
-          untrustedAuthority: { code: string, desc: string }, urlEmptyError: {
-          code: string, desc: string }, urlParseError: { code: string, desc:
-          string } }
   - name: DEFAULT_IFRAME_TIMEOUT_MS
     uid: '@azure/msal-browser.DEFAULT_IFRAME_TIMEOUT_MS'
     package: '@azure/msal-browser'
@@ -703,25 +402,6 @@ variables:
       return:
         description: ''
         type: '10000'
-  - name: InteractionRequiredAuthErrorMessage
-    uid: '@azure/msal-browser.InteractionRequiredAuthErrorMessage'
-    package: '@azure/msal-browser'
-    summary: Interaction required errors defined by the SDK
-    remarks: ''
-    isDeprecated: true
-    customDeprecatedMessage: Use InteractionRequiredAuthErrorCodes instead
-    syntax:
-      content: >-
-        InteractionRequiredAuthErrorMessage: { bad_token: { code: string, desc:
-        string }, interrupted_user: { code: string, desc: string },
-        native_account_unavailable: { code: string, desc: string },
-        noTokensFoundError: { code: string, desc: string } }
-      return:
-        description: ''
-        type: >-
-          { bad_token: { code: string, desc: string }, interrupted_user: { code:
-          string, desc: string }, native_account_unavailable: { code: string,
-          desc: string }, noTokensFoundError: { code: string, desc: string } }
   - name: OIDC_DEFAULT_SCOPES
     uid: '@azure/msal-browser.OIDC_DEFAULT_SCOPES'
     package: '@azure/msal-browser'
@@ -736,15 +416,7 @@ variables:
   - name: PromptValue
     uid: '@azure/msal-browser.PromptValue'
     package: '@azure/msal-browser'
-    summary: >-
-      we considered making this "enum" in the request instead of string, however
-      it looks like the allowed list of
-
-      prompt values kept changing over past couple of years. There are some
-      undocumented prompt values for some
-
-      internal partners too, hence the choice of generic "string" type instead
-      of the "enum"
+    summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
@@ -774,12 +446,15 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "4.30.0"'
+      content: 'version: "5.6.3"'
       return:
         description: ''
-        type: '"<xref uid="4.30.0" />"'
+        type: '"<xref uid="5.6.3" />"'
 functions:
-  - name: createNestablePublicClientApplication(Configuration)
+  - name: >-
+      createNestablePublicClientApplication(Configuration, string,
+      (configuration: Configuration, controller: IPublicClientApplication) =>
+      IPublicClientApplication)
     uid: '@azure/msal-browser.createNestablePublicClientApplication'
     package: '@azure/msal-browser'
     summary: >-
@@ -793,10 +468,20 @@ functions:
     syntax:
       content: >-
         function createNestablePublicClientApplication(configuration:
-        Configuration): Promise<IPublicClientApplication>
+        Configuration, correlationId?: string, pcaFactory?: (configuration:
+        Configuration, controller: IPublicClientApplication) =>
+        IPublicClientApplication): Promise<IPublicClientApplication>
       parameters:
         - id: configuration
           type: <xref uid="@azure/msal-browser.Configuration" />
+          description: ''
+        - id: correlationId
+          type: string
+          description: ''
+        - id: pcaFactory
+          type: >-
+            (configuration: Configuration, controller: IPublicClientApplication)
+            =&gt; IPublicClientApplication
           description: ''
       return:
         description: IPublicClientApplication
@@ -822,9 +507,31 @@ functions:
         type: >-
           Promise&lt;<xref uid="@azure/msal-browser.IPublicClientApplication"
           />&gt;
-  - name: >-
-      isPlatformBrokerAvailable(LoggerOptions, IPerformanceClient, string,
-      boolean)
+  - name: enforceResourceParameter(boolean, Partial<BaseAuthRequest>)
+    uid: '@azure/msal-browser.enforceResourceParameter'
+    package: '@azure/msal-browser'
+    summary: >-
+      Helper to enforce resource parameter presence in token requests when isMcp
+      is set in the configuration.
+
+      If resource parameter is set in both the request and in
+      extraQueryParameters or extraParameters, an error will be thrown.
+
+      This is used for MCP flows.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function enforceResourceParameter(isMcp: boolean, request:
+        Partial<BaseAuthRequest>)
+      parameters:
+        - id: isMcp
+          type: boolean
+          description: Flag indicating if application is an MCP app, from configuration
+        - id: request
+          type: Partial&lt;<xref uid="@azure/msal-common.BaseAuthRequest" />&gt;
+          description: Auth request
+  - name: isPlatformBrokerAvailable(LoggerOptions, IPerformanceClient, string)
     uid: '@azure/msal-browser.isPlatformBrokerAvailable'
     package: '@azure/msal-browser'
     summary: Checks if the platform broker is available in the current environment.
@@ -833,8 +540,8 @@ functions:
     syntax:
       content: >-
         function isPlatformBrokerAvailable(loggerOptions?: LoggerOptions,
-        perfClient?: IPerformanceClient, correlationId?: string, domConfig?:
-        boolean): Promise<boolean>
+        perfClient?: IPerformanceClient, correlationId?: string):
+        Promise<boolean>
       parameters:
         - id: loggerOptions
           type: <xref uid="@azure/msal-common.LoggerOptions" />
@@ -845,9 +552,61 @@ functions:
         - id: correlationId
           type: string
           description: ''
-        - id: domConfig
-          type: boolean
-          description: ''
       return:
         description: ''
         type: Promise&lt;boolean&gt;
+  - name: >-
+      loadExternalTokens(Configuration, SilentRequest, ExternalTokenResponse,
+      LoadTokenOptions, IPerformanceClient)
+    uid: '@azure/msal-browser.loadExternalTokens'
+    package: '@azure/msal-browser'
+    summary: API to load tokens to msal-browser cache.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function loadExternalTokens(config: Configuration, request:
+        SilentRequest, response: ExternalTokenResponse, options:
+        LoadTokenOptions, performanceClient?: IPerformanceClient):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: config
+          type: <xref uid="@azure/msal-browser.Configuration" />
+          description: Object to configure the MSAL app.
+        - id: request
+          type: <xref uid="@azure/msal-browser.SilentRequest" />
+          description: Silent request containing authority, scopes, and account.
+        - id: response
+          type: <xref uid="@azure/msal-browser.ExternalTokenResponse" />
+          description: External token response to load into the cache.
+        - id: options
+          type: <xref uid="@azure/msal-browser.LoadTokenOptions" />
+          description: Options controlling how tokens are loaded into the cache.
+        - id: performanceClient
+          type: <xref uid="@azure/msal-browser.IPerformanceClient" />
+          description: Optional performance client used for telemetry measurements.
+      return:
+        description: '`AuthenticationResult` for the response that was loaded.'
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+  - name: broadcastResponseToMainFrame(NavigationClient)
+    uid: '@azure/msal-browser.broadcastResponseToMainFrame'
+    package: '@azure/msal-browser'
+    summary: |-
+      Processes the authentication response from the redirect URL
+      For SSO and popup scenarios broadcasts it to the main frame
+      For redirect scenario navigates to the home page
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function broadcastResponseToMainFrame(navigationClient?:
+        NavigationClient): Promise<void>
+      parameters:
+        - id: navigationClient
+          type: NavigationClient
+          description: Optional navigation client for redirect scenario.
+      return:
+        description: >-
+          A promise that resolves when the response has been broadcast and
+          cleanup is complete.
+        type: Promise&lt;void&gt;

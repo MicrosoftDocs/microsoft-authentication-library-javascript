@@ -9,7 +9,7 @@ isDeprecated: false
 type: interface
 methods:
   - name: base64Decode(string)
-    uid: '@azure/msal-common.ICrypto.base64Decode'
+    uid: '@azure/msal-common.ICrypto.base64Decode_1'
     package: '@azure/msal-common'
     summary: base64 decode string
     remarks: ''
@@ -24,7 +24,7 @@ methods:
         description: ''
         type: string
   - name: base64Encode(string)
-    uid: '@azure/msal-common.ICrypto.base64Encode'
+    uid: '@azure/msal-common.ICrypto.base64Encode_1'
     package: '@azure/msal-common'
     summary: base64 Encode string
     remarks: ''
@@ -39,7 +39,7 @@ methods:
         description: ''
         type: string
   - name: base64UrlEncode(string)
-    uid: '@azure/msal-common.ICrypto.base64UrlEncode'
+    uid: '@azure/msal-common.ICrypto.base64UrlEncode_1'
     package: '@azure/msal-common'
     summary: base64 URL safe encoded string
     remarks: ''
@@ -53,19 +53,23 @@ methods:
       return:
         description: ''
         type: string
-  - name: clearKeystore()
-    uid: '@azure/msal-common.ICrypto.clearKeystore'
+  - name: clearKeystore(string)
+    uid: '@azure/msal-common.ICrypto.clearKeystore_1'
     package: '@azure/msal-common'
     summary: Removes all cryptographic keys from IndexedDB storage
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function clearKeystore(): Promise<boolean>'
+      content: 'function clearKeystore(correlationId: string): Promise<boolean>'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
       return:
         description: ''
         type: Promise&lt;boolean&gt;
   - name: createNewGuid()
-    uid: '@azure/msal-common.ICrypto.createNewGuid'
+    uid: '@azure/msal-common.ICrypto.createNewGuid_1'
     package: '@azure/msal-common'
     summary: Creates a guid randomly.
     remarks: ''
@@ -76,7 +80,7 @@ methods:
         description: ''
         type: string
   - name: encodeKid(string)
-    uid: '@azure/msal-common.ICrypto.encodeKid'
+    uid: '@azure/msal-common.ICrypto.encodeKid_1'
     package: '@azure/msal-common'
     summary: Stringifies and base64Url encodes input public key
     remarks: ''
@@ -91,7 +95,7 @@ methods:
         description: Base64Url encoded public key
         type: string
   - name: getPublicKeyThumbprint(SignedHttpRequestParameters)
-    uid: '@azure/msal-common.ICrypto.getPublicKeyThumbprint'
+    uid: '@azure/msal-common.ICrypto.getPublicKeyThumbprint_1'
     package: '@azure/msal-common'
     summary: Generates an JWK RSA S256 Thumbprint
     remarks: ''
@@ -108,7 +112,7 @@ methods:
         description: ''
         type: Promise&lt;string&gt;
   - name: hashString(string)
-    uid: '@azure/msal-common.ICrypto.hashString'
+    uid: '@azure/msal-common.ICrypto.hashString_1'
     package: '@azure/msal-common'
     summary: Returns the SHA-256 hash of an input string
     remarks: ''
@@ -122,23 +126,28 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: removeTokenBindingKey(string)
-    uid: '@azure/msal-common.ICrypto.removeTokenBindingKey'
+  - name: removeTokenBindingKey(string, string)
+    uid: '@azure/msal-common.ICrypto.removeTokenBindingKey_1'
     package: '@azure/msal-common'
     summary: Removes cryptographic keypair from key store matching the keyId passed in
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeTokenBindingKey(kid: string): Promise<void>'
+      content: >-
+        function removeTokenBindingKey(kid: string, correlationId: string):
+        Promise<void>
       parameters:
         - id: kid
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
   - name: signJwt(SignedHttpRequest, string, ShrOptions, string)
-    uid: '@azure/msal-common.ICrypto.signJwt'
+    uid: '@azure/msal-common.ICrypto.signJwt_1'
     package: '@azure/msal-common'
     summary: >-
       Returns a signed proof-of-possession token with a given acces token that

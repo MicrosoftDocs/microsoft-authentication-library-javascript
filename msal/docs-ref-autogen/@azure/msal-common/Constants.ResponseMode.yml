@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: ResponseMode
-uid: '@azure/msal-common.ResponseMode'
+uid: '@azure/msal-common.Constants.ResponseMode'
 package: '@azure/msal-common'
 summary: ''
 fullName: ResponseMode

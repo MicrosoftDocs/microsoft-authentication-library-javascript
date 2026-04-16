@@ -74,16 +74,42 @@ methods:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.Logger" />
-  - name: handleRedirectObservable()
-    uid: '@azure/msal-angular.IMsalService.handleRedirectObservable'
+  - name: handleRedirectObservable(HandleRedirectPromiseOptions)
+    uid: '@azure/msal-angular.IMsalService.handleRedirectObservable_1'
     package: '@azure/msal-angular'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
-        function handleRedirectObservable(): Observable<null |
+        function handleRedirectObservable(options?:
+        HandleRedirectPromiseOptions): Observable<null | AuthenticationResult>
+      parameters:
+        - id: options
+          type: <xref uid="@azure/msal-browser.HandleRedirectPromiseOptions" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Observable&lt;null | <xref
+          uid="@azure/msal-browser.AuthenticationResult" />&gt;
+  - name: handleRedirectObservable(string)
+    uid: '@azure/msal-angular.IMsalService.handleRedirectObservable'
+    package: '@azure/msal-angular'
+    summary: ''
+    remarks: ''
+    isDeprecated: true
+    customDeprecatedMessage: >-
+      Pass options object instead of hash string. Use handleRedirectObservable({
+      hash: "#..." }) instead.
+    syntax:
+      content: >-
+        function handleRedirectObservable(hash: string): Observable<null |
         AuthenticationResult>
+      parameters:
+        - id: hash
+          type: string
+          description: ''
       return:
         description: ''
         type: >-
@@ -134,22 +160,7 @@ methods:
       return:
         description: ''
         type: Observable&lt;void&gt;
-  - name: logout(EndSessionRequest)
-    uid: '@azure/msal-angular.IMsalService.logout'
-    package: '@azure/msal-angular'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function logout(logoutRequest?: EndSessionRequest): Observable<void>'
-      parameters:
-        - id: logoutRequest
-          type: <xref uid="@azure/msal-browser.EndSessionRequest" />
-          description: ''
-      return:
-        description: ''
-        type: Observable&lt;void&gt;
-  - name: logoutPopup(EndSessionRequest)
+  - name: logoutPopup(EndSessionPopupRequest)
     uid: '@azure/msal-angular.IMsalService.logoutPopup'
     package: '@azure/msal-angular'
     summary: ''
@@ -157,11 +168,11 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function logoutPopup(logoutRequest?: EndSessionRequest):
+        function logoutPopup(logoutRequest?: EndSessionPopupRequest):
         Observable<void>
       parameters:
         - id: logoutRequest
-          type: <xref uid="@azure/msal-browser.EndSessionRequest" />
+          type: <xref uid="@azure/msal-browser.EndSessionPopupRequest" />
           description: ''
       return:
         description: ''
@@ -197,8 +208,7 @@ methods:
           description: ''
   - name: >-
       ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "requestedClaimsHash"
-      | "platformBroker">>)
+      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
     uid: '@azure/msal-angular.IMsalService.ssoSilent'
     package: '@azure/msal-angular'
     summary: ''
@@ -208,15 +218,14 @@ methods:
       content: >-
         function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
         "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "requestedClaimsHash" | "platformBroker">>):
-        Observable<AuthenticationResult>
+        "platformBroker">>): Observable<AuthenticationResult>
       parameters:
         - id: request
           type: >-
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
             "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "requestedClaimsHash" | "platformBroker"&gt;&gt;
+            | "platformBroker"&gt;&gt;
           description: ''
       return:
         description: ''

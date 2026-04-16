@@ -15,5 +15,4 @@ syntax: |
     cloudDiscoveryMetadata: string
     knownAuthorities: string[]
     protocolMode: ProtocolMode
-    skipAuthorityMetadataCache?: boolean
   }

@@ -1,0 +1,11 @@
+### YamlMime:TSTypeAlias
+name: RegionDiscoverySources
+uid: '@azure/msal-common.Constants.RegionDiscoverySources'
+package: '@azure/msal-common'
+summary: ''
+fullName: RegionDiscoverySources
+remarks: ''
+isDeprecated: false
+syntax: |
+  type RegionDiscoverySources =
+    (typeof RegionDiscoverySources)[keyof typeof RegionDiscoverySources]

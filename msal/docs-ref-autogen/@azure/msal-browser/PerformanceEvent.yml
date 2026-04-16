@@ -11,40 +11,49 @@ isDeprecated: false
 syntax: |
   type PerformanceEvent = {
     accessTokenSize?: number
+    accessTokensRemoved?: number
     accountCachedBy?: string
     accountType?: "AAD" | "MSA" | "B2C"
+    accountsRemoved?: number
     acntLoggedOut?: boolean
     allowPlatformBroker?: boolean
     appName?: string
     appVersion?: string
     authority: string
+    authorityEndpointSource?: string
     awaitIframeCorrelationId?: string
-    brokerErrorCode?: string
-    brokerErrorName?: string
     cacheAtCount?: number
     cacheIdCount?: number
     cacheLocation?: string
     cacheLookupPolicy?: number
+    cacheMatchedAccounts?: number
     cacheOutcome?: number
     cacheRetentionDays?: number
     cacheRtCount?: number
     cacheRtExpiresOnSeconds?: number
     clientId: string
+    cloudDiscoverySource?: string
     contentLengthHeader?: string
     contentTypeHeader?: string
     context?: string
     correlationId: string
-    crossOriginTickCount?: number
     dataBoundary?: DataBoundary
+    deduped?: boolean
     domainHintFromRequest?: boolean
     durationMs?: number
     embeddedClientId?: string
     embeddedRedirectUri?: string
+    encryptedCacheCorruptionCount?: number
+    encryptedCacheCount?: number
+    encryptedCacheExpiredCount?: number
     endPageVisibility?: string | null
     errorCode?: string
     errorName?: string
     errorStack?: string[]
     eventId: string
+    expiredAcntRemovedCount?: number
+    expiredCacheRemovedCount?: number
+    ext?: Record<string, string | number>
     extRtExpiresOnSeconds?: number
     extensionHandshakeTimedOut?: boolean
     extensionHandshakeTimeoutMs?: number
@@ -55,21 +64,22 @@ syntax: |
     httpStatus?: number
     httpVerToken?: string
     idTokenSize?: number
-    iframePollIntervalMs?: number
-    iframeTickCount?: number
-    iframeTimeoutMs?: number
     incompleteSubMeasurements?: Map<string, SubMeasurement>
     incompleteSubsCount?: number
+    invalidCacheCount?: number
     isAsyncPopup?: boolean
+    isBackground?: boolean
+    isMcp?: boolean
     isNativeBroker?: boolean
-    isPlatformAuthorizeRequest?: boolean
-    isPlatformBrokerRequest?: boolean
     isRedirectUriCrossOrigin?: boolean
+    kmsi?: boolean
+    lateResponseExperimentEnabled?: boolean
     libraryName: string
     libraryVersion: string
     loginHintFromClaim?: boolean
     loginHintFromRequest?: boolean
     loginHintFromUpn?: boolean
+    logs?: string
     matsAccountJoinOnEnd?: string
     matsAccountJoinOnStart?: string
     matsApiErrorCode?: number
@@ -83,6 +93,9 @@ syntax: |
     matsSilentMessage?: string
     matsSilentStatus?: number
     matsUiVisible?: boolean
+    migratedATCount?: number
+    migratedITCount?: number
+    migratedRTCount?: number
     msalInstanceCount?: number
     multiMatchedAT?: number
     multiMatchedID?: number
@@ -93,13 +106,25 @@ syntax: |
     networkEffectiveType?: string
     networkRtt?: number
     ntwkRtExpiresOnSeconds?: number
+    oldATCount?: number
+    oldAcntCount?: number
+    oldITCount?: number
+    oldRTCount?: number
     onlineStatusChangeCount?: number
+    postMigrateATCount?: number
+    postMigrateAcntCount?: number
+    postMigrateITCount?: number
+    postMigrateRTCount?: number
+    preMigrateATCount?: number
+    preMigrateAcntCount?: number
+    preMigrateITCount?: number
+    preMigrateRTCount?: number
     previousLibraryVersion?: string
     prompt?: string
-    queuedCount?: number
-    queuedManuallyCompletedCount?: number
-    queuedTimeMs?: number
+    redirectBridgeMessageVersion?: number
+    redirectBridgeTimeoutMs?: number
     refreshTokenSize?: number
+    removeTokenBindingKeyFailure?: number
     requestId?: string
     retryError?: string
     rtOffsetSeconds?: number
@@ -107,15 +132,20 @@ syntax: |
     scenarioId?: string
     serverErrorNo?: string
     serverSubErrorNo?: string
+    sidFromClaim?: boolean
     sidFromClaims?: boolean
     sidFromRequest?: boolean
     silentRefreshReason?: string
+    skipATMigrateCount?: number
+    skipITMigrateCount?: number
+    skipRTMigrateCount?: number
     startOnlineStatus?: boolean | null
     startPageVisibility?: string | null
     startTimeMs: number
     status: PerformanceEventStatus
     subErrorCode?: string
     success?: boolean | null
+    unencryptedCacheCount?: number
     usePreGeneratedPkce?: boolean
     visibilityChangeCount?: number
   }

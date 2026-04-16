@@ -456,6 +456,17 @@ variables:
       return:
         description: ''
         type: '"req_cnf"'
+  - name: RESOURCE
+    uid: '@azure/msal-common.AADServerParamKeys.RESOURCE'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'RESOURCE: "resource"'
+      return:
+        description: ''
+        type: '"resource"'
   - name: RESPONSE_MODE
     uid: '@azure/msal-common.AADServerParamKeys.RESPONSE_MODE'
     package: '@azure/msal-common'

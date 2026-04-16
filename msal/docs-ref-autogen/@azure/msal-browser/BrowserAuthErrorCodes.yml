@@ -140,6 +140,17 @@ variables:
       return:
         description: ''
         type: '"empty_navigate_uri"'
+  - name: emptyResponse
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.emptyResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'emptyResponse: "empty_response"'
+      return:
+        description: ''
+        type: '"empty_response"'
   - name: emptyWindowError
     uid: '@azure/msal-browser.BrowserAuthErrorCodes.emptyWindowError'
     package: '@azure/msal-browser'
@@ -253,6 +264,17 @@ variables:
       return:
         description: ''
         type: '"interaction_in_progress"'
+  - name: interactionInProgressCancelled
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.interactionInProgressCancelled'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'interactionInProgressCancelled: "interaction_in_progress_cancelled"'
+      return:
+        description: ''
+        type: '"interaction_in_progress_cancelled"'
   - name: invalidBase64String
     uid: '@azure/msal-browser.BrowserAuthErrorCodes.invalidBase64String'
     package: '@azure/msal-browser'
@@ -286,28 +308,6 @@ variables:
       return:
         description: ''
         type: '"invalid_pop_token_request"'
-  - name: monitorPopupTimeout
-    uid: '@azure/msal-browser.BrowserAuthErrorCodes.monitorPopupTimeout'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'monitorPopupTimeout: "monitor_popup_timeout"'
-      return:
-        description: ''
-        type: '"monitor_popup_timeout"'
-  - name: monitorWindowTimeout
-    uid: '@azure/msal-browser.BrowserAuthErrorCodes.monitorWindowTimeout'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'monitorWindowTimeout: "monitor_window_timeout"'
-      return:
-        description: ''
-        type: '"monitor_window_timeout"'
   - name: nativeConnectionNotEstablished
     uid: '@azure/msal-browser.BrowserAuthErrorCodes.nativeConnectionNotEstablished'
     package: '@azure/msal-browser'
@@ -440,6 +440,17 @@ variables:
       return:
         description: ''
         type: '"post_request_failed"'
+  - name: redirectBridgeEmptyResponse
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.redirectBridgeEmptyResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'redirectBridgeEmptyResponse: "redirect_bridge_empty_response"'
+      return:
+        description: ''
+        type: '"redirect_bridge_empty_response"'
   - name: redirectInIframe
     uid: '@azure/msal-browser.BrowserAuthErrorCodes.redirectInIframe'
     package: '@azure/msal-browser'

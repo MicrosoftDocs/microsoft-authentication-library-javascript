@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: CacheOutcome
-uid: '@azure/msal-common.CacheOutcome'
+uid: '@azure/msal-common.Constants.CacheOutcome'
 package: '@azure/msal-common'
 summary: ''
 fullName: CacheOutcome

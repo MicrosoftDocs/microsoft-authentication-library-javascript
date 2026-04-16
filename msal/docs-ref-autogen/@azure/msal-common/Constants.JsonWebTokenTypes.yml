@@ -1,6 +1,6 @@
 ### YamlMime:TSTypeAlias
 name: JsonWebTokenTypes
-uid: '@azure/msal-common.JsonWebTokenTypes'
+uid: '@azure/msal-common.Constants.JsonWebTokenTypes'
 package: '@azure/msal-common'
 summary: ''
 fullName: JsonWebTokenTypes
