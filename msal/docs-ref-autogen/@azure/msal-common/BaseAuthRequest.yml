@@ -27,6 +27,7 @@ syntax: |
     shrClaims?: string
     shrNonce?: string
     shrOptions?: ShrOptions
+    skipBrokerClaims?: boolean
     sshJwk?: string
     sshKid?: string
     storeInCache?: StoreInCache

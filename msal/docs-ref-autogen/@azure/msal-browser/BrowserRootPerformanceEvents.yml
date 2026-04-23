@@ -110,6 +110,21 @@ variables:
       return:
         description: ''
         type: '"localStorageUpdated"'
+  - name: SsoCapable
+    uid: '@azure/msal-browser.BrowserRootPerformanceEvents.SsoCapable'
+    package: '@azure/msal-browser'
+    summary: >-
+      SSO capability verification call (msal-browser).
+
+      Fire-and-forget SSO verification call made after interactive
+      authentication completes.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SsoCapable: "ssoCapable"'
+      return:
+        description: ''
+        type: '"ssoCapable"'
   - name: SsoSilent
     uid: '@azure/msal-browser.BrowserRootPerformanceEvents.SsoSilent'
     package: '@azure/msal-browser'
@@ -125,3 +140,14 @@ variables:
       return:
         description: ''
         type: '"ssoSilent"'
+  - name: WaitForBridgeLateResponse
+    uid: '@azure/msal-browser.BrowserRootPerformanceEvents.WaitForBridgeLateResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'WaitForBridgeLateResponse: "waitForBridgeLateResponse"'
+      return:
+        description: ''
+        type: '"waitForBridgeLateResponse"'

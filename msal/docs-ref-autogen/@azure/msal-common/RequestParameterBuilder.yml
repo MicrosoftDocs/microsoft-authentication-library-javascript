@@ -91,26 +91,35 @@ functions:
         - id: loginHint
           type: string
           description: ''
-  - name: addClaims(Map<string, string>, string, string[])
+  - name: addClaims(Map<string, string>, string, string[], boolean)
     uid: '@azure/msal-common.RequestParameterBuilder.addClaims_1'
     package: '@azure/msal-common'
-    summary: add claims
+    summary: >-
+      Adds claims to request parameters, conditionally excluding
+      clientCapabilities
+
+      when skipBrokerClaims is true and a brokered flow is in effect.
     remarks: ''
     isDeprecated: false
     syntax:
       content: >-
         function addClaims(parameters: Map<string, string>, claims?: string,
-        clientCapabilities?: string[])
+        clientCapabilities?: string[], skipBrokerClaims?: boolean)
       parameters:
         - id: parameters
           type: Map&lt;string, string&gt;
-          description: ''
+          description: The request parameters map
         - id: claims
           type: string
-          description: ''
+          description: The claims string from the request
         - id: clientCapabilities
           type: string[]
-          description: ''
+          description: The client capabilities from configuration
+        - id: skipBrokerClaims
+          type: boolean
+          description: >-
+            When true and BROKER_CLIENT_ID is present, excludes
+            clientCapabilities from claims
   - name: addCliData(Map<string, string>)
     uid: '@azure/msal-common.RequestParameterBuilder.addCliData_1'
     package: '@azure/msal-common'

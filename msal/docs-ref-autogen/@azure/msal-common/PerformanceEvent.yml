@@ -22,6 +22,8 @@ syntax: |
     authority: string
     authorityEndpointSource?: string
     awaitIframeCorrelationId?: string
+    brokerErrorCode?: string
+    brokerErrorName?: string
     cacheAtCount?: number
     cacheIdCount?: number
     cacheLocation?: string
@@ -71,6 +73,8 @@ syntax: |
     isBackground?: boolean
     isMcp?: boolean
     isNativeBroker?: boolean
+    isPlatformAuthorizeRequest?: boolean
+    isPlatformBrokerRequest?: boolean
     isRedirectUriCrossOrigin?: boolean
     kmsi?: boolean
     lateResponseExperimentEnabled?: boolean
@@ -139,6 +143,7 @@ syntax: |
     skipATMigrateCount?: number
     skipITMigrateCount?: number
     skipRTMigrateCount?: number
+    ssoCapable?: boolean
     startOnlineStatus?: boolean | null
     startPageVisibility?: string | null
     startTimeMs: number

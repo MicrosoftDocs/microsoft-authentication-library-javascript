@@ -21,4 +21,5 @@ syntax: |
     onRedirectNavigate?: (url: string) => boolean | void
     postLogoutRedirectUri?: string | null
     redirectUri?: string
+    verifySSO?: boolean
   }
