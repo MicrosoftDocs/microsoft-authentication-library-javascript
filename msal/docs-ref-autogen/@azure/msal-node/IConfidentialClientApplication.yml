@@ -138,7 +138,7 @@ methods:
   - name: clearCache()
     uid: '@azure/msal-node.IConfidentialClientApplication.clearCache'
     package: '@azure/msal-node'
-    summary: Clear the cache
+    summary: Clear the cache except for authority metadata.
     remarks: ''
     isDeprecated: false
     syntax:
