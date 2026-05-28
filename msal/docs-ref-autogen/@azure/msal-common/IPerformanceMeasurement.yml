@@ -9,7 +9,7 @@ isDeprecated: false
 type: interface
 methods:
   - name: endMeasurement()
-    uid: '@azure/msal-common.IPerformanceMeasurement.endMeasurement_1'
+    uid: '@azure/msal-common.IPerformanceMeasurement.endMeasurement'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -17,7 +17,7 @@ methods:
     syntax:
       content: function endMeasurement()
   - name: flushMeasurement()
-    uid: '@azure/msal-common.IPerformanceMeasurement.flushMeasurement_1'
+    uid: '@azure/msal-common.IPerformanceMeasurement.flushMeasurement'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -28,7 +28,7 @@ methods:
         description: ''
         type: null | number
   - name: startMeasurement()
-    uid: '@azure/msal-common.IPerformanceMeasurement.startMeasurement_1'
+    uid: '@azure/msal-common.IPerformanceMeasurement.startMeasurement'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''

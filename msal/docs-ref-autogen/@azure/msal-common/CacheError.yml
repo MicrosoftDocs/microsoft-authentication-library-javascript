@@ -9,7 +9,7 @@ isDeprecated: false
 type: class
 constructors:
   - name: CacheError(string, string)
-    uid: '@azure/msal-common.CacheError.constructor_1'
+    uid: '@azure/msal-common.CacheError.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -120,7 +120,7 @@ inheritedProperties:
     inheritanceDescription: <b>Inherited From</b> Error.stackTraceLimit
 inheritedMethods:
   - name: captureStackTrace(object, Function)
-    uid: '@azure/msal-common.CacheError.captureStackTrace_1'
+    uid: '@azure/msal-common.CacheError.captureStackTrace'
     package: '@azure/msal-common'
     summary: >-
       Creates a `.stack` property on `targetObject`, which when accessed returns
@@ -203,7 +203,7 @@ inheritedMethods:
           description: ''
     inheritanceDescription: <b>Inherited From</b> Error.captureStackTrace
   - name: prepareStackTrace(Error, CallSite[])
-    uid: '@azure/msal-common.CacheError.prepareStackTrace_1'
+    uid: '@azure/msal-common.CacheError.prepareStackTrace'
     package: '@azure/msal-common'
     summary: |-
 

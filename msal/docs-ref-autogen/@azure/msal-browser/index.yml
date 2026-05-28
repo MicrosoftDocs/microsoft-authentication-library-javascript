@@ -118,6 +118,7 @@ interfaces:
   - '@azure/msal-browser.IWindowStorage'
   - '@azure/msal-browser.AuthMethodDetails'
   - '@azure/msal-browser.AuthenticationMethod'
+  - '@azure/msal-browser.CustomAuthRequestInterceptor'
   - '@azure/msal-browser.ICustomAuthPublicClientApplication'
 typeAliases:
   - '@azure/msal-browser.AccountInfo'
@@ -163,6 +164,7 @@ typeAliases:
   - '@azure/msal-browser.AccountRetrievalInputs'
   - '@azure/msal-browser.AuthMethodRegistrationChallengeMethodResultState'
   - '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResultState'
+  - '@azure/msal-browser.CustomAuthAdditionalHeaderFieldsResult'
   - '@azure/msal-browser.CustomAuthConfiguration'
   - '@azure/msal-browser.GetAccessTokenResultState'
   - '@azure/msal-browser.GetAccountResultState'
@@ -446,10 +448,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.9.0"'
+      content: 'version: "5.11.0"'
       return:
         description: ''
-        type: '"<xref uid="5.9.0" />"'
+        type: '"<xref uid="5.11.0" />"'
 functions:
   - name: >-
       createNestablePublicClientApplication(Configuration, string,
@@ -531,7 +533,9 @@ functions:
         - id: request
           type: Partial&lt;<xref uid="@azure/msal-common.BaseAuthRequest" />&gt;
           description: Auth request
-  - name: isPlatformBrokerAvailable(LoggerOptions, IPerformanceClient, string)
+  - name: >-
+      isPlatformBrokerAvailable(boolean, LoggerOptions, IPerformanceClient,
+      string)
     uid: '@azure/msal-browser.isPlatformBrokerAvailable'
     package: '@azure/msal-browser'
     summary: Checks if the platform broker is available in the current environment.
@@ -539,21 +543,24 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function isPlatformBrokerAvailable(loggerOptions?: LoggerOptions,
-        perfClient?: IPerformanceClient, correlationId?: string):
+        function isPlatformBrokerAvailable(domConfig: boolean, loggerOptions?:
+        LoggerOptions, perfClient?: IPerformanceClient, correlationId?: string):
         Promise<boolean>
       parameters:
+        - id: domConfig
+          type: boolean
+          description: Whether to enable platform broker DOM API support (required)
         - id: loggerOptions
           type: <xref uid="@azure/msal-common.LoggerOptions" />
-          description: ''
+          description: Optional logger options
         - id: perfClient
           type: <xref uid="@azure/msal-browser.IPerformanceClient" />
-          description: ''
+          description: Optional performance client
         - id: correlationId
           type: string
-          description: ''
+          description: Optional correlation ID
       return:
-        description: ''
+        description: Promise<boolean> indicating if platform broker is available
         type: Promise&lt;boolean&gt;
   - name: >-
       loadExternalTokens(Configuration, SilentRequest, ExternalTokenResponse,
@@ -603,7 +610,7 @@ functions:
         NavigationClient): Promise<void>
       parameters:
         - id: navigationClient
-          type: NavigationClient
+          type: <xref uid="@azure/msal-browser.NavigationClient" />
           description: Optional navigation client for redirect scenario.
       return:
         description: >-

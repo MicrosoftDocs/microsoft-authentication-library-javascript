@@ -9,7 +9,7 @@ isDeprecated: false
 type: interface
 methods:
   - name: 'addFields({[key: string]: {} | undefined}, string)'
-    uid: '@azure/msal-common.IPerformanceClient.addFields_1'
+    uid: '@azure/msal-common.IPerformanceClient.addFields'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -26,7 +26,7 @@ methods:
           type: string
           description: ''
   - name: addPerformanceCallback(PerformanceCallbackFunction)
-    uid: '@azure/msal-common.IPerformanceClient.addPerformanceCallback_1'
+    uid: '@azure/msal-common.IPerformanceClient.addPerformanceCallback'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -43,7 +43,7 @@ methods:
         description: ''
         type: string
   - name: discardMeasurements(string)
-    uid: '@azure/msal-common.IPerformanceClient.discardMeasurements_1'
+    uid: '@azure/msal-common.IPerformanceClient.discardMeasurements'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -55,7 +55,7 @@ methods:
           type: string
           description: ''
   - name: emitEvents(PerformanceEvent[], string)
-    uid: '@azure/msal-common.IPerformanceClient.emitEvents_1'
+    uid: '@azure/msal-common.IPerformanceClient.emitEvents'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -70,7 +70,7 @@ methods:
           type: string
           description: ''
   - name: endMeasurement(PerformanceEvent)
-    uid: '@azure/msal-common.IPerformanceClient.endMeasurement_1'
+    uid: '@azure/msal-common.IPerformanceClient.endMeasurement'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -87,7 +87,7 @@ methods:
         description: ''
         type: null | <xref uid="@azure/msal-common.PerformanceEvent" />
   - name: generateId()
-    uid: '@azure/msal-common.IPerformanceClient.generateId_1'
+    uid: '@azure/msal-common.IPerformanceClient.generateId'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -98,7 +98,7 @@ methods:
         description: ''
         type: string
   - name: 'incrementFields({[key: string]: number | undefined}, string)'
-    uid: '@azure/msal-common.IPerformanceClient.incrementFields_1'
+    uid: '@azure/msal-common.IPerformanceClient.incrementFields'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -115,7 +115,7 @@ methods:
           type: string
           description: ''
   - name: removePerformanceCallback(string)
-    uid: '@azure/msal-common.IPerformanceClient.removePerformanceCallback_1'
+    uid: '@azure/msal-common.IPerformanceClient.removePerformanceCallback'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -130,7 +130,7 @@ methods:
         description: ''
         type: boolean
   - name: startMeasurement(string, string)
-    uid: '@azure/msal-common.IPerformanceClient.startMeasurement_1'
+    uid: '@azure/msal-common.IPerformanceClient.startMeasurement'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''

@@ -6,7 +6,7 @@ package: '@azure/msal-common'
 summary: ''
 functions:
   - name: addApplicationTelemetry(Map<string, string>, ApplicationTelemetry)
-    uid: '@azure/msal-common.RequestParameterBuilder.addApplicationTelemetry_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addApplicationTelemetry'
     package: '@azure/msal-common'
     summary: Add client telemetry parameters
     remarks: ''
@@ -23,7 +23,7 @@ functions:
           type: <xref uid="@azure/msal-common.ApplicationTelemetry" />
           description: ''
   - name: addAuthorizationCode(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addAuthorizationCode_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addAuthorizationCode'
     package: '@azure/msal-common'
     summary: add the `authorization_code` passed by the user to exchange for a token
     remarks: ''
@@ -40,7 +40,7 @@ functions:
           type: string
           description: ''
   - name: addBrokerParameters(Map<string, string>, string, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addBrokerParameters_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addBrokerParameters'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -60,7 +60,7 @@ functions:
           type: string
           description: ''
   - name: addCcsOid(Map<string, string>, ClientInfo)
-    uid: '@azure/msal-common.RequestParameterBuilder.addCcsOid_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addCcsOid'
     package: '@azure/msal-common'
     summary: Adds the CCS (Cache Credential Service) query parameter for account object
     remarks: ''
@@ -77,7 +77,7 @@ functions:
           type: <xref uid="@azure/msal-common.ClientInfo" />
           description: ''
   - name: addCcsUpn(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addCcsUpn_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addCcsUpn'
     package: '@azure/msal-common'
     summary: Adds the CCS (Cache Credential Service) query parameter for login_hint
     remarks: ''
@@ -92,7 +92,7 @@ functions:
           type: string
           description: ''
   - name: addClaims(Map<string, string>, string, string[], boolean)
-    uid: '@azure/msal-common.RequestParameterBuilder.addClaims_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addClaims'
     package: '@azure/msal-common'
     summary: >-
       Adds claims to request parameters, conditionally excluding
@@ -121,7 +121,7 @@ functions:
             When true and BROKER_CLIENT_ID is present, excludes
             clientCapabilities from claims
   - name: addCliData(Map<string, string>)
-    uid: '@azure/msal-common.RequestParameterBuilder.addCliData_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addCliData'
     package: '@azure/msal-common'
     summary: add clidata=1 to request to indicate client data support
     remarks: ''
@@ -133,7 +133,7 @@ functions:
           type: Map&lt;string, string&gt;
           description: ''
   - name: addClientAssertion(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addClientAssertion_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientAssertion'
     package: '@azure/msal-common'
     summary: add clientAssertion for confidential client flows
     remarks: ''
@@ -150,7 +150,7 @@ functions:
           type: string
           description: ''
   - name: addClientAssertionType(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addClientAssertionType_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientAssertionType'
     package: '@azure/msal-common'
     summary: add clientAssertionType for confidential client flows
     remarks: ''
@@ -167,7 +167,7 @@ functions:
           type: string
           description: ''
   - name: addClientCapabilitiesToClaims(string, string[])
-    uid: '@azure/msal-common.RequestParameterBuilder.addClientCapabilitiesToClaims_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientCapabilitiesToClaims'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -187,7 +187,7 @@ functions:
         description: ''
         type: string
   - name: addClientId(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addClientId_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientId'
     package: '@azure/msal-common'
     summary: add clientId
     remarks: ''
@@ -202,7 +202,7 @@ functions:
           type: string
           description: ''
   - name: addClientInfo(Map<string, string>)
-    uid: '@azure/msal-common.RequestParameterBuilder.addClientInfo_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientInfo'
     package: '@azure/msal-common'
     summary: add client info
     remarks: ''
@@ -214,7 +214,7 @@ functions:
           type: Map&lt;string, string&gt;
           description: ''
   - name: addClientSecret(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addClientSecret_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addClientSecret'
     package: '@azure/msal-common'
     summary: add client_secret
     remarks: ''
@@ -231,7 +231,7 @@ functions:
           type: string
           description: ''
   - name: addCodeChallengeParams(Map<string, string>, string, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addCodeChallengeParams_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addCodeChallengeParams'
     package: '@azure/msal-common'
     summary: |-
       add code_challenge and code_challenge_method
@@ -253,7 +253,7 @@ functions:
           type: string
           description: ''
   - name: addCodeVerifier(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addCodeVerifier_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addCodeVerifier'
     package: '@azure/msal-common'
     summary: add the `code_verifier` passed by the user to exchange for a token
     remarks: ''
@@ -270,7 +270,7 @@ functions:
           type: string
           description: ''
   - name: addCorrelationId(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addCorrelationId_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addCorrelationId'
     package: '@azure/msal-common'
     summary: add correlationId
     remarks: ''
@@ -287,7 +287,7 @@ functions:
           type: string
           description: ''
   - name: addDeviceCode(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addDeviceCode_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addDeviceCode'
     package: '@azure/msal-common'
     summary: add the `authorization_code` passed by the user to exchange for a token
     remarks: ''
@@ -302,7 +302,7 @@ functions:
           type: string
           description: ''
   - name: addDomainHint(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addDomainHint_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addDomainHint'
     package: '@azure/msal-common'
     summary: add domain_hint
     remarks: ''
@@ -319,7 +319,7 @@ functions:
           type: string
           description: ''
   - name: addEARParameters(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addEARParameters_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addEARParameters'
     package: '@azure/msal-common'
     summary: Add EAR (Encrypted Authorize Response) request parameters
     remarks: ''
@@ -334,7 +334,7 @@ functions:
           type: string
           description: ''
   - name: addExtraParameters(Map<string, string>, StringDict)
-    uid: '@azure/msal-common.RequestParameterBuilder.addExtraParameters_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addExtraParameters'
     package: '@azure/msal-common'
     summary: Add extraParameters
     remarks: ''
@@ -351,7 +351,7 @@ functions:
           type: <xref uid="@azure/msal-common.StringDict" />
           description: String dictionary containing extra parameters to be added.
   - name: addGrantType(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addGrantType_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addGrantType'
     package: '@azure/msal-common'
     summary: add grant type
     remarks: ''
@@ -368,7 +368,7 @@ functions:
           type: string
           description: ''
   - name: addIdTokenHint(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addIdTokenHint_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addIdTokenHint'
     package: '@azure/msal-common'
     summary: add id_token_hint to logout request
     remarks: ''
@@ -385,7 +385,7 @@ functions:
           type: string
           description: ''
   - name: addInstanceAware(Map<string, string>)
-    uid: '@azure/msal-common.RequestParameterBuilder.addInstanceAware_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addInstanceAware'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -397,7 +397,7 @@ functions:
           type: Map&lt;string, string&gt;
           description: ''
   - name: addLibraryInfo(Map<string, string>, LibraryInfo)
-    uid: '@azure/msal-common.RequestParameterBuilder.addLibraryInfo_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addLibraryInfo'
     package: '@azure/msal-common'
     summary: add library info query params
     remarks: ''
@@ -414,7 +414,7 @@ functions:
           type: LibraryInfo
           description: ''
   - name: addLoginHint(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addLoginHint_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addLoginHint'
     package: '@azure/msal-common'
     summary: add login_hint
     remarks: ''
@@ -431,7 +431,7 @@ functions:
           type: string
           description: ''
   - name: addLogoutHint(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addLogoutHint_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addLogoutHint'
     package: '@azure/msal-common'
     summary: >-
       Adds logout_hint parameter for "silent" logout which prevent server
@@ -450,7 +450,7 @@ functions:
           type: string
           description: ''
   - name: addNativeBroker(Map<string, string>)
-    uid: '@azure/msal-common.RequestParameterBuilder.addNativeBroker_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addNativeBroker'
     package: '@azure/msal-common'
     summary: Add flag to indicate STS should attempt to use WAM if available
     remarks: ''
@@ -462,7 +462,7 @@ functions:
           type: Map&lt;string, string&gt;
           description: ''
   - name: addNonce(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addNonce_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addNonce'
     package: '@azure/msal-common'
     summary: add nonce
     remarks: ''
@@ -477,7 +477,7 @@ functions:
           type: string
           description: ''
   - name: addOboAssertion(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addOboAssertion_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addOboAssertion'
     package: '@azure/msal-common'
     summary: add OBO assertion for confidential client flows
     remarks: ''
@@ -494,7 +494,7 @@ functions:
           type: string
           description: ''
   - name: addPassword(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addPassword_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addPassword'
     package: '@azure/msal-common'
     summary: adds `password` for Password Grant flow
     remarks: ''
@@ -509,7 +509,7 @@ functions:
           type: string
           description: ''
   - name: addPopToken(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addPopToken_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addPopToken'
     package: '@azure/msal-common'
     summary: add pop_jwk to query params
     remarks: ''
@@ -524,7 +524,7 @@ functions:
           type: string
           description: ''
   - name: addPostLogoutRedirectUri(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addPostLogoutRedirectUri_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addPostLogoutRedirectUri'
     package: '@azure/msal-common'
     summary: add post logout redirectUri
     remarks: ''
@@ -541,7 +541,7 @@ functions:
           type: string
           description: ''
   - name: addPrompt(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addPrompt_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addPrompt'
     package: '@azure/msal-common'
     summary: add prompt
     remarks: ''
@@ -556,7 +556,7 @@ functions:
           type: string
           description: ''
   - name: addRedirectUri(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addRedirectUri_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addRedirectUri'
     package: '@azure/msal-common'
     summary: add redirect_uri
     remarks: ''
@@ -573,7 +573,7 @@ functions:
           type: string
           description: ''
   - name: addRefreshToken(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addRefreshToken_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addRefreshToken'
     package: '@azure/msal-common'
     summary: add the `refreshToken` passed by the user
     remarks: ''
@@ -590,7 +590,7 @@ functions:
           type: string
           description: ''
   - name: addRequestTokenUse(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addRequestTokenUse_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addRequestTokenUse'
     package: '@azure/msal-common'
     summary: add grant type
     remarks: ''
@@ -607,7 +607,7 @@ functions:
           type: string
           description: ''
   - name: addResource(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addResource_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addResource'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -622,7 +622,7 @@ functions:
           type: string
           description: ''
   - name: addResponseMode(Map<string, string>, ResponseMode)
-    uid: '@azure/msal-common.RequestParameterBuilder.addResponseMode_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addResponseMode'
     package: '@azure/msal-common'
     summary: add response_mode. defaults to query.
     remarks: ''
@@ -639,7 +639,7 @@ functions:
           type: <xref uid="@azure/msal-common.Constants.ResponseMode" />
           description: ''
   - name: addResponseType(Map<string, string>, OAuthResponseType)
-    uid: '@azure/msal-common.RequestParameterBuilder.addResponseType_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addResponseType'
     package: '@azure/msal-common'
     summary: Add the given response_type
     remarks: ''
@@ -656,7 +656,7 @@ functions:
           type: <xref uid="@azure/msal-common.Constants.OAuthResponseType" />
           description: ''
   - name: addScopes(Map<string, string>, string[], boolean, string[])
-    uid: '@azure/msal-common.RequestParameterBuilder.addScopes_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addScopes'
     package: '@azure/msal-common'
     summary: >-
       add scopes. set addOidcScopes to false to prevent default scopes in
@@ -681,7 +681,7 @@ functions:
           type: string[]
           description: ''
   - name: addServerTelemetry(Map<string, string>, ServerTelemetryManager)
-    uid: '@azure/msal-common.RequestParameterBuilder.addServerTelemetry_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addServerTelemetry'
     package: '@azure/msal-common'
     summary: add server telemetry fields
     remarks: ''
@@ -698,7 +698,7 @@ functions:
           type: ServerTelemetryManager
           description: ''
   - name: addSid(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addSid_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addSid'
     package: '@azure/msal-common'
     summary: add sid
     remarks: ''
@@ -713,7 +713,7 @@ functions:
           type: string
           description: ''
   - name: addSshJwk(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addSshJwk_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addSshJwk'
     package: '@azure/msal-common'
     summary: add SSH JWK and key ID to query params
     remarks: ''
@@ -730,7 +730,7 @@ functions:
           type: string
           description: ''
   - name: addState(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addState_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addState'
     package: '@azure/msal-common'
     summary: add state
     remarks: ''
@@ -745,7 +745,7 @@ functions:
           type: string
           description: ''
   - name: addThrottling(Map<string, string>)
-    uid: '@azure/msal-common.RequestParameterBuilder.addThrottling_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addThrottling'
     package: '@azure/msal-common'
     summary: Adds parameter that indicates to the server that throttling is supported
     remarks: ''
@@ -757,7 +757,7 @@ functions:
           type: Map&lt;string, string&gt;
           description: ''
   - name: addUsername(Map<string, string>, string)
-    uid: '@azure/msal-common.RequestParameterBuilder.addUsername_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.addUsername'
     package: '@azure/msal-common'
     summary: adds `username` for Password Grant flow
     remarks: ''
@@ -772,7 +772,7 @@ functions:
           type: string
           description: ''
   - name: instrumentBrokerParams(Map<string, string>, string, IPerformanceClient)
-    uid: '@azure/msal-common.RequestParameterBuilder.instrumentBrokerParams_1'
+    uid: '@azure/msal-common.RequestParameterBuilder.instrumentBrokerParams'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''

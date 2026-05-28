@@ -127,6 +127,20 @@ variables:
       return:
         description: ''
         type: '"invalid_code_challenge_method"'
+  - name: invalidPlatformBrokerConfiguration
+    uid: >-
+      @azure/msal-node.ClientConfigurationErrorCodes.invalidPlatformBrokerConfiguration
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        invalidPlatformBrokerConfiguration:
+        "invalid_platform_broker_configuration"
+      return:
+        description: ''
+        type: '"invalid_platform_broker_configuration"'
   - name: invalidRequestMethodForEAR
     uid: '@azure/msal-node.ClientConfigurationErrorCodes.invalidRequestMethodForEAR'
     package: '@azure/msal-node'
@@ -138,6 +152,17 @@ variables:
       return:
         description: ''
         type: '"invalid_request_method_for_EAR"'
+  - name: issuerValidationFailed
+    uid: '@azure/msal-node.ClientConfigurationErrorCodes.issuerValidationFailed'
+    package: '@azure/msal-node'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'issuerValidationFailed: "issuer_validation_failed"'
+      return:
+        description: ''
+        type: '"issuer_validation_failed"'
   - name: logoutRequestEmpty
     uid: '@azure/msal-node.ClientConfigurationErrorCodes.logoutRequestEmpty'
     package: '@azure/msal-node'

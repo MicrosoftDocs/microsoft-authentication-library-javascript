@@ -10,7 +10,7 @@ functions:
       environment?: string, homeAccountId: string, idTokenClaims?: TokenClaims,
       msGraphHost?: string, nativeAccountId?: string, tenantProfiles?:
       TenantProfile[] }, Authority, (input: string) => string)
-    uid: '@azure/msal-common.AccountEntityUtils.createAccountEntity_1'
+    uid: '@azure/msal-common.AccountEntityUtils.createAccountEntity'
     package: '@azure/msal-common'
     summary: >-
       Build Account cache from IdToken, clientInfo and authority/policy.
@@ -42,7 +42,7 @@ functions:
         description: ''
         type: AccountEntity
   - name: createAccountEntityFromAccountInfo(AccountInfo, string, string)
-    uid: '@azure/msal-common.AccountEntityUtils.createAccountEntityFromAccountInfo_1'
+    uid: '@azure/msal-common.AccountEntityUtils.createAccountEntityFromAccountInfo'
     package: '@azure/msal-common'
     summary: Creates an AccountEntity object from AccountInfo
     remarks: ''
@@ -65,7 +65,7 @@ functions:
         description: ''
         type: AccountEntity
   - name: generateAccountId(AccountEntity)
-    uid: '@azure/msal-common.AccountEntityUtils.generateAccountId_1'
+    uid: '@azure/msal-common.AccountEntityUtils.generateAccountId'
     package: '@azure/msal-common'
     summary: >-
       Generate Account Id key component as per the schema:
@@ -84,7 +84,7 @@ functions:
   - name: >-
       generateHomeAccountId(string, AuthorityType, Logger, ICrypto, string,
       TokenClaims)
-    uid: '@azure/msal-common.AccountEntityUtils.generateHomeAccountId_1'
+    uid: '@azure/msal-common.AccountEntityUtils.generateHomeAccountId'
     package: '@azure/msal-common'
     summary: Generate HomeAccountId from server response
     remarks: ''
@@ -117,7 +117,7 @@ functions:
         description: ''
         type: string
   - name: getAccountInfo(AccountEntity)
-    uid: '@azure/msal-common.AccountEntityUtils.getAccountInfo_1'
+    uid: '@azure/msal-common.AccountEntityUtils.getAccountInfo'
     package: '@azure/msal-common'
     summary: Returns the AccountInfo interface for this account.
     remarks: ''
@@ -132,7 +132,7 @@ functions:
         description: ''
         type: <xref uid="@azure/msal-common.AccountInfo" />
   - name: isAccountEntity(object)
-    uid: '@azure/msal-common.AccountEntityUtils.isAccountEntity_1'
+    uid: '@azure/msal-common.AccountEntityUtils.isAccountEntity'
     package: '@azure/msal-common'
     summary: 'Validates an entity: checks for all expected params'
     remarks: ''
@@ -147,7 +147,7 @@ functions:
         description: ''
         type: entity
   - name: isSingleTenant(AccountEntity)
-    uid: '@azure/msal-common.AccountEntityUtils.isSingleTenant_1'
+    uid: '@azure/msal-common.AccountEntityUtils.isSingleTenant'
     package: '@azure/msal-common'
     summary: >-
       Returns true if the account entity is in single tenant format (outdated),

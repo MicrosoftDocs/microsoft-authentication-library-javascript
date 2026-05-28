@@ -11,7 +11,7 @@ constructors:
   - name: >-
       PerformanceClient(string, string, Logger, string, string,
       ApplicationTelemetry, Set<string>)
-    uid: '@azure/msal-common.PerformanceClient.constructor_1'
+    uid: '@azure/msal-common.PerformanceClient.constructor'
     package: '@azure/msal-common'
     summary: |-
       Creates an instance of PerformanceClient,
@@ -47,7 +47,7 @@ constructors:
           description: integer fields to be truncated
 methods:
   - name: 'addFields({[key: string]: {} | undefined}, string)'
-    uid: '@azure/msal-common.PerformanceClient.addFields_1'
+    uid: '@azure/msal-common.PerformanceClient.addFields'
     package: '@azure/msal-common'
     summary: Saves extra information to be emitted when the measurements are flushed
     remarks: ''
@@ -64,7 +64,7 @@ methods:
           type: string
           description: ''
   - name: addPerformanceCallback(PerformanceCallbackFunction)
-    uid: '@azure/msal-common.PerformanceClient.addPerformanceCallback_1'
+    uid: '@azure/msal-common.PerformanceClient.addPerformanceCallback'
     package: '@azure/msal-common'
     summary: Registers a callback function to receive performance events.
     remarks: ''
@@ -81,7 +81,7 @@ methods:
         description: ''
         type: string
   - name: discardMeasurements(string)
-    uid: '@azure/msal-common.PerformanceClient.discardMeasurements_1'
+    uid: '@azure/msal-common.PerformanceClient.discardMeasurements'
     package: '@azure/msal-common'
     summary: Removes measurements and aux data for a given correlation id.
     remarks: ''
@@ -93,7 +93,7 @@ methods:
           type: string
           description: ''
   - name: emitEvents(PerformanceEvent[], string)
-    uid: '@azure/msal-common.PerformanceClient.emitEvents_1'
+    uid: '@azure/msal-common.PerformanceClient.emitEvents'
     package: '@azure/msal-common'
     summary: Emits events to all registered callbacks.
     remarks: ''
@@ -108,7 +108,7 @@ methods:
           type: string
           description: ''
   - name: endMeasurement(PerformanceEvent, unknown, AccountInfo)
-    uid: '@azure/msal-common.PerformanceClient.endMeasurement_1'
+    uid: '@azure/msal-common.PerformanceClient.endMeasurement'
     package: '@azure/msal-common'
     summary: >-
       Stops measuring the performance for an operation. Should only be called
@@ -140,7 +140,7 @@ methods:
         description: ''
         type: null | <xref uid="@azure/msal-common.PerformanceEvent" />
   - name: generateId()
-    uid: '@azure/msal-common.PerformanceClient.generateId_1'
+    uid: '@azure/msal-common.PerformanceClient.generateId'
     package: '@azure/msal-common'
     summary: Generates and returns a unique id, typically a guid.
     remarks: ''
@@ -151,7 +151,7 @@ methods:
         description: ''
         type: string
   - name: 'incrementFields({[key: string]: number | undefined}, string)'
-    uid: '@azure/msal-common.PerformanceClient.incrementFields_1'
+    uid: '@azure/msal-common.PerformanceClient.incrementFields'
     package: '@azure/msal-common'
     summary: Increment counters to be emitted when the measurements are flushed
     remarks: ''
@@ -168,7 +168,7 @@ methods:
           type: string
           description: '{string} correlation identifier'
   - name: removePerformanceCallback(string)
-    uid: '@azure/msal-common.PerformanceClient.removePerformanceCallback_1'
+    uid: '@azure/msal-common.PerformanceClient.removePerformanceCallback'
     package: '@azure/msal-common'
     summary: Removes a callback registered with addPerformanceCallback.
     remarks: ''
@@ -183,7 +183,7 @@ methods:
         description: ''
         type: boolean
   - name: startMeasurement(string, string)
-    uid: '@azure/msal-common.PerformanceClient.startMeasurement_1'
+    uid: '@azure/msal-common.PerformanceClient.startMeasurement'
     package: '@azure/msal-common'
     summary: >-
       Starts measuring performance for a given operation. Returns a function

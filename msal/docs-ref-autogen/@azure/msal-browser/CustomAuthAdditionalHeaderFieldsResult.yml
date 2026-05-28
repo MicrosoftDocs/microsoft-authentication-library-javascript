@@ -1,0 +1,27 @@
+### YamlMime:TSTypeAlias
+name: CustomAuthAdditionalHeaderFieldsResult
+uid: '@azure/msal-browser.CustomAuthAdditionalHeaderFieldsResult'
+package: '@azure/msal-browser'
+summary: >-
+  Result type returned by
+  [addAdditionalHeaderFields](xref:@azure/msal-browser.CustomAuthRequestInterceptor.addAdditionalHeaderFields).
+
+
+  Implementations may return either a synchronous value or a `Promise` resolving
+  to one of
+
+  the following:
+
+  - A `Record<string, string>` of additional headers to add to the outgoing
+  request.
+
+  - `null` (or `undefined`) when no additional headers should be added for the
+  request.
+fullName: CustomAuthAdditionalHeaderFieldsResult
+remarks: ''
+isDeprecated: false
+syntax: |
+  type CustomAuthAdditionalHeaderFieldsResult =
+    | Record<string, string>
+    | null
+    | undefined

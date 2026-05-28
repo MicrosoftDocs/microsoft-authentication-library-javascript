@@ -18,7 +18,7 @@ constructors:
       content: 'new GetAccessTokenResult(resultData?: AuthenticationResult)'
       parameters:
         - id: resultData
-          type: AuthenticationResult
+          type: <xref uid="@azure/msal-browser.AuthenticationResult" />
           description: The result data of the access token.
 inheritedProperties:
   - name: data
@@ -32,7 +32,7 @@ inheritedProperties:
       content: 'data?: AuthenticationResult'
       return:
         description: ''
-        type: AuthenticationResult
+        type: <xref uid="@azure/msal-browser.AuthenticationResult" />
     inheritanceDescription: <b>Inherited From</b> AuthFlowResultBase.data
   - name: error
     uid: '@azure/msal-browser.GetAccessTokenResult.error'
@@ -101,5 +101,5 @@ methods:
 extends: >-
   AuthFlowResultBase&lt;<xref
   uid="@azure/msal-browser.GetAccessTokenResultState" />, <xref
-  uid="@azure/msal-browser.GetCurrentAccountAccessTokenError" />,
-  AuthenticationResult&gt;
+  uid="@azure/msal-browser.GetCurrentAccountAccessTokenError" />, <xref
+  uid="@azure/msal-browser.AuthenticationResult" />&gt;

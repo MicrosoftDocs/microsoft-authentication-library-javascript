@@ -129,6 +129,20 @@ variables:
       return:
         description: ''
         type: '"invalid_code_challenge_method"'
+  - name: invalidPlatformBrokerConfiguration
+    uid: >-
+      @azure/msal-common.ClientConfigurationErrorCodes.invalidPlatformBrokerConfiguration
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        invalidPlatformBrokerConfiguration:
+        "invalid_platform_broker_configuration"
+      return:
+        description: ''
+        type: '"invalid_platform_broker_configuration"'
   - name: invalidRequestMethodForEAR
     uid: >-
       @azure/msal-common.ClientConfigurationErrorCodes.invalidRequestMethodForEAR
@@ -141,6 +155,17 @@ variables:
       return:
         description: ''
         type: '"invalid_request_method_for_EAR"'
+  - name: issuerValidationFailed
+    uid: '@azure/msal-common.ClientConfigurationErrorCodes.issuerValidationFailed'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'issuerValidationFailed: "issuer_validation_failed"'
+      return:
+        description: ''
+        type: '"issuer_validation_failed"'
   - name: logoutRequestEmpty
     uid: '@azure/msal-common.ClientConfigurationErrorCodes.logoutRequestEmpty'
     package: '@azure/msal-common'

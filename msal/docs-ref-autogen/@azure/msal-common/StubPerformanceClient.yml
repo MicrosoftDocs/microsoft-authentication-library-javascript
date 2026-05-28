@@ -9,7 +9,7 @@ isDeprecated: false
 type: class
 methods:
   - name: addFields()
-    uid: '@azure/msal-common.StubPerformanceClient.addFields_1'
+    uid: '@azure/msal-common.StubPerformanceClient.addFields'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -17,7 +17,7 @@ methods:
     syntax:
       content: function addFields()
   - name: addPerformanceCallback()
-    uid: '@azure/msal-common.StubPerformanceClient.addPerformanceCallback_1'
+    uid: '@azure/msal-common.StubPerformanceClient.addPerformanceCallback'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -28,7 +28,7 @@ methods:
         description: ''
         type: string
   - name: cacheEventByCorrelationId()
-    uid: '@azure/msal-common.StubPerformanceClient.cacheEventByCorrelationId_1'
+    uid: '@azure/msal-common.StubPerformanceClient.cacheEventByCorrelationId'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -36,7 +36,7 @@ methods:
     syntax:
       content: function cacheEventByCorrelationId()
   - name: discardMeasurements()
-    uid: '@azure/msal-common.StubPerformanceClient.discardMeasurements_1'
+    uid: '@azure/msal-common.StubPerformanceClient.discardMeasurements'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -44,7 +44,7 @@ methods:
     syntax:
       content: function discardMeasurements()
   - name: emitEvents()
-    uid: '@azure/msal-common.StubPerformanceClient.emitEvents_1'
+    uid: '@azure/msal-common.StubPerformanceClient.emitEvents'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -52,7 +52,7 @@ methods:
     syntax:
       content: function emitEvents()
   - name: endMeasurement()
-    uid: '@azure/msal-common.StubPerformanceClient.endMeasurement_1'
+    uid: '@azure/msal-common.StubPerformanceClient.endMeasurement'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -63,7 +63,7 @@ methods:
         description: ''
         type: null | <xref uid="@azure/msal-common.PerformanceEvent" />
   - name: generateId()
-    uid: '@azure/msal-common.StubPerformanceClient.generateId_1'
+    uid: '@azure/msal-common.StubPerformanceClient.generateId'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -74,7 +74,7 @@ methods:
         description: ''
         type: string
   - name: incrementFields()
-    uid: '@azure/msal-common.StubPerformanceClient.incrementFields_1'
+    uid: '@azure/msal-common.StubPerformanceClient.incrementFields'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -82,7 +82,7 @@ methods:
     syntax:
       content: function incrementFields()
   - name: removePerformanceCallback()
-    uid: '@azure/msal-common.StubPerformanceClient.removePerformanceCallback_1'
+    uid: '@azure/msal-common.StubPerformanceClient.removePerformanceCallback'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
@@ -93,7 +93,7 @@ methods:
         description: ''
         type: boolean
   - name: startMeasurement(string, string)
-    uid: '@azure/msal-common.StubPerformanceClient.startMeasurement_1'
+    uid: '@azure/msal-common.StubPerformanceClient.startMeasurement'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''

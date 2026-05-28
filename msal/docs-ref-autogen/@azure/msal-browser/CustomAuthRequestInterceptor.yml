@@ -1,0 +1,72 @@
+### YamlMime:TSType
+name: CustomAuthRequestInterceptor
+uid: '@azure/msal-browser.CustomAuthRequestInterceptor'
+package: '@azure/msal-browser'
+summary: >-
+  Interface for intercepting custom auth network requests in order to attach
+  additional
+
+  headers to outgoing requests.
+
+
+  Implementations are invoked by MSAL before each backend request used by custom
+  auth
+
+  (sign-in, sign-up, reset-password, and register endpoints). Use this hook to
+  integrate
+
+  with third-party fraud and bot-detection SDKs that require custom `x-*`
+  headers.
+
+
+  MSAL applies the following rules when evaluating the headers you provide:
+
+  - Headers must start with `x-` (case-insensitive). Headers that don't start
+  with `x-`
+    are ignored.
+  - Headers that start with any of the following reserved prefixes are ignored:
+    `x-client-`, `x-ms-`, `x-broker-`, `x-app-`.
+  - Headers that pass both rules are added to the network request. If a header
+  you
+    provide has the same name as one of MSAL's own internal headers, your value takes
+    precedence.
+fullName: CustomAuthRequestInterceptor
+remarks: ''
+isDeprecated: false
+type: interface
+methods:
+  - name: addAdditionalHeaderFields(URL)
+    uid: '@azure/msal-browser.CustomAuthRequestInterceptor.addAdditionalHeaderFields'
+    package: '@azure/msal-browser'
+    summary: >-
+      Returns additional headers to add to a custom-auth network request.
+
+
+      Scope your headers to specific endpoints by inspecting `requestUrl`.
+      Sending
+
+      headers to unrelated endpoints can degrade signal quality and increase
+      false
+
+      positives for fraud/bot-detection vendors.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addAdditionalHeaderFields(requestUrl: URL):
+        CustomAuthAdditionalHeaderFieldsResult |
+        Promise<CustomAuthAdditionalHeaderFieldsResult>
+      parameters:
+        - id: requestUrl
+          type: URL
+          description: The full URL of the outgoing custom-auth request.
+      return:
+        description: |-
+          A record of headers to add (or `null`/`undefined` if no extra headers
+                   are needed for the request). May be returned synchronously or as a
+                   `Promise`.
+        type: >-
+          <xref uid="@azure/msal-browser.CustomAuthAdditionalHeaderFieldsResult"
+          /> | Promise&lt;<xref
+          uid="@azure/msal-browser.CustomAuthAdditionalHeaderFieldsResult"
+          />&gt;

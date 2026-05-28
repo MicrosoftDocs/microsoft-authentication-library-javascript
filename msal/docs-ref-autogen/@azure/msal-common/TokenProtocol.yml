@@ -8,7 +8,7 @@ functions:
   - name: >-
       createTokenQueryParameters(BaseAuthRequest, string, string,
       IPerformanceClient)
-    uid: '@azure/msal-common.TokenProtocol.createTokenQueryParameters_1'
+    uid: '@azure/msal-common.TokenProtocol.createTokenQueryParameters'
     package: '@azure/msal-common'
     summary: Creates query string for the /token request
     remarks: ''
@@ -35,7 +35,7 @@ functions:
         description: ''
         type: string
   - name: createTokenRequestHeaders(Logger, boolean, CcsCredential)
-    uid: '@azure/msal-common.TokenProtocol.createTokenRequestHeaders_1'
+    uid: '@azure/msal-common.TokenProtocol.createTokenRequestHeaders'
     package: '@azure/msal-common'
     summary: Creates default headers for requests to token endpoint
     remarks: ''
@@ -61,7 +61,7 @@ functions:
       executePostToTokenEndpoint(string, string, Record<string, string>,
       RequestThumbprint, string, CacheManager, INetworkModule, Logger,
       IPerformanceClient, null | ServerTelemetryManager)
-    uid: '@azure/msal-common.TokenProtocol.executePostToTokenEndpoint_1'
+    uid: '@azure/msal-common.TokenProtocol.executePostToTokenEndpoint'
     package: '@azure/msal-common'
     summary: Http post to token endpoint
     remarks: ''
@@ -113,7 +113,7 @@ functions:
   - name: >-
       sendPostRequest<T>(RequestThumbprint, string, NetworkRequestOptions,
       string, CacheManager, INetworkModule, Logger, IPerformanceClient)
-    uid: '@azure/msal-common.TokenProtocol.sendPostRequest_1'
+    uid: '@azure/msal-common.TokenProtocol.sendPostRequest'
     package: '@azure/msal-common'
     summary: Wraps sendPostRequestAsync with necessary preflight and postflight logic
     remarks: ''

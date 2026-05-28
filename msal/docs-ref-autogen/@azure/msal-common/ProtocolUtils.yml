@@ -6,7 +6,7 @@ package: '@azure/msal-common'
 summary: ''
 functions:
   - name: generateLibraryState(ICrypto, Record<string, string>)
-    uid: '@azure/msal-common.ProtocolUtils.generateLibraryState_1'
+    uid: '@azure/msal-common.ProtocolUtils.generateLibraryState'
     package: '@azure/msal-common'
     summary: Generates the state value used by the common library.
     remarks: ''
@@ -26,7 +26,7 @@ functions:
         description: ''
         type: string
   - name: 'parseRequestState((input: string) => string, string)'
-    uid: '@azure/msal-common.ProtocolUtils.parseRequestState_1'
+    uid: '@azure/msal-common.ProtocolUtils.parseRequestState'
     package: '@azure/msal-common'
     summary: >-
       Parses the state into the RequestStateObject, which contains the
@@ -48,7 +48,7 @@ functions:
         description: ''
         type: <xref uid="@azure/msal-common.RequestStateObject" />
   - name: setRequestState(ICrypto, string, Record<string, string>)
-    uid: '@azure/msal-common.ProtocolUtils.setRequestState_1'
+    uid: '@azure/msal-common.ProtocolUtils.setRequestState'
     package: '@azure/msal-common'
     summary: Appends user state with random guid, or returns random guid.
     remarks: ''

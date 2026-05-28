@@ -20,12 +20,14 @@ inheritedMethods:
         Promise<AuthenticationResult>
       parameters:
         - id: request
-          type: AuthorizationCodeRequest
+          type: <xref uid="@azure/msal-browser.AuthorizationCodeRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.acquireTokenByCode
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.acquireTokenByCode](xref:@azure/msal-browser.IPublicClientApplication.acquireTokenByCode)
   - name: acquireTokenPopup(PopupRequest)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.acquireTokenPopup'
     package: '@azure/msal-browser'
@@ -38,12 +40,14 @@ inheritedMethods:
         Promise<AuthenticationResult>
       parameters:
         - id: request
-          type: PopupRequest
+          type: <xref uid="@azure/msal-browser.PopupRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.acquireTokenPopup
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.acquireTokenPopup](xref:@azure/msal-browser.IPublicClientApplication.acquireTokenPopup)
   - name: acquireTokenRedirect(RedirectRequest)
     uid: >-
       @azure/msal-browser.ICustomAuthPublicClientApplication.acquireTokenRedirect
@@ -55,12 +59,14 @@ inheritedMethods:
       content: 'function acquireTokenRedirect(request: RedirectRequest): Promise<void>'
       parameters:
         - id: request
-          type: RedirectRequest
+          type: <xref uid="@azure/msal-browser.RedirectRequest" />
           description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.acquireTokenRedirect
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.acquireTokenRedirect](xref:@azure/msal-browser.IPublicClientApplication.acquireTokenRedirect)
   - name: acquireTokenSilent(SilentRequest)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.acquireTokenSilent'
     package: '@azure/msal-browser'
@@ -73,12 +79,14 @@ inheritedMethods:
         Promise<AuthenticationResult>
       parameters:
         - id: silentRequest
-          type: SilentRequest
+          type: <xref uid="@azure/msal-browser.SilentRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.acquireTokenSilent
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.acquireTokenSilent](xref:@azure/msal-browser.IPublicClientApplication.acquireTokenSilent)
   - name: addEventCallback(EventCallbackFunction, EventType[])
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.addEventCallback'
     package: '@azure/msal-browser'
@@ -91,15 +99,17 @@ inheritedMethods:
         EventType[]): null | string
       parameters:
         - id: callback
-          type: EventCallbackFunction
+          type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
           description: ''
         - id: eventTypes
-          type: EventType[]
+          type: <xref uid="@azure/msal-browser.EventType" />[]
           description: ''
       return:
         description: ''
         type: null | string
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.addEventCallback
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.addEventCallback](xref:@azure/msal-browser.IPublicClientApplication.addEventCallback)
   - name: addPerformanceCallback(PerformanceCallbackFunction)
     uid: >-
       @azure/msal-browser.ICustomAuthPublicClientApplication.addPerformanceCallback
@@ -118,7 +128,9 @@ inheritedMethods:
       return:
         description: ''
         type: string
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.addPerformanceCallback
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.addPerformanceCallback](xref:@azure/msal-browser.IPublicClientApplication.addPerformanceCallback)
   - name: clearCache(ClearCacheRequest)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.clearCache'
     package: '@azure/msal-browser'
@@ -129,12 +141,14 @@ inheritedMethods:
       content: 'function clearCache(logoutRequest?: ClearCacheRequest): Promise<void>'
       parameters:
         - id: logoutRequest
-          type: ClearCacheRequest
+          type: <xref uid="@azure/msal-browser.ClearCacheRequest" />
           description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.clearCache
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.clearCache](xref:@azure/msal-browser.IPublicClientApplication.clearCache)
   - name: getAccount(AccountFilter)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getAccount'
     package: '@azure/msal-browser'
@@ -150,7 +164,9 @@ inheritedMethods:
       return:
         description: ''
         type: null | <xref uid="@azure/msal-browser.AccountInfo" />
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getAccount
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.getAccount](xref:@azure/msal-browser.IPublicClientApplication.getAccount)
   - name: getActiveAccount()
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getActiveAccount'
     package: '@azure/msal-browser'
@@ -162,7 +178,9 @@ inheritedMethods:
       return:
         description: ''
         type: null | <xref uid="@azure/msal-browser.AccountInfo" />
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getActiveAccount
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.getActiveAccount](xref:@azure/msal-browser.IPublicClientApplication.getActiveAccount)
   - name: getAllAccounts(AccountFilter)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getAllAccounts'
     package: '@azure/msal-browser'
@@ -178,7 +196,9 @@ inheritedMethods:
       return:
         description: ''
         type: <xref uid="@azure/msal-browser.AccountInfo" />[]
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getAllAccounts
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.getAllAccounts](xref:@azure/msal-browser.IPublicClientApplication.getAllAccounts)
   - name: getLogger()
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getLogger'
     package: '@azure/msal-browser'
@@ -190,7 +210,9 @@ inheritedMethods:
       return:
         description: ''
         type: <xref uid="@azure/msal-browser.Logger" />
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.getLogger
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.getLogger](xref:@azure/msal-browser.IPublicClientApplication.getLogger)
   - name: handleRedirectPromise(HandleRedirectPromiseOptions)
     uid: >-
       @azure/msal-browser.ICustomAuthPublicClientApplication.handleRedirectPromise
@@ -204,12 +226,16 @@ inheritedMethods:
         Promise<null | AuthenticationResult>
       parameters:
         - id: options
-          type: HandleRedirectPromiseOptions
+          type: <xref uid="@azure/msal-browser.HandleRedirectPromiseOptions" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;null | AuthenticationResult&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.handleRedirectPromise
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-browser.AuthenticationResult"
+          />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.handleRedirectPromise](xref:@azure/msal-browser.IPublicClientApplication.handleRedirectPromise)
   - name: >-
       hydrateCache(AuthenticationResult, PopupRequest | RedirectRequest |
       SilentRequest | Partial<Omit<CommonAuthorizationUrlRequest, "responseMode"
@@ -228,11 +254,13 @@ inheritedMethods:
         Promise<void>
       parameters:
         - id: result
-          type: AuthenticationResult
+          type: <xref uid="@azure/msal-browser.AuthenticationResult" />
           description: ''
         - id: request
           type: >-
-            PopupRequest | RedirectRequest | SilentRequest |
+            <xref uid="@azure/msal-browser.PopupRequest" /> | <xref
+            uid="@azure/msal-browser.RedirectRequest" /> | <xref
+            uid="@azure/msal-browser.SilentRequest" /> |
             Partial&lt;Omit&lt;<xref
             uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
             "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
@@ -241,7 +269,9 @@ inheritedMethods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.hydrateCache
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.hydrateCache](xref:@azure/msal-browser.IPublicClientApplication.hydrateCache)
   - name: initialize(InitializeApplicationRequest)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.initialize'
     package: '@azure/msal-browser'
@@ -254,12 +284,14 @@ inheritedMethods:
         Promise<void>
       parameters:
         - id: request
-          type: InitializeApplicationRequest
+          type: <xref uid="@azure/msal-browser.InitializeApplicationRequest" />
           description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.initialize
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.initialize](xref:@azure/msal-browser.IPublicClientApplication.initialize)
   - name: initializeWrapperLibrary(WrapperSKU, string)
     uid: >-
       @azure/msal-browser.ICustomAuthPublicClientApplication.initializeWrapperLibrary
@@ -271,12 +303,14 @@ inheritedMethods:
       content: 'function initializeWrapperLibrary(sku: WrapperSKU, version: string)'
       parameters:
         - id: sku
-          type: WrapperSKU
+          type: <xref uid="@azure/msal-browser.WrapperSKU" />
           description: ''
         - id: version
           type: string
           description: ''
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.initializeWrapperLibrary
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.initializeWrapperLibrary](xref:@azure/msal-browser.IPublicClientApplication.initializeWrapperLibrary)
   - name: loginPopup(PopupRequest)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.loginPopup'
     package: '@azure/msal-browser'
@@ -289,12 +323,14 @@ inheritedMethods:
         Promise<AuthenticationResult>
       parameters:
         - id: request
-          type: PopupRequest
+          type: <xref uid="@azure/msal-browser.PopupRequest" />
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.loginPopup
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.loginPopup](xref:@azure/msal-browser.IPublicClientApplication.loginPopup)
   - name: loginRedirect(RedirectRequest)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.loginRedirect'
     package: '@azure/msal-browser'
@@ -305,12 +341,14 @@ inheritedMethods:
       content: 'function loginRedirect(request?: RedirectRequest): Promise<void>'
       parameters:
         - id: request
-          type: RedirectRequest
+          type: <xref uid="@azure/msal-browser.RedirectRequest" />
           description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.loginRedirect
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.loginRedirect](xref:@azure/msal-browser.IPublicClientApplication.loginRedirect)
   - name: logoutPopup(EndSessionPopupRequest)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.logoutPopup'
     package: '@azure/msal-browser'
@@ -323,12 +361,14 @@ inheritedMethods:
         Promise<void>
       parameters:
         - id: logoutRequest
-          type: EndSessionPopupRequest
+          type: <xref uid="@azure/msal-browser.EndSessionPopupRequest" />
           description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.logoutPopup
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.logoutPopup](xref:@azure/msal-browser.IPublicClientApplication.logoutPopup)
   - name: logoutRedirect(EndSessionRequest)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.logoutRedirect'
     package: '@azure/msal-browser'
@@ -341,12 +381,14 @@ inheritedMethods:
         Promise<void>
       parameters:
         - id: logoutRequest
-          type: EndSessionRequest
+          type: <xref uid="@azure/msal-browser.EndSessionRequest" />
           description: ''
       return:
         description: ''
         type: Promise&lt;void&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.logoutRedirect
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.logoutRedirect](xref:@azure/msal-browser.IPublicClientApplication.logoutRedirect)
   - name: removeEventCallback(string)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.removeEventCallback'
     package: '@azure/msal-browser'
@@ -359,7 +401,9 @@ inheritedMethods:
         - id: callbackId
           type: string
           description: ''
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.removeEventCallback
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.removeEventCallback](xref:@azure/msal-browser.IPublicClientApplication.removeEventCallback)
   - name: removePerformanceCallback(string)
     uid: >-
       @azure/msal-browser.ICustomAuthPublicClientApplication.removePerformanceCallback
@@ -376,7 +420,9 @@ inheritedMethods:
       return:
         description: ''
         type: boolean
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.removePerformanceCallback
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.removePerformanceCallback](xref:@azure/msal-browser.IPublicClientApplication.removePerformanceCallback)
   - name: setActiveAccount(null | AccountInfo)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.setActiveAccount'
     package: '@azure/msal-browser'
@@ -389,7 +435,9 @@ inheritedMethods:
         - id: account
           type: null | <xref uid="@azure/msal-browser.AccountInfo" />
           description: ''
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.setActiveAccount
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.setActiveAccount](xref:@azure/msal-browser.IPublicClientApplication.setActiveAccount)
   - name: setLogger(Logger)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.setLogger'
     package: '@azure/msal-browser'
@@ -402,7 +450,9 @@ inheritedMethods:
         - id: logger
           type: <xref uid="@azure/msal-browser.Logger" />
           description: ''
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.setLogger
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.setLogger](xref:@azure/msal-browser.IPublicClientApplication.setLogger)
   - name: setNavigationClient(INavigationClient)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.setNavigationClient'
     package: '@azure/msal-browser'
@@ -413,9 +463,11 @@ inheritedMethods:
       content: 'function setNavigationClient(navigationClient: INavigationClient)'
       parameters:
         - id: navigationClient
-          type: INavigationClient
+          type: <xref uid="@azure/msal-browser.INavigationClient" />
           description: ''
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.setNavigationClient
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.setNavigationClient](xref:@azure/msal-browser.IPublicClientApplication.setNavigationClient)
   - name: >-
       ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
       "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
@@ -439,8 +491,10 @@ inheritedMethods:
           description: ''
       return:
         description: ''
-        type: Promise&lt;AuthenticationResult&gt;
-    inheritanceDescription: <b>Inherited From</b> IPublicClientApplication.ssoSilent
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IPublicClientApplication.ssoSilent](xref:@azure/msal-browser.IPublicClientApplication.ssoSilent)
 methods:
   - name: getCurrentAccount(CustomAuthActionInputs)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.getCurrentAccount'
@@ -508,4 +562,4 @@ methods:
       return:
         description: A promise that resolves to SignUpResult
         type: Promise&lt;<xref uid="@azure/msal-browser.SignUpResult" />&gt;
-extends: IPublicClientApplication
+extends: <xref uid="@azure/msal-browser.IPublicClientApplication" />
