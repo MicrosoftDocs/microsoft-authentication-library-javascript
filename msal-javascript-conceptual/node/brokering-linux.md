@@ -1,7 +1,7 @@
 ---
 title: "Using MSAL Node with the Linux Broker"
 description: Learn how to acquire device-bound tokens from the Microsoft Single Sign-on broker on Linux using MSAL Node.
-author: akaliugonna
+author: Ugonnaak1
 manager: iulico
 ms.author: akaliugonna
 ms.service: msal

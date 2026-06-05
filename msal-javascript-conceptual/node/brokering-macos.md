@@ -1,7 +1,7 @@
 ---
 title: "Using MSAL Node with the macOS Broker"
 description: Learn how to acquire device-bound tokens from the native authentication broker on macOS using MSAL Node.
-author: akaliugonna
+author: Ugonnaak1
 manager: iulico
 ms.author: akaliugonna
 ms.service: msal
