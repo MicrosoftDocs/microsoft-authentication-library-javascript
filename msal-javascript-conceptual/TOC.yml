@@ -156,8 +156,14 @@
       items:
         - name: Supported authorization code grants
           href: node/acquire-token-requests.md
-        - name: Acquire device bound tokens with broker
-          href: node/brokering.md
+        - name: Use brokers
+          items:
+            - name: Windows broker
+              href: node/brokering.md
+            - name: macOS broker
+              href: node/brokering-macos.md
+            - name: Linux broker
+              href: node/brokering-linux.md
         - name: Use managed identity with MSAL Node
           href: node/managed-identity.md
         - name: Use MCP flows with MSAL Node

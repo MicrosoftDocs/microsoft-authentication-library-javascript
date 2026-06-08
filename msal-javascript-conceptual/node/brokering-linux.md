@@ -1,6 +1,6 @@
 ---
 title: "Using MSAL Node with the Linux Broker"
-description: Learn how to acquire device-bound tokens from the Microsoft Single Sign-on broker on Linux using MSAL Node.
+description: Learn how to use the Linux broker with MSAL Node to enable single sign-on, install dependencies, and configure secure brokered token acquisition.
 author: Ugonnaak1
 manager: iulico
 ms.author: akaliugonna
@@ -9,17 +9,19 @@ ms.subservice: msal-node
 ms.date: 06/05/2026
 ms.topic: concept-article
 ms.reviewer: dmwendia
-#Customer intent: As a developer, I want to learn how to acquire tokens from the native broker on Linux.
+#customer intent: As a developer building a Node.js app on Linux, I want to use the native broker to acquire tokens so that I can provide single sign-on and device-bound token protection.
 ---
 # Using MSAL Node with the Linux Broker
 
-MSAL Node can integrate with the Microsoft Single Sign-on for Linux broker to provide SSO and secure token acquisition. The broker manages authentication handshakes and token lifecycle, enabling users to benefit from integration with accounts known to the system.
+Microsoft Authentication Library (MSAL) Node can use the Microsoft Single Sign-on for Linux broker to provide single sign-on (SSO) and secure token acquisition on supported Linux distributions. The broker manages authentication handshakes and token lifecycle, enabling users to benefit from integration with accounts known to the system.
+
+This article explains what the Linux broker is, distributions it supports, and how to enable brokered token acquisition in a Node.js app.
 
 For an overview of broker support across all platforms, see [Using MSAL Node with the Native Token Broker](brokering.md).
 
 ## What is the Linux broker
 
-The Microsoft Single Sign-on for Linux is an authentication broker shipped independently of the Linux distribution. It is installed via a package manager (`sudo apt install microsoft-identity-broker` or `sudo dnf install microsoft-identity-broker`) and is also bundled as a dependency of Microsoft applications such as [Company Portal](/en-us/mem/intune-service/user-help/enroll-device-linux).
+The Microsoft Single Sign-on for Linux is an authentication broker shipped independently of the Linux distribution. Install it with a package manager (`sudo apt install microsoft-identity-broker` or `sudo dnf install microsoft-identity-broker`). It's also bundled as a dependency of Microsoft applications such as [Company Portal](/mem/intune-service/user-help/enroll-device-linux).
 
 Key benefits include:
 
@@ -31,7 +33,7 @@ Key benefits include:
 ## Supported distributions
 
 - Ubuntu 22.04 / 24.04 (x64)
-- RHEL 8 / 9 / 10 (x64)
+- Red Hat Enterprise Linux (RHEL) 8 / 9 / 10 (x64)
 
 ## Prerequisites
 
@@ -113,7 +115,7 @@ sudo dnf install webkitgtk6.0 gtk4
 
 ## Enable the feature
 
-Enabling the Linux broker uses the same configuration as Windows and macOS:
+Enabling the Linux broker uses the same configuration as Windows and macOS. Pass a `NativeBrokerPlugin` instance in the broker configuration:
 
 ```javascript
 import { PublicClientApplication, Configuration } from "@azure/msal-node";
@@ -131,9 +133,14 @@ const msalConfig: Configuration = {
 const pca = new PublicClientApplication(msalConfig);
 ```
 
+> [!NOTE]
+> `msal-node` doesn't fall back to a browser-based flow if the broker is unavailable. Only enable brokered authentication on supported Linux devices to avoid unexpected failures.
+
 ## Acquiring tokens
 
 ### Interactive token acquisition
+
+Use `acquireTokenInteractive` to request a token through the Linux broker:
 
 ```javascript
 const tokenRequest = {
@@ -168,6 +175,14 @@ The authentication broker handles refresh and access token caching. Tokens acqui
 
 ## Differences when using the Linux broker
 
-- When the broker needs to prompt for interaction, a native sign-in dialog (WebKitGTK-based) will appear. This is a UX change compared to browser-based authentication.
+- When the broker needs to prompt for interaction, a native sign-in dialog (WebKitGTK-based) appears. This changes the user experience (UX) compared to browser-based authentication.
 - The `forceRefresh` parameter for `acquireTokenSilent` is not supported. You may receive a cached token from the broker regardless of this flag.
 - A D-Bus session bus must be running for broker communication to work.
+
+## Limitations
+
+- Azure AD B2C and Active Directory Federation Services (AD FS) authorities are not supported via the Linux broker.
+- Third-party identity providers (IDPs) are not supported.
+- `microsoft-identity-broker` must be installed on the device for the broker to function.
+- `msal-node` does not fall back to a browser if the broker is unavailable. Only enable the broker in environments that support it.
+- Access token proof-of-possession (PoP) is not currently supported through the Linux broker.
