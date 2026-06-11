@@ -19,4 +19,5 @@ syntax: |
     popupBridgeTimeout?: number
     protocolMode?: ProtocolMode
     redirectNavigationTimeout?: number
+    serverTelemetryEnabled?: boolean
   }

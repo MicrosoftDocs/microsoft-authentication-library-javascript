@@ -95,6 +95,21 @@ functions:
         - id: correlationId
           type: string
           description: ''
+  - name: clearAuthResponseFromUrl(Window)
+    uid: '@azure/msal-browser.BrowserUtils.clearAuthResponseFromUrl'
+    package: '@azure/msal-browser'
+    summary: |-
+      Strips both hash and query string from the given window's URL by replacing
+      with origin + pathname only. Used to remove auth response parameters
+      (auth code, state, etc.) before the window is closed or navigated away.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function clearAuthResponseFromUrl(contentWindow: Window)'
+      parameters:
+        - id: contentWindow
+          type: Window
+          description: ''
   - name: clearHash(Window)
     uid: '@azure/msal-browser.BrowserUtils.clearHash'
     package: '@azure/msal-browser'
@@ -243,8 +258,7 @@ functions:
           type: string
           description: ''
   - name: >-
-      waitForBridgeResponse(number, Logger, ICrypto,
-      CommonAuthorizationUrlRequest | CommonEndSessionRequest,
+      waitForBridgeResponse(number, Logger, WaitForBridgeRequest,
       IPerformanceClient, BrowserExperimentalOptions)
     uid: '@azure/msal-browser.BrowserUtils.waitForBridgeResponse'
     package: '@azure/msal-browser'
@@ -254,8 +268,7 @@ functions:
     syntax:
       content: >-
         function waitForBridgeResponse(timeoutMs: number, logger: Logger,
-        browserCrypto: ICrypto, request: CommonAuthorizationUrlRequest |
-        CommonEndSessionRequest, performanceClient: IPerformanceClient,
+        request: WaitForBridgeRequest, performanceClient: IPerformanceClient,
         experimentalConfig?: BrowserExperimentalOptions): Promise<string>
       parameters:
         - id: timeoutMs
@@ -264,13 +277,8 @@ functions:
         - id: logger
           type: <xref uid="@azure/msal-browser.Logger" />
           description: ''
-        - id: browserCrypto
-          type: <xref uid="@azure/msal-common.ICrypto" />
-          description: ''
         - id: request
-          type: >-
-            <xref uid="@azure/msal-common.CommonAuthorizationUrlRequest" /> |
-            <xref uid="@azure/msal-common.CommonEndSessionRequest" />
+          type: WaitForBridgeRequest
           description: ''
         - id: performanceClient
           type: <xref uid="@azure/msal-browser.IPerformanceClient" />

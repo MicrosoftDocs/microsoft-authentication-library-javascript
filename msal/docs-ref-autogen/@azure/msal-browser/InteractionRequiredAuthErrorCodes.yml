@@ -104,8 +104,8 @@ variables:
       return:
         description: ''
         type: '"refresh_token_expired"'
-  - name: uxNotAllowed
-    uid: '@azure/msal-browser.InteractionRequiredAuthErrorCodes.uxNotAllowed'
+  - name: uiNotAllowed
+    uid: '@azure/msal-browser.InteractionRequiredAuthErrorCodes.uiNotAllowed'
     package: '@azure/msal-browser'
     summary: >-
       MSAL-defined error code indicating UI/UX is not allowed (e.g., blocked by
@@ -113,7 +113,7 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'uxNotAllowed: "ux_not_allowed"'
+      content: 'uiNotAllowed: "ui_not_allowed"'
       return:
         description: ''
-        type: '"ux_not_allowed"'
+        type: '"ui_not_allowed"'

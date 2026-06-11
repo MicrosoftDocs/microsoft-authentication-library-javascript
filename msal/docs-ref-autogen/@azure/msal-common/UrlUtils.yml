@@ -37,24 +37,42 @@ functions:
       return:
         description: ''
         type: string
-  - name: normalizeUrlForComparison(string)
+  - name: normalizeUrlForComparison(string, Logger, string)
     uid: '@azure/msal-common.UrlUtils.normalizeUrlForComparison'
     package: '@azure/msal-common'
     summary: >-
-      Normalizes URLs for comparison by removing hash, canonicalizing,
+      Normalizes URLs for comparison per MDN & RFC 3986 standards:
 
-      and ensuring consistent URL encoding in query parameters.
+      - Hash/fragment is removed
 
-      This fixes redirect loops when URLs contain encoded characters like
-      apostrophes (%27).
+      - Scheme and host are lowercased (case-insensitive per spec)
+
+      - Path and query parameters preserve original casing (case-sensitive per
+      spec)
+
+      - Percent-encoding in pathname is normalized (e.g., %27 and ' are treated
+      equivalently)
+
+      - Ensures pathname ends with /
+
+      Throws a urlParseError if the provided URL is malformed and cannot be
+      parsed.
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function normalizeUrlForComparison(url: string): string'
+      content: >-
+        function normalizeUrlForComparison(url: string, logger?: Logger,
+        correlationId?: string): string
       parameters:
         - id: url
           type: string
           description: URL to normalize
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: Optional logger used to log parse failures
+        - id: correlationId
+          type: string
+          description: Optional correlationId associated with the log entry
       return:
         description: Normalized URL string for comparison
         type: string
@@ -75,3 +93,34 @@ functions:
       return:
         description: ''
         type: string
+  - name: validateUrl(string, Logger, string)
+    uid: '@azure/msal-common.UrlUtils.validateUrl'
+    package: '@azure/msal-common'
+    summary: >-
+      Validates that the provided value is a well-formed, parseable absolute
+      URL.
+
+      Throws a urlParseError if the value cannot be parsed by the URL API (e.g.
+      the
+
+      literal string "null", an empty string, or any malformed/relative URL).
+      Use this
+
+      to guard against persisting an invalid value (such as a redirect URL) to
+      the cache.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function validateUrl(url: string, logger?: Logger, correlationId?:
+        string)
+      parameters:
+        - id: url
+          type: string
+          description: URL to validate
+        - id: logger
+          type: <xref uid="@azure/msal-common.Logger" />
+          description: Optional logger used to log validation failures
+        - id: correlationId
+          type: string
+          description: Optional correlationId associated with the log entry
