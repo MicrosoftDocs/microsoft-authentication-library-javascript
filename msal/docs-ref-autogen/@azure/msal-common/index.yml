@@ -79,7 +79,6 @@ typeAliases:
   - '@azure/msal-common.ClientAssertion'
   - '@azure/msal-common.ClientAssertionCallback'
   - '@azure/msal-common.ClientAssertionConfig'
-  - '@azure/msal-common.CommonClientConfiguration'
   - '@azure/msal-common.DeviceCodeResponse'
   - '@azure/msal-common.NativeRequest'
   - '@azure/msal-common.NativeSignOutRequest'
@@ -221,71 +220,11 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "16.8.0"'
+      content: 'version: "16.9.0"'
       return:
         description: ''
-        type: '"<xref uid="16.8.0" />"'
+        type: '"<xref uid="16.9.0" />"'
 functions:
-  - name: >-
-      buildAccountToCache(CacheManager, Authority, string, (input: string) =>
-      string, string, TokenClaims, string, string, null | string,
-      AuthorizationCodePayload, string, Logger, IPerformanceClient)
-    uid: '@azure/msal-common.buildAccountToCache'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function buildAccountToCache(cacheStorage: CacheManager, authority:
-        Authority, homeAccountId: string, base64Decode: (input: string) =>
-        string, correlationId: string, idTokenClaims?: TokenClaims, clientInfo?:
-        string, environment?: string, claimsTenantId?: null | string,
-        authCodePayload?: AuthorizationCodePayload, nativeAccountId?: string,
-        logger?: Logger, performanceClient?: IPerformanceClient): AccountEntity
-      parameters:
-        - id: cacheStorage
-          type: CacheManager
-          description: ''
-        - id: authority
-          type: Authority
-          description: ''
-        - id: homeAccountId
-          type: string
-          description: ''
-        - id: base64Decode
-          type: '(input: string) =&gt; string'
-          description: ''
-        - id: correlationId
-          type: string
-          description: ''
-        - id: idTokenClaims
-          type: <xref uid="@azure/msal-common.TokenClaims" />
-          description: ''
-        - id: clientInfo
-          type: string
-          description: ''
-        - id: environment
-          type: string
-          description: ''
-        - id: claimsTenantId
-          type: null | string
-          description: ''
-        - id: authCodePayload
-          type: <xref uid="@azure/msal-common.AuthorizationCodePayload" />
-          description: ''
-        - id: nativeAccountId
-          type: string
-          description: ''
-        - id: logger
-          type: <xref uid="@azure/msal-common.Logger" />
-          description: ''
-        - id: performanceClient
-          type: <xref uid="@azure/msal-common.IPerformanceClient" />
-          description: ''
-      return:
-        description: ''
-        type: AccountEntity
   - name: 'buildClientInfo(string, (input: string) => string)'
     uid: '@azure/msal-common.buildClientInfo'
     package: '@azure/msal-common'
@@ -628,22 +567,3 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AccountInfo" />
-  - name: buildClientConfiguration(ClientConfiguration)
-    uid: '@azure/msal-common.buildClientConfiguration'
-    package: '@azure/msal-common'
-    summary: >-
-      Function that sets the default options when not explicitly configured from
-      app developer
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function buildClientConfiguration(Configuration: ClientConfiguration):
-        CommonClientConfiguration
-      parameters:
-        - id: Configuration
-          type: ClientConfiguration
-          description: ''
-      return:
-        description: Configuration
-        type: <xref uid="@azure/msal-common.CommonClientConfiguration" />

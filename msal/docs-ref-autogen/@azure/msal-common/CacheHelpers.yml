@@ -212,23 +212,6 @@ functions:
       return:
         description: ''
         type: boolean
-  - name: isAuthorityMetadataExpired(AuthorityMetadataEntity)
-    uid: '@azure/msal-common.CacheHelpers.isAuthorityMetadataExpired'
-    package: '@azure/msal-common'
-    summary: Returns whether or not the data needs to be refreshed
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function isAuthorityMetadataExpired(metadata: AuthorityMetadataEntity):
-        boolean
-      parameters:
-        - id: metadata
-          type: AuthorityMetadataEntity
-          description: ''
-      return:
-        description: ''
-        type: boolean
   - name: isCredentialEntity(object)
     uid: '@azure/msal-common.CacheHelpers.isCredentialEntity'
     package: '@azure/msal-common'
@@ -310,49 +293,3 @@ functions:
       return:
         description: ''
         type: boolean
-  - name: >-
-      updateAuthorityEndpointMetadata(AuthorityMetadataEntity,
-      OpenIdConfigResponse, boolean)
-    uid: '@azure/msal-common.CacheHelpers.updateAuthorityEndpointMetadata'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function updateAuthorityEndpointMetadata(authorityMetadata:
-        AuthorityMetadataEntity, updatedValues: OpenIdConfigResponse,
-        fromNetwork: boolean)
-      parameters:
-        - id: authorityMetadata
-          type: AuthorityMetadataEntity
-          description: ''
-        - id: updatedValues
-          type: OpenIdConfigResponse
-          description: ''
-        - id: fromNetwork
-          type: boolean
-          description: ''
-  - name: >-
-      updateCloudDiscoveryMetadata(AuthorityMetadataEntity,
-      CloudDiscoveryMetadata, boolean)
-    uid: '@azure/msal-common.CacheHelpers.updateCloudDiscoveryMetadata'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function updateCloudDiscoveryMetadata(authorityMetadata:
-        AuthorityMetadataEntity, updatedValues: CloudDiscoveryMetadata,
-        fromNetwork: boolean)
-      parameters:
-        - id: authorityMetadata
-          type: AuthorityMetadataEntity
-          description: ''
-        - id: updatedValues
-          type: CloudDiscoveryMetadata
-          description: ''
-        - id: fromNetwork
-          type: boolean
-          description: ''

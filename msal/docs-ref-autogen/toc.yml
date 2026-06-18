@@ -245,6 +245,11 @@
       no-loc:
         - BrowserConfigurationAuthErrorCodes
       items: []
+    - uid: '@azure/msal-browser.BrowserExperimentalOptions'
+      name: BrowserExperimentalOptions
+      no-loc:
+        - BrowserExperimentalOptions
+      items: []
     - uid: '@azure/msal-browser.BrowserPerformanceClient'
       name: BrowserPerformanceClient
       no-loc:
@@ -1300,11 +1305,6 @@
       name: CommonAuthorizationUrlRequest
       no-loc:
         - CommonAuthorizationUrlRequest
-      items: []
-    - uid: '@azure/msal-common.CommonClientConfiguration'
-      name: CommonClientConfiguration
-      no-loc:
-        - CommonClientConfiguration
       items: []
     - uid: '@azure/msal-common.CommonEndSessionRequest'
       name: CommonEndSessionRequest

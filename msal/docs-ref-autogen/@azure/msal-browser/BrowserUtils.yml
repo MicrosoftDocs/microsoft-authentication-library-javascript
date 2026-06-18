@@ -228,23 +228,6 @@ functions:
         - id: initialized
           type: boolean
           description: ''
-  - name: redirectPreflightCheck(boolean, BrowserConfiguration)
-    uid: '@azure/msal-browser.BrowserUtils.redirectPreflightCheck'
-    package: '@azure/msal-browser'
-    summary: Helper to validate app enviornment before making redirect request
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function redirectPreflightCheck(initialized: boolean, config:
-        BrowserConfiguration)
-      parameters:
-        - id: initialized
-          type: boolean
-          description: ''
-        - id: config
-          type: BrowserConfiguration
-          description: ''
   - name: replaceHash(string)
     uid: '@azure/msal-browser.BrowserUtils.replaceHash'
     package: '@azure/msal-browser'
@@ -257,35 +240,3 @@ functions:
         - id: url
           type: string
           description: ''
-  - name: >-
-      waitForBridgeResponse(number, Logger, WaitForBridgeRequest,
-      IPerformanceClient, BrowserExperimentalOptions)
-    uid: '@azure/msal-browser.BrowserUtils.waitForBridgeResponse'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function waitForBridgeResponse(timeoutMs: number, logger: Logger,
-        request: WaitForBridgeRequest, performanceClient: IPerformanceClient,
-        experimentalConfig?: BrowserExperimentalOptions): Promise<string>
-      parameters:
-        - id: timeoutMs
-          type: number
-          description: ''
-        - id: logger
-          type: <xref uid="@azure/msal-browser.Logger" />
-          description: ''
-        - id: request
-          type: WaitForBridgeRequest
-          description: ''
-        - id: performanceClient
-          type: <xref uid="@azure/msal-browser.IPerformanceClient" />
-          description: ''
-        - id: experimentalConfig
-          type: BrowserExperimentalOptions
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;string&gt;

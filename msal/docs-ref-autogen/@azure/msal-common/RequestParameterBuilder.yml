@@ -680,23 +680,6 @@ functions:
         - id: defaultScopes
           type: string[]
           description: ''
-  - name: addServerTelemetry(Map<string, string>, ServerTelemetryManager)
-    uid: '@azure/msal-common.RequestParameterBuilder.addServerTelemetry'
-    package: '@azure/msal-common'
-    summary: add server telemetry fields
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function addServerTelemetry(parameters: Map<string, string>,
-        serverTelemetryManager: ServerTelemetryManager)
-      parameters:
-        - id: parameters
-          type: Map&lt;string, string&gt;
-          description: ''
-        - id: serverTelemetryManager
-          type: ServerTelemetryManager
-          description: ''
   - name: addSid(Map<string, string>, string)
     uid: '@azure/msal-common.RequestParameterBuilder.addSid'
     package: '@azure/msal-common'
