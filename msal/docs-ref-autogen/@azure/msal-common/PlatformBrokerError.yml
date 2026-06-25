@@ -8,7 +8,7 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: PlatformBrokerError(string, string, number, number)
+  - name: PlatformBrokerError(string, string, string, number, number)
     uid: '@azure/msal-common.PlatformBrokerError.constructor'
     package: '@azure/msal-common'
     summary: ''
@@ -16,10 +16,13 @@ constructors:
     isDeprecated: false
     syntax:
       content: >-
-        new PlatformBrokerError(errorStatus: string, errorContext: string,
-        errorCode: number, errorTag: number)
+        new PlatformBrokerError(errorStatus: string, correlationId: string,
+        errorContext: string, errorCode: number, errorTag: number)
       parameters:
         - id: errorStatus
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
         - id: errorContext
@@ -321,19 +324,4 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [AuthError.prepareStackTrace](xref:@azure/msal-common.AuthError.prepareStackTrace)
-  - name: setCorrelationId(string)
-    uid: '@azure/msal-common.PlatformBrokerError.setCorrelationId'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function setCorrelationId(correlationId: string)'
-      parameters:
-        - id: correlationId
-          type: string
-          description: ''
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.setCorrelationId](xref:@azure/msal-common.AuthError.setCorrelationId)
 extends: <xref uid="@azure/msal-common.AuthError" />

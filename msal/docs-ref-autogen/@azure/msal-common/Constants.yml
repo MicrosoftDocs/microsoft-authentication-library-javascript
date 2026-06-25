@@ -262,10 +262,15 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'ClaimsRequestKeys: { ACCESS_TOKEN: "access_token", XMS_CC: "xms_cc" }'
+      content: >-
+        ClaimsRequestKeys: { ACCESS_TOKEN: "access_token", ID_TOKEN: "id_token",
+        LOGIN_HINT: "login_hint", SIGNIN_STATE: "signin_state", XMS_CC: "xms_cc"
+        }
       return:
         description: ''
-        type: '{ ACCESS_TOKEN: "access_token", XMS_CC: "xms_cc" }'
+        type: >-
+          { ACCESS_TOKEN: "access_token", ID_TOKEN: "id_token", LOGIN_HINT:
+          "login_hint", SIGNIN_STATE: "signin_state", XMS_CC: "xms_cc" }
   - name: CLIENT_INFO
     uid: '@azure/msal-common.Constants.CLIENT_INFO'
     package: '@azure/msal-common'
@@ -471,7 +476,8 @@ variables:
         CLIENT_CREDENTIALS_GRANT: "client_credentials", DEVICE_CODE_GRANT:
         "device_code", IMPLICIT_GRANT: "implicit", JWT_BEARER:
         "urn:ietf:params:oauth:grant-type:jwt-bearer", REFRESH_TOKEN_GRANT:
-        "refresh_token", RESOURCE_OWNER_PASSWORD_GRANT: "password" }
+        "refresh_token", RESOURCE_OWNER_PASSWORD_GRANT: "password", USER_FIC:
+        "user_fic" }
       return:
         description: ''
         type: >-
@@ -479,7 +485,8 @@ variables:
           CLIENT_CREDENTIALS_GRANT: "client_credentials", DEVICE_CODE_GRANT:
           "device_code", IMPLICIT_GRANT: "implicit", JWT_BEARER:
           "urn:ietf:params:oauth:grant-type:jwt-bearer", REFRESH_TOKEN_GRANT:
-          "refresh_token", RESOURCE_OWNER_PASSWORD_GRANT: "password" }
+          "refresh_token", RESOURCE_OWNER_PASSWORD_GRANT: "password", USER_FIC:
+          "user_fic" }
   - name: HeaderNames
     uid: '@azure/msal-common.Constants.HeaderNames'
     package: '@azure/msal-common'
@@ -728,14 +735,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        IMDS_ENDPOINT:
-        "http://169.254.169.254/metadata/instance/compute/location"
+      content: 'IMDS_ENDPOINT: "http://169.254.169.254/metadata/instance/compute"'
       return:
         description: ''
-        type: >-
-          "http:<xref uid="//169.254.169.254/metadata/instance/compute/location"
-          />"
+        type: '"http:<xref uid="//169.254.169.254/metadata/instance/compute" />"'
   - name: IMDS_TIMEOUT
     uid: '@azure/msal-common.Constants.IMDS_TIMEOUT'
     package: '@azure/msal-common'
@@ -754,10 +757,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'IMDS_VERSION: "2020-06-01"'
+      content: 'IMDS_VERSION: "2021-02-01"'
       return:
         description: ''
-        type: '"2020-06-01"'
+        type: '"2021-02-01"'
   - name: INVALID_GRANT_ERROR
     uid: '@azure/msal-common.Constants.INVALID_GRANT_ERROR'
     package: '@azure/msal-common'

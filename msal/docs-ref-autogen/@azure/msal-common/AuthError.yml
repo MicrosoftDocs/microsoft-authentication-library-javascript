@@ -8,7 +8,7 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: AuthError(string, string, string)
+  - name: AuthError(string, string, string, string)
     uid: '@azure/msal-common.AuthError.constructor'
     package: '@azure/msal-common'
     summary: ''
@@ -16,10 +16,13 @@ constructors:
     isDeprecated: false
     syntax:
       content: >-
-        new AuthError(errorCode?: string, errorMessage?: string, suberror?:
-        string)
+        new AuthError(errorCode: string, correlationId: string, errorMessage?:
+        string, suberror?: string)
       parameters:
         - id: errorCode
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
         - id: errorMessage
@@ -267,17 +270,4 @@ inheritedMethods:
         description: ''
         type: any
     inheritanceDescription: <b>Inherited From</b> Error.prepareStackTrace
-methods:
-  - name: setCorrelationId(string)
-    uid: '@azure/msal-common.AuthError.setCorrelationId'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function setCorrelationId(correlationId: string)'
-      parameters:
-        - id: correlationId
-          type: string
-          description: ''
 extends: Error

@@ -9,5 +9,11 @@ isDeprecated: false
 syntax: |
   type TenantProfile = Pick<
     AccountInfo,
-    "tenantId" | "localAccountId" | "name" | "username" | "loginHint" | "upn"
+    | "tenantId"
+    | "localAccountId"
+    | "name"
+    | "username"
+    | "loginHint"
+    | "upn"
+    | "nativeAccountId"
   > & { isHomeTenant?: boolean }

@@ -7,4 +7,8 @@ fullName: ClientAssertionConfig
 remarks: ''
 isDeprecated: false
 syntax: |
-  type ClientAssertionConfig = { clientId: string; tokenEndpoint?: string }
+  type ClientAssertionConfig = {
+    clientId: string
+    fmiPath?: string
+    tokenEndpoint?: string
+  }

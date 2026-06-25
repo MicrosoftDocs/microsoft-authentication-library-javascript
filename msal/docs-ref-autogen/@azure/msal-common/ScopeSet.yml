@@ -15,17 +15,20 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: ScopeSet(string[])
+  - name: ScopeSet(string[], string)
     uid: '@azure/msal-common.ScopeSet.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'new ScopeSet(inputScopes: string[])'
+      content: 'new ScopeSet(inputScopes: string[], correlationId: string)'
       parameters:
         - id: inputScopes
           type: string[]
+          description: ''
+        - id: correlationId
+          type: string
           description: ''
 methods:
   - name: appendScope(string)
@@ -104,31 +107,41 @@ methods:
       return:
         description: ''
         type: boolean
-  - name: createSearchScopes(string[])
+  - name: createSearchScopes(string[], string)
     uid: '@azure/msal-common.ScopeSet.createSearchScopes'
     package: '@azure/msal-common'
     summary: Creates the set of scopes to search for in cache lookups
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'static function createSearchScopes(inputScopeString: string[]): ScopeSet'
+      content: >-
+        static function createSearchScopes(inputScopeString: string[],
+        correlationId: string): ScopeSet
       parameters:
         - id: inputScopeString
           type: string[]
           description: ''
+        - id: correlationId
+          type: string
+          description: ''
       return:
         description: ''
         type: <xref uid="@azure/msal-common.ScopeSet" />
-  - name: fromString(string)
+  - name: fromString(string, string)
     uid: '@azure/msal-common.ScopeSet.fromString'
     package: '@azure/msal-common'
     summary: Factory method to create ScopeSet from space-delimited string
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'static function fromString(inputScopeString: string): ScopeSet'
+      content: >-
+        static function fromString(inputScopeString: string, correlationId:
+        string): ScopeSet
       parameters:
         - id: inputScopeString
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
       return:

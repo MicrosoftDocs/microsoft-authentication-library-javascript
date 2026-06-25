@@ -5,7 +5,9 @@ type: module
 package: '@azure/msal-common'
 summary: ''
 functions:
-  - name: getClientAssertion(string | ClientAssertionCallback, string, string)
+  - name: >-
+      getClientAssertion(string | ClientAssertionCallback, string, string,
+      string)
     uid: '@azure/msal-common.ClientAssertionUtils.getClientAssertion'
     package: '@azure/msal-common'
     summary: ''
@@ -14,8 +16,8 @@ functions:
     syntax:
       content: >-
         function getClientAssertion(clientAssertion: string |
-        ClientAssertionCallback, clientId: string, tokenEndpoint?: string):
-        Promise<string>
+        ClientAssertionCallback, clientId: string, tokenEndpoint?: string,
+        fmiPath?: string): Promise<string>
       parameters:
         - id: clientAssertion
           type: string | <xref uid="@azure/msal-common.ClientAssertionCallback" />
@@ -24,6 +26,9 @@ functions:
           type: string
           description: ''
         - id: tokenEndpoint
+          type: string
+          description: ''
+        - id: fmiPath
           type: string
           description: ''
       return:

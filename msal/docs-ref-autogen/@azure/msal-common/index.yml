@@ -220,10 +220,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "16.9.0"'
+      content: 'version: "16.10.0"'
       return:
         description: ''
-        type: '"<xref uid="16.9.0" />"'
+        type: '"<xref uid="16.10.0" />"'
 functions:
   - name: 'buildClientInfo(string, (input: string) => string)'
     uid: '@azure/msal-common.buildClientInfo'
@@ -279,7 +279,7 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.StaticAuthorityOptions" />
-  - name: buildTenantProfile(string, string, string, TokenClaims)
+  - name: buildTenantProfile(string, string, string, string, TokenClaims)
     uid: '@azure/msal-common.buildTenantProfile'
     package: '@azure/msal-common'
     summary: Build tenant profile
@@ -288,7 +288,8 @@ functions:
     syntax:
       content: >-
         function buildTenantProfile(homeAccountId: string, localAccountId:
-        string, tenantId: string, idTokenClaims?: TokenClaims): TenantProfile
+        string, tenantId: string, nativeAccountId?: string, idTokenClaims?:
+        TokenClaims): TenantProfile
       parameters:
         - id: homeAccountId
           type: string
@@ -299,13 +300,16 @@ functions:
         - id: tenantId
           type: string
           description: Full tenant or organizational id that this account belongs to
+        - id: nativeAccountId
+          type: string
+          description: Native account identifier for this tenant
         - id: idTokenClaims
           type: <xref uid="@azure/msal-common.TokenClaims" />
           description: Claims from the ID token
       return:
         description: ''
         type: <xref uid="@azure/msal-common.TenantProfile" />
-  - name: createAuthError(string, string)
+  - name: createAuthError(string, string, string)
     uid: '@azure/msal-common.createAuthError'
     package: '@azure/msal-common'
     summary: ''
@@ -313,10 +317,13 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function createAuthError(code: string, additionalMessage?: string):
-        AuthError
+        function createAuthError(code: string, correlationId: string,
+        additionalMessage?: string): AuthError
       parameters:
         - id: code
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
         - id: additionalMessage
@@ -340,7 +347,7 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.CacheError" />
-  - name: createClientAuthError(string, string)
+  - name: createClientAuthError(string, string, string)
     uid: '@azure/msal-common.createClientAuthError'
     package: '@azure/msal-common'
     summary: ''
@@ -348,10 +355,13 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function createClientAuthError(errorCode: string, additionalMessage?:
-        string): ClientAuthError
+        function createClientAuthError(errorCode: string, correlationId: string,
+        additionalMessage?: string): ClientAuthError
       parameters:
         - id: errorCode
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
         - id: additionalMessage
@@ -360,7 +370,7 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-common.ClientAuthError" />
-  - name: createClientConfigurationError(string)
+  - name: createClientConfigurationError(string, string)
     uid: '@azure/msal-common.createClientConfigurationError'
     package: '@azure/msal-common'
     summary: ''
@@ -368,16 +378,19 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function createClientConfigurationError(errorCode: string):
-        ClientConfigurationError
+        function createClientConfigurationError(errorCode: string,
+        correlationId: string): ClientConfigurationError
       parameters:
         - id: errorCode
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
       return:
         description: ''
         type: <xref uid="@azure/msal-common.ClientConfigurationError" />
-  - name: createInteractionRequiredAuthError(string, string)
+  - name: createInteractionRequiredAuthError(string, string, string)
     uid: '@azure/msal-common.createInteractionRequiredAuthError'
     package: '@azure/msal-common'
     summary: Creates an InteractionRequiredAuthError
@@ -386,9 +399,13 @@ functions:
     syntax:
       content: >-
         function createInteractionRequiredAuthError(errorCode: string,
-        errorMessage?: string): InteractionRequiredAuthError
+        correlationId: string, errorMessage?: string):
+        InteractionRequiredAuthError
       parameters:
         - id: errorCode
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
         - id: errorMessage

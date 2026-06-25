@@ -10,7 +10,7 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: ServerError(string, string, string, string, number)
+  - name: ServerError(string, string, string, string, string, number)
     uid: '@azure/msal-browser.ServerError.constructor'
     package: '@azure/msal-browser'
     summary: ''
@@ -18,10 +18,13 @@ constructors:
     isDeprecated: false
     syntax:
       content: >-
-        new ServerError(errorCode?: string, errorMessage?: string, subError?:
-        string, errorNo?: string, status?: number)
+        new ServerError(errorCode: string, correlationId: string, errorMessage?:
+        string, subError?: string, errorNo?: string, status?: number)
       parameters:
         - id: errorCode
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
         - id: errorMessage
@@ -326,19 +329,4 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [AuthError.prepareStackTrace](xref:@azure/msal-browser.AuthError.prepareStackTrace)
-  - name: setCorrelationId(string)
-    uid: '@azure/msal-browser.ServerError.setCorrelationId'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function setCorrelationId(correlationId: string)'
-      parameters:
-        - id: correlationId
-          type: string
-          description: ''
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.setCorrelationId](xref:@azure/msal-browser.AuthError.setCorrelationId)
 extends: <xref uid="@azure/msal-browser.AuthError" />

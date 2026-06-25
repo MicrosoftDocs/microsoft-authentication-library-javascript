@@ -258,6 +258,17 @@ variables:
       return:
         description: ''
         type: '"expires_in"'
+  - name: FMI_PATH
+    uid: '@azure/msal-common.AADServerParamKeys.FMI_PATH'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'FMI_PATH: "fmi_path"'
+      return:
+        description: ''
+        type: '"fmi_path"'
   - name: FOCI
     uid: '@azure/msal-common.AADServerParamKeys.FOCI'
     package: '@azure/msal-common'
@@ -555,6 +566,39 @@ variables:
       return:
         description: ''
         type: '"token_type"'
+  - name: USERNAME
+    uid: '@azure/msal-common.AADServerParamKeys.USERNAME'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'USERNAME: "username"'
+      return:
+        description: ''
+        type: '"username"'
+  - name: USER_FEDERATED_IDENTITY_CREDENTIAL
+    uid: '@azure/msal-common.AADServerParamKeys.USER_FEDERATED_IDENTITY_CREDENTIAL'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'USER_FEDERATED_IDENTITY_CREDENTIAL: "user_federated_identity_credential"'
+      return:
+        description: ''
+        type: '"user_federated_identity_credential"'
+  - name: USER_ID
+    uid: '@azure/msal-common.AADServerParamKeys.USER_ID'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'USER_ID: "user_id"'
+      return:
+        description: ''
+        type: '"user_id"'
   - name: X_APP_NAME
     uid: '@azure/msal-common.AADServerParamKeys.X_APP_NAME'
     package: '@azure/msal-common'

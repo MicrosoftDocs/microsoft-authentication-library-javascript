@@ -19,17 +19,6 @@ variables:
       return:
         description: ''
         type: '"authorization_code_missing_from_server_response"'
-  - name: authTimeNotFound
-    uid: '@azure/msal-common.ClientAuthErrorCodes.authTimeNotFound'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'authTimeNotFound: "auth_time_not_found"'
-      return:
-        description: ''
-        type: '"auth_time_not_found"'
   - name: bindingKeyNotRemoved
     uid: '@azure/msal-common.ClientAuthErrorCodes.bindingKeyNotRemoved'
     package: '@azure/msal-common'
@@ -173,17 +162,6 @@ variables:
       return:
         description: ''
         type: '"key_id_missing"'
-  - name: maxAgeTranspired
-    uid: '@azure/msal-common.ClientAuthErrorCodes.maxAgeTranspired'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'maxAgeTranspired: "max_age_transpired"'
-      return:
-        description: ''
-        type: '"max_age_transpired"'
   - name: methodNotImplemented
     uid: '@azure/msal-common.ClientAuthErrorCodes.methodNotImplemented'
     package: '@azure/msal-common'

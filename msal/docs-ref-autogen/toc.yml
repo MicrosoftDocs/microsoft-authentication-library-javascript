@@ -2108,6 +2108,11 @@
       no-loc:
         - TokenCacheContext
       items: []
+    - uid: '@azure/msal-node.UserFederatedIdentityCredentialRequest'
+      name: UserFederatedIdentityCredentialRequest
+      no-loc:
+        - UserFederatedIdentityCredentialRequest
+      items: []
     - uid: '@azure/msal-node.UsernamePasswordRequest'
       name: UsernamePasswordRequest
       no-loc:

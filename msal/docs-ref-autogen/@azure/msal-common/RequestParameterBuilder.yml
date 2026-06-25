@@ -91,7 +91,7 @@ functions:
         - id: loginHint
           type: string
           description: ''
-  - name: addClaims(Map<string, string>, string, string[], boolean)
+  - name: addClaims(Map<string, string>, string, string, string[], boolean)
     uid: '@azure/msal-common.RequestParameterBuilder.addClaims'
     package: '@azure/msal-common'
     summary: >-
@@ -103,12 +103,16 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function addClaims(parameters: Map<string, string>, claims?: string,
-        clientCapabilities?: string[], skipBrokerClaims?: boolean)
+        function addClaims(parameters: Map<string, string>, correlationId:
+        string, claims?: string, clientCapabilities?: string[],
+        skipBrokerClaims?: boolean)
       parameters:
         - id: parameters
           type: Map&lt;string, string&gt;
           description: The request parameters map
+        - id: correlationId
+          type: string
+          description: The request correlation id
         - id: claims
           type: string
           description: The claims string from the request
@@ -166,26 +170,6 @@ functions:
         - id: clientAssertionType
           type: string
           description: ''
-  - name: addClientCapabilitiesToClaims(string, string[])
-    uid: '@azure/msal-common.RequestParameterBuilder.addClientCapabilitiesToClaims'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function addClientCapabilitiesToClaims(claims?: string,
-        clientCapabilities?: string[]): string
-      parameters:
-        - id: claims
-          type: string
-          description: ''
-        - id: clientCapabilities
-          type: string[]
-          description: ''
-      return:
-        description: ''
-        type: string
   - name: addClientId(Map<string, string>, string)
     uid: '@azure/msal-common.RequestParameterBuilder.addClientId'
     package: '@azure/msal-common'
@@ -655,7 +639,7 @@ functions:
         - id: responseType
           type: <xref uid="@azure/msal-common.Constants.OAuthResponseType" />
           description: ''
-  - name: addScopes(Map<string, string>, string[], boolean, string[])
+  - name: addScopes(Map<string, string>, string[], string, boolean, string[])
     uid: '@azure/msal-common.RequestParameterBuilder.addScopes'
     package: '@azure/msal-common'
     summary: >-
@@ -666,13 +650,17 @@ functions:
     syntax:
       content: >-
         function addScopes(parameters: Map<string, string>, scopes: string[],
-        addOidcScopes?: boolean, defaultScopes?: string[])
+        correlationId: string, addOidcScopes?: boolean, defaultScopes?:
+        string[])
       parameters:
         - id: parameters
           type: Map&lt;string, string&gt;
           description: ''
         - id: scopes
           type: string[]
+          description: ''
+        - id: correlationId
+          type: string
           description: ''
         - id: addOidcScopes
           type: boolean
@@ -754,6 +742,35 @@ functions:
         - id: username
           type: string
           description: ''
+  - name: buildMergedClaims(string, string[], string)
+    uid: '@azure/msal-common.RequestParameterBuilder.buildMergedClaims'
+    package: '@azure/msal-common'
+    summary: >-
+      Parses claims JSON, merges default optional idToken claims (signin_state,
+      login_hint),
+
+      and appends client capabilities (xms_cc) to the access_token section.
+
+      Does not overwrite idToken claims already specified by the caller.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildMergedClaims(claims?: string, clientCapabilities?:
+        string[], correlationId?: string): string
+      parameters:
+        - id: claims
+          type: string
+          description: Existing claims JSON string from the request (may be undefined)
+        - id: clientCapabilities
+          type: string[]
+          description: Client capabilities array from configuration
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: Merged claims JSON string
+        type: string
   - name: instrumentBrokerParams(Map<string, string>, string, IPerformanceClient)
     uid: '@azure/msal-common.RequestParameterBuilder.instrumentBrokerParams'
     package: '@azure/msal-common'

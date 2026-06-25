@@ -300,6 +300,43 @@ methods:
         type: >-
           Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
           />&gt;
+  - name: >-
+      acquireTokenByUserFederatedIdentityCredential(UserFederatedIdentityCredentialRequest)
+    uid: >-
+      @azure/msal-node.ConfidentialClientApplication.acquireTokenByUserFederatedIdentityCredential
+    package: '@azure/msal-node'
+    summary: >-
+      Acquires a user-scoped token using the user_fic grant type (Leg 3 of Agent
+      Identity).
+
+
+      Exchanges a federated identity credential (instance token from Leg 2) for
+      a user-scoped token.
+
+      Exactly one of `userObjectId` or `username` must be provided to identify
+      the target user.
+
+
+      This method always makes a network call. Use `acquireTokenSilent` to
+      retrieve cached FIC tokens.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenByUserFederatedIdentityCredential(request:
+        UserFederatedIdentityCredentialRequest): Promise<null |
+        AuthenticationResult>
+      parameters:
+        - id: request
+          type: >-
+            <xref uid="@azure/msal-node.UserFederatedIdentityCredentialRequest"
+            />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
+          />&gt;
   - name: acquireTokenOnBehalfOf(OnBehalfOfRequest)
     uid: '@azure/msal-node.ConfidentialClientApplication.acquireTokenOnBehalfOf'
     package: '@azure/msal-node'

@@ -49,6 +49,7 @@ syntax: |
     idTokenClaims?: TokenClaims & {
       [key: string]: string | number | string[] | object | undefined | unknown
     }
+    kmsi?: boolean
     localAccountId: string
     loginHint?: string
     name?: string

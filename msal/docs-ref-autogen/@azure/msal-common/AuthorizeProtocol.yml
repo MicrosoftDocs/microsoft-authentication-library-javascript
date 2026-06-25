@@ -5,7 +5,7 @@ type: module
 package: '@azure/msal-common'
 summary: ''
 functions:
-  - name: getAuthorizationCodePayload(AuthorizeResponse, string)
+  - name: getAuthorizationCodePayload(AuthorizeResponse, string, string)
     uid: '@azure/msal-common.AuthorizeProtocol.getAuthorizationCodePayload'
     package: '@azure/msal-common'
     summary: >-
@@ -18,7 +18,7 @@ functions:
     syntax:
       content: >-
         function getAuthorizationCodePayload(serverParams: AuthorizeResponse,
-        cachedState: string): AuthorizationCodePayload
+        cachedState: string, correlationId: string): AuthorizationCodePayload
       parameters:
         - id: serverParams
           type: <xref uid="@azure/msal-common.AuthorizeResponse" />
@@ -26,10 +26,13 @@ functions:
         - id: cachedState
           type: string
           description: ''
+        - id: correlationId
+          type: string
+          description: ''
       return:
         description: ''
         type: <xref uid="@azure/msal-common.AuthorizationCodePayload" />
-  - name: validateAuthorizationResponse(AuthorizeResponse, string)
+  - name: validateAuthorizationResponse(AuthorizeResponse, string, string)
     uid: '@azure/msal-common.AuthorizeProtocol.validateAuthorizationResponse'
     package: '@azure/msal-common'
     summary: Function which validates server authorization code response.
@@ -38,11 +41,14 @@ functions:
     syntax:
       content: >-
         function validateAuthorizationResponse(serverResponse:
-        AuthorizeResponse, requestState: string)
+        AuthorizeResponse, requestState: string, correlationId: string)
       parameters:
         - id: serverResponse
           type: <xref uid="@azure/msal-common.AuthorizeResponse" />
           description: ''
         - id: requestState
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''

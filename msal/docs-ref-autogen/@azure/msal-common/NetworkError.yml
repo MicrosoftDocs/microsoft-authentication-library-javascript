@@ -330,19 +330,4 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [AuthError.prepareStackTrace](xref:@azure/msal-common.AuthError.prepareStackTrace)
-  - name: setCorrelationId(string)
-    uid: '@azure/msal-common.NetworkError.setCorrelationId'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function setCorrelationId(correlationId: string)'
-      parameters:
-        - id: correlationId
-          type: string
-          description: ''
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.setCorrelationId](xref:@azure/msal-common.AuthError.setCorrelationId)
 extends: <xref uid="@azure/msal-common.AuthError" />

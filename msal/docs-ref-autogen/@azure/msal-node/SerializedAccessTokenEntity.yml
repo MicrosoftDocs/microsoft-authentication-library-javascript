@@ -8,6 +8,7 @@ remarks: ''
 isDeprecated: false
 syntax: |
   type SerializedAccessTokenEntity = {
+    additionalCacheKeyComponents?: Record<string, string>
     cached_at: string
     client_id: string
     credential_type: string

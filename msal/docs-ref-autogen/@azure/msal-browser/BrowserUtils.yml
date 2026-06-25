@@ -5,26 +5,6 @@ type: module
 package: '@azure/msal-browser'
 summary: ''
 functions:
-  - name: addClientCapabilitiesToClaims(string, string[])
-    uid: '@azure/msal-browser.BrowserUtils.addClientCapabilitiesToClaims'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function addClientCapabilitiesToClaims(claims?: string,
-        clientCapabilities?: string[]): string
-      parameters:
-        - id: claims
-          type: string
-          description: ''
-        - id: clientCapabilities
-          type: string[]
-          description: ''
-      return:
-        description: ''
-        type: string
   - name: blockAcquireTokenInPopups()
     uid: '@azure/msal-browser.BrowserUtils.blockAcquireTokenInPopups'
     package: '@azure/msal-browser'
@@ -75,6 +55,35 @@ functions:
     isDeprecated: false
     syntax:
       content: function blockReloadInHiddenIframes()
+  - name: buildMergedClaims(string, string[], string)
+    uid: '@azure/msal-browser.BrowserUtils.buildMergedClaims'
+    package: '@azure/msal-browser'
+    summary: >-
+      Parses claims JSON, merges default optional idToken claims (signin_state,
+      login_hint),
+
+      and appends client capabilities (xms_cc) to the access_token section.
+
+      Does not overwrite idToken claims already specified by the caller.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function buildMergedClaims(claims?: string, clientCapabilities?:
+        string[], correlationId?: string): string
+      parameters:
+        - id: claims
+          type: string
+          description: Existing claims JSON string from the request (may be undefined)
+        - id: clientCapabilities
+          type: string[]
+          description: Client capabilities array from configuration
+        - id: correlationId
+          type: string
+          description: ''
+      return:
+        description: Merged claims JSON string
+        type: string
   - name: cancelPendingBridgeResponse(Logger, string)
     uid: '@azure/msal-browser.BrowserUtils.cancelPendingBridgeResponse'
     package: '@azure/msal-browser'
@@ -144,14 +153,18 @@ functions:
       return:
         description: ''
         type: string
-  - name: getHomepage()
+  - name: getHomepage(string)
     uid: '@azure/msal-browser.BrowserUtils.getHomepage'
     package: '@azure/msal-browser'
     summary: Gets the homepage url for the current window location.
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getHomepage(): string'
+      content: 'function getHomepage(correlationId?: string): string'
+      parameters:
+        - id: correlationId
+          type: string
+          description: ''
       return:
         description: ''
         type: string

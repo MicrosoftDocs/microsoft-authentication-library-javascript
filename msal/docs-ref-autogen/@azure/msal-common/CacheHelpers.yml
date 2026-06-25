@@ -7,8 +7,8 @@ summary: ''
 functions:
   - name: >-
       createAccessTokenEntity(string, string, string, string, string, string,
-      number, number, (input: string) => string, number, AuthenticationScheme,
-      string, string)
+      number, number, (input: string) => string, string, number,
+      AuthenticationScheme, string, string, Record<string, string>)
     uid: '@azure/msal-common.CacheHelpers.createAccessTokenEntity'
     package: '@azure/msal-common'
     summary: Create AccessTokenEntity
@@ -19,8 +19,10 @@ functions:
         function createAccessTokenEntity(homeAccountId: string, environment:
         string, accessToken: string, clientId: string, tenantId: string, scopes:
         string, expiresOn: number, extExpiresOn: number, base64Decode: (input:
-        string) => string, refreshOn?: number, tokenType?: AuthenticationScheme,
-        userAssertionHash?: string, keyId?: string): AccessTokenEntity
+        string) => string, correlationId: string, refreshOn?: number,
+        tokenType?: AuthenticationScheme, userAssertionHash?: string, keyId?:
+        string, additionalCacheKeyComponents?: Record<string, string>):
+        AccessTokenEntity
       parameters:
         - id: homeAccountId
           type: string
@@ -49,6 +51,9 @@ functions:
         - id: base64Decode
           type: '(input: string) =&gt; string'
           description: ''
+        - id: correlationId
+          type: string
+          description: ''
         - id: refreshOn
           type: number
           description: ''
@@ -60,6 +65,9 @@ functions:
           description: ''
         - id: keyId
           type: string
+          description: ''
+        - id: additionalCacheKeyComponents
+          type: Record&lt;string, string&gt;
           description: ''
       return:
         description: ''

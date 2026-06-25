@@ -8,16 +8,19 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: UrlString(string)
+  - name: UrlString(string, string)
     uid: '@azure/msal-common.UrlString.constructor'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'new UrlString(url: string)'
+      content: 'new UrlString(url: string, correlationId: string)'
       parameters:
         - id: url
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
 properties:
@@ -71,7 +74,7 @@ methods:
       return:
         description: ''
         type: string
-  - name: constructAuthorityUriFromObject(IUri)
+  - name: constructAuthorityUriFromObject(IUri, string)
     uid: '@azure/msal-common.UrlString.constructAuthorityUriFromObject'
     package: '@azure/msal-common'
     summary: ''
@@ -79,16 +82,19 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        static function constructAuthorityUriFromObject(urlObject: IUri):
-        UrlString
+        static function constructAuthorityUriFromObject(urlObject: IUri,
+        correlationId: string): UrlString
       parameters:
         - id: urlObject
           type: <xref uid="@azure/msal-common.IUri" />
           description: ''
+        - id: correlationId
+          type: string
+          description: ''
       return:
         description: ''
         type: <xref uid="@azure/msal-common.UrlString" />
-  - name: getAbsoluteUrl(string, string)
+  - name: getAbsoluteUrl(string, string, string)
     uid: '@azure/msal-common.UrlString.getAbsoluteUrl'
     package: '@azure/msal-common'
     summary: ''
@@ -96,8 +102,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        static function getAbsoluteUrl(relativeUrl: string, baseUrl: string):
-        string
+        static function getAbsoluteUrl(relativeUrl: string, baseUrl: string,
+        correlationId: string): string
       parameters:
         - id: relativeUrl
           type: string
@@ -105,19 +111,27 @@ methods:
         - id: baseUrl
           type: string
           description: ''
+        - id: correlationId
+          type: string
+          description: ''
       return:
         description: ''
         type: string
-  - name: getDomainFromUrl(string)
+  - name: getDomainFromUrl(string, string)
     uid: '@azure/msal-common.UrlString.getDomainFromUrl'
     package: '@azure/msal-common'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'static function getDomainFromUrl(url: string): string'
+      content: >-
+        static function getDomainFromUrl(url: string, correlationId: string):
+        string
       parameters:
         - id: url
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
       return:

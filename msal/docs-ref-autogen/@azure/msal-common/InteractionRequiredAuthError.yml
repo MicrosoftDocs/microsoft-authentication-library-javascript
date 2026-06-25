@@ -18,11 +18,14 @@ constructors:
     isDeprecated: false
     syntax:
       content: >-
-        new InteractionRequiredAuthError(errorCode?: string, errorMessage?:
-        string, subError?: string, timestamp?: string, traceId?: string,
-        correlationId?: string, claims?: string, errorNo?: string)
+        new InteractionRequiredAuthError(errorCode: string, correlationId:
+        string, errorMessage?: string, subError?: string, timestamp?: string,
+        traceId?: string, claims?: string, errorNo?: string)
       parameters:
         - id: errorCode
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
         - id: errorMessage
@@ -35,9 +38,6 @@ constructors:
           type: string
           description: ''
         - id: traceId
-          type: string
-          description: ''
-        - id: correlationId
           type: string
           description: ''
         - id: claims
@@ -377,19 +377,4 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [AuthError.prepareStackTrace](xref:@azure/msal-common.AuthError.prepareStackTrace)
-  - name: setCorrelationId(string)
-    uid: '@azure/msal-common.InteractionRequiredAuthError.setCorrelationId'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function setCorrelationId(correlationId: string)'
-      parameters:
-        - id: correlationId
-          type: string
-          description: ''
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.setCorrelationId](xref:@azure/msal-common.AuthError.setCorrelationId)
 extends: <xref uid="@azure/msal-common.AuthError" />

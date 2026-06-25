@@ -8,16 +8,19 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: ClientConfigurationError(string)
+  - name: ClientConfigurationError(string, string)
     uid: '@azure/msal-browser.ClientConfigurationError.constructor'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'new ClientConfigurationError(errorCode: string)'
+      content: 'new ClientConfigurationError(errorCode: string, correlationId: string)'
       parameters:
         - id: errorCode
+          type: string
+          description: ''
+        - id: correlationId
           type: string
           description: ''
 inheritedProperties:
@@ -285,19 +288,4 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [AuthError.prepareStackTrace](xref:@azure/msal-browser.AuthError.prepareStackTrace)
-  - name: setCorrelationId(string)
-    uid: '@azure/msal-browser.ClientConfigurationError.setCorrelationId'
-    package: '@azure/msal-browser'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function setCorrelationId(correlationId: string)'
-      parameters:
-        - id: correlationId
-          type: string
-          description: ''
-    inheritanceDescription: >-
-      <b>Inherited From</b>
-      [AuthError.setCorrelationId](xref:@azure/msal-browser.AuthError.setCorrelationId)
 extends: <xref uid="@azure/msal-browser.AuthError" />
