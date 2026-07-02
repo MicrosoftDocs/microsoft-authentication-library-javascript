@@ -158,7 +158,7 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.3.0"'
+      content: 'version: "5.3.1"'
       return:
         description: ''
-        type: '"<xref uid="5.3.0" />"'
+        type: '"<xref uid="5.3.1" />"'

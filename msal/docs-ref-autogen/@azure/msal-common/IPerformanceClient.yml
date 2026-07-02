@@ -25,6 +25,18 @@ methods:
         - id: correlationId
           type: string
           description: ''
+  - name: 'addGlobalFields({[key: string]: {} | undefined})'
+    uid: '@azure/msal-common.IPerformanceClient.addGlobalFields'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function addGlobalFields(fields: {[key: string]: {} | undefined})'
+      parameters:
+        - id: fields
+          type: '{[key: string]: {} | undefined}'
+          description: ''
   - name: addPerformanceCallback(PerformanceCallbackFunction)
     uid: '@azure/msal-common.IPerformanceClient.addPerformanceCallback'
     package: '@azure/msal-common'

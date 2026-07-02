@@ -63,6 +63,25 @@ methods:
         - id: correlationId
           type: string
           description: ''
+  - name: 'addGlobalFields({[key: string]: {} | undefined})'
+    uid: '@azure/msal-common.PerformanceClient.addGlobalFields'
+    package: '@azure/msal-common'
+    summary: >-
+      Saves fields to be emitted on every event measured by this client.
+
+      Unlike addFields, these are not scoped to a single correlationId and
+      persist for the
+
+      lifetime of the client (e.g. previousLibraryVersion for upgrade/downgrade
+      telemetry).
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function addGlobalFields(fields: {[key: string]: {} | undefined})'
+      parameters:
+        - id: fields
+          type: '{[key: string]: {} | undefined}'
+          description: ''
   - name: addPerformanceCallback(PerformanceCallbackFunction)
     uid: '@azure/msal-common.PerformanceClient.addPerformanceCallback'
     package: '@azure/msal-common'

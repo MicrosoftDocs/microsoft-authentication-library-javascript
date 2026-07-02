@@ -14,6 +14,7 @@ syntax: |
     clientId: string
     embeddedClientId?: string
     homeAccountIdentifier?: string
+    resource?: string
     resourceRequestMethod?: string
     resourceRequestUri?: string
     scopes: string[]

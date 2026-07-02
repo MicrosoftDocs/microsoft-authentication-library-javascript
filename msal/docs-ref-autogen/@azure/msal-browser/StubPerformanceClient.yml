@@ -16,6 +16,14 @@ methods:
     isDeprecated: false
     syntax:
       content: function addFields()
+  - name: addGlobalFields()
+    uid: '@azure/msal-browser.StubPerformanceClient.addGlobalFields'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: function addGlobalFields()
   - name: addPerformanceCallback()
     uid: '@azure/msal-browser.StubPerformanceClient.addPerformanceCallback'
     package: '@azure/msal-browser'
