@@ -308,6 +308,17 @@ variables:
       return:
         description: ''
         type: '"invalid_pop_token_request"'
+  - name: invalidPublicJwk
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.invalidPublicJwk'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidPublicJwk: "invalid_public_jwk"'
+      return:
+        description: ''
+        type: '"invalid_public_jwk"'
   - name: nativeConnectionNotEstablished
     uid: '@azure/msal-browser.BrowserAuthErrorCodes.nativeConnectionNotEstablished'
     package: '@azure/msal-browser'
@@ -418,6 +429,17 @@ variables:
       return:
         description: ''
         type: '"pkce_not_created"'
+  - name: popupRelayUnsupportedFlow
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.popupRelayUnsupportedFlow'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'popupRelayUnsupportedFlow: "popup_relay_unsupported_flow"'
+      return:
+        description: ''
+        type: '"popup_relay_unsupported_flow"'
   - name: popupWindowError
     uid: '@azure/msal-browser.BrowserAuthErrorCodes.popupWindowError'
     package: '@azure/msal-browser'

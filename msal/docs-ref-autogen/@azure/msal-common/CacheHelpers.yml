@@ -301,3 +301,22 @@ functions:
       return:
         description: ''
         type: boolean
+  - name: serializeAttributeTokens(string[])
+    uid: '@azure/msal-common.CacheHelpers.serializeAttributeTokens'
+    package: '@azure/msal-common'
+    summary: |-
+      Serialize attribute tokens synchronously (sort and join).
+      This is a sync-only operation for use at request construction time.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function serializeAttributeTokens(attributeTokens?: string[]): string |
+        undefined
+      parameters:
+        - id: attributeTokens
+          type: string[]
+          description: array of tokens
+      return:
+        description: serialized partition string or undefined if no tokens
+        type: string | undefined

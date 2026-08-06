@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: PopupRelayOptions
+uid: '@azure/msal-browser.PopupRelayOptions'
+package: '@azure/msal-browser'
+summary: Options for [runPopupRelay](xref:@azure/msal-browser.runPopupRelay).
+fullName: PopupRelayOptions
+remarks: ''
+isDeprecated: false
+syntax: |
+  type PopupRelayOptions = {
+    popupWindowAttributes?: PopupWindowAttributes
+    timeoutMs?: number
+  }

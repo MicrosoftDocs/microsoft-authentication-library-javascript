@@ -8,7 +8,9 @@ remarks: ''
 isDeprecated: false
 type: class
 constructors:
-  - name: MsalBroadcastService(IPublicClientApplication, MsalBroadcastConfiguration)
+  - name: >-
+      MsalBroadcastService(IPublicClientApplication, NgZone,
+      MsalBroadcastConfiguration)
     uid: '@azure/msal-angular.MsalBroadcastService.constructor'
     package: '@azure/msal-angular'
     summary: ''
@@ -16,11 +18,14 @@ constructors:
     isDeprecated: false
     syntax:
       content: >-
-        new MsalBroadcastService(msalInstance: IPublicClientApplication,
-        msalBroadcastConfig?: MsalBroadcastConfiguration)
+        new MsalBroadcastService(msalInstance: IPublicClientApplication, ngZone:
+        NgZone, msalBroadcastConfig?: MsalBroadcastConfiguration)
       parameters:
         - id: msalInstance
           type: <xref uid="@azure/msal-browser.IPublicClientApplication" />
+          description: ''
+        - id: ngZone
+          type: NgZone
           description: ''
         - id: msalBroadcastConfig
           type: <xref uid="@azure/msal-angular.MsalBroadcastConfiguration" />
@@ -59,14 +64,14 @@ properties:
     isDeprecated: false
     syntax:
       content: >-
-        static ɵfac: ɵɵFactoryDeclaration<MsalBroadcastService, [null, {
+        static ɵfac: ɵɵFactoryDeclaration<MsalBroadcastService, [null, null, {
         optional: true }]>
       return:
         description: ''
         type: >-
           ɵɵFactoryDeclaration&lt;<xref
-          uid="@azure/msal-angular.MsalBroadcastService" />, [null, { optional:
-          true }]&gt;
+          uid="@azure/msal-angular.MsalBroadcastService" />, [null, null, {
+          optional: true }]&gt;
   - name: ɵprov
     uid: '@azure/msal-angular.MsalBroadcastService.ɵprov'
     package: '@azure/msal-angular'

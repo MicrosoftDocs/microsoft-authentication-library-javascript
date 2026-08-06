@@ -8,6 +8,7 @@ remarks: ''
 isDeprecated: false
 syntax: |
   type RequestThumbprint = {
+    attributeTokens?: string
     authenticationScheme?: AuthenticationScheme
     authority: string
     claims?: string

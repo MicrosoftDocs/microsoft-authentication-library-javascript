@@ -2,7 +2,9 @@
 name: SignedHttpRequestParameters
 uid: '@azure/msal-common.SignedHttpRequestParameters'
 package: '@azure/msal-common'
-summary: ''
+summary: |-
+  Parameters used by crypto implementations to build signed HTTP request
+  proof-of-possession tokens.
 fullName: SignedHttpRequestParameters
 remarks: ''
 isDeprecated: false

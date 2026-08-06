@@ -22,6 +22,33 @@ functions:
         - id: appTelemetry
           type: <xref uid="@azure/msal-common.ApplicationTelemetry" />
           description: ''
+  - name: addAttributeTokens(Map<string, string>, string[])
+    uid: '@azure/msal-common.RequestParameterBuilder.addAttributeTokens'
+    package: '@azure/msal-common'
+    summary: >-
+      Add the `attribute_tokens` parameter to a /token request body.
+
+
+      When `attributeTokens` is a non-empty array the values are sorted
+      lexicographically and joined
+
+      with a single space, then written to the request body. When
+      `attributeTokens` is an empty array
+
+      the parameter is deleted from the request body.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addAttributeTokens(parameters: Map<string, string>,
+        attributeTokens: string[])
+      parameters:
+        - id: parameters
+          type: Map&lt;string, string&gt;
+          description: request parameter map that will be serialized into the /token body
+        - id: attributeTokens
+          type: string[]
+          description: caller-provided attribute token strings
   - name: addAuthorizationCode(Map<string, string>, string)
     uid: '@azure/msal-common.RequestParameterBuilder.addAuthorizationCode'
     package: '@azure/msal-common'
@@ -91,7 +118,7 @@ functions:
         - id: loginHint
           type: string
           description: ''
-  - name: addClaims(Map<string, string>, string, string, string[], boolean)
+  - name: addClaims(Map<string, string>, string, string, string[], boolean, string)
     uid: '@azure/msal-common.RequestParameterBuilder.addClaims'
     package: '@azure/msal-common'
     summary: >-
@@ -105,7 +132,7 @@ functions:
       content: >-
         function addClaims(parameters: Map<string, string>, correlationId:
         string, claims?: string, clientCapabilities?: string[],
-        skipBrokerClaims?: boolean)
+        skipBrokerClaims?: boolean, claimsToMerge?: string)
       parameters:
         - id: parameters
           type: Map&lt;string, string&gt;
@@ -124,6 +151,12 @@ functions:
           description: >-
             When true and BROKER_CLIENT_ID is present, excludes
             clientCapabilities from claims
+        - id: claimsToMerge
+          type: string
+          description: >-
+            Optional client-originated claims JSON string (e.g.
+            `claimsFromClient`) deep-merged into `claims` with precedence on
+            conflicts
   - name: addCliData(Map<string, string>)
     uid: '@azure/msal-common.RequestParameterBuilder.addCliData'
     package: '@azure/msal-common'
@@ -742,14 +775,20 @@ functions:
         - id: username
           type: string
           description: ''
-  - name: buildMergedClaims(string, string[], string)
+  - name: buildMergedClaims(string, string[], string, string)
     uid: '@azure/msal-common.RequestParameterBuilder.buildMergedClaims'
     package: '@azure/msal-common'
     summary: >-
-      Parses claims JSON, merges default optional idToken claims (signin_state,
-      login_hint),
+      Parses claims JSON, optionally deep-merges a second client-originated
+      claims string
 
-      and appends client capabilities (xms_cc) to the access_token section.
+      (`claimsToMerge`, e.g. `claimsFromClient`) with precedence on conflicting
+      keys, merges
+
+      default optional idToken claims (signin_state, login_hint), and appends
+      client
+
+      capabilities (xms_cc) to the access_token section.
 
       Does not overwrite idToken claims already specified by the caller.
     remarks: ''
@@ -757,7 +796,7 @@ functions:
     syntax:
       content: >-
         function buildMergedClaims(claims?: string, clientCapabilities?:
-        string[], correlationId?: string): string
+        string[], correlationId?: string, claimsToMerge?: string): string
       parameters:
         - id: claims
           type: string
@@ -767,7 +806,18 @@ functions:
           description: Client capabilities array from configuration
         - id: correlationId
           type: string
-          description: ''
+          description: The request correlation id
+        - id: claimsToMerge
+          type: string
+          description: >-
+            Optional second claims JSON string (e.g. client-originated
+            `claimsFromClient`)
+
+            deep-merged into `claims` with precedence on conflicts; parsed and
+            validated when present. Nested
+
+            objects are merged recursively; arrays and scalar values are
+            replaced.
       return:
         description: Merged claims JSON string
         type: string

@@ -2,10 +2,7 @@
 name: PkceCodes
 uid: '@azure/msal-common.PkceCodes'
 package: '@azure/msal-common'
-summary: |-
-  The PkceCodes type describes the structure
-  of objects that contain PKCE code
-  challenge and verifier pairs
+summary: PKCE code verifier and challenge pair used by authorization code flows.
 fullName: PkceCodes
 remarks: ''
 isDeprecated: false

@@ -16,6 +16,17 @@ variables:
       return:
         description: ''
         type: '"access_token"'
+  - name: ATTRIBUTE_TOKENS
+    uid: '@azure/msal-common.AADServerParamKeys.ATTRIBUTE_TOKENS'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'ATTRIBUTE_TOKENS: "attribute_tokens"'
+      return:
+        description: ''
+        type: '"attribute_tokens"'
   - name: BROKER_CLIENT_ID
     uid: '@azure/msal-common.AADServerParamKeys.BROKER_CLIENT_ID'
     package: '@azure/msal-common'

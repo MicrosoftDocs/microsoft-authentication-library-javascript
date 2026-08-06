@@ -10,7 +10,7 @@ type: class
 constructors:
   - name: >-
       MsalInterceptor(MsalInterceptorConfiguration, MsalService, Location,
-      MsalBroadcastService, any)
+      MsalBroadcastService, Document)
     uid: '@azure/msal-angular.MsalInterceptor.constructor'
     package: '@azure/msal-angular'
     summary: ''
@@ -20,7 +20,7 @@ constructors:
       content: >-
         new MsalInterceptor(msalInterceptorConfig: MsalInterceptorConfiguration,
         authService: MsalService, location: Location, msalBroadcastService:
-        MsalBroadcastService, document?: any)
+        MsalBroadcastService, document: Document)
       parameters:
         - id: msalInterceptorConfig
           type: <xref uid="@azure/msal-angular.MsalInterceptorConfiguration" />
@@ -35,7 +35,7 @@ constructors:
           type: <xref uid="@azure/msal-angular.MsalBroadcastService" />
           description: ''
         - id: document
-          type: any
+          type: Document
           description: ''
 properties:
   - name: ɵfac

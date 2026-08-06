@@ -2,7 +2,10 @@
 name: MsalRedirectComponent
 uid: '@azure/msal-angular.MsalRedirectComponent'
 package: '@azure/msal-angular'
-summary: ''
+summary: |-
+  This is a dedicated redirect component to be added to Angular apps to
+  handle redirects when using @azure/msal-angular.
+  Import this component to use redirects in your app.
 fullName: MsalRedirectComponent
 remarks: ''
 isDeprecated: false

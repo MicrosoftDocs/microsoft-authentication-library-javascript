@@ -131,6 +131,28 @@ variables:
       return:
         description: ''
         type: '"invalid_code_challenge_method"'
+  - name: invalidDpopHtm
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.invalidDpopHtm'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidDpopHtm: "invalid_dpop_htm"'
+      return:
+        description: ''
+        type: '"invalid_dpop_htm"'
+  - name: invalidDpopHtu
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.invalidDpopHtu'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidDpopHtu: "invalid_dpop_htu"'
+      return:
+        description: ''
+        type: '"invalid_dpop_htu"'
   - name: invalidPlatformBrokerConfiguration
     uid: >-
       @azure/msal-browser.ClientConfigurationErrorCodes.invalidPlatformBrokerConfiguration
@@ -157,6 +179,17 @@ variables:
       return:
         description: ''
         type: '"invalid_request_method_for_EAR"'
+  - name: invalidResponseMode
+    uid: '@azure/msal-browser.ClientConfigurationErrorCodes.invalidResponseMode'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidResponseMode: "invalid_response_mode"'
+      return:
+        description: ''
+        type: '"invalid_response_mode"'
   - name: issuerValidationFailed
     uid: '@azure/msal-browser.ClientConfigurationErrorCodes.issuerValidationFailed'
     package: '@azure/msal-browser'

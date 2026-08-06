@@ -55,14 +55,20 @@ functions:
     isDeprecated: false
     syntax:
       content: function blockReloadInHiddenIframes()
-  - name: buildMergedClaims(string, string[], string)
+  - name: buildMergedClaims(string, string[], string, string)
     uid: '@azure/msal-browser.BrowserUtils.buildMergedClaims'
     package: '@azure/msal-browser'
     summary: >-
-      Parses claims JSON, merges default optional idToken claims (signin_state,
-      login_hint),
+      Parses claims JSON, optionally deep-merges a second client-originated
+      claims string
 
-      and appends client capabilities (xms_cc) to the access_token section.
+      (`claimsToMerge`, e.g. `claimsFromClient`) with precedence on conflicting
+      keys, merges
+
+      default optional idToken claims (signin_state, login_hint), and appends
+      client
+
+      capabilities (xms_cc) to the access_token section.
 
       Does not overwrite idToken claims already specified by the caller.
     remarks: ''
@@ -70,7 +76,7 @@ functions:
     syntax:
       content: >-
         function buildMergedClaims(claims?: string, clientCapabilities?:
-        string[], correlationId?: string): string
+        string[], correlationId?: string, claimsToMerge?: string): string
       parameters:
         - id: claims
           type: string
@@ -80,7 +86,18 @@ functions:
           description: Client capabilities array from configuration
         - id: correlationId
           type: string
-          description: ''
+          description: The request correlation id
+        - id: claimsToMerge
+          type: string
+          description: >-
+            Optional second claims JSON string (e.g. client-originated
+            `claimsFromClient`)
+
+            deep-merged into `claims` with precedence on conflicts; parsed and
+            validated when present. Nested
+
+            objects are merged recursively; arrays and scalar values are
+            replaced.
       return:
         description: Merged claims JSON string
         type: string

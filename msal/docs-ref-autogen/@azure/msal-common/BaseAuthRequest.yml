@@ -8,6 +8,7 @@ remarks: ''
 isDeprecated: false
 syntax: |
   type BaseAuthRequest = {
+    attributeTokens?: string[]
     authenticationScheme?: AuthenticationScheme
     authority: string
     azureCloudOptions?: AzureCloudOptions

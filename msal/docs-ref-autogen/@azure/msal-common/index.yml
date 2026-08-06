@@ -172,7 +172,11 @@ variables:
   - name: DEFAULT_CRYPTO_IMPLEMENTATION
     uid: '@azure/msal-common.DEFAULT_CRYPTO_IMPLEMENTATION'
     package: '@azure/msal-common'
-    summary: ''
+    summary: >-
+      Default crypto implementation used when a platform-specific implementation
+      has
+
+      not been provided.
     remarks: ''
     isDeprecated: false
     syntax:
@@ -220,10 +224,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "16.11.0"'
+      content: 'version: "16.12.0"'
       return:
         description: ''
-        type: '"<xref uid="16.11.0" />"'
+        type: '"<xref uid="16.12.0" />"'
 functions:
   - name: 'buildClientInfo(string, (input: string) => string)'
     uid: '@azure/msal-common.buildClientInfo'

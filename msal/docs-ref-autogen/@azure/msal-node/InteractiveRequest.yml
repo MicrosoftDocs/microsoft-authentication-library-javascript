@@ -13,6 +13,7 @@ syntax: |
     errorTemplate?: string
     loopbackClient?: ILoopbackClient
     openBrowser: (url: string) => Promise<void>
+    preferredPort?: number
     scopes?: string[]
     successTemplate?: string
     windowHandle?: Buffer

@@ -6,6 +6,10 @@ summary: Options allowed by network request APIs.
 fullName: NetworkRequestOptions
 remarks: ''
 isDeprecated: false
-syntax: >
-  type NetworkRequestOptions = { body?: string; headers?: Record<string, string>
+syntax: |
+  type NetworkRequestOptions = {
+    body?: string
+    correlationId?: string
+    headers?: Record<string, string>
+    performanceClient?: IPerformanceClient
   }

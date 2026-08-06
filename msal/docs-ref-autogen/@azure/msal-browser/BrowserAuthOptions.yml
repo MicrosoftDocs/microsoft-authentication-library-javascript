@@ -19,6 +19,7 @@ syntax: |
     isMcp?: boolean
     knownAuthorities?: string[]
     onRedirectNavigate?: (url: string) => boolean | void
+    popupRelayUri?: string
     postLogoutRedirectUri?: string | null
     redirectUri?: string
     verifySSO?: boolean

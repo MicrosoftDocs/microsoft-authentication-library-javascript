@@ -670,6 +670,11 @@
       no-loc:
         - PopupPosition
       items: []
+    - uid: '@azure/msal-browser.PopupRelayOptions'
+      name: PopupRelayOptions
+      no-loc:
+        - PopupRelayOptions
+      items: []
     - uid: '@azure/msal-browser.PopupRequest'
       name: PopupRequest
       no-loc:

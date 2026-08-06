@@ -53,7 +53,9 @@ methods:
           description: ''
         - id: options
           type: <xref uid="@azure/msal-node.NetworkRequestOptions" />
-          description: Headers and/or body to include on the request
+          description: >-
+            Headers, body, and optional telemetry context to include on the
+            request
       return:
         description: ''
         type: >-
