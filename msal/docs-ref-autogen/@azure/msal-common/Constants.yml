@@ -790,10 +790,12 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'JsonWebTokenTypes: { Jwk: "JWK", Jwt: "JWT", Pop: "pop" }'
+      content: >-
+        JsonWebTokenTypes: { Dpop: "dpop+jwt", Jwk: "JWK", Jwt: "JWT", Pop:
+        "pop" }
       return:
         description: ''
-        type: '{ Jwk: "JWK", Jwt: "JWT", Pop: "pop" }'
+        type: '{ Dpop: "dpop+jwt", Jwk: "JWK", Jwt: "JWT", Pop: "pop" }'
   - name: KNOWN_PUBLIC_CLOUDS
     uid: '@azure/msal-common.Constants.KNOWN_PUBLIC_CLOUDS'
     package: '@azure/msal-common'

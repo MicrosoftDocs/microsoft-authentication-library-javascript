@@ -20,4 +20,10 @@ syntax: |
       | "resourceRequestUri"
       | "storeInCache"
     >
-  > & { code: string; redirectUri: string; scopes: string[]; state?: string }
+  > & {
+    code: string
+    nonce?: string
+    redirectUri: string
+    scopes: string[]
+    state?: string
+  }

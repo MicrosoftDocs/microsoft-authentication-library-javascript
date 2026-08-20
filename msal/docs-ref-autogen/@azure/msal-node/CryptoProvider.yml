@@ -54,14 +54,18 @@ methods:
       return:
         description: ''
         type: string
-  - name: clearKeystore()
+  - name: clearKeystore(string)
     uid: '@azure/msal-node.CryptoProvider.clearKeystore'
     package: '@azure/msal-node'
     summary: Removes all cryptographic keys from Keystore
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function clearKeystore(): Promise<boolean>'
+      content: 'function clearKeystore(correlationId: string): Promise<boolean>'
+      parameters:
+        - id: correlationId
+          type: string
+          description: correlation id
       return:
         description: ''
         type: Promise&lt;boolean&gt;
@@ -98,19 +102,6 @@ methods:
       return:
         description: ''
         type: Promise&lt;<xref uid="@azure/msal-common.PkceCodes" />&gt;
-  - name: getPublicKeyThumbprint()
-    uid: '@azure/msal-node.CryptoProvider.getPublicKeyThumbprint'
-    package: '@azure/msal-node'
-    summary: >-
-      Generates a keypair, stores it and returns a thumbprint - not yet
-      implemented for node
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function getPublicKeyThumbprint(): Promise<string>'
-      return:
-        description: ''
-        type: Promise&lt;string&gt;
   - name: hashString(string)
     uid: '@azure/msal-node.CryptoProvider.hashString'
     package: '@azure/msal-node'
@@ -126,27 +117,51 @@ methods:
       return:
         description: ''
         type: Promise&lt;string&gt;
-  - name: removeTokenBindingKey()
+  - name: removeTokenBindingKey(string, string)
     uid: '@azure/msal-node.CryptoProvider.removeTokenBindingKey'
     package: '@azure/msal-node'
     summary: Removes cryptographic keypair from key store matching the keyId passed in
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function removeTokenBindingKey(): Promise<void>'
+      content: >-
+        function removeTokenBindingKey(kid: string, correlationId: string):
+        Promise<void>
+      parameters:
+        - id: kid
+          type: string
+          description: public key id
+        - id: correlationId
+          type: string
+          description: correlation id
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: signJwt()
-    uid: '@azure/msal-node.CryptoProvider.signJwt'
+  - name: signTokenBindingJwt(object, object, string, string)
+    uid: '@azure/msal-node.CryptoProvider.signTokenBindingJwt'
     package: '@azure/msal-node'
     summary: >-
-      Signs the given object as a jwt payload with private key retrieved by
-      given kid - currently not implemented for node
+      Signs a compact JWT with a token-binding key - not yet implemented for
+      node
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function signJwt(): Promise<string>'
+      content: >-
+        function signTokenBindingJwt(header: object, payload: object, kid:
+        string, correlationId: string): Promise<string>
+      parameters:
+        - id: header
+          type: object
+          description: JOSE header
+        - id: payload
+          type: object
+          description: JWT payload
+        - id: kid
+          type: string
+          description: public key id
+        - id: correlationId
+          type: string
+          description: correlation id
       return:
         description: ''
         type: Promise&lt;string&gt;

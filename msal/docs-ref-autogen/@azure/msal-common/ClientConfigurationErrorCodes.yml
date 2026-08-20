@@ -277,6 +277,18 @@ variables:
       return:
         description: ''
         type: '"token_request_empty"'
+  - name: unsupportedAuthenticationScheme
+    uid: >-
+      @azure/msal-common.ClientConfigurationErrorCodes.unsupportedAuthenticationScheme
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'unsupportedAuthenticationScheme: "unsupported_authentication_scheme"'
+      return:
+        description: ''
+        type: '"unsupported_authentication_scheme"'
   - name: untrustedAuthority
     uid: '@azure/msal-common.ClientConfigurationErrorCodes.untrustedAuthority'
     package: '@azure/msal-common'

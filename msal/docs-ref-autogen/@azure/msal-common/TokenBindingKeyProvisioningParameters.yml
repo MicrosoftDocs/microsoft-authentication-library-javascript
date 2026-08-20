@@ -1,0 +1,18 @@
+### YamlMime:TSTypeAlias
+name: TokenBindingKeyProvisioningParameters
+uid: '@azure/msal-common.TokenBindingKeyProvisioningParameters'
+package: '@azure/msal-common'
+summary: |-
+  Parameters used by token-binding key managers to provision browser-managed
+  token-binding keys. Callers own the protocol policy (key type and JOSE
+  algorithm); implementations generate, store, retrieve, and use the requested
+  key material by key identifier.
+fullName: TokenBindingKeyProvisioningParameters
+remarks: ''
+isDeprecated: false
+syntax: |
+  type TokenBindingKeyProvisioningParameters = {
+    correlationId: string
+    tokenBindingKeyAlgorithm: string
+    tokenBindingKeyType: string
+  }

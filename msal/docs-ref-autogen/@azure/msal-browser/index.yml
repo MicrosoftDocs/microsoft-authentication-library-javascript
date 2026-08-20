@@ -354,10 +354,12 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'JsonWebTokenTypes: { Jwk: "JWK", Jwt: "JWT", Pop: "pop" }'
+      content: >-
+        JsonWebTokenTypes: { Dpop: "dpop+jwt", Jwk: "JWK", Jwt: "JWT", Pop:
+        "pop" }
       return:
         description: ''
-        type: '{ Jwk: "JWK", Jwt: "JWT", Pop: "pop" }'
+        type: '{ Dpop: "dpop+jwt", Jwk: "JWK", Jwt: "JWT", Pop: "pop" }'
   - name: ProtocolMode
     uid: '@azure/msal-browser.ProtocolMode'
     package: '@azure/msal-browser'
@@ -450,10 +452,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.18.0"'
+      content: 'version: "5.19.0"'
       return:
         description: ''
-        type: '"<xref uid="5.18.0" />"'
+        type: '"<xref uid="5.19.0" />"'
 functions:
   - name: >-
       createNestablePublicClientApplication(Configuration, string,

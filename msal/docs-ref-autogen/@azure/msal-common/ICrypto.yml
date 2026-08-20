@@ -94,23 +94,6 @@ methods:
       return:
         description: Base64Url encoded public key
         type: string
-  - name: getPublicKeyThumbprint(SignedHttpRequestParameters)
-    uid: '@azure/msal-common.ICrypto.getPublicKeyThumbprint'
-    package: '@azure/msal-common'
-    summary: Generates an JWK RSA S256 Thumbprint
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function getPublicKeyThumbprint(request: SignedHttpRequestParameters):
-        Promise<string>
-      parameters:
-        - id: request
-          type: <xref uid="@azure/msal-common.SignedHttpRequestParameters" />
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;string&gt;
   - name: hashString(string)
     uid: '@azure/msal-common.ICrypto.hashString'
     package: '@azure/msal-common'
@@ -146,31 +129,3 @@ methods:
       return:
         description: ''
         type: Promise&lt;void&gt;
-  - name: signJwt(SignedHttpRequest, string, ShrOptions, string)
-    uid: '@azure/msal-common.ICrypto.signJwt'
-    package: '@azure/msal-common'
-    summary: >-
-      Returns a signed proof-of-possession token with a given acces token that
-      contains a cnf claim with the required kid.
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function signJwt(payload: SignedHttpRequest, kid: string, shrOptions?:
-        ShrOptions, correlationId?: string): Promise<string>
-      parameters:
-        - id: payload
-          type: <xref uid="@azure/msal-common.SignedHttpRequest" />
-          description: ''
-        - id: kid
-          type: string
-          description: ''
-        - id: shrOptions
-          type: <xref uid="@azure/msal-common.ShrOptions" />
-          description: ''
-        - id: correlationId
-          type: string
-          description: ''
-      return:
-        description: ''
-        type: Promise&lt;string&gt;

@@ -1722,6 +1722,11 @@
       no-loc:
         - TimeUtils
       items: []
+    - uid: '@azure/msal-common.TokenBindingKeyProvisioningParameters'
+      name: TokenBindingKeyProvisioningParameters
+      no-loc:
+        - TokenBindingKeyProvisioningParameters
+      items: []
     - uid: '@azure/msal-common.TokenCacheContext'
       name: TokenCacheContext
       no-loc:

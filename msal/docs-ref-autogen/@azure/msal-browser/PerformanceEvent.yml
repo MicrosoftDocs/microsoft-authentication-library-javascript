@@ -159,6 +159,8 @@ syntax: |
     status: PerformanceEventStatus
     subErrorCode?: string
     success?: boolean | null
+    tokenBindingKeyAlgorithm?: string
+    tokenBindingKeyType?: string
     ttlExpiredATCount?: number
     ttlExpiredAcntCount?: number
     ttlExpiredITCount?: number

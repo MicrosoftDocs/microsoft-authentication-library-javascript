@@ -539,6 +539,31 @@ variables:
       return:
         description: ''
         type: '"timed_out"'
+  - name: tokenBindingKeyAlgorithmMismatch
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.tokenBindingKeyAlgorithmMismatch'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tokenBindingKeyAlgorithmMismatch: "token_binding_key_algorithm_mismatch"'
+      return:
+        description: ''
+        type: '"token_binding_key_algorithm_mismatch"'
+  - name: tokenBindingKeyJwkThumbprintMismatch
+    uid: >-
+      @azure/msal-browser.BrowserAuthErrorCodes.tokenBindingKeyJwkThumbprintMismatch
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        tokenBindingKeyJwkThumbprintMismatch:
+        "token_binding_key_jwk_thumbprint_mismatch"
+      return:
+        description: ''
+        type: '"token_binding_key_jwk_thumbprint_mismatch"'
   - name: unableToAcquireTokenFromNativePlatform
     uid: >-
       @azure/msal-browser.BrowserAuthErrorCodes.unableToAcquireTokenFromNativePlatform
@@ -603,6 +628,17 @@ variables:
       return:
         description: ''
         type: '"uninitialized_public_client_application"'
+  - name: unsupportedTokenBindingAlgorithm
+    uid: '@azure/msal-browser.BrowserAuthErrorCodes.unsupportedTokenBindingAlgorithm'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'unsupportedTokenBindingAlgorithm: "unsupported_token_binding_algorithm"'
+      return:
+        description: ''
+        type: '"unsupported_token_binding_algorithm"'
   - name: userCancelled
     uid: '@azure/msal-browser.BrowserAuthErrorCodes.userCancelled'
     package: '@azure/msal-browser'

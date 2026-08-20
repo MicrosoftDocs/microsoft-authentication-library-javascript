@@ -72,6 +72,7 @@ typeAliases:
   - '@azure/msal-common.SystemOptions'
   - '@azure/msal-common.TenantProfile'
   - '@azure/msal-common.ThrottlingEntity'
+  - '@azure/msal-common.TokenBindingKeyProvisioningParameters'
   - '@azure/msal-common.TokenClaims'
   - '@azure/msal-common.TokenKeys'
   - '@azure/msal-common.AppTokenProviderParameters'
@@ -224,10 +225,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "16.12.0"'
+      content: 'version: "16.13.0"'
       return:
         description: ''
-        type: '"<xref uid="16.12.0" />"'
+        type: '"<xref uid="16.13.0" />"'
 functions:
   - name: 'buildClientInfo(string, (input: string) => string)'
     uid: '@azure/msal-common.buildClientInfo'
