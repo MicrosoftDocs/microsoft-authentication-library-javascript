@@ -87,7 +87,7 @@ variables:
       content: >-
         AzureCloudInstance: { AzureChina: "https://login.chinacloudapi.cn",
         AzureGermany: "https://login.microsoftonline.de", AzurePpe:
-        "https://login.windows-ppe.net", AzurePublic:
+        "https://login.windows.net", AzurePublic:
         "https://login.microsoftonline.com", AzureUsGovernment:
         "https://login.microsoftonline.us", None: "none" }
       return:
@@ -95,7 +95,7 @@ variables:
         type: >-
           { AzureChina: "https:<xref uid="//login.chinacloudapi.cn" />",
           AzureGermany: "https:<xref uid="//login.microsoftonline.de" />",
-          AzurePpe: "https:<xref uid="//login.windows-ppe.net" />", AzurePublic:
+          AzurePpe: "https:<xref uid="//login.windows.net" />", AzurePublic:
           "https:<xref uid="//login.microsoftonline.com" />", AzureUsGovernment:
           "https:<xref uid="//login.microsoftonline.us" />", None: "none" }
   - name: ManagedIdentitySourceNames
