@@ -74,6 +74,17 @@ variables:
       return:
         description: ''
         type: '"client_info_empty_error"'
+  - name: dpopTokenTypeMismatch
+    uid: '@azure/msal-common.ClientAuthErrorCodes.dpopTokenTypeMismatch'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dpopTokenTypeMismatch: "dpop_token_type_mismatch"'
+      return:
+        description: ''
+        type: '"dpop_token_type_mismatch"'
   - name: emptyInputScopeSet
     uid: '@azure/msal-common.ClientAuthErrorCodes.emptyInputScopeSet'
     package: '@azure/msal-common'

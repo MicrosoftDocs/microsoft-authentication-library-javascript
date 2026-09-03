@@ -115,6 +115,7 @@ interfaces:
   - '@azure/msal-browser.INetworkModule'
   - '@azure/msal-browser.IPerformanceClient'
   - '@azure/msal-browser.IPublicClientApplication'
+  - '@azure/msal-browser.IWebBrokerBridgeMessage'
   - '@azure/msal-browser.IWindowStorage'
   - '@azure/msal-browser.AuthMethodDetails'
   - '@azure/msal-browser.AuthenticationMethod'
@@ -230,10 +231,12 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'AuthenticationScheme: { BEARER: "Bearer", POP: "pop", SSH: "ssh-cert" }'
+      content: >-
+        AuthenticationScheme: { BEARER: "Bearer", DPOP: "DPoP", POP: "pop", SSH:
+        "ssh-cert" }
       return:
         description: ''
-        type: '{ BEARER: "Bearer", POP: "pop", SSH: "ssh-cert" }'
+        type: '{ BEARER: "Bearer", DPOP: "DPoP", POP: "pop", SSH: "ssh-cert" }'
   - name: AzureCloudInstance
     uid: '@azure/msal-browser.AzureCloudInstance'
     package: '@azure/msal-browser'
@@ -243,8 +246,7 @@ variables:
     syntax:
       content: >-
         AzureCloudInstance: { AzureChina: "https://login.chinacloudapi.cn",
-        AzureGermany: "https://login.microsoftonline.de", AzurePpe:
-        "https://login.windows-ppe.net", AzurePublic:
+        AzureGermany: "https://login.microsoftonline.de", AzurePublic:
         "https://login.microsoftonline.com", AzureUsGovernment:
         "https://login.microsoftonline.us", None: "none" }
       return:
@@ -252,9 +254,9 @@ variables:
         type: >-
           { AzureChina: "https:<xref uid="//login.chinacloudapi.cn" />",
           AzureGermany: "https:<xref uid="//login.microsoftonline.de" />",
-          AzurePpe: "https:<xref uid="//login.windows-ppe.net" />", AzurePublic:
-          "https:<xref uid="//login.microsoftonline.com" />", AzureUsGovernment:
-          "https:<xref uid="//login.microsoftonline.us" />", None: "none" }
+          AzurePublic: "https:<xref uid="//login.microsoftonline.com" />",
+          AzureUsGovernment: "https:<xref uid="//login.microsoftonline.us" />",
+          None: "none" }
   - name: BrowserCacheLocation
     uid: '@azure/msal-browser.BrowserCacheLocation'
     package: '@azure/msal-browser'
@@ -452,10 +454,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.19.0"'
+      content: 'version: "5.21.0"'
       return:
         description: ''
-        type: '"<xref uid="5.19.0" />"'
+        type: '"<xref uid="5.21.0" />"'
 functions:
   - name: >-
       createNestablePublicClientApplication(Configuration, string,
@@ -611,13 +613,19 @@ functions:
 
         1. Reads the IdP navigation MSAL passed in this page's hash (a GET URL, or a
            POST form for the form_post / EAR response modes), then scrubs the hash.
-        2. Opens the IdP child popup and performs that navigation (the relay page
+        2. Validates that navigation. The relay page is directly reachable, so the
+           hash is untrusted input: the request shape is checked exactly and the
+           navigation target must be an absolute `https:` URL (optionally pinned to
+           <xref:PopupRelayOptions.allowedAuthorityOrigins>). Anything else — in
+           particular active schemes such as `javascript:` — is rejected before it
+           can reach `window.open` or a form `action`.
+        3. Opens the IdP child popup and performs that navigation (the relay page
            stays put, so its `window.opener` link back to the embedded frame
            survives COOP).
-        3. Waits for the child's redirect URI page (which must run the redirect
+        4. Waits for the child's redirect URI page (which must run the redirect
            bridge, `broadcastResponseToMainFrame`) to broadcast the raw auth
            response over a same-origin `BroadcastChannel`.
-        4. Relays that raw response back to the embedded frame via
+        5. Relays that raw response back to the embedded frame via
            `opener.postMessage`, posting only to its own (same) origin, then closes.
 
       The embedded frame keeps the PKCE verifier (and EAR private key) and

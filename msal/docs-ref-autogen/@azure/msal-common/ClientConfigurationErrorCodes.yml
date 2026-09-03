@@ -60,6 +60,18 @@ variables:
       return:
         description: ''
         type: '"claims_request_parsing_error"'
+  - name: dpopMissingResourceContext
+    uid: >-
+      @azure/msal-common.ClientConfigurationErrorCodes.dpopMissingResourceContext
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'dpopMissingResourceContext: "dpop_missing_resource_context"'
+      return:
+        description: ''
+        type: '"dpop_missing_resource_context"'
   - name: emptyInputScopesError
     uid: '@azure/msal-common.ClientConfigurationErrorCodes.emptyInputScopesError'
     package: '@azure/msal-common'
@@ -151,6 +163,17 @@ variables:
       return:
         description: ''
         type: '"invalid_dpop_htu"'
+  - name: invalidDpopNonce
+    uid: '@azure/msal-common.ClientConfigurationErrorCodes.invalidDpopNonce'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'invalidDpopNonce: "invalid_dpop_nonce"'
+      return:
+        description: ''
+        type: '"invalid_dpop_nonce"'
   - name: invalidPlatformBrokerConfiguration
     uid: >-
       @azure/msal-common.ClientConfigurationErrorCodes.invalidPlatformBrokerConfiguration

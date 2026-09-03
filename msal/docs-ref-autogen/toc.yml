@@ -525,6 +525,11 @@
       no-loc:
         - IPublicClientApplication
       items: []
+    - uid: '@azure/msal-browser.IWebBrokerBridgeMessage'
+      name: IWebBrokerBridgeMessage
+      no-loc:
+        - IWebBrokerBridgeMessage
+      items: []
     - uid: '@azure/msal-browser.IWindowStorage'
       name: IWindowStorage
       no-loc:
@@ -1922,11 +1927,6 @@
       name: IdTokenClaims
       no-loc:
         - IdTokenClaims
-      items: []
-    - uid: '@azure/msal-node.ILoopbackClient'
-      name: ILoopbackClient
-      no-loc:
-        - ILoopbackClient
       items: []
     - uid: '@azure/msal-node.INativeBrokerPlugin'
       name: INativeBrokerPlugin

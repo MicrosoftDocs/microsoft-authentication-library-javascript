@@ -25,7 +25,6 @@ interfaces:
   - '@azure/msal-node.ICacheClient'
   - '@azure/msal-node.ICachePlugin'
   - '@azure/msal-node.IConfidentialClientApplication'
-  - '@azure/msal-node.ILoopbackClient'
   - '@azure/msal-node.INativeBrokerPlugin'
   - '@azure/msal-node.INetworkModule'
   - '@azure/msal-node.IPartitionManager'
@@ -82,8 +81,7 @@ variables:
     syntax:
       content: >-
         AzureCloudInstance: { AzureChina: "https://login.chinacloudapi.cn",
-        AzureGermany: "https://login.microsoftonline.de", AzurePpe:
-        "https://login.windows-ppe.net", AzurePublic:
+        AzureGermany: "https://login.microsoftonline.de", AzurePublic:
         "https://login.microsoftonline.com", AzureUsGovernment:
         "https://login.microsoftonline.us", None: "none" }
       return:
@@ -91,9 +89,9 @@ variables:
         type: >-
           { AzureChina: "https:<xref uid="//login.chinacloudapi.cn" />",
           AzureGermany: "https:<xref uid="//login.microsoftonline.de" />",
-          AzurePpe: "https:<xref uid="//login.windows-ppe.net" />", AzurePublic:
-          "https:<xref uid="//login.microsoftonline.com" />", AzureUsGovernment:
-          "https:<xref uid="//login.microsoftonline.us" />", None: "none" }
+          AzurePublic: "https:<xref uid="//login.microsoftonline.com" />",
+          AzureUsGovernment: "https:<xref uid="//login.microsoftonline.us" />",
+          None: "none" }
   - name: ManagedIdentitySourceNames
     uid: '@azure/msal-node.ManagedIdentitySourceNames'
     package: '@azure/msal-node'
@@ -158,7 +156,7 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.6.0"'
+      content: 'version: "6.0.0"'
       return:
         description: ''
-        type: '"<xref uid="5.6.0" />"'
+        type: '"<xref uid="6.0.0" />"'

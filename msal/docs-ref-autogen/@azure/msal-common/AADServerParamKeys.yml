@@ -214,6 +214,17 @@ variables:
       return:
         description: ''
         type: '"domain_hint"'
+  - name: DPOP_JKT
+    uid: '@azure/msal-common.AADServerParamKeys.DPOP_JKT'
+    package: '@azure/msal-common'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'DPOP_JKT: "dpop_jkt"'
+      return:
+        description: ''
+        type: '"dpop_jkt"'
   - name: EAR_JWE_CRYPTO
     uid: '@azure/msal-common.AADServerParamKeys.EAR_JWE_CRYPTO'
     package: '@azure/msal-common'

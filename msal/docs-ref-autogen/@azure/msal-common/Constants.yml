@@ -90,10 +90,12 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'AuthenticationScheme: { BEARER: "Bearer", POP: "pop", SSH: "ssh-cert" }'
+      content: >-
+        AuthenticationScheme: { BEARER: "Bearer", DPOP: "DPoP", POP: "pop", SSH:
+        "ssh-cert" }
       return:
         description: ''
-        type: '{ BEARER: "Bearer", POP: "pop", SSH: "ssh-cert" }'
+        type: '{ BEARER: "Bearer", DPOP: "DPoP", POP: "pop", SSH: "ssh-cert" }'
   - name: AuthorityMetadataSource
     uid: '@azure/msal-common.Constants.AuthorityMetadataSource'
     package: '@azure/msal-common'
@@ -264,13 +266,14 @@ variables:
     syntax:
       content: >-
         ClaimsRequestKeys: { ACCESS_TOKEN: "access_token", ID_TOKEN: "id_token",
-        LOGIN_HINT: "login_hint", SIGNIN_STATE: "signin_state", XMS_CC: "xms_cc"
-        }
+        LOGIN_HINT: "login_hint", SIGNIN_STATE: "signin_state",
+        TENANT_REGION_SUB_SCOPE: "tenant_region_sub_scope", XMS_CC: "xms_cc" }
       return:
         description: ''
         type: >-
           { ACCESS_TOKEN: "access_token", ID_TOKEN: "id_token", LOGIN_HINT:
-          "login_hint", SIGNIN_STATE: "signin_state", XMS_CC: "xms_cc" }
+          "login_hint", SIGNIN_STATE: "signin_state", TENANT_REGION_SUB_SCOPE:
+          "tenant_region_sub_scope", XMS_CC: "xms_cc" }
   - name: CLIENT_INFO
     uid: '@azure/msal-common.Constants.CLIENT_INFO'
     package: '@azure/msal-common'
@@ -420,17 +423,6 @@ variables:
       return:
         description: ''
         type: '300'
-  - name: DSTS
-    uid: '@azure/msal-common.Constants.DSTS'
-    package: '@azure/msal-common'
-    summary: ''
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'DSTS: "dstsv2"'
-      return:
-        description: ''
-        type: '"dstsv2"'
   - name: EMAIL_SCOPE
     uid: '@azure/msal-common.Constants.EMAIL_SCOPE'
     package: '@azure/msal-common'
@@ -497,17 +489,17 @@ variables:
       content: >-
         HeaderNames: { AuthenticationInfo: "Authentication-Info", CCS_HEADER:
         "X-AnchorMailbox", CONTENT_LENGTH: "Content-Length", CONTENT_TYPE:
-        "Content-Type", RETRY_AFTER: "Retry-After", WWWAuthenticate:
-        "WWW-Authenticate", X_MS_HTTP_VERSION: "x-ms-httpver", X_MS_REQUEST_ID:
-        "x-ms-request-id" }
+        "Content-Type", DPOP: "DPoP", RETRY_AFTER: "Retry-After",
+        WWWAuthenticate: "WWW-Authenticate", X_MS_HTTP_VERSION: "x-ms-httpver",
+        X_MS_REQUEST_ID: "x-ms-request-id" }
       return:
         description: ''
         type: >-
           { AuthenticationInfo: "Authentication-Info", CCS_HEADER:
           "X-AnchorMailbox", CONTENT_LENGTH: "Content-Length", CONTENT_TYPE:
-          "Content-Type", RETRY_AFTER: "Retry-After", WWWAuthenticate:
-          "WWW-Authenticate", X_MS_HTTP_VERSION: "x-ms-httpver",
-          X_MS_REQUEST_ID: "x-ms-request-id" }
+          "Content-Type", DPOP: "DPoP", RETRY_AFTER: "Retry-After",
+          WWWAuthenticate: "WWW-Authenticate", X_MS_HTTP_VERSION:
+          "x-ms-httpver", X_MS_REQUEST_ID: "x-ms-request-id" }
   - name: HttpMethod
     uid: '@azure/msal-common.Constants.HttpMethod'
     package: '@azure/msal-common'

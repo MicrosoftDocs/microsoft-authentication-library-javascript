@@ -21,6 +21,9 @@ summary: >-
   - accessToken            - Access token or SSH certificate received as part of
   the response
 
+  - dpopProof              - DPoP proof JWT to send with the access token for
+  resource requests
+
   - fromCache              - Boolean denoting whether token came from cache
 
   - expiresOn              - Javascript Date object representing relative
@@ -49,6 +52,7 @@ syntax: |
     cloudGraphHostName?: string
     code?: string
     correlationId: string
+    dpopProof?: string
     expiresOn: Date | null
     extExpiresOn?: Date
     familyId?: string

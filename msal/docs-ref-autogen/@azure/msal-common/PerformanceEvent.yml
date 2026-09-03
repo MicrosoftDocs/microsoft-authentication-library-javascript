@@ -46,6 +46,7 @@ syntax: |
     decryptFailedRTCount?: number
     deduped?: boolean
     domainHintFromRequest?: boolean
+    dpopTokenTypeMismatch?: string
     durationMs?: number
     embeddedClientId?: string
     embeddedRedirectUri?: string
@@ -137,6 +138,7 @@ syntax: |
     redirectBridgeMessageVersion?: number
     redirectBridgeTimeoutMs?: number
     refreshTokenSize?: number
+    regionSubScope?: string
     removeTokenBindingKeyFailure?: number
     requestId?: string
     retryError?: string

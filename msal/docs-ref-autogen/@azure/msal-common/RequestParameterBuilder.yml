@@ -785,10 +785,10 @@ functions:
       (`claimsToMerge`, e.g. `claimsFromClient`) with precedence on conflicting
       keys, merges
 
-      default optional idToken claims (signin_state, login_hint), and appends
-      client
+      default optional idToken claims (signin_state, login_hint,
+      tenant_region_sub_scope), and appends client
 
-      capabilities (xms_cc) to the access_token section.
+      capabilities (xms_cc) to the access_token section
 
       Does not overwrite idToken claims already specified by the caller.
     remarks: ''

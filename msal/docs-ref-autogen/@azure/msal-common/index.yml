@@ -123,10 +123,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'AuthorityType: { Adfs: 1, Ciam: 3, Default: 0, Dsts: 2 }'
+      content: 'AuthorityType: { Adfs: 1, Ciam: 3, Default: 0 }'
       return:
         description: ''
-        type: '{ Adfs: 1, Ciam: 3, Default: 0, Dsts: 2 }'
+        type: '{ Adfs: 1, Ciam: 3, Default: 0 }'
   - name: AzureCloudInstance
     uid: '@azure/msal-common.AzureCloudInstance'
     package: '@azure/msal-common'
@@ -136,8 +136,7 @@ variables:
     syntax:
       content: >-
         AzureCloudInstance: { AzureChina: "https://login.chinacloudapi.cn",
-        AzureGermany: "https://login.microsoftonline.de", AzurePpe:
-        "https://login.windows-ppe.net", AzurePublic:
+        AzureGermany: "https://login.microsoftonline.de", AzurePublic:
         "https://login.microsoftonline.com", AzureUsGovernment:
         "https://login.microsoftonline.us", None: "none" }
       return:
@@ -145,9 +144,9 @@ variables:
         type: >-
           { AzureChina: "https:<xref uid="//login.chinacloudapi.cn" />",
           AzureGermany: "https:<xref uid="//login.microsoftonline.de" />",
-          AzurePpe: "https:<xref uid="//login.windows-ppe.net" />", AzurePublic:
-          "https:<xref uid="//login.microsoftonline.com" />", AzureUsGovernment:
-          "https:<xref uid="//login.microsoftonline.us" />", None: "none" }
+          AzurePublic: "https:<xref uid="//login.microsoftonline.com" />",
+          AzureUsGovernment: "https:<xref uid="//login.microsoftonline.us" />",
+          None: "none" }
   - name: CcsCredentialType
     uid: '@azure/msal-common.CcsCredentialType'
     package: '@azure/msal-common'
@@ -225,10 +224,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "16.13.0"'
+      content: 'version: "16.14.0"'
       return:
         description: ''
-        type: '"<xref uid="16.13.0" />"'
+        type: '"<xref uid="16.14.0" />"'
 functions:
   - name: 'buildClientInfo(string, (input: string) => string)'
     uid: '@azure/msal-common.buildClientInfo'
