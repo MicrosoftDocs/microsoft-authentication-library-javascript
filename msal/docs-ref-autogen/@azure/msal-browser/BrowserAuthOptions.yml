@@ -8,7 +8,6 @@ remarks: ''
 isDeprecated: false
 syntax: |
   type BrowserAuthOptions = {
-    OIDCOptions?: OIDCOptions
     authority?: string
     authorityMetadata?: string
     azureCloudOptions?: AzureCloudOptions
@@ -18,6 +17,7 @@ syntax: |
     instanceAware?: boolean
     isMcp?: boolean
     knownAuthorities?: string[]
+    OIDCOptions?: OIDCOptions
     onRedirectNavigate?: (url: string) => boolean | void
     popupRelayUri?: string
     postLogoutRedirectUri?: string | null

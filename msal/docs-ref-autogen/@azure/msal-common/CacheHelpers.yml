@@ -176,14 +176,16 @@ functions:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isAccessTokenEntity(entity: object): entity'
+      content: >-
+        function isAccessTokenEntity(entity: object): entity is
+        AccessTokenEntity
       parameters:
         - id: entity
           type: object
           description: ''
       return:
         description: ''
-        type: entity
+        type: entity is AccessTokenEntity
   - name: isAppMetadataEntity(string, object)
     uid: '@azure/msal-common.CacheHelpers.isAppMetadataEntity'
     package: '@azure/msal-common'
@@ -227,14 +229,14 @@ functions:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCredentialEntity(entity: object): entity'
+      content: 'function isCredentialEntity(entity: object): entity is CredentialEntity'
       parameters:
         - id: entity
           type: object
           description: ''
       return:
         description: ''
-        type: entity
+        type: entity is CredentialEntity
   - name: isIdTokenEntity(object)
     uid: '@azure/msal-common.CacheHelpers.isIdTokenEntity'
     package: '@azure/msal-common'
@@ -242,14 +244,14 @@ functions:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isIdTokenEntity(entity: object): entity'
+      content: 'function isIdTokenEntity(entity: object): entity is IdTokenEntity'
       parameters:
         - id: entity
           type: object
           description: ''
       return:
         description: ''
-        type: entity
+        type: entity is IdTokenEntity
   - name: isRefreshTokenEntity(object)
     uid: '@azure/msal-common.CacheHelpers.isRefreshTokenEntity'
     package: '@azure/msal-common'
@@ -257,14 +259,16 @@ functions:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isRefreshTokenEntity(entity: object): entity'
+      content: >-
+        function isRefreshTokenEntity(entity: object): entity is
+        RefreshTokenEntity
       parameters:
         - id: entity
           type: object
           description: ''
       return:
         description: ''
-        type: entity
+        type: entity is RefreshTokenEntity
   - name: isServerTelemetryEntity(string, object)
     uid: '@azure/msal-common.CacheHelpers.isServerTelemetryEntity'
     package: '@azure/msal-common'

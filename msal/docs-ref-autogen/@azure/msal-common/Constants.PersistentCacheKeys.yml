@@ -2,7 +2,7 @@
 name: PersistentCacheKeys
 uid: '@azure/msal-common.Constants.PersistentCacheKeys'
 package: '@azure/msal-common'
-summary: ''
+summary: Persistent cache keys MSAL which stay while user is logged in.
 fullName: PersistentCacheKeys
 remarks: ''
 isDeprecated: false

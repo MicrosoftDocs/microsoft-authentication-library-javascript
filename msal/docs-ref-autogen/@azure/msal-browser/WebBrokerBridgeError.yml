@@ -1,0 +1,76 @@
+### YamlMime:TSType
+name: WebBrokerBridgeError
+uid: '@azure/msal-browser.WebBrokerBridgeError'
+package: '@azure/msal-browser'
+summary: |-
+  Normalized error payload carried between the broker and the embedded
+  app. Bridge-specific transports (NAA `BridgeError`, PWB `errorPayload`)
+  are lowered into this shape before being lifted to an MSAL error class.
+fullName: WebBrokerBridgeError
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: code
+    uid: '@azure/msal-browser.WebBrokerBridgeError.code'
+    package: '@azure/msal-browser'
+    summary: Common taxonomy code — see `WebBrokerBridgeErrorCode`.
+    fullName: code
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'code: WebBrokerBridgeErrorCode'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.WebBrokerBridgeErrorCode" />
+  - name: correlationId
+    uid: '@azure/msal-browser.WebBrokerBridgeError.correlationId'
+    package: '@azure/msal-browser'
+    summary: Correlation id, when available.
+    fullName: correlationId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'correlationId?: string'
+      return:
+        description: ''
+        type: string
+  - name: description
+    uid: '@azure/msal-browser.WebBrokerBridgeError.description'
+    package: '@azure/msal-browser'
+    summary: Human-readable description forwarded from the underlying response.
+    fullName: description
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'description?: string'
+      return:
+        description: ''
+        type: string
+  - name: innerErrorCode
+    uid: '@azure/msal-browser.WebBrokerBridgeError.innerErrorCode'
+    package: '@azure/msal-browser'
+    summary: |-
+      Underlying provider-specific error code preserved for classes that
+      accept a variable code (e.g. `invalid_grant` on `ServerError`).
+      Ignored for codes whose mapping is a fixed constant.
+    fullName: innerErrorCode
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'innerErrorCode?: string'
+      return:
+        description: ''
+        type: string
+  - name: subError
+    uid: '@azure/msal-browser.WebBrokerBridgeError.subError'
+    package: '@azure/msal-browser'
+    summary: Server sub-error (e.g. `consent_required`).
+    fullName: subError
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'subError?: string'
+      return:
+        description: ''
+        type: string

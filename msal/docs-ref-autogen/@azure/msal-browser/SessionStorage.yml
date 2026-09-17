@@ -30,10 +30,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function decryptData(): Promise<null | object>'
+      content: 'function decryptData(): Promise<object | null>'
       return:
         description: ''
-        type: Promise&lt;null | object&gt;
+        type: Promise&lt;object | null&gt;
   - name: getItem(string)
     uid: '@azure/msal-browser.SessionStorage.getItem'
     package: '@azure/msal-browser'
@@ -41,14 +41,14 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getItem(key: string): null | string'
+      content: 'function getItem(key: string): string | null'
       parameters:
         - id: key
           type: string
           description: ''
       return:
         description: ''
-        type: null | string
+        type: string | null
   - name: getKeys()
     uid: '@azure/msal-browser.SessionStorage.getKeys'
     package: '@azure/msal-browser'
@@ -69,14 +69,14 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getUserData(key: string): null | string'
+      content: 'function getUserData(key: string): string | null'
       parameters:
         - id: key
           type: string
           description: ''
       return:
         description: ''
-        type: null | string
+        type: string | null
   - name: initialize()
     uid: '@azure/msal-browser.SessionStorage.initialize'
     package: '@azure/msal-browser'

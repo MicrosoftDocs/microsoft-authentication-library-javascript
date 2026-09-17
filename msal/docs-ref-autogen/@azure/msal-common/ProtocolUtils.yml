@@ -54,8 +54,8 @@ functions:
         description: ''
         type: <xref uid="@azure/msal-common.RequestStateObject" />
   - name: >-
-      setRequestState(ICrypto, undefined | string, undefined | Record<string,
-      string>, string)
+      setRequestState(ICrypto, string | undefined, Record<string, string> |
+      undefined, string)
     uid: '@azure/msal-common.ProtocolUtils.setRequestState'
     package: '@azure/msal-common'
     summary: Appends user state with random guid, or returns random guid.
@@ -63,18 +63,18 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function setRequestState(cryptoObj: ICrypto, userState: undefined |
-        string, meta: undefined | Record<string, string>, correlationId:
+        function setRequestState(cryptoObj: ICrypto, userState: string |
+        undefined, meta: Record<string, string> | undefined, correlationId:
         string): string
       parameters:
         - id: cryptoObj
           type: <xref uid="@azure/msal-common.ICrypto" />
           description: ''
         - id: userState
-          type: undefined | string
+          type: string | undefined
           description: ''
         - id: meta
-          type: undefined | Record&lt;string, string&gt;
+          type: Record&lt;string, string&gt; | undefined
           description: ''
         - id: correlationId
           type: string

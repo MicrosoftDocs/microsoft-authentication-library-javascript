@@ -23,10 +23,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function flushMeasurement(): null | number'
+      content: 'function flushMeasurement(): number | null'
       return:
         description: ''
-        type: null | number
+        type: number | null
   - name: startMeasurement()
     uid: '@azure/msal-common.IPerformanceMeasurement.startMeasurement'
     package: '@azure/msal-common'

@@ -1,0 +1,64 @@
+### YamlMime:TSType
+name: IWebBrokerBridgeResponse
+uid: '@azure/msal-browser.IWebBrokerBridgeResponse'
+package: '@azure/msal-browser'
+summary: |-
+  Structural interface shared by NAA and PWB bridge response messages.
+
+  Responses are matched against pending requests by `requestId`.
+fullName: IWebBrokerBridgeResponse
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: error
+    uid: '@azure/msal-browser.IWebBrokerBridgeResponse.error'
+    package: '@azure/msal-browser'
+    summary: |-
+      When present, indicates the request failed and provides the
+      unified error taxonomy code + optional context. Absent on success.
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: WebBrokerBridgeError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.WebBrokerBridgeError" />
+inheritedProperties:
+  - name: requestId
+    uid: '@azure/msal-browser.IWebBrokerBridgeResponse.requestId'
+    package: '@azure/msal-browser'
+    summary: |-
+      Unique identifier used to correlate this request with its response.
+      Format is bridge-specific (NAA uses a GUID; PWB composes
+      `${channelId}:${messageId}`).
+    fullName: requestId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'requestId: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IWebBrokerBridgeMessage.requestId](xref:@azure/msal-browser.IWebBrokerBridgeMessage.requestId)
+  - name: type
+    uid: '@azure/msal-browser.IWebBrokerBridgeResponse.type'
+    package: '@azure/msal-browser'
+    summary: |-
+      Discriminator identifying what this message represents
+      (e.g. `"GetToken"`, `"AuthRequest"`, `"Handshake"`).
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [IWebBrokerBridgeMessage.type](xref:@azure/msal-browser.IWebBrokerBridgeMessage.type)
+extends: <xref uid="@azure/msal-browser.IWebBrokerBridgeMessage" />

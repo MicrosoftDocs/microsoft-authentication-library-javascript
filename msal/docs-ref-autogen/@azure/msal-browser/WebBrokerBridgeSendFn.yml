@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: WebBrokerBridgeSendFn
+uid: '@azure/msal-browser.WebBrokerBridgeSendFn'
+package: '@azure/msal-browser'
+summary: ''
+fullName: WebBrokerBridgeSendFn<TReq>
+remarks: ''
+isDeprecated: false
+syntax: |
+  type WebBrokerBridgeSendFn<TReq> = (message: TReq) => void

@@ -83,10 +83,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCodeRequired(): this'
+      content: >-
+        function isCodeRequired(): this is SignInResendCodeResult & { state:
+        SignInCodeRequiredState }
       return:
         description: ''
-        type: this
+        type: 'this is SignInResendCodeResult & { state: SignInCodeRequiredState }'
   - name: isFailed()
     uid: '@azure/msal-browser.SignInResendCodeResult.isFailed'
     package: '@azure/msal-browser'
@@ -94,10 +96,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isFailed(): this'
+      content: >-
+        function isFailed(): this is SignInResendCodeResult & { state:
+        SignInFailedState }
       return:
         description: ''
-        type: this
+        type: 'this is SignInResendCodeResult & { state: SignInFailedState }'
 extends: >-
   AuthFlowResultBase&lt;<xref
   uid="@azure/msal-browser.SignInResendCodeResultState" />, <xref

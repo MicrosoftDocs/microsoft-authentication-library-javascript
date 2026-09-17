@@ -87,10 +87,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCompleted(): this'
+      content: >-
+        function isCompleted(): this is SignUpSubmitAttributesResult & { state:
+        SignUpCompletedState }
       return:
         description: ''
-        type: this
+        type: 'this is SignUpSubmitAttributesResult & { state: SignUpCompletedState }'
   - name: isFailed()
     uid: '@azure/msal-browser.SignUpSubmitAttributesResult.isFailed'
     package: '@azure/msal-browser'
@@ -98,10 +100,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isFailed(): this'
+      content: >-
+        function isFailed(): this is SignUpSubmitAttributesResult & { state:
+        SignUpFailedState }
       return:
         description: ''
-        type: this
+        type: 'this is SignUpSubmitAttributesResult & { state: SignUpFailedState }'
 extends: >-
   AuthFlowResultBase&lt;<xref
   uid="@azure/msal-browser.SignUpSubmitAttributesResultState" />, <xref

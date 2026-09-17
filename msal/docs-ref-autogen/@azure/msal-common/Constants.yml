@@ -5,22 +5,40 @@ summary: ''
 type: module
 typeAliases:
   - '@azure/msal-common.Constants.AADAuthority'
+  - '@azure/msal-common.Constants.AADAuthority'
+  - '@azure/msal-common.Constants.AuthenticationScheme'
   - '@azure/msal-common.Constants.AuthenticationScheme'
   - '@azure/msal-common.Constants.AuthorityMetadataSource'
+  - '@azure/msal-common.Constants.AuthorityMetadataSource'
+  - '@azure/msal-common.Constants.CacheOutcome'
   - '@azure/msal-common.Constants.CacheOutcome'
   - '@azure/msal-common.Constants.CacheType'
+  - '@azure/msal-common.Constants.CacheType'
+  - '@azure/msal-common.Constants.ClaimsRequestKeys'
   - '@azure/msal-common.Constants.ClaimsRequestKeys'
   - '@azure/msal-common.Constants.CredentialType'
+  - '@azure/msal-common.Constants.CredentialType'
+  - '@azure/msal-common.Constants.EncodingTypes'
   - '@azure/msal-common.Constants.EncodingTypes'
   - '@azure/msal-common.Constants.GrantType'
+  - '@azure/msal-common.Constants.GrantType'
+  - '@azure/msal-common.Constants.HeaderNames'
   - '@azure/msal-common.Constants.HeaderNames'
   - '@azure/msal-common.Constants.HttpMethod'
+  - '@azure/msal-common.Constants.HttpMethod'
+  - '@azure/msal-common.Constants.JsonWebTokenTypes'
   - '@azure/msal-common.Constants.JsonWebTokenTypes'
   - '@azure/msal-common.Constants.OAuthResponseType'
+  - '@azure/msal-common.Constants.OAuthResponseType'
+  - '@azure/msal-common.Constants.PasswordGrantConstants'
   - '@azure/msal-common.Constants.PasswordGrantConstants'
   - '@azure/msal-common.Constants.PersistentCacheKeys'
+  - '@azure/msal-common.Constants.PersistentCacheKeys'
+  - '@azure/msal-common.Constants.RegionDiscoveryOutcomes'
   - '@azure/msal-common.Constants.RegionDiscoveryOutcomes'
   - '@azure/msal-common.Constants.RegionDiscoverySources'
+  - '@azure/msal-common.Constants.RegionDiscoverySources'
+  - '@azure/msal-common.Constants.ResponseMode'
   - '@azure/msal-common.Constants.ResponseMode'
 package: '@azure/msal-common'
 variables:
@@ -166,13 +184,13 @@ variables:
     syntax:
       content: >-
         CacheOutcome: { CACHED_ACCESS_TOKEN_EXPIRED: "3",
-        FORCE_REFRESH_OR_CLAIMS: "1", NOT_APPLICABLE: "0",
-        NO_CACHED_ACCESS_TOKEN: "2", PROACTIVELY_REFRESHED: "4" }
+        FORCE_REFRESH_OR_CLAIMS: "1", NO_CACHED_ACCESS_TOKEN: "2",
+        NOT_APPLICABLE: "0", PROACTIVELY_REFRESHED: "4" }
       return:
         description: ''
         type: >-
           { CACHED_ACCESS_TOKEN_EXPIRED: "3", FORCE_REFRESH_OR_CLAIMS: "1",
-          NOT_APPLICABLE: "0", NO_CACHED_ACCESS_TOKEN: "2",
+          NO_CACHED_ACCESS_TOKEN: "2", NOT_APPLICABLE: "0",
           PROACTIVELY_REFRESHED: "4" }
   - name: CacheType
     uid: '@azure/msal-common.Constants.CacheType'
@@ -942,13 +960,13 @@ variables:
     isDeprecated: false
     syntax:
       content: >-
-        PromptValue: { CONSENT: string, CREATE: string, LOGIN: string, NONE:
-        string, NO_SESSION: string, SELECT_ACCOUNT: string }
+        PromptValue: { CONSENT: string, CREATE: string, LOGIN: string,
+        NO_SESSION: string, NONE: string, SELECT_ACCOUNT: string }
       return:
         description: ''
         type: >-
-          { CONSENT: string, CREATE: string, LOGIN: string, NONE: string,
-          NO_SESSION: string, SELECT_ACCOUNT: string }
+          { CONSENT: string, CREATE: string, LOGIN: string, NO_SESSION: string,
+          NONE: string, SELECT_ACCOUNT: string }
   - name: REGIONAL_AUTH_PUBLIC_CLOUD_SUFFIX
     uid: '@azure/msal-common.Constants.REGIONAL_AUTH_PUBLIC_CLOUD_SUFFIX'
     package: '@azure/msal-common'
@@ -970,13 +988,13 @@ variables:
       content: >-
         RegionDiscoveryOutcomes: { AUTO_DETECTION_REQUESTED_FAILED: "5",
         AUTO_DETECTION_REQUESTED_SUCCESSFUL: "4", CONFIGURED_MATCHES_DETECTED:
-        "1", CONFIGURED_NOT_DETECTED: "3", CONFIGURED_NO_AUTO_DETECTION: "2" }
+        "1", CONFIGURED_NO_AUTO_DETECTION: "2", CONFIGURED_NOT_DETECTED: "3" }
       return:
         description: ''
         type: >-
           { AUTO_DETECTION_REQUESTED_FAILED: "5",
           AUTO_DETECTION_REQUESTED_SUCCESSFUL: "4", CONFIGURED_MATCHES_DETECTED:
-          "1", CONFIGURED_NOT_DETECTED: "3", CONFIGURED_NO_AUTO_DETECTION: "2" }
+          "1", CONFIGURED_NO_AUTO_DETECTION: "2", CONFIGURED_NOT_DETECTED: "3" }
   - name: RegionDiscoverySources
     uid: '@azure/msal-common.Constants.RegionDiscoverySources'
     package: '@azure/msal-common'

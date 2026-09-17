@@ -22,7 +22,7 @@ methods:
     syntax:
       content: >-
         function acquireTokenByClientCredential(request:
-        ClientCredentialRequest): Promise<null | AuthenticationResult>
+        ClientCredentialRequest): Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.ClientCredentialRequest" />
@@ -30,8 +30,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
   - name: acquireTokenByCode(AuthorizationCodeRequest)
     uid: '@azure/msal-node.IConfidentialClientApplication.acquireTokenByCode'
     package: '@azure/msal-node'
@@ -62,7 +62,7 @@ methods:
     syntax:
       content: >-
         function acquireTokenByRefreshToken(request: RefreshTokenRequest):
-        Promise<null | AuthenticationResult>
+        Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.RefreshTokenRequest" />
@@ -70,8 +70,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
   - name: acquireTokenByUsernamePassword(UsernamePasswordRequest)
     uid: >-
       @azure/msal-node.IConfidentialClientApplication.acquireTokenByUsernamePassword
@@ -85,7 +85,7 @@ methods:
     syntax:
       content: >-
         function acquireTokenByUsernamePassword(request:
-        UsernamePasswordRequest): Promise<null | AuthenticationResult>
+        UsernamePasswordRequest): Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.UsernamePasswordRequest" />
@@ -93,8 +93,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
   - name: acquireTokenOnBehalfOf(OnBehalfOfRequest)
     uid: '@azure/msal-node.IConfidentialClientApplication.acquireTokenOnBehalfOf'
     package: '@azure/msal-node'
@@ -104,7 +104,7 @@ methods:
     syntax:
       content: >-
         function acquireTokenOnBehalfOf(request: OnBehalfOfRequest):
-        Promise<null | AuthenticationResult>
+        Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.OnBehalfOfRequest" />
@@ -112,8 +112,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
   - name: acquireTokenSilent(SilentFlowRequest)
     uid: '@azure/msal-node.IConfidentialClientApplication.acquireTokenSilent'
     package: '@azure/msal-node'
@@ -124,8 +124,8 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function acquireTokenSilent(request: SilentFlowRequest): Promise<null |
-        AuthenticationResult>
+        function acquireTokenSilent(request: SilentFlowRequest):
+        Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.SilentFlowRequest" />
@@ -133,8 +133,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
   - name: clearCache()
     uid: '@azure/msal-node.IConfidentialClientApplication.clearCache'
     package: '@azure/msal-node'

@@ -83,10 +83,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCompleted(): this'
+      content: >-
+        function isCompleted(): this is GetAccessTokenResult & { state:
+        GetAccessTokenCompletedState }
       return:
         description: ''
-        type: this
+        type: 'this is GetAccessTokenResult & { state: GetAccessTokenCompletedState }'
   - name: isFailed()
     uid: '@azure/msal-browser.GetAccessTokenResult.isFailed'
     package: '@azure/msal-browser'
@@ -94,10 +96,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isFailed(): this'
+      content: >-
+        function isFailed(): this is GetAccessTokenResult & { state:
+        GetAccessTokenFailedState }
       return:
         description: ''
-        type: this
+        type: 'this is GetAccessTokenResult & { state: GetAccessTokenFailedState }'
 extends: >-
   AuthFlowResultBase&lt;<xref
   uid="@azure/msal-browser.GetAccessTokenResultState" />, <xref

@@ -2,7 +2,7 @@
 name: CacheOutcome
 uid: '@azure/msal-common.Constants.CacheOutcome'
 package: '@azure/msal-common'
-summary: ''
+summary: Specifies the reason for fetching the access token from the identity provider
 fullName: CacheOutcome
 remarks: ''
 isDeprecated: false

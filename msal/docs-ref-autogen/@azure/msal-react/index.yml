@@ -43,6 +43,17 @@ variables:
         type: >-
           <xref uid="React.Context" />&lt;<xref
           uid="@azure/msal-react.IMsalContext" />&gt;
+  - name: useMsal
+    uid: '@azure/msal-react.useMsal'
+    package: '@azure/msal-react'
+    summary: Returns Msal Context values
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'useMsal: () => IMsalContext'
+      return:
+        description: ''
+        type: () =&gt; IMsalContext
   - name: version
     uid: '@azure/msal-react.version'
     package: '@azure/msal-react'
@@ -50,42 +61,45 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.7.0"'
+      content: 'version: "5.7.1"'
       return:
         description: ''
-        type: '"<xref uid="5.7.0" />"'
+        type: '"<xref uid="5.7.1" />"'
+  - name: withMsal
+    uid: '@azure/msal-react.withMsal'
+    package: '@azure/msal-react'
+    summary: >-
+      Higher order component wraps provided component with msal by injecting
+      msal context values into the component's props
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        withMsal: (Component: React.ComponentType<P>) =>
+        React.FunctionComponent<Subtract<P, WithMsalProps>>
+      return:
+        description: ''
+        type: >-
+          (Component: <xref uid="React.ComponentType" />&lt;P&gt;) =&gt; <xref
+          uid="React.FunctionComponent" />&lt;Subtract&lt;P,
+          WithMsalProps&gt;&gt;
 functions:
-  - name: >-
-      AuthenticatedTemplate(PropsWithChildren<Partial<Pick<AccountInfo,
-      "homeAccountId" | "localAccountId" | "username">>>)
+  - name: AuthenticatedTemplate(PropsWithChildren)
     uid: '@azure/msal-react.AuthenticatedTemplate'
     package: '@azure/msal-react'
     summary: Renders child components if user is authenticated
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        function AuthenticatedTemplate(props:
-        PropsWithChildren<Partial<Pick<AccountInfo, "homeAccountId" |
-        "localAccountId" | "username">>>): React.ReactElement | null
+      content: 'function AuthenticatedTemplate(props: PropsWithChildren): any'
       parameters:
         - id: props
-          type: >-
-            PropsWithChildren&lt;Partial&lt;Pick&lt;<xref
-            uid="@azure/msal-common.AccountInfo" />, "homeAccountId" |
-            "localAccountId" | "username"&gt;&gt;&gt;
+          type: PropsWithChildren
           description: ''
       return:
         description: ''
-        type: <xref uid="React.ReactElement" /> | null
-  - name: >-
-      MsalAuthenticationTemplate(PropsWithChildren<Partial<Pick<AccountInfo,
-      "homeAccountId" | "localAccountId" | "username">> & {
-      authenticationRequest?: PopupRequest | RedirectRequest |
-      Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
-      "codeChallenge" | "codeChallengeMethod" | "platformBroker">>,
-      errorComponent?: any, interactionType: InteractionType, loadingComponent?:
-      any }>)
+        type: any
+  - name: MsalAuthenticationTemplate(PropsWithChildren)
     uid: '@azure/msal-react.MsalAuthenticationTemplate'
     package: '@azure/msal-react'
     summary: >-
@@ -94,30 +108,15 @@ functions:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        function MsalAuthenticationTemplate(props:
-        PropsWithChildren<Partial<Pick<AccountInfo, "homeAccountId" |
-        "localAccountId" | "username">> & { authenticationRequest?: PopupRequest
-        | RedirectRequest | Partial<Omit<CommonAuthorizationUrlRequest,
-        "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "platformBroker">>, errorComponent?: any, interactionType:
-        InteractionType, loadingComponent?: any }>): React.ReactElement | null
+      content: 'function MsalAuthenticationTemplate(props: PropsWithChildren): any'
       parameters:
         - id: props
-          type: >-
-            PropsWithChildren&lt;Partial&lt;Pick&lt;<xref
-            uid="@azure/msal-common.AccountInfo" />, "homeAccountId" |
-            "localAccountId" | "username"&gt;&gt; & { authenticationRequest?:
-            PopupRequest | RedirectRequest |
-            Partial&lt;Omit&lt;CommonAuthorizationUrlRequest, "responseMode" |
-            "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-            "platformBroker"&gt;&gt;, errorComponent?: any, interactionType:
-            InteractionType, loadingComponent?: any }&gt;
+          type: PropsWithChildren
           description: ''
       return:
         description: ''
-        type: <xref uid="React.ReactElement" /> | null
-  - name: 'MsalProvider(PropsWithChildren<{ instance: IPublicClientApplication }>)'
+        type: any
+  - name: MsalProvider(PropsWithChildren)
     uid: '@azure/msal-react.MsalProvider'
     package: '@azure/msal-react'
     summary: >-
@@ -127,38 +126,30 @@ functions:
     isDeprecated: false
     syntax:
       content: >-
-        function MsalProvider(__namedParameters: PropsWithChildren<{ instance:
-        IPublicClientApplication }>): React.ReactElement
+        function MsalProvider(__namedParameters: PropsWithChildren):
+        ReactElement
       parameters:
         - id: __namedParameters
-          type: 'PropsWithChildren&lt;{ instance: IPublicClientApplication }&gt;'
+          type: PropsWithChildren
           description: ''
       return:
         description: ''
-        type: <xref uid="React.ReactElement" />
-  - name: >-
-      UnauthenticatedTemplate(PropsWithChildren<Partial<Pick<AccountInfo,
-      "homeAccountId" | "localAccountId" | "username">>>)
+        type: ReactElement
+  - name: UnauthenticatedTemplate(PropsWithChildren)
     uid: '@azure/msal-react.UnauthenticatedTemplate'
     package: '@azure/msal-react'
     summary: Renders child components if user is unauthenticated
     remarks: ''
     isDeprecated: false
     syntax:
-      content: >-
-        function UnauthenticatedTemplate(props:
-        PropsWithChildren<Partial<Pick<AccountInfo, "homeAccountId" |
-        "localAccountId" | "username">>>): React.ReactElement | null
+      content: 'function UnauthenticatedTemplate(props: PropsWithChildren): any'
       parameters:
         - id: props
-          type: >-
-            PropsWithChildren&lt;Partial&lt;Pick&lt;<xref
-            uid="@azure/msal-common.AccountInfo" />, "homeAccountId" |
-            "localAccountId" | "username"&gt;&gt;&gt;
+          type: PropsWithChildren
           description: ''
       return:
         description: ''
-        type: <xref uid="React.ReactElement" /> | null
+        type: any
   - name: >-
       useAccount(Partial<Pick<AccountInfo, "homeAccountId" | "localAccountId" |
       "username">>)
@@ -205,17 +196,6 @@ functions:
       return:
         description: ''
         type: boolean
-  - name: useMsal()
-    uid: '@azure/msal-react.useMsal'
-    package: '@azure/msal-react'
-    summary: Returns Msal Context values
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: 'function useMsal(): IMsalContext'
-      return:
-        description: ''
-        type: <xref uid="@azure/msal-react.IMsalContext" />
   - name: >-
       useMsalAuthentication(InteractionType, PopupRequest | RedirectRequest |
       Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
@@ -266,24 +246,3 @@ functions:
       return:
         description: ''
         type: <xref uid="@azure/msal-react.MsalAuthenticationResult" />
-  - name: withMsal<P>(ComponentType<P>)
-    uid: '@azure/msal-react.withMsal'
-    package: '@azure/msal-react'
-    summary: >-
-      Higher order component wraps provided component with msal by injecting
-      msal context values into the component's props
-    remarks: ''
-    isDeprecated: false
-    syntax:
-      content: >-
-        function withMsal<P>(Component: ComponentType<P>):
-        FunctionComponent<Subtract<P, WithMsalProps>>
-      parameters:
-        - id: Component
-          type: ComponentType&lt;P&gt;
-          description: ''
-      return:
-        description: ''
-        type: >-
-          FunctionComponent&lt;<xref uid="@azure/msal-react.Subtract" />&lt;P,
-          <xref uid="@azure/msal-react.WithMsalProps" />&gt;&gt;

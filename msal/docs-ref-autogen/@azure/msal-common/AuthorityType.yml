@@ -2,7 +2,7 @@
 name: AuthorityType
 uid: '@azure/msal-common.AuthorityType'
 package: '@azure/msal-common'
-summary: ''
+summary: Authority types supported by MSAL.
 fullName: AuthorityType
 remarks: ''
 isDeprecated: false

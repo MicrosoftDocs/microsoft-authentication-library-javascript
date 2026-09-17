@@ -8,6 +8,5 @@ remarks: ''
 isDeprecated: false
 syntax: >-
   type MsalGuardConfiguration = { authRequest?: MsalGuardAuthRequest |
-  (authService: MsalService, state: RouterStateSnapshot) =>
-  MsalGuardAuthRequest, interactionType: InteractionType, loginFailedRoute?:
-  string }
+  (authService: MsalService, state: unknown) => MsalGuardAuthRequest,
+  interactionType: InteractionType, loginFailedRoute?: string }

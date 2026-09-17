@@ -83,10 +83,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isAttributesRequired(): this'
+      content: >-
+        function isAttributesRequired(): this is SignUpResult & { state:
+        SignUpAttributesRequiredState }
       return:
         description: ''
-        type: this
+        type: 'this is SignUpResult & { state: SignUpAttributesRequiredState }'
   - name: isCodeRequired()
     uid: '@azure/msal-browser.SignUpResult.isCodeRequired'
     package: '@azure/msal-browser'
@@ -94,10 +96,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCodeRequired(): this'
+      content: >-
+        function isCodeRequired(): this is SignUpResult & { state:
+        SignUpCodeRequiredState }
       return:
         description: ''
-        type: this
+        type: 'this is SignUpResult & { state: SignUpCodeRequiredState }'
   - name: isFailed()
     uid: '@azure/msal-browser.SignUpResult.isFailed'
     package: '@azure/msal-browser'
@@ -105,10 +109,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isFailed(): this'
+      content: 'function isFailed(): this is SignUpResult & { state: SignUpFailedState }'
       return:
         description: ''
-        type: this
+        type: 'this is SignUpResult & { state: SignUpFailedState }'
   - name: isPasswordRequired()
     uid: '@azure/msal-browser.SignUpResult.isPasswordRequired'
     package: '@azure/msal-browser'
@@ -116,10 +120,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isPasswordRequired(): this'
+      content: >-
+        function isPasswordRequired(): this is SignUpResult & { state:
+        SignUpPasswordRequiredState }
       return:
         description: ''
-        type: this
+        type: 'this is SignUpResult & { state: SignUpPasswordRequiredState }'
 extends: >-
   AuthFlowResultBase&lt;<xref uid="@azure/msal-browser.SignUpResultState" />,
   <xref uid="@azure/msal-browser.SignUpError" />, void&gt;

@@ -144,7 +144,7 @@ methods:
     syntax:
       content: >-
         function endMeasurement(event: PerformanceEvent, error?: unknown,
-        account?: AccountInfo): null | PerformanceEvent
+        account?: AccountInfo): PerformanceEvent | null
       parameters:
         - id: event
           type: <xref uid="@azure/msal-common.PerformanceEvent" />
@@ -157,7 +157,7 @@ methods:
           description: ''
       return:
         description: ''
-        type: null | <xref uid="@azure/msal-common.PerformanceEvent" />
+        type: <xref uid="@azure/msal-common.PerformanceEvent" /> | null
   - name: generateId()
     uid: '@azure/msal-common.PerformanceClient.generateId'
     package: '@azure/msal-common'

@@ -2,7 +2,7 @@
 name: GrantType
 uid: '@azure/msal-common.Constants.GrantType'
 package: '@azure/msal-common'
-summary: ''
+summary: allowed grant_type
 fullName: GrantType
 remarks: ''
 isDeprecated: false

@@ -66,10 +66,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function endMeasurement(): null | PerformanceEvent'
+      content: 'function endMeasurement(): PerformanceEvent | null'
       return:
         description: ''
-        type: null | <xref uid="@azure/msal-common.PerformanceEvent" />
+        type: <xref uid="@azure/msal-common.PerformanceEvent" /> | null
   - name: generateId()
     uid: '@azure/msal-common.StubPerformanceClient.generateId'
     package: '@azure/msal-common'

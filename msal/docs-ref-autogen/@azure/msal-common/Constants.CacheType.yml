@@ -2,7 +2,7 @@
 name: CacheType
 uid: '@azure/msal-common.Constants.CacheType'
 package: '@azure/msal-common'
-summary: ''
+summary: Combine all cache types
 fullName: CacheType
 remarks: ''
 isDeprecated: false

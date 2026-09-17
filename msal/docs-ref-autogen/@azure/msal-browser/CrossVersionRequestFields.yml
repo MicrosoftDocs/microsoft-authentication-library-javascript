@@ -1,0 +1,46 @@
+### YamlMime:TSType
+name: CrossVersionRequestFields
+uid: '@azure/msal-browser.CrossVersionRequestFields'
+package: '@azure/msal-browser'
+summary: Current request fields used by cross-version transformations.
+fullName: CrossVersionRequestFields
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: extraParameters
+    uid: '@azure/msal-browser.CrossVersionRequestFields.extraParameters'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: extraParameters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'extraParameters?: StringDict'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.StringDict" />
+  - name: extraQueryParameters
+    uid: '@azure/msal-browser.CrossVersionRequestFields.extraQueryParameters'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: extraQueryParameters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'extraQueryParameters?: StringDict'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.StringDict" />
+  - name: resource
+    uid: '@azure/msal-browser.CrossVersionRequestFields.resource'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: resource
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'resource?: string'
+      return:
+        description: ''
+        type: string

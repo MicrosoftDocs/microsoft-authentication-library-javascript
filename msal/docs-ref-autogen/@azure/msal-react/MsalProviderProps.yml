@@ -6,7 +6,4 @@ summary: ''
 fullName: MsalProviderProps
 remarks: ''
 isDeprecated: false
-syntax: |
-  type MsalProviderProps = PropsWithChildren<{
-    instance: IPublicClientApplication
-  }>
+syntax: 'type MsalProviderProps = unknown<{ instance: IPublicClientApplication }>'

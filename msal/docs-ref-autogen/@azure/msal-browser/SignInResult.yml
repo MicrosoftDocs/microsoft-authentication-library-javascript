@@ -88,10 +88,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isAuthMethodRegistrationRequired(): this'
+      content: >-
+        function isAuthMethodRegistrationRequired(): this is SignInResult & {
+        state: AuthMethodRegistrationRequiredState }
       return:
         description: ''
-        type: this
+        type: 'this is SignInResult & { state: AuthMethodRegistrationRequiredState }'
   - name: isCodeRequired()
     uid: '@azure/msal-browser.SignInResult.isCodeRequired'
     package: '@azure/msal-browser'
@@ -99,10 +101,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCodeRequired(): this'
+      content: >-
+        function isCodeRequired(): this is SignInResult & { state:
+        SignInCodeRequiredState }
       return:
         description: ''
-        type: this
+        type: 'this is SignInResult & { state: SignInCodeRequiredState }'
   - name: isCompleted()
     uid: '@azure/msal-browser.SignInResult.isCompleted'
     package: '@azure/msal-browser'
@@ -110,10 +114,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCompleted(): this'
+      content: >-
+        function isCompleted(): this is SignInResult & { state:
+        SignInCompletedState }
       return:
         description: ''
-        type: this
+        type: 'this is SignInResult & { state: SignInCompletedState }'
   - name: isFailed()
     uid: '@azure/msal-browser.SignInResult.isFailed'
     package: '@azure/msal-browser'
@@ -121,10 +127,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isFailed(): this'
+      content: 'function isFailed(): this is SignInResult & { state: SignInFailedState }'
       return:
         description: ''
-        type: this
+        type: 'this is SignInResult & { state: SignInFailedState }'
   - name: isMfaRequired()
     uid: '@azure/msal-browser.SignInResult.isMfaRequired'
     package: '@azure/msal-browser'
@@ -132,10 +138,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isMfaRequired(): this'
+      content: >-
+        function isMfaRequired(): this is SignInResult & { state:
+        MfaAwaitingState }
       return:
         description: ''
-        type: this
+        type: 'this is SignInResult & { state: MfaAwaitingState }'
   - name: isPasswordRequired()
     uid: '@azure/msal-browser.SignInResult.isPasswordRequired'
     package: '@azure/msal-browser'
@@ -143,10 +151,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isPasswordRequired(): this'
+      content: >-
+        function isPasswordRequired(): this is SignInResult & { state:
+        SignInPasswordRequiredState }
       return:
         description: ''
-        type: this
+        type: 'this is SignInResult & { state: SignInPasswordRequiredState }'
 extends: >-
   AuthFlowResultBase&lt;<xref uid="@azure/msal-browser.SignInResultState" />,
   <xref uid="@azure/msal-browser.SignInError" />, <xref

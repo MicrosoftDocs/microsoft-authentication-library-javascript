@@ -8,25 +8,6 @@ enums:
   - '@azure/msal-browser.LogLevel'
 classes:
   - '@azure/msal-browser.AuthError'
-  - '@azure/msal-browser.AuthenticationHeaderParser'
-  - '@azure/msal-browser.BrowserAuthError'
-  - '@azure/msal-browser.BrowserConfigurationAuthError'
-  - '@azure/msal-browser.BrowserPerformanceClient'
-  - '@azure/msal-browser.BrowserPerformanceMeasurement'
-  - '@azure/msal-browser.ClientAuthError'
-  - '@azure/msal-browser.ClientConfigurationError'
-  - '@azure/msal-browser.EventHandler'
-  - '@azure/msal-browser.EventMessageUtils'
-  - '@azure/msal-browser.InteractionRequiredAuthError'
-  - '@azure/msal-browser.LocalStorage'
-  - '@azure/msal-browser.Logger'
-  - '@azure/msal-browser.MemoryStorage'
-  - '@azure/msal-browser.NavigationClient'
-  - '@azure/msal-browser.PublicClientApplication'
-  - '@azure/msal-browser.ServerError'
-  - '@azure/msal-browser.SessionStorage'
-  - '@azure/msal-browser.SignedHttpRequest'
-  - '@azure/msal-browser.StubPerformanceClient'
   - '@azure/msal-browser.AuthFlowActionRequiredStateBase'
   - '@azure/msal-browser.AuthFlowStateBase'
   - '@azure/msal-browser.AuthMethodRegistrationChallengeMethodError'
@@ -37,17 +18,30 @@ classes:
   - '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeError'
   - '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult'
   - '@azure/msal-browser.AuthMethodVerificationRequiredState'
+  - '@azure/msal-browser.AuthenticationHeaderParser'
+  - '@azure/msal-browser.BrowserAuthError'
+  - '@azure/msal-browser.BrowserConfigurationAuthError'
+  - '@azure/msal-browser.BrowserPerformanceClient'
+  - '@azure/msal-browser.BrowserPerformanceMeasurement'
+  - '@azure/msal-browser.ClientAuthError'
+  - '@azure/msal-browser.ClientConfigurationError'
   - '@azure/msal-browser.CustomAuthAccountData'
   - '@azure/msal-browser.CustomAuthApiError'
   - '@azure/msal-browser.CustomAuthError'
   - '@azure/msal-browser.CustomAuthPublicClientApplication'
+  - '@azure/msal-browser.EventHandler'
+  - '@azure/msal-browser.EventMessageUtils'
   - '@azure/msal-browser.GetAccessTokenResult'
   - '@azure/msal-browser.GetAccountError'
   - '@azure/msal-browser.GetAccountResult'
   - '@azure/msal-browser.GetCurrentAccountAccessTokenError'
   - '@azure/msal-browser.HttpError'
+  - '@azure/msal-browser.InteractionRequiredAuthError'
   - '@azure/msal-browser.InvalidArgumentError'
   - '@azure/msal-browser.InvalidConfigurationError'
+  - '@azure/msal-browser.LocalStorage'
+  - '@azure/msal-browser.Logger'
+  - '@azure/msal-browser.MemoryStorage'
   - '@azure/msal-browser.MethodNotImplementedError'
   - '@azure/msal-browser.MfaAwaitingState'
   - '@azure/msal-browser.MfaCompletedState'
@@ -58,8 +52,11 @@ classes:
   - '@azure/msal-browser.MfaSubmitChallengeResult'
   - '@azure/msal-browser.MfaVerificationRequiredState'
   - '@azure/msal-browser.MsalCustomAuthError'
+  - '@azure/msal-browser.NavigationClient'
   - '@azure/msal-browser.NoCachedAccountFoundError'
   - '@azure/msal-browser.ParsedUrlError'
+  - '@azure/msal-browser.PendingRequestRegistry'
+  - '@azure/msal-browser.PublicClientApplication'
   - '@azure/msal-browser.ResetPasswordCodeRequiredState'
   - '@azure/msal-browser.ResetPasswordCompletedState'
   - '@azure/msal-browser.ResetPasswordError'
@@ -73,6 +70,8 @@ classes:
   - '@azure/msal-browser.ResetPasswordSubmitCodeResult'
   - '@azure/msal-browser.ResetPasswordSubmitPasswordError'
   - '@azure/msal-browser.ResetPasswordSubmitPasswordResult'
+  - '@azure/msal-browser.ServerError'
+  - '@azure/msal-browser.SessionStorage'
   - '@azure/msal-browser.SignInCodeRequiredState'
   - '@azure/msal-browser.SignInCompletedState'
   - '@azure/msal-browser.SignInContinuationState'
@@ -105,24 +104,34 @@ classes:
   - '@azure/msal-browser.SignUpSubmitCodeResult'
   - '@azure/msal-browser.SignUpSubmitPasswordError'
   - '@azure/msal-browser.SignUpSubmitPasswordResult'
+  - '@azure/msal-browser.SignedHttpRequest'
+  - '@azure/msal-browser.StubPerformanceClient'
   - '@azure/msal-browser.UnexpectedError'
   - '@azure/msal-browser.UnsupportedEnvironmentError'
   - '@azure/msal-browser.UserAccountAttributeError'
   - '@azure/msal-browser.UserAlreadySignedInError'
 interfaces:
+  - '@azure/msal-browser.AuthMethodDetails'
+  - '@azure/msal-browser.AuthenticationMethod'
+  - '@azure/msal-browser.CrossVersionRequestFields'
+  - '@azure/msal-browser.CustomAuthRequestInterceptor'
+  - '@azure/msal-browser.ICustomAuthPublicClientApplication'
   - '@azure/msal-browser.ILoggerCallback'
   - '@azure/msal-browser.INavigationClient'
   - '@azure/msal-browser.INetworkModule'
   - '@azure/msal-browser.IPerformanceClient'
   - '@azure/msal-browser.IPublicClientApplication'
   - '@azure/msal-browser.IWebBrokerBridgeMessage'
+  - '@azure/msal-browser.IWebBrokerBridgeResponse'
   - '@azure/msal-browser.IWindowStorage'
-  - '@azure/msal-browser.AuthMethodDetails'
-  - '@azure/msal-browser.AuthenticationMethod'
-  - '@azure/msal-browser.CustomAuthRequestInterceptor'
-  - '@azure/msal-browser.ICustomAuthPublicClientApplication'
+  - '@azure/msal-browser.LegacyRequestFields'
+  - '@azure/msal-browser.WebBrokerBridgeError'
 typeAliases:
+  - '@azure/msal-browser.AccessTokenRetrievalInputs'
   - '@azure/msal-browser.AccountInfo'
+  - '@azure/msal-browser.AccountRetrievalInputs'
+  - '@azure/msal-browser.AuthMethodRegistrationChallengeMethodResultState'
+  - '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResultState'
   - '@azure/msal-browser.AuthenticationResult'
   - '@azure/msal-browser.AuthorizationCodeRequest'
   - '@azure/msal-browser.AzureCloudOptions'
@@ -134,6 +143,9 @@ typeAliases:
   - '@azure/msal-browser.CacheOptions'
   - '@azure/msal-browser.ClearCacheRequest'
   - '@azure/msal-browser.Configuration'
+  - '@azure/msal-browser.CrossVersionRequest'
+  - '@azure/msal-browser.CustomAuthAdditionalHeaderFieldsResult'
+  - '@azure/msal-browser.CustomAuthConfiguration'
   - '@azure/msal-browser.EndSessionPopupRequest'
   - '@azure/msal-browser.EndSessionRequest'
   - '@azure/msal-browser.EventCallbackFunction'
@@ -141,12 +153,16 @@ typeAliases:
   - '@azure/msal-browser.EventMessage'
   - '@azure/msal-browser.EventPayload'
   - '@azure/msal-browser.ExternalTokenResponse'
+  - '@azure/msal-browser.GetAccessTokenResultState'
+  - '@azure/msal-browser.GetAccountResultState'
   - '@azure/msal-browser.HandleRedirectPromiseOptions'
   - '@azure/msal-browser.IController'
   - '@azure/msal-browser.IdTokenClaims'
   - '@azure/msal-browser.InProgressPerformanceEvent'
   - '@azure/msal-browser.InitializeApplicationRequest'
   - '@azure/msal-browser.LoadTokenOptions'
+  - '@azure/msal-browser.MfaRequestChallengeResultState'
+  - '@azure/msal-browser.MfaSubmitChallengeResultState'
   - '@azure/msal-browser.NavigationOptions'
   - '@azure/msal-browser.NetworkRequestOptions'
   - '@azure/msal-browser.NetworkResponse'
@@ -154,24 +170,11 @@ typeAliases:
   - '@azure/msal-browser.PerformanceEvent'
   - '@azure/msal-browser.PopupEvent'
   - '@azure/msal-browser.PopupPosition'
+  - '@azure/msal-browser.PopupRelayOptions'
   - '@azure/msal-browser.PopupRequest'
   - '@azure/msal-browser.PopupSize'
   - '@azure/msal-browser.PopupWindowAttributes'
   - '@azure/msal-browser.RedirectRequest'
-  - '@azure/msal-browser.SignedHttpRequestOptions'
-  - '@azure/msal-browser.SilentRequest'
-  - '@azure/msal-browser.SsoSilentRequest'
-  - '@azure/msal-browser.TenantProfile'
-  - '@azure/msal-browser.AccessTokenRetrievalInputs'
-  - '@azure/msal-browser.AccountRetrievalInputs'
-  - '@azure/msal-browser.AuthMethodRegistrationChallengeMethodResultState'
-  - '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResultState'
-  - '@azure/msal-browser.CustomAuthAdditionalHeaderFieldsResult'
-  - '@azure/msal-browser.CustomAuthConfiguration'
-  - '@azure/msal-browser.GetAccessTokenResultState'
-  - '@azure/msal-browser.GetAccountResultState'
-  - '@azure/msal-browser.MfaRequestChallengeResultState'
-  - '@azure/msal-browser.MfaSubmitChallengeResultState'
   - '@azure/msal-browser.ResetPasswordInputs'
   - '@azure/msal-browser.ResetPasswordResendCodeResultState'
   - '@azure/msal-browser.ResetPasswordStartResultState'
@@ -190,8 +193,12 @@ typeAliases:
   - '@azure/msal-browser.SignUpSubmitAttributesResultState'
   - '@azure/msal-browser.SignUpSubmitCodeResultState'
   - '@azure/msal-browser.SignUpSubmitPasswordResultState'
+  - '@azure/msal-browser.SignedHttpRequestOptions'
+  - '@azure/msal-browser.SilentRequest'
+  - '@azure/msal-browser.SsoSilentRequest'
+  - '@azure/msal-browser.TenantProfile'
   - '@azure/msal-browser.UserAccountAttributes'
-  - '@azure/msal-browser.PopupRelayOptions'
+  - '@azure/msal-browser.WebBrokerBridgeSendFn'
 variables:
   - name: ApiId
     uid: '@azure/msal-browser.ApiId'
@@ -299,11 +306,11 @@ variables:
         ACQUIRE_TOKEN_NETWORK_START: "msal:acquireTokenFromNetworkStart",
         ACQUIRE_TOKEN_START: "msal:acquireTokenStart", ACQUIRE_TOKEN_SUCCESS:
         "msal:acquireTokenSuccess", ACTIVE_ACCOUNT_CHANGED:
-        "msal:activeAccountChanged", BROKERED_REQUEST_FAILURE:
+        "msal:activeAccountChanged", BROKER_CONNECTION_ESTABLISHED:
+        "msal:brokerConnectionEstablished", BROKERED_REQUEST_FAILURE:
         "msal:brokeredRequestFailure", BROKERED_REQUEST_START:
         "msal:brokeredRequestStart", BROKERED_REQUEST_SUCCESS:
-        "msal:brokeredRequestSuccess", BROKER_CONNECTION_ESTABLISHED:
-        "msal:brokerConnectionEstablished", HANDLE_REDIRECT_END:
+        "msal:brokeredRequestSuccess", HANDLE_REDIRECT_END:
         "msal:handleRedirectEnd", HANDLE_REDIRECT_START:
         "msal:handleRedirectStart", INITIALIZE_END: "msal:initializeEnd",
         INITIALIZE_START: "msal:initializeStart", LOGIN_SUCCESS:
@@ -318,11 +325,11 @@ variables:
           ACQUIRE_TOKEN_NETWORK_START: "msal:acquireTokenFromNetworkStart",
           ACQUIRE_TOKEN_START: "msal:acquireTokenStart", ACQUIRE_TOKEN_SUCCESS:
           "msal:acquireTokenSuccess", ACTIVE_ACCOUNT_CHANGED:
-          "msal:activeAccountChanged", BROKERED_REQUEST_FAILURE:
+          "msal:activeAccountChanged", BROKER_CONNECTION_ESTABLISHED:
+          "msal:brokerConnectionEstablished", BROKERED_REQUEST_FAILURE:
           "msal:brokeredRequestFailure", BROKERED_REQUEST_START:
           "msal:brokeredRequestStart", BROKERED_REQUEST_SUCCESS:
-          "msal:brokeredRequestSuccess", BROKER_CONNECTION_ESTABLISHED:
-          "msal:brokerConnectionEstablished", HANDLE_REDIRECT_END:
+          "msal:brokeredRequestSuccess", HANDLE_REDIRECT_END:
           "msal:handleRedirectEnd", HANDLE_REDIRECT_START:
           "msal:handleRedirectStart", INITIALIZE_END: "msal:initializeEnd",
           INITIALIZE_START: "msal:initializeStart", LOGIN_SUCCESS:
@@ -429,13 +436,49 @@ variables:
     isDeprecated: false
     syntax:
       content: >-
-        PromptValue: { CONSENT: string, CREATE: string, LOGIN: string, NONE:
-        string, NO_SESSION: string, SELECT_ACCOUNT: string }
+        PromptValue: { CONSENT: string, CREATE: string, LOGIN: string,
+        NO_SESSION: string, NONE: string, SELECT_ACCOUNT: string }
       return:
         description: ''
         type: >-
-          { CONSENT: string, CREATE: string, LOGIN: string, NONE: string,
-          NO_SESSION: string, SELECT_ACCOUNT: string }
+          { CONSENT: string, CREATE: string, LOGIN: string, NO_SESSION: string,
+          NONE: string, SELECT_ACCOUNT: string }
+  - name: WebBrokerBridgeErrorCode
+    uid: '@azure/msal-browser.WebBrokerBridgeErrorCode'
+    package: '@azure/msal-browser'
+    summary: |-
+      Unified error taxonomy shared by NAA and PWB.
+
+      Each code maps to exactly one of the four base MSAL error classes
+      (`AuthError`, `ClientAuthError`, `ServerError`,
+      `InteractionRequiredAuthError`) via `toAuthError` in
+      `./WebBrokerBridgeErrorMap`.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        WebBrokerBridgeErrorCode: { AccountUnavailable: "account_unavailable",
+        BridgeConnectionReset: "bridge_connection_reset", BridgeDisabled:
+        "bridge_disabled", BridgeHandshakeFailed: "bridge_handshake_failed",
+        BridgeResponseInvalid: "bridge_response_invalid", BridgeTimeout:
+        "bridge_timeout", BridgeUnavailable: "bridge_unavailable", NoNetwork:
+        "no_network", PersistentError: "persistent_error", PopupWillRedirect:
+        "popup_will_redirect", ShrGenerationError: "shr_generation_error",
+        TransientError: "transient_error", Unknown: "unknown", UserCanceled:
+        "user_canceled", UserInteractionRequired: "user_interaction_required" }
+      return:
+        description: ''
+        type: >-
+          { AccountUnavailable: "account_unavailable", BridgeConnectionReset:
+          "bridge_connection_reset", BridgeDisabled: "bridge_disabled",
+          BridgeHandshakeFailed: "bridge_handshake_failed",
+          BridgeResponseInvalid: "bridge_response_invalid", BridgeTimeout:
+          "bridge_timeout", BridgeUnavailable: "bridge_unavailable", NoNetwork:
+          "no_network", PersistentError: "persistent_error", PopupWillRedirect:
+          "popup_will_redirect", ShrGenerationError: "shr_generation_error",
+          TransientError: "transient_error", Unknown: "unknown", UserCanceled:
+          "user_canceled", UserInteractionRequired: "user_interaction_required"
+          }
   - name: stubbedPublicClientApplication
     uid: '@azure/msal-browser.stubbedPublicClientApplication'
     package: '@azure/msal-browser'
@@ -454,10 +497,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.21.0"'
+      content: 'version: "5.22.0"'
       return:
         description: ''
-        type: '"<xref uid="5.21.0" />"'
+        type: '"<xref uid="5.22.0" />"'
 functions:
   - name: >-
       createNestablePublicClientApplication(Configuration, string,
@@ -601,6 +644,111 @@ functions:
       return:
         description: '`AuthenticationResult` for the response that was loaded.'
         type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+  - name: addLegacyRequestFields<TRequest>(TRequest)
+    uid: '@azure/msal-browser.addLegacyRequestFields'
+    package: '@azure/msal-browser'
+    summary: |-
+      Add legacy field aliases to an outgoing request so that an older broker
+      can still consume the parameters.
+
+      - Copies current field values into all known legacy field names.
+      - Merges extraParameters into extraQueryParameters (extraParameters wins)
+        so the v4 broker sees them on the /authorize query string.
+      - Deliberately omits authorizePostBodyParameters.
+      - Is idempotent: safe to call multiple times.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addLegacyRequestFields<TRequest>(request: TRequest):
+        CrossVersionRequest<TRequest>
+      parameters:
+        - id: request
+          type: TRequest
+          description: The request about to be wrapped in a broker auth request.
+      return:
+        description: A new request carrying both current and legacy field names.
+        type: <xref uid="@azure/msal-browser.CrossVersionRequest" />&lt;TRequest&gt;
+  - name: addResourceField<TRequest>(TRequest)
+    uid: '@azure/msal-browser.addResourceField'
+    package: '@azure/msal-browser'
+    summary: |-
+      Demotes the top-level `resource` field into `extraParameters.resource`.
+
+      Pre-5.5.0 embedded apps do not have a top-level `resource` field.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function addResourceField<TRequest>(request: TRequest): TRequest'
+      parameters:
+        - id: request
+          type: TRequest
+          description: The request to transform.
+      return:
+        description: A new request with `resource` demoted if applicable.
+        type: TRequest
+  - name: normalizeIncomingRequest<TRequest>(CrossVersionRequest<TRequest>)
+    uid: '@azure/msal-browser.normalizeIncomingRequest'
+    package: '@azure/msal-browser'
+    summary: |-
+      Normalize an incoming request from any embedded-app version so that
+      the broker PCA methods can consume it correctly.
+
+      - Folds legacy field values into their current equivalents.
+      - Strips legacy field names from the returned object.
+      - Is idempotent: safe to call on requests that already use current names.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function normalizeIncomingRequest<TRequest>(request:
+        CrossVersionRequest<TRequest>): TRequest
+      parameters:
+        - id: request
+          type: >-
+            <xref uid="@azure/msal-browser.CrossVersionRequest"
+            />&lt;TRequest&gt;
+          description: The request from a broker auth request.
+      return:
+        description: A new request with current field names only.
+        type: TRequest
+  - name: normalizeResourceField<TRequest>(TRequest)
+    uid: '@azure/msal-browser.normalizeResourceField'
+    package: '@azure/msal-browser'
+    summary: |-
+      Promotes `extraParameters.resource` to the top-level `resource` field.
+
+      Pre-5.5.0 embedded apps do not have a top-level `resource` field.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function normalizeResourceField<TRequest>(request: TRequest): TRequest'
+      parameters:
+        - id: request
+          type: TRequest
+          description: The request to transform.
+      return:
+        description: A new request with `resource` promoted if applicable.
+        type: TRequest
+  - name: toAuthError(WebBrokerBridgeError)
+    uid: '@azure/msal-browser.toAuthError'
+    package: '@azure/msal-browser'
+    summary: |-
+      Lift a normalized `WebBrokerBridgeError` to one of the four base
+      MSAL error classes. Callers are responsible for lowering
+      transport-specific errors into `WebBrokerBridgeError` before calling
+      this function.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function toAuthError(err: WebBrokerBridgeError): AuthError'
+      parameters:
+        - id: err
+          type: <xref uid="@azure/msal-browser.WebBrokerBridgeError" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.AuthError" />
   - name: runPopupRelay(PopupRelayOptions)
     uid: '@azure/msal-browser.runPopupRelay'
     package: '@azure/msal-browser'
@@ -616,7 +764,7 @@ functions:
         2. Validates that navigation. The relay page is directly reachable, so the
            hash is untrusted input: the request shape is checked exactly and the
            navigation target must be an absolute `https:` URL (optionally pinned to
-           <xref:PopupRelayOptions.allowedAuthorityOrigins>). Anything else — in
+           [PopupRelayOptions.allowedAuthorityOrigins](xref:14)). Anything else — in
            particular active schemes such as `javascript:` — is rejected before it
            can reach `window.open` or a form `action`.
         3. Opens the IdP child popup and performs that navigation (the relay page

@@ -89,15 +89,15 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function endMeasurement(event: PerformanceEvent): null |
-        PerformanceEvent
+        function endMeasurement(event: PerformanceEvent): PerformanceEvent |
+        null
       parameters:
         - id: event
           type: <xref uid="@azure/msal-common.PerformanceEvent" />
           description: ''
       return:
         description: ''
-        type: null | <xref uid="@azure/msal-common.PerformanceEvent" />
+        type: <xref uid="@azure/msal-common.PerformanceEvent" /> | null
   - name: generateId()
     uid: '@azure/msal-common.IPerformanceClient.generateId'
     package: '@azure/msal-common'

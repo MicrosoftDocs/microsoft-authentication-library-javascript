@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: CrossVersionRequest
+uid: '@azure/msal-browser.CrossVersionRequest'
+package: '@azure/msal-browser'
+summary: Current request extended with all known legacy fields.
+fullName: CrossVersionRequest<TRequest>
+remarks: ''
+isDeprecated: false
+syntax: |
+  type CrossVersionRequest<TRequest> = TRequest & LegacyRequestFields

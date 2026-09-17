@@ -112,10 +112,15 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCompleted(): this'
+      content: >-
+        function isCompleted(): this is
+        AuthMethodRegistrationChallengeMethodResult & { state:
+        AuthMethodRegistrationCompletedState }
       return:
         description: true if registration is completed, false otherwise.
-        type: this
+        type: >-
+          this is AuthMethodRegistrationChallengeMethodResult & { state:
+          AuthMethodRegistrationCompletedState }
   - name: isFailed()
     uid: '@azure/msal-browser.AuthMethodRegistrationChallengeMethodResult.isFailed'
     package: '@azure/msal-browser'
@@ -123,10 +128,14 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isFailed(): this'
+      content: >-
+        function isFailed(): this is AuthMethodRegistrationChallengeMethodResult
+        & { state: AuthMethodRegistrationFailedState }
       return:
         description: true if the result is failed, false otherwise.
-        type: this
+        type: >-
+          this is AuthMethodRegistrationChallengeMethodResult & { state:
+          AuthMethodRegistrationFailedState }
   - name: isVerificationRequired()
     uid: >-
       @azure/msal-browser.AuthMethodRegistrationChallengeMethodResult.isVerificationRequired
@@ -135,10 +144,15 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isVerificationRequired(): this'
+      content: >-
+        function isVerificationRequired(): this is
+        AuthMethodRegistrationChallengeMethodResult & { state:
+        AuthMethodVerificationRequiredState }
       return:
         description: true if verification is required, false otherwise.
-        type: this
+        type: >-
+          this is AuthMethodRegistrationChallengeMethodResult & { state:
+          AuthMethodVerificationRequiredState }
 extends: >-
   AuthFlowResultBase&lt;<xref
   uid="@azure/msal-browser.AuthMethodRegistrationChallengeMethodResultState" />,

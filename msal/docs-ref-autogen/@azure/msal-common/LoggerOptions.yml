@@ -20,7 +20,7 @@ isDeprecated: false
 syntax: |
   type LoggerOptions = {
     correlationId?: string
-    logLevel?: LogLevel
     loggerCallback?: ILoggerCallback
+    logLevel?: LogLevel
     piiLoggingEnabled?: boolean
   }

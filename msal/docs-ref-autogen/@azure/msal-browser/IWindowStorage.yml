@@ -32,7 +32,7 @@ methods:
     syntax:
       content: >-
         function decryptData(key: string, data: EncryptedData, correlationId:
-        string): Promise<null | object>
+        string): Promise<object | null>
       parameters:
         - id: key
           type: string
@@ -45,7 +45,7 @@ methods:
           description: ''
       return:
         description: ''
-        type: Promise&lt;null | object&gt;
+        type: Promise&lt;object | null&gt;
   - name: getItem(string)
     uid: '@azure/msal-browser.IWindowStorage.getItem'
     package: '@azure/msal-browser'
@@ -53,14 +53,14 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getItem(key: string): null | T'
+      content: 'function getItem(key: string): T | null'
       parameters:
         - id: key
           type: string
           description: ''
       return:
         description: ''
-        type: null | T
+        type: T | null
   - name: getKeys()
     uid: '@azure/msal-browser.IWindowStorage.getKeys'
     package: '@azure/msal-browser'
@@ -81,14 +81,14 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getUserData(key: string): null | T'
+      content: 'function getUserData(key: string): T | null'
       parameters:
         - id: key
           type: string
           description: ''
       return:
         description: ''
-        type: null | T
+        type: T | null
   - name: initialize(string)
     uid: '@azure/msal-browser.IWindowStorage.initialize'
     package: '@azure/msal-browser'

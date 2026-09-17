@@ -6,5 +6,4 @@ summary: ''
 fullName: UnauthenticatedTemplateProps
 remarks: ''
 isDeprecated: false
-syntax: |
-  type UnauthenticatedTemplateProps = PropsWithChildren<AccountIdentifiers>
+syntax: type UnauthenticatedTemplateProps = unknown<AccountIdentifiers>

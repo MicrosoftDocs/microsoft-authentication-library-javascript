@@ -3,11 +3,9 @@ name: CustomAuthPublicClientApplication
 uid: '@azure/msal-browser.CustomAuthPublicClientApplication'
 package: '@azure/msal-browser'
 summary: >-
-  The PublicClientApplication class is the object exposed by the library to
-  perform authentication and authorization functions in Single Page Applications
-
-  to obtain JWT tokens as described in the OAuth 2.0 Authorization Code Flow
-  with PKCE specification.
+  This file is the entrypoint when importing with the custom-auth subpath e.g.
+  "import { someExport } from @azure/msal-browser/custom-auth"
+   Additional exports should be added to the applicable exports-*.ts files
 fullName: CustomAuthPublicClientApplication
 remarks: ''
 isDeprecated: false
@@ -38,7 +36,8 @@ inheritedMethods:
       parameters:
         - id: request
           type: <xref uid="@azure/msal-browser.AuthorizationCodeRequest" />
-          description: <xref:@azure/msal-browser.AuthorizationCodeRequest>
+          description: >-
+            [AuthorizationCodeRequest](xref:@azure/msal-browser.AuthorizationCodeRequest)
       return:
         description: >-
           A promise that is fulfilled when this function has completed, or
@@ -122,7 +121,8 @@ inheritedMethods:
         description: >-
           - a promise that is fulfilled when this function has completed, or
           rejected if an error was raised. Returns the
-          <xref:@azure/msal-browser.AuthenticationResult> object
+          [AuthenticationResult](xref:@azure/msal-browser.AuthenticationResult)
+          object
         type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
     inheritanceDescription: >-
       <b>Inherited From</b>
@@ -136,7 +136,7 @@ inheritedMethods:
     syntax:
       content: >-
         function addEventCallback(callback: EventCallbackFunction, eventTypes?:
-        EventType[]): null | string
+        EventType[]): string | null
       parameters:
         - id: callback
           type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
@@ -146,7 +146,7 @@ inheritedMethods:
           description: ''
       return:
         description: ''
-        type: null | string
+        type: string | null
     inheritanceDescription: >-
       <b>Inherited From</b>
       [PublicClientApplication.addEventCallback](xref:@azure/msal-browser.PublicClientApplication.addEventCallback)
@@ -198,7 +198,7 @@ inheritedMethods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getAccount(accountFilter: AccountFilter): null | AccountInfo'
+      content: 'function getAccount(accountFilter: AccountFilter): AccountInfo | null'
       parameters:
         - id: accountFilter
           type: <xref uid="@azure/msal-common.AccountFilter" />
@@ -207,7 +207,7 @@ inheritedMethods:
         description: >-
           The first account found in the cache matching the provided filter or
           null if no account could be found.
-        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+        type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
     inheritanceDescription: >-
       <b>Inherited From</b>
       [PublicClientApplication.getAccount](xref:@azure/msal-browser.PublicClientApplication.getAccount)
@@ -218,10 +218,10 @@ inheritedMethods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getActiveAccount(): null | AccountInfo'
+      content: 'function getActiveAccount(): AccountInfo | null'
       return:
         description: ''
-        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+        type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
     inheritanceDescription: >-
       <b>Inherited From</b>
       [PublicClientApplication.getActiveAccount](xref:@azure/msal-browser.PublicClientApplication.getActiveAccount)
@@ -276,7 +276,7 @@ inheritedMethods:
     syntax:
       content: >-
         function handleRedirectPromise(options?: HandleRedirectPromiseOptions):
-        Promise<null | AuthenticationResult>
+        Promise<AuthenticationResult | null>
       parameters:
         - id: options
           type: <xref uid="@azure/msal-browser.HandleRedirectPromiseOptions" />
@@ -288,8 +288,8 @@ inheritedMethods:
           Token response or null. If the return value is null, then no auth
           redirect was detected.
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-browser.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" /> |
+          null&gt;
     inheritanceDescription: >-
       <b>Inherited From</b>
       [PublicClientApplication.handleRedirectPromise](xref:@azure/msal-browser.PublicClientApplication.handleRedirectPromise)
@@ -508,7 +508,7 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [PublicClientApplication.removePerformanceCallback](xref:@azure/msal-browser.PublicClientApplication.removePerformanceCallback)
-  - name: setActiveAccount(null | AccountInfo)
+  - name: setActiveAccount(AccountInfo | null)
     uid: '@azure/msal-browser.CustomAuthPublicClientApplication.setActiveAccount'
     package: '@azure/msal-browser'
     summary: >-
@@ -517,10 +517,10 @@ inheritedMethods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function setActiveAccount(account: null | AccountInfo)'
+      content: 'function setActiveAccount(account: AccountInfo | null)'
       parameters:
         - id: account
-          type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+          type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
           description: ''
     inheritanceDescription: >-
       <b>Inherited From</b>
@@ -557,9 +557,7 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [PublicClientApplication.setNavigationClient](xref:@azure/msal-browser.PublicClientApplication.setNavigationClient)
-  - name: >-
-      ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
+  - name: ssoSilent(SsoSilentRequest)
     uid: '@azure/msal-browser.CustomAuthPublicClientApplication.ssoSilent'
     package: '@azure/msal-browser'
     summary: >-
@@ -587,17 +585,12 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
-        "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "platformBroker">>): Promise<AuthenticationResult>
+        function ssoSilent(request: SsoSilentRequest):
+        Promise<AuthenticationResult>
       parameters:
         - id: request
-          type: >-
-            Partial&lt;Omit&lt;<xref
-            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
-            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "platformBroker"&gt;&gt;
-          description: <xref:@azure/msal-browser.SsoSilentRequest>
+          type: <xref uid="@azure/msal-browser.SsoSilentRequest" />
+          description: '[SsoSilentRequest](xref:@azure/msal-browser.SsoSilentRequest)'
       return:
         description: >-
           A promise that is fulfilled when this function has completed, or

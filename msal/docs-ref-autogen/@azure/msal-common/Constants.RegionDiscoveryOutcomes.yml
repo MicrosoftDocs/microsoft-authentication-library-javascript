@@ -2,7 +2,7 @@
 name: RegionDiscoveryOutcomes
 uid: '@azure/msal-common.Constants.RegionDiscoveryOutcomes'
 package: '@azure/msal-common'
-summary: ''
+summary: Region Discovery Outcomes
 fullName: RegionDiscoveryOutcomes
 remarks: ''
 isDeprecated: false

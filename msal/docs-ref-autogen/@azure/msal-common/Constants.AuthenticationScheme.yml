@@ -2,7 +2,7 @@
 name: AuthenticationScheme
 uid: '@azure/msal-common.Constants.AuthenticationScheme'
 package: '@azure/msal-common'
-summary: ''
+summary: Type of the authentication request
 fullName: AuthenticationScheme
 remarks: ''
 isDeprecated: false

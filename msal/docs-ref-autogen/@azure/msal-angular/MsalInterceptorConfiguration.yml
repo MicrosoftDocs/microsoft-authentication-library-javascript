@@ -8,7 +8,7 @@ remarks: ''
 isDeprecated: false
 syntax: >-
   type MsalInterceptorConfiguration = { authRequest?: MsalInterceptorAuthRequest
-  | (msalService: MsalService, req: HttpRequest<unknown>, originalAuthRequest:
+  | (msalService: MsalService, req: unknown<unknown>, originalAuthRequest:
   MsalInterceptorAuthRequest) => MsalInterceptorAuthRequest, interactionType:
   InteractionType, protectedResourceMap: Map<string, (string |
   ProtectedResourceScopes)[] | null>, strictMatching?: boolean }

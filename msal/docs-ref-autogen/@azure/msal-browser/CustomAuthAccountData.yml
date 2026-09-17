@@ -79,10 +79,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getClaims(): undefined | AuthTokenClaims'
+      content: 'function getClaims(): AuthTokenClaims | undefined'
       return:
         description: The token claims.
-        type: undefined | AuthTokenClaims
+        type: AuthTokenClaims | undefined
   - name: getIdToken()
     uid: '@azure/msal-browser.CustomAuthAccountData.getIdToken'
     package: '@azure/msal-browser'
@@ -96,10 +96,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getIdToken(): undefined | string'
+      content: 'function getIdToken(): string | undefined'
       return:
         description: The account id-token.
-        type: undefined | string
+        type: string | undefined
   - name: signOut()
     uid: '@azure/msal-browser.CustomAuthAccountData.signOut'
     package: '@azure/msal-browser'

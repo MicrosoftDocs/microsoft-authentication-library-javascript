@@ -96,7 +96,7 @@ inheritedMethods:
     syntax:
       content: >-
         function addEventCallback(callback: EventCallbackFunction, eventTypes?:
-        EventType[]): null | string
+        EventType[]): string | null
       parameters:
         - id: callback
           type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
@@ -106,7 +106,7 @@ inheritedMethods:
           description: ''
       return:
         description: ''
-        type: null | string
+        type: string | null
     inheritanceDescription: >-
       <b>Inherited From</b>
       [IPublicClientApplication.addEventCallback](xref:@azure/msal-browser.IPublicClientApplication.addEventCallback)
@@ -156,14 +156,14 @@ inheritedMethods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getAccount(accountFilter: AccountFilter): null | AccountInfo'
+      content: 'function getAccount(accountFilter: AccountFilter): AccountInfo | null'
       parameters:
         - id: accountFilter
           type: <xref uid="@azure/msal-common.AccountFilter" />
           description: ''
       return:
         description: ''
-        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+        type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
     inheritanceDescription: >-
       <b>Inherited From</b>
       [IPublicClientApplication.getAccount](xref:@azure/msal-browser.IPublicClientApplication.getAccount)
@@ -174,10 +174,10 @@ inheritedMethods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getActiveAccount(): null | AccountInfo'
+      content: 'function getActiveAccount(): AccountInfo | null'
       return:
         description: ''
-        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+        type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
     inheritanceDescription: >-
       <b>Inherited From</b>
       [IPublicClientApplication.getActiveAccount](xref:@azure/msal-browser.IPublicClientApplication.getActiveAccount)
@@ -223,7 +223,7 @@ inheritedMethods:
     syntax:
       content: >-
         function handleRedirectPromise(options?: HandleRedirectPromiseOptions):
-        Promise<null | AuthenticationResult>
+        Promise<AuthenticationResult | null>
       parameters:
         - id: options
           type: <xref uid="@azure/msal-browser.HandleRedirectPromiseOptions" />
@@ -231,8 +231,8 @@ inheritedMethods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-browser.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" /> |
+          null&gt;
     inheritanceDescription: >-
       <b>Inherited From</b>
       [IPublicClientApplication.handleRedirectPromise](xref:@azure/msal-browser.IPublicClientApplication.handleRedirectPromise)
@@ -423,17 +423,17 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [IPublicClientApplication.removePerformanceCallback](xref:@azure/msal-browser.IPublicClientApplication.removePerformanceCallback)
-  - name: setActiveAccount(null | AccountInfo)
+  - name: setActiveAccount(AccountInfo | null)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.setActiveAccount'
     package: '@azure/msal-browser'
     summary: ''
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function setActiveAccount(account: null | AccountInfo)'
+      content: 'function setActiveAccount(account: AccountInfo | null)'
       parameters:
         - id: account
-          type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+          type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
           description: ''
     inheritanceDescription: >-
       <b>Inherited From</b>
@@ -468,9 +468,7 @@ inheritedMethods:
     inheritanceDescription: >-
       <b>Inherited From</b>
       [IPublicClientApplication.setNavigationClient](xref:@azure/msal-browser.IPublicClientApplication.setNavigationClient)
-  - name: >-
-      ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
+  - name: ssoSilent(SsoSilentRequest)
     uid: '@azure/msal-browser.ICustomAuthPublicClientApplication.ssoSilent'
     package: '@azure/msal-browser'
     summary: ''
@@ -478,16 +476,11 @@ inheritedMethods:
     isDeprecated: false
     syntax:
       content: >-
-        function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
-        "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "platformBroker">>): Promise<AuthenticationResult>
+        function ssoSilent(request: SsoSilentRequest):
+        Promise<AuthenticationResult>
       parameters:
         - id: request
-          type: >-
-            Partial&lt;Omit&lt;<xref
-            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
-            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "platformBroker"&gt;&gt;
+          type: <xref uid="@azure/msal-browser.SsoSilentRequest" />
           description: ''
       return:
         description: ''

@@ -320,6 +320,16 @@
       no-loc:
         - Configuration
       items: []
+    - uid: '@azure/msal-browser.CrossVersionRequest'
+      name: CrossVersionRequest
+      no-loc:
+        - CrossVersionRequest
+      items: []
+    - uid: '@azure/msal-browser.CrossVersionRequestFields'
+      name: CrossVersionRequestFields
+      no-loc:
+        - CrossVersionRequestFields
+      items: []
     - uid: '@azure/msal-browser.CustomAuthAccountData'
       name: CustomAuthAccountData
       no-loc:
@@ -530,6 +540,11 @@
       no-loc:
         - IWebBrokerBridgeMessage
       items: []
+    - uid: '@azure/msal-browser.IWebBrokerBridgeResponse'
+      name: IWebBrokerBridgeResponse
+      no-loc:
+        - IWebBrokerBridgeResponse
+      items: []
     - uid: '@azure/msal-browser.IWindowStorage'
       name: IWindowStorage
       no-loc:
@@ -539,6 +554,11 @@
       name: JsonWebTokenTypes
       no-loc:
         - JsonWebTokenTypes
+      items: []
+    - uid: '@azure/msal-browser.LegacyRequestFields'
+      name: LegacyRequestFields
+      no-loc:
+        - LegacyRequestFields
       items: []
     - uid: '@azure/msal-browser.LoadTokenOptions'
       name: LoadTokenOptions
@@ -654,6 +674,11 @@
       name: ParsedUrlError
       no-loc:
         - ParsedUrlError
+      items: []
+    - uid: '@azure/msal-browser.PendingRequestRegistry'
+      name: PendingRequestRegistry
+      no-loc:
+        - PendingRequestRegistry
       items: []
     - uid: '@azure/msal-browser.PerformanceCallbackFunction'
       name: PerformanceCallbackFunction
@@ -1094,6 +1119,21 @@
       name: UserAlreadySignedInError
       no-loc:
         - UserAlreadySignedInError
+      items: []
+    - uid: '@azure/msal-browser.WebBrokerBridgeError'
+      name: WebBrokerBridgeError
+      no-loc:
+        - WebBrokerBridgeError
+      items: []
+    - uid: '@azure/msal-browser.WebBrokerBridgeErrorCode'
+      name: WebBrokerBridgeErrorCode
+      no-loc:
+        - WebBrokerBridgeErrorCode
+      items: []
+    - uid: '@azure/msal-browser.WebBrokerBridgeSendFn'
+      name: WebBrokerBridgeSendFn
+      no-loc:
+        - WebBrokerBridgeSendFn
       items: []
     - uid: '@azure/msal-browser.WrapperSKU'
       name: WrapperSKU

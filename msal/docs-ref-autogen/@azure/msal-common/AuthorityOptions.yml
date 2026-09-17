@@ -8,11 +8,11 @@ remarks: ''
 isDeprecated: false
 syntax: |
   type AuthorityOptions = {
-    OIDCOptions?: OIDCOptions | null
     authority?: string
     authorityMetadata: string
     azureRegionConfiguration?: AzureRegionConfiguration
     cloudDiscoveryMetadata: string
     knownAuthorities: string[]
+    OIDCOptions?: OIDCOptions | null
     protocolMode: ProtocolMode
   }

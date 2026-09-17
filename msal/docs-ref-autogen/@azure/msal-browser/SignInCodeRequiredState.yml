@@ -54,10 +54,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getScopes(): undefined | string[]'
+      content: 'function getScopes(): string[] | undefined'
       return:
         description: The scopes to request.
-        type: undefined | string[]
+        type: string[] | undefined
   - name: resendCode()
     uid: '@azure/msal-browser.SignInCodeRequiredState.resendCode'
     package: '@azure/msal-browser'

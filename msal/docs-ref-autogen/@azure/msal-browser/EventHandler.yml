@@ -30,7 +30,7 @@ methods:
     syntax:
       content: >-
         function addEventCallback(callback: EventCallbackFunction, eventTypes?:
-        EventType[], callbackId?: string): null | string
+        EventType[], callbackId?: string): string | null
       parameters:
         - id: callback
           type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
@@ -47,7 +47,7 @@ methods:
             when no longer required
       return:
         description: ''
-        type: null | string
+        type: string | null
   - name: emitEvent(EventType, string, InteractionType, EventPayload, EventError)
     uid: '@azure/msal-browser.EventHandler.emitEvent'
     package: '@azure/msal-browser'

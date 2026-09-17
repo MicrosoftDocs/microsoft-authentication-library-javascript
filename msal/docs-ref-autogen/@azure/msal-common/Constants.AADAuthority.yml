@@ -2,7 +2,7 @@
 name: AADAuthority
 uid: '@azure/msal-common.Constants.AADAuthority'
 package: '@azure/msal-common'
-summary: ''
+summary: String constants related to AAD Authority
 fullName: AADAuthority
 remarks: ''
 isDeprecated: false

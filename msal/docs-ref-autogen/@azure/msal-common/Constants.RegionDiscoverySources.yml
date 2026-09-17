@@ -2,7 +2,7 @@
 name: RegionDiscoverySources
 uid: '@azure/msal-common.Constants.RegionDiscoverySources'
 package: '@azure/msal-common'
-summary: ''
+summary: Region Discovery Sources
 fullName: RegionDiscoverySources
 remarks: ''
 isDeprecated: false

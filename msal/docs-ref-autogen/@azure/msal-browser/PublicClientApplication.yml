@@ -144,7 +144,7 @@ methods:
     syntax:
       content: >-
         function addEventCallback(callback: EventCallbackFunction, eventTypes?:
-        EventType[]): null | string
+        EventType[]): string | null
       parameters:
         - id: callback
           type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
@@ -154,7 +154,7 @@ methods:
           description: ''
       return:
         description: ''
-        type: null | string
+        type: string | null
   - name: addPerformanceCallback(PerformanceCallbackFunction)
     uid: '@azure/msal-browser.PublicClientApplication.addPerformanceCallback'
     package: '@azure/msal-browser'
@@ -196,7 +196,7 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getAccount(accountFilter: AccountFilter): null | AccountInfo'
+      content: 'function getAccount(accountFilter: AccountFilter): AccountInfo | null'
       parameters:
         - id: accountFilter
           type: <xref uid="@azure/msal-common.AccountFilter" />
@@ -205,7 +205,7 @@ methods:
         description: >-
           The first account found in the cache matching the provided filter or
           null if no account could be found.
-        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+        type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
   - name: getActiveAccount()
     uid: '@azure/msal-browser.PublicClientApplication.getActiveAccount'
     package: '@azure/msal-browser'
@@ -213,10 +213,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function getActiveAccount(): null | AccountInfo'
+      content: 'function getActiveAccount(): AccountInfo | null'
       return:
         description: ''
-        type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+        type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
   - name: getAllAccounts(AccountFilter)
     uid: '@azure/msal-browser.PublicClientApplication.getAllAccounts'
     package: '@azure/msal-browser'
@@ -261,7 +261,7 @@ methods:
     syntax:
       content: >-
         function handleRedirectPromise(options?: HandleRedirectPromiseOptions):
-        Promise<null | AuthenticationResult>
+        Promise<AuthenticationResult | null>
       parameters:
         - id: options
           type: <xref uid="@azure/msal-browser.HandleRedirectPromiseOptions" />
@@ -273,8 +273,8 @@ methods:
           Token response or null. If the return value is null, then no auth
           redirect was detected.
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-browser.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" /> |
+          null&gt;
   - name: >-
       hydrateCache(AuthenticationResult, PopupRequest | RedirectRequest |
       SilentRequest | Partial<Omit<CommonAuthorizationUrlRequest, "responseMode"
@@ -461,7 +461,7 @@ methods:
       return:
         description: ''
         type: boolean
-  - name: setActiveAccount(null | AccountInfo)
+  - name: setActiveAccount(AccountInfo | null)
     uid: '@azure/msal-browser.PublicClientApplication.setActiveAccount'
     package: '@azure/msal-browser'
     summary: >-
@@ -470,10 +470,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function setActiveAccount(account: null | AccountInfo)'
+      content: 'function setActiveAccount(account: AccountInfo | null)'
       parameters:
         - id: account
-          type: null | <xref uid="@azure/msal-browser.AccountInfo" />
+          type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
           description: ''
   - name: setLogger(Logger)
     uid: '@azure/msal-browser.PublicClientApplication.setLogger'
@@ -501,9 +501,7 @@ methods:
         - id: navigationClient
           type: <xref uid="@azure/msal-browser.INavigationClient" />
           description: ''
-  - name: >-
-      ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
+  - name: ssoSilent(SsoSilentRequest)
     uid: '@azure/msal-browser.PublicClientApplication.ssoSilent'
     package: '@azure/msal-browser'
     summary: >-
@@ -531,16 +529,11 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
-        "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "platformBroker">>): Promise<AuthenticationResult>
+        function ssoSilent(request: SsoSilentRequest):
+        Promise<AuthenticationResult>
       parameters:
         - id: request
-          type: >-
-            Partial&lt;Omit&lt;<xref
-            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
-            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "platformBroker"&gt;&gt;
+          type: <xref uid="@azure/msal-browser.SsoSilentRequest" />
           description: '[SsoSilentRequest](xref:@azure/msal-browser.SsoSilentRequest)'
       return:
         description: >-

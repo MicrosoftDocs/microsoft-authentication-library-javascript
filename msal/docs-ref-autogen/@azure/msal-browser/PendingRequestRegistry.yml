@@ -1,0 +1,96 @@
+### YamlMime:TSType
+name: PendingRequestRegistry
+uid: '@azure/msal-browser.PendingRequestRegistry'
+package: '@azure/msal-browser'
+summary: Correlates outbound requests with inbound responses by `requestId`.
+fullName: PendingRequestRegistry<TResp>
+remarks: ''
+isDeprecated: false
+type: class
+methods:
+  - name: has(string)
+    uid: '@azure/msal-browser.PendingRequestRegistry.has'
+    package: '@azure/msal-browser'
+    summary: True if `requestId` has an in-flight registration.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function has(requestId: string): boolean'
+      parameters:
+        - id: requestId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+  - name: register(string)
+    uid: '@azure/msal-browser.PendingRequestRegistry.register'
+    package: '@azure/msal-browser'
+    summary: |-
+      Register a pending request. Returns a promise that resolves when a
+      response with the matching `requestId` arrives, or rejects if the
+      caller invokes `reject` for that id.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function register(requestId: string): Promise<TResp>'
+      parameters:
+        - id: requestId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;TResp&gt;
+  - name: reject(string, unknown)
+    uid: '@azure/msal-browser.PendingRequestRegistry.reject'
+    package: '@azure/msal-browser'
+    summary: Reject a pending request. No-op if `requestId` isn't registered.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function reject(requestId: string, reason: unknown)'
+      parameters:
+        - id: requestId
+          type: string
+          description: ''
+        - id: reason
+          type: unknown
+          description: ''
+  - name: resolve(string, TResp)
+    uid: '@azure/msal-browser.PendingRequestRegistry.resolve'
+    package: '@azure/msal-browser'
+    summary: Resolve a pending request. No-op if `requestId` isn't registered.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function resolve(requestId: string, response: TResp)'
+      parameters:
+        - id: requestId
+          type: string
+          description: ''
+        - id: response
+          type: TResp
+          description: ''
+  - name: sendAndAwait<TReq>(TReq, WebBrokerBridgeSendFn<TReq>)
+    uid: '@azure/msal-browser.PendingRequestRegistry.sendAndAwait'
+    package: '@azure/msal-browser'
+    summary: |-
+      Register, then invoke `send` synchronously. If `send` throws, the
+      pending entry is cleared and the promise rejects with the thrown
+      error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function sendAndAwait<TReq>(message: TReq, send:
+        WebBrokerBridgeSendFn<TReq>): Promise<TResp>
+      parameters:
+        - id: message
+          type: TReq
+          description: ''
+        - id: send
+          type: <xref uid="@azure/msal-browser.WebBrokerBridgeSendFn" />&lt;TReq&gt;
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;TResp&gt;

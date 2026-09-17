@@ -2,7 +2,7 @@
 name: ILoggerCallback
 uid: '@azure/msal-browser.ILoggerCallback'
 package: '@azure/msal-browser'
-summary: ''
+summary: Callback to send the messages to.
 fullName: ILoggerCallback
 remarks: ''
 isDeprecated: false

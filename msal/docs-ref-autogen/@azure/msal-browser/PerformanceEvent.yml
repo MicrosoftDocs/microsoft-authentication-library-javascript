@@ -13,8 +13,8 @@ syntax: |
     accessTokenSize?: number
     accessTokensRemoved?: number
     accountCachedBy?: string
-    accountType?: "AAD" | "MSA" | "B2C"
     accountsRemoved?: number
+    accountType?: "AAD" | "MSA" | "B2C"
     acntLoggedOut?: boolean
     allowPlatformBroker?: boolean
     appName?: string
@@ -40,8 +40,8 @@ syntax: |
     context?: string
     correlationId: string
     dataBoundary?: DataBoundary
-    decryptFailedATCount?: number
     decryptFailedAcntCount?: number
+    decryptFailedATCount?: number
     decryptFailedITCount?: number
     decryptFailedRTCount?: number
     deduped?: boolean
@@ -61,12 +61,12 @@ syntax: |
     expiredATCount?: number
     expiredRTCount?: number
     ext?: Record<string, string | number>
-    extRtExpiresOnSeconds?: number
     extensionHandshakeTimedOut?: boolean
     extensionHandshakeTimeoutMs?: number
     extensionId?: string
     extensionInstalled?: boolean
     extensionVersion?: string
+    extRtExpiresOnSeconds?: number
     fetchRetryCount?: number
     fromCache?: boolean | null
     hasAttributeTokens?: boolean
@@ -75,8 +75,8 @@ syntax: |
     idTokenSize?: number
     incompleteSubMeasurements?: Map<string, SubMeasurement>
     incompleteSubsCount?: number
-    invalidATCount?: number
     invalidAcntCount?: number
+    invalidATCount?: number
     invalidITCount?: number
     invalidRTCount?: number
     isAsyncPopup?: boolean
@@ -120,17 +120,17 @@ syntax: |
     networkEffectiveType?: string
     networkRtt?: number
     ntwkRtExpiresOnSeconds?: number
-    oldATCount?: number
     oldAcntCount?: number
+    oldATCount?: number
     oldITCount?: number
     oldRTCount?: number
     onlineStatusChangeCount?: number
-    postMigrateATCount?: number
     postMigrateAcntCount?: number
+    postMigrateATCount?: number
     postMigrateITCount?: number
     postMigrateRTCount?: number
-    preMigrateATCount?: number
     preMigrateAcntCount?: number
+    preMigrateATCount?: number
     preMigrateITCount?: number
     preMigrateRTCount?: number
     previousLibraryVersion?: string
@@ -163,8 +163,8 @@ syntax: |
     success?: boolean | null
     tokenBindingKeyAlgorithm?: string
     tokenBindingKeyType?: string
-    ttlExpiredATCount?: number
     ttlExpiredAcntCount?: number
+    ttlExpiredATCount?: number
     ttlExpiredITCount?: number
     ttlExpiredRTCount?: number
     unencryptedCacheCount?: number

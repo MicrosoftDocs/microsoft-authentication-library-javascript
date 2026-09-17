@@ -117,7 +117,7 @@ inheritedMethods:
     syntax:
       content: >-
         function acquireTokenByRefreshToken(request: RefreshTokenRequest):
-        Promise<null | AuthenticationResult>
+        Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.RefreshTokenRequest" />
@@ -125,8 +125,8 @@ inheritedMethods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
     inheritanceDescription: <b>Inherited From</b> ClientApplication.acquireTokenByRefreshToken
   - name: acquireTokenByUsernamePassword(UsernamePasswordRequest)
     uid: >-
@@ -152,7 +152,7 @@ inheritedMethods:
     syntax:
       content: >-
         function acquireTokenByUsernamePassword(request:
-        UsernamePasswordRequest): Promise<null | AuthenticationResult>
+        UsernamePasswordRequest): Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.UsernamePasswordRequest" />
@@ -160,8 +160,8 @@ inheritedMethods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
     inheritanceDescription: <b>Inherited From</b> ClientApplication.acquireTokenByUsernamePassword
   - name: acquireTokenSilent(SilentFlowRequest)
     uid: '@azure/msal-node.ConfidentialClientApplication.acquireTokenSilent'
@@ -290,7 +290,7 @@ methods:
     syntax:
       content: >-
         function acquireTokenByClientCredential(request:
-        ClientCredentialRequest): Promise<null | AuthenticationResult>
+        ClientCredentialRequest): Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.ClientCredentialRequest" />
@@ -298,8 +298,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
   - name: >-
       acquireTokenByUserFederatedIdentityCredential(UserFederatedIdentityCredentialRequest)
     uid: >-
@@ -324,8 +324,8 @@ methods:
     syntax:
       content: >-
         function acquireTokenByUserFederatedIdentityCredential(request:
-        UserFederatedIdentityCredentialRequest): Promise<null |
-        AuthenticationResult>
+        UserFederatedIdentityCredentialRequest): Promise<AuthenticationResult |
+        null>
       parameters:
         - id: request
           type: >-
@@ -335,8 +335,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
   - name: acquireTokenOnBehalfOf(OnBehalfOfRequest)
     uid: '@azure/msal-node.ConfidentialClientApplication.acquireTokenOnBehalfOf'
     package: '@azure/msal-node'
@@ -364,7 +364,7 @@ methods:
     syntax:
       content: >-
         function acquireTokenOnBehalfOf(request: OnBehalfOfRequest):
-        Promise<null | AuthenticationResult>
+        Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.OnBehalfOfRequest" />
@@ -372,8 +372,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
   - name: SetAppTokenProvider(IAppTokenProvider)
     uid: '@azure/msal-node.ConfidentialClientApplication.SetAppTokenProvider'
     package: '@azure/msal-node'

@@ -16,15 +16,15 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getAccountByHomeId(homeAccountId: string): Promise<null |
-        AccountInfo>
+        function getAccountByHomeId(homeAccountId: string): Promise<AccountInfo
+        | null>
       parameters:
         - id: homeAccountId
           type: string
           description: ''
       return:
         description: ''
-        type: Promise&lt;null | <xref uid="@azure/msal-node.AccountInfo" />&gt;
+        type: Promise&lt;<xref uid="@azure/msal-node.AccountInfo" /> | null&gt;
   - name: getAccountByLocalId(string)
     uid: '@azure/msal-node.ITokenCache.getAccountByLocalId'
     package: '@azure/msal-node'
@@ -33,15 +33,15 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function getAccountByLocalId(localAccountId: string): Promise<null |
-        AccountInfo>
+        function getAccountByLocalId(localAccountId: string):
+        Promise<AccountInfo | null>
       parameters:
         - id: localAccountId
           type: string
           description: ''
       return:
         description: ''
-        type: Promise&lt;null | <xref uid="@azure/msal-node.AccountInfo" />&gt;
+        type: Promise&lt;<xref uid="@azure/msal-node.AccountInfo" /> | null&gt;
   - name: getAllAccounts()
     uid: '@azure/msal-node.ITokenCache.getAllAccounts'
     package: '@azure/msal-node'

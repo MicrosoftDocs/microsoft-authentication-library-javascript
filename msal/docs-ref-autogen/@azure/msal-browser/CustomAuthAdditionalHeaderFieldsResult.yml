@@ -4,7 +4,7 @@ uid: '@azure/msal-browser.CustomAuthAdditionalHeaderFieldsResult'
 package: '@azure/msal-browser'
 summary: >-
   Result type returned by
-  [addAdditionalHeaderFields](xref:@azure/msal-browser.CustomAuthRequestInterceptor.addAdditionalHeaderFields).
+  [CustomAuthRequestInterceptor.addAdditionalHeaderFields](xref:@azure/msal-browser.CustomAuthRequestInterceptor.addAdditionalHeaderFields).
 
 
   Implementations may return either a synchronous value or a `Promise` resolving

@@ -1,0 +1,17 @@
+### YamlMime:TSTypeAlias
+name: WebBrokerBridgeErrorCode
+uid: '@azure/msal-browser.WebBrokerBridgeErrorCode'
+package: '@azure/msal-browser'
+summary: |-
+  Unified error taxonomy shared by NAA and PWB.
+
+  Each code maps to exactly one of the four base MSAL error classes
+  (`AuthError`, `ClientAuthError`, `ServerError`,
+  `InteractionRequiredAuthError`) via `toAuthError` in
+  `./WebBrokerBridgeErrorMap`.
+fullName: WebBrokerBridgeErrorCode
+remarks: ''
+isDeprecated: false
+syntax: |
+  type WebBrokerBridgeErrorCode =
+    (typeof WebBrokerBridgeErrorCode)[keyof typeof WebBrokerBridgeErrorCode]

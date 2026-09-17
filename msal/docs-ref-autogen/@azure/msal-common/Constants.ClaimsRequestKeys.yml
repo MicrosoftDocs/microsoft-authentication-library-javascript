@@ -2,7 +2,7 @@
 name: ClaimsRequestKeys
 uid: '@azure/msal-common.Constants.ClaimsRequestKeys'
 package: '@azure/msal-common'
-summary: ''
+summary: Claims request keys
 fullName: ClaimsRequestKeys
 remarks: ''
 isDeprecated: false

@@ -90,7 +90,7 @@ methods:
   - name: navigateInternal(string, NavigationOptions)
     uid: '@azure/msal-angular.MsalCustomNavigationClient.navigateInternal'
     package: '@azure/msal-angular'
-    summary: ''
+    summary: Navigates to other pages within the same web application
     remarks: ''
     isDeprecated: false
     syntax:

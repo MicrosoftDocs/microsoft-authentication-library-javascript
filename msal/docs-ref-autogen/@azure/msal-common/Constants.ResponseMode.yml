@@ -2,7 +2,7 @@
 name: ResponseMode
 uid: '@azure/msal-common.Constants.ResponseMode'
 package: '@azure/msal-common'
-summary: ''
+summary: allowed values for response_mode
 fullName: ResponseMode
 remarks: ''
 isDeprecated: false

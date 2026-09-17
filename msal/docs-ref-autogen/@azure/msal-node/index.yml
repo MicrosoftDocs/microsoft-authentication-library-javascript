@@ -129,13 +129,13 @@ variables:
     isDeprecated: false
     syntax:
       content: >-
-        PromptValue: { CONSENT: string, CREATE: string, LOGIN: string, NONE:
-        string, NO_SESSION: string, SELECT_ACCOUNT: string }
+        PromptValue: { CONSENT: string, CREATE: string, LOGIN: string,
+        NO_SESSION: string, NONE: string, SELECT_ACCOUNT: string }
       return:
         description: ''
         type: >-
-          { CONSENT: string, CREATE: string, LOGIN: string, NONE: string,
-          NO_SESSION: string, SELECT_ACCOUNT: string }
+          { CONSENT: string, CREATE: string, LOGIN: string, NO_SESSION: string,
+          NONE: string, SELECT_ACCOUNT: string }
   - name: ResponseMode
     uid: '@azure/msal-node.ResponseMode'
     package: '@azure/msal-node'
@@ -156,7 +156,7 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "6.0.0"'
+      content: 'version: "6.0.1"'
       return:
         description: ''
-        type: '"<xref uid="6.0.0" />"'
+        type: '"<xref uid="6.0.1" />"'

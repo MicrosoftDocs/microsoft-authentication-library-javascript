@@ -79,10 +79,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCompleted(): this'
+      content: >-
+        function isCompleted(): this is SignOutResult & { state:
+        SignOutCompletedState }
       return:
         description: ''
-        type: this
+        type: 'this is SignOutResult & { state: SignOutCompletedState }'
   - name: isFailed()
     uid: '@azure/msal-browser.SignOutResult.isFailed'
     package: '@azure/msal-browser'
@@ -90,10 +92,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isFailed(): this'
+      content: >-
+        function isFailed(): this is SignOutResult & { state: SignOutFailedState
+        }
       return:
         description: ''
-        type: this
+        type: 'this is SignOutResult & { state: SignOutFailedState }'
 extends: >-
   AuthFlowResultBase&lt;<xref uid="@azure/msal-browser.SignOutResultState" />,
   <xref uid="@azure/msal-browser.SignOutError" />, void&gt;

@@ -1,0 +1,46 @@
+### YamlMime:TSType
+name: LegacyRequestFields
+uid: '@azure/msal-browser.LegacyRequestFields'
+package: '@azure/msal-browser'
+summary: Deprecated request field names absent from the current request type.
+fullName: LegacyRequestFields
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: authorizePostBodyParameters
+    uid: '@azure/msal-browser.LegacyRequestFields.authorizePostBodyParameters'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: authorizePostBodyParameters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'authorizePostBodyParameters?: StringDict'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.StringDict" />
+  - name: tokenBodyParameters
+    uid: '@azure/msal-browser.LegacyRequestFields.tokenBodyParameters'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: tokenBodyParameters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tokenBodyParameters?: StringDict'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.StringDict" />
+  - name: tokenQueryParameters
+    uid: '@azure/msal-browser.LegacyRequestFields.tokenQueryParameters'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: tokenQueryParameters
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'tokenQueryParameters?: StringDict'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-common.StringDict" />

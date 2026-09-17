@@ -2,7 +2,7 @@
 name: HeaderNames
 uid: '@azure/msal-common.Constants.HeaderNames'
 package: '@azure/msal-common'
-summary: ''
+summary: Request header names
 fullName: HeaderNames
 remarks: ''
 isDeprecated: false

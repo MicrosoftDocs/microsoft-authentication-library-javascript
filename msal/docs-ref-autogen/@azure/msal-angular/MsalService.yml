@@ -154,7 +154,7 @@ methods:
     syntax:
       content: >-
         function handleRedirectObservable(options?:
-        HandleRedirectPromiseOptions): Observable<null | AuthenticationResult>
+        HandleRedirectPromiseOptions): Observable<AuthenticationResult | null>
       parameters:
         - id: options
           type: <xref uid="@azure/msal-browser.HandleRedirectPromiseOptions" />
@@ -166,8 +166,8 @@ methods:
           Observable that emits the AuthenticationResult when a redirect is
           successfully handled.
         type: >-
-          Observable&lt;null | <xref
-          uid="@azure/msal-browser.AuthenticationResult" />&gt;
+          Observable&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />
+          | null&gt;
   - name: handleRedirectObservable(string)
     uid: '@azure/msal-angular.MsalService.handleRedirectObservable'
     package: '@azure/msal-angular'
@@ -179,8 +179,8 @@ methods:
       hash: "#..." }) instead.
     syntax:
       content: >-
-        function handleRedirectObservable(hash: string): Observable<null |
-        AuthenticationResult>
+        function handleRedirectObservable(hash: string):
+        Observable<AuthenticationResult | null>
       parameters:
         - id: hash
           type: string
@@ -188,8 +188,8 @@ methods:
       return:
         description: ''
         type: >-
-          Observable&lt;null | <xref
-          uid="@azure/msal-browser.AuthenticationResult" />&gt;
+          Observable&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />
+          | null&gt;
   - name: initialize()
     uid: '@azure/msal-angular.MsalService.initialize'
     package: '@azure/msal-angular'
@@ -281,9 +281,7 @@ methods:
         - id: logger
           type: <xref uid="@azure/msal-common.Logger" />
           description: ''
-  - name: >-
-      ssoSilent(Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" |
-      "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
+  - name: ssoSilent(SsoSilentRequest)
     uid: '@azure/msal-angular.MsalService.ssoSilent'
     package: '@azure/msal-angular'
     summary: ''
@@ -291,16 +289,11 @@ methods:
     isDeprecated: false
     syntax:
       content: >-
-        function ssoSilent(request: Partial<Omit<CommonAuthorizationUrlRequest,
-        "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod" |
-        "platformBroker">>): Observable<AuthenticationResult>
+        function ssoSilent(request: SsoSilentRequest):
+        Observable<AuthenticationResult>
       parameters:
         - id: request
-          type: >-
-            Partial&lt;Omit&lt;<xref
-            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
-            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
-            | "platformBroker"&gt;&gt;
+          type: <xref uid="@azure/msal-browser.SsoSilentRequest" />
           description: ''
       return:
         description: ''

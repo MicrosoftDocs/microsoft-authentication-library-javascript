@@ -2,7 +2,7 @@
 name: OAuthResponseType
 uid: '@azure/msal-common.Constants.OAuthResponseType'
 package: '@azure/msal-common'
-summary: ''
+summary: Allowed values for response_type
 fullName: OAuthResponseType
 remarks: ''
 isDeprecated: false

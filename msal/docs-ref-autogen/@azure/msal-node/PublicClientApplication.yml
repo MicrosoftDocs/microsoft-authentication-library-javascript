@@ -85,7 +85,7 @@ inheritedMethods:
     syntax:
       content: >-
         function acquireTokenByUsernamePassword(request:
-        UsernamePasswordRequest): Promise<null | AuthenticationResult>
+        UsernamePasswordRequest): Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.UsernamePasswordRequest" />
@@ -93,8 +93,8 @@ inheritedMethods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
     inheritanceDescription: <b>Inherited From</b> ClientApplication.acquireTokenByUsernamePassword
   - name: clearCache()
     uid: '@azure/msal-node.PublicClientApplication.clearCache'
@@ -231,7 +231,7 @@ methods:
     syntax:
       content: >-
         function acquireTokenByDeviceCode(request: DeviceCodeRequest):
-        Promise<null | AuthenticationResult>
+        Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.DeviceCodeRequest" />
@@ -239,8 +239,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
   - name: acquireTokenByRefreshToken(RefreshTokenRequest)
     uid: '@azure/msal-node.PublicClientApplication.acquireTokenByRefreshToken'
     package: '@azure/msal-node'
@@ -254,7 +254,7 @@ methods:
     syntax:
       content: >-
         function acquireTokenByRefreshToken(request: RefreshTokenRequest):
-        Promise<null | AuthenticationResult>
+        Promise<AuthenticationResult | null>
       parameters:
         - id: request
           type: <xref uid="@azure/msal-node.RefreshTokenRequest" />
@@ -262,8 +262,8 @@ methods:
       return:
         description: ''
         type: >-
-          Promise&lt;null | <xref uid="@azure/msal-node.AuthenticationResult"
-          />&gt;
+          Promise&lt;<xref uid="@azure/msal-node.AuthenticationResult" /> |
+          null&gt;
   - name: acquireTokenInteractive(InteractiveRequest)
     uid: '@azure/msal-node.PublicClientApplication.acquireTokenInteractive'
     package: '@azure/msal-node'

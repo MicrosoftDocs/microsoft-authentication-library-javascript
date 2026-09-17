@@ -39,10 +39,10 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function flushMeasurement(): null | number'
+      content: 'function flushMeasurement(): number | null'
       return:
         description: ''
-        type: null | number
+        type: number | null
   - name: flushMeasurements(string, SubMeasurement[])
     uid: '@azure/msal-browser.BrowserPerformanceMeasurement.flushMeasurements'
     package: '@azure/msal-browser'

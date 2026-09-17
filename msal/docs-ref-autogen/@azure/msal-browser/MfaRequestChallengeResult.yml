@@ -92,10 +92,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isFailed(): this'
+      content: >-
+        function isFailed(): this is MfaRequestChallengeResult & { state:
+        MfaFailedState }
       return:
         description: true if the result is failed, false otherwise.
-        type: this
+        type: 'this is MfaRequestChallengeResult & { state: MfaFailedState }'
   - name: isVerificationRequired()
     uid: '@azure/msal-browser.MfaRequestChallengeResult.isVerificationRequired'
     package: '@azure/msal-browser'
@@ -103,10 +105,14 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isVerificationRequired(): this'
+      content: >-
+        function isVerificationRequired(): this is MfaRequestChallengeResult & {
+        state: MfaVerificationRequiredState }
       return:
         description: true if verification is required, false otherwise.
-        type: this
+        type: >-
+          this is MfaRequestChallengeResult & { state:
+          MfaVerificationRequiredState }
 extends: >-
   AuthFlowResultBase&lt;<xref
   uid="@azure/msal-browser.MfaRequestChallengeResultState" />, <xref

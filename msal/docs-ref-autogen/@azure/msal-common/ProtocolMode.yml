@@ -2,7 +2,7 @@
 name: ProtocolMode
 uid: '@azure/msal-common.ProtocolMode'
 package: '@azure/msal-common'
-summary: ''
+summary: Protocol modes supported by MSAL.
 fullName: ProtocolMode
 remarks: ''
 isDeprecated: false

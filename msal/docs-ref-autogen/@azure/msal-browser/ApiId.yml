@@ -2,7 +2,17 @@
 name: ApiId
 uid: '@azure/msal-browser.ApiId'
 package: '@azure/msal-browser'
-summary: ''
+summary: >-
+  API Codes for Telemetry purposes.
+
+  Before adding a new code you must claim it in the MSAL Telemetry tracker as
+  these number spaces are shared across all MSALs
+
+  0-99 Silent Flow
+
+  800-899 Auth Code Flow
+
+  900-999 Misc
 fullName: ApiId
 remarks: ''
 isDeprecated: false

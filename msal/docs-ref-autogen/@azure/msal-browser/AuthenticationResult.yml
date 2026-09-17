@@ -7,6 +7,4 @@ fullName: AuthenticationResult
 remarks: ''
 isDeprecated: false
 syntax: |
-  type AuthenticationResult = CommonAuthenticationResult & {
-    account: AccountInfo
-  }
+  type AuthenticationResult = AuthenticationResult & { account: AccountInfo }

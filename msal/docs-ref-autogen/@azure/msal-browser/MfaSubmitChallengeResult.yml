@@ -92,10 +92,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isCompleted(): this'
+      content: >-
+        function isCompleted(): this is MfaSubmitChallengeResult & { state:
+        MfaCompletedState }
       return:
         description: true if completed, false otherwise.
-        type: this
+        type: 'this is MfaSubmitChallengeResult & { state: MfaCompletedState }'
   - name: isFailed()
     uid: '@azure/msal-browser.MfaSubmitChallengeResult.isFailed'
     package: '@azure/msal-browser'
@@ -103,10 +105,12 @@ methods:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function isFailed(): this'
+      content: >-
+        function isFailed(): this is MfaSubmitChallengeResult & { state:
+        MfaFailedState }
       return:
         description: true if the result is failed, false otherwise.
-        type: this
+        type: 'this is MfaSubmitChallengeResult & { state: MfaFailedState }'
 extends: >-
   AuthFlowResultBase&lt;<xref
   uid="@azure/msal-browser.MfaSubmitChallengeResultState" />, <xref

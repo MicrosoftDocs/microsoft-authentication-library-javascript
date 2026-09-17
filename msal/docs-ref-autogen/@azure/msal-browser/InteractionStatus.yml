@@ -2,7 +2,11 @@
 name: InteractionStatus
 uid: '@azure/msal-browser.InteractionStatus'
 package: '@azure/msal-browser'
-summary: ''
+summary: >-
+  Types of interaction currently in progress.
+
+  Used in events in wrapper libraries to invoke functions when certain
+  interaction is in progress or all interactions are complete.
 fullName: InteractionStatus
 remarks: ''
 isDeprecated: false

@@ -12,7 +12,7 @@ functions:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function delay<T>(t: number, value?: T): Promise<T | void>'
+      content: 'function delay<T>(t: number, value?: T): Promise<void | T>'
       parameters:
         - id: t
           type: number
@@ -22,7 +22,7 @@ functions:
           description: T
       return:
         description: ''
-        type: Promise&lt;T | void&gt;
+        type: Promise&lt;void | T&gt;
   - name: isCacheExpired(string, number)
     uid: '@azure/msal-common.TimeUtils.isCacheExpired'
     package: '@azure/msal-common'
@@ -74,7 +74,7 @@ functions:
       return:
         description: ''
         type: number
-  - name: toDateFromSeconds(undefined | string | number)
+  - name: toDateFromSeconds(string | number | undefined)
     uid: '@azure/msal-common.TimeUtils.toDateFromSeconds'
     package: '@azure/msal-common'
     summary: >-
@@ -83,10 +83,10 @@ functions:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'function toDateFromSeconds(seconds: undefined | string | number): Date'
+      content: 'function toDateFromSeconds(seconds: string | number | undefined): Date'
       parameters:
         - id: seconds
-          type: undefined | string | number
+          type: string | number | undefined
           description: ''
       return:
         description: ''
