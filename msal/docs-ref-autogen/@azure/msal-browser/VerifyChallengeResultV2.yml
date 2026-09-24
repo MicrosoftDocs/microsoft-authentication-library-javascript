@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: VerifyChallengeResultV2
+uid: '@azure/msal-browser.VerifyChallengeResultV2'
+package: '@azure/msal-browser'
+summary: >-
+  Result of verifying a challenge. It wraps one of
+
+  [VerifyChallengeResultStateV2](xref:@azure/msal-browser.VerifyChallengeResultStateV2)
+  plus, on failure, a
+
+  [VerifyChallengeErrorV2](xref:@azure/msal-browser.VerifyChallengeErrorV2).
+fullName: VerifyChallengeResultV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type VerifyChallengeResultV2 = CustomAuthResultV2<
+    VerifyChallengeResultStateV2,
+    VerifyChallengeErrorV2,
+    CustomAuthAccountData | undefined
+  >

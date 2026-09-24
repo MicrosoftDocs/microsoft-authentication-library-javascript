@@ -1,0 +1,20 @@
+### YamlMime:TSTypeAlias
+name: VerifyChallengeResultStateV2
+uid: '@azure/msal-browser.VerifyChallengeResultStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  The states a verify-challenge action can resolve to. Verifying the one-time
+  code advances password reset to `NewPasswordRequiredStateV2` or completes
+  MFA sign-in. Failures resolve to `FailedStateV2`.
+fullName: VerifyChallengeResultStateV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type VerifyChallengeResultStateV2 =
+    | NewPasswordRequiredStateV2
+    | SignUpPasswordRequiredStateV2
+    | AttributesRequiredStateV2
+    | SignInContinuationStateV2
+    | MFARequiredStateV2
+    | CompletedStateV2
+    | FailedStateV2

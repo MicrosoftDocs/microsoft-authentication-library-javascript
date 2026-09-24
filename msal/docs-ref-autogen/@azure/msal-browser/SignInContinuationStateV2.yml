@@ -1,0 +1,70 @@
+### YamlMime:TSType
+name: SignInContinuationStateV2
+uid: '@azure/msal-browser.SignInContinuationStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  Shared state returned when a completed V2 flow can sign the user in by
+  redeeming its continuation. Password reset and sign-up can both surface this
+  state without duplicating the token-acquisition behavior.
+fullName: SignInContinuationStateV2
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignInContinuationStateV2(CustomAuthActionRequiredStateParametersV2)
+    uid: '@azure/msal-browser.SignInContinuationStateV2.constructor'
+    package: '@azure/msal-browser'
+    summary: Creates a new instance of AuthFlowActionRequiredStateBase.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SignInContinuationStateV2(stateParameters:
+        CustomAuthActionRequiredStateParametersV2)
+      parameters:
+        - id: stateParameters
+          type: CustomAuthActionRequiredStateParametersV2
+          description: The parameters for the auth state.
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.SignInContinuationStateV2.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: "signInContinuation" = "signInContinuation"'
+      return:
+        description: ''
+        type: '"signInContinuation"'
+methods:
+  - name: signIn(SignInWithContinuationTokenInputs)
+    uid: '@azure/msal-browser.SignInContinuationStateV2.signIn'
+    package: '@azure/msal-browser'
+    summary: |-
+      Signs the user in using the continuation established by the completed V2
+      flow. On success the returned result reaches the completed state
+      carrying the signed-in account data; on failure the result's error reports
+      why the follow-up sign-in could not complete.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function signIn(inputs?: SignInWithContinuationTokenInputs):
+        Promise<SignInContinuationResultV2>
+      parameters:
+        - id: inputs
+          type: <xref uid="@azure/msal-browser.SignInWithContinuationTokenInputs" />
+          description: |-
+            Optional scopes requested for the issued token. Claims
+            are accepted for API alignment but are not sent until the V2 service
+            supports them on authorize-challenge.
+      return:
+        description: The result of signing in after the password reset.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.SignInContinuationResultV2"
+          />&gt;
+extends: >-
+  <xref uid="@azure/msal-browser.AuthFlowActionRequiredStateBase"
+  />&lt;SignInContinuationStateParametersV2&gt;

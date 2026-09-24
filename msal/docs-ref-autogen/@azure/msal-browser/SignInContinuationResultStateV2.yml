@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: SignInContinuationResultStateV2
+uid: '@azure/msal-browser.SignInContinuationResultStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  The states a V2 continuation sign-in can resolve to. Signing in redeems the
+  flow continuation for tokens, so the terminal
+  `CompletedStateV2` carries `CustomAuthAccountData`. `CompletedStateV2` and the
+  account payload are declared together because they always occur together.
+fullName: SignInContinuationResultStateV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignInContinuationResultStateV2 = CompletedStateV2 | FailedStateV2

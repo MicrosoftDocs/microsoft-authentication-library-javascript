@@ -1,0 +1,627 @@
+### YamlMime:TSType
+name: ICustomAuthPublicClientApplicationV2
+uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2'
+package: '@azure/msal-browser'
+summary: Public interface for the native auth V2 surface.
+fullName: ICustomAuthPublicClientApplicationV2
+remarks: ''
+isDeprecated: false
+type: interface
+inheritedMethods:
+  - name: acquireTokenByCode(AuthorizationCodeRequest)
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplicationV2.acquireTokenByCode
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenByCode(request: AuthorizationCodeRequest):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.AuthorizationCodeRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.acquireTokenByCode](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.acquireTokenByCode)
+  - name: acquireTokenPopup(PopupRequest)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.acquireTokenPopup'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenPopup(request: PopupRequest):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.PopupRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.acquireTokenPopup](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.acquireTokenPopup)
+  - name: acquireTokenRedirect(RedirectRequest)
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplicationV2.acquireTokenRedirect
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function acquireTokenRedirect(request: RedirectRequest): Promise<void>'
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.RedirectRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.acquireTokenRedirect](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.acquireTokenRedirect)
+  - name: acquireTokenSilent(SilentRequest)
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplicationV2.acquireTokenSilent
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function acquireTokenSilent(silentRequest: SilentRequest):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: silentRequest
+          type: <xref uid="@azure/msal-browser.SilentRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.acquireTokenSilent](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.acquireTokenSilent)
+  - name: addEventCallback(EventCallbackFunction, EventType[])
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.addEventCallback'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addEventCallback(callback: EventCallbackFunction, eventTypes?:
+        EventType[]): string | null
+      parameters:
+        - id: callback
+          type: <xref uid="@azure/msal-browser.EventCallbackFunction" />
+          description: ''
+        - id: eventTypes
+          type: <xref uid="@azure/msal-browser.EventType" />[]
+          description: ''
+      return:
+        description: ''
+        type: string | null
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.addEventCallback](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.addEventCallback)
+  - name: addPerformanceCallback(PerformanceCallbackFunction)
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplicationV2.addPerformanceCallback
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function addPerformanceCallback(callback: PerformanceCallbackFunction):
+        string
+      parameters:
+        - id: callback
+          type: <xref uid="@azure/msal-browser.PerformanceCallbackFunction" />
+          description: ''
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.addPerformanceCallback](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.addPerformanceCallback)
+  - name: clearCache(ClearCacheRequest)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.clearCache'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function clearCache(logoutRequest?: ClearCacheRequest): Promise<void>'
+      parameters:
+        - id: logoutRequest
+          type: <xref uid="@azure/msal-browser.ClearCacheRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.clearCache](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.clearCache)
+  - name: getAccount(AccountFilter)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.getAccount'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAccount(accountFilter: AccountFilter): AccountInfo | null'
+      parameters:
+        - id: accountFilter
+          type: <xref uid="@azure/msal-common.AccountFilter" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.getAccount](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.getAccount)
+  - name: getActiveAccount()
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.getActiveAccount'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getActiveAccount(): AccountInfo | null'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.getActiveAccount](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.getActiveAccount)
+  - name: getAllAccounts(AccountFilter)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.getAllAccounts'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getAllAccounts(accountFilter?: AccountFilter): AccountInfo[]'
+      parameters:
+        - id: accountFilter
+          type: <xref uid="@azure/msal-common.AccountFilter" />
+          description: ''
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.AccountInfo" />[]
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.getAllAccounts](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.getAllAccounts)
+  - name: getCurrentAccount(CustomAuthActionInputs)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.getCurrentAccount'
+    package: '@azure/msal-browser'
+    summary: Gets the current account from the cache.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function getCurrentAccount(accountRetrievalInputs?:
+        CustomAuthActionInputs): GetAccountResult
+      parameters:
+        - id: accountRetrievalInputs
+          type: CustomAuthActionInputs
+          description: Inputs for getting the current cached account
+      return:
+        description: The result of the operation
+        type: <xref uid="@azure/msal-browser.GetAccountResult" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.getCurrentAccount](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.getCurrentAccount)
+  - name: getLogger()
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.getLogger'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function getLogger(): Logger'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.Logger" />
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.getLogger](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.getLogger)
+  - name: handleRedirectPromise(HandleRedirectPromiseOptions)
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplicationV2.handleRedirectPromise
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function handleRedirectPromise(options?: HandleRedirectPromiseOptions):
+        Promise<AuthenticationResult | null>
+      parameters:
+        - id: options
+          type: <xref uid="@azure/msal-browser.HandleRedirectPromiseOptions" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" /> |
+          null&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.handleRedirectPromise](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.handleRedirectPromise)
+  - name: >-
+      hydrateCache(AuthenticationResult, PopupRequest | RedirectRequest |
+      SilentRequest | Partial<Omit<CommonAuthorizationUrlRequest, "responseMode"
+      | "earJwk" | "codeChallenge" | "codeChallengeMethod" | "platformBroker">>)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.hydrateCache'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function hydrateCache(result: AuthenticationResult, request:
+        PopupRequest | RedirectRequest | SilentRequest |
+        Partial<Omit<CommonAuthorizationUrlRequest, "responseMode" | "earJwk" |
+        "codeChallenge" | "codeChallengeMethod" | "platformBroker">>):
+        Promise<void>
+      parameters:
+        - id: result
+          type: <xref uid="@azure/msal-browser.AuthenticationResult" />
+          description: ''
+        - id: request
+          type: >-
+            <xref uid="@azure/msal-browser.PopupRequest" /> | <xref
+            uid="@azure/msal-browser.RedirectRequest" /> | <xref
+            uid="@azure/msal-browser.SilentRequest" /> |
+            Partial&lt;Omit&lt;<xref
+            uid="@azure/msal-common.CommonAuthorizationUrlRequest" />,
+            "responseMode" | "earJwk" | "codeChallenge" | "codeChallengeMethod"
+            | "platformBroker"&gt;&gt;
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.hydrateCache](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.hydrateCache)
+  - name: initialize(InitializeApplicationRequest)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.initialize'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function initialize(request?: InitializeApplicationRequest):
+        Promise<void>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.InitializeApplicationRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.initialize](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.initialize)
+  - name: initializeWrapperLibrary(WrapperSKU, string)
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplicationV2.initializeWrapperLibrary
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function initializeWrapperLibrary(sku: WrapperSKU, version: string)'
+      parameters:
+        - id: sku
+          type: <xref uid="@azure/msal-browser.WrapperSKU" />
+          description: ''
+        - id: version
+          type: string
+          description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.initializeWrapperLibrary](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.initializeWrapperLibrary)
+  - name: loginPopup(PopupRequest)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.loginPopup'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function loginPopup(request?: PopupRequest):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.PopupRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.loginPopup](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.loginPopup)
+  - name: loginRedirect(RedirectRequest)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.loginRedirect'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function loginRedirect(request?: RedirectRequest): Promise<void>'
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.RedirectRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.loginRedirect](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.loginRedirect)
+  - name: logoutPopup(EndSessionPopupRequest)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.logoutPopup'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function logoutPopup(logoutRequest?: EndSessionPopupRequest):
+        Promise<void>
+      parameters:
+        - id: logoutRequest
+          type: <xref uid="@azure/msal-browser.EndSessionPopupRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.logoutPopup](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.logoutPopup)
+  - name: logoutRedirect(EndSessionRequest)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.logoutRedirect'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function logoutRedirect(logoutRequest?: EndSessionRequest):
+        Promise<void>
+      parameters:
+        - id: logoutRequest
+          type: <xref uid="@azure/msal-browser.EndSessionRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;void&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.logoutRedirect](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.logoutRedirect)
+  - name: removeEventCallback(string)
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplicationV2.removeEventCallback
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removeEventCallback(callbackId: string)'
+      parameters:
+        - id: callbackId
+          type: string
+          description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.removeEventCallback](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.removeEventCallback)
+  - name: removePerformanceCallback(string)
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplicationV2.removePerformanceCallback
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function removePerformanceCallback(callbackId: string): boolean'
+      parameters:
+        - id: callbackId
+          type: string
+          description: ''
+      return:
+        description: ''
+        type: boolean
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.removePerformanceCallback](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.removePerformanceCallback)
+  - name: resetPassword(ResetPasswordInputs)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.resetPassword'
+    package: '@azure/msal-browser'
+    summary: Initiates the reset password flow.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function resetPassword(resetPasswordInputs: ResetPasswordInputs):
+        Promise<ResetPasswordStartResult>
+      parameters:
+        - id: resetPasswordInputs
+          type: <xref uid="@azure/msal-browser.ResetPasswordInputs" />
+          description: Inputs for the reset password flow
+      return:
+        description: A promise that resolves to ResetPasswordStartResult
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.ResetPasswordStartResult"
+          />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.resetPassword](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.resetPassword)
+  - name: setActiveAccount(AccountInfo | null)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.setActiveAccount'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setActiveAccount(account: AccountInfo | null)'
+      parameters:
+        - id: account
+          type: <xref uid="@azure/msal-browser.AccountInfo" /> | null
+          description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.setActiveAccount](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.setActiveAccount)
+  - name: setLogger(Logger)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.setLogger'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setLogger(logger: Logger)'
+      parameters:
+        - id: logger
+          type: <xref uid="@azure/msal-browser.Logger" />
+          description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.setLogger](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.setLogger)
+  - name: setNavigationClient(INavigationClient)
+    uid: >-
+      @azure/msal-browser.ICustomAuthPublicClientApplicationV2.setNavigationClient
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function setNavigationClient(navigationClient: INavigationClient)'
+      parameters:
+        - id: navigationClient
+          type: <xref uid="@azure/msal-browser.INavigationClient" />
+          description: ''
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.setNavigationClient](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.setNavigationClient)
+  - name: signIn(SignInInputs)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.signIn'
+    package: '@azure/msal-browser'
+    summary: Initiates the sign-in flow.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function signIn(signInInputs: SignInInputs): Promise<SignInResult>'
+      parameters:
+        - id: signInInputs
+          type: <xref uid="@azure/msal-browser.SignInInputs" />
+          description: Inputs for the sign-in flow
+      return:
+        description: A promise that resolves to SignInResult
+        type: Promise&lt;<xref uid="@azure/msal-browser.SignInResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.signIn](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.signIn)
+  - name: signUp(SignUpInputs)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.signUp'
+    package: '@azure/msal-browser'
+    summary: Initiates the sign-up flow.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function signUp(signUpInputs: SignUpInputs): Promise<SignUpResult>'
+      parameters:
+        - id: signUpInputs
+          type: <xref uid="@azure/msal-browser.SignUpInputs" />
+          description: Inputs for the sign-up flow
+      return:
+        description: A promise that resolves to SignUpResult
+        type: Promise&lt;<xref uid="@azure/msal-browser.SignUpResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.signUp](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.signUp)
+  - name: ssoSilent(SsoSilentRequest)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.ssoSilent'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function ssoSilent(request: SsoSilentRequest):
+        Promise<AuthenticationResult>
+      parameters:
+        - id: request
+          type: <xref uid="@azure/msal-browser.SsoSilentRequest" />
+          description: ''
+      return:
+        description: ''
+        type: Promise&lt;<xref uid="@azure/msal-browser.AuthenticationResult" />&gt;
+    inheritanceDescription: >-
+      <b>Inherited From</b>
+      [ICustomAuthPublicClientApplication.ssoSilent](xref:@azure/msal-browser.ICustomAuthPublicClientApplication.ssoSilent)
+methods:
+  - name: resetPasswordV2(ResetPasswordInputs)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.resetPasswordV2'
+    package: '@azure/msal-browser'
+    summary: >-
+      Initiates the native auth V2 self-service password reset flow for the
+      given username.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function resetPasswordV2(inputs: ResetPasswordInputs):
+        Promise<ResetPasswordStartResultV2>
+      parameters:
+        - id: inputs
+          type: <xref uid="@azure/msal-browser.ResetPasswordInputs" />
+          description: Inputs for the reset-password V2 flow
+      return:
+        description: A promise that resolves to ResetPasswordStartResultV2
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.ResetPasswordStartResultV2"
+          />&gt;
+  - name: signInV2(SignInInputs)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.signInV2'
+    package: '@azure/msal-browser'
+    summary: |-
+      Starts native auth V2 sign-in and returns the authentication methods
+      offered for the first factor.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function signInV2(inputs: SignInInputs): Promise<SignInStartResultV2>'
+      parameters:
+        - id: inputs
+          type: <xref uid="@azure/msal-browser.SignInInputs" />
+          description: Inputs for the sign-in V2 flow.
+      return:
+        description: A promise that resolves to the sign-in start result.
+        type: Promise&lt;<xref uid="@azure/msal-browser.SignInStartResultV2" />&gt;
+  - name: signUpV2(SignUpInputsV2)
+    uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2.signUpV2'
+    package: '@azure/msal-browser'
+    summary: Starts native auth V2 sign-up.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function signUpV2(inputs: SignUpInputsV2): Promise<SignUpStartResultV2>'
+      parameters:
+        - id: inputs
+          type: <xref uid="@azure/msal-browser.SignUpInputsV2" />
+          description: Inputs for the sign-up V2 flow.
+      return:
+        description: A promise that resolves to the sign-up start result.
+        type: Promise&lt;<xref uid="@azure/msal-browser.SignUpStartResultV2" />&gt;
+extends: <xref uid="@azure/msal-browser.ICustomAuthPublicClientApplication" />

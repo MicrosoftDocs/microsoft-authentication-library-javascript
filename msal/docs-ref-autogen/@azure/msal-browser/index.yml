@@ -7,6 +7,7 @@ enums:
   - '@azure/msal-browser.InteractionType'
   - '@azure/msal-browser.LogLevel'
 classes:
+  - '@azure/msal-browser.AttributesRequiredStateV2'
   - '@azure/msal-browser.AuthError'
   - '@azure/msal-browser.AuthFlowActionRequiredStateBase'
   - '@azure/msal-browser.AuthFlowStateBase'
@@ -17,6 +18,7 @@ classes:
   - '@azure/msal-browser.AuthMethodRegistrationRequiredState'
   - '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeError'
   - '@azure/msal-browser.AuthMethodRegistrationSubmitChallengeResult'
+  - '@azure/msal-browser.AuthMethodSelectionRequiredStateV2'
   - '@azure/msal-browser.AuthMethodVerificationRequiredState'
   - '@azure/msal-browser.AuthenticationHeaderParser'
   - '@azure/msal-browser.BrowserAuthError'
@@ -25,12 +27,16 @@ classes:
   - '@azure/msal-browser.BrowserPerformanceMeasurement'
   - '@azure/msal-browser.ClientAuthError'
   - '@azure/msal-browser.ClientConfigurationError'
+  - '@azure/msal-browser.CodeRequiredStateV2'
+  - '@azure/msal-browser.CompletedStateV2'
   - '@azure/msal-browser.CustomAuthAccountData'
   - '@azure/msal-browser.CustomAuthApiError'
   - '@azure/msal-browser.CustomAuthError'
   - '@azure/msal-browser.CustomAuthPublicClientApplication'
+  - '@azure/msal-browser.CustomAuthResultV2'
   - '@azure/msal-browser.EventHandler'
   - '@azure/msal-browser.EventMessageUtils'
+  - '@azure/msal-browser.FailedStateV2'
   - '@azure/msal-browser.GetAccessTokenResult'
   - '@azure/msal-browser.GetAccountError'
   - '@azure/msal-browser.GetAccountResult'
@@ -41,6 +47,8 @@ classes:
   - '@azure/msal-browser.InvalidConfigurationError'
   - '@azure/msal-browser.LocalStorage'
   - '@azure/msal-browser.Logger'
+  - '@azure/msal-browser.MFARequiredStateV2'
+  - '@azure/msal-browser.MFAVerificationRequiredStateV2'
   - '@azure/msal-browser.MemoryStorage'
   - '@azure/msal-browser.MethodNotImplementedError'
   - '@azure/msal-browser.MfaAwaitingState'
@@ -53,10 +61,13 @@ classes:
   - '@azure/msal-browser.MfaVerificationRequiredState'
   - '@azure/msal-browser.MsalCustomAuthError'
   - '@azure/msal-browser.NavigationClient'
+  - '@azure/msal-browser.NewPasswordRequiredStateV2'
   - '@azure/msal-browser.NoCachedAccountFoundError'
   - '@azure/msal-browser.ParsedUrlError'
+  - '@azure/msal-browser.PasswordRequiredStateV2'
   - '@azure/msal-browser.PendingRequestRegistry'
   - '@azure/msal-browser.PublicClientApplication'
+  - '@azure/msal-browser.RequestChallengeErrorV2'
   - '@azure/msal-browser.ResetPasswordCodeRequiredState'
   - '@azure/msal-browser.ResetPasswordCompletedState'
   - '@azure/msal-browser.ResetPasswordError'
@@ -64,6 +75,7 @@ classes:
   - '@azure/msal-browser.ResetPasswordPasswordRequiredState'
   - '@azure/msal-browser.ResetPasswordResendCodeError'
   - '@azure/msal-browser.ResetPasswordResendCodeResult'
+  - '@azure/msal-browser.ResetPasswordStartErrorV2'
   - '@azure/msal-browser.ResetPasswordStartResult'
   - '@azure/msal-browser.ResetPasswordState'
   - '@azure/msal-browser.ResetPasswordSubmitCodeError'
@@ -74,13 +86,16 @@ classes:
   - '@azure/msal-browser.SessionStorage'
   - '@azure/msal-browser.SignInCodeRequiredState'
   - '@azure/msal-browser.SignInCompletedState'
+  - '@azure/msal-browser.SignInContinuationErrorV2'
   - '@azure/msal-browser.SignInContinuationState'
+  - '@azure/msal-browser.SignInContinuationStateV2'
   - '@azure/msal-browser.SignInError'
   - '@azure/msal-browser.SignInFailedState'
   - '@azure/msal-browser.SignInPasswordRequiredState'
   - '@azure/msal-browser.SignInResendCodeError'
   - '@azure/msal-browser.SignInResendCodeResult'
   - '@azure/msal-browser.SignInResult'
+  - '@azure/msal-browser.SignInStartErrorV2'
   - '@azure/msal-browser.SignInState'
   - '@azure/msal-browser.SignInSubmitCodeError'
   - '@azure/msal-browser.SignInSubmitCodeResult'
@@ -94,9 +109,11 @@ classes:
   - '@azure/msal-browser.SignUpError'
   - '@azure/msal-browser.SignUpFailedState'
   - '@azure/msal-browser.SignUpPasswordRequiredState'
+  - '@azure/msal-browser.SignUpPasswordRequiredStateV2'
   - '@azure/msal-browser.SignUpResendCodeError'
   - '@azure/msal-browser.SignUpResendCodeResult'
   - '@azure/msal-browser.SignUpResult'
+  - '@azure/msal-browser.SignUpStartErrorV2'
   - '@azure/msal-browser.SignUpState'
   - '@azure/msal-browser.SignUpSubmitAttributesError'
   - '@azure/msal-browser.SignUpSubmitAttributesResult'
@@ -106,16 +123,22 @@ classes:
   - '@azure/msal-browser.SignUpSubmitPasswordResult'
   - '@azure/msal-browser.SignedHttpRequest'
   - '@azure/msal-browser.StubPerformanceClient'
+  - '@azure/msal-browser.SubmitAttributesErrorV2'
+  - '@azure/msal-browser.SubmitNewPasswordErrorV2'
+  - '@azure/msal-browser.SubmitPasswordErrorV2'
   - '@azure/msal-browser.UnexpectedError'
   - '@azure/msal-browser.UnsupportedEnvironmentError'
   - '@azure/msal-browser.UserAccountAttributeError'
   - '@azure/msal-browser.UserAlreadySignedInError'
+  - '@azure/msal-browser.VerifyChallengeErrorV2'
 interfaces:
   - '@azure/msal-browser.AuthMethodDetails'
   - '@azure/msal-browser.AuthenticationMethod'
+  - '@azure/msal-browser.AuthenticationMethodV2'
   - '@azure/msal-browser.CrossVersionRequestFields'
   - '@azure/msal-browser.CustomAuthRequestInterceptor'
   - '@azure/msal-browser.ICustomAuthPublicClientApplication'
+  - '@azure/msal-browser.ICustomAuthPublicClientApplicationV2'
   - '@azure/msal-browser.ILoggerCallback'
   - '@azure/msal-browser.INavigationClient'
   - '@azure/msal-browser.INetworkModule'
@@ -161,6 +184,12 @@ typeAliases:
   - '@azure/msal-browser.InProgressPerformanceEvent'
   - '@azure/msal-browser.InitializeApplicationRequest'
   - '@azure/msal-browser.LoadTokenOptions'
+  - '@azure/msal-browser.MFARequestChallengeResultStateV2'
+  - '@azure/msal-browser.MFARequestChallengeResultV2'
+  - '@azure/msal-browser.MFAResendChallengeResultStateV2'
+  - '@azure/msal-browser.MFAResendChallengeResultV2'
+  - '@azure/msal-browser.MFASubmitChallengeResultStateV2'
+  - '@azure/msal-browser.MFASubmitChallengeResultV2'
   - '@azure/msal-browser.MfaRequestChallengeResultState'
   - '@azure/msal-browser.MfaSubmitChallengeResultState'
   - '@azure/msal-browser.NavigationOptions'
@@ -175,29 +204,51 @@ typeAliases:
   - '@azure/msal-browser.PopupSize'
   - '@azure/msal-browser.PopupWindowAttributes'
   - '@azure/msal-browser.RedirectRequest'
+  - '@azure/msal-browser.RequestChallengeResultStateV2'
+  - '@azure/msal-browser.RequestChallengeResultV2'
   - '@azure/msal-browser.ResetPasswordInputs'
+  - '@azure/msal-browser.ResetPasswordInputsV2'
   - '@azure/msal-browser.ResetPasswordResendCodeResultState'
   - '@azure/msal-browser.ResetPasswordStartResultState'
+  - '@azure/msal-browser.ResetPasswordStartResultStateV2'
+  - '@azure/msal-browser.ResetPasswordStartResultV2'
   - '@azure/msal-browser.ResetPasswordSubmitCodeResultState'
   - '@azure/msal-browser.ResetPasswordSubmitPasswordResultState'
+  - '@azure/msal-browser.SignInContinuationInputsV2'
+  - '@azure/msal-browser.SignInContinuationResultStateV2'
+  - '@azure/msal-browser.SignInContinuationResultV2'
   - '@azure/msal-browser.SignInInputs'
+  - '@azure/msal-browser.SignInInputsV2'
   - '@azure/msal-browser.SignInResendCodeResultState'
   - '@azure/msal-browser.SignInResultState'
+  - '@azure/msal-browser.SignInStartResultStateV2'
+  - '@azure/msal-browser.SignInStartResultV2'
   - '@azure/msal-browser.SignInSubmitCodeResultState'
   - '@azure/msal-browser.SignInSubmitPasswordResultState'
   - '@azure/msal-browser.SignInWithContinuationTokenInputs'
   - '@azure/msal-browser.SignOutResultState'
   - '@azure/msal-browser.SignUpInputs'
+  - '@azure/msal-browser.SignUpInputsV2'
   - '@azure/msal-browser.SignUpResendCodeResultState'
   - '@azure/msal-browser.SignUpResultState'
+  - '@azure/msal-browser.SignUpStartResultStateV2'
+  - '@azure/msal-browser.SignUpStartResultV2'
   - '@azure/msal-browser.SignUpSubmitAttributesResultState'
   - '@azure/msal-browser.SignUpSubmitCodeResultState'
   - '@azure/msal-browser.SignUpSubmitPasswordResultState'
   - '@azure/msal-browser.SignedHttpRequestOptions'
   - '@azure/msal-browser.SilentRequest'
   - '@azure/msal-browser.SsoSilentRequest'
+  - '@azure/msal-browser.SubmitAttributesResultStateV2'
+  - '@azure/msal-browser.SubmitAttributesResultV2'
+  - '@azure/msal-browser.SubmitNewPasswordResultStateV2'
+  - '@azure/msal-browser.SubmitNewPasswordResultV2'
+  - '@azure/msal-browser.SubmitPasswordResultStateV2'
+  - '@azure/msal-browser.SubmitPasswordResultV2'
   - '@azure/msal-browser.TenantProfile'
   - '@azure/msal-browser.UserAccountAttributes'
+  - '@azure/msal-browser.VerifyChallengeResultStateV2'
+  - '@azure/msal-browser.VerifyChallengeResultV2'
   - '@azure/msal-browser.WebBrokerBridgeSendFn'
 variables:
   - name: ApiId
@@ -443,6 +494,25 @@ variables:
         type: >-
           { CONSENT: string, CREATE: string, LOGIN: string, NO_SESSION: string,
           NONE: string, SELECT_ACCOUNT: string }
+  - name: CustomAuthFlowScenarioV2
+    uid: '@azure/msal-browser.CustomAuthFlowScenarioV2'
+    package: '@azure/msal-browser'
+    summary: |-
+      The native auth V2 flow that a result or error originates from (sign-in,
+      sign-up, or password reset). It lets a shared result or error type report
+      which entry flow produced it; `Unknown` is used when the flow cannot be
+      determined.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        CustomAuthFlowScenarioV2: { PasswordReset: "passwordReset", SignIn:
+        "signIn", SignUp: "signUp", Unknown: "unknown" }
+      return:
+        description: ''
+        type: >-
+          { PasswordReset: "passwordReset", SignIn: "signIn", SignUp: "signUp",
+          Unknown: "unknown" }
   - name: WebBrokerBridgeErrorCode
     uid: '@azure/msal-browser.WebBrokerBridgeErrorCode'
     package: '@azure/msal-browser'
@@ -479,6 +549,269 @@ variables:
           TransientError: "transient_error", Unknown: "unknown", UserCanceled:
           "user_canceled", UserInteractionRequired: "user_interaction_required"
           }
+  - name: AcquireTokenByBroker
+    uid: '@azure/msal-browser.AcquireTokenByBroker'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'AcquireTokenByBroker: "acquireTokenByBroker"'
+      return:
+        description: ''
+        type: '"acquireTokenByBroker"'
+  - name: BrokerClientApplicationBrokeredSilentRequest
+    uid: '@azure/msal-browser.BrokerClientApplicationBrokeredSilentRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        BrokerClientApplicationBrokeredSilentRequest:
+        "brokerClientApplicationBrokeredSilentRequest"
+      return:
+        description: ''
+        type: '"brokerClientApplicationBrokeredSilentRequest"'
+  - name: BrokerClientApplicationBrokeredSSOSilentRequest
+    uid: '@azure/msal-browser.BrokerClientApplicationBrokeredSSOSilentRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        BrokerClientApplicationBrokeredSSOSilentRequest:
+        "brokerClientApplicationBrokeredSSOSilentRequest"
+      return:
+        description: ''
+        type: '"brokerClientApplicationBrokeredSSOSilentRequest"'
+  - name: BrokerClientApplicationHandleBrokerHandshake
+    uid: '@azure/msal-browser.BrokerClientApplicationHandleBrokerHandshake'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        BrokerClientApplicationHandleBrokerHandshake:
+        "brokerClientApplicationHandleBrokerHandshake"
+      return:
+        description: ''
+        type: '"brokerClientApplicationHandleBrokerHandshake"'
+  - name: BrokeredPopupRequest
+    uid: '@azure/msal-browser.BrokeredPopupRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'BrokeredPopupRequest: "brokeredPopupRequest"'
+      return:
+        description: ''
+        type: '"brokeredPopupRequest"'
+  - name: BrokeredRedirectRequest
+    uid: '@azure/msal-browser.BrokeredRedirectRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'BrokeredRedirectRequest: "brokeredRedirectRequest"'
+      return:
+        description: ''
+        type: '"brokeredRedirectRequest"'
+  - name: BrokeredSilentRequest
+    uid: '@azure/msal-browser.BrokeredSilentRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'BrokeredSilentRequest: "brokeredSilentRequest"'
+      return:
+        description: ''
+        type: '"brokeredSilentRequest"'
+  - name: BrokeredSsoSilentRequest
+    uid: '@azure/msal-browser.BrokeredSsoSilentRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'BrokeredSsoSilentRequest: "brokeredSsoSilentRequest"'
+      return:
+        description: ''
+        type: '"brokeredSsoSilentRequest"'
+  - name: EmbeddedClientApplicationHandleRedirectRequest
+    uid: '@azure/msal-browser.EmbeddedClientApplicationHandleRedirectRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'EmbeddedClientApplicationHandleRedirectRequest: "embeddedHandleRedirect"'
+      return:
+        description: ''
+        type: '"embeddedHandleRedirect"'
+  - name: EmbeddedClientApplicationSendPopupRequest
+    uid: '@azure/msal-browser.EmbeddedClientApplicationSendPopupRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'EmbeddedClientApplicationSendPopupRequest: "embeddedPopup"'
+      return:
+        description: ''
+        type: '"embeddedPopup"'
+  - name: EmbeddedClientApplicationSendSilentRefreshRequest
+    uid: '@azure/msal-browser.EmbeddedClientApplicationSendSilentRefreshRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        EmbeddedClientApplicationSendSilentRefreshRequest:
+        "embeddedSilentRefresh"
+      return:
+        description: ''
+        type: '"embeddedSilentRefresh"'
+  - name: EmbeddedClientApplicationSendSSOSilentRequest
+    uid: '@azure/msal-browser.EmbeddedClientApplicationSendSSOSilentRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'EmbeddedClientApplicationSendSSOSilentRequest: "embeddedSSOSilent"'
+      return:
+        description: ''
+        type: '"embeddedSSOSilent"'
+  - name: EmbeddedSendSilentRefreshRequestInternal
+    uid: '@azure/msal-browser.EmbeddedSendSilentRefreshRequestInternal'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        EmbeddedSendSilentRefreshRequestInternal:
+        "embeddedSilentRefreshInternal"
+      return:
+        description: ''
+        type: '"embeddedSilentRefreshInternal"'
+  - name: GetFrameDepth
+    uid: '@azure/msal-browser.GetFrameDepth'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'GetFrameDepth: "getFrameDepth"'
+      return:
+        description: ''
+        type: '"getFrameDepth"'
+  - name: HandleBrokerAuthRequest
+    uid: '@azure/msal-browser.HandleBrokerAuthRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HandleBrokerAuthRequest: "handleBrokerAuthRequest"'
+      return:
+        description: ''
+        type: '"handleBrokerAuthRequest"'
+  - name: HandleBrokerMessage
+    uid: '@azure/msal-browser.HandleBrokerMessage'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HandleBrokerMessage: "handleBrokerMessage"'
+      return:
+        description: ''
+        type: '"handleBrokerMessage"'
+  - name: HandleResponse
+    uid: '@azure/msal-browser.HandleResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'HandleResponse: "handleBrokerResponse"'
+      return:
+        description: ''
+        type: '"handleBrokerResponse"'
+  - name: InteractiveBrokerRequest
+    uid: '@azure/msal-browser.InteractiveBrokerRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'InteractiveBrokerRequest: "interactiveBrokerRequest"'
+      return:
+        description: ''
+        type: '"interactiveBrokerRequest"'
+  - name: OnHandshakeResponse
+    uid: '@azure/msal-browser.OnHandshakeResponse'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'OnHandshakeResponse: "onHandshakeResponse"'
+      return:
+        description: ''
+        type: '"onHandshakeResponse"'
+  - name: PostMessageToAllDescendantFrames
+    uid: '@azure/msal-browser.PostMessageToAllDescendantFrames'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'PostMessageToAllDescendantFrames: "postMessageToAllDescendantFrames"'
+      return:
+        description: ''
+        type: '"postMessageToAllDescendantFrames"'
+  - name: SendHandshakeRequest
+    uid: '@azure/msal-browser.SendHandshakeRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SendHandshakeRequest: "sendHandshakeRequest"'
+      return:
+        description: ''
+        type: '"sendHandshakeRequest"'
+  - name: SendMessageToBroker
+    uid: '@azure/msal-browser.SendMessageToBroker'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SendMessageToBroker: "sendMessageToBroker"'
+      return:
+        description: ''
+        type: '"sendMessageToBroker"'
+  - name: SendRequest
+    uid: '@azure/msal-browser.SendRequest'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'SendRequest: "sendRequest"'
+      return:
+        description: ''
+        type: '"sendRequest"'
   - name: stubbedPublicClientApplication
     uid: '@azure/msal-browser.stubbedPublicClientApplication'
     package: '@azure/msal-browser'
@@ -497,10 +830,10 @@ variables:
     remarks: ''
     isDeprecated: false
     syntax:
-      content: 'version: "5.22.0"'
+      content: 'version: "5.23.0"'
       return:
         description: ''
-        type: '"<xref uid="5.22.0" />"'
+        type: '"<xref uid="5.23.0" />"'
 functions:
   - name: >-
       createNestablePublicClientApplication(Configuration, string,

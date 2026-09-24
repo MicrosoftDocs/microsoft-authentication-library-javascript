@@ -100,6 +100,11 @@
       no-loc:
         - ApiId
       items: []
+    - uid: '@azure/msal-browser.AttributesRequiredStateV2'
+      name: AttributesRequiredStateV2
+      no-loc:
+        - AttributesRequiredStateV2
+      items: []
     - uid: '@azure/msal-browser.AuthenticationHeaderParser'
       name: AuthenticationHeaderParser
       no-loc:
@@ -109,6 +114,11 @@
       name: AuthenticationMethod
       no-loc:
         - AuthenticationMethod
+      items: []
+    - uid: '@azure/msal-browser.AuthenticationMethodV2'
+      name: AuthenticationMethodV2
+      no-loc:
+        - AuthenticationMethodV2
       items: []
     - uid: '@azure/msal-browser.AuthenticationResult'
       name: AuthenticationResult
@@ -189,6 +199,11 @@
       name: AuthMethodRegistrationSubmitChallengeResultState
       no-loc:
         - AuthMethodRegistrationSubmitChallengeResultState
+      items: []
+    - uid: '@azure/msal-browser.AuthMethodSelectionRequiredStateV2'
+      name: AuthMethodSelectionRequiredStateV2
+      no-loc:
+        - AuthMethodSelectionRequiredStateV2
       items: []
     - uid: '@azure/msal-browser.AuthMethodVerificationRequiredState'
       name: AuthMethodVerificationRequiredState
@@ -315,6 +330,16 @@
       no-loc:
         - ClientConfigurationErrorCodes
       items: []
+    - uid: '@azure/msal-browser.CodeRequiredStateV2'
+      name: CodeRequiredStateV2
+      no-loc:
+        - CodeRequiredStateV2
+      items: []
+    - uid: '@azure/msal-browser.CompletedStateV2'
+      name: CompletedStateV2
+      no-loc:
+        - CompletedStateV2
+      items: []
     - uid: '@azure/msal-browser.Configuration'
       name: Configuration
       no-loc:
@@ -355,6 +380,11 @@
       no-loc:
         - CustomAuthError
       items: []
+    - uid: '@azure/msal-browser.CustomAuthFlowScenarioV2'
+      name: CustomAuthFlowScenarioV2
+      no-loc:
+        - CustomAuthFlowScenarioV2
+      items: []
     - uid: '@azure/msal-browser.CustomAuthPublicClientApplication'
       name: CustomAuthPublicClientApplication
       no-loc:
@@ -364,6 +394,11 @@
       name: CustomAuthRequestInterceptor
       no-loc:
         - CustomAuthRequestInterceptor
+      items: []
+    - uid: '@azure/msal-browser.CustomAuthResultV2'
+      name: CustomAuthResultV2
+      no-loc:
+        - CustomAuthResultV2
       items: []
     - uid: '@azure/msal-browser.EndSessionPopupRequest'
       name: EndSessionPopupRequest
@@ -415,6 +450,11 @@
       no-loc:
         - ExternalTokenResponse
       items: []
+    - uid: '@azure/msal-browser.FailedStateV2'
+      name: FailedStateV2
+      no-loc:
+        - FailedStateV2
+      items: []
     - uid: '@azure/msal-browser.GetAccessTokenResult'
       name: GetAccessTokenResult
       no-loc:
@@ -464,6 +504,11 @@
       name: ICustomAuthPublicClientApplication
       no-loc:
         - ICustomAuthPublicClientApplication
+      items: []
+    - uid: '@azure/msal-browser.ICustomAuthPublicClientApplicationV2'
+      name: ICustomAuthPublicClientApplicationV2
+      no-loc:
+        - ICustomAuthPublicClientApplicationV2
       items: []
     - uid: '@azure/msal-browser.IdTokenClaims'
       name: IdTokenClaims
@@ -620,6 +665,31 @@
       no-loc:
         - MfaRequestChallengeResultState
       items: []
+    - uid: '@azure/msal-browser.MFARequestChallengeResultStateV2'
+      name: MFARequestChallengeResultStateV2
+      no-loc:
+        - MFARequestChallengeResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.MFARequestChallengeResultV2'
+      name: MFARequestChallengeResultV2
+      no-loc:
+        - MFARequestChallengeResultV2
+      items: []
+    - uid: '@azure/msal-browser.MFARequiredStateV2'
+      name: MFARequiredStateV2
+      no-loc:
+        - MFARequiredStateV2
+      items: []
+    - uid: '@azure/msal-browser.MFAResendChallengeResultStateV2'
+      name: MFAResendChallengeResultStateV2
+      no-loc:
+        - MFAResendChallengeResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.MFAResendChallengeResultV2'
+      name: MFAResendChallengeResultV2
+      no-loc:
+        - MFAResendChallengeResultV2
+      items: []
     - uid: '@azure/msal-browser.MfaSubmitChallengeError'
       name: MfaSubmitChallengeError
       no-loc:
@@ -635,10 +705,25 @@
       no-loc:
         - MfaSubmitChallengeResultState
       items: []
+    - uid: '@azure/msal-browser.MFASubmitChallengeResultStateV2'
+      name: MFASubmitChallengeResultStateV2
+      no-loc:
+        - MFASubmitChallengeResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.MFASubmitChallengeResultV2'
+      name: MFASubmitChallengeResultV2
+      no-loc:
+        - MFASubmitChallengeResultV2
+      items: []
     - uid: '@azure/msal-browser.MfaVerificationRequiredState'
       name: MfaVerificationRequiredState
       no-loc:
         - MfaVerificationRequiredState
+      items: []
+    - uid: '@azure/msal-browser.MFAVerificationRequiredStateV2'
+      name: MFAVerificationRequiredStateV2
+      no-loc:
+        - MFAVerificationRequiredStateV2
       items: []
     - uid: '@azure/msal-browser.MsalCustomAuthError'
       name: MsalCustomAuthError
@@ -665,6 +750,11 @@
       no-loc:
         - NetworkResponse
       items: []
+    - uid: '@azure/msal-browser.NewPasswordRequiredStateV2'
+      name: NewPasswordRequiredStateV2
+      no-loc:
+        - NewPasswordRequiredStateV2
+      items: []
     - uid: '@azure/msal-browser.NoCachedAccountFoundError'
       name: NoCachedAccountFoundError
       no-loc:
@@ -674,6 +764,11 @@
       name: ParsedUrlError
       no-loc:
         - ParsedUrlError
+      items: []
+    - uid: '@azure/msal-browser.PasswordRequiredStateV2'
+      name: PasswordRequiredStateV2
+      no-loc:
+        - PasswordRequiredStateV2
       items: []
     - uid: '@azure/msal-browser.PendingRequestRegistry'
       name: PendingRequestRegistry
@@ -735,6 +830,21 @@
       no-loc:
         - RedirectRequest
       items: []
+    - uid: '@azure/msal-browser.RequestChallengeErrorV2'
+      name: RequestChallengeErrorV2
+      no-loc:
+        - RequestChallengeErrorV2
+      items: []
+    - uid: '@azure/msal-browser.RequestChallengeResultStateV2'
+      name: RequestChallengeResultStateV2
+      no-loc:
+        - RequestChallengeResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.RequestChallengeResultV2'
+      name: RequestChallengeResultV2
+      no-loc:
+        - RequestChallengeResultV2
+      items: []
     - uid: '@azure/msal-browser.ResetPasswordCodeRequiredState'
       name: ResetPasswordCodeRequiredState
       no-loc:
@@ -760,6 +870,11 @@
       no-loc:
         - ResetPasswordInputs
       items: []
+    - uid: '@azure/msal-browser.ResetPasswordInputsV2'
+      name: ResetPasswordInputsV2
+      no-loc:
+        - ResetPasswordInputsV2
+      items: []
     - uid: '@azure/msal-browser.ResetPasswordPasswordRequiredState'
       name: ResetPasswordPasswordRequiredState
       no-loc:
@@ -780,6 +895,11 @@
       no-loc:
         - ResetPasswordResendCodeResultState
       items: []
+    - uid: '@azure/msal-browser.ResetPasswordStartErrorV2'
+      name: ResetPasswordStartErrorV2
+      no-loc:
+        - ResetPasswordStartErrorV2
+      items: []
     - uid: '@azure/msal-browser.ResetPasswordStartResult'
       name: ResetPasswordStartResult
       no-loc:
@@ -789,6 +909,16 @@
       name: ResetPasswordStartResultState
       no-loc:
         - ResetPasswordStartResultState
+      items: []
+    - uid: '@azure/msal-browser.ResetPasswordStartResultStateV2'
+      name: ResetPasswordStartResultStateV2
+      no-loc:
+        - ResetPasswordStartResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.ResetPasswordStartResultV2'
+      name: ResetPasswordStartResultV2
+      no-loc:
+        - ResetPasswordStartResultV2
       items: []
     - uid: '@azure/msal-browser.ResetPasswordState'
       name: ResetPasswordState
@@ -860,10 +990,35 @@
       no-loc:
         - SignInCompletedState
       items: []
+    - uid: '@azure/msal-browser.SignInContinuationErrorV2'
+      name: SignInContinuationErrorV2
+      no-loc:
+        - SignInContinuationErrorV2
+      items: []
+    - uid: '@azure/msal-browser.SignInContinuationInputsV2'
+      name: SignInContinuationInputsV2
+      no-loc:
+        - SignInContinuationInputsV2
+      items: []
+    - uid: '@azure/msal-browser.SignInContinuationResultStateV2'
+      name: SignInContinuationResultStateV2
+      no-loc:
+        - SignInContinuationResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.SignInContinuationResultV2'
+      name: SignInContinuationResultV2
+      no-loc:
+        - SignInContinuationResultV2
+      items: []
     - uid: '@azure/msal-browser.SignInContinuationState'
       name: SignInContinuationState
       no-loc:
         - SignInContinuationState
+      items: []
+    - uid: '@azure/msal-browser.SignInContinuationStateV2'
+      name: SignInContinuationStateV2
+      no-loc:
+        - SignInContinuationStateV2
       items: []
     - uid: '@azure/msal-browser.SignInError'
       name: SignInError
@@ -879,6 +1034,11 @@
       name: SignInInputs
       no-loc:
         - SignInInputs
+      items: []
+    - uid: '@azure/msal-browser.SignInInputsV2'
+      name: SignInInputsV2
+      no-loc:
+        - SignInInputsV2
       items: []
     - uid: '@azure/msal-browser.SignInPasswordRequiredState'
       name: SignInPasswordRequiredState
@@ -909,6 +1069,21 @@
       name: SignInResultState
       no-loc:
         - SignInResultState
+      items: []
+    - uid: '@azure/msal-browser.SignInStartErrorV2'
+      name: SignInStartErrorV2
+      no-loc:
+        - SignInStartErrorV2
+      items: []
+    - uid: '@azure/msal-browser.SignInStartResultStateV2'
+      name: SignInStartResultStateV2
+      no-loc:
+        - SignInStartResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.SignInStartResultV2'
+      name: SignInStartResultV2
+      no-loc:
+        - SignInStartResultV2
       items: []
     - uid: '@azure/msal-browser.SignInState'
       name: SignInState
@@ -995,10 +1170,20 @@
       no-loc:
         - SignUpInputs
       items: []
+    - uid: '@azure/msal-browser.SignUpInputsV2'
+      name: SignUpInputsV2
+      no-loc:
+        - SignUpInputsV2
+      items: []
     - uid: '@azure/msal-browser.SignUpPasswordRequiredState'
       name: SignUpPasswordRequiredState
       no-loc:
         - SignUpPasswordRequiredState
+      items: []
+    - uid: '@azure/msal-browser.SignUpPasswordRequiredStateV2'
+      name: SignUpPasswordRequiredStateV2
+      no-loc:
+        - SignUpPasswordRequiredStateV2
       items: []
     - uid: '@azure/msal-browser.SignUpResendCodeError'
       name: SignUpResendCodeError
@@ -1024,6 +1209,21 @@
       name: SignUpResultState
       no-loc:
         - SignUpResultState
+      items: []
+    - uid: '@azure/msal-browser.SignUpStartErrorV2'
+      name: SignUpStartErrorV2
+      no-loc:
+        - SignUpStartErrorV2
+      items: []
+    - uid: '@azure/msal-browser.SignUpStartResultStateV2'
+      name: SignUpStartResultStateV2
+      no-loc:
+        - SignUpStartResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.SignUpStartResultV2'
+      name: SignUpStartResultV2
+      no-loc:
+        - SignUpStartResultV2
       items: []
     - uid: '@azure/msal-browser.SignUpState'
       name: SignUpState
@@ -1090,6 +1290,51 @@
       no-loc:
         - StubPerformanceClient
       items: []
+    - uid: '@azure/msal-browser.SubmitAttributesErrorV2'
+      name: SubmitAttributesErrorV2
+      no-loc:
+        - SubmitAttributesErrorV2
+      items: []
+    - uid: '@azure/msal-browser.SubmitAttributesResultStateV2'
+      name: SubmitAttributesResultStateV2
+      no-loc:
+        - SubmitAttributesResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.SubmitAttributesResultV2'
+      name: SubmitAttributesResultV2
+      no-loc:
+        - SubmitAttributesResultV2
+      items: []
+    - uid: '@azure/msal-browser.SubmitNewPasswordErrorV2'
+      name: SubmitNewPasswordErrorV2
+      no-loc:
+        - SubmitNewPasswordErrorV2
+      items: []
+    - uid: '@azure/msal-browser.SubmitNewPasswordResultStateV2'
+      name: SubmitNewPasswordResultStateV2
+      no-loc:
+        - SubmitNewPasswordResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.SubmitNewPasswordResultV2'
+      name: SubmitNewPasswordResultV2
+      no-loc:
+        - SubmitNewPasswordResultV2
+      items: []
+    - uid: '@azure/msal-browser.SubmitPasswordErrorV2'
+      name: SubmitPasswordErrorV2
+      no-loc:
+        - SubmitPasswordErrorV2
+      items: []
+    - uid: '@azure/msal-browser.SubmitPasswordResultStateV2'
+      name: SubmitPasswordResultStateV2
+      no-loc:
+        - SubmitPasswordResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.SubmitPasswordResultV2'
+      name: SubmitPasswordResultV2
+      no-loc:
+        - SubmitPasswordResultV2
+      items: []
     - uid: '@azure/msal-browser.TenantProfile'
       name: TenantProfile
       no-loc:
@@ -1119,6 +1364,21 @@
       name: UserAlreadySignedInError
       no-loc:
         - UserAlreadySignedInError
+      items: []
+    - uid: '@azure/msal-browser.VerifyChallengeErrorV2'
+      name: VerifyChallengeErrorV2
+      no-loc:
+        - VerifyChallengeErrorV2
+      items: []
+    - uid: '@azure/msal-browser.VerifyChallengeResultStateV2'
+      name: VerifyChallengeResultStateV2
+      no-loc:
+        - VerifyChallengeResultStateV2
+      items: []
+    - uid: '@azure/msal-browser.VerifyChallengeResultV2'
+      name: VerifyChallengeResultV2
+      no-loc:
+        - VerifyChallengeResultV2
       items: []
     - uid: '@azure/msal-browser.WebBrokerBridgeError'
       name: WebBrokerBridgeError

@@ -1,0 +1,26 @@
+### YamlMime:TSType
+name: FailedStateV2
+uid: '@azure/msal-browser.FailedStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  Terminal state indicating the operation failed.
+
+  The error is carried by the result's `error` payload, not by this state.
+fullName: FailedStateV2
+remarks: ''
+isDeprecated: false
+type: class
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.FailedStateV2.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: "failed" = "failed"'
+      return:
+        description: ''
+        type: '"failed"'
+extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

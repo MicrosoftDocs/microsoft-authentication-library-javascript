@@ -1,0 +1,154 @@
+### YamlMime:TSType
+name: CustomAuthResultV2
+uid: '@azure/msal-browser.CustomAuthResultV2'
+package: '@azure/msal-browser'
+summary: >-
+  Result of a native auth V2 operation. Use
+  [CustomAuthResultV2.isState](xref:@azure/msal-browser.CustomAuthResultV2.isState)
+
+  to narrow the state before accessing its members.
+fullName: CustomAuthResultV2<TState, TError, TData>
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      CustomAuthResultV2<TState, TError, TData>(TState, TData,
+      CustomAuthFlowScenarioV2)
+    uid: '@azure/msal-browser.CustomAuthResultV2.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new CustomAuthResultV2(state: TState, data?: TData, scenario?:
+        CustomAuthFlowScenarioV2)
+      parameters:
+        - id: state
+          type: TState
+          description: ''
+        - id: data
+          type: TData
+          description: ''
+        - id: scenario
+          type: <xref uid="@azure/msal-browser.CustomAuthFlowScenarioV2" />
+          description: ''
+properties:
+  - name: data
+    uid: '@azure/msal-browser.CustomAuthResultV2.data'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: data
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'data?: TData'
+      return:
+        description: ''
+        type: TData
+  - name: error
+    uid: '@azure/msal-browser.CustomAuthResultV2.error'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: error
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'error?: TError'
+      return:
+        description: ''
+        type: TError
+  - name: scenario
+    uid: '@azure/msal-browser.CustomAuthResultV2.scenario'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: scenario
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scenario: CustomAuthFlowScenarioV2'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthFlowScenarioV2" />
+  - name: state
+    uid: '@azure/msal-browser.CustomAuthResultV2.state'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: state
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'state: TState'
+      return:
+        description: ''
+        type: TState
+methods:
+  - name: >-
+      createWithError<TState, TError, TData>(unknown,
+      CreateWithErrorOptions<TError>)
+    uid: '@azure/msal-browser.CustomAuthResultV2.createWithError'
+    package: '@azure/msal-browser'
+    summary: >-
+      Creates a failed result from the supplied error. The result uses the
+
+      shared [FailedStateV2](xref:@azure/msal-browser.FailedStateV2) terminal
+      state.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        static function createWithError<TState, TError, TData>(error: unknown,
+        options: CreateWithErrorOptions<TError>):
+        CustomAuthResultV2<FailedStateV2 | TState, TError, TData>
+      parameters:
+        - id: error
+          type: unknown
+          description: The error that occurred.
+        - id: options
+          type: CreateWithErrorOptions&lt;TError&gt;
+          description: The flow-error type and error context.
+      return:
+        description: A failed result carrying the flow-specific error.
+        type: >-
+          <xref uid="@azure/msal-browser.CustomAuthResultV2" />&lt;<xref
+          uid="@azure/msal-browser.FailedStateV2" /> | TState, TError, TData&gt;
+  - name: isFailed()
+    uid: '@azure/msal-browser.CustomAuthResultV2.isFailed'
+    package: '@azure/msal-browser'
+    summary: |-
+      Checks whether the result is in the terminal failed state. A failed result
+      contains the flow-specific error.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function isFailed(): this is CustomAuthResultV2<TState, TError, TData> &
+        { state: Extract<TState, { stateType: "failed" }> }
+      return:
+        description: True (and narrows `state`) when the operation failed.
+        type: >-
+          this is CustomAuthResultV2&lt;TState, TError, TData&gt; & { state:
+          Extract&lt;TState, { stateType: "failed" }&gt; }
+  - name: isState<TType>(TType)
+    uid: '@azure/msal-browser.CustomAuthResultV2.isState'
+    package: '@azure/msal-browser'
+    summary: |-
+      Narrows the result to a specific state by its `stateType` discriminator.
+      A successful match makes the state's properties available without a cast.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function isState<TType>(stateType: TType): this is
+        CustomAuthResultV2<TState, TError, TData> & { state: Extract<TState, {
+        stateType: TType }> }
+      parameters:
+        - id: stateType
+          type: TType
+          description: The state type to test for.
+      return:
+        description: True (and narrows `state`) when the current state matches `stateType`.
+        type: >-
+          this is CustomAuthResultV2&lt;TState, TError, TData&gt; & { state:
+          Extract&lt;TState, { stateType: TType }&gt; }

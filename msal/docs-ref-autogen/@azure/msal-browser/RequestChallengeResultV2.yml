@@ -1,0 +1,19 @@
+### YamlMime:TSTypeAlias
+name: RequestChallengeResultV2
+uid: '@azure/msal-browser.RequestChallengeResultV2'
+package: '@azure/msal-browser'
+summary: >-
+  Result of requesting (or resending) a challenge. It wraps one of
+
+  [RequestChallengeResultStateV2](xref:@azure/msal-browser.RequestChallengeResultStateV2)
+  plus, on failure, a
+
+  [RequestChallengeErrorV2](xref:@azure/msal-browser.RequestChallengeErrorV2).
+fullName: RequestChallengeResultV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type RequestChallengeResultV2 = CustomAuthResultV2<
+    RequestChallengeResultStateV2,
+    RequestChallengeErrorV2
+  >

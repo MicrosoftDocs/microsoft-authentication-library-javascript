@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: MFAResendChallengeResultStateV2
+uid: '@azure/msal-browser.MFAResendChallengeResultStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  States returned after an app requests a replacement MFA challenge. The
+  operation either returns refreshed verification metadata or a failed state.
+fullName: MFAResendChallengeResultStateV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MFAResendChallengeResultStateV2 =
+    | MFAVerificationRequiredStateV2
+    | FailedStateV2

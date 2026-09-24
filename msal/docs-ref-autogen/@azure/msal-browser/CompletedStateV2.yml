@@ -1,0 +1,27 @@
+### YamlMime:TSType
+name: CompletedStateV2
+uid: '@azure/msal-browser.CompletedStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  Terminal state indicating the operation completed successfully.
+
+  Completion data (for example the signed-in account) is carried by the
+  result's `data` payload, not by this state.
+fullName: CompletedStateV2
+remarks: ''
+isDeprecated: false
+type: class
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.CompletedStateV2.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: "completed" = "completed"'
+      return:
+        description: ''
+        type: '"completed"'
+extends: <xref uid="@azure/msal-browser.AuthFlowStateBase" />

@@ -1,0 +1,126 @@
+### YamlMime:TSType
+name: CodeRequiredStateV2
+uid: '@azure/msal-browser.CodeRequiredStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  State returned when first-factor email authentication requires a one-time
+  code. It allows the app to submit the code or request a replacement.
+fullName: CodeRequiredStateV2
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: CodeRequiredStateV2(CodeRequiredStateParametersV2)
+    uid: '@azure/msal-browser.CodeRequiredStateV2.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'new CodeRequiredStateV2(stateParameters: CodeRequiredStateParametersV2)'
+      parameters:
+        - id: stateParameters
+          type: CodeRequiredStateParametersV2
+          description: ''
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.CodeRequiredStateV2.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: "codeRequired" = "codeRequired"'
+      return:
+        description: ''
+        type: '"codeRequired"'
+inheritedProperties:
+  - name: channel
+    uid: '@azure/msal-browser.CodeRequiredStateV2.channel'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: channel
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'channel?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> ChallengeVerificationStateBaseV2.channel
+  - name: codeLength
+    uid: '@azure/msal-browser.CodeRequiredStateV2.codeLength'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: codeLength
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'codeLength?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> ChallengeVerificationStateBaseV2.codeLength
+  - name: method
+    uid: '@azure/msal-browser.CodeRequiredStateV2.method'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: method
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'method?: AuthenticationMethodV2'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.AuthenticationMethodV2" />
+    inheritanceDescription: <b>Inherited From</b> ChallengeVerificationStateBaseV2.method
+  - name: sentTo
+    uid: '@azure/msal-browser.CodeRequiredStateV2.sentTo'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: sentTo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sentTo?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> ChallengeVerificationStateBaseV2.sentTo
+methods:
+  - name: resendCode()
+    uid: '@azure/msal-browser.CodeRequiredStateV2.resendCode'
+    package: '@azure/msal-browser'
+    summary: |-
+      Requests a replacement first-factor email code. The returned state
+      contains the refreshed challenge metadata.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function resendCode(): Promise<RequestChallengeResultV2>'
+      return:
+        description: The result of requesting a replacement code.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.RequestChallengeResultV2"
+          />&gt;
+  - name: submitCode(string)
+    uid: '@azure/msal-browser.CodeRequiredStateV2.submitCode'
+    package: '@azure/msal-browser'
+    summary: |-
+      Submits the first-factor email code and advances the active flow. The
+      result may complete the operation or require another flow-specific step.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function submitCode(code: string): Promise<VerifyChallengeResultV2>'
+      parameters:
+        - id: code
+          type: string
+          description: The code to submit.
+      return:
+        description: The result of submitting the first-factor code.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.VerifyChallengeResultV2"
+          />&gt;
+extends: ChallengeVerificationStateBaseV2&lt;CodeRequiredStateParametersV2&gt;

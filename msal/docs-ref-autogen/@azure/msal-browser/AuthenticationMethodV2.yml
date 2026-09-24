@@ -1,0 +1,63 @@
+### YamlMime:TSType
+name: AuthenticationMethodV2
+uid: '@azure/msal-browser.AuthenticationMethodV2'
+package: '@azure/msal-browser'
+summary: |-
+  An authentication method offered by the server during a native auth V2 flow.
+  Each method describes one way the user can prove control of their account
+  (for example an email one-time code), and is surfaced when the flow needs the
+  app to pick a method before a challenge is issued. The app passes the selected
+  method back to the SDK to request a challenge for it.
+fullName: AuthenticationMethodV2
+remarks: ''
+isDeprecated: false
+type: interface
+properties:
+  - name: challengeHref
+    uid: '@azure/msal-browser.AuthenticationMethodV2.challengeHref'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: challengeHref
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'challengeHref: string'
+      return:
+        description: ''
+        type: string
+  - name: hint
+    uid: '@azure/msal-browser.AuthenticationMethodV2.hint'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: hint
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'hint?: string'
+      return:
+        description: ''
+        type: string
+  - name: id
+    uid: '@azure/msal-browser.AuthenticationMethodV2.id'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: id
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'id: string'
+      return:
+        description: ''
+        type: string
+  - name: type
+    uid: '@azure/msal-browser.AuthenticationMethodV2.type'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: type
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'type: string'
+      return:
+        description: ''
+        type: string

@@ -1,0 +1,72 @@
+### YamlMime:TSType
+name: AttributesRequiredStateV2
+uid: '@azure/msal-browser.AttributesRequiredStateV2'
+package: '@azure/msal-browser'
+summary: State returned when sign-up requires profile or custom attributes.
+fullName: AttributesRequiredStateV2
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: AttributesRequiredStateV2(AttributesRequiredStateParametersV2)
+    uid: '@azure/msal-browser.AttributesRequiredStateV2.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new AttributesRequiredStateV2(stateParameters:
+        AttributesRequiredStateParametersV2)
+      parameters:
+        - id: stateParameters
+          type: AttributesRequiredStateParametersV2
+          description: ''
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.AttributesRequiredStateV2.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: "attributesRequired" = "attributesRequired"'
+      return:
+        description: ''
+        type: '"attributesRequired"'
+inheritedProperties:
+  - name: attributes
+    uid: '@azure/msal-browser.AttributesRequiredStateV2.attributes'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: attributes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'attributes: readonly SignUpAttributeV2[]'
+      return:
+        description: ''
+        type: readonly SignUpAttributeV2[]
+    inheritanceDescription: <b>Inherited From</b> SignUpAttributesRequiredStateBaseV2.attributes
+methods:
+  - name: submitAttributes(UserAccountAttributes)
+    uid: '@azure/msal-browser.AttributesRequiredStateV2.submitAttributes'
+    package: '@azure/msal-browser'
+    summary: Submits the attributes requested by the latest server response.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function submitAttributes(attributes: UserAccountAttributes):
+        Promise<SubmitAttributesResultV2>
+      parameters:
+        - id: attributes
+          type: <xref uid="@azure/msal-browser.UserAccountAttributes" />
+          description: ''
+      return:
+        description: ''
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.SubmitAttributesResultV2"
+          />&gt;
+extends: SignUpAttributesRequiredStateBaseV2&lt;AttributesRequiredStateParametersV2&gt;

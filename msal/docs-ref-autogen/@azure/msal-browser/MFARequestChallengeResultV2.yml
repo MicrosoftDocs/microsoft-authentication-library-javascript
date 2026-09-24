@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: MFARequestChallengeResultV2
+uid: '@azure/msal-browser.MFARequestChallengeResultV2'
+package: '@azure/msal-browser'
+summary: ''
+fullName: MFARequestChallengeResultV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MFARequestChallengeResultV2 = CustomAuthResultV2<
+    MFARequestChallengeResultStateV2,
+    RequestChallengeErrorV2
+  >

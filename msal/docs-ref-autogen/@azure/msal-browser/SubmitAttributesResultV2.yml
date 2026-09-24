@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: SubmitAttributesResultV2
+uid: '@azure/msal-browser.SubmitAttributesResultV2'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SubmitAttributesResultV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SubmitAttributesResultV2 = CustomAuthResultV2<
+    SubmitAttributesResultStateV2,
+    SubmitAttributesErrorV2
+  >

@@ -1,0 +1,12 @@
+### YamlMime:TSTypeAlias
+name: RequestChallengeResultStateV2
+uid: '@azure/msal-browser.RequestChallengeResultStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  The states a password-reset request-challenge action can resolve to.
+  Password reset supports email one-time-code verification only.
+fullName: RequestChallengeResultStateV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type RequestChallengeResultStateV2 = CodeRequiredStateV2 | FailedStateV2

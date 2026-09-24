@@ -177,6 +177,9 @@ inheritedMethods:
       There is also an optional "forceRefresh" boolean the user can send to
       bypass the cache for access_token and id_token.
 
+      Concurrent requests with the same request thumbprint return the same
+      in-progress result.
+
       In case the refresh_token is expired or not found, an error is thrown
 
       and the guidance is for the user to call any interactive token acquisition

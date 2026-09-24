@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: SignUpInputsV2
+uid: '@azure/msal-browser.SignUpInputsV2'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignUpInputsV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignUpInputsV2 = SignUpInputs & { claims?: string; scopes?: string[] }

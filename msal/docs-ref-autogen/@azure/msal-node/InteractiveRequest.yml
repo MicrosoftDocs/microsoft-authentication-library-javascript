@@ -8,7 +8,10 @@ remarks: ''
 isDeprecated: false
 syntax: |
   type InteractiveRequest = Partial<
-    Omit<CommonAuthorizationUrlRequest, "scopes" | "storeInCache">
+    Omit<
+      CommonAuthorizationUrlRequest,
+      "scopes" | "storeInCache" | "responseMode"
+    >
   > & {
     errorTemplate?: string
     openBrowser: (url: string) => Promise<void>

@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: SubmitAttributesResultStateV2
+uid: '@azure/msal-browser.SubmitAttributesResultStateV2'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SubmitAttributesResultStateV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SubmitAttributesResultStateV2 =
+    | CodeRequiredStateV2
+    | SignInContinuationStateV2
+    | FailedStateV2

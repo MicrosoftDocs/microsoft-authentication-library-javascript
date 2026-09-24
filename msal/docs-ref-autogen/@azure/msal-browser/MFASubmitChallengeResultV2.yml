@@ -1,0 +1,16 @@
+### YamlMime:TSTypeAlias
+name: MFASubmitChallengeResultV2
+uid: '@azure/msal-browser.MFASubmitChallengeResultV2'
+package: '@azure/msal-browser'
+summary: |-
+  Result returned after an app submits an MFA challenge. Inspect the state to
+  determine whether sign-in completed or challenge verification failed.
+fullName: MFASubmitChallengeResultV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MFASubmitChallengeResultV2 = CustomAuthResultV2<
+    MFASubmitChallengeResultStateV2,
+    VerifyChallengeErrorV2,
+    CustomAuthAccountData
+  >

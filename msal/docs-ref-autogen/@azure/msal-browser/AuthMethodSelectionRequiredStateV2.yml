@@ -1,0 +1,82 @@
+### YamlMime:TSType
+name: AuthMethodSelectionRequiredStateV2
+uid: '@azure/msal-browser.AuthMethodSelectionRequiredStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  State returned when the user must select one of several authentication
+  methods before a challenge can be issued. It exposes the list of offered
+  methods and lets the app request a challenge for the chosen one. The flow
+  stays on this state until a challenge is successfully requested.
+fullName: AuthMethodSelectionRequiredStateV2
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: >-
+      AuthMethodSelectionRequiredStateV2(AuthMethodSelectionRequiredStateParametersV2)
+    uid: '@azure/msal-browser.AuthMethodSelectionRequiredStateV2.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new AuthMethodSelectionRequiredStateV2(stateParameters:
+        AuthMethodSelectionRequiredStateParametersV2)
+      parameters:
+        - id: stateParameters
+          type: AuthMethodSelectionRequiredStateParametersV2
+          description: ''
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.AuthMethodSelectionRequiredStateV2.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: "authMethodSelectionRequired" = "authMethodSelectionRequired"'
+      return:
+        description: ''
+        type: '"authMethodSelectionRequired"'
+inheritedProperties:
+  - name: methods
+    uid: '@azure/msal-browser.AuthMethodSelectionRequiredStateV2.methods'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: methods
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'methods: readonly AuthenticationMethodV2[]'
+      return:
+        description: ''
+        type: readonly AuthenticationMethodV2[]
+    inheritanceDescription: <b>Inherited From</b> AuthenticationMethodSelectionStateBaseV2.methods
+methods:
+  - name: requestChallenge(AuthenticationMethodV2)
+    uid: '@azure/msal-browser.AuthMethodSelectionRequiredStateV2.requestChallenge'
+    package: '@azure/msal-browser'
+    summary: |-
+      Requests a challenge for the selected authentication method. The returned
+      state identifies the credential the application must collect.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function requestChallenge(method: AuthenticationMethodV2):
+        Promise<RequestChallengeResultV2>
+      parameters:
+        - id: method
+          type: <xref uid="@azure/msal-browser.AuthenticationMethodV2" />
+          description: >-
+            The method to challenge, from
+            [methods](xref:@azure/msal-browser.AuthMethodSelectionRequiredStateV2.methods).
+      return:
+        description: The result of requesting the challenge.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.RequestChallengeResultV2"
+          />&gt;
+extends: >-
+  AuthenticationMethodSelectionStateBaseV2&lt;AuthMethodSelectionRequiredStateParametersV2&gt;

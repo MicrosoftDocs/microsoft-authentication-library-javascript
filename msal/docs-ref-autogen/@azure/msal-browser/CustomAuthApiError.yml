@@ -10,7 +10,7 @@ type: class
 constructors:
   - name: >-
       CustomAuthApiError(string, string, string, number[], string,
-      UserAttribute[], string, string, string)
+      UserAttribute[], string, string, string, AttributeValidationDetailV2[])
     uid: '@azure/msal-browser.CustomAuthApiError.constructor'
     package: '@azure/msal-browser'
     summary: ''
@@ -21,7 +21,8 @@ constructors:
         new CustomAuthApiError(error: string, errorDescription: string,
         correlationId?: string, errorCodes?: number[], subError?: string,
         attributes?: UserAttribute[], continuationToken?: string, traceId?:
-        string, timestamp?: string)
+        string, timestamp?: string, attributeValidationDetails?:
+        AttributeValidationDetailV2[])
       parameters:
         - id: error
           type: string
@@ -50,6 +51,9 @@ constructors:
         - id: timestamp
           type: string
           description: ''
+        - id: attributeValidationDetails
+          type: AttributeValidationDetailV2[]
+          description: ''
 properties:
   - name: attributes
     uid: '@azure/msal-browser.CustomAuthApiError.attributes'
@@ -63,6 +67,18 @@ properties:
       return:
         description: ''
         type: UserAttribute[]
+  - name: attributeValidationDetails
+    uid: '@azure/msal-browser.CustomAuthApiError.attributeValidationDetails'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: attributeValidationDetails
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'attributeValidationDetails?: AttributeValidationDetailV2[]'
+      return:
+        description: ''
+        type: AttributeValidationDetailV2[]
   - name: continuationToken
     uid: '@azure/msal-browser.CustomAuthApiError.continuationToken'
     package: '@azure/msal-browser'

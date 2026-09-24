@@ -1,0 +1,14 @@
+### YamlMime:TSTypeAlias
+name: SignUpStartResultStateV2
+uid: '@azure/msal-browser.SignUpStartResultStateV2'
+package: '@azure/msal-browser'
+summary: States returned when native auth V2 sign-up starts.
+fullName: SignUpStartResultStateV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignUpStartResultStateV2 =
+    | CodeRequiredStateV2
+    | SignUpPasswordRequiredStateV2
+    | AttributesRequiredStateV2
+    | FailedStateV2

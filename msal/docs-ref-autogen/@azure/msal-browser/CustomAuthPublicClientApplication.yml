@@ -611,7 +611,7 @@ methods:
     syntax:
       content: >-
         static function create(config: CustomAuthConfiguration):
-        Promise<ICustomAuthPublicClientApplication>
+        Promise<ICustomAuthPublicClientApplicationV2>
       parameters:
         - id: config
           type: <xref uid="@azure/msal-browser.CustomAuthConfiguration" />
@@ -622,7 +622,7 @@ methods:
           instance
         type: >-
           Promise&lt;<xref
-          uid="@azure/msal-browser.ICustomAuthPublicClientApplication" />&gt;
+          uid="@azure/msal-browser.ICustomAuthPublicClientApplicationV2" />&gt;
   - name: getCurrentAccount(CustomAuthActionInputs)
     uid: '@azure/msal-browser.CustomAuthPublicClientApplication.getCurrentAccount'
     package: '@azure/msal-browser'
@@ -665,6 +665,25 @@ methods:
         type: >-
           Promise&lt;<xref uid="@azure/msal-browser.ResetPasswordStartResult"
           />&gt;
+  - name: resetPasswordV2(ResetPasswordInputs)
+    uid: '@azure/msal-browser.CustomAuthPublicClientApplication.resetPasswordV2'
+    package: '@azure/msal-browser'
+    summary: Initiates the native auth V2 self-service password reset flow.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function resetPasswordV2(inputs: ResetPasswordInputs):
+        Promise<ResetPasswordStartResultV2>
+      parameters:
+        - id: inputs
+          type: <xref uid="@azure/msal-browser.ResetPasswordInputs" />
+          description: Inputs for the reset-password V2 flow
+      return:
+        description: '- A promise that resolves to ResetPasswordStartResultV2'
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.ResetPasswordStartResultV2"
+          />&gt;
   - name: signIn(SignInInputs)
     uid: '@azure/msal-browser.CustomAuthPublicClientApplication.signIn'
     package: '@azure/msal-browser'
@@ -686,6 +705,23 @@ methods:
       return:
         description: '- A promise that resolves to SignInResult'
         type: Promise&lt;<xref uid="@azure/msal-browser.SignInResult" />&gt;
+  - name: signInV2(SignInInputs)
+    uid: '@azure/msal-browser.CustomAuthPublicClientApplication.signInV2'
+    package: '@azure/msal-browser'
+    summary: |-
+      Starts native auth V2 sign-in and returns the authentication methods
+      offered for the first factor.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function signInV2(inputs: SignInInputs): Promise<SignInStartResultV2>'
+      parameters:
+        - id: inputs
+          type: <xref uid="@azure/msal-browser.SignInInputs" />
+          description: Inputs for the sign-in V2 flow.
+      return:
+        description: A promise that resolves to the sign-in start result.
+        type: Promise&lt;<xref uid="@azure/msal-browser.SignInStartResultV2" />&gt;
   - name: signUp(SignUpInputs)
     uid: '@azure/msal-browser.CustomAuthPublicClientApplication.signUp'
     package: '@azure/msal-browser'
@@ -707,4 +743,19 @@ methods:
       return:
         description: '- A promise that resolves to SignUpResult'
         type: Promise&lt;<xref uid="@azure/msal-browser.SignUpResult" />&gt;
+  - name: signUpV2(SignUpInputsV2)
+    uid: '@azure/msal-browser.CustomAuthPublicClientApplication.signUpV2'
+    package: '@azure/msal-browser'
+    summary: Starts native auth V2 sign-up.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function signUpV2(inputs: SignUpInputsV2): Promise<SignUpStartResultV2>'
+      parameters:
+        - id: inputs
+          type: <xref uid="@azure/msal-browser.SignUpInputsV2" />
+          description: Inputs for the sign-up V2 flow.
+      return:
+        description: A promise that resolves to the sign-up start result.
+        type: Promise&lt;<xref uid="@azure/msal-browser.SignUpStartResultV2" />&gt;
 extends: <xref uid="@azure/msal-browser.PublicClientApplication" />

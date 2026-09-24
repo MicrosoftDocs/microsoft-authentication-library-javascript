@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: CustomAuthFlowScenarioV2
+uid: '@azure/msal-browser.CustomAuthFlowScenarioV2'
+package: '@azure/msal-browser'
+summary: |-
+  The native auth V2 flow that a result or error originates from (sign-in,
+  sign-up, or password reset). It lets a shared result or error type report
+  which entry flow produced it; `Unknown` is used when the flow cannot be
+  determined.
+fullName: CustomAuthFlowScenarioV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type CustomAuthFlowScenarioV2 =
+    (typeof CustomAuthFlowScenarioV2)[keyof typeof CustomAuthFlowScenarioV2]

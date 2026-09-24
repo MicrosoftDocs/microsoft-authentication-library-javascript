@@ -1,0 +1,176 @@
+### YamlMime:TSType
+name: SignInStartErrorV2
+uid: '@azure/msal-browser.SignInStartErrorV2'
+package: '@azure/msal-browser'
+summary: Error returned when native auth V2 sign-in cannot start.
+fullName: SignInStartErrorV2
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: SignInStartErrorV2(CustomAuthError, CustomAuthFlowScenarioV2)
+    uid: '@azure/msal-browser.SignInStartErrorV2.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new SignInStartErrorV2(errorData: CustomAuthError, scenario?:
+        CustomAuthFlowScenarioV2)
+      parameters:
+        - id: errorData
+          type: <xref uid="@azure/msal-browser.CustomAuthError" />
+          description: ''
+        - id: scenario
+          type: <xref uid="@azure/msal-browser.CustomAuthFlowScenarioV2" />
+          description: ''
+properties:
+  - name: correlationId
+    uid: '@azure/msal-browser.SignInStartErrorV2.correlationId'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: correlationId
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: string | undefined correlationId
+      return:
+        description: ''
+        type: string | undefined
+  - name: errorCodes
+    uid: '@azure/msal-browser.SignInStartErrorV2.errorCodes'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: errorCodes
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: number[] | undefined errorCodes
+      return:
+        description: ''
+        type: number[] | undefined
+  - name: errorDescription
+    uid: '@azure/msal-browser.SignInStartErrorV2.errorDescription'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: errorDescription
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: string | undefined errorDescription
+      return:
+        description: ''
+        type: string | undefined
+inheritedProperties:
+  - name: errorData
+    uid: '@azure/msal-browser.SignInStartErrorV2.errorData'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: errorData
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'errorData: CustomAuthError'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthError" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowErrorBaseV2.errorData
+  - name: scenario
+    uid: '@azure/msal-browser.SignInStartErrorV2.scenario'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: scenario
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'scenario: CustomAuthFlowScenarioV2'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.CustomAuthFlowScenarioV2" />
+    inheritanceDescription: <b>Inherited From</b> AuthFlowErrorBaseV2.scenario
+inheritedMethods:
+  - name: isBrowserRequired()
+    uid: '@azure/msal-browser.SignInStartErrorV2.isBrowserRequired'
+    package: '@azure/msal-browser'
+    summary: |-
+      Checks if the error requires the flow to continue in the browser. The
+      server surfaces this as a `redirect_to_web` failure, so a browser hand-off
+      always arrives as a `FailedStateV2` on which this detector returns true.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isBrowserRequired(): boolean'
+      return:
+        description: True if the browser is required, false otherwise.
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> AuthFlowErrorBaseV2.isBrowserRequired
+  - name: isInvalidInput()
+    uid: '@azure/msal-browser.SignInStartErrorV2.isInvalidInput'
+    package: '@azure/msal-browser'
+    summary: >-
+      Checks if the error is due to a caller-supplied argument failing
+
+      client-side validation before the request was issued (for example an empty
+
+      username, code, or password, or an unknown method id). Use it to prompt
+      the
+
+      user to correct the input rather than treating it as a server failure.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isInvalidInput(): boolean'
+      return:
+        description: True if the input was invalid, false otherwise.
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> AuthFlowErrorBaseV2.isInvalidInput
+  - name: isUserAlreadyExists()
+    uid: '@azure/msal-browser.SignInStartErrorV2.isUserAlreadyExists'
+    package: '@azure/msal-browser'
+    summary: |-
+      Checks whether an account already exists for the supplied identifier.
+      This can occur at different stages while completing sign-up.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isUserAlreadyExists(): boolean'
+      return:
+        description: True if the account already exists, otherwise false.
+        type: boolean
+    inheritanceDescription: <b>Inherited From</b> AuthFlowErrorBaseV2.isUserAlreadyExists
+methods:
+  - name: isInvalidPassword()
+    uid: '@azure/msal-browser.SignInStartErrorV2.isInvalidPassword'
+    package: '@azure/msal-browser'
+    summary: Checks whether an automatically submitted password was rejected.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isInvalidPassword(): boolean'
+      return:
+        description: True when the password is incorrect.
+        type: boolean
+  - name: isInvalidUsername()
+    uid: '@azure/msal-browser.SignInStartErrorV2.isInvalidUsername'
+    package: '@azure/msal-browser'
+    summary: Checks whether the service rejected the username parameter.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isInvalidUsername(): boolean'
+      return:
+        description: True when the username was empty or invalid.
+        type: boolean
+  - name: isUserNotFound()
+    uid: '@azure/msal-browser.SignInStartErrorV2.isUserNotFound'
+    package: '@azure/msal-browser'
+    summary: Checks whether the supplied username does not identify an account.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function isUserNotFound(): boolean'
+      return:
+        description: True when the service reports that the user was not found.
+        type: boolean
+extends: AuthFlowErrorBaseV2

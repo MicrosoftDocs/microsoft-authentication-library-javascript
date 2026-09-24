@@ -1,0 +1,10 @@
+### YamlMime:TSTypeAlias
+name: SignInInputsV2
+uid: '@azure/msal-browser.SignInInputsV2'
+package: '@azure/msal-browser'
+summary: ''
+fullName: SignInInputsV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignInInputsV2 = SignInInputs

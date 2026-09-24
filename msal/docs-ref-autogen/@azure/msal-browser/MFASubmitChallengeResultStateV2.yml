@@ -1,0 +1,12 @@
+### YamlMime:TSTypeAlias
+name: MFASubmitChallengeResultStateV2
+uid: '@azure/msal-browser.MFASubmitChallengeResultStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  States returned after an app submits an MFA challenge. The operation either
+  completes sign-in or returns a failed state with error details.
+fullName: MFASubmitChallengeResultStateV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MFASubmitChallengeResultStateV2 = CompletedStateV2 | FailedStateV2

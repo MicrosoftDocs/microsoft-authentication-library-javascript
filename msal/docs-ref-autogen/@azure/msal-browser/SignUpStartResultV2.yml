@@ -1,0 +1,13 @@
+### YamlMime:TSTypeAlias
+name: SignUpStartResultV2
+uid: '@azure/msal-browser.SignUpStartResultV2'
+package: '@azure/msal-browser'
+summary: Result of starting native auth V2 sign-up.
+fullName: SignUpStartResultV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignUpStartResultV2 = CustomAuthResultV2<
+    SignUpStartResultStateV2,
+    SignUpStartErrorV2
+  >

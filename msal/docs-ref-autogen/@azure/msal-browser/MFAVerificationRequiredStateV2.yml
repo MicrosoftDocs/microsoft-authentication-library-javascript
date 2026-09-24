@@ -1,0 +1,131 @@
+### YamlMime:TSType
+name: MFAVerificationRequiredStateV2
+uid: '@azure/msal-browser.MFAVerificationRequiredStateV2'
+package: '@azure/msal-browser'
+summary: |-
+  State returned when sign-in requires verification of an email or SMS MFA
+  challenge. It allows the app to submit the challenge or request a replacement.
+fullName: MFAVerificationRequiredStateV2
+remarks: ''
+isDeprecated: false
+type: class
+constructors:
+  - name: MFAVerificationRequiredStateV2(CodeVerificationStateParametersV2)
+    uid: '@azure/msal-browser.MFAVerificationRequiredStateV2.constructor'
+    package: '@azure/msal-browser'
+    summary: ''
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        new MFAVerificationRequiredStateV2(stateParameters:
+        CodeVerificationStateParametersV2)
+      parameters:
+        - id: stateParameters
+          type: CodeVerificationStateParametersV2
+          description: ''
+properties:
+  - name: stateType
+    uid: '@azure/msal-browser.MFAVerificationRequiredStateV2.stateType'
+    package: '@azure/msal-browser'
+    summary: The type of the state.
+    fullName: stateType
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'stateType: "mfaVerificationRequired" = "mfaVerificationRequired"'
+      return:
+        description: ''
+        type: '"mfaVerificationRequired"'
+inheritedProperties:
+  - name: channel
+    uid: '@azure/msal-browser.MFAVerificationRequiredStateV2.channel'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: channel
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'channel?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> ChallengeVerificationStateBaseV2.channel
+  - name: codeLength
+    uid: '@azure/msal-browser.MFAVerificationRequiredStateV2.codeLength'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: codeLength
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'codeLength?: number'
+      return:
+        description: ''
+        type: number
+    inheritanceDescription: <b>Inherited From</b> ChallengeVerificationStateBaseV2.codeLength
+  - name: method
+    uid: '@azure/msal-browser.MFAVerificationRequiredStateV2.method'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: method
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'method?: AuthenticationMethodV2'
+      return:
+        description: ''
+        type: <xref uid="@azure/msal-browser.AuthenticationMethodV2" />
+    inheritanceDescription: <b>Inherited From</b> ChallengeVerificationStateBaseV2.method
+  - name: sentTo
+    uid: '@azure/msal-browser.MFAVerificationRequiredStateV2.sentTo'
+    package: '@azure/msal-browser'
+    summary: ''
+    fullName: sentTo
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'sentTo?: string'
+      return:
+        description: ''
+        type: string
+    inheritanceDescription: <b>Inherited From</b> ChallengeVerificationStateBaseV2.sentTo
+methods:
+  - name: resendChallenge()
+    uid: '@azure/msal-browser.MFAVerificationRequiredStateV2.resendChallenge'
+    package: '@azure/msal-browser'
+    summary: |-
+      Requests a replacement challenge for the selected MFA method. The
+      returned state contains the refreshed email or SMS challenge metadata.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: 'function resendChallenge(): Promise<MFAResendChallengeResultV2>'
+      return:
+        description: The result of requesting a replacement MFA challenge.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.MFAResendChallengeResultV2"
+          />&gt;
+  - name: submitChallenge(string)
+    uid: '@azure/msal-browser.MFAVerificationRequiredStateV2.submitChallenge'
+    package: '@azure/msal-browser'
+    summary: |-
+      Submits the email or SMS challenge as the second authentication factor.
+      Successful verification completes sign-in.
+    remarks: ''
+    isDeprecated: false
+    syntax:
+      content: >-
+        function submitChallenge(challenge: string):
+        Promise<MFASubmitChallengeResultV2>
+      parameters:
+        - id: challenge
+          type: string
+          description: The challenge value to submit.
+      return:
+        description: The result of submitting the MFA challenge.
+        type: >-
+          Promise&lt;<xref uid="@azure/msal-browser.MFASubmitChallengeResultV2"
+          />&gt;
+extends: >-
+  ChallengeVerificationStateBaseV2&lt;MFAVerificationRequiredStateParametersV2&gt;

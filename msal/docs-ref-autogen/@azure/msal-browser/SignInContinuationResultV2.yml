@@ -1,0 +1,25 @@
+### YamlMime:TSTypeAlias
+name: SignInContinuationResultV2
+uid: '@azure/msal-browser.SignInContinuationResultV2'
+package: '@azure/msal-browser'
+summary: >-
+  Result of signing the user in from a V2 continuation. It wraps one of
+
+  [SignInContinuationResultStateV2](xref:@azure/msal-browser.SignInContinuationResultStateV2)
+  plus, on failure, a
+
+  [SignInContinuationErrorV2](xref:@azure/msal-browser.SignInContinuationErrorV2),
+  and on success carries the signed-in
+
+  account data. This is the flow's completion point, so a successful result
+
+  reaches `CompletedStateV2`.
+fullName: SignInContinuationResultV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type SignInContinuationResultV2 = CustomAuthResultV2<
+    SignInContinuationResultStateV2,
+    SignInContinuationErrorV2,
+    CustomAuthAccountData
+  >

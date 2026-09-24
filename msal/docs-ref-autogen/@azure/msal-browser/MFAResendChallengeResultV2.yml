@@ -1,0 +1,15 @@
+### YamlMime:TSTypeAlias
+name: MFAResendChallengeResultV2
+uid: '@azure/msal-browser.MFAResendChallengeResultV2'
+package: '@azure/msal-browser'
+summary: |-
+  Result returned after an app requests a replacement MFA challenge. Inspect
+  the state before prompting the user for the new email or SMS challenge.
+fullName: MFAResendChallengeResultV2
+remarks: ''
+isDeprecated: false
+syntax: |
+  type MFAResendChallengeResultV2 = CustomAuthResultV2<
+    MFAResendChallengeResultStateV2,
+    RequestChallengeErrorV2
+  >
